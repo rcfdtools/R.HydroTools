@@ -17,4 +17,7 @@ Para subcuencas pequeñas en cauces laterales al rio artificial a diseñar, pued
 * http://www.wmo.int/pages/prog/hwrp/publications/PMP/WMO%201045%20en.pdf
 * https://library.wmo.int/opac/index.php?lvl=categ_see&id=10762
 
+### Capturas de pantalla
 ![R.HydroTools.FactorAtenuacionFa.Screen1](https://github.com/rcfdtools/R.HydroTools/blob/main/FactorAtenuacionFa/ScreenCapture/R.HydroTools.FactorAtenuacionFa.Screen1.PNG)
+![R.HydroTools.FactorAtenuacionFa.Screen2](https://github.com/rcfdtools/R.HydroTools/blob/main/FactorAtenuacionFa/ScreenCapture/R.HydroTools.FactorAtenuacionFa.Screen2.PNG)
+![R.HydroTools.FactorAtenuacionFa.Screen3](https://github.com/rcfdtools/R.HydroTools/blob/main/FactorAtenuacionFa/ScreenCapture/R.HydroTools.FactorAtenuacionFa.Screen3.PNG)
