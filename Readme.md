@@ -1,5 +1,5 @@
 ## R.HydroTools
-Tools for computational hydrological an hydraulics analysis, by r.cfdtools@gmail.com.
+Tools for hydrological an hydraulics computational analysis, by r.cfdtools@gmail.com.
 
 
 ### Cláusulas de autor
