@@ -9,3 +9,11 @@ El factor de atenuación es inversamente proporcional al área acumulada de la c
 Luego de la modelación o tránsito hidrológico, los valores de caudal pico e hietogramas, solo serán válidos para el punto en estudio.
 
 Para subcuencas pequeñas en cauces laterales al rio artificial a diseñar, puede suponerse que el centro de tormenta cubre toda esta área y por consiguiente el factor multiplicador será de 1.
+
+###Referencias
+
+* Manual on estimation of probable maximum precipitation (PMP) - WMO-No. 1045 año 2009.
+* Manual for estimation of probable maximum precipitation - WMO No. 332 – 1986
+* http://www.wmo.int/pages/prog/hwrp/publications/PMP/WMO%201045%20en.pdf
+* https://library.wmo.int/opac/index.php?lvl=categ_see&id=10762
+![image](https://user-images.githubusercontent.com/57076428/127746427-ab9ed4aa-3ed1-4e70-8276-06e561a9ab6c.png)
