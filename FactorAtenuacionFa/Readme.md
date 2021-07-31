@@ -1,4 +1,6 @@
-## ¿Qué es y para que sirve el factor de atenuación por área simultánea - Fa?
+## Factor de atenuación por área simultánea - Fa
+
+### ¿Qué es y para que sirve?
 
 Es un valor numérico adimensional (entre 0 y 1) que multiplica la lluvia total máxima en 24 horas, estimada para cada subcuenca o sus pulsos equivalentes (del hietograma) en función del área de aportación y solo es válido en un punto de estudio determinado. 
 
