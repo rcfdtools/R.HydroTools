@@ -6,4 +6,4 @@ Este libro de cálculo contiene lineamientos y permite registrar:
 *   Parámetros técnicos estimados.
 *   Parámetros normativos.
 *   Parámetros geotécnicos, ambientales y sociales.
-*   Parámetros territoriales
+*   Parámetros territoriales.
