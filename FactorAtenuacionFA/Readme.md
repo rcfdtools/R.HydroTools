@@ -16,4 +16,3 @@ Para subcuencas pequeñas en cauces laterales al rio artificial a diseñar, pued
 * Manual for estimation of probable maximum precipitation - WMO No. 332 – 1986
 * http://www.wmo.int/pages/prog/hwrp/publications/PMP/WMO%201045%20en.pdf
 * https://library.wmo.int/opac/index.php?lvl=categ_see&id=10762
-![image](https://user-images.githubusercontent.com/57076428/127746427-ab9ed4aa-3ed1-4e70-8276-06e561a9ab6c.png)
