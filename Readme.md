@@ -27,4 +27,4 @@ No se permite la privatización, acaparamiento, venta o distribución comercial 
 
 ### Citación
 
-Se permite la reproducción digital parcial o total de estas herramientas, modelos de datos y documentación, siempre que se haga referencia como: "R.HydroTools - Herramientas computacionales para análisis hidrológico e hidráulico", r.cfdtools@gmail.com, Bogotá - Colombia - Suramérica. 2021".
+Se permite la reproducción digital parcial o total de estas herramientas, modelos de datos y documentación, siempre que se haga referencia como: "R.HydroTools - Herramientas computacionales para análisis hidrológico e hidráulico", r.cfdtools@gmail.com, https://github.com/rcfdtools/R.HydroTools, Bogotá - Colombia - Suramérica. 2021".
