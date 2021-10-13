@@ -7,7 +7,6 @@ Este libro de cálculo contiene lineamientos generales y permite registrar:
 *   Parámetros geotécnicos, ambientales y sociales.
 *   Parámetros territoriales.
 
-Gran parte de las referencias citadas corresponden a normas de Colombia - Suramérica.
 
 ### A. Técnicos e hidráulicos
 
