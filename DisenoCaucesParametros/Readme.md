@@ -9,7 +9,7 @@ Este libro de cálculo contiene lineamientos generales y permite registrar:
 
 Gran parte de las referencias citadas corresponden a normas de Colombia - Suramérica.
 
-### A. Parámetros técnicos e hidráulicos
+### A. Técnicos e hidráulicos
 
 Parámetro| Descripción
 --- | ---
@@ -46,5 +46,20 @@ Parámetro| Descripción
 | Requerimientos municipales y/o distritales. | Las Secretarías o Gerencias de Planeación y/o de Medio Ambiente de los Municipios dentro de los cuales se desarrollará la implantación del trazado del cauce propuesto, podrán incluir diferentes restricciones locales relacionadas con el ordenamiento territorial, la infraestructura existente y las zonas de conservación y protección. El diseño deberá tener en cuenta todas las restricciones identificadas.
 
 
-|  | 
+### C. Ambientales y Sociales (referencias para Colombia - Suramérica)
+
+Parámetro| Descripción
+--- | ---
+| Estructuras ecológicas. | Caudal ecológico (Q medio), m³/s. Estimación del caudal ecológico a partir de la oferta hídrica superficial en los diferentes puntos de estudio: Inicio, entrega, cauces laterales y estructuras de paso.
+| Concesiones y vertimientos. | Qc, Qv, Caudales concesionados en tramos, lps. Para la definición del caudal ecológico, es necesario incluir en el balance hidrológico de largo plazo, la fracción concesionada para captación (Qc: bocatomas y bombeos) y la fracción retornada como caudal de vertimiento o retorno, Qv. Esto permitirá estimar la profundidad de lámina de agua en la sección diseñada para el caudal medio balanceado. Aplica para diferentes usos: agropecuarios, industriales, comerciales, mineros, energéticos
+| PDA, Plan departamental de agua. | En zonas de proyecto en las que existan diferentes asentamientos humanos (caseríos, cabeceras municipales, centros poblados y ciudades), se deberá analizar la oferta hídrica superficial y evaluar las posibles alteraciones que pueden ocurrir en el abastecimiento de agua para consumo humano, debidas a la implantación del canal.
+| POMCA, Planes de ordenación y manejo de cuencas. | El Plan de Manejo y Ordenamiento de una Cuenca, POMCA, es el planeamiento del uso y manejo sostenible de sus recursos naturales renovables, de manera que se consiga mantener o restablecer un adecuado equilibrio entre el aprovechamiento económico de tales recursos y la conservación de la estructura físico-biótica de la cuenca y particularmente de sus recursos hídricos. Mas información en: http://www.ambientebogota.gov.co/web/sda/385
+| Distritos de riego y reservorios. | En la zona geográfica del proyecto, pueden existir redes complejas de drenaje, como distritos de riego y sistemas de reservorios, que pueden ser alterados e incluso perder su capacidad de operación debido al trazado propuesto. Será necesario entonces, identificar estos sistemas y tenerlos en cuenta como una restricción de diseño.
+| Preservación de ecosistemas. | Dentro de la etapa de formulación del proyecto, es necesario identificar los diferentes ecosistemas que se verán intervenidos por la implantación del canal a construir.  Se deben considerar como una restricción para el trazado del eje de valle propuesto.
+| Tránsito de biofauna (estructuras ecológicas). | Es necesario identificar los puntos de tránsito de biofauna acuática y terrestre, para diseñar las estructuras ecológicas de paso que permitan mantener las condiciones ecosistémicas de movilidad en la zona de implantación del canal.
+
+
+|  |
+
+
 
