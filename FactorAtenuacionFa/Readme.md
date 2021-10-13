@@ -1,4 +1,4 @@
-## Factor de atenuación por área simultánea - Fa
+## Factor de atenuación hidrológico por área simultánea - Fa
 
 ### ¿Qué es y para que sirve?
 
