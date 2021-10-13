@@ -1,12 +1,15 @@
 ## Parámetros generales para el diseño y modelación de cauces
 
-Este libro de cálculo contiene lineamientos y permite registrar:
+Este libro de cálculo contiene lineamientos generales y permite registrar:
 
 *   Parámetros técnicos requeridos.
 *   Parámetros técnicos estimados.
 *   Parámetros normativos.
 *   Parámetros geotécnicos, ambientales y sociales.
 *   Parámetros territoriales.
+
+Gran parte de las referencias citadas corresponden a normas de Colombia - Suramérica.
+
 
 ### HCMC - Herramientas computacionales para el diseño y modelación de cauces
 
