@@ -15,4 +15,17 @@ Gran parte de las referencias citadas corresponden a normas de Colombia - Suram�
 Parámetro| Descripción
 --- | ---
 | Tr – Periodos de retorno, años. | Corresponde a la estimación de la probabilidad de ocurrencia de un evento extremo en un periodo determinado, el cual se utilizará para diseño del canal dominante, creciente, estructuras hidráulicas principales. Aplica para pasos de vía, alcantarillas y estructuras de entrega.
-
+| Q, Qm – Caudales de diseño e hidrogramas, m³/s. | Corresponde a la estimación de la probabilidad de ocurrencia de un evento extremo en un periodo determinado, el cual se utilizará para diseño del canal dominante, creciente, estructuras hidráulicas principales. Aplica para pasos de vía, alcantarillas y estructuras de entrega.
+| T - Temperatura media del agua, °C. | Parámetro requerido para el diseño hidráulico HD en HEC-RAS.
+|  | 
+|  | 
+|  | 
+|  | 
+|  | 
+|  | 
+|  | 
+|  | 
+|  | 
+|  | 
+|  | 
+|  | 
