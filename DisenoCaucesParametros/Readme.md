@@ -10,17 +10,9 @@ Este libro de cálculo contiene lineamientos generales y permite registrar:
 
 Gran parte de las referencias citadas corresponden a normas de Colombia - Suramérica.
 
-Convención | Descripción
+### A. Parámetros técnicos e hidráulicos
+
+Parámetro| Descripción
 --- | ---
-| [r] | Hoja no editable.
-| [w] | Hoja editable.
-| [rw] | Hoja parcialmente editable.
-| * * | Asterisco en hoja MAIN indica que el dato es requerido. Estos datos son usados principalemente en los títulos dinámicos de las gráficas.
-| IDF | Intensidad - Duración - Frecuencia.
-| DMax | Duración máxima encontrada en todas las tormentas analizadas.
-| Índice | Número entero consecutivo de 1 a n en función del pulso registrado y ordenado por año, mes, día y hora.
-| min | minuto.
-| Mín | Mínimo.
-| Máx | Máximo.
-| Marca | Marca de datos.
-| DVE | Distribución de Valores Extremos.
+| Tr – Periodos de retorno, años. | Corresponde a la estimación de la probabilidad de ocurrencia de un evento extremo en un periodo determinado, el cual se utilizará para diseño del canal dominante, creciente, estructuras hidráulicas principales. Aplica para pasos de vía, alcantarillas y estructuras de entrega.
+
