@@ -4,7 +4,6 @@ Este libro de cálculo contiene lineamientos generales y permite registrar:
 
 *   Parámetros técnicos requeridos.
 *   Parámetros técnicos estimados.
-*   Parámetros normativos.
 *   Parámetros geotécnicos, ambientales y sociales.
 *   Parámetros territoriales.
 
@@ -35,4 +34,10 @@ Parámetro| Descripción
 | Huella para mecanización, m. | Corresponde al ancho de vía requerido sobre la corona del canal del valle para realizar los cortes y rellenos usando maquinaria pesada. El ancho debe permitir el tránsito en dos sentidos.
 | Coalineación de taludes. | Para canales de sección compuesta con trazado de cauces dominantes sinuosos, y dependiendo de la altura del canal diseñado, será necesario definir si se permite la coalineación de los taludes o el ancho de la franja o huella de paso.
 | Canal en corte, relleno o ambos. | La combinación del diseño geométrico e hidráulico deberá ser realizada de tal forma que el canal sea construido mayoritariamente en corte o mediante un balance de cortes que serán utilizados para el relleno y realzamiento de diques de protección.
-|  | 
+
+
+### B. Normativos
+
+Parámetro| Descripción
+--- | ---
+| Requerimientos RAS. | Para el diseño del canal propuesto, se deben tener en cuenta los lineamientos y restricciones establecidas en los reglamentos de agua, que para el caso de Colombia - Suramérica corresponde al Reglamento Técnico para el Sector de Agua Potable y Saneamiento Básico – RAS, por ejemplo, las relacionadas con los periodos de retorno de diseño, velocidades y cortantes. Mas información en: http://www.acodal.org.co/reglamento-tecnico-ras-nueva-resolucion-0330-de-2017/
