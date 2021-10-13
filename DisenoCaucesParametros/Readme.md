@@ -59,7 +59,13 @@ Parámetro| Descripción
 | Tránsito de biofauna (estructuras ecológicas). | Es necesario identificar los puntos de tránsito de biofauna acuática y terrestre, para diseñar las estructuras ecológicas de paso que permitan mantener las condiciones ecosistémicas de movilidad en la zona de implantación del canal.
 
 
-|  |
+### D. Territoriales (referencias para Colombia - Suramérica)
 
-
-
+Parámetro| Descripción
+--- | ---
+| Alteración en límite de cuencas hidrográficas. | En la definición del trazado del eje del valle, es necesario tener en cuenta que se pueden alterar los límites de las cuencas geográficas de la zona de estudio. Esta alteración puede ocasionar disminución o aumento en la oferta hídrica superficial, lo que podrá ocasionar alteración en las condiciones de operación y funcionamiento de obras existentes en la red de drenaje. Es preciso evaluar las infraestructuras existentes en la zona y dimensionar las posibles alteraciones por la implantación del tramo de desviación propuesto.
+| Alteración de Límites territoriales. | Por la complejidad en las restrucciones de diseño, algunos trazados podrán alterar los límites geopolíticos territoriales de Departamentos, Municipios, Veredas y Correguimientos. Es necesario consultar el alcance de las alteraciones con las diferetes entidades territoriales.
+| Restricciones prediales, baldíos y centros poblados. | Para el trazado del eje de valle, es necesario realizar un estudio detallado de títulos de propiedad que permita determinar si los predios intervenidos podrán ser comprados, adquiridos o intervenidos.
+| Sistema de gestión del riesgo. | A nivel municipal o zonal, pueden existir diferentes restricciones relacionadas con la intervención de predios utilizados para la amortiguación de crecientes o para la protección y seguridad de los asentamientos humanos. Se deben consultar los planes de gestión locales.
+| Zonas protegidas en POT y rondas hídricas. | Dentro de los estudios de ordenamiento territorial, algunos corredores y zonas estarán bajo tratamiento de protección. Para el desarrollo del proyecto, es necesario consultar con las autoridades locales acerca de los cambios a producir en los límites definidos para estas zonas.
+| Zonas productivas agropecuarias. | En la zona de estudio, podrán existir zonas de producción agropecuaria extensiva, las cuales utilizan la infraestructura existente en la zona, dentro de las etapas de diseño, se deben tener en cuenta los corredores de movilidad existente y la conectividad con las redes viales locales, municipales, departamentales y nacionales.
