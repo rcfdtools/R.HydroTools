@@ -36,8 +36,16 @@ Parámetro| Descripción
 | Canal en corte, relleno o ambos. | La combinación del diseño geométrico e hidráulico deberá ser realizada de tal forma que el canal sea construido mayoritariamente en corte o mediante un balance de cortes que serán utilizados para el relleno y realzamiento de diques de protección.
 
 
-### B. Normativos
+### B. Normativos (referencias para Colombia - Suramérica)
 
 Parámetro| Descripción
 --- | ---
-| Requerimientos RAS. | Para el diseño del canal propuesto, se deben tener en cuenta los lineamientos y restricciones establecidas en los reglamentos de agua, que para el caso de Colombia - Suramérica corresponde al Reglamento Técnico para el Sector de Agua Potable y Saneamiento Básico – RAS, por ejemplo, las relacionadas con los periodos de retorno de diseño, velocidades y cortantes. Mas información en: http://www.acodal.org.co/reglamento-tecnico-ras-nueva-resolucion-0330-de-2017/
+| Requerimientos RAS. | Para el diseño del canal propuesto, se deben tener en cuenta los lineamientos y restricciones establecidas en el Reglamento Técnico para el Sector de Agua Potable y Saneamiento Básico – RAS, por ejemplo, las relacionadas con los periodos de retorno de diseño, velocidades y cortantes. Mas información en: http://www.acodal.org.co/reglamento-tecnico-ras-nueva-resolucion-0330-de-2017/
+| Requerimientos autoridad ambiental, MADS - ANLA. | Para cada intervención sobre el territorio y en especial dentro de zonas de concesión para la explotación y aprovechamiento de recursos naturales, será necesario evaluar los lineamientos y restricciones establecidas por la autoridad ambiental nacional. Para el desarrollo de proyectos en Colombia, será necesario consultar la normativa del Ministerio de Ambiente y Desarrollo Sostenible y la reglamentación específica de la Autoridad Nacional de Licencias Ambientales - ANLA. 
+Mas información en: https://www.minambiente.gov.co/, http://www.anla.gov.co/, http://portal.anla.gov.co/biblioteca-web-anla, http://sig.anla.gov.co:8083/
+| Requerimientos Corporación Autónoma Regional, CAR. | A nivel regional y dependiendo de la complejidad del proyecto, será necesario solicitar los lineamientos ambientales a la CAR, los cuales podrán condicionar el eje del valle a proponer y los puntos de entrega de cauces laterales. Es preciso identificar los puntos de concesión de agua superficial y los puntos de vertimiento que serán intervenidos por la construcción de canales artificiales. Complementariamente, se deben evaluar las condiciones generales establecidas en los POMCAS de la zona. Mas información en: https://www.corpocesar.gov.co/
+| Requerimientos municipales y/o distritales. | Las Secretarías o Gerencias de Planeación y/o de Medio Ambiente de los Municipios dentro de los cuales se desarrollará la implantación del trazado del cauce propuesto, podrán incluir diferentes restricciones locales relacionadas con el ordenamiento territorial, la infraestructura existente y las zonas de conservación y protección. El diseño deberá tener en cuenta todas las restricciones identificadas.
+
+
+|  | 
+
