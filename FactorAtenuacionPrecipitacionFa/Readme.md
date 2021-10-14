@@ -1,4 +1,4 @@
-## Fa - Factor de atenuación de la precipitación por área simultánea
+## Fa - Factor de atenuación de la precipitación máxima por área simultánea
 
 ### ¿Qué es y para que sirve?
 
