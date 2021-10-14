@@ -68,3 +68,6 @@ Parámetro| Descripción
 | Sistema de gestión del riesgo. | A nivel municipal o zonal, pueden existir diferentes restricciones relacionadas con la intervención de predios utilizados para la amortiguación de crecientes o para la protección y seguridad de los asentamientos humanos. Se deben consultar los planes de gestión locales.
 | Zonas protegidas en POT y rondas hídricas. | Dentro de los estudios de ordenamiento territorial, algunos corredores y zonas estarán bajo tratamiento de protección. Para el desarrollo del proyecto, es necesario consultar con las autoridades locales acerca de los cambios a producir en los límites definidos para estas zonas.
 | Zonas productivas agropecuarias. | En la zona de estudio, podrán existir zonas de producción agropecuaria extensiva, las cuales utilizan la infraestructura existente en la zona, dentro de las etapas de diseño, se deben tener en cuenta los corredores de movilidad existente y la conectividad con las redes viales locales, municipales, departamentales y nacionales.
+
+### Tags
+River design parameters.
