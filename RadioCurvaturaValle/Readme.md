@@ -2,7 +2,7 @@
 
 Existen diversas metodologías para estimar la curvatura de suavizado del eje recto del valle. El suavizado tiene como propósito garantizar un adecuado cambio de dirección en el río que permita el flujo o tránsito de las crecientes de forma segura y evitando en lo posible turbulencias, oleaje y zonas susceptibles a procesos erosivos y/o de depositación de sedimentos, tratando de mantener velocidad constante en el flujo.
 
-### Métodos incluídos en el libro
+### Métodos incluídos
 
 Método | Descripción
 --- | ---
