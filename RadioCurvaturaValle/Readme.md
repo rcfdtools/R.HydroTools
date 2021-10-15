@@ -34,5 +34,13 @@ Método | Descripción
 * https://www.u-cursos.cl/ Facultad de ingeniería
 
 
+### Ilustraciones
+
+![R.HydroTools.RadioCurvaturaValle.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/RadioCurvaturaValle/Screenshot/Screenshot1.png)
+![R.HydroTools.RadioCurvaturaValle.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/RadioCurvaturaValle/Screenshot/Screenshot2.png)
+![R.HydroTools.RadioCurvaturaValle.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/RadioCurvaturaValle/Screenshot/Screenshot3.png)
+![R.HydroTools.RadioCurvaturaValle.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/RadioCurvaturaValle/Screenshot/Screenshot4.png)
+
+
 ### Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
