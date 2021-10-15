@@ -12,6 +12,7 @@ Luego de la modelación o tránsito hidrológico, los valores de caudal pico e h
 
 Para subcuencas pequeñas en cauces laterales al rio artificial a diseñar, puede suponerse que el centro de tormenta cubre toda esta área y por consiguiente el factor multiplicador será de 1.
 
+
 ### Referencias
 
 * Manual on estimation of probable maximum precipitation (PMP) - WMO-No. 1045 año 2009.
@@ -19,7 +20,13 @@ Para subcuencas pequeñas en cauces laterales al rio artificial a diseñar, pued
 * http://www.wmo.int/pages/prog/hwrp/publications/PMP/WMO%201045%20en.pdf
 * https://library.wmo.int/opac/index.php?lvl=categ_see&id=10762
 
-### Capturas de pantalla
-![R.HydroTools.FactorAtenuacionFa.Screen1](https://github.com/rcfdtools/R.HydroTools/blob/main/FactorAtenuacionFa/ScreenCapture/R.HydroTools.FactorAtenuacionFa.Screen1.PNG)
-![R.HydroTools.FactorAtenuacionFa.Screen2](https://github.com/rcfdtools/R.HydroTools/blob/main/FactorAtenuacionFa/ScreenCapture/R.HydroTools.FactorAtenuacionFa.Screen2.PNG)
-![R.HydroTools.FactorAtenuacionFa.Screen3](https://github.com/rcfdtools/R.HydroTools/blob/main/FactorAtenuacionFa/ScreenCapture/R.HydroTools.FactorAtenuacionFa.Screen3.PNG)
+
+### Ilustraciones
+
+![R.HydroTools.FactorAtenuacionPrecipitacionFa.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/FactorAtenuacionPrecipitacionFa/Screenshot/Screenshot1.png)
+![R.HydroTools.FactorAtenuacionPrecipitacionFa.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/FactorAtenuacionPrecipitacionFa/Screenshot/Screenshot2.png)
+![R.HydroTools.FactorAtenuacionPrecipitacionFa.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/FactorAtenuacionPrecipitacionFa/Screenshot/Screenshot3.png)
+
+
+### Licencia, cláusulas y condiciones de uso
+https://github.com/rcfdtools/R.HydroTools/wiki/License
