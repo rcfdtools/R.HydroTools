@@ -69,5 +69,20 @@ Parámetro| Descripción
 | Zonas protegidas en POT y rondas hídricas. | Dentro de los estudios de ordenamiento territorial, algunos corredores y zonas estarán bajo tratamiento de protección. Para el desarrollo del proyecto, es necesario consultar con las autoridades locales acerca de los cambios a producir en los límites definidos para estas zonas.
 | Zonas productivas agropecuarias. | En la zona de estudio, podrán existir zonas de producción agropecuaria extensiva, las cuales utilizan la infraestructura existente en la zona, dentro de las etapas de diseño, se deben tener en cuenta los corredores de movilidad existente y la conectividad con las redes viales locales, municipales, departamentales y nacionales.
 
+
+### Ilustraciones
+
+![R.HydroTools.DisenoCaucesParametros.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoCaucesParametros/Screenshot/ScreenshotTecnicoRequerido.png)
+![R.HydroTools.DisenoCaucesParametros.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoCaucesParametros/Screenshot/ScreenshotTecnicoEstimado.png)
+![R.HydroTools.DisenoCaucesParametros.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoCaucesParametros/Screenshot/ScreenshotNormativo.png)
+![R.HydroTools.DisenoCaucesParametros.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoCaucesParametros/Screenshot/ScreenshotGeotecnicoAmbientalSocial.png)
+![R.HydroTools.DisenoCaucesParametros.Screenshot5](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoCaucesParametros/Screenshot/ScreenshotTerritorial.png)
+
+
 ### Tags
 River design parameters.
+
+
+### Licencia, cláusulas y condiciones de uso
+https://github.com/rcfdtools/R.HydroTools/wiki/License
+
