@@ -30,3 +30,5 @@ Método | Descripción
 * Salzitegger Consult GMBH, Planificación de canales, Zona Piloto Ferreñafe, Tomo II/1. Proyecto Tinajones - Chiclayo 1984.
 
 * https://www.u-cursos.cl/ Facultad de ingeniería
+
+Licencia, cláusulas y condiciones de uso en https://github.com/rcfdtools/R.HydroTools/wiki/License
