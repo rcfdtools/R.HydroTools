@@ -1,4 +1,4 @@
-## Rc, Estimación del radio de cuvatura para el suavizado del valle en canales			
+## Estimación del radio de cuvatura para el suavizado del valle en canales, Rc
 
 Existen diversas metodologías para estimar la curvatura de suavizado del eje recto del valle. El suavizado tiene como propósito garantizar un adecuado cambio de dirección en el río que permita el flujo o tránsito de las crecientes de forma segura y evitando en lo posible turbulencias, oleaje y zonas susceptibles a procesos erosivos y/o de depositación de sedimentos, buscando de mantener velocidad constante en el flujo.
 
