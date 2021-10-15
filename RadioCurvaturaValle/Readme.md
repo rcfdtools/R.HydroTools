@@ -31,4 +31,5 @@ Método | Descripción
 
 * https://www.u-cursos.cl/ Facultad de ingeniería
 
-Licencia, cláusulas y condiciones de uso en https://github.com/rcfdtools/R.HydroTools/wiki/License
+### Licencia, cláusulas y condiciones de uso
+https://github.com/rcfdtools/R.HydroTools/wiki/License
