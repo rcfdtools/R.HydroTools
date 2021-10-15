@@ -7,3 +7,15 @@ Este libro de cálculo es utilizado para registrar y validar los pulsos obtenido
 * La regresión es realizada a través de la tendencia logarítmica que se obtiene, por ejemplo, para periodos de retorno de 2.33, 5, 10, 25, 50 y 100 años. 
 * El tiempo al pico se va reduciendo a medida que se aumenta el periodo de retorno.
 * Para periodos de retorno altos, el tiempo al pico presenta poca variabilidad.
+
+
+### Ilustraciones
+
+![R.HydroTools.HidrogramaRegVal.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/HidrogramaRegVal/Screenshot/Screenshot1.png)
+![R.HydroTools.HidrogramaRegVal.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/HidrogramaRegVal/Screenshot/Screenshot2.png)
+![R.HydroTools.HidrogramaRegVal.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/HidrogramaRegVal/Screenshot/Screenshot3.png)
+![R.HydroTools.HidrogramaRegVal.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/HidrogramaRegVal/Screenshot/Screenshot4.png)
+
+
+### Licencia, cláusulas y condiciones de uso
+https://github.com/rcfdtools/R.HydroTools/wiki/License
