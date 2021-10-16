@@ -4,11 +4,6 @@ Secciones topográficas sobre el cauce actual donde inicia y entrega el canal de
 
 Se puede considerar que el canal artificial a diseñar deberá tener una profundidad similar a la del cauce natural a reemplazar, sin embargo, cuando se plantea realizar dragado o rectificación de fondo para rehabilitación o realce de los taludes de protección, las produndidades pueden variar y será necesario realizar un nuevo levantamiento topobatimétrico de las zonas de inicio y entrega para realizar un nuevo análisis.
 
-### Control de versiones
-
-Versión | Descripción
---- | ---
-| v.20211016 | Inclusión de coordenadas de localización de secciones de inicio y entrega en intersección con red de drenaje. Inclusión de selectores de estación inicial y final para estimación del ancho superficial T. Inclusión de localización geográfica e hipervinculación para visualización en Google Maps. Estimación de largo del valle recto sin puntos de cambio de dirección. Estimación del factor de sinuosidad característico Fs. Actualización general de gráficas.
 
 ### Ilustraciones
 
@@ -20,6 +15,13 @@ Versión | Descripción
 
 ### Tags
 XS Cross section.
+
+
+### Control de versiones
+
+Versión | Descripción
+--- | ---
+| v.20211016 | Inclusión de coordenadas de localización de secciones de inicio y entrega en intersección con red de drenaje. Inclusión de selectores de estación inicial y final para estimación del ancho superficial T. Inclusión de localización geográfica e hipervinculación para visualización en Google Maps. Estimación de largo del valle recto sin puntos de cambio de dirección. Estimación del factor de sinuosidad característico Fs. Actualización general de gráficas.
 
 
 ### Licencia, cláusulas y condiciones de uso
