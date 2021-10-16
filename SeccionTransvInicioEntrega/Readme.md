@@ -1,4 +1,4 @@
-## Secciones transversales de referencia inicio y entrega para el diseño hidráulico
+## Secciones transversales de referencia inicio y entrega para diseño hidráulico
 
 Secciones topográficas sobre el cauce actual donde inicia y entrega el canal de realineamiento a diseñar. Los datos de estación y elevación son extraídos del modelo de muestreo HEC-RAS, construido a partir del modelo de terreno de puntos topográficos y líneas de secciones transversales de la topografía. Las cotas de inicio y entrega para el diseño y modelación pueden ser más altas o bajas dependiendo si se considera rellenar,  dragar o rectificar el cauce natural antes de su intervención.
 
