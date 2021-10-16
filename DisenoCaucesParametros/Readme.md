@@ -70,6 +70,13 @@ Parámetro| Descripción
 | Zonas productivas agropecuarias. | En la zona de estudio, podrán existir zonas de producción agropecuaria extensiva, las cuales utilizan la infraestructura existente en la zona, dentro de las etapas de diseño, se deben tener en cuenta los corredores de movilidad existente y la conectividad con las redes viales locales, municipales, departamentales y nacionales.
 
 
+### Control de versiones
+
+Versión | Descripción
+--- | ---
+| v.20211013 | Actualización e inclusión de referencias aportadas por grupo ECIHG HCMC 2021-02. Actualización general de formato.
+
+
 ### Ilustraciones
 
 ![R.HydroTools.DisenoCaucesParametros.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoCaucesParametros/Screenshot/ScreenshotTecnicoRequerido.png)
