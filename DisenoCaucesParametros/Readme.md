@@ -87,7 +87,7 @@ River design parameters.
 
 Versión | Descripción
 --- | ---
-| v.20211013 | Actualización e inclusión de referencias aportadas por grupo ECIHG HCMC 2021-02. Actualización general de formato.
+| v.20211013 | Actualización e inclusión de referencias aportadas por grupo ECIJG HCMC 2021-02. Actualización general de formato.
 
 
 ### Licencia, cláusulas y condiciones de uso
