@@ -42,5 +42,13 @@ Método | Descripción
 ![R.HydroTools.RadioCurvaturaValle.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/RadioCurvaturaValle/Screenshot/Screenshot4.png)
 
 
+### Control de versiones
+
+Versión | Descripción
+--- | ---
+| v.20211014 | Actualización general de formato.
+| v.20201011 | Inclusión de Método 5. Por factor multiplicador en función del ancho (Urban Storm Drainage Criteria Manual). Inclusión de Método 6. En función del tipo de canal. Salzitegger.
+
+
 ### Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
