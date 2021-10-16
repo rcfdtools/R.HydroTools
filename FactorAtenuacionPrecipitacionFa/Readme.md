@@ -28,5 +28,12 @@ Para subcuencas pequeñas en cauces laterales al rio artificial a diseñar, pued
 ![R.HydroTools.FactorAtenuacionPrecipitacionFa.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/FactorAtenuacionPrecipitacionFa/Screenshot/Screenshot3.png)
 
 
+### Control de versiones
+
+Versión | Descripción
+--- | ---
+| v.20211013 | Actualización general de formato. Inclusión de gráfica independiente con curvas potenciales para factores de atenuación California Montañoso - USA.
+
+
 ### Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
