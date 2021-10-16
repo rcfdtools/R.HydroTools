@@ -17,5 +17,13 @@ Este libro de cálculo es utilizado para registrar y validar los pulsos obtenido
 ![R.HydroTools.HidrogramaRegVal.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/HidrogramaRegVal/Screenshot/Screenshot4.png)
 
 
+### Control de versiones
+
+Versión | Descripción
+--- | ---
+| v.20211014 | Actualización general de formato. Inclusión de gráfica independiente con curvas potenciales para factores de atenuación California Montañoso - USA.
+| v.20201011 | Inclusión de regresión logarítmica para la estimación de pulsos para periodos de retorno superiores a los registrados por factor Trn / Tr100. Ejemplo en hoja Hidrograma4a.
+
+
 ### Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
