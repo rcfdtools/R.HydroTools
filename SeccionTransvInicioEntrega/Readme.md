@@ -4,6 +4,8 @@ Secciones topográficas sobre el cauce actual donde inicia y entrega el canal de
 
 Se puede considerar que el canal artificial a diseñar deberá tener una profundidad similar a la del cauce natural a reemplazar, sin embargo, cuando se plantea realizar dragado o rectificación de fondo para rehabilitación o realce de los taludes de protección, las produndidades pueden variar y será necesario realizar un nuevo levantamiento topobatimétrico de las zonas de inicio y entrega para realizar un nuevo análisis.
 
+Para el correcto cálculo del área hidráulica y perímetro mojado, la línea que describe el ancho superficial a partir de la selección de estaciones, no debe cruzar la línea de terreno. Tenga en cuenca que cuando existen bancos de arena o sobre elevaciones por encima de la lámina de água dentro del ancho superficial, la hoja de cálculo sobre estima o sub estima el valor del área y perímetro hidráulico calculado.
+
 
 ### Ilustraciones
 
@@ -14,7 +16,7 @@ Se puede considerar que el canal artificial a diseñar deberá tener una profund
 
 
 ### Keywords
-XS Cross section. River cross section.
+XS Cross section. River cross section. Hydraulica area. Wet perimeter.
 
 
 ### Control de versiones
