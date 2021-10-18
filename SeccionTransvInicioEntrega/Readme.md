@@ -13,7 +13,7 @@ Se puede considerar que el canal artificial a diseñar deberá tener una profund
 ![R.HydroTools.SeccionTransvInicioEntrega.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/SeccionTransvInicioEntrega/Screenshot/Screenshot4.png)
 
 
-### Tags
+### Keywords
 XS Cross section.
 
 
