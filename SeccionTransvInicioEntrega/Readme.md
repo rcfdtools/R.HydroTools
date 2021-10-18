@@ -22,6 +22,7 @@ XS Cross section. River cross section.
 Versión | Descripción
 --- | ---
 | v.20211016 | Inclusión de coordenadas de localización de secciones de inicio y entrega en intersección con red de drenaje. Inclusión de selectores de estación inicial y final para estimación del ancho superficial T. Inclusión de localización geográfica e hipervinculación para visualización en Google Maps. Estimación de largo del valle recto sin puntos de cambio de dirección. Estimación del factor de sinuosidad característico Fs. Actualización general de gráficas.
+| v.20211018 | Hoja de análisis ahora incluye de cálculo de área hidráulica y perímetro mojado. Actualización general de gráficas.
 
 
 ### Licencia, cláusulas y condiciones de uso
