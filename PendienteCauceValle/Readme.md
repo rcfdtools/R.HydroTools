@@ -13,7 +13,7 @@ Nota: Para el diseño geométrico del canal artificial, se recomienda utilizar l
 ![R.HydroTools.PendienteCauceValle.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/PendienteCauceValle/Screenshot/Screenshot2.png)
 
 
-### Tags
+### Keywords
 Stream gradient. River slope.
 
 
