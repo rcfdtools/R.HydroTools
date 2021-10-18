@@ -28,6 +28,11 @@ Para subcuencas pequeñas en cauces laterales al rio artificial a diseñar, pued
 ![R.HydroTools.FactorAtenuacionPrecipitacionFa.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/FactorAtenuacionPrecipitacionFa/Screenshot/Screenshot3.png)
 
 
+### Keywords
+
+Area-reduction curves.
+
+
 ### Control de versiones
 
 Versión | Descripción
