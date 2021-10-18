@@ -14,7 +14,7 @@ Se puede considerar que el canal artificial a diseñar deberá tener una profund
 
 
 ### Keywords
-XS Cross section.
+XS Cross section. River cross section.
 
 
 ### Control de versiones
