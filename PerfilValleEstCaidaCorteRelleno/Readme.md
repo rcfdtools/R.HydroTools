@@ -28,8 +28,8 @@ El abscisado en HEC-RAS siempre se realiza en el sentido inverso del flujo. Agua
 
 Versión | Descripción
 --- | ---
-| v.20211014 | Actualización general de formato, gráficas y títulos.
 | v.20201011 | Inclusión análisis de relación corte vs. relleno.
+| v.20211014 | Actualización general de formato, gráficas y títulos.
 
 
 ### Licencia, cláusulas y condiciones de uso
