@@ -42,6 +42,11 @@ Método | Descripción
 ![R.HydroTools.RadioCurvaturaValle.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/RadioCurvaturaValle/Screenshot/Screenshot4.png)
 
 
+### Keywords
+
+Valley bend radius.
+
+
 ### Control de versiones
 
 Versión | Descripción
