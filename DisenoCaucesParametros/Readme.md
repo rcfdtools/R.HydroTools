@@ -79,8 +79,8 @@ Parámetro| Descripción
 ![R.HydroTools.DisenoCaucesParametros.Screenshot5](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoCaucesParametros/Screenshot/ScreenshotTerritorial.png)
 
 
-### Tags
-River design parameters.
+### Keywords
+River design parameters. Velocity. Shear. Side slope. River. Bank.
 
 
 ### Control de versiones
