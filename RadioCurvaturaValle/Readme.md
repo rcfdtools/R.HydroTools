@@ -46,8 +46,8 @@ Método | Descripción
 
 Versión | Descripción
 --- | ---
-| v.20211014 | Actualización general de formato.
 | v.20201011 | Inclusión de Método 5. Por factor multiplicador en función del ancho (Urban Storm Drainage Criteria Manual). Inclusión de Método 6. En función del tipo de canal. Salzitegger.
+| v.20211014 | Actualización general de formato.
 
 
 ### Licencia, cláusulas y condiciones de uso
