@@ -4,7 +4,7 @@ A partir de la información topográfica disponible bajo la zona del eje del val
 
 Para obtener el perfil por los puntos más bajos de cada sección, crear un modelo HEC-GeoRAS con ejes de río, bancas, líneas de flujo y secciones transversales. Las secciones transversales deberán conectar los diferentes puntos de la topobatimetría de cada sección.
 
-Luego de importar la geometría creada en HEC-GeoRAS al HEC-RAS, seleccionar el tramo de río y dibujar el perfil. El perfil mostrado en HEC-RAS corresponde a los puntos más bajos de cada sección de muestreo entre bancas. Para obtener los puntos, en la ventana del perfil ir a File y seleccionar la opción Copy Values to Clipboard.
+Luego de importar la geometría creada en HEC-GeoRAS al HEC-RAS, seleccionar el tramo de río y dibujar el perfil. El perfil mostrado en HEC-RAS corresponde a los puntos más bajos de cada sección de muestreo entre bancas. Para obtener las abscisas y las cotas asociadas del eje y las bancas, en la ventana del perfil ir a _File_ y seleccionar la opción _Copy Values to Clipboard_.
 
 El abscisado en HEC-RAS siempre se realiza en el sentido inverso del flujo. Aguas abajo en el punto de salida se encuentra la abscisa cero y aguas arriba la abscisa correspondiente al punto de inicio del realineamiento.
 
