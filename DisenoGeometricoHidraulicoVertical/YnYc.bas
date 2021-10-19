@@ -1,4 +1,5 @@
 Attribute VB_Name = "YnYc"
+'Cálculo de profundidad normal y crítica y propopiedades hidráulicas en canales a superficie libre.
 'Creado por: r.cfdtools@gmail.com, Versión: v.20211019
 'Licencia, cláusulas y condiciones de uso en: https://github.com/rcfdtools/R.HydroTools/wiki/License
 'VisualBasic for applications.
