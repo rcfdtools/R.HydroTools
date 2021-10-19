@@ -5,7 +5,7 @@ Dimensionar la sección hidráulica dominante y de creciente del cauce principal
 ### Funcionalidades
 * Registro y graficación de valores obtenidos en el módulo de diseño hidráulico de HEC-RAS.
 * Secuenciamiento para construcción de regiones y polilíneas de sección en Autodesk Autocad y/o Autodek Civil 3D.
-* Diseño y verificación de secciones transversales para diferentes tipos de geometría con cálculo ý graficación de profunidades normal y crítica, parámetros y propiedades hidráulicas. Módulo desarrollado por r.cfdtools@gmail.com.
+* Diseño y verificación de secciones transversales para diferentes tipos de geometría (rectangular, triangular, trapezoidal, circular) con cálculo y graficación de profunidades normal y crítica, parámetros y propiedades hidráulicas. Módulo desarrollado por r.cfdtools@gmail.com.
 * Diseño de sección estable por el método de fuerza tractiva. Formulación r.cfdtools@gmail.com.
 
 
