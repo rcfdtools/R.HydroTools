@@ -32,7 +32,7 @@ Sobreelevación requerida o borde libre en la sección de un canal, capaz de con
 
 
 ## Keywords
-Free board.
+Freeboard.
 
 
 ## Control de versiones
