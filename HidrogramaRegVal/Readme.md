@@ -27,7 +27,7 @@ Type of project or feature | Return period, yr
 | Freeboard hydrograph [for a class (c) dam] | 10,000 (PMP)
 
 
-### Ilustraciones
+## Ilustraciones
 
 ![R.HydroTools.HidrogramaRegVal.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/HidrogramaRegVal/Screenshot/Screenshot1.png)
 ![R.HydroTools.HidrogramaRegVal.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/HidrogramaRegVal/Screenshot/Screenshot2.png)
@@ -35,17 +35,17 @@ Type of project or feature | Return period, yr
 ![R.HydroTools.HidrogramaRegVal.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/HidrogramaRegVal/Screenshot/Screenshot4.png)
 
 
-### Keywords
+## Keywords
 
 Hydrogram. Water flow. Design return period.
 
 
-### Referencias
+## Referencias
 
 http://ponce.sdsu.edu/return_period.html
 
 
-### Control de versiones
+## Control de versiones
 
 Versión | Descripción
 --- | ---
@@ -53,5 +53,5 @@ Versión | Descripción
 | v.20211014 | Actualización general de formato.
 
 
-### Licencia, cláusulas y condiciones de uso
+## Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
