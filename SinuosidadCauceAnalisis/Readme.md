@@ -50,6 +50,12 @@ Nota: el FS obtenido en este método debe ser similar al obtenido en el libro de
 ![R.HydroTools.SinuosidadCauceAnalisis.Screenshot6](https://github.com/rcfdtools/R.HydroTools/blob/main/SinuosidadCauceAnalisis/Screenshot/Screenshot6.png)
 
 
+## Referencias
+
+www.tankonyvtar.hu
+es.wikipedia.org/wiki/Sinuosidad_de_un_r%C3%Ado
+
+
 ## Keywords
 Sinuosity. River bend. Channel length. Valley length.
 
