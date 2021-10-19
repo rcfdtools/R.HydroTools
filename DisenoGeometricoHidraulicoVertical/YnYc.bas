@@ -1,6 +1,6 @@
 Attribute VB_Name = "YnYc"
-'Creado por: r.cfdtools@gmail.com
-'Licencia, cláusulas y condiciones de uso en: https://github.com/rcfdtools/R.HydroTools/wiki/License
+'Creado por: r.cfdtools@gmail.com, VersiÃ³n: v.20211019
+'Licencia, clÃ¡usulas y condiciones de uso en: https://github.com/rcfdtools/R.HydroTools/wiki/License
 'VisualBasic for applications.
 'Bisection Method - Normal and Critical Depth Yc in Open Channels
 'For circular shapes this method can be unstable because need an aproach to right min max range
@@ -55,14 +55,14 @@ Loop
 'Geometric properties
 Dim myCalc(6, 8) 'Row, Col
 myCalc(0, 0) = "Depth," & cUnitText & ""
-myCalc(0, 1) = "Flow Area, " & cUnitText & "²"
+myCalc(0, 1) = "Flow Area, " & cUnitText & "Â²"
 myCalc(0, 2) = "Wet Perimeter, " & cUnitText & ""
 myCalc(0, 3) = "Top Width, " & cUnitText & ""
 myCalc(0, 4) = "Hydraulic Ratio, " & cUnitText & ""
 myCalc(0, 5) = "Hydraulic Depth, " & cUnitText & ""
 myCalc(0, 6) = "Velocity, " & cUnitText & "/s"
 myCalc(0, 7) = "Froude Number"
-myCalc(0, 8) = "Circular Tetta°"
+myCalc(0, 8) = "Circular TettaÂ°"
 
 myCalc(1, 0) = "Yn"
 myCalc(1, 1) = "An"
@@ -72,7 +72,7 @@ myCalc(1, 4) = "Rn"
 myCalc(1, 5) = "Dn"
 myCalc(1, 6) = "Vn"
 myCalc(1, 7) = "Fn"
-myCalc(1, 8) = "Tetta Yn°" 'ChrW(186)
+myCalc(1, 8) = "Tetta YnÃ‚Â°" 'ChrW(186)
 
 myCalc(2, 0) = "Yc"
 myCalc(2, 1) = "Ac"
@@ -82,7 +82,7 @@ myCalc(2, 4) = "Rc"
 myCalc(2, 5) = "Dc"
 myCalc(2, 6) = "Vc"
 myCalc(2, 7) = "Fc"
-myCalc(2, 8) = "Tetta Yc°"
+myCalc(2, 8) = "Tetta YcÃ‚Â°"
 
 myCalc(3, 0) = "Slope Type"
 myCalc(3, 1) = "Sc Critic Slope"
@@ -124,7 +124,7 @@ myCalc(6, 4) = ""
 myCalc(6, 5) = ""
 myCalc(6, 6) = fShapeType(b, z1, z2, Shape)
 myCalc(6, 7) = cUnitText
-myCalc(6, 8) = "r.cfdtools@gmail.com, v0.2"
+myCalc(6, 8) = "https://github.com/rcfdtools"
 
 R_YnYc = myCalc
 End Function
@@ -208,5 +208,3 @@ Function fShapeType(b, z1, z2, Shape)
     If Shape = "P" And b = 0 And z1 > 0 And z2 > 0 Then fShapeType = "P, Triangular"
     If Shape = "C" Then fShapeType = "C, Circular"
 End Function
-
-
