@@ -7,22 +7,22 @@ En caso de que existan restricciones de trazado y sea necesario utilizar una pen
 Nota: Para el diseño geométrico del canal artificial, se recomienda utilizar la pendiente obtenida del eje del diseño sinuoso del rio entre las secciones de referencia de inicio y entrega, para replicar así la longitud del cauce natural sin alterar la longitud del tránsito y el tiempo de concentración de la cuenca.
 
 
-### Ilustraciones
+## Ilustraciones
 
 ![R.HydroTools.PendienteCauceValle.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/PendienteCauceValle/Screenshot/Screenshot1.png)
 ![R.HydroTools.PendienteCauceValle.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/PendienteCauceValle/Screenshot/Screenshot2.png)
 
 
-### Keywords
+## Keywords
 Stream gradient. River slope.
 
 
-### Control de versiones
+## Control de versiones
 
 Versión | Descripción
 --- | ---
 | v.20211016 | Actualización general de análisis, gráficas y formato.
 
 
-### Licencia, cláusulas y condiciones de uso
+## Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
