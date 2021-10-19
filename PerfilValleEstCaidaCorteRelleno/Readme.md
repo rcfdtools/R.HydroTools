@@ -17,19 +17,19 @@ El abscisado en HEC-RAS siempre se realiza en el sentido inverso del flujo. Agua
 * Para canales prismáticos en los que no se realiza diseño sinuoso para la fracción correspondiente al cauce dominante, podrá como diseñador proponer e incluir estructuras de caída para reducir la pendiente.
 
 
-### Ilustraciones
+## Ilustraciones
 
 ![R.HydroTools.PerfilValleEstCaidaCorteRelleno.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/PerfilValleEstCaidaCorteRelleno/Screenshot/Screenshot1.png)
 ![R.HydroTools.PerfilValleEstCaidaCorteRelleno.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/PerfilValleEstCaidaCorteRelleno/Screenshot/Screenshot2.png)
 ![R.HydroTools.PerfilValleEstCaidaCorteRelleno.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/PerfilValleEstCaidaCorteRelleno/Screenshot/Screenshot3.png)
 
 
-### Keywords
+## Keywords
 
 River profile. Valley profile. Cut and filling.
 
 
-### Control de versiones
+## Control de versiones
 
 Versión | Descripción
 --- | ---
@@ -37,5 +37,5 @@ Versión | Descripción
 | v.20211014 | Actualización general de formato, gráficas y títulos.
 
 
-### Licencia, cláusulas y condiciones de uso
+## Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
