@@ -28,7 +28,7 @@ Procedimiento usando ArcGIS:
 Nota: los datos obtenidos deberán se copiados en la tabla del método 3 para obtener la ecuación de ajuste potencial que caracterizará el comportamiento sinuoso o mendriforme de los drenajes en la zona de llanura.
 
 
-## Método 3: Factor de sinuosidad a partir de la longitud euclidiana del tramo a reemplazar.
+# Método 3: Factor de sinuosidad a partir de la longitud euclidiana del tramo a reemplazar.
 
 Procedimiento usando ArcGIS:
 1. De la red de drenaje del modelo hidrológico, extraer los tramos a reemplazar, fusionar desde el editor de ArcMAP y eliminar los tramos sobrantes arriba y abajo del punto de inicio. Capa HMS_RiverReplaceSample_v0 de la GDB. Verificar el sentido vectorial de la polilínea hacia aguas abajo.
