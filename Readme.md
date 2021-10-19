@@ -2,6 +2,10 @@
 Tools for hydrological an hydraulics computational analysis, by r.cfdtools@gmail.com.
 
 
+### Licencia, cláusulas y condiciones de uso
+https://github.com/rcfdtools/R.HydroTools/wiki/License
+
+
 ### Herramientas disponibles
 
 Herramienta | Descripción
@@ -16,6 +20,3 @@ Herramienta | Descripción
 | Evaluación de taludes de referencia para diseño de sección a partir de secciones transversales de cauces naturales | A partir de la información topográfica disponible y de las secciones transversales trazadas en el modelo de muestreo HEC-GeoRAS arriba del punto de inicio y abajo del punto de entrega sobre cauces naturales existentes y en cauces laterales, estudiar la inclinación actual de los taludes que será utilizada como referencia para el diseño del canal artificial compuesto, correspondiente al talud estable del cauce natural luego de todos los procesos erosivos y de sedimentación. Para el diseño geométrico del canal de realineamiento, se consideran válidos, taludes de diseño con relación H:V mayor a la encontrada en la secciones naturales, obteniendo taludes mas tendidos en los que existirá menor riesgo de arrastre de material, erosión, socavación o volcamiento. Para el estudio de los taludes de referencia, en el libro de análisis se pueden utilizar las columnas del talud izquierdo para el análisis de las secciones del cauce dominante y las columnas derechas para el talud del valle o de creciente. https://github.com/rcfdtools/R.HydroTools/tree/main/TaludReferenciaCanal
 | Evaluación y análisis de la sinuosidad en cauces naturales | A partir de las líneas de drenaje restituidas y las líneas esquemáticas que representan tránsito hidrológico en el modelo geográfico de HEC-GeoHMS, determinar el factor de sinuosidad por los siguientes métodos geográficos: Método 1: Estimación del factor de sinuosidad a partir de la longitud euclidiana del valle, Metodo 2: Estimación del factor de sinuosidad a partir de la longitud suavizada del valle (PAEK, 2 km), Método 3: Factor de sinuosidad a partir de la longitud euclidiana del tramo a reemplazar. https://github.com/rcfdtools/R.HydroTools/tree/main/SinuosidadCauceAnalisis
 |  |
-
-### Licencia, cláusulas y condiciones de uso
-https://github.com/rcfdtools/R.HydroTools/wiki/License
