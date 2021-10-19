@@ -42,7 +42,7 @@ Hydrogram. Water flow. Design return period.
 
 ## Referencias
 
-http://ponce.sdsu.edu/return_period.html
+* http://ponce.sdsu.edu/return_period.html
 
 
 ## Control de versiones
