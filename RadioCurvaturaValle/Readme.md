@@ -15,7 +15,7 @@ Método | Descripción
 | 6. En función del tipo de canal. Salzitegger | Salzitegger Consult GMBH, Planificación de canales, Zona Piloto Ferreñafe, Tomo II/1. Proyecto Tinajones - Chiclayo 1984. En función del ancho superficial T y el tipo de drenaje o canal.
 
 
-### Referencias
+## Referencias
 
 * http://www.fao.org/3/a-at787s.pdf
 
@@ -34,7 +34,7 @@ Método | Descripción
 * https://www.u-cursos.cl/ Facultad de ingeniería
 
 
-### Ilustraciones
+## Ilustraciones
 
 ![R.HydroTools.RadioCurvaturaValle.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/RadioCurvaturaValle/Screenshot/Screenshot1.png)
 ![R.HydroTools.RadioCurvaturaValle.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/RadioCurvaturaValle/Screenshot/Screenshot2.png)
@@ -42,12 +42,12 @@ Método | Descripción
 ![R.HydroTools.RadioCurvaturaValle.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/RadioCurvaturaValle/Screenshot/Screenshot4.png)
 
 
-### Keywords
+## Keywords
 
 Valley bend radius.
 
 
-### Control de versiones
+## Control de versiones
 
 Versión | Descripción
 --- | ---
@@ -55,5 +55,5 @@ Versión | Descripción
 | v.20211014 | Actualización general de formato.
 
 
-### Licencia, cláusulas y condiciones de uso
+## Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
