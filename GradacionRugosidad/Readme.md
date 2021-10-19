@@ -4,6 +4,19 @@ Tamaño característico del material que compone el lecho o la zona de corte en 
 
 ### Métodos incluídos para estimar el valor característico de la rugosidad de Manning
 
+#### Basados en el d50
+
+Autor | Descripción
+--- | ---
+| Strikler, 1923 |Ríos con lecho de grava en Suiza
+| Posada, 1998 |Ríos de montaña con lecho de grava, Antioquia y Risaralda. Estudio en canales naturales
+| Keulegan, 1938 y 1949 |Universidad Nacional de Colombia, sede Medellín. Escuela de Geociencias y Medio Ambiente, Ramiro Marbello Pérez
+| Administración de carreteras feredales de Estados unidos de América, 1975 |Universidad Nacional de Colombia, sede Medellín. Escuela de Geociencias y Medio Ambiente, Ramiro Marbello Pérez
+| Simons y Senturk, 1976 |Universidad Nacional de Colombia, sede Medellín. Escuela de Geociencias y Medio Ambiente, Ramiro Marbello Pérez
+| Garde y Raju, 1978 |Universidad Nacional de Colombia, sede Medellín. Escuela de Geociencias y Medio Ambiente, Ramiro Marbello Pérez. Granulometría gruesa y libre de ondulaciones. 50% del material por peso tiene un diámetro menor.
+| Bray, 1979 |Universidad Nacional de Colombia, sede Medellín. Escuela de Geociencias y Medio Ambiente, Ramiro Marbello Pérez
+| Subramanya, 1982 |Universidad Nacional de Colombia, sede Medellín. Escuela de Geociencias y Medio Ambiente, Ramiro Marbello Pérez
+
 
 
 
