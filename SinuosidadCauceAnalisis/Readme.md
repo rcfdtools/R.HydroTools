@@ -52,9 +52,8 @@ Nota: el FS obtenido en este método debe ser similar al obtenido en el libro de
 
 ## Referencias
 
-www.tankonyvtar.hu
-
-es.wikipedia.org/wiki/Sinuosidad_de_un_r%C3%Ado
+* www.tankonyvtar.hu
+* es.wikipedia.org/wiki/Sinuosidad_de_un_r%C3%Ado
 
 
 ## Keywords
