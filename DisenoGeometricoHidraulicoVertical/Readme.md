@@ -26,7 +26,7 @@ Dimensionar la sección hidráulica dominante y de creciente del cauce principal
 * https://es.slideshare.net/Ebene159/mcanica-de-fludos
 * https://www.fullquimica.com/2012/04/densidad-del-agua.html
 * Book: Julian Aguirre
-* Ven Te Chow. Hidáulia de canales  (Ejemplo 7.4 Ven Te Chow)
+* Ven Te Chow. Hidáulica de canales  (Ejemplo 7.4 Ven Te Chow)
 
 
 ## Keywords
