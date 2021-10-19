@@ -1,4 +1,4 @@
-## Evaluación y análisis de la sinuosidad en cauces naturales
+# Evaluación y análisis de la sinuosidad en cauces naturales
 
 A partir de las líneas de drenaje restituidas y las líneas esquemáticas que representan tránsito hidrológico en el modelo geográfico de HEC-GeoHMS, determinar el factor de sinuosidad por los siguientes métodos geográficos.
 
@@ -7,7 +7,7 @@ A partir de las líneas de drenaje restituidas y las líneas esquemáticas que r
 * Método 3: Factor de sinuosidad a partir de la longitud euclidiana del tramo a reemplazar.
 
 
-### Método 1: Estimación del factor de sinuosidad a partir de la longitud euclidiana del valle.
+## Método 1: Estimación del factor de sinuosidad a partir de la longitud euclidiana del valle.
 
 Procedimiento usando ArcGIS:
 1. Crear una capa de drenajes 2D digitalizando los cauces sobre una ortofoto o sobre un modelo de terreno lidar. La digitalización se debe realizar por tramos de río entre afluentes detallando las lineas meandriformes y en el sentido del flujo.					
@@ -17,7 +17,7 @@ Procedimiento usando ArcGIS:
 Nota: los datos obtenidos deberán se copiados en la tabla del método 2 para obtener la ecuación de ajuste potencial que caracterizará el comportamiento sinuoso o mendriforme de los drenajes en la zona de llanura.
 
 
-### Metodo 2: Estimación del factor de sinuosidad a partir de la longitud suavizada del valle (PAEK, 2 km).
+## Metodo 2: Estimación del factor de sinuosidad a partir de la longitud suavizada del valle (PAEK, 2 km).
 
 Procedimiento usando ArcGIS:
 1. Crear una capa de drenajes 2D digitalizando los cauces sobre una ortofoto o sobre un modelo de terreno lidar. La digitalización se debe realizar por tramos de río entre afluentes detallando las lineas meandriformes y en el sentido del flujo.					
@@ -28,7 +28,7 @@ Procedimiento usando ArcGIS:
 Nota: los datos obtenidos deberán se copiados en la tabla del método 3 para obtener la ecuación de ajuste potencial que caracterizará el comportamiento sinuoso o mendriforme de los drenajes en la zona de llanura.
 
 
-### Método 3: Factor de sinuosidad a partir de la longitud euclidiana del tramo a reemplazar.
+## Método 3: Factor de sinuosidad a partir de la longitud euclidiana del tramo a reemplazar.
 
 Procedimiento usando ArcGIS:
 1. De la red de drenaje del modelo hidrológico, extraer los tramos a reemplazar, fusionar desde el editor de ArcMAP y eliminar los tramos sobrantes arriba y abajo del punto de inicio. Capa HMS_RiverReplaceSample_v0 de la GDB. Verificar el sentido vectorial de la polilínea hacia aguas abajo.
@@ -40,7 +40,7 @@ Verificar los valores correspondientes a las longitudes de río y valle, así co
 Nota: el FS obtenido en este método debe ser similar al obtenido en el libro de análisis de secciones transversales de referencia inicio y entrega para diseño hidráulico. https://github.com/rcfdtools/R.HydroTools/tree/main/SeccionTransvInicioEntrega
 
 
-## Ilustraciones
+# Ilustraciones
 
 ![R.HydroTools.SinuosidadCauceAnalisis.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/SinuosidadCauceAnalisis/Screenshot/Screenshot1.png)
 ![R.HydroTools.SinuosidadCauceAnalisis.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/SinuosidadCauceAnalisis/Screenshot/Screenshot2.png)
@@ -50,16 +50,16 @@ Nota: el FS obtenido en este método debe ser similar al obtenido en el libro de
 ![R.HydroTools.SinuosidadCauceAnalisis.Screenshot6](https://github.com/rcfdtools/R.HydroTools/blob/main/SinuosidadCauceAnalisis/Screenshot/Screenshot6.png)
 
 
-## Keywords
+# Keywords
 Sinuosity. River bend. Channel length. Valley length.
 
 
-## Control de versiones
+# Control de versiones
 
 Versión | Descripción
 --- | ---
 | v.20211019 | Actualización general de análisis, gráficas y formato.
 
 
-## Licencia, cláusulas y condiciones de uso
+# Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
