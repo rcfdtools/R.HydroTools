@@ -1,4 +1,4 @@
-## Diseño geométrico e hidráulico vertical de canales
+## Diseño geométrico e hidráulico vertical de canales a superficie libre
 
 Dimensionar la sección hidráulica dominante y de creciente del cauce principal y de los cauces laterales menores, verificando a flujo uniforme la capacidad hidráulica de las sección compuesta y el borde libre requerido.
 
