@@ -1,4 +1,4 @@
-## Evaluación y análisis de la sinuosidad en cauces naturales
+## Evaluación y análisis de sinuosidad en cauces naturales
 
 A partir de las líneas de drenaje restituidas y las líneas esquemáticas que representan tránsito hidrológico en el modelo geográfico de HEC-GeoHMS, determinar el factor de sinuosidad por los siguientes métodos geográficos.
 
