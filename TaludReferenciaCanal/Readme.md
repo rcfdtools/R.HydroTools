@@ -7,26 +7,26 @@ Para el diseño geométrico del canal de realineamiento, se consideran válidos,
 Para el estudio de los taludes de referencia, en el libro de análisis se pueden utilizar las columnas del talud izquierdo para el análisis de las secciones del cauce dominante y las columnas derechas para el talud del valle o de creciente.
 
 
-### Referencias
+## Referencias
 
 * INVIAS. Manual de drenaje para carreteras. Tabla 4.8.
 * RAS Título B Sistemas de Acueducto. Tabla B 4.4.
 * Dado el contenido de material cohesivo, el ángulo de reposo del material solo debe ser considerado materiales gruesos no cohesivos. Ref: Ven Te Chow. Hidráulicas de Canales Abiertos. página 169.
 
 
-### Ilustraciones
+## Ilustraciones
 
 ![R.HydroTools.TaludReferenciaCanal.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/TaludReferenciaCanal/Screenshot/Screenshot1.png)
 ![R.HydroTools.TaludReferenciaCanal.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/TaludReferenciaCanal/Screenshot/Screenshot2.png)
 ![R.HydroTools.TaludReferenciaCanal.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/TaludReferenciaCanal/Screenshot/Screenshot3.png)
 
 
-### Keywords
+## Keywords
 
 Side slope.
 
 
-### Control de versiones
+## Control de versiones
 
 Versión | Descripción
 --- | ---
@@ -34,6 +34,6 @@ Versión | Descripción
 | v.20211018 | Actualización general de formato.
 
 
-### Licencia, cláusulas y condiciones de uso
+## Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
 
