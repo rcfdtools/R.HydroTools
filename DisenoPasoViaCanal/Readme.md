@@ -17,6 +17,18 @@ Dimensionar la geometría de sección requerida para transpotar el caudal de dis
 * Resuleve la pendiente de las alcantarilla para modelos 1D en función de las secciones de referencia utilizadas para la localización.
 * Mediante la caja de herramientas ESRI ArcGIS for Desktop R.HydroTools.DisenoPasoViaCanal.tbx, crea los nodos y líneas 3D y exporta las lineas cota, eje y batea a Autocad.
 
+### Descripción de archivos y carpetas
+
+Archivo / Folder | Descripción
+--- | ---
+| GISCulvertPoint.bas | Código para generación de tabla de datos geográficos para generación de puntos 3D inicio - fin de alcantarillas para batea, eje y clave.
+| R.HydroTools.DisenoPasoViaCanal.tbx | Caja de herramientas ESRI ArcGIS for Desktop com modelador de procesos para creación de archivos de formas 3D y archivo CAD 3D.
+| R.HydroTools.DisenoPasoViaCanal.xlsm | Libro de diseño de pasos de vía.
+| R.HydroTools.DisenoPasoViaCanalCanal.sxd | Escena para visualización de nodos y alcantarillas 3D generadas.
+| R.HydroTools.DisenoPasoViaCanalGIS.xls | Tabla geocodificada con localización de nodos 3D para alcantarillas. Requerido por el modelador de procesos geográficos.
+| /CAD/ | Carpeta de volcado de archivo CAD 3D generado.
+| /SHP/ | Carpeta de volcado de nodos y lineas 3D en formato ESRI Shapefile.
+
 
 ## Ilustraciones
 
