@@ -3,6 +3,7 @@
 Dimensionar la geometría de sección requerida para transpotar el caudal de diseño de creciente bajo pasos de vía usando área equivalente. Es recomendable ubicar los pasos de vía en zonas de corte, en la que se disponga de una profundidad a la base del canal dominante mayor a la profundidad hidráulica de diseño; de este modo se podrán utilizar tuberías de diámetros superiores garantizando el tránsito hidráulico a descarga libre. 
 
 ### Procedimiento general
+0. Realizar el diseño geométrico e hidráulico vertical de la sección compuesta utilizando el módulo de diseño HD de HEC-RAS o el libro de diseño https://github.com/rcfdtools/R.HydroTools/tree/main/DisenoGeometricoHidraulicoVertical.
 1. Realizar el diseño geométrico del paso de vía utilizando este libro.
 2. Copiar todos los datos de la hoja GISCulvertPoint al libro de Excel R.HydroTools.DisenoPasoViaCanalGIS.xls.
 3. Desde ArcMAP o ArcCatalog, ejecutar el Model Builder Toolbox R.HydroTools.DisenoPasoViaCanal.tbx. Se recomienda utilizar la ruta absoluta D:\R.HydroTools\DisenoPasoViaCanal\.
