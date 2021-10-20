@@ -4,7 +4,7 @@ Dimensionar la geometría de sección requerida para transpotar el caudal de dis
 
 ### Procedimiento general
 0. Realizar el diseño geométrico e hidráulico vertical de la sección compuesta utilizando el módulo de diseño HD de HEC-RAS o el libro de diseño https://github.com/rcfdtools/R.HydroTools/tree/main/DisenoGeometricoHidraulicoVertical.
-1. Realizar el diseño geométrico del paso de vía utilizando este libro.
+1. Realizar el diseño geométrico del paso de vía utilizando el libro R.HydroTools.DisenoPasoViaCanal.xlsm.
 2. Copiar todos los datos de la hoja GISCulvertPoint al libro de Excel R.HydroTools.DisenoPasoViaCanalGIS.xls.
 3. Desde ArcMAP o ArcCatalog, ejecutar el Model Builder Toolbox R.HydroTools.DisenoPasoViaCanal.tbx. Se recomienda utilizar la ruta absoluta D:\R.HydroTools\DisenoPasoViaCanal\.
 4. Visualizar las capas geográficas 3D de alcantarillas en ArcMAP y Autodek CIVIL3D.
