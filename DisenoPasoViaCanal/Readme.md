@@ -1,4 +1,4 @@
-## Diseño geométrico de pasos de vía en canales usando alcantarillas por área equivalente a descarga libre.
+## Diseño geométrico de pasos de vía en canales usando alcantarillas por área equivalente a descarga libre para modelos hidráulicos en HEC-RAS.
 
 Dimensionar la geometría de sección requerida para transpotar el caudal de diseño de creciente bajo pasos de vía usando área equivalente. Es recomendable ubicar los pasos de vía en zonas de corte, en la que se disponga de una profundidad a la base del canal dominante mayor a la profundidad hidráulica de diseño; de este modo se podrán utilizar tuberías de diámetros superiores garantizando el tránsito hidráulico a descarga libre. 
 
