@@ -1,7 +1,7 @@
 Attribute VB_Name = "YnYc"
-'Cálculo de profundidad normal y crítica y propopiedades hidráulicas en canales a superficie libre.
-'Creado por: r.cfdtools@gmail.com, Versión: v.20211019
-'Licencia, cláusulas y condiciones de uso en: https://github.com/rcfdtools/R.HydroTools/wiki/License
+'C�lculo de profundidad normal y cr�tica y propopiedades hidr�ulicas en canales a superficie libre.
+'Creado por: https://github.com/rcfdtools, Versi�n: v.20211019
+'Licencia, cl�usulas y condiciones de uso en: https://github.com/rcfdtools/R.HydroTools/wiki/License
 'VisualBasic for applications.
 'Bisection Method - Normal and Critical Depth Yc in Open Channels
 'For circular shapes this method can be unstable because need an aproach to right min max range
@@ -73,7 +73,7 @@ myCalc(1, 4) = "Rn"
 myCalc(1, 5) = "Dn"
 myCalc(1, 6) = "Vn"
 myCalc(1, 7) = "Fn"
-myCalc(1, 8) = "Tetta YnÂ°" 'ChrW(186)
+myCalc(1, 8) = "Tetta Yn°" 'ChrW(186)
 
 myCalc(2, 0) = "Yc"
 myCalc(2, 1) = "Ac"
@@ -83,7 +83,7 @@ myCalc(2, 4) = "Rc"
 myCalc(2, 5) = "Dc"
 myCalc(2, 6) = "Vc"
 myCalc(2, 7) = "Fc"
-myCalc(2, 8) = "Tetta YcÂ°"
+myCalc(2, 8) = "Tetta Yc°"
 
 myCalc(3, 0) = "Slope Type"
 myCalc(3, 1) = "Sc Critic Slope"
@@ -209,3 +209,8 @@ Function fShapeType(b, z1, z2, Shape)
     If Shape = "P" And b = 0 And z1 > 0 And z2 > 0 Then fShapeType = "P, Triangular"
     If Shape = "C" Then fShapeType = "C, Circular"
 End Function
+
+'Microsoft Excel procedure.
+'1. Call the R_YnYc function.
+'2. Select a 9 columns by 7 files range matrix. The first selected cell correspond with the R_YnYc call.
+'3. With the currect selecci�n, press F2 and then press Shift-Ctrl-Enter.
