@@ -2,12 +2,12 @@
 
 A partir de la estimación de los radios de curvatura característicos de los meandros existentes en cauces naturales, el índice de sinuosidad y los anchos de sección diseñados hidráulicamente para el transporte del caudal dominante y creciente; determinar los siguientes atributos geométricos requeridos para el trazado del cauce sinuoso:
 
-* Angulo de deflexión de la onda α.
-* Longitud sinuosa del río (Lr).
-* Número de ondas sinuosas.
-* Longitud hidráulica de cada onda.
-* Longitud de aproximación entre ondas.
-* Número de subdivisiones en el eje del valle suavizado.
+* Angulo de deflexión de la onda, α.
+* Longitud sinuosa del río, Lr.
+* Número de ondas sinuosas, n.
+* Longitud hidráulica de cada onda, Lb.
+* Longitud de aproximación entre ondas, La.
+* Número de subdivisiones en el eje del valle suavizado, Lc * (Lm/4).
 
 ### Procedimiento
 
