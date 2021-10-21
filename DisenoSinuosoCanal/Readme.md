@@ -16,6 +16,22 @@ A partir de la estimación de los radios de curvatura característicos de los me
 * (3A, 3B): Ingresar el valor calculado de ancho de la base del canal para caudal dominante de Tr: 2.33yr y el ancho del valle máximo. Al ancho de la base del valle disponible se le debe descontar un ancho de separación entre la curva externa de cada onda al borde de talud de la base del valle para evitar que el talud del cauce dominante y del valle sea contínuo y asi prevener la erosión del talud. Se recomiendan 5m a cada lado. Ejemplo:  Si el ancho disponible para valle es de 160m se debe realizar el diseño sinuoso con 150m. En el trazado de ejes usando CIVIL 3D se dibuja el corredor de 160m, un offset de 5m a cada lado y las curvas externas se trazan dentro del corredor efectivo libre para garantizar la separación de taludes.
 * (4): Para trazar el eje de la clotoide en CIVIL3D, se toma la longitud hidraulica de cada onda y se divide en 4 partes (Lm/4), se multiplica por el numero de ondas requeridas y se divide el eje del valle en este numero. Luego se traza con una línea espiral o una clotoide de radio Rc característico calculado por el eje sinuoso por los puntos extremos de intersección de cada subtramo con el borde externo de la onda. Para las sample lines dividir B' entre 2 y utilizar este valor para su construcción.
 
+### Funciones de llamado en VBA
+
+Sub FUNCIONOBJ_ALPHA()
+    ' Calcular el valor del ángulo de radio de giro (Alpha)
+    ' By: frank.velasco@escuelaing.edu.co, william.aguilar@escuelaing.edu.co
+    Range("alphaVal").GoalSeek Goal:=0, ChangingCell:=Range("alphaSemilla")
+End Sub
+
+Sub FUNCIONOBJ_ALPHA_Rc_max()
+    ' Calcular el valor del ángulo de radio de giro (Alpha)
+    ' By: frank.velasco@escuelaing.edu.co, william.aguilar@escuelaing.edu.co
+    Mensaje = MsgBox("Utilice Solver para obtener alpha y Rc máximo", vbOKCancel, "R.HydroTools")
+    Application.SendKeys "%D"
+    Application.SendKeys "Y2"
+End Sub
+
 ## Ilustraciones
 
 ![R.HydroTools.DisenoSinuosoCanal.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoSinuosoCanal/Screenshot/Screenshot1.png)
