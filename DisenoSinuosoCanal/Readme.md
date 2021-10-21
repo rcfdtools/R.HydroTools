@@ -20,13 +20,13 @@ A partir de la estimación de los radios de curvatura característicos de los me
 
 Sub FUNCIONOBJ_ALPHA()
     ' Calcular el valor del ángulo de radio de giro (Alpha)
-    ' By: frank.velasco@escuelaing.edu.co, william.aguilar@escuelaing.edu.co
+    ' By: baalkara13@gmail.com & r.cfdtools@gmail.com
     Range("alphaVal").GoalSeek Goal:=0, ChangingCell:=Range("alphaSemilla")
 End Sub
 
 Sub FUNCIONOBJ_ALPHA_Rc_max()
     ' Calcular el valor del ángulo de radio de giro (Alpha)
-    ' By: frank.velasco@escuelaing.edu.co, william.aguilar@escuelaing.edu.co
+    ' By: baalkara13@gmail.com & r.cfdtools@gmail.com
     Mensaje = MsgBox("Utilice Solver para obtener alpha y Rc máximo", vbOKCancel, "R.HydroTools")
     Application.SendKeys "%D"
     Application.SendKeys "Y2"
