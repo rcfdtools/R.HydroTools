@@ -9,7 +9,7 @@ Dimensionar la sección hidráulica dominante y de creciente del cauce principal
 * Diseño de sección estable por el método de fuerza tractiva. Formulación r.cfdtools.
 
 ### Microsoft Excel procedure
-1. Call the R_YnYc funcion.
+1. Call the R_YnYc function.
 2. Select a 9 columns by 7 files range matrix. The first selected cell correspond with the R_YnYc call.
 3. With the currect selección, press F2 and then press Shift-Ctrl-Enter.
 
