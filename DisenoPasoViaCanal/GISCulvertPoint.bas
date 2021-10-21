@@ -1,12 +1,12 @@
 Attribute VB_Name = "GISCulvertPoint"
 'Diseno geometrico de pasos de via en canales usando alcantarillas por area equivalente a descarga libre.
-'Creado por: r.cfdtools@gmail.com, Versión: v.20211020
+'Versión: v.20211020
 'https://github.com/rcfdtools/R.HydroTools/tree/main/DisenoPasoViaCanal
 'Información, licencia y condiciones de uso en https://github.com/rcfdtools/R.HydroTools/wiki/License
 'VisualBasic for applications.
 Sub R_GISCulvertPoint()
     vAppName = "R.GISCulvertPoint"
-    vCreateBy = "william.aguilar@escuelaing.edu.co"
+    vCreateBy = "https://github.com/rcfdtools"
     vTInicioCalc = Timer()
     vHojaDatos = "GISSetup"
     vHojaGIS = "GISCulvertPoint"
