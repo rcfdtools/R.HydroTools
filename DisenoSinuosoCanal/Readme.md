@@ -31,7 +31,7 @@ A partir de la estimación de los radios de curvatura característicos de los me
 
 
 ## Keywords
-Sinuosoidal river design.
+Sinusoidal river design.
 
 
 ## Control de versiones
