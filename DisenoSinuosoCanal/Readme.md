@@ -1,6 +1,6 @@
 ## Diseño geométrico horizontal sinuoso de canales
 
-A partir de la estimación de los radios de curvatura característicos de los meandros existentes en cauces naturales, el índice de sinuosidad y los anchos de sección diseñados hidráulicamente para el transporte del caudal dominante y creciente; determinar los siguientes atributos geométricos requeridos para el trazado del cauce sinuoso:
+A partir de la estimación de los radios de curvatura característicos de los meandros existentes en cauces naturales, el índice de sinuosidad y los anchos de sección diseñados hidráulicamente para el transporte del caudal dominante y creciente; determinar los siguientes atributos geométricos requeridos para el trazado del cauce sinuoso en Autodesk Civil 3D:
 
 * Angulo de deflexión de la onda, α.
 * Longitud sinuosa del río, Lr.
