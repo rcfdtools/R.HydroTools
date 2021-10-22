@@ -30,12 +30,12 @@ A partir de la estimación de los radios de curvatura característicos de los me
 >     Application.SendKeys "Y2"
 > End Sub
 
-Code(
+```
 Sub FUNCIONOBJ_ALPHA()
     ' Calcular el valor del ángulo de radio de giro (Alpha)
     Range("alphaVal").GoalSeek Goal:=0, ChangingCell:=Range("alphaSemilla")
 End Sub
-)
+```
 
 ## Ilustraciones
 
