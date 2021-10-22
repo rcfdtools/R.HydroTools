@@ -1,6 +1,6 @@
 ## Diseño de estructura de caída con contraescalón en sección rectangular
 
-El diseño y construcción de canales hidráulicos requiere frecuentemente del diseño de estructuras de caída, especialmente cuando se busca ajustar o mantener la pendiente de diseño, cuando no se realiza el diseño de cauce sinuoso confinado en valle o cuando debido a procesos erosivos el fondo del canal se degrada y es necesario que este se agrade.
+El diseño y construcción de canales hidráulicos requiere frecuentemente del diseño de estructuras de caída, especialmente cuando se busca ajustar o mantener la pendiente de diseño, cuando no se realiza el diseño de cauce sinuoso confinado en valle o cuando debido a procesos erosivos el fondo del canal se degrada y es necesario que este se agrade para recuperar su condición inicial.
 
 
 ### Funcionalidades
