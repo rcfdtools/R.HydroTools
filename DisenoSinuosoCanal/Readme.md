@@ -18,10 +18,10 @@ A partir de la estimación de los radios de curvatura característicos de los me
 
 ### Funciones de llamado en VBA
 
-Sub FUNCIONOBJ_ALPHA()
-    ' Calcular el valor del ángulo de radio de giro (Alpha)
-    Range("alphaVal").GoalSeek Goal:=0, ChangingCell:=Range("alphaSemilla")
-End Sub
+> Sub FUNCIONOBJ_ALPHA()
+>     ' Calcular el valor del ángulo de radio de giro (Alpha)
+>     Range("alphaVal").GoalSeek Goal:=0, ChangingCell:=Range("alphaSemilla")
+> End Sub
 
 Sub FUNCIONOBJ_ALPHA_Rc_max()
     ' Calcular el valor del ángulo de radio de giro (Alpha)
