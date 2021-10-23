@@ -15,7 +15,7 @@ Dimensionar la geometría de sección requerida para transpotar el caudal de dis
 * Resuelve el número de alcantarillas principales y secundarias requeridas a partir de los parámetros de entrada.
 * Grafica las secciones del canal y paso de vía con localización de alcantarillas obtenidas.
 * Crea la tabla de datos geográficos para la creación de nodos y lineas 3D de eje, clave y batea.
-* Resuleve la pendiente de las alcantarilla para modelos 1D en función de las secciones de referencia utilizadas para la localización.
+* Resuleve la pendiente de las alcantarillas para modelos 1D en función de las secciones de referencia utilizadas para la localización.
 * Mediante la caja de herramientas ESRI ArcGIS for Desktop R.HydroTools.DisenoPasoViaCanal.tbx, crea los nodos y líneas 3D y exporta las lineas cota, eje y batea a Autocad.
 
 ### Descripción de archivos y carpetas
