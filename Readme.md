@@ -6,7 +6,7 @@ Tools for hydrological an hydraulics computational analysis, by r.cfdtools@gmail
 https://github.com/rcfdtools/R.HydroTools/wiki/License
 
 
-## Herramientas computacionales para hidrología
+## Herramientas hidrología
 
 Herramienta | Descripción
 --- | ---
@@ -14,7 +14,7 @@ Herramienta | Descripción
 | Registro y validación de hidrogramas obtenidos a partir de modelación hidrológica en HEC-HMS | Este libro de cálculo es utilizado para registrar y validar los pulsos obtenidos en modelos hidrológicos de eventos discretos o de valores máximos. La hoja _Hidrograma4a_ presenta un ejemplo para la estimación de pulsos de hidrogramas para periodos de retorno superiores a partir de los valores pico obtenidos en los periodos de retorno registrados. https://github.com/rcfdtools/R.HydroTools/tree/main/HidrogramaRegVal
 |  |
 
-## Herramientas computacionales para diseño y modelación de cauces
+## Herramientas diseño y modelación de cauces
 
 Herramienta | Descripción
 --- | ---
