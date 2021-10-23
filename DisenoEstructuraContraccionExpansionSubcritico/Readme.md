@@ -1,4 +1,4 @@
-## Diseño de estructura hidráulica de contracción y expansión a flujo subcrítico.	
+## Diseño de estructura hidráulica de contracción y expansión a flujo subcrítico
 
 El diseño y construcción de canales hidráulicos requiere frecuentemente del diseño de estructuras de transición por contracción y expansión con diferentes geometrías. A través de esta herramienta podrá diseñar transiciones combinando geometrías trapezoidales, triangulares y rectangulares.
 
