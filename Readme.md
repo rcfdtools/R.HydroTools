@@ -14,8 +14,7 @@ Herramienta | Descripción
 | Registro y validación de hidrogramas obtenidos a partir de modelación hidrológica en HEC-HMS | Este libro de cálculo es utilizado para registrar y validar los pulsos obtenidos en modelos hidrológicos de eventos discretos o de valores máximos. La hoja _Hidrograma4a_ presenta un ejemplo para la estimación de pulsos de hidrogramas para periodos de retorno superiores a partir de los valores pico obtenidos en los periodos de retorno registrados. https://github.com/rcfdtools/R.HydroTools/tree/main/HidrogramaRegVal
 |  |
 
-## Herramientas diseño y modelación de cauces
-
+## Herramientas hidráulica de canales
 Herramienta | Descripción
 --- | ---
 | Parámetros generales para el diseño y modelación de cauces | Este libro de cálculo contiene lineamientos generales para diseño de canales y permite registrar: Parámetros técnicos requeridos, Parámetros técnicos estimados, Parámetros geotécnicos, ambientales y sociales, Parámetros territoriales.   https://github.com/rcfdtools/R.HydroTools/tree/main/DisenoCaucesParametros
