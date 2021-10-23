@@ -32,3 +32,9 @@ Herramienta | Descripción
 | Diseño de estructura de caída con contraescalón en sección rectangular | El diseño y construcción de canales hidráulicos requiere frecuentemente del diseño de estructuras de caída, especialmente cuando se busca ajustar o mantener la pendiente de diseño, cuando no se realiza el diseño de cauce sinuoso confinado en valle o cuando debido a procesos erosivos el fondo del canal se degrada y es necesario que este se agrade para recuperar su condición inicial. https://github.com/rcfdtools/R.HydroTools/tree/main/DisenoEstructuraCaidaConContraescalon
 |  |
 |  |
+
+## ¿Cómo colaborar con este proyecto?
+
+* Reportar un error: A través de la opción _Issues_ localizada en la parte superior, reporte errores identificados en la formulación, en los valores de entrada de los casos de estudio utilizados como ejemplo, en la documentación y en general en cualquier elemento. Indique el nombre de la herramienta y el link completo del repositorio (por ejemplo: _https://github.com/rcfdtools/R.HydroTools/tree/main/BordeLibreCanal_).
+* Referencias complementarias: A través de la opción _Issues_ localizada en la parte superior, proponga y envíe referencias complementarias para una o varias herramientas indicando sus enlaces completos dentro de GitHub.
+* Método adicional: Sí conoce de algún método complementario a los propuestos en las herramientas de este proyecto, formule y envíe en un libro de Microsoft Excel un ejemplo. Reportar a través de la opción _Pull requests_ o a través de un repositorio (p.ej: Google Drive, OneDrive, Wetransfer). Los créditos del nuevo método propuesto serán incluídos en este repositorio o dentro de la herramienta del proyecto R.HydroTools.
