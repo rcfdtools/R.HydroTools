@@ -4,7 +4,9 @@ El diseño y construcción de canales hidráulicos requiere frecuentemente del d
 
 ### Casos en los que se requiere del uso de contracciones y/o expansiones
 
-* 
+* Contracción o expansión de canales naturales a canales artificiales en zonas de inicio y/o entrega.
+* Contracción o expansión en pasos de vía.
+* Contracción o expansión de canales laterales a estructuras de caída escalonadas y/o a rápidas.
 
 
 ### Funcionalidades
@@ -53,7 +55,7 @@ Nota: El archivo R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoFold
 
 
 ## Keywords
-Hydraulic structure. Hydraulic transition. Hydraulic expantion. Hydraulic contraction.
+Hydraulic structure. Hydraulic transition. Hydraulic expansion. Hydraulic contraction.
 
 
 ## Control de versiones
