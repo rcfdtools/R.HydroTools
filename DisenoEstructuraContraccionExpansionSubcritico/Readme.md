@@ -62,7 +62,7 @@ Hydraulic structure. Hydraulic transition. Hydraulic expansion. Hydraulic contra
 
 Versión | Descripción
 --- | ---
-| v.20211023 | Actualización general de análisis, gráficas y formato. Incorporación de Esri Toolbox para la creación automática de superficies para ensamblado de prototipos en HEC-RAS 2D.
+| v.20211023 | Actualización general de análisis, gráficas y formato. Desarrollo e incorporación de Esri Toolbox para la creación automática de superficies para ensamblado de prototipos hidráulicos en HEC-RAS 2D.
 
 
 ## Licencia, cláusulas y condiciones de uso
