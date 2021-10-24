@@ -26,7 +26,7 @@ Archivo / Folder | Descripción
 | R.HydroTools.DisenoPasoViaCanal.tbx | Caja de herramientas ToolBox ESRI ArcGIS for Desktop con modelador de procesos para creación de archivos de formas 3D y archivo CAD 3D.
 | R.HydroTools.DisenoPasoViaCanal.xlsm | Libro de diseño de pasos de vía.
 | R.HydroTools.DisenoPasoViaCanalCanal.sxd | Escena ArcScene 10.2.2 para visualización 3D de nodos y alcantarillas 3D generadas.
-| R.HydroTools.DisenoPasoViaCanalGIS.xls | Tabla geocodificada con localización de nodos 3D para alcantarillas. Requerido por el modelador de procesos geográficos.
+| R.HydroTools.DisenoPasoViaCanalGIS.xls | Tabla geocodificada con localización de nodos 3D para alcantarillas. Requerido por el modelador de procesos geográficos contenido en el Toolbox.
 | /CAD/ | Carpeta de volcado de archivo CAD 3D generado.
 | /SHP/ | Carpeta de volcado de nodos y lineas 3D en formato ESRI Shapefile.
 
