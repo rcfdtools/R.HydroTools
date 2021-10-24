@@ -2,6 +2,7 @@
 
 El diseño y construcción de canales hidráulicos requiere frecuentemente del diseño de estructuras de transición por contracción y expansión con diferentes geometrías. A través de esta herramienta podrá diseñar transiciones combinando geometrías trapezoidales, triangulares y rectangulares.
 
+
 ### Casos en los que se requiere del uso de contracciones y/o expansiones
 
 * Contracción o expansión de canales naturales a canales artificiales en zonas de inicio y/o entrega.
@@ -14,9 +15,25 @@ El diseño y construcción de canales hidráulicos requiere frecuentemente del d
 * Diseño de transición para diferentes tipos de geometrías con y sin compensación por desnivel.
 * Selección del tipo de transición y asociación de factores para determinar la longitud de desarrollo.
 * Graficación en planta y perfil.
-* Generación de tabla con geolocalizadores XYZ de los nodos que conforman la estructura.
+* Factor multiplicador para dibujo de tramos de aproximación de inicio y entrega, requeridos para desarrollar el flujo en la modelación antes de pasar por la estructura.
+* Generación de tabla con geolocalizadores XYZ de los nodos que conforman la estructura. Actualmente solo funcional para transiciones en cuña.
 * Toolbox en ArcGIS for Desktop para la creación de la nube de puntos 3D, modelo de terreno triangulado, grilla ráster de alta resolución, dominio límite y triangulos 3D.
 * Representación 3D en ArcScene.
+
+
+### Descripción de archivos y carpetas
+
+Archivo / Folder | Descripción
+--- | ---
+| R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.mxd | Mapa ArcMap 10.2.2 para visualización 2D de resultados de ejecución del Toolbox.
+| R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.sxd | Escena ArcScene 10.2.2 para visualización 3D de modelos de terreno y capas vectoriales de la estructura generados por el Toolbox.
+| R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.xlsm | Libro de diseño de estructuras de transición.
+| R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoFolderStructure.zip | Comprimido con estructura de directorios requerida en D:\ para la ejecución del Toolbox. 
+| R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.tbx | Caja de herramientas ToolBox ESRI ArcGIS for Desktop con modelador de procesos para creación de archivos de formas 3D y archivo CAD 3D.
+| R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.xls | Tabla geocodificada con localización de nodos 3D de la estructura de transición. Requerido por el modelador de procesos geográficos contenido en el Toolbox.
+| /MDT/ | Carpeta de volcado de modelos de terreno en formato vectorial TIN y Ráster generado por el Toolbox.
+| /SHP/ | Carpeta de volcado de nodos y caras 3D del modelo de terreno vectorial en formato ESRI Shapefile.
+
 
 ### Procedimiento para creación de superficie usando ArcGIS for Desktop
 
@@ -62,7 +79,7 @@ Hydraulic structure. Hydraulic transition. Hydraulic expansion. Hydraulic contra
 
 Versión | Descripción
 --- | ---
-| v.20211023 | Actualización general de análisis, gráficas y formato. Desarrollo e incorporación de Esri Toolbox para la creación automática de superficies para ensamblado de prototipos hidráulicos en HEC-RAS 2D.
+| v.20211023 | Actualización general de análisis, gráficas y formato. Desarrollo e incorporación de Esri Toolbox para la creación automática de superficies para ensamblado de prototipos hidráulicos en HEC-RAS 2D. Inclusión de factor multiplicador para dibujo de tramos de aproximación de inicio y entrega.
 
 
 ## Licencia, cláusulas y condiciones de uso
