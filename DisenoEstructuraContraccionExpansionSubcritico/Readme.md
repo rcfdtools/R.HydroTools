@@ -38,10 +38,11 @@ Archivo / Folder | Descripción
 
 ### Procedimiento para creación de superficie usando ArcGIS for Desktop
 
-1. Copie los valores de la _Tabla esquema CAD o GIS en planta tipo cuña_ contenidos en esta hoja, incluída la cabecera.
-2. Peque los valores en el libro de cálculo R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.xls en la hoja GIS. Copiar libro en D:\R.HydroTools\DisenoEstructuraContraccionExpansionSubcritico\
+1. Copie los valores de la _Tabla esquema CAD o GIS en planta tipo cuña_ contenidos en la hoja de diseño R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.xlsm, incluída la cabecera.
+2. Peque los valores en el libro de cálculo R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.xls en la hoja _GIS_. Copiar libro en D:\R.HydroTools\DisenoEstructuraContraccionExpansionSubcritico\
 3. En ArcMAP, cargue y ejecute el ToolBox R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.tbx. Se recomienda el uso de las rutas predeterminadas: D:\R.HydroTools\DisenoEstructuraContraccionExpansionSubcritico. Dentro de esta carpeta es necesario crear las carpetas MDT y SHP.
-4. Visualice los resultados obtenidos en ArcMAP y en ARCScene.
+4. Visualice los resultados obtenidos en ArcMAP y en ArcScene.
+
 Nota: El archivo R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoFolderStructure.zip contiene la estructura de directorios requerida en la unidad D:\.
 
 
