@@ -8,6 +8,7 @@ El diseño y construcción de canales hidráulicos requiere frecuentemente del d
 * Contracción o expansión de canales naturales a canales artificiales en zonas de inicio y/o entrega.
 * Contracción y expansión en pasos de vía.
 * Contracción o expansión de canales laterales a estructuras de caída escalonadas y/o a rápidas.
+* Contracción y expansión en tramos de aproximación a canaletas Parshall ubicadas en canales.
 
 
 ### Funcionalidades
