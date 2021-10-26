@@ -1,4 +1,4 @@
-## Estimación de borde libre en canales - Freeboard.
+## Estimación de borde libre en canales - Freeboard
 
 Sobreelevación requerida o borde libre en la sección de un canal, capaz de contener el flujo sin desbordamiento, producto del oleaje o de la sobreelevación de la lámina de agua en tramos curvos y transiciones.
 
