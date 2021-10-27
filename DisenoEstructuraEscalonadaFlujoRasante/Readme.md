@@ -59,6 +59,8 @@ Nota: El archivo R.HydroTools.DisenoEstructuraEscalonadaFlujoRasanteFolderStruct
 ![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot9](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/Screenshot/Screenshot9.png)
 ![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot10](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/Screenshot/Screenshot10.png)
 ![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot11](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/Screenshot/Screenshot11.png)
+![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot12](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/Screenshot/Screenshot12.png)
+
 
 
 ## Referencias
