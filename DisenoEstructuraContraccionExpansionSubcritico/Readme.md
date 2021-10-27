@@ -28,7 +28,7 @@ Archivo / Folder | Descripción
 --- | ---
 | R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.mxd | Mapa ArcMap 10.2.2 para visualización 2D de resultados de ejecución del Toolbox.
 | R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.sxd | Escena ArcScene 10.2.2 para visualización 3D de modelos de terreno y capas vectoriales de la estructura generados por el Toolbox.
-| R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.xlsm | Libro de diseño de estructuras de transición.
+| R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.xlsm | Libro de diseño de la estructura.
 | R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoFolderStructure.zip | Comprimido con estructura de directorios requerida en D:\ para la ejecución del Toolbox. 
 | R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.tbx | Caja de herramientas ToolBox ESRI ArcGIS for Desktop con modelador de procesos para creación de archivos de formas 3D y archivo CAD 3D.
 | R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.xls | Tabla geocodificada con localización de nodos 3D de la estructura de transición. Requerido por el modelador de procesos geográficos contenido en el Toolbox.
