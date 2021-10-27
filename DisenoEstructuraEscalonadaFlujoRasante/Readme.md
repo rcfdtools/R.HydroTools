@@ -17,6 +17,7 @@ El diseño y construcción de canales hidráulicos requiere frecuentemente del d
 * Graficación de perfil.
 * Factor multiplicador para dibujo de tramos de aproximación de inicio y entrega, requeridos para desarrollar el flujo en la modelación hidráulica antes de pasar por la estructura.
 * Ingreso de valor para prevención de coalineación en paredes verticales para el ensamble correcto del modelo de terreno triangulado. Este valor puede ser definido en cero cuando se requiere construir la superficie con paredes usando herramientas de dibujo diferentes a Esri ArcGIS for Desktop.
+* Ingreso de valor de pendiente para tramos de aproximación de inicio y entrega.
 * Generación de tabla con geolocalizadores XYZ de los nodos que conforman la estructura.
 * Toolbox en ArcGIS for Desktop para la creación de la nube de puntos 3D, eliminación de nodos idénticos, modelo de terreno triangulado, grilla ráster de alta resolución, dominio límite y triangulos 3D.
 * Representación 3D en ArcScene.
@@ -78,7 +79,7 @@ Hydraulic Stepped structure.
 
 Versión | Descripción
 --- | ---
-| v.20211027 | Actualización general de análisis, gráficas y formato. Desarrollo e incorporación de Esri Toolbox para la creación automática de superficies para ensamblado de prototipos hidráulicos en HEC-RAS 2D. Inclusión de factor multiplicador para dibujo de tramos de aproximación de inicio y entrega. Inclusión de valor para prevención de coalineación. Actualización para diseño de estructura de hasta 100 escalones. Validación para obtener número entero de escalones.
+| v.20211027 | Actualización general de análisis, gráficas y formato. Desarrollo e incorporación de Esri Toolbox para la creación automática de superficies para ensamblado de prototipos hidráulicos en HEC-RAS 2D. Inclusión de factor multiplicador para dibujo de tramos de aproximación de inicio y entrega. Inclusión de valor para prevención de coalineación. Actualización para diseño de estructura de hasta 100 escalones. Validación para obtener número entero de escalones. Inclusión de pendiente en tramos de aproximación.
 
 
 ## Licencia, cláusulas y condiciones de uso
