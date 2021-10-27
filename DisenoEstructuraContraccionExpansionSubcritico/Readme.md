@@ -16,7 +16,7 @@ El diseño y construcción de canales hidráulicos requiere frecuentemente del d
 * Diseño de transición para diferentes tipos de geometrías con y sin compensación por desnivel.
 * Selección del tipo de transición y asociación de factores para determinar la longitud de desarrollo.
 * Graficación en planta y perfil.
-* Factor multiplicador para dibujo de tramos de aproximación de inicio y entrega, requeridos para desarrollar el flujo en la modelación antes de pasar por la estructura.
+* Factor multiplicador para dibujo de tramos de aproximación de inicio y entrega, requeridos para desarrollar el flujo en la modelación hidráilica antes de pasar por la estructura.
 * Generación de tabla con geolocalizadores XYZ de los nodos que conforman la estructura. Actualmente solo funcional para transiciones en cuña.
 * Toolbox en ArcGIS for Desktop para la creación de la nube de puntos 3D, modelo de terreno triangulado, grilla ráster de alta resolución, dominio límite y triangulos 3D.
 * Representación 3D en ArcScene.
