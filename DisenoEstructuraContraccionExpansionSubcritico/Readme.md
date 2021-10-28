@@ -17,6 +17,7 @@ El diseño y construcción de canales hidráulicos requiere frecuentemente del d
 * Selección del tipo de transición y asociación de factores para determinar la longitud de desarrollo.
 * Graficación en planta y perfil.
 * Factor multiplicador para dibujo de tramos de aproximación de inicio y entrega, requeridos para desarrollar el flujo en la modelación hidráilica antes de pasar por la estructura.
+* Valor de entrada de desplazamiento para no coalineación en geometría rectangular para el ensamble del modelo 3D. Desplazamiento en esquina de caras laterales para evitar coalineación vertical en el ensamble del modelo de terreno triangulado Esri ArcGIS o en Autodesk Civil 3D.
 * Generación de tabla con geolocalizadores XYZ de los nodos que conforman la estructura. Actualmente solo funcional para transiciones en cuña.
 * Toolbox en ArcGIS for Desktop para la creación de la nube de puntos 3D, modelo de terreno triangulado, grilla ráster de alta resolución, dominio límite y triangulos 3D.
 * Representación 3D en ArcScene.
@@ -82,6 +83,7 @@ Hydraulic structure. Hydraulic transition. Hydraulic expansion. Hydraulic contra
 Versión | Descripción
 --- | ---
 | v.20211023 | Actualización general de análisis, gráficas y formato. Desarrollo e incorporación de Esri Toolbox para la creación automática de superficies para ensamblado de prototipos hidráulicos en HEC-RAS 2D. Inclusión de factor multiplicador para dibujo de tramos de aproximación de inicio y entrega.
+| v.20211028 | Incluído Valor de entrada de desplazamiento para no coalineación en geometría rectangular para el ensamble del modelo 3D.
 
 
 ## Licencia, cláusulas y condiciones de uso
