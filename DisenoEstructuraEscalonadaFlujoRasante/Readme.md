@@ -46,6 +46,61 @@ Archivo / Folder | Descripción
 
 Nota: El archivo R.HydroTools.DisenoEstructuraEscalonadaFlujoRasanteFolderStructure.zip contiene la estructura de directorios requerida en la unidad D:\.
 
+### Botones de acción
+
+```
+Sub Resolvery1()
+    ' Resolver el valor de la altura de lámina sobre el escalón o y1
+    ' https://github.com/rcfdtools/R.HydroTools/tree/main/DisenoEstructuraEscalonadaFlujoRasante
+    Sheets("EscalonadaFlujoRasante").Select
+    Range("C16").Select
+    ActiveCell.FormulaR1C1 = 0.0001
+    Range("C15").GoalSeek Goal:=0, ChangingCell:=Range("C16")
+End Sub
+```
+
+```
+Sub Resolverdw()
+    ' Resolver el valor de la profundidad de lámina de agua cuando no se alcanza la condición de flujo quasi-uniforme
+    ' https://github.com/rcfdtools/R.HydroTools/tree/main/DisenoEstructuraEscalonadaFlujoRasante
+    Sheets("EscalonadaFlujoRasante").Select
+    Range("C57").Select
+    ActiveCell.FormulaR1C1 = 0.0001
+    Range("C56").GoalSeek Goal:=0, ChangingCell:=Range("C57")
+End Sub
+```
+
+```
+Sub Resolverhuella19d()
+    ' Resolver el valor de la longitud de la huella para que no sea superior a 19 grados de inclinación
+    ' https://github.com/rcfdtools/R.HydroTools/tree/main/DisenoEstructuraEscalonadaFlujoRasante
+    Sheets("EscalonadaFlujoRasante").Select
+    Range("C26").GoalSeek Goal:=18.999, ChangingCell:=Range("C7")
+End Sub
+```
+
+```
+Sub Resolvery2conqu()
+    ' Resolver el valor de la altura de lámina o y2 en la zona inferior de la estructura alcanzando la condición Quasi uniforme.
+    ' https://github.com/rcfdtools/R.HydroTools/tree/main/DisenoEstructuraEscalonadaFlujoRasante
+    Sheets("EscalonadaFlujoRasante").Select
+    Range("C77").Select
+    ActiveCell.FormulaR1C1 = Range("C13") * 1.1
+    Range("C79").GoalSeek Goal:=0, ChangingCell:=Range("C77")
+End Sub
+```
+
+```
+Sub Resolvery2sinqu()
+    ' Resolver el valor de la altura de lámina o y2 en la zona inferior de la estructura sin alcanzar la condición Quasi uniforme.
+    ' https://github.com/rcfdtools/R.HydroTools/tree/main/DisenoEstructuraEscalonadaFlujoRasante
+    Sheets("EscalonadaFlujoRasante").Select
+    Range("D77").Select
+    ActiveCell.FormulaR1C1 = Range("C13") * 1.1
+    Range("D79").GoalSeek Goal:=0, ChangingCell:=Range("D77")
+End Sub
+```
+
 
 ## Ilustraciones
 
