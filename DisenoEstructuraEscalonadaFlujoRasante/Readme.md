@@ -72,7 +72,7 @@ End Sub
 
 ```
 Sub Resolverhuella19d()
-    ' Resolver el valor de la longitud de la huella para que no sea superior a 19 grados de inclinación
+    ' Resolver el valor de la longitud de la huella para que la inclinación del pseudo fondo no sea superior a 19 grados de inclinación
     ' https://github.com/rcfdtools/R.HydroTools/tree/main/DisenoEstructuraEscalonadaFlujoRasante
     Sheets("EscalonadaFlujoRasante").Select
     Range("C26").GoalSeek Goal:=18.999, ChangingCell:=Range("C7")
