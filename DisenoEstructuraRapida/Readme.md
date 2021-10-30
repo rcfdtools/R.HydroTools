@@ -69,7 +69,7 @@ End Sub
 
 ```
 Sub ResolverAlturaRapidaRequerida()
-    'Resolver altura requerida en la rápida cambiando el angulo de la transición en el tramo 1-2
+    'Resolver altura requerida en la rápida cambiando el angulo lateral de la transición en el tramo 1-2
     'https://github.com/rcfdtools/R.HydroTools/tree/main/DisenoEstructuraRapida
     'D131: Alto total estimado en la rapida, m
     'D132: Alto total requerido en toda la rapida, m
