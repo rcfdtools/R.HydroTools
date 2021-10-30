@@ -29,7 +29,7 @@ Zona | Descripción
 * Diseño hidráulico y geométrico por zonas.
 * Graficación de perfil y sección transversal por zona.
 * Graficación general de perfil.
-* Definición de ongitud tramos de aproximación de inicio y entrega. Hoja _Rapida_, celda _H21_
+* Definición de longitud tramos de aproximación de inicio y entrega. Hoja _Rapida_, celda _H21_
 * Botones de acción para resolver: rápida ajustando pendiente para obtener longitud del tramo 1-2 ingresada por el usuario , profundidad de colchón de disipación cambiando el ancho en la zona de la rápida, altura total de la estructura a partir de valor ingresado por el usuario y larto de la rápida en tramo 4-5 a partir de valor ingresado por el usuario
 
 
