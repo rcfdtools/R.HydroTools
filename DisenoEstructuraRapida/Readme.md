@@ -35,18 +35,46 @@ Zona | Descripción
 ### Botones de acción
 
 ```
+Sub ResolverLTCambiandoAnchoEnRapida()
+    'Resolver longitud transición de salida cambiando el ancho en la rápida
+    'https://github.com/rcfdtools/R.HydroTools/tree/main/DisenoEstructuraRapida
+    'D89: LT, longitud transicion ajustada, m
+    'D134: LT, longitud transicion ajustada requerida en 4-5, m
+    'D8: b,b, ancho seccion control, m
+    Range("D89").GoalSeek Goal:=Range("D134"), ChangingCell:=Range("D24")
+End Sub
 ```
 
 ```
+Sub ResolvereCambiandoAnchoEnRapida()
+    'Resolver profundidad del colchón de agua en el tanque discipador cambiando el ancho en la rápida
+    'https://github.com/rcfdtools/R.HydroTools/tree/main/DisenoEstructuraRapida
+    'D111: e, profundidad colchon agua, m
+    'D24: b, ancho seccion control, m
+    Range("D111").GoalSeek Goal:=1, ChangingCell:=Range("D24")
+End Sub
 ```
 
 ```
+Sub ResolverPendiente1a2()
+    'Resolver la pendiente del tramo 2 para que la longitud del tramo 2-3 sea >= 1m
+    'https://github.com/rcfdtools/R.HydroTools/tree/main/DisenoEstructuraRapida
+    'D58: Longitud horizontal rapida, m
+    'D130: Longitud horizontal requerida en rapida tramo 2-3, m
+    'D27: S0, pendiente seccion control y rapida, m/m
+    Range("D58").GoalSeek Goal:=Range("D130"), ChangingCell:=Range("D27")
+End Sub
 ```
 
 ```
-```
-
-```
+Sub ResolverAlturaRapidaRequerida()
+    'Resolver altura requerida en la rápida cambiando el angulo de la transición en el tramo 1-2
+    'https://github.com/rcfdtools/R.HydroTools/tree/main/DisenoEstructuraRapida
+    'D131: Alto total estimado en la rapida, m
+    'D132: Alto total requerido en toda la rapida, m
+    'D36: Î±t, angulo transicion, Â°
+    Range("D131").GoalSeek Goal:=Range("D132"), ChangingCell:=Range("D36")
+End Sub
 ```
 
 
