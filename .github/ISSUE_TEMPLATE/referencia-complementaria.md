@@ -11,7 +11,7 @@ assignees: ''
 Para cada referencia indicar:
  - Nombre del libro, publicación o artículo:
  - Autor:
- - Edición":
+ - Edición:
  - ISBN:
  - Uso libre o comercial:
  - Páginas referenciadas:
