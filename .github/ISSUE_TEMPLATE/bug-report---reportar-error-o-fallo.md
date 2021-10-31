@@ -11,7 +11,7 @@ assignees: ''
 **Describe the bug - Describa el error o fallo:**
 A clear and concise description of what the bug or the error is. Incluya una descripción clara y precisa del error o fallo presentado y en qué casos se presenta.
 
-Clasifique el error o fallo reportado:
+**Clasifique el error o fallo reportado:**
  - Error de código.
  - Error de volcado al ejecutar.
  - Error en la formulación.
