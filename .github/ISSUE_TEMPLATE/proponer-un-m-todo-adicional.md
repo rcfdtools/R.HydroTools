@@ -26,10 +26,10 @@ Sí conoce algún método o procedimiento de análisis complementario a los prop
 **Referencias consultadas:**
 
 
-**Enlace a repositorio donde ha formulado el método propuesto:** (p.ej: GitHub, Google Drive, OneDrive, Wetransfer)
+**Enlace a repositorio donde ha formulado el método propuesto:** (p. ej.: GitHub, Google Drive, OneDrive, Wetransfer)
 
 
-**Quiero ser referenciado como:** por ejemplo, a través de su perfil en GitHub, su correo electrónico o su perfil en redes científicas. 
+**Quiero ser referenciado como:** (p. ej. a través de su perfil en GitHub, su correo electrónico o su perfil en redes científicas) 
 
 
 Nota: Los créditos del nuevo método o procedimiento serán incluídos en este repositorio o dentro de la herramienta indicada una vez sean incorporados a R.HydroTools.
