@@ -7,8 +7,6 @@ assignees: ''
 
 ---
 
-Bug report - Create a report to help us improve our tools.
-
 **Describa el error o fallo:**
 Incluya una descripción clara y precisa del error o fallo presentado y en qué casos se presenta.
 
@@ -47,5 +45,8 @@ Si el fallo o error puede ser documentado a partir de capturas de pantalla, incl
 Incluya información adicional detallada que nos ayude a entender el error, si tiene alguna solución indique las modificaciones a realizar en el código, formulación o modelador de procesos.
 
 
-**Enlace a la herramienta reportada en GitHub:**
-Indique el enlace completo de la R.HydroTool [e.j. https://github.com/rcfdtools/R.HydroTools/tree/main/BordeLibreCanal]
+**Enlace de la herramienta R.HydroTools a la que aplica:**
+(indicar enlace en GitHub, por ejemplo: _https://github.com/rcfdtools/R.HydroTools/tree/main/BordeLibreCanal_).
+
+
+Bug report - Create a report to help us improve our tools.
