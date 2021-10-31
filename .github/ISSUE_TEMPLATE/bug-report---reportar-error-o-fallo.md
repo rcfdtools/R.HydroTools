@@ -29,11 +29,11 @@ Steps to reproduce the behavior - Pasos para replicar el comportamiento errátic
 
 
 **Expected behavior - Comportamiento esperado:**
-A clear and concise description of what you expected to happen. Indique una descripción clara de cómo debería funcionar la herramienta computacional para los datos de entrada ingresados.
+A clear and concise description of what you expected to happen. Indique una descripción clara de cómo debería funcionar la herramienta computacional para los datos de entrada utilizados.
 
 
 **Screenshots - Capturas de pantalla:**
-If applicable, add screenshots to help explain your problem. Si el fallo o error puede ser documentado a partir de capturas de pantalla, adjúntalas a este reporte.
+If applicable, add screenshots to help explain your problem. Si el fallo o error puede ser documentado a partir de capturas de pantalla, indique la ruta donde almacenó las capturas.
 
 
 **Desktop and tools (please complete the following information) - Complete la siguiente información relacionada con el sistema operativo y las versiones de herramientas utilizadas:**
