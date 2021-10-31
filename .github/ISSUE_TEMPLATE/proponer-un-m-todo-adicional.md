@@ -11,6 +11,9 @@ assignees: ''
 Sí conoce algún método o procedimiento de análisis complementario a los propuestos en las herramientas de este proyecto, formule, programe y envíe un libro de Microsoft Excel o un script con un ejemplo funcional. Describa los siguientes elementos:
 
 
+**Enlace de la herramienta R.HydroTools a la que aplica: ** indicar enlace en GitHub. (por ejemplo: _https://github.com/rcfdtools/R.HydroTools/tree/main/BordeLibreCanal_).
+
+
 **Método o procedimiento adicional:**
 
 
