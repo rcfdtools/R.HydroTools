@@ -9,7 +9,15 @@ assignees: ''
 ---
 
 **Describe the bug - Describa el error o fallo**
-A clear and concise description of what the bug or the error is. Incluya una descripción clara y precisa del error o fallo presentado y en que casos se presenta.
+A clear and concise description of what the bug or the error is. Incluya una descripción clara y precisa del error o fallo presentado y en qué casos se presenta.
+
+Clasifique el error o fallo reportado:
+* Error de código.
+* Error de volcado al ejecutar.
+* Error en la formulación.
+* División por cero y/o loops.
+* Referencia científica no aplicable.
+* Resultados fuera de rango.
 
 **To Reproduce - Indique el procedimiento para replicar el fallo**
 Steps to reproduce the behavior - Pasos para replicar el comportamiento errático presentado:
