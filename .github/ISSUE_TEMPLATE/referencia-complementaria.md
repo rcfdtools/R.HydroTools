@@ -10,7 +10,7 @@ assignees: ''
 
 Para cada referencia indicar:
  - Nombre del libro, publicación o artículo:
- - Autor:
+ - Autor(es):
  - Edición:
  - ISBN:
  - Uso libre o comercial:
