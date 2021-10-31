@@ -1,17 +1,16 @@
 ---
 name: Reportar error o fallo
-about: Create a report to help us improve - Crea un nuevo reporte de error y ayúdanos
-  a mejorar R.HydroTools
+about: Crea un nuevo reporte de error y/o fallo y ayúdanos a mejorar R.HydroTools
 title: Reporte de error fallo en la herramienta >> [ingrese aquí el nombre|
 labels: bug, invalid
 assignees: ''
 
 ---
 
-Bug report.
+Bug report - Create a report to help us improve our tools.
 
-**Describe the bug - Describa el error o fallo:**
-A clear and concise description of what the bug or the error is. Incluya una descripción clara y precisa del error o fallo presentado y en qué casos se presenta.
+**Describa el error o fallo:**
+Incluya una descripción clara y precisa del error o fallo presentado y en qué casos se presenta.
 
 **Clasifique el error o fallo reportado:**
  - Error de código.
@@ -22,31 +21,31 @@ A clear and concise description of what the bug or the error is. Incluya una des
  - Resultados fuera de rango.
 
 
-**To Reproduce - Indique el procedimiento para replicar el fallo:**
-Steps to reproduce the behavior - Pasos para replicar el comportamiento errático presentado:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+**Indique el procedimiento para replicar el fallo:**
+Pasos para replicar el comportamiento errático presentado:
+1. Ir a '...'
+2. Clic  en '....'
+3. Ingresar los valores '....'
+4. Error desplegado '....'
 
 
-**Expected behavior - Comportamiento esperado:**
-A clear and concise description of what you expected to happen. Indique una descripción clara de cómo debería funcionar la herramienta computacional para los datos de entrada utilizados.
+**Comportamiento esperado:**
+Indique una descripción clara de cómo debería funcionar la herramienta computacional para los datos de entrada utilizados.
 
 
 **Screenshots - Capturas de pantalla:**
-If applicable, add screenshots to help explain your problem. Si el fallo o error puede ser documentado a partir de capturas de pantalla, indique la ruta donde almacenó las capturas.
+Si el fallo o error puede ser documentado a partir de capturas de pantalla, incluya una descripción en indique la ruta donde almacenó las capturas.
 
 
-**Desktop and tools (please complete the following information) - Complete la siguiente información relacionada con el sistema operativo y las versiones de herramientas utilizadas:**
- - OS: [e.g. iOS]
- - Computational tool [e.g. Python, R, Microsoft Excel, ArcGIS For Desktop, HEC-RAS]
- - Version [e.g. 22]
+**Complete la siguiente información relacionada con el sistema operativo y las versiones utilizadas:**
+ - Sistema operativo: [e.j. Microsoft Windows, iOS]
+ - Herramienta computacional [e.j. Python, R, Microsoft Excel, ArcGIS For Desktop, HEC-RAS, HEC-HMS, HEC-GeoRAS, HEC-GeoHMS]
+ - Versión [e.j. 22]
 
 
-**Additional context - Información complementaria:**
-Add any other context about the problem here.
+**Información complementaria:**
+Incluya información adicional detallada que nos ayude a entender el error, si tiene alguna solución indique las modificaciones a realizar en el código, formulación o modelador de procesos.
 
 
-**R.HydroTool GutHub link - Enlace a la herramienta reportada en GitHub:**
-The link for the R.HydroTool is [e.g. https://github.com/rcfdtools/R.HydroTools/tree/main/BordeLibreCanal]
+**Enlace a la herramienta reportada en GitHub:**
+Indique el enlace completo de la R.HydroTool [e.j. https://github.com/rcfdtools/R.HydroTools/tree/main/BordeLibreCanal]
