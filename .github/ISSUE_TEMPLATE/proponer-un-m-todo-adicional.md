@@ -8,24 +8,25 @@ assignees: ''
 
 ---
 
-Sí conoce de algún método de análisis complementario a los propuestos en las herramientas de este proyecto, formule, programe y envíe en un libro de Microsoft Excel o en un script un ejemplo funcional. 
-
-**Describa el método o procedimiento adicional:**
+Sí conoce algún método o procedimiento de análisis complementario a los propuestos en las herramientas de este proyecto, formule, programe y envíe un libro de Microsoft Excel o un script con un ejemplo funcional. Describa los siguientes elementos:
 
 
-**Describa los parámetros de entrada:**
+**Método o procedimiento adicional:**
 
 
-**Describa su aplicabilidad:**
+**Datos y parámetros de entrada:**
 
 
-**Indique las referencias consultadas:**
+**Aplicabilidad:**
 
 
-**Indique el enlace al repositorio donde ha formulado el método propuesto:** (p.ej: GitHub, Google Drive, OneDrive, Wetransfer)
+**Referencias consultadas:**
 
 
-**Como quiere ser referenciado:** por ejemplo, a través de su perfil en GitHub, su correo electrónico o su perfil en redes científicas. 
+**Enlace a repositorio donde ha formulado el método propuesto:** (p.ej: GitHub, Google Drive, OneDrive, Wetransfer)
 
 
-Nota: Los créditos del nuevo método o procedimiento serán incluídos en este repositorio o dentro de la herramienta una vez sean incorporados a R.HydroTools.
+**Quiero ser referenciado como:** por ejemplo, a través de su perfil en GitHub, su correo electrónico o su perfil en redes científicas. 
+
+
+Nota: Los créditos del nuevo método o procedimiento serán incluídos en este repositorio o dentro de la herramienta indicada una vez sean incorporados a R.HydroTools.
