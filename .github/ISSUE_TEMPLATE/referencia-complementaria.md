@@ -9,11 +9,11 @@ assignees: ''
 ---
 
 Para cada referencia indicar:
- - Nombre del libro, publicación o artículo.
- - Autor
- - Edición
- - ISBN
- - Uso libre o comercial.
- - Páginas referenciadas.
- - Enlace en Internet.
- - Nombre de la herramienta R.HydroTools a la que aplica. Indicar enlace en GitHub. (por ejemplo: _https://github.com/rcfdtools/R.HydroTools/tree/main/BordeLibreCanal_).
+ - Nombre del libro, publicación o artículo:
+ - Autor:
+ - Edición":
+ - ISBN:
+ - Uso libre o comercial:
+ - Páginas referenciadas:
+ - Enlace en Internet:
+ - Enlace de la herramienta R.HydroTools a la que aplica: (indicar enlace en GitHub, por ejemplo: _https://github.com/rcfdtools/R.HydroTools/tree/main/BordeLibreCanal_).
