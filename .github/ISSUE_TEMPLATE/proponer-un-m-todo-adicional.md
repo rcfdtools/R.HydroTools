@@ -12,14 +12,20 @@ Sí conoce de algún método de análisis complementario a los propuestos en las
 
 **Describa el método o procedimiento adicional:**
 
+
 **Describa los parámetros de entrada:**
 
-**Describa si aplicabilidad:**
+
+**Describa su aplicabilidad:**
+
 
 **Indique las referencias consultadas:**
 
+
 **Indique el enlace al repositorio donde ha formulado el método propuesto:** (p.ej: GitHub, Google Drive, OneDrive, Wetransfer)
 
+
 **Como quiere ser referenciado:** por ejemplo, a través de su perfil en GitHub, su correo electrónico o su perfil en redes científicas. 
+
 
 Nota: Los créditos del nuevo método o procedimiento serán incluídos en este repositorio o dentro de la herramienta una vez sean incorporados a R.HydroTools.
