@@ -1,6 +1,6 @@
 ---
 name: Reportar error o fallo
-about: Crea un nuevo reporte de error y/o fallo y ayúdanos a mejorar R.HydroTools
+about: Reporta errores y/o fallos y ayúdanos a mejorar las herramientas R.HydroTools.
 title: Reporte de error fallo en la herramienta >> [ingrese aquí el nombre|
 labels: bug, invalid
 assignees: ''
