@@ -8,7 +8,7 @@ assignees: ''
 
 ---
 
-**Describe the bug - Describa el error o el fallo**
+**Describe the bug - Describa el error o fallo**
 A clear and concise description of what the bug or the error is. Incluya una descripción clara y precisa del error o fallo presentado y en que casos se presenta.
 
 **To Reproduce - Indique el procedimiento para replicar el fallo**
