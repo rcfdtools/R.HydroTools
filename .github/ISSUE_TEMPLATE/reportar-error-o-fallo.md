@@ -37,8 +37,8 @@ Si el fallo o error puede ser documentado a partir de capturas de pantalla, incl
 
 **Complete la siguiente información relacionada con el sistema operativo y las versiones utilizadas:**
  - Sistema operativo: [e.j. Microsoft Windows, iOS]
- - Herramienta computacional [e.j. Python, R, Microsoft Excel, ArcGIS For Desktop, HEC-RAS, HEC-HMS, HEC-GeoRAS, HEC-GeoHMS]
- - Versión [e.j. 22]
+ - Herramienta computacional [p. ej.: Python, R Statistics, Microsoft Excel, ArcGIS For Desktop, HEC-RAS, HEC-HMS, HEC-GeoRAS, HEC-GeoHMS]
+ - Versión [p. ej. 22]
 
 
 **Información complementaria:**
