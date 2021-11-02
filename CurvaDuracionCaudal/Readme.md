@@ -6,7 +6,7 @@ Las curvas de duración de caudal son una de las herramientas utilizadas en hidr
 
 * Registro de series de valores diarios medidos y simulados.
 * Estimación de parámetros estadísticos.
-* Analisis de duración de caudal para valores medidos y para valores simulados.
+* Analisis de duración de caudal para valores medidos y para valores simulados en 20 intervalos.
 * Pruebas estadísticas de comparación de valores medidos vs. simulados. Covarianza, momento de producto Pearson, diferencia cuadrática y diferencia absoluta.
 * Gráfica FDC de valores medidos.
 * Gráfica FDC de valores medidos y valores simulados.
