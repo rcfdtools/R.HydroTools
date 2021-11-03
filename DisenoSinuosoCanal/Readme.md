@@ -44,7 +44,7 @@ End Sub
 
 
 ## Referencias
-* Desarrollado por baalkara@gmail.com y r.cfdtools@gmail.com
+* Desarrollado por baalkara@gmail.com, https://github.com/FrankV13 y r.cfdtools@gmail.com
 
 
 ## Keywords
