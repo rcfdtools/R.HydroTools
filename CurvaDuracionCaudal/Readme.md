@@ -29,7 +29,11 @@ Las curvas de duración de caudal son una de las herramientas utilizadas en hidr
 * Determinación de curvas de duración para cuencas intermitentes, Carlos Augusto Marín Villegas, Universidad de los Andes, 2011. https://repositorio.uniandes.edu.co/bitstream/handle/1992/14657/u442887.pdf
 * Curva de duración general, wikipedia. https://es.wikipedia.org/wiki/Curva_de_duraci%C3%B3n_general
 * Curvas de caudales clasificados, F. Javier Sánchez San Román, Dpto. Geología, Universidad de Salamanca, España, 2013. https://hidrologia.usal.es/Complementos/Curvas_de_Q_clasificados.pdf
-* Pruebas estadísticas de Momento de producto Pearson y diferencia cuadrática por ECIJG-AHOC.
+
+
+## Colaboradores
+
+* Pruebas estadísticas de Momento de producto Pearson y diferencia cuadrática por ECIJG-AHOC, ahotalora@gmail.com
 
 
 ## Keywords
