@@ -1,6 +1,6 @@
 ## Curva de duración de caudal - FDC
 
-Las curvas de duración de caudal son una de las herramientas utilizadas en hidrología, proveen información sobre el porcentaje del tiempo que el caudal o flujo excede un valor específico. 
+Las Curvas de Duración de Caudal o FDC (Flow Duration Curve) son utilizadas en hidrología para analizar el porcentaje del tiempo que el caudal o flujo excede un valor específico. 
 
 ### Funcionalidades
 
