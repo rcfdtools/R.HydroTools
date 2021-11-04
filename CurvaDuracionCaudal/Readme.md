@@ -38,6 +38,7 @@ Las Curvas de Duración de Caudal o FDC (Flow Duration Curve) son utilizadas en 
 
 ## Colaboradores
 
+* Creado por r.cfdtools@gmail.com
 * Pruebas estadísticas de Momento de producto Pearson y diferencia cuadrática por ECIJG-AHOC, ahotalora@gmail.com
 
 
