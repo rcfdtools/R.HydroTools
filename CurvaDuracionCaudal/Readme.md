@@ -5,6 +5,7 @@ Las Curvas de Duración de Caudal o FDC (Flow Duration Curve) son utilizadas en 
 ### Funcionalidades
 
 * Registro de series de valores diarios medidos y simulados.
+* Filtrado y graficación de serie de datos.
 * Estimación de parámetros estadísticos.
 * Analisis de duración de caudal para valores medidos y para valores simulados en 20 intervalos.
 * Pruebas estadísticas de comparación de valores medidos vs. simulados. Covarianza, momento de producto Pearson, diferencia cuadrática y diferencia absoluta.
@@ -21,6 +22,9 @@ Las Curvas de Duración de Caudal o FDC (Flow Duration Curve) son utilizadas en 
 ![R.HydroTools.CurvaDuracionCaudalFDC.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/CurvaDuracionCaudal/Screenshot/Screenshot3.png)
 ![R.HydroTools.CurvaDuracionCaudalFDC.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/CurvaDuracionCaudal/Screenshot/Screenshot4.png)
 ![R.HydroTools.CurvaDuracionCaudalFDC.Screenshot5](https://github.com/rcfdtools/R.HydroTools/blob/main/CurvaDuracionCaudal/Screenshot/Screenshot5.png)
+![R.HydroTools.CurvaDuracionCaudalFDC.Screenshot6](https://github.com/rcfdtools/R.HydroTools/blob/main/CurvaDuracionCaudal/Screenshot/Screenshot6.png)
+![R.HydroTools.CurvaDuracionCaudalFDC.Screenshot7](https://github.com/rcfdtools/R.HydroTools/blob/main/CurvaDuracionCaudal/Screenshot/Screenshot7.png)
+![R.HydroTools.CurvaDuracionCaudalFDC.Screenshot8](https://github.com/rcfdtools/R.HydroTools/blob/main/CurvaDuracionCaudal/Screenshot/Screenshot8.png)
 
 
 ## Referencias
@@ -45,6 +49,7 @@ Flow Duration Curve.
 Versión | Descripción
 --- | ---
 | v.20211102 | Actualización general de análisis, gráficas y formato. Inclusión de columna para registro de fechas. Inclusión de tabla y gráfica dinámica.
+| v.20211104 | Separación de datos en hoja independiente para opciones de filtrado. Graficación de datos filtrados para comparación de series de datos medidos y simulados. Hoja Setup con títulos dinámicos para gráficas de la herramienta.
 
 
 ## Licencia, cláusulas y condiciones de uso
