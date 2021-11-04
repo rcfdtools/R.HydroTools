@@ -5,7 +5,7 @@ Las Curvas de Duración de Caudal o FDC (Flow Duration Curve) son utilizadas en 
 ### Funcionalidades
 
 * Registro de series de valores diarios medidos y simulados.
-* Filtrado y graficación de serie de datos y gráfico de matriz de dispersión de valores medidos vs. calculados..
+* Filtrado y graficación de serie de datos y gráfico de matriz de dispersión de valores medidos vs. simulados.
 * Estimación de parámetros estadísticos.
 * Analisis de duración de caudal para valores medidos y para valores simulados en 20 intervalos.
 * Pruebas estadísticas de comparación de valores medidos vs. simulados. Covarianza, momento de producto Pearson, diferencia cuadrática y diferencia absoluta.
