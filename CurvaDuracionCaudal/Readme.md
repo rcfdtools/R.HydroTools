@@ -42,7 +42,7 @@ Las Curvas de Duración de Caudal o FDC (Flow Duration Curve) son utilizadas en 
 
 
 ## Keywords
-Flow Duration Curve.
+Flow Duration Curve - FDC.
 
 
 ## Control de versiones
