@@ -12,5 +12,5 @@ Encuentra el índice de todas las herramienta disponibles, cláusulas, condicion
 
 ## Clonación
 
-Para compatibilidad completa de los modeladores de procesos geográficos utilizados en varias de las herramientas de R.HydroTools, clonar y/o descomprimir en D:\R.HydroTools]. https://github.com/rcfdtools/R.HydroTools.git
+Para compatibilidad completa de los modeladores de procesos geográficos utilizados en varias de las herramientas de R.HydroTools, en Microsoft Windows clonar y/o descomprimir en D:\R.HydroTools\. https://github.com/rcfdtools/R.HydroTools.git
 
