@@ -12,6 +12,7 @@ El diseño hidráulico de canales requiere de la verificación de zonas suceptib
 6. Visualice los resultados del diseño y verifique el volumen de suelo que requerirá para la construcción del dique de protección.
 7. Para la incorporación del dique en RAS Mapper, importe el eje del dique trazado en planta y agrege una sección transversal al inicio y final del eje de dique, considerando el ancho del dique o huella de mecanización del diseño y la prolongación de los taludes hasta una altura específica, p. ej. de 1.5 metros para conservar el mismo patron de diseño del dique actual. El ancho, p. ej., de la linea de sección es de 25 metros en corona + 2 x (1.5 altura de dique creciente x 14 m de talud)  = 67 metros.
 
+> Nota: para el cálculo preciso del volúmen de material de suelo requerido para conformar el dique, se recomienda utilizar Autodesk Civil 3D creando el dique a partir del alineamiento identificado y el talud diseñado.
 
 ### Funcionalidades
 
