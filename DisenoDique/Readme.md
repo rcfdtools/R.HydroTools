@@ -15,9 +15,13 @@ El diseño hidráulico de canales requiere de la verificación de zonas suceptib
 
 ### Funcionalidades
 
-* Funcionalidad 1
-* Funcionalidad 2
-* Funcionalidad 3
+* Registro de datos de muestreo del dique actual a partir de tabla estación - elevación RAS Mapper.
+* Análisis de pendiente del dique actual.
+* Ingreso de parámetros para el trazado del nuevo di que de protección.
+* Calculo de parámetros y tablas con valores estación - elevación de las secciones requeridas por RAS Mapper para la creación del dique.
+* Estimación preliminar del volumen de material requerido para su construcción.
+* Gráfica del perfil de muestreo del tramo de dique actual.
+* Gráfica de secciones transversales de talud en punto de inicio y fin.
 
 
 ## Ilustraciones
@@ -25,6 +29,7 @@ El diseño hidráulico de canales requiere de la verificación de zonas suceptib
 ![R.HydroTools.DisenoDique.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoDique/Screenshot/Screenshot1.png)
 ![R.HydroTools.DisenoDique.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoDique/Screenshot/Screenshot2.png)
 ![R.HydroTools.DisenoDique.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoDique/Screenshot/Screenshot3.png)
+![R.HydroTools.DisenoDique.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoDique/Screenshot/Screenshot4.png)
 
 
 ## Referencias
