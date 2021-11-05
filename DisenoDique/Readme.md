@@ -1,1 +1,58 @@
-DisenoDique
+## Diques de protección o encausamiento usando RAS Mapper
+
+El diseño hidráulico de canales requiere de la verificación de zonas suceptibles a inundación, bien sea por que la creciente de diseño no puede ser encausada sin desbordarse previamente al pasar al canal diseñado en su zona de inicio, o por que en su punto de descarga no existen cotas de confinamiento hidráulico que garanticen que el flujo no desborde o inunde zonas próximas por lo que es necesario realizar el diseño y localización de diques complementarios.
+
+
+### Procedimiento general
+1. En ArcGIS, QGIS o RAS Mapper de HEC-RAS y a partir del modelo de terreno, identifique visualmente (p. ej. con ayuda de la extensión 3D Analyst y contornos manuales) las zonas suceptibles a inundación y trace en planta el eje del dique de encausamiento y/o de protección. El proceso consiste en trazar lineas en planta hasta una cota de cierre definida o hasta una prolongación determinada que permita realizar el confinamiento hidráulico del flujo.
+2. Exporte la línea(s) de eje de dique trazadas a formato ESRI Shapefile (.shp).
+3. En RAS Mapper, trace una línea sobre el dique actual que requiere ser prolongado hasta el punto final que considere deberá ser el punto de inicio del dique de protección a extender.
+4. Visualice el perfil de la línea trazada y obtenga los valores de estación - elevación.
+5. Copie los valores estación - elevación y péguelos en la hoja de análisis de diques en la sección _ Sample axe line over the current channel levee. En la misma hoja, ingrese la longitud de la linea del nuevo eje de confinamiento, la relación de taludes a utilizar, la elevación de dique a utilizar y en ancho en la corona.
+6. Visualice los resultados del diseño y verifique el volumen de suelo que requerirá para la construcción del dique de protección.
+7. Para la incorporación del dique en RAS Mapper, agrege una sección transversal al inicio y final del eje de dique, considerando el ancho del dique o huella de mecanización del diseño y la prolongación de los taludes hasta una altura, p. ej. de 1.5 metros para conservar el mismo patron de diseño. El ancho, p. ej., de la linea de sección es de 25 metros en corona + 2 x (1.5 altura de dique creciente x 14 m de talud)  = 67 metros.
+
+
+### Funcionalidades
+
+* Funcionalidad 1
+* Funcionalidad 2
+* Funcionalidad 3
+
+
+## Ilustraciones
+
+![R.HydroTools.DisenoDique.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoDique/Screenshot/Screenshot1.png)
+![R.HydroTools.DisenoDique.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoDique/Screenshot/Screenshot2.png)
+![R.HydroTools.DisenoDique.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoDique/Screenshot/Screenshot3.png)
+
+
+## Referencias
+
+* https://www.hec.usace.army.mil/software/hec-ras/
+
+
+## Colaboradores
+
+* Creado por r.cfdtools@gmail.com
+
+
+## Compatibilidad
+
+* El libro de cálculo no utiliza funciones exclusivas de Microsoft 365 y puede ser ejecutado en cualquier version de Microsoft Excel.
+
+
+## Keywords
+Leeve design. Leeve protection.
+
+
+## Control de versiones
+
+Versión | Descripción
+--- | ---
+| v.20211105 | Actualización general de análisis, gráficas y formato. Inclusión de cálculo básico de volumen de suelo requerido.
+
+
+## Licencia, cláusulas y condiciones de uso
+https://github.com/rcfdtools/R.HydroTools/wiki/License
+
