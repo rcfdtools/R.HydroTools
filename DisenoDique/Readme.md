@@ -3,6 +3,7 @@
 El diseño hidráulico de canales requiere de la verificación de zonas suceptibles a inundación, bien sea por que la creciente de diseño no puede ser encausada sin desbordarse previamente al pasar al canal diseñado en su zona de inicio, o por que en su punto de descarga no existen cotas de confinamiento hidráulico que garanticen que el flujo no desborde o inunde zonas próximas, razón por la cual es necesario realizar el diseño y localización de diques complementarios. 
 
 ### Procedimiento general
+
 1. En ArcGIS, QGIS o RAS Mapper de HEC-RAS y a partir del modelo de terreno, identifique visualmente (p. ej. con ayuda de la extensión 3D Analyst y contornos manuales) las zonas suceptibles a inundación y trace en planta el eje del dique de encausamiento y/o de protección requerido. El proceso consiste en trazar lineas en planta hasta una cota de cierre definida o hasta una prolongación determinada que permita realizar el confinamiento hidráulico del flujo.
 2. Exporte la línea(s) de eje de dique trazadas a formato ESRI Shapefile (.shp).
 3. En RAS Mapper, trace una línea sobre el dique actual que requiere ser prolongado hasta el punto final que considere deberá ser el punto de inicio del dique de protección a extender.
@@ -11,7 +12,10 @@ El diseño hidráulico de canales requiere de la verificación de zonas suceptib
 6. Visualice los resultados del diseño y verifique el volumen de suelo que requerirá para la construcción del dique de protección.
 7. Para la incorporación del dique en RAS Mapper, importe el eje del dique trazado en planta y agrege una sección transversal al inicio y final del eje de dique, considerando el ancho del dique o huella de mecanización del diseño y la prolongación de los taludes hasta una altura específica, p. ej. de 1.5 metros para conservar el mismo patron de diseño del dique actual. El ancho, p. ej., de la linea de sección es de 25 metros en corona + 2 x (1.5 altura de dique creciente x 14 m de talud)  = 67 metros.
 
-> Nota: para el cálculo preciso del volúmen de material de suelo requerido para conformar el dique, se recomienda utilizar Autodesk Civil 3D creando el dique a partir del alineamiento identificado y el talud diseñado.
+> Nota 1: para el cálculo preciso del volúmen de material de suelo requerido para conformar el dique, se recomienda utilizar Autodesk Civil 3D creando el dique a partir del alineamiento identificado y el talud diseñado.
+
+> Nota 2: el procedimiento descrito anteriormente, puede ser implementado en modelos 1D, siempre y cuando el ensamble del modelo topológico de muestreo haya sido realizado en RAS Mapper a partir de un modelo de terreno general para la posterior combinación con los diques generados.
+
 
 ### Funcionalidades
 
