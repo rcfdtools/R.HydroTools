@@ -14,7 +14,7 @@ El diseño hidráulico de canales requiere de la verificación de zonas suceptib
 
 > Nota 1: para el cálculo preciso del volúmen de material de suelo requerido para conformar el dique, se recomienda utilizar Autodesk Civil 3D creando el dique a partir del alineamiento identificado y el talud diseñado.
 
-> Nota 2: el procedimiento descrito anteriormente, puede ser implementado en modelos 1D, siempre y cuando el ensamble del modelo topológico de muestreo haya sido realizado en RAS Mapper a partir de un modelo de terreno general para la posterior combinación con los diques generados.
+> Nota 2: el procedimiento descrito anteriormente, puede ser implementado en modelos 1D, siempre y cuando el ensamble del modelo topológico de muestreo haya sido realizado en RAS Mapper a partir de un modelo de terreno general, para la posterior combinación con los diques generados.
 
 
 ### Funcionalidades
