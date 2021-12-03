@@ -28,7 +28,7 @@ El diseño hidráulico de canales requiere de la verificación de zonas suceptib
 * Gráfica de secciones transversales de talud en punto de inicio y fin.
 
 
-## Ilustraciones
+### Ilustraciones
 
 ![R.HydroTools.DisenoDique.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoDique/Screenshot/Screenshot1.png)
 ![R.HydroTools.DisenoDique.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoDique/Screenshot/Screenshot2.png)
@@ -36,32 +36,32 @@ El diseño hidráulico de canales requiere de la verificación de zonas suceptib
 ![R.HydroTools.DisenoDique.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoDique/Screenshot/Screenshot4.png)
 
 
-## Referencias
+### Referencias
 
 * https://www.hec.usace.army.mil/software/hec-ras/
 
 
-## Colaboradores
+### Colaboradores
 
 * Creado por r.cfdtools@gmail.com
 
 
-## Compatibilidad
+### Compatibilidad
 
 * El libro de cálculo no utiliza funciones exclusivas de Microsoft 365 y puede ser ejecutado en cualquier version de Microsoft Excel.
 
 
-## Keywords
+### Keywords
 Leeve design. Leeve protection. Overflow protection.
 
 
-## Control de versiones
+### Control de versiones
 
 Versión | Descripción
 --- | ---
 | v.20211105 | Actualización general de análisis, gráficas y formato. Inclusión de cálculo básico de volumen de suelo requerido.
 
 
-## Licencia, cláusulas y condiciones de uso
+### Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
 
