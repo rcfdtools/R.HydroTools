@@ -13,7 +13,7 @@ Luego de la modelación o tránsito hidrológico, los valores de caudal pico e h
 Para subcuencas pequeñas en cauces laterales al rio artificial a diseñar, puede suponerse que el centro de tormenta cubre toda esta área y por consiguiente el factor multiplicador será de 1.
 
 
-## Referencias
+### Referencias
 
 * Manual on estimation of probable maximum precipitation (PMP) - WMO-No. 1045 año 2009.
 * Manual for estimation of probable maximum precipitation - WMO No. 332 – 1986
@@ -21,24 +21,24 @@ Para subcuencas pequeñas en cauces laterales al rio artificial a diseñar, pued
 * https://library.wmo.int/opac/index.php?lvl=categ_see&id=10762
 
 
-## Ilustraciones
+### Ilustraciones
 
 ![R.HydroTools.FactorAtenuacionPrecipitacionFa.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/FactorAtenuacionPrecipitacionFa/Screenshot/Screenshot1.png)
 ![R.HydroTools.FactorAtenuacionPrecipitacionFa.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/FactorAtenuacionPrecipitacionFa/Screenshot/Screenshot2.png)
 ![R.HydroTools.FactorAtenuacionPrecipitacionFa.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/FactorAtenuacionPrecipitacionFa/Screenshot/Screenshot3.png)
 
 
-## Keywords
+### Keywords
 
 Area-reduction curves.
 
 
-## Control de versiones
+### Control de versiones
 
 Versión | Descripción
 --- | ---
 | v.20211013 | Actualización general de formato. Inclusión de gráfica independiente con curvas potenciales para factores de atenuación California Montañoso - USA.
 
 
-## Licencia, cláusulas y condiciones de uso
+### Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
