@@ -79,7 +79,7 @@ End Sub
 ```
 
 
-## Ilustraciones
+### Ilustraciones
 
 ![R.HydroTools.DisenoEstructuraRapida.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraRapida/Screenshot/Screenshot1.png)
 ![R.HydroTools.DisenoEstructuraRapida.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraRapida/Screenshot/Screenshot2.png)
@@ -96,7 +96,7 @@ End Sub
 ![R.HydroTools.DisenoEstructuraRapida.Screenshot13](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraRapida/Screenshot/Screenshot13.png)
 
 
-## Referencias
+### Referencias
 
 * Estructuras de pendientes fuertes. Universidad Tecnológica de los Andes, Facultad de Ingeniería Civil. Alejandro Zapata.
 * Obras de riego para zonas montañosas. P. Hoogendam – A. Bottega.2004 / “Irrigación”.A. Rosell C.1993 / “Manual de riego por gravedad”. W. Olarte.1987 / “Obras de captación, Canales y Modelos Hidráulicos”. G. Sotelo A. 1996.
@@ -107,18 +107,18 @@ End Sub
 * Hidráulica de canales abiertos, Ven Te Chow. Pág. 390 y 403. Edición 1994.
 
 
-## Keywords
+### Keywords
 Hydraulic jump. Hydraulic fall.
 
 
-## Control de versiones
+### Control de versiones
 
 Versión | Descripción
 --- | ---
 | v.20211030 | Actualización general de análisis, gráficas y formato. Optimización de graficación de perfiles. Correcciones generales en lineas de perfil. Inclusión y actualización de botones de acción para resolver: rápida ajustando pendiente para obtener longitud del tramo 1-2 ingresada por el usuario , profundidad de colchón de disipación cambiando el ancho en la zona de la rápida, altura total de la estructura a partir de valor ingresado por el usuario y larto de la rápida en tramo 4-5 a partir de valor ingresado por el usuario
 
 
-## Licencia, cláusulas y condiciones de uso
+### Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
 
 
