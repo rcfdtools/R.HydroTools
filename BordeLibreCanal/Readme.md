@@ -14,7 +14,7 @@ Sobreelevación requerida o borde libre en la sección de un canal, capaz de con
 * Criterios en función del ancho superficial T en canales revestidos
 
 
-## Ilustraciones
+### Ilustraciones
 
 ![R.HydroTools.BordeLibreCanal.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/BordeLibreCanal/Screenshot/Screenshot1.png)
 ![R.HydroTools.BordeLibreCanal.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/BordeLibreCanal/Screenshot/Screenshot2.png)
@@ -22,7 +22,7 @@ Sobreelevación requerida o borde libre en la sección de un canal, capaz de con
 ![R.HydroTools.BordeLibreCanal.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/BordeLibreCanal/Screenshot/Screenshot4.png)
 
 
-## Referencias
+### Referencias
 
 * http://www.academia.edu/7579800/13ava_Dise%C3%B1o_de_canales
 * USBR Small Dams
@@ -31,17 +31,17 @@ Sobreelevación requerida o borde libre en la sección de un canal, capaz de con
 * http://www.bellavistaar.gov/wp-content/uploads/2015/08/Chapter-6-Open-Channel-Flow.pdf
 
 
-## Keywords
+### Keywords
 Freeboard.
 
 
-## Control de versiones
+### Control de versiones
 
 Versión | Descripción
 --- | ---
 | v.20211019 | Actualización general de análisis, gráficas y formato.
 
 
-## Licencia, cláusulas y condiciones de uso
+### Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
 
