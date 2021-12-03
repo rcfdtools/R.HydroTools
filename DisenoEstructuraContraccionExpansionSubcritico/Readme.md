@@ -47,7 +47,7 @@ Archivo / Folder | Descripción
 Nota: El archivo R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoFolderStructure.zip contiene la estructura de directorios requerida en la unidad D:\.
 
 
-## Ilustraciones
+### Ilustraciones
 
 ![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/Screenshot/Screenshot1.png)
 ![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/Screenshot/Screenshot2.png)
@@ -63,7 +63,7 @@ Nota: El archivo R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoFold
 ![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot12](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/Screenshot/Screenshot12.png)
 
 
-## Referencias
+### Referencias
 
 * Ven Te Chow, Hidráulica de canales abiertos, Capítulo 11 página 304.
 * Elementos de diseño para acueductos y alcantarillados. Ricardo López Cualla. 1a edición. Capítulo 16 Alcantarillado pluvial, página 343.
@@ -74,11 +74,11 @@ Nota: El archivo R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoFold
 * http://www.fsl.orst.edu/geowater/FX3/help/8_Hydraulic_Reference/Froude_Number_and_Flow_States.htm
 
 
-## Keywords
+### Keywords
 Hydraulic structure. Hydraulic transition. Hydraulic expansion. Hydraulic contraction.
 
 
-## Control de versiones
+### Control de versiones
 
 Versión | Descripción
 --- | ---
@@ -86,6 +86,6 @@ Versión | Descripción
 | v.20211028 | Incluído Valor de entrada de desplazamiento para no coalineación en geometría rectangular para el ensamble del modelo 3D.
 
 
-## Licencia, cláusulas y condiciones de uso
+### Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
 
