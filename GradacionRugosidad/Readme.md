@@ -43,14 +43,14 @@ Autor | Descripción
 | Yen, 1992 |Universidad Nacional de Colombia, sede Medellín. Escuela de Geociencias y Medio Ambiente, Ramiro Marbello Pérez
 
 
-## Ilustraciones
+### Ilustraciones
 
 ![R.HydroTools.GradacionRugosidad.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/GradacionRugosidad/Screenshot/Screenshot1.png)
 ![R.HydroTools.GradacionRugosidad.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/GradacionRugosidad/Screenshot/Screenshot2.png)
 ![R.HydroTools.GradacionRugosidad.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/GradacionRugosidad/Screenshot/Screenshot3.png)
 
 
-## Referencias
+### Referencias
 
 * http://artemisa.unicauca.edu.co/~hdulica/T_TRANSPORTE_SEDIMENTOS.pdf
 * http://wwwrcamnl.wr.usgs.gov/sws/fieldmethods/Indirects/nvalues/index.htm
@@ -60,18 +60,18 @@ Autor | Descripción
 * http://bdigital.unal.edu.co/12697/60/3353962.2005.Parte%2011.pdf
 
 
-## Keywords
+### Keywords
 Manning roughness. Soil gradation.
 
 
-## Control de versiones
+### Control de versiones
 
 Versión | Descripción
 --- | ---
 | v.20211019 | Actualización general de análisis, gráficas y formato.
 
 
-## Licencia, cláusulas y condiciones de uso
+### Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
 
 
