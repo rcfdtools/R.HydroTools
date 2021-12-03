@@ -33,7 +33,7 @@ Sub FUNCIONOBJ_ALPHA_Rc_max()
 End Sub
 ```
 
-## Ilustraciones
+### Ilustraciones
 
 ![R.HydroTools.DisenoSinuosoCanal.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoSinuosoCanal/Screenshot/Screenshot1.png)
 ![R.HydroTools.DisenoSinuosoCanal.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoSinuosoCanal/Screenshot/Screenshot2.png)
@@ -43,22 +43,22 @@ End Sub
 ![R.HydroTools.DisenoSinuosoCanal.Screenshot6](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoSinuosoCanal/Screenshot/Screenshot6.png)
 
 
-## Referencias
+### Referencias
 * Desarrollado por baalkara@gmail.com, https://github.com/FrankV13 y r.cfdtools@gmail.com
 
 
-## Keywords
+### Keywords
 Sinusoidal river design.
 
 
-## Control de versiones
+### Control de versiones
 
 Versión | Descripción
 --- | ---
 | v.20211019 | Actualización general de análisis, gráficas y formato.
 
 
-## Licencia, cláusulas y condiciones de uso
+### Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
 
 
