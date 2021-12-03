@@ -14,7 +14,7 @@ Dimensionar la sección hidráulica dominante y de creciente del cauce principal
 3. With the currect selección, press F2 and then press Shift-Ctrl-Enter.
 
 
-## Ilustraciones
+### Ilustraciones
 
 ![R.HydroTools.DisenoGeometricoHidraulicoVertical.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoGeometricoHidraulicoVertical/Screenshot/Screenshot1.png)
 ![R.HydroTools.DisenoGeometricoHidraulicoVertical.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoGeometricoHidraulicoVertical/Screenshot/Screenshot2.png)
@@ -26,7 +26,7 @@ Dimensionar la sección hidráulica dominante y de creciente del cauce principal
 ![R.HydroTools.DisenoGeometricoHidraulicoVertical.Screenshot8](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoGeometricoHidraulicoVertical/Screenshot/Screenshot8.png)
 
 
-## Referencias
+### Referencias
 * https://www.easycalculation.com/es/analytical/linear-interpolation.php
 * https://es.slideshare.net/Ebene159/mcanica-de-fludos
 * https://www.fullquimica.com/2012/04/densidad-del-agua.html
@@ -34,17 +34,17 @@ Dimensionar la sección hidráulica dominante y de creciente del cauce principal
 * Ven Te Chow. Hidáulica de canales  (Ejemplo 7.4 Ven Te Chow)
 
 
-## Keywords
+### Keywords
 Critical depth. Normal depth. Yn. Yc. HEC-RAS hydraulic design. Trapezoidal. Circular. Rectangular. Triangular. Tractive force.
 
 
-## Control de versiones
+### Control de versiones
 
 Versión | Descripción
 --- | ---
 | v.20211019 | Actualización general de análisis, gráficas y formato.
 
 
-## Licencia, cláusulas y condiciones de uso
+### Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
 
