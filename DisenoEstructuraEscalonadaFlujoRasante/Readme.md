@@ -102,7 +102,7 @@ End Sub
 ```
 
 
-## Ilustraciones
+### Ilustraciones
 
 ![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/Screenshot/Screenshot1.png)
 ![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/Screenshot/Screenshot2.png)
@@ -118,25 +118,24 @@ End Sub
 ![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot12](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/Screenshot/Screenshot12.png)
 
 
-
-## Referencias
+### Referencias
 
 * Ohtsu, Y. Yasuda & Takahashi M., "Flood Characteristics of Skimming Flows in Stepped Channels", Journal of Hydraulic Engineering, Vol. 130, No. 9, ASCE, September 2004.
 * Esquemas INVIAS, Manual de Drenaje, Pág. 4-81.
 * Formulación: baalkara@gmail.com, ECIJG-JAGM, r.cfdtools@gmail.com. Esquema: r.cfdtools@gmail.com. Revisión y formato: r.cfdtools@gmail.com
 
 
-## Keywords
+### Keywords
 Hydraulic Stepped structure.
 
 
-## Control de versiones
+### Control de versiones
 
 Versión | Descripción
 --- | ---
 | v.20211027 | Actualización general de análisis, gráficas y formato. Desarrollo e incorporación de Esri Toolbox para la creación automática de superficies para ensamblado de prototipos hidráulicos en HEC-RAS 2D. Inclusión de factor multiplicador para dibujo de tramos de aproximación de inicio y entrega. Inclusión de valor para prevención de coalineación. Actualización para diseño de estructura de hasta 100 escalones. Validación para obtener número entero de escalones. Inclusión de pendiente en tramos de aproximación.
 
 
-## Licencia, cláusulas y condiciones de uso
+### Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
 
