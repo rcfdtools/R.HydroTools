@@ -31,7 +31,7 @@ Archivo / Folder | Descripción
 | /SHP/ | Carpeta de volcado de nodos y lineas 3D en formato ESRI Shapefile.
 
 
-## Ilustraciones
+### Ilustraciones
 
 ![R.HydroTools.DisenoPasoViaCanal.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/Screenshot/Screenshot1.png)
 ![R.HydroTools.DisenoPasoViaCanal.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/Screenshot/Screenshot2.png)
@@ -49,11 +49,11 @@ Archivo / Folder | Descripción
 ![R.HydroTools.DisenoPasoViaCanal.Screenshot14](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/Screenshot/Screenshot14.png)
 
 
-## Keywords
+### Keywords
 Culvert design. ModelBuilder. Invert elevation.
 
 
-## Control de versiones
+### Control de versiones
 
 Versión | Descripción
 --- | ---
@@ -63,6 +63,6 @@ Versión | Descripción
 | v.20211020 | Actualización general de formato y gráficas.
 
 
-## Licencia, cláusulas y condiciones de uso
+### Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
 
