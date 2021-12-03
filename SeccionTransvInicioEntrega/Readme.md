@@ -7,7 +7,7 @@ Se puede considerar que el canal artificial a diseñar deberá tener una profund
 Para el correcto cálculo del área hidráulica y perímetro mojado, la línea que describe el ancho superficial a partir de la selección de estaciones, no debe cruzar la línea de terreno. Tenga en cuenca que cuando existen bancos de arena o sobre elevaciones por encima de la lámina de água dentro del ancho superficial, la hoja de cálculo sobre estima o sub estima el valor del área y perímetro hidráulico calculado.
 
 
-## Ilustraciones
+### Ilustraciones
 
 ![R.HydroTools.SeccionTransvInicioEntrega.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/SeccionTransvInicioEntrega/Screenshot/Screenshot1.png)
 ![R.HydroTools.SeccionTransvInicioEntrega.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/SeccionTransvInicioEntrega/Screenshot/Screenshot2.png)
@@ -15,11 +15,11 @@ Para el correcto cálculo del área hidráulica y perímetro mojado, la línea q
 ![R.HydroTools.SeccionTransvInicioEntrega.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/SeccionTransvInicioEntrega/Screenshot/Screenshot4.png)
 
 
-## Keywords
+### Keywords
 XS Cross section. River cross section. Hydraulica area. Wet perimeter.
 
 
-## Control de versiones
+### Control de versiones
 
 Versión | Descripción
 --- | ---
@@ -27,5 +27,5 @@ Versión | Descripción
 | v.20211018 | Hoja de análisis ahora incluye de cálculo de área hidráulica y perímetro mojado. Actualización general de gráficas.
 
 
-## Licencia, cláusulas y condiciones de uso
+### Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
