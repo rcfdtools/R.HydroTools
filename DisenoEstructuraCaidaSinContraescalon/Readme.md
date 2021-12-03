@@ -10,7 +10,7 @@ El diseño y construcción de canales hidráulicos requiere frecuentemente del d
 * Hoja con secuencia de comandos para dubujo de estructura en CAD.
 
 
-## Ilustraciones
+### Ilustraciones
 
 ![R.HydroTools.DisenoEstructuraCaidaSinContraescalon.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraCaidaSinContraescalon/Screenshot/Screenshot1.png)
 ![R.HydroTools.DisenoEstructuraCaidaSinContraescalon.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraCaidaSinContraescalon/Screenshot/Screenshot2.png)
@@ -18,24 +18,24 @@ El diseño y construcción de canales hidráulicos requiere frecuentemente del d
 ![R.HydroTools.DisenoEstructuraCaidaSinContraescalon.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraCaidaSinContraescalon/Screenshot/Screenshot4.png)
 
 
-## Referencias
+### Referencias
 
 * Ven Te Chow, Hidráulica de canales abiertos, pag 414 (pdf pag 212) Vertedero de caída recta.
 * Desarrollado por baalkara@gmail.com y r.cfdtools@gmail.com.
 
 
-## Keywords
+### Keywords
 Spillway. Tank. Hydraulic jump.
 
 
-## Control de versiones
+### Control de versiones
 
 Versión | Descripción
 --- | ---
 | v.20211023 | Actualización general de análisis, gráficas y formato. Incorporación pendiente del canal para dibujo de fondo en tramos de aproximación de inicio y entrega. Hoja con secuencia de comandos para dubujo de estructura en CAD.
 
 
-## Licencia, cláusulas y condiciones de uso
+### Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
 
 
