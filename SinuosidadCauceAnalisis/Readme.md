@@ -40,7 +40,7 @@ Verificar los valores correspondientes a las longitudes de río y valle, así co
 Nota: el FS obtenido en este método debe ser similar al obtenido en el libro de análisis de secciones transversales de referencia inicio y entrega para diseño hidráulico. https://github.com/rcfdtools/R.HydroTools/tree/main/SeccionTransvInicioEntrega
 
 
-## Ilustraciones
+### Ilustraciones
 
 ![R.HydroTools.SinuosidadCauceAnalisis.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/SinuosidadCauceAnalisis/Screenshot/Screenshot1.png)
 ![R.HydroTools.SinuosidadCauceAnalisis.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/SinuosidadCauceAnalisis/Screenshot/Screenshot2.png)
@@ -50,22 +50,22 @@ Nota: el FS obtenido en este método debe ser similar al obtenido en el libro de
 ![R.HydroTools.SinuosidadCauceAnalisis.Screenshot6](https://github.com/rcfdtools/R.HydroTools/blob/main/SinuosidadCauceAnalisis/Screenshot/Screenshot6.png)
 
 
-## Referencias
+### Referencias
 
 * www.tankonyvtar.hu
 * es.wikipedia.org/wiki/Sinuosidad_de_un_r%C3%Ado
 
 
-## Keywords
+### Keywords
 Sinuosity. River bend. Channel length. Valley length.
 
 
-## Control de versiones
+### Control de versiones
 
 Versión | Descripción
 --- | ---
 | v.20211019 | Actualización general de análisis, gráficas y formato.
 
 
-## Licencia, cláusulas y condiciones de uso
+### Licencia, cláusulas y condiciones de uso
 https://github.com/rcfdtools/R.HydroTools/wiki/License
