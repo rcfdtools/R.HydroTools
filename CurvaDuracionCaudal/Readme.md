@@ -36,7 +36,7 @@ Las Curvas de Duración de Caudal o FDC (Flow Duration Curve) son utilizadas en 
 * Curvas de caudales clasificados, F. Javier Sánchez San Román, Dpto. Geología, Universidad de Salamanca, España, 2013. https://hidrologia.usal.es/Complementos/Curvas_de_Q_clasificados.pdf
 
 
-### Colaboradores
+### Autores
 
 * Creado por r.cfdtools@gmail.com
 * Pruebas estadísticas de Momento de producto Pearson y diferencia cuadrática por ECIJG-AHOC, ahotalora@gmail.com
