@@ -41,7 +41,7 @@ El diseño hidráulico de canales requiere de la verificación de zonas suceptib
 * https://www.hec.usace.army.mil/software/hec-ras/
 
 
-### Colaboradores
+### Autores
 
 * Creado por r.cfdtools@gmail.com
 
