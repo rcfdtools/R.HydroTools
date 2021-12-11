@@ -8,7 +8,7 @@
 
 ### wiki & listado de herramientas disponibles
 
-Encuentra el índice de todas las herramientas disponibles, cláusulas, condiciones de uso y como colaborar con R.HydroTools, en la sección wiki de este proyecto. https://github.com/rcfdtools/R.HydroTools/wiki
+Encuentra el índice de todas las herramientas disponibles, cláusulas, condiciones de uso y como colaborar con R.HydroTools, en la sección [wiki](https://github.com/rcfdtools/R.HydroTools/wiki) de este proyecto. 
 
 
 ### Clonación
