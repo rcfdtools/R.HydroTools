@@ -1,8 +1,8 @@
 <div align="center">
   <br>
   <img alt="R.HydroTools" src="https://github.com/rcfdtools/R.HydroTools/blob/main/.Icons/R.HydroTools.svg" width="300px">
-  <h2>Tools for hydrological and hydraulics computational analysis</h2>
-  by r.cfdtools@gmail.com
+  <br><b>Tools for hydrological and hydraulics computational analysis</b> by r.cfdtools@gmail.com
+  <br>
 </div>
 
 
