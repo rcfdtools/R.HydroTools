@@ -42,5 +42,5 @@ R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, c
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.HydroTools/discussions/9999) |
-|----------------------------------------------------------|--------------------------------------------------------------------------------|
+| [Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.HydroTools/discussions/4)  |
+|----------------------------------------------------------|------------------------------------------------------------------------------|
