@@ -1,4 +1,5 @@
 ## Curva de duración de caudal - FDC
+Keywords: `Flow Duration Curve - FDC` `Microsoft Excel` 
 
 Las Curvas de Duración de Caudal o FDC (Flow Duration Curve) son utilizadas en hidrología para analizar el porcentaje del tiempo que el caudal o flujo excede un valor específico. 
 
@@ -7,12 +8,17 @@ Las Curvas de Duración de Caudal o FDC (Flow Duration Curve) son utilizadas en 
 * Registro de series de valores diarios medidos y simulados.
 * Filtrado y graficación de serie de datos y gráfico de matriz de dispersión de valores medidos vs. simulados.
 * Estimación de parámetros estadísticos.
-* Analisis de duración de caudal para valores medidos y para valores simulados en 20 intervalos.
+* Análisis de duración de caudal para valores medidos y para valores simulados en 20 intervalos.
 * Pruebas estadísticas de comparación de valores medidos vs. simulados. Covarianza, momento de producto Pearson, diferencia cuadrática y diferencia absoluta.
 * Gráfica FDC de valores medidos.
 * Gráfica FDC de valores medidos y valores simulados.
 * Gráfico de dobles masas de % acumulados de valores medidos vs. simulados.
 * Tabla y gráfica dinámica para análisis de resultados medidos vs. simulados por año.
+
+
+### Requerimientos
+
+* * El libro de cálculo utiliza la función de _Frecuencia_ y es compatible con Excel for Microsoft 365 Excel for Microsoft 365 for Mac Excel for the web Excel 2021 Excel 2021 for Mac Excel 2019 Excel 2019 for Mac Excel 2016 Excel 2016 for Mac Excel 2013 Excel 2010 Excel 2007 Excel for Mac 2011 Excel Starter 2010. https://support.microsoft.com/en-us/office/frequency-function-44e3be2b-eca0-42cd-a3f7-fd9ea898fdb9
 
 
 ### Ilustraciones
@@ -42,21 +48,16 @@ Las Curvas de Duración de Caudal o FDC (Flow Duration Curve) son utilizadas en 
 * Pruebas estadísticas de Momento de producto Pearson y diferencia cuadrática por ECIJG-AHOC, ahotalora@gmail.com
 
 
-### Compatibilidad
-
-* El libro de cálculo utiliza la función de _Frecuencia_ y es compatible con Excel for Microsoft 365 Excel for Microsoft 365 for Mac Excel for the web Excel 2021 Excel 2021 for Mac Excel 2019 Excel 2019 for Mac Excel 2016 Excel 2016 for Mac Excel 2013 Excel 2010 Excel 2007 Excel for Mac 2011 Excel Starter 2010. https://support.microsoft.com/en-us/office/frequency-function-44e3be2b-eca0-42cd-a3f7-fd9ea898fdb9
-
-### Keywords
-Flow Duration Curve - FDC.
-
-
 ### Control de versiones
 
-Versión | Descripción
---- | ---
-| v.20211102 | Actualización general de análisis, gráficas y formato. Inclusión de columna para registro de fechas. Inclusión de tabla y gráfica dinámica.
-| v.20211104 | Separación de datos en hoja independiente para opciones de filtrado. Graficación de datos filtrados para comparación de series de datos medidos y simulados. Hoja Setup con títulos dinámicos para gráficas de la herramienta. Gráfico de matriz de dispersión de valores medidos vs. calculados.
+| Versión     | Descripción                                                                                                                                                                                                                                                                                       | Autor                                     | Horas |
+|-------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:-----:|
+| 2021.11.04  | Separación de datos en hoja independiente para opciones de filtrado. Graficación de datos filtrados para comparación de series de datos medidos y simulados. Hoja Setup con títulos dinámicos para gráficas de la herramienta. Gráfico de matriz de dispersión de valores medidos vs. calculados. | [rcfdtools](https://github.com/rcfdtools) |   4   |
+| 2021.11.02  | Actualización general de análisis, gráficas y formato. Inclusión de columna para registro de fechas. Inclusión de tabla y gráfica dinámica.                                                                                                                                                       | [rcfdtools](https://github.com/rcfdtools) |   6   |
 
+R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio.
 
-### Licencia, cláusulas y condiciones de uso
-https://github.com/rcfdtools/R.HydroTools/wiki/License
+_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
+
+| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.HydroTools/discussions/5) |
+|------------------------------------------------------------------|-----------------------------------------------------------------------------|
