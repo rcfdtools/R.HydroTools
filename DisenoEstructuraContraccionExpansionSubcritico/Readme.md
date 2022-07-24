@@ -20,7 +20,7 @@ El diseño y construcción de canales hidráulicos requiere frecuentemente del d
 * Factor multiplicador para dibujo de tramos de aproximación de inicio y entrega, requeridos para desarrollar el flujo en la modelación hidráilica antes de pasar por la estructura.
 * Valor de entrada de desplazamiento para no coalineación en geometría rectangular para el ensamble del modelo 3D. Desplazamiento en esquina de caras laterales para evitar coalineación vertical en el ensamble del modelo de terreno triangulado Esri ArcGIS o en Autodesk Civil 3D.
 * Generación de tabla con geolocalizadores XYZ de los nodos que conforman la estructura. Actualmente solo funcional para transiciones en cuña.
-* Toolbox en ArcGIS for Desktop para la creación de la nube de puntos 3D, modelo de terreno triangulado, grilla ráster de alta resolución, dominio límite y triangulos 3D.
+* Toolbox en ArcGIS for Desktop para la creación de la nube de puntos 3D, modelo de terreno triangulado, grilla ráster de alta resolución, dominio límite y triángulos 3D.
 * Representación 3D en ArcScene.
 
 
@@ -88,6 +88,6 @@ R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, c
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.HydroTools/discussions/10) |
-|------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.HydroTools/discussions/11) |
+|------------------------------------------------------------------|------------------------------------------------------------------------------|
 
