@@ -1,5 +1,5 @@
 <div align="center">
-  <br><img alt="R.HydroTools" src="https://github.com/rcfdtools/R.HydroTools/blob/main/.Icons/R.HydroTools.svg" width="300px">
+  <img alt="R.HydroTools" src="https://github.com/rcfdtools/R.HydroTools/blob/main/.Icons/R.HydroTools.svg" width="300px">
   <br><b>Tools for hydrological and hydraulics computational analysis</b> by r.cfdtools@gmail.com<br><br>
 </div>
 
