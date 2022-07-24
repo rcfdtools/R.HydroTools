@@ -1,4 +1,5 @@
 ## Diseño de estructura hidráulica de contracción y expansión a flujo subcrítico
+Keywords: `Hydraulic structure` `Hydraulic transition` `Hydraulic expansion` `Hydraulic contraction`
 
 El diseño y construcción de canales hidráulicos requiere frecuentemente del diseño de estructuras de transición por contracción y expansión con diferentes geometrías. A través de esta herramienta podrá diseñar transiciones combinando geometrías trapezoidales, triangulares y rectangulares.
 
@@ -25,16 +26,16 @@ El diseño y construcción de canales hidráulicos requiere frecuentemente del d
 
 ### Descripción de archivos y carpetas
 
-Archivo / Folder | Descripción
---- | ---
-| R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.mxd | Mapa ArcMap 10.2.2 para visualización 2D de resultados de ejecución del Toolbox.
-| R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.sxd | Escena ArcScene 10.2.2 para visualización 3D de modelos de terreno y capas vectoriales de la estructura generados por el Toolbox.
-| R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.xlsm | Libro de diseño de la estructura.
-| R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoFolderStructure.zip | Comprimido con estructura de directorios requerida en D:\ para la ejecución del Toolbox. 
-| R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.tbx | Caja de herramientas ToolBox ESRI ArcGIS for Desktop con modelador de procesos para creación de archivos de formas 3D.
-| R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.xls | Tabla geocodificada con localización de nodos 3D de la estructura. Requerido por el modelador de procesos geográficos contenido en el Toolbox.
-| /MDT/ | Carpeta de volcado de modelos de terreno en formato vectorial TIN y Ráster generado por el Toolbox.
-| /SHP/ | Carpeta de volcado de nodos y caras 3D del modelo de terreno vectorial en formato ESRI Shapefile.
+| Archivo / Folder                                                                | Descripción                                                                                                                                    |
+|---------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.mxd                 | Mapa ArcMap 10.2.2 para visualización 2D de resultados de ejecución del Toolbox.                                                               |                                                               
+| R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.sxd                 | Escena ArcScene 10.2.2 para visualización 3D de modelos de terreno y capas vectoriales de la estructura generados por el Toolbox.              |              
+| R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.xlsm                | Libro de diseño de la estructura.                                                                                                              |                                                                                                              
+| R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoFolderStructure.zip  | Comprimido con estructura de directorios requerida en D:\ para la ejecución del Toolbox.                                                       |                                                       
+| R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.tbx              | Caja de herramientas ToolBox ESRI ArcGIS for Desktop con modelador de procesos para creación de archivos de formas 3D.                         |                         
+| R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.xls              | Tabla geocodificada con localización de nodos 3D de la estructura. Requerido por el modelador de procesos geográficos contenido en el Toolbox. | 
+| /MDT/                                                                           | Carpeta de volcado de modelos de terreno en formato vectorial TIN y Ráster generado por el Toolbox.                                            |                                            
+| /SHP/                                                                           | Carpeta de volcado de nodos y caras 3D del modelo de terreno vectorial en formato ESRI Shapefile.                                              |                                              
 
 
 ### Procedimiento para creación de superficie usando ArcGIS for Desktop
@@ -74,18 +75,19 @@ Nota: El archivo R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoFold
 * http://www.fsl.orst.edu/geowater/FX3/help/8_Hydraulic_Reference/Froude_Number_and_Flow_States.htm
 
 
-### Keywords
-Hydraulic structure. Hydraulic transition. Hydraulic expansion. Hydraulic contraction.
-
-
 ### Control de versiones
 
-Versión | Descripción
---- | ---
-| v.20211023 | Actualización general de análisis, gráficas y formato. Desarrollo e incorporación de Esri Toolbox para la creación automática de superficies para ensamblado de prototipos hidráulicos en HEC-RAS 2D. Inclusión de factor multiplicador para dibujo de tramos de aproximación de inicio y entrega.
-| v.20211028 | Incluído Valor de entrada de desplazamiento para no coalineación en geometría rectangular para el ensamble del modelo 3D.
+| Versión     | Descripción                                                                                                                                                                                                                                                                                        | Autor                                      | Horas |
+|-------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2021.10.23  | Actualización general de análisis, gráficas y formato. Desarrollo e incorporación de Esri Toolbox para la creación automática de superficies para ensamblado de prototipos hidráulicos en HEC-RAS 2D. Inclusión de factor multiplicador para dibujo de tramos de aproximación de inicio y entrega. | [rcfdtools](https://github.com/rcfdtools)  |   8   |
+| 2021.10.28  | Incluido Valor de entrada de desplazamiento para no coalineación en geometría rectangular para el ensamble del modelo 3D.                                                                                                                                                                          | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2014.08.09  | Versión inicial.                                                                                                                                                                                                                                                                                   | [rcfdtools](https://github.com/rcfdtools)  |   8   |
 
 
-### Licencia, cláusulas y condiciones de uso
-https://github.com/rcfdtools/R.HydroTools/wiki/License
+R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio.
+
+_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
+
+| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.HydroTools/discussions/10) |
+|------------------------------------------------------------------|-------------------------------------------------------------------------------|
 
