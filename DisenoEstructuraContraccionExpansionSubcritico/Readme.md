@@ -40,9 +40,9 @@ El diseño y construcción de canales hidráulicos requiere frecuentemente del d
 
 ### Procedimiento para creación de superficie usando ArcGIS for Desktop
 
-1. Copie los valores de la _Tabla esquema CAD o GIS en planta tipo cuña_ contenidos en la hoja de diseño R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.xlsm, incluída la cabecera.
-2. Peque los valores en el libro de cálculo R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.xls en la hoja _GIS_. Copiar libro en D:\R.HydroTools\DisenoEstructuraContraccionExpansionSubcritico\
-3. En ArcMAP, cargue y ejecute el ToolBox R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.tbx. Se recomienda el uso de las rutas predeterminadas: D:\R.HydroTools\DisenoEstructuraContraccionExpansionSubcritico. Dentro de esta carpeta es necesario crear las carpetas MDT y SHP.
+1. Copie los valores de la _Tabla esquema CAD o GIS en planta tipo cuña_ contenidos en la hoja de diseño _R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.xlsm_, incluida la cabecera.
+2. Peque los valores en el libro de cálculo _R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.xls_ en la hoja _GIS_. Copiar libro en _D:\R.HydroTools\DisenoEstructuraContraccionExpansionSubcritico\_
+3. En ArcMAP, cargue y ejecute el ToolBox _R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.tbx_. Se recomienda el uso de las rutas predeterminadas: _D:\R.HydroTools\DisenoEstructuraContraccionExpansionSubcritico_. Dentro de esta carpeta es necesario crear las carpetas MDT y SHP.
 4. Visualice los resultados obtenidos en ArcMAP y en ArcScene.
 
 > El archivo [R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoFolderStructure.zip](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoFolderStructure.zip) contiene la estructura de directorios requerida en la unidad D:\.
