@@ -17,7 +17,7 @@ Sobreelevación requerida o borde libre en la sección de un canal, capaz de con
 
 ### Requerimientos
 
-* Microsoft Excel 2013 o superior.
+* [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) 2013 o superior
 
 
 ### Ilustraciones
