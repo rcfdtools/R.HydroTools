@@ -34,9 +34,9 @@ Sobreelevación requerida o borde libre en la sección de un canal, capaz de con
 
 ### Control de versiones
 
-| Versión    | Descripción                                             | Autor                                     | Horas  |
-|------------|---------------------------------------------------------|-------------------------------------------|:------:|
-| 2021.10.19 | Actualización general de análisis, gráficas y formato.  | [rcfdtools](https://github.com/rcfdtools) |   10   |
+| Versión    | Descripción                                            | Autor                                     | Horas  |
+|------------|:-------------------------------------------------------|-------------------------------------------|:------:|
+| 2021.10.19 | Actualización general de análisis, gráficas y formato. | [rcfdtools](https://github.com/rcfdtools) |   10   |
 
 R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio.
 
