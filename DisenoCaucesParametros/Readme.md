@@ -1,7 +1,7 @@
 ## Parámetros generales para el diseño y modelación de cauces
 Keywords: `Microsoft Excel` `River design parameters` `Velocity` `Shear` `Side slope` `River` `Bank`
 
-Este libro de cálculo contiene lineamientos generales, parámetros para diseño y construcción de canales y obras hidráulicas, y permite registrar:
+Este libro de cálculo contiene lineamientos generales, parámetros para diseño y construcción de canales y obras hidráulicas, permite registrar:
 
 *   Parámetros técnicos requeridos.
 *   Parámetros técnicos estimados.
@@ -89,7 +89,8 @@ Este libro de cálculo contiene lineamientos generales, parámetros para diseño
 
 | Versión    | Descripción                                                                                                         | Autor                                     | Horas |
 |------------|:--------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:-----:|
-| 2021.10.13 | Actualización e inclusión de referencias aportadas por grupo UECIJG HCMC 2021-02. Actualización general de formato. | [rcfdtools](https://github.com/rcfdtools) |  20   |
+| 2021.10.13 | Actualización e inclusión de referencias aportadas por grupo UECIJG HCMC 2021-02. Actualización general de formato. | [rcfdtools](https://github.com/rcfdtools) |   2   |
+| 2021.07.31 | Versión inicial.                                                                                                    | [rcfdtools](https://github.com/rcfdtools) |  18   |
 
 
 R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio.
