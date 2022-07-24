@@ -9,6 +9,17 @@ El diseño hidráulico de canales requiere de la verificación de zonas suscepti
 * [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) 2013 o superior
 
 
+### Funcionalidades
+
+* Registro de datos de muestreo del dique actual a partir de tabla estación - elevación RAS Mapper.
+* Análisis de pendiente del dique actual.
+* Ingreso de parámetros para el trazado del nuevo dique de protección.
+* Cálculo de parámetros y tablas con valores estación - elevación de las secciones requeridas por RAS Mapper para la creación del dique.
+* Estimación preliminar del volumen de material requerido para su construcción.
+* Gráfica del perfil de muestreo del tramo de dique actual.
+* Gráfica de secciones transversales de talud en punto de inicio y fin.
+
+
 ### Procedimiento general
 
 1. En ArcGIS, QGIS o RAS Mapper de HEC-RAS y a partir del modelo de terreno, identifique visualmente (p. ej. con ayuda de la extensión 3D Analyst y contornos manuales) las zonas susceptibles a inundación y trace en planta el eje del dique de encausamiento y/o de protección requerido. El proceso consiste en trazar líneas en planta hasta una cota de cierre definida o hasta una prolongación determinada que permita realizar el confinamiento hidráulico del flujo.
@@ -22,17 +33,6 @@ El diseño hidráulico de canales requiere de la verificación de zonas suscepti
 > Nota 1: para el cálculo preciso del volumen de material de suelo requerido para conformar el dique, se recomienda utilizar Autodesk Civil 3D creando el dique a partir del alineamiento identificado y el talud diseñado.
 
 > Nota 2: el procedimiento descrito anteriormente, puede ser implementado en modelos 1D, siempre y cuando el ensamble del modelo topológico de muestreo haya sido realizado en RAS Mapper a partir de un modelo de terreno general, para la posterior combinación con los diques generados.
-
-
-### Funcionalidades
-
-* Registro de datos de muestreo del dique actual a partir de tabla estación - elevación RAS Mapper.
-* Análisis de pendiente del dique actual.
-* Ingreso de parámetros para el trazado del nuevo dique de protección.
-* Cálculo de parámetros y tablas con valores estación - elevación de las secciones requeridas por RAS Mapper para la creación del dique.
-* Estimación preliminar del volumen de material requerido para su construcción.
-* Gráfica del perfil de muestreo del tramo de dique actual.
-* Gráfica de secciones transversales de talud en punto de inicio y fin.
 
 
 ### Ilustraciones
