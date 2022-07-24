@@ -1,6 +1,6 @@
 <div align="center">
   <img alt="R.HydroTools" src="https://github.com/rcfdtools/R.HydroTools/blob/main/.Icons/R.HydroTools.svg" width="300px">
-  <br><b>Tools for hydrological and hydraulics computational analysis</b> by r.cfdtools@gmail.com<br><br>
+  <br><b>Tools for hydrological and hydraulics computational analysis</b><br>by r.cfdtools@gmail.com<br><br>
 </div>
 
 R.HydroTools es un proyecto de desarrollo colaborativo para crear y compartir herramientas computacionales relacionadas con modelación hidrológica, modelación hidráulica, análisis estadístico y analítica de datos espaciales.
