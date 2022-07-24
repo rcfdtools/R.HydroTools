@@ -14,6 +14,10 @@ Sobreelevación requerida o borde libre en la sección de un canal, capaz de con
 * Boligana, Concreto o roca
 * Criterios en función del ancho superficial T en canales revestidos
 
+### Requerimientos
+
+* Microsoft Excel 2013 o superior.
+
 
 ### Ilustraciones
 
