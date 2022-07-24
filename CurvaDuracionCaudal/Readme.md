@@ -1,5 +1,5 @@
 ## Curva de duración de caudal - FDC
-Keywords: `Flow Duration Curve - FDC` `Microsoft Excel` 
+Keywords: `Flow Duration Curve - FDC` 
 
 Las Curvas de Duración de Caudal o FDC (Flow Duration Curve) son utilizadas en hidrología para analizar el porcentaje del tiempo que el caudal o flujo excede un valor específico. 
 
