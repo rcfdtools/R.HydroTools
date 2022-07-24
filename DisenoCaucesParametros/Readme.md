@@ -1,7 +1,7 @@
 ## Parámetros generales para el diseño y modelación de cauces
 Keywords: `Microsoft Excel` `River design parameters` `Velocity` `Shear` `Side slope` `River` `Bank`
 
-Este libro de cálculo contiene lineamientos generales y permite registrar:
+Este libro de cálculo contiene lineamientos generales, parámetros para diseño y construcción de canales y obras hidráulicas, y permite registrar:
 
 *   Parámetros técnicos requeridos.
 *   Parámetros técnicos estimados.
