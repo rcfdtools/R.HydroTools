@@ -12,6 +12,12 @@ El diseño y construcción de canales hidráulicos requiere frecuentemente del d
 * Contracción y expansión en tramos de aproximación a canaletas Parshall ubicadas en canales.
 
 
+### Requerimientos
+
+* [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) 2013 o superior
+* [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
+
+
 ### Funcionalidades
 
 * Diseño de transición para diferentes tipos de geometrías con y sin compensación por desnivel.
