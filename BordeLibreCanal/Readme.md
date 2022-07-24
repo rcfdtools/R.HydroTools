@@ -1,14 +1,15 @@
 ## Estimación de borde libre en canales - Freeboard
+Keywords: `Freeboard` 
 
 Sobreelevación requerida o borde libre en la sección de un canal, capaz de contener el flujo sin desbordamiento, producto del oleaje o de la sobreelevación de la lámina de agua en tramos curvos y transiciones.
 
-### Métodos incluídos
+### Métodos incluidos
 
 * Canal erosionable
 * Canal revestido
-* Canal flujo subcritico
-* Canal flujo supercritico
-* Canal flujo supercritico sobreelevación en curvatura y transición
+* Canal flujo subcrítico
+* Canal flujo supercrítico
+* Canal flujo supercrítico sobreelevación en curvatura y transición
 * Bolinaga, Tierra conformada
 * Boligana, Concreto o roca
 * Criterios en función del ancho superficial T en canales revestidos
@@ -25,23 +26,21 @@ Sobreelevación requerida o borde libre en la sección de un canal, capaz de con
 ### Referencias
 
 * http://www.academia.edu/7579800/13ava_Dise%C3%B1o_de_canales
-* USBR Small Dams
+* [USBR Small Dams](https://www.usbr.gov/tsc/techreferences/mands/mands-pdfs/SmallDams.pdf)
 * http://ingenieriacivil.tutorialesaldia.com/mini-curso-de-diseno-de-canales-con-regimen-uniforme-parte-iii-seccion-de-maxima-eficiencia-y-borde-libre/
 * http://facingyconst.blogspot.com.co/2007/09/diseo-de-canales.html
 * http://www.bellavistaar.gov/wp-content/uploads/2015/08/Chapter-6-Open-Channel-Flow.pdf
 
 
-### Keywords
-Freeboard.
-
-
 ### Control de versiones
 
-Versión | Descripción
---- | ---
-| v.20211019 | Actualización general de análisis, gráficas y formato.
+| Versión    | Descripción                                             | Autor                                     | Horas  |
+|------------|---------------------------------------------------------|-------------------------------------------|--------|
+| 2021.10.19 | Actualización general de análisis, gráficas y formato.  | [rcfdtools](https://github.com/rcfdtools) | 10     |
 
+R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio.
 
-### Licencia, cláusulas y condiciones de uso
-https://github.com/rcfdtools/R.HydroTools/wiki/License
+_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
+| [Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.HydroTools/discussions/9999) |
+|----------------------------------------------------------|--------------------------------------------------------------------------------|
