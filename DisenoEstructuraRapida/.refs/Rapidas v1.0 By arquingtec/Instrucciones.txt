@@ -1,0 +1,9 @@
+INSTRUCCIONES:
+
+1.- Instalar el Software Rápidas V1.0 haciendo clic en el archivo Setup.exe
+
+2.- Al instalar se crea una carpeta de nombre "Rápidas" en Archivos de Programa, en donde se encontrarán el Manual del Usuario de Rápidas.pdf y la carpeta "Ejemplos" conteniendo archivos de ejemplos.
+
+2.- El instalador es compatible con cualquier sistema operativo de Microsoft Windows en 32-bit.
+
+3.- Opcionalmente debe instalarse el AutoCAD 2010 en sistema para poder exportar los resultados gráficos generados dede el Software Rápidas V1.0.
