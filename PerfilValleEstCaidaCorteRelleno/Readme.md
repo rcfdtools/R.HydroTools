@@ -18,6 +18,11 @@ El abscisado en HEC-RAS siempre se realiza en el sentido inverso del flujo. Agua
 * Para canales prismáticos en los que no se realiza diseño sinuoso para la fracción correspondiente al cauce dominante, podrá como diseñador proponer e incluir estructuras de caída para reducir la pendiente.
 
 
+### Requerimientos
+
+* [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) 2013 o superior
+
+
 ### Ilustraciones
 
 ![R.HydroTools.PerfilValleEstCaidaCorteRelleno.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/PerfilValleEstCaidaCorteRelleno/Screenshot/Screenshot1.png)

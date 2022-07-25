@@ -8,6 +8,11 @@ En caso de que existan restricciones de trazado y sea necesario utilizar una pen
 > Para el diseño geométrico del canal artificial, se recomienda utilizar la pendiente obtenida del eje del diseño sinuoso del río entre las secciones de referencia de inicio y entrega, para replicar así la longitud del cauce natural sin alterar la longitud del tránsito y el tiempo de concentración de la cuenca.
 
 
+### Requerimientos
+
+* [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) 2013 o superior
+
+
 ### Ilustraciones
 
 ![R.HydroTools.PendienteCauceValle.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/PendienteCauceValle/Screenshot/Screenshot1.png)
