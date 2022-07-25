@@ -25,7 +25,7 @@ Dimensionar la sección hidráulica dominante y de creciente del cauce principal
 3. With the current selección, press F2 and then press <kbd>Shift</kbd>+<kbd>Ctrl</kbd>+<kbd>Enter</kbd>.
 
 
-### Módulo VBA YnYc.bas
+### Módulo VBA [YnYc.bas](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoGeometricoHidraulicoVertical/YnYc.bas)
 
 ```
 'Cálculo de profundidad normal y crítica y propopiedades hidráulicas en canales a superficie libre.

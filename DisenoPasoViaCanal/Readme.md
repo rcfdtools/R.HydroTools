@@ -19,12 +19,12 @@ Dimensionar la geometría de sección requerida para transportar el caudal de di
 
 ### Procedimiento general
 0. Realizar el diseño geométrico e hidráulico vertical de la sección compuesta utilizando el módulo de diseño HD de HEC-RAS o el [Libro de diseño de R.HydroTools](https://github.com/rcfdtools/R.HydroTools/tree/main/DisenoGeometricoHidraulicoVertical).
-1. Realizar el diseño geométrico del paso de vía utilizando el libro R.HydroTools.DisenoPasoViaCanal.xlsm.
-2. Copiar todos los datos de la hoja GISCulvertPoint al libro de Excel R.HydroTools.DisenoPasoViaCanalGIS.xls.
-3. Desde ArcMAP o ArcCatalog, ejecutar el Model Builder Toolbox R.HydroTools.DisenoPasoViaCanal.tbx. Se recomienda utilizar la ruta absoluta D:\R.HydroTools\DisenoPasoViaCanal\.
+1. Realizar el diseño geométrico del paso de vía utilizando el libro _R.HydroTools.DisenoPasoViaCanal.xlsm_.
+2. Copiar todos los datos de la hoja GISCulvertPoint al libro de Excel _R.HydroTools.DisenoPasoViaCanalGIS.xls_.
+3. Desde ArcMAP o ArcCatalog, ejecutar el Model Builder Toolbox _R.HydroTools.DisenoPasoViaCanal.tbx_. Se recomienda utilizar la ruta absoluta D:\R.HydroTools\DisenoPasoViaCanal\.
 4. Visualizar las capas geográficas 3D de alcantarillas en ArcMAP y Autodek CIVIL3D.
 5. Crear sólidos de las tuberías 3D en CIVIL3D o en Autocad usando Sweep y SolidEdit.
-6. Realizar el diseño de la expansión y la contracción utilizando el libro de diseño R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.xlsm (HCMC0013).
+6. Realizar el diseño de la expansión y la contracción utilizando el libro de diseño _R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.xlsm_ (HCMC0013).
 
 
 ### Descripción de archivos y carpetas
@@ -40,7 +40,7 @@ Dimensionar la geometría de sección requerida para transportar el caudal de di
 | /SHP/                                                                                                                                                       | Carpeta de volcado de nodos y lineas 3D en formato ESRI Shapefile.                                                                               |                                                                               
 
 
-### Módulo VBA GISCulvertPoint.bas
+### Módulo VBA [GISCulvertPoint.bas](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/GISCulvertPoint.bas)
 
 ```
 'Diseno geometrico de pasos de via en canales usando alcantarillas por area equivalente a descarga libre.
