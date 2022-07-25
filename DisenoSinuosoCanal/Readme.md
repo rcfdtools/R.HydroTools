@@ -18,7 +18,10 @@ A partir de la estimación de los radios de curvatura característicos de los me
 
 ### Procedimiento
 
-* (1): Decidir el factor de sinuosidad a aplicar para: a. Mantener la pendiente original del cauce natural, b. Disminuir la pendiente del cauce con un factor de sinuosidad mayor ó c. Aumentar la pendiente del cauce con un factor de sinuosidad menor.
+* (1): Decidir el factor de sinuosidad a aplicar para: 
+  * a. Mantener la pendiente original del cauce natural, 
+  * b. Disminuir la pendiente del cauce con un factor de sinuosidad mayor ó 
+  * c. Aumentar la pendiente del cauce con un factor de sinuosidad menor.
 * (2A, 2B, 2C, 2D): Ingresar un radio de curvatura Rc (m) menor o igual al medido. Puede ingresar un valor de 10 m para que solver estime el máximo permisible para que la Longitud de Aproximación La (m) sea cero, o para que una onda se empalme con otra sin aproximación. Para Solver establecer una alphasemilla cercana a cero y positiva, o ingresar 1. Nota: Este valor no puede ser una raíz negativa obtenida por Solver.
 * (3A, 3B): Ingresar el valor calculado de ancho de la base del canal para caudal dominante de Tr: 2.33yr y el ancho del valle máximo. Al ancho de la base del valle disponible se le debe descontar un ancho de separación entre la curva externa de cada onda al borde de talud de la base del valle para evitar que el talud del cauce dominante y del valle sea continuo y asi prevenir la erosión del talud. Se recomiendan 5 m a cada lado. Ejemplo: Si el ancho disponible para valle es de 160 m se debe realizar el diseño sinuoso con 150 m. En el trazado de ejes usando CIVIL 3D se dibuja el corredor de 160 m, un offset de 5 m a cada lado y las curvas externas se trazan dentro del corredor efectivo libre para garantizar la separación de taludes.
 * (4): Para trazar el eje de la clotoide en CIVIL3D, se toma la longitud hidráulica de cada onda y se divide en 4 partes (Lm/4), se multiplica por el número de ondas requeridas y se divide el eje del valle en este número. Luego se traza con una línea espiral o una clotoide de radio Rc característico calculado por el eje sinuoso por los puntos extremos de intersección de cada subtramo con el borde externo de la onda. Para las sample lines dividir B' entre 2 y utilizar este valor para su construcción.
