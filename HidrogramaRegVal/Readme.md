@@ -33,6 +33,7 @@ Este libro de cálculo es utilizado para registrar y validar los pulsos obtenido
 | Emergency spillways (dams)                       | 100 to 10,000 (PMP)     |     
 | Freeboard hydrograph [for a class (c) dam]       | 10,000 (PMP)            |            
 
+> PMP: precipitación máxima probable.
 
 ### Ilustraciones
 
