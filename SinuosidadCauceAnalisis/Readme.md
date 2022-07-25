@@ -46,7 +46,7 @@ Procedimiento usando ArcGIS:
 5. Seleccionar todos los nodos de la tabla y copiar en un libro de Excel nuevo. Copiar las columnas CX y CY en la tabla del Método 3.
 6. Verificar los valores correspondientes a las longitudes de río y valle, así como el FS obtenido.
 
-Nota: el FS obtenido en este método debe ser similar al obtenido en el libro de análisis de secciones transversales de referencia inicio y entrega para diseño hidráulico. https://github.com/rcfdtools/R.HydroTools/tree/main/SeccionTransvInicioEntrega
+> El FS obtenido en este método debe ser similar al obtenido en el libro de análisis de [Secciones transversales de referencia inicio y entrega](https://github.com/rcfdtools/R.HydroTools/tree/main/SeccionTransvInicioEntrega) para diseño hidráulico.
 
 
 ### Ilustraciones
