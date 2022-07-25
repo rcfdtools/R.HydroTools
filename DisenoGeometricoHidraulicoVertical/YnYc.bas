@@ -1,6 +1,6 @@
-Attribute VB_Name = "YnYc"
 'Cálculo de profundidad normal y crítica y propopiedades hidráulicas en canales a superficie libre.
-'Creado por: https://github.com/rcfdtools, Versión: v.20211019
+'https://github.com/rcfdtools/R.HydroTools/tree/main/DisenoGeometricoHidraulicoVertical
+'Versión: 20211019
 'Licencia, cláusulas y condiciones de uso en: https://github.com/rcfdtools/R.HydroTools/wiki/License
 'VisualBasic for applications.
 'Bisection Method - Normal and Critical Depth Yc in Open Channels
@@ -213,4 +213,4 @@ End Function
 'Microsoft Excel procedure.
 '1. Call the R_YnYc function.
 '2. Select a 9 columns by 7 files range matrix. The first selected cell correspond with the R_YnYc call.
-'3. With the currect selección, press F2 and then press Shift-Ctrl-Enter.
+'3. With the current selección, press F2 and then press Shift-Ctrl-Enter.
