@@ -18,7 +18,7 @@ Para el estudio de los taludes de referencia, en el libro de análisis se pueden
 
 * INVIAS. Manual de drenaje para carreteras. Tabla 4.8.
 * RAS Título B Sistemas de Acueducto. Tabla B 4.4.
-* Dado el contenido de material cohesivo, el ángulo de reposo del material solo debe ser considerado materiales gruesos no cohesivos. Ref: Ven Te Chow. Hidráulicas de Canales Abiertos. página 169.
+* Dado el contenido de material cohesivo, en el ángulo de reposo del material solo debe ser considerado materiales gruesos no cohesivos. Ref: Ven Te Chow. Hidráulicas de Canales Abiertos. página 169.
 
 
 ### Ilustraciones
