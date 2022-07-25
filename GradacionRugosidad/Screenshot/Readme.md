@@ -1,1 +1,1 @@
-Capturas de pantalla.
+## Capturas de pantalla / screenshots
