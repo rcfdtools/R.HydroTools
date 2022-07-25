@@ -1,6 +1,7 @@
 ## Perfil de terreno del valle, evaluación de estructuras de caída y análisis de corte vs. relleno
+Keywords: `Hydraulics` `River profile` `Valley profile` `Cut and filling`
 
-A partir de la información topográfica disponible bajo la zona del eje del valle suavizado trazado y utilizando las secciones transversales del modelo de muestreo HEC-RAS, establecer si el canal artificial a diseñar estará en corte y/o relleno. El procedimiento presentado analiza solo el corte del valle y el posible uso de estructuras de caída para ajuste de pendiente.
+A partir de la información topográfica disponible bajo la zona del eje del valle suavizado trazado y utilizando las secciones transversales del modelo de muestreo HEC-RAS, establecer si el canal artificial a diseñar estará en corte y/o relleno. El procedimiento presentado analiza solo el corte del valle y el posible uso de estructuras de caída para ajuste de pendiente.
 
 Para obtener el perfil por los puntos más bajos de cada sección, crear un modelo HEC-GeoRAS con ejes de río, bancas, líneas de flujo y secciones transversales. Las secciones transversales deberán conectar los diferentes puntos de la topobatimetría de cada sección.
 
@@ -24,18 +25,18 @@ El abscisado en HEC-RAS siempre se realiza en el sentido inverso del flujo. Agua
 ![R.HydroTools.PerfilValleEstCaidaCorteRelleno.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/PerfilValleEstCaidaCorteRelleno/Screenshot/Screenshot3.png)
 
 
-### Keywords
-
-River profile. Valley profile. Cut and filling.
-
-
 ### Control de versiones
 
-Versión | Descripción
---- | ---
-| v.20201011 | Inclusión análisis de relación corte vs. relleno.
-| v.20211014 | Actualización general de formato, gráficas y títulos.
+| Versión     | Descripción                                            | Autor                                      | Horas |
+|-------------|:-------------------------------------------------------|--------------------------------------------|:-----:|
+| 2021.11.14  | Actualización general de formato, gráficas y títulos.  | [rcfdtools](https://github.com/rcfdtools)  |  2    |
+| 2020.10.11  | Inclusión análisis de relación corte vs. relleno.      | [rcfdtools](https://github.com/rcfdtools)  |   4   |
+| 2014.09.08  | Versión inicial.                                       | [rcfdtools](https://github.com/rcfdtools)  |  12   |
 
 
-### Licencia, cláusulas y condiciones de uso
-https://github.com/rcfdtools/R.HydroTools/wiki/License
+R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio.
+
+_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
+
+| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.HydroTools/discussions/21) |
+|------------------------------------------------------------------|------------------------------------------------------------------------------|
