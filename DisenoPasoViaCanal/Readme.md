@@ -3,10 +3,12 @@ Keywords: `Hydraulic design` `Culvert design` `ModelBuilder` `Invert elevation`
 
 Dimensionar la geometría de sección requerida para transportar el caudal de diseño de creciente bajo pasos de vía usando área equivalente. Es recomendable ubicar los pasos de vía en zonas de corte, en la que se disponga de una profundidad a la base del canal dominante mayor a la profundidad hidráulica de diseño; de este modo se podrán utilizar tuberías de diámetros superiores garantizando el tránsito hidráulico a descarga libre. 
 
+
 ### Requerimientos
 
 * [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) 2013 o superior
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
+* [Autodesk Autocad](https://www.autodesk.com/products/autocad/) (opcional)
 
 
 ### Funcionalidades
