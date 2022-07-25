@@ -36,7 +36,7 @@ Este libro de cálculo es utilizado para registrar y validar los pulsos obtenido
 > PMP: precipitación máxima probable.
 
 
-### Lineamientos generales para modelos hidrológicos
+### Lineamientos generales para modelos hidrológicos en HEC-HMS
 
 1. Para importación de archivos .csv en HEC-DSS 3.2.3 o superior, es necesario saltar y no importar el último registro de la tabla en el proceso de extracción - transformación y cargue (ETL). Los archivos de hietogramas están compuestos de múltiples registros, de los cuales 5 corresponden a cabeceras de importación de unidades y partes A,B,C,F, los demás registros corresponden a datos, excepto el último registro que corresponde al salto de línea final del archivo .csv que no debe ser importado. Para saltar este registro, de clic derecho en el número de registro (p. ej. el número 295) y seleccione la opción Skip, para finalizar de clic en Import.
 2. En subcuencas laterales que no tienen subdivisiones o tránsitos hidrológicos se toma el hidrograma obtenido de la transformación lluvia - escorrentía y para subcuencas laterales con subdivisiones y tránsitos, se toma el hidrograma del último tramo en tránsito de la subcuenca lateral más el hidrograma de la última subcuenca que corresponde a la transformación lluvia escorrentía de la cuenca del tramo en tránsito indicado.
