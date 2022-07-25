@@ -13,11 +13,14 @@
 venv/
 
 # Large files exclusions
-DisenoEstructuraContraccionExpansionSubcritico/TIN/
+DisenoEstructuraContraccionExpansionSubcritico/MDT/TIN/
 DisenoEstructuraContraccionExpansionSubcritico/MDT/*.tif
 DisenoEstructuraContraccionExpansionSubcritico/MDT/*.tfw
 DisenoEstructuraContraccionExpansionSubcritico/MDT/*.tif.*
-
+DisenoEstructuraEscalonadaFlujoRasante/MDT/TIN/
+DisenoEstructuraEscalonadaFlujoRasante/MDT/*.tif
+DisenoEstructuraEscalonadaFlujoRasante/MDT/*.tfw
+DisenoEstructuraEscalonadaFlujoRasante/MDT/*.tif.*
 
 # Some samples
 # http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files
