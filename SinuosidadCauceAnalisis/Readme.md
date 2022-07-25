@@ -11,6 +11,7 @@ A partir de las líneas de drenaje restituidas y las líneas esquemáticas que r
 ### Requerimientos
 
 * [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) 2013 o superior
+* [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
 
 
 ### Método 1: Estimación del factor de sinuosidad a partir de la longitud euclidiana del valle.
