@@ -124,7 +124,7 @@ End Sub
 
 * Ohtsu, Y. Yasuda & Takahashi M., "Flood Characteristics of Skimming Flows in Stepped Channels", Journal of Hydraulic Engineering, Vol. 130, No. 9, ASCE, September 2004.
 * Esquemas INVIAS, Manual de Drenaje, Pág. 4-81.
-* Formulación: baalkara@gmail.com, ECIJG-JAGM, r.cfdtools@gmail.com. Esquema: r.cfdtools@gmail.com. Revisión y formato: r.cfdtools@gmail.com
+* Formulación: [frankv13](https://github.com/frankv13), jagm, [rcfdtools](https://github.com/rcfdtools). Esquema y GIS: [rcfdtools](https://github.com/rcfdtools). Revisión y formato: [rcfdtools](https://github.com/rcfdtools)
 
 
 ### Control de versiones
