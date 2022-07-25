@@ -1,6 +1,13 @@
 ## Diseño geométrico e hidráulico vertical de canales a superficie libre
+Keywords: `Hydraulic design` `Critical depth` `Normal depth` `Yn` `Yc` `HEC-RAS hydraulic design` `Trapezoidal` `Circular` `Rectangular` `Triangular` _Tractive force_
 
-Dimensionar la sección hidráulica dominante y de creciente del cauce principal y de los cauces laterales menores, verificando a flujo uniforme la capacidad hidráulica de las sección compuesta y el borde libre requerido.
+Dimensionar la sección hidráulica dominante y de creciente del cauce principal y de los cauces laterales menores, verificando a flujo uniforme la capacidad hidráulica de la sección compuesta y el borde libre requerido.
+
+
+### Requerimientos
+
+* [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) 2013 o superior
+
 
 ### Funcionalidades
 * Registro y graficación de valores obtenidos en el módulo de diseño hidráulico HD de HEC-RAS.
@@ -8,10 +15,12 @@ Dimensionar la sección hidráulica dominante y de creciente del cauce principal
 * Diseño y verificación de secciones transversales para diferentes tipos de geometría (rectangular, triangular, trapezoidal, circular) con cálculo y graficación de profunidades normal y crítica, parámetros y propiedades hidráulicas. Módulo desarrollado por r.cfdtools.
 * Diseño de sección estable por el método de fuerza tractiva. Formulación r.cfdtools.
 
+
 ### Microsoft Excel procedure
+
 1. Call the R_YnYc function.
 2. Select a 9 columns by 7 files range matrix. The first selected cell correspond with the R_YnYc call.
-3. With the currect selección, press F2 and then press Shift-Ctrl-Enter.
+3. With the currect selección, press F2 and then press <kbd>Shift</kbd>+<kbd>Ctrl</kbd>+<kbd>Enter</kbd>.
 
 
 ### Ilustraciones
@@ -31,20 +40,20 @@ Dimensionar la sección hidráulica dominante y de creciente del cauce principal
 * https://es.slideshare.net/Ebene159/mcanica-de-fludos
 * https://www.fullquimica.com/2012/04/densidad-del-agua.html
 * Book: Julian Aguirre
-* Ven Te Chow. Hidáulica de canales  (Ejemplo 7.4 Ven Te Chow)
-
-
-### Keywords
-Critical depth. Normal depth. Yn. Yc. HEC-RAS hydraulic design. Trapezoidal. Circular. Rectangular. Triangular. Tractive force.
+* Ven Te Chow. Hidráulica de canales  (Ejemplo 7.4 Ven Te Chow)
 
 
 ### Control de versiones
 
-Versión | Descripción
---- | ---
-| v.20211019 | Actualización general de análisis, gráficas y formato.
+| Versión    | Descripción                                             | Autor                                      | Horas |
+|------------|:--------------------------------------------------------|--------------------------------------------|:-----:|
+| 2021.10.19 | Actualización general de análisis, gráficas y formato.  | [rcfdtools](https://github.com/rcfdtools)  |   4   |
+| 2016.08.14 | Versión inicial.                                        | [rcfdtools](https://github.com/rcfdtools)  |  18   |
 
 
-### Licencia, cláusulas y condiciones de uso
-https://github.com/rcfdtools/R.HydroTools/wiki/License
+R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio.
 
+_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
+
+| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.HydroTools/discussions/14) |
+|------------------------------------------------------------------|------------------------------------------------------------------------------|

@@ -11,6 +11,12 @@ El diseño y construcción de canales hidráulicos requiere frecuentemente del d
 * Canales realineados en los que existe una diferencia considerable de altura entre el fondo de inicio realineado y el fondo del canal de entrega.
 
 
+### Requerimientos
+
+* [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) 2013 o superior
+* [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
+
+
 ### Funcionalidades
 
 * Diseño de estructura escalonada de hasta 100 escalones.

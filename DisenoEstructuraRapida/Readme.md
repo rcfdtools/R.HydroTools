@@ -6,6 +6,26 @@ Una rápida es un canal de gran pendiente que conecta dos tramos de un canal con
 Las rápidas pueden ser utilizadas para realizar conexión de cauces laterales a canales principales de desviación, ya que es posible ajustar la pendiente natural del terreno y por tal razón, el movimiento de tierras es menor al de una entrega usando estructuras escalonadas a flujo rasante. Una desventaja en su implementación es la erosión generada por las altas velocidades del canal de la rápida.
 
 
+### Casos en los que se requiere del uso de rápidas
+
+* Entrega de cauces o drenajes laterales a cauces o a canales principales en los que existe una diferencia importante de nivel.
+* Canales realineados en los que existe una diferencia considerable de altura entre el fondo de inicio realineado y el fondo del canal de entrega.
+
+
+### Requerimientos
+
+* [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) 2013 o superior
+
+
+### Funcionalidades
+
+* Diseño hidráulico y geométrico por zonas.
+* Graficación de perfil y sección transversal por zona.
+* Graficación general de perfil.
+* Definición de longitud tramos de aproximación de inicio y entrega. Hoja _Rapida_, celda _H21_.
+* Botones de acción para resolver: rápida ajustando pendiente para obtener longitud del tramo 1-2 ingresada por el usuario , profundidad de colchón de disipación cambiando el ancho en la zona de la rápida, altura total de la estructura a partir de valor ingresado por el usuario y largo de la rápida en tramo 4-5 a partir de valor ingresado por el usuario
+
+
 ### Zonas
 
 | Zona  | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -18,21 +38,6 @@ Las rápidas pueden ser utilizadas para realizar conexión de cauces laterales a
 | 5 a 6 | Tanque disipador: Se ubica en el extremo inferior del canal de la rápida. Es la estructura que mantiene un colchón de agua que absorbe el exceso de energía cinética generada en la rápida mediante la reducción de la velocidad del agua en una poza de disipación. Su diseño se realiza a través de la determinación de la profundidad secuente. El régimen del flujo pasa de supercrítico a subcrítico mediante un resalto hidráulico                                                                                                                                                                                                                                                                                                          |
 | 6 a 7 | Rampa de salida: La salida del tanque disipador debe ser una rampa con una pendiente de entre 2: I o más tendida para permitir la auto limpieza del colchón. Esto evita la acumulación de arena, grava, ramas y deshechos.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | 7 a 8 | Canal natural o canal dragado de salida en la parte inferior o entrega.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-
-
-### Casos en los que se requiere del uso de rápidas
-
-* Entrega de cauces o drenajes laterales a cauces o a canales principales en los que existe una diferencia importante de nivel.
-* Canales realineados en los que existe una diferencia considerable de altura entre el fondo de inicio realineado y el fondo del canal de entrega.
-
-
-### Funcionalidades
-
-* Diseño hidráulico y geométrico por zonas.
-* Graficación de perfil y sección transversal por zona.
-* Graficación general de perfil.
-* Definición de longitud tramos de aproximación de inicio y entrega. Hoja _Rapida_, celda _H21_.
-* Botones de acción para resolver: rápida ajustando pendiente para obtener longitud del tramo 1-2 ingresada por el usuario , profundidad de colchón de disipación cambiando el ancho en la zona de la rápida, altura total de la estructura a partir de valor ingresado por el usuario y largo de la rápida en tramo 4-5 a partir de valor ingresado por el usuario
 
 
 ### Botones de acción
@@ -123,7 +128,3 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 
 | [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.HydroTools/discussions/13) |
 |------------------------------------------------------------------|-------------------------------------------------------------------------------|
-
-
-
-
