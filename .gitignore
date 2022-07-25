@@ -13,7 +13,10 @@
 venv/
 
 # Large files exclusions
-
+DisenoEstructuraContraccionExpansionSubcritico/TIN/
+DisenoEstructuraContraccionExpansionSubcritico/MDT/*.tif
+DisenoEstructuraContraccionExpansionSubcritico/MDT/*.tfw
+DisenoEstructuraContraccionExpansionSubcritico/MDT/*.tif.*
 
 
 # Some samples
