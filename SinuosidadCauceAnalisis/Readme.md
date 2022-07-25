@@ -15,15 +15,11 @@ A partir de las líneas de drenaje restituidas y las líneas esquemáticas que r
 * Estudio de [Secciones transversales de inicio y entrega](https://github.com/rcfdtools/R.HydroTools/tree/main/SeccionTransvInicioEntrega)
 
 
-### Ejemplo de cauces naturales y artificiales sinuosos y curvos con y sin sección compuesta
+### Ejemplos de cauces naturales y artificiales sinuosos y curvos con y sin sección compuesta
 
-
-| Imagen                                                                                                                                                          | Cauce                                 | Descripción                                                                                             | Google maps                                               |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|---------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| <img alt="R.HydroTools" src="https://github.com/rcfdtools/R.HydroTools/blob/main/SinuosidadCauceAnalisis/Graph/RioCalenturitasCesarColombia3.png" width="80px"> | Canal de desviación Río Calenturitas  | C.I. Prodeco S.A.<br>Departamento del Cesar, Colombia, Suramérica<br>http://www.grupoprodeco.com.co/es/ | [Ver](http://maps.google.com/maps?q=9.672087,-73.466907)  |
-
-
-<img alt="R.HydroTools" src="https://github.com/rcfdtools/R.HydroTools/blob/main/.Icons/R.HydroTools.svg" width="60px">
+| Imagen                                                                                                                                                           | Cauce                                  | Descripción                                                                                              |                        Google maps                        |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------|:---------------------------------------------------------------------------------------------------------|:---------------------------------------------------------:|
+| <img alt="R.HydroTools" src="https://github.com/rcfdtools/R.HydroTools/blob/main/SinuosidadCauceAnalisis/Graph/RioCalenturitasCesarColombia3.png" width="100px"> | Canal de desviación Río Calenturitas   | C.I. Prodeco S.A.<br>Departamento del Cesar, Colombia, Suramérica<br>http://www.grupoprodeco.com.co/es/  | [Ver](http://maps.google.com/maps?q=9.672087,-73.466907)  |
 
 
 ### Método 1: Estimación del factor de sinuosidad a partir de la longitud euclidiana del valle.
