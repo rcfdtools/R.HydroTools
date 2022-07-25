@@ -12,6 +12,7 @@ A partir de las líneas de drenaje restituidas y las líneas esquemáticas que r
 
 * [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) 2013 o superior
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
+* Estudio de [Secciones transversales de inicio y entrega](https://github.com/rcfdtools/R.HydroTools/tree/main/SeccionTransvInicioEntrega)
 
 
 ### Método 1: Estimación del factor de sinuosidad a partir de la longitud euclidiana del valle.
@@ -27,13 +28,13 @@ Procedimiento usando ArcGIS:
 ### Método 2: Estimación del factor de sinuosidad a partir de la longitud suavizada del valle (PAEK, 2 km).
 
 Procedimiento usando ArcGIS:
-1. Crear una capa de drenajes 2D digitalizando los cauces sobre una ortofoto o sobre un modelo de terreno lidar. La digitalización se debe realizar por tramos de río entre afluentes detallando las lineas meandriformes y en el sentido del flujo.					
+1. Crear una capa de drenajes 2D digitalizando los cauces sobre una ortofoto o sobre un modelo de terreno lidar. La digitalización se debe realizar por tramos de río entre afluentes detallando las líneas meandriformes y en el sentido del flujo.					
 2. A partir de la cada de drenajes 2D digitalizada, crear una nueva capa de drenajes suavizados utilizando la herramienta cartográfica de generalización "Suavizar Linea" o "Smooth Line" de ArcMAP. El radio de curvatura recomendado para la tangencia de suavizado es de 2000 metros. Estas líneas suavizadas se consideran como la línea de valle.
 3. En ArcMAP, realizar la unión de la capa de drenajes 2D con drenajes suavizados usando la llave de objeto.					
 (Opcional) Calcular la coordenada xyz del centroide de cada tramo para referencia de localización.					
 4. Indice de sinuosidad de cada tramo: Dividir la longitud del tramo suavizado o línea de valle, entre la longitud del cauce digitalizado.					
 
-> Los datos obtenidos deberán ser copiados en la tabla del método 3 para obtener la ecuación de ajuste potencial que caracterizará el comportamiento sinuoso o mendriforme de los drenajes en la zona de llanura.
+> Los datos obtenidos deberán ser copiados en la tabla del método 3 para obtener la ecuación de ajuste potencial que caracterizará el comportamiento sinuoso o meandriforme de los drenajes en la zona de llanura.
 
 
 ### Método 3: Factor de sinuosidad a partir de la longitud euclidiana del tramo a reemplazar.
