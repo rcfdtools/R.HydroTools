@@ -47,7 +47,8 @@ Este libro de cálculo es utilizado para registrar y validar los pulsos obtenido
 
 | Versión     | Descripción                                                                                                                                                                 | Autor                                      | Horas |
 |-------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2021.10.14  | Actualización general de formato.                                                                                                                                           | [rcfdtools](https://github.com/rcfdtools)  |  2    |
+| 2022.07.25  | Actualización general de documentación.                                                                                                                                     | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
+| 2021.10.14  | Actualización general de formato.                                                                                                                                           | [rcfdtools](https://github.com/rcfdtools)  |   2   |
 | 2021.10.11  | Inclusión de regresión logarítmica para la estimación de pulsos para periodos de retorno superiores a los registrados por factor Trn / Tr100. Ejemplo en hoja Hidrograma4a. | [rcfdtools](https://github.com/rcfdtools)  |   4   |
 | 2014.09.06  | Versión inicial.                                                                                                                                                            | [rcfdtools](https://github.com/rcfdtools)  |  12   |
 

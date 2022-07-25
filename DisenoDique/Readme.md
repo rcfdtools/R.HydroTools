@@ -1,5 +1,5 @@
 ## Diques de protección o encausamiento usando RAS Mapper
-Keywords: `Leeve design` `Leeve protection` `Overflow protection`
+Keywords: `Hydraulics` `Leeve design` `Leeve protection` `Overflow protection`
 
 El diseño hidráulico de canales requiere de la verificación de zonas susceptibles a inundación, bien sea porque la creciente de diseño no puede ser encausada sin desbordarse previamente al pasar al canal diseñado en su zona de inicio, o porque en su punto de descarga no existen cotas de confinamiento hidráulico que garanticen que el flujo no desborde o inunde zonas próximas, razón por la cual es necesario realizar el diseño y localización de diques complementarios. 
 
@@ -50,10 +50,11 @@ El diseño hidráulico de canales requiere de la verificación de zonas suscepti
 
 ### Control de versiones
 
-| Versión    | Descripción                                                                                                        | Autor                                     | Horas |
-|------------|:-------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:-----:|
-| 2021.11.05 | Actualización general de análisis, gráficas y formato. Inclusión de cálculo básico de volumen de suelo requerido.  | [rcfdtools](https://github.com/rcfdtools) |   2   |
-| 2020.09.12 | Versión inicial.                                                                                                   | [rcfdtools](https://github.com/rcfdtools) |   5   |
+| Versión     | Descripción                                                                                                       | Autor                                      | Horas |
+|-------------|:------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.07.25  | Actualización general de documentación.                                                                           | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
+| 2021.11.05  | Actualización general de análisis, gráficas y formato. Inclusión de cálculo básico de volumen de suelo requerido. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2020.09.12  | Versión inicial.                                                                                                  | [rcfdtools](https://github.com/rcfdtools)  |   5   |
 
 
 R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio.

@@ -1,5 +1,5 @@
 ## Diseño de estructura de caída sin contra-escalón en sección rectangular
-Keywords: `Hydraulic structure` `Spillway` `Tank` `Hydraulic jump`
+Keywords: `Hydraulics` `Hydraulic structure` `Spillway` `Tank` `Hydraulic jump`
 
 El diseño y construcción de canales hidráulicos requiere frecuentemente del diseño de estructuras de caída, especialmente cuando se busca ajustar o mantener la pendiente de diseño, cuando no se realiza el diseño de cauce sinuoso confinado en valle o cuando debido a procesos erosivos el fondo del canal se degrada y es necesario que este se agrade para recuperar su condición inicial.
 
@@ -32,10 +32,11 @@ El diseño y construcción de canales hidráulicos requiere frecuentemente del d
 
 ### Control de versiones
 
-| Versión    | Descripción                                                                                                                                                                                                                   | Autor                                                                                        | Horas |
-|------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|:-----:|
-| 2021.10.23 | Actualización general de análisis, gráficas y formato. Incorporación pendiente del canal para dibujo de fondo en tramos de aproximación de inicio y entrega. Hoja con secuencia de comandos para dibujo de estructura en CAD. | [rcfdtools](https://github.com/rcfdtools)                                                    |   4   |
-| 2014.08.08 | Versión inicial.                                                                                                                                                                                                              | [rcfdtools](https://github.com/rcfdtools)<br>[frankv13](https://github.com/frankv13)<br>jagm |   8   |
+| Versión     | Descripción                                                                                                                                                                                                                   | Autor                                                                                        | Horas |
+|-------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|:-----:|
+| 2022.07.25  | Actualización general de documentación.                                                                                                                                                                                       | [rcfdtools](https://github.com/rcfdtools)                                                    |  0.5  |
+| 2021.10.23  | Actualización general de análisis, gráficas y formato. Incorporación pendiente del canal para dibujo de fondo en tramos de aproximación de inicio y entrega. Hoja con secuencia de comandos para dibujo de estructura en CAD. | [rcfdtools](https://github.com/rcfdtools)                                                    |   4   |
+| 2014.08.08  | Versión inicial.                                                                                                                                                                                                              | [rcfdtools](https://github.com/rcfdtools)<br>[frankv13](https://github.com/frankv13)<br>jagm |   8   |
 
 
 R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio.
@@ -44,4 +45,3 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 
 | [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.HydroTools/discussions/10) |
 |------------------------------------------------------------------|-------------------------------------------------------------------------------|
-

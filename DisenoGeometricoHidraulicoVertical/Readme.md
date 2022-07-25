@@ -1,5 +1,5 @@
 ## Diseño geométrico e hidráulico vertical de canales a superficie libre
-Keywords: `Hydraulic design` `Critical depth` `Normal depth` `Yn` `Yc` `HEC-RAS hydraulic design` `Trapezoidal` `Circular` `Rectangular` `Triangular` `Tractive force`
+Keywords: `Hydraulics` `Hydraulic design` `Critical depth` `Normal depth` `Yn` `Yc` `HEC-RAS hydraulic design` `Trapezoidal` `Circular` `Rectangular` `Triangular` `Tractive force`
 
 Dimensionar la sección hidráulica dominante y de creciente del cauce principal y de los cauces laterales menores, verificando a flujo uniforme la capacidad hidráulica de la sección compuesta y el borde libre requerido.
 
@@ -268,10 +268,11 @@ End Function
 
 ### Control de versiones
 
-| Versión    | Descripción                                             | Autor                                      | Horas |
-|------------|:--------------------------------------------------------|--------------------------------------------|:-----:|
-| 2021.10.19 | Actualización general de análisis, gráficas y formato.  | [rcfdtools](https://github.com/rcfdtools)  |   4   |
-| 2016.08.14 | Versión inicial.                                        | [rcfdtools](https://github.com/rcfdtools)  |  22   |
+| Versión     | Descripción                                            | Autor                                      | Horas |
+|-------------|:-------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.07.25  | Actualización general de documentación.                | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
+| 2021.10.19  | Actualización general de análisis, gráficas y formato. | [rcfdtools](https://github.com/rcfdtools)  |   4   |
+| 2016.08.14  | Versión inicial.                                       | [rcfdtools](https://github.com/rcfdtools)  |  22   |
 
 
 R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio.

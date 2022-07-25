@@ -21,10 +21,11 @@ En caso de que existan restricciones de trazado y sea necesario utilizar una pen
 
 ### Control de versiones
 
-| Versión    | Descripción                                             | Autor                                      | Horas |
-|------------|:--------------------------------------------------------|--------------------------------------------|:-----:|
-| 2021.10.16 | Actualización general de análisis, gráficas y formato.  | [rcfdtools](https://github.com/rcfdtools)  |   2   |
-| 2014.09.07 | Versión inicial.                                        | [rcfdtools](https://github.com/rcfdtools)  |  16   |
+| Versión     | Descripción                                            | Autor                                      | Horas |
+|-------------|:-------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.07.25  | Actualización general de documentación.                | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
+| 2021.10.16  | Actualización general de análisis, gráficas y formato. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2014.09.07  | Versión inicial.                                       | [rcfdtools](https://github.com/rcfdtools)  |  16   |
 
 
 R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio.

@@ -37,10 +37,11 @@ Para subcuencas pequeñas menores a 25 km² en cauces laterales al río artifici
 
 ### Control de versiones
 
-| Versión     | Descripción                                                                                                                                          | Autor                                      | Horas |
-|-------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2021.10.13  | Actualización general de formato. Inclusión de gráfica independiente con curvas potenciales para factores de atenuación California Montañoso - USA.  | [rcfdtools](https://github.com/rcfdtools)  |   2   |
-| 2014.09.05  | Versión inicial.                                                                                                                                     | [rcfdtools](https://github.com/rcfdtools)  |  12   |
+| Versión     | Descripción                                                                                                                                         | Autor                                      | Horas |
+|-------------|:----------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.07.25  | Actualización general de documentación.                                                                                                             | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
+| 2021.10.13  | Actualización general de formato. Inclusión de gráfica independiente con curvas potenciales para factores de atenuación California Montañoso - USA. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2014.09.05  | Versión inicial.                                                                                                                                    | [rcfdtools](https://github.com/rcfdtools)  |  12   |
 
 
 R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio.

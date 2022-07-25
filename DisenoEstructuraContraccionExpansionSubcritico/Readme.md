@@ -1,5 +1,5 @@
 ## Diseño de estructura hidráulica de contracción y expansión a flujo subcrítico
-Keywords: `Hydraulic structure` `Hydraulic transition` `Hydraulic expansion` `Hydraulic contraction`
+Keywords: `Hydraulics` `Hydraulic structure` `Hydraulic transition` `Hydraulic expansion` `Hydraulic contraction`
 
 El diseño y construcción de canales hidráulicos requiere frecuentemente del diseño de estructuras de transición por contracción y expansión con diferentes geometrías. A través de esta herramienta podrá diseñar transiciones combinando geometrías trapezoidales, triangulares y rectangulares.
 
@@ -85,6 +85,7 @@ El diseño y construcción de canales hidráulicos requiere frecuentemente del d
 
 | Versión     | Descripción                                                                                                                                                                                                                                                                                        | Autor                                      | Horas |
 |-------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.07.25  | Actualización general de documentación.                                                                                                                                                                                                                                                            | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
 | 2021.10.23  | Actualización general de análisis, gráficas y formato. Desarrollo e incorporación de Esri Toolbox para la creación automática de superficies para ensamblado de prototipos hidráulicos en HEC-RAS 2D. Inclusión de factor multiplicador para dibujo de tramos de aproximación de inicio y entrega. | [rcfdtools](https://github.com/rcfdtools)  |  16   |
 | 2021.10.28  | Incluido Valor de entrada de desplazamiento para no coalineación en geometría rectangular para el ensamble del modelo 3D.                                                                                                                                                                          | [rcfdtools](https://github.com/rcfdtools)  |   2   |
 | 2014.08.09  | Versión inicial.                                                                                                                                                                                                                                                                                   | [rcfdtools](https://github.com/rcfdtools)  |   8   |
@@ -96,4 +97,3 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 
 | [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.HydroTools/discussions/11) |
 |------------------------------------------------------------------|------------------------------------------------------------------------------|
-

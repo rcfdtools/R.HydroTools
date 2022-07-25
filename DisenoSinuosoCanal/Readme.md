@@ -1,5 +1,5 @@
 ## Diseño geométrico horizontal sinuoso de canales
-Keywords: `Hydraulic design` `Sinusoidal river design` 
+Keywords: `Hydraulics` `Hydraulic design` `Sinusoidal river design` 
 
 A partir de la estimación de los radios de curvatura característicos de los meandros existentes en cauces naturales, el índice de sinuosidad y los anchos de sección diseñados hidráulicamente para el transporte del caudal dominante y creciente; determinar los siguientes atributos geométricos requeridos para el trazado del corredor del cauce sinuoso en Autodesk Civil 3D:
 
@@ -62,10 +62,11 @@ End Sub
 
 ### Control de versiones
 
-| Versión    | Descripción                                             | Autor                                                                                 | Horas |
-|------------|:--------------------------------------------------------|---------------------------------------------------------------------------------------|:-----:|
-| 2021.10.19 | Actualización general de análisis, gráficas y formato.  | [rcfdtools](https://github.com/rcfdtools)                                             |   4   |
-| 2014.09.03 | Versión inicial.                                        | [rcfdtools](https://github.com/rcfdtools)<br>[frankv13](https://github.com/frankv13)  |  32   |
+| Versión     | Descripción                                            | Autor                                                                                | Horas |
+|-------------|:-------------------------------------------------------|--------------------------------------------------------------------------------------|:-----:|
+| 2022.07.25  | Actualización general de documentación.                | [rcfdtools](https://github.com/rcfdtools)                                            |  0.5  |
+| 2021.10.19  | Actualización general de análisis, gráficas y formato. | [rcfdtools](https://github.com/rcfdtools)                                            |   4   |
+| 2014.09.03  | Versión inicial.                                       | [rcfdtools](https://github.com/rcfdtools)<br>[frankv13](https://github.com/frankv13) |  32   |
 
 
 R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio.

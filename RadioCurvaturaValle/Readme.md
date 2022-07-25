@@ -43,11 +43,12 @@ Existen diversas metodologías para estimar la curvatura de suavizado del eje re
 
 ### Control de versiones
 
-| Versión     | Descripción                                                                                                                                                                     | Autor                                      | Horas |
-|-------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2021.10.14  | Actualización general de formato.                                                                                                                                               | [rcfdtools](https://github.com/rcfdtools)  |   2   |
-| 2020.10.11  | Inclusión de Método 5. Por factor multiplicador en función del ancho (Urban Storm Drainage Criteria Manual). Inclusión de Método 6. En función del tipo de canal. Salzitegger.  | [rcfdtools](https://github.com/rcfdtools)  |   2   |
-| 2016.05.19  | Versión inicial.                                                                                                                                                                | [rcfdtools](https://github.com/rcfdtools)  |   8   |
+| Versión     | Descripción                                                                                                                                                                    | Autor                                      | Horas |
+|-------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.07.25  | Actualización general de documentación.                                                                                                                                        | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
+| 2021.10.14  | Actualización general de formato.                                                                                                                                              | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2020.10.11  | Inclusión de Método 5. Por factor multiplicador en función del ancho (Urban Storm Drainage Criteria Manual). Inclusión de Método 6. En función del tipo de canal. Salzitegger. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2016.05.19  | Versión inicial.                                                                                                                                                               | [rcfdtools](https://github.com/rcfdtools)  |   8   |
 
 
 R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio.
