@@ -15,6 +15,11 @@ Luego de la modelación o tránsito hidrológico, los valores de caudal pico e h
 Para subcuencas pequeñas menores a 25 km² en cauces laterales al río artificial a diseñar, puede suponerse que el centro de tormenta cubre toda esta área y por consiguiente el factor multiplicador será de 1.
 
 
+### Requerimientos
+
+* [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) 2013 o superior
+
+
 ### Referencias
 
 * Manual on estimation of probable maximum precipitation (PMP) - WMO-No. 1045 año 2009.
