@@ -1,6 +1,8 @@
-## Fa - Factor de atenuación de la precipitación máxima por área simultánea
+## Fa - Factor de atenuación de la precipitación máxima por área simultánea en una cuenca
+Keywords: `Hydrology` `Area-reduction curves` 
 
-### ¿Qué es y para que sirve?
+
+### ¿Qué es y para qué sirve?
 
 Es un valor numérico adimensional (entre 0 y 1) que multiplica la lluvia total máxima en 24 horas, estimada para cada subcuenca o sus pulsos equivalentes (del hietograma) en función del área de aportación y solo es válido en un punto de estudio determinado. 
 
@@ -10,7 +12,7 @@ El factor de atenuación es inversamente proporcional al área acumulada de la c
 
 Luego de la modelación o tránsito hidrológico, los valores de caudal pico e hietogramas, solo serán válidos para el punto en estudio.
 
-Para subcuencas pequeñas en cauces laterales al rio artificial a diseñar, puede suponerse que el centro de tormenta cubre toda esta área y por consiguiente el factor multiplicador será de 1.
+Para subcuencas pequeñas menores a 25 km² en cauces laterales al río artificial a diseñar, puede suponerse que el centro de tormenta cubre toda esta área y por consiguiente el factor multiplicador será de 1.
 
 
 ### Referencias
@@ -28,17 +30,17 @@ Para subcuencas pequeñas en cauces laterales al rio artificial a diseñar, pued
 ![R.HydroTools.FactorAtenuacionPrecipitacionFa.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/FactorAtenuacionPrecipitacionFa/Screenshot/Screenshot3.png)
 
 
-### Keywords
-
-Area-reduction curves.
-
-
 ### Control de versiones
 
-Versión | Descripción
---- | ---
-| v.20211013 | Actualización general de formato. Inclusión de gráfica independiente con curvas potenciales para factores de atenuación California Montañoso - USA.
+| Versión     | Descripción                                                                                                                                          | Autor                                      | Horas |
+|-------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2021.10.13  | Actualización general de formato. Inclusión de gráfica independiente con curvas potenciales para factores de atenuación California Montañoso - USA.  | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2014.09.05  | Versión inicial.                                                                                                                                     | [rcfdtools](https://github.com/rcfdtools)  |  12   |
 
 
-### Licencia, cláusulas y condiciones de uso
-https://github.com/rcfdtools/R.HydroTools/wiki/License
+R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio.
+
+_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
+
+| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.HydroTools/discussions/17) |
+|------------------------------------------------------------------|------------------------------------------------------------------------------|

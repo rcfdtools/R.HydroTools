@@ -57,7 +57,7 @@ End Sub
 
 ### Referencias
 
-* Desarrollado por [rcfdtools](https://github.com/rcfdtools), [frankv13](https://github.com/frankv13)
+* Creado y desarrollado por [rcfdtools](https://github.com/rcfdtools), [frankv13](https://github.com/frankv13)
 
 
 ### Control de versiones
@@ -65,7 +65,7 @@ End Sub
 | Versión    | Descripción                                             | Autor                                                                                 | Horas |
 |------------|:--------------------------------------------------------|---------------------------------------------------------------------------------------|:-----:|
 | 2021.10.19 | Actualización general de análisis, gráficas y formato.  | [rcfdtools](https://github.com/rcfdtools)                                             |   4   |
-| 2014.09.03 | Versión inicial.                                        | [rcfdtools](https://github.com/rcfdtools)<br>[frankv13](https://github.com/frankv13)  |  24   |
+| 2014.09.03 | Versión inicial.                                        | [rcfdtools](https://github.com/rcfdtools)<br>[frankv13](https://github.com/frankv13)  |  32   |
 
 
 R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio.
