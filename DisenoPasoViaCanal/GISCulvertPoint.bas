@@ -1,6 +1,5 @@
-Attribute VB_Name = "GISCulvertPoint"
 'Diseno geometrico de pasos de via en canales usando alcantarillas por area equivalente a descarga libre.
-'Versión: v.20211020
+'Versión: 20211020
 'https://github.com/rcfdtools/R.HydroTools/tree/main/DisenoPasoViaCanal
 'Información, licencia y condiciones de uso en https://github.com/rcfdtools/R.HydroTools/wiki/License
 'VisualBasic for applications.
