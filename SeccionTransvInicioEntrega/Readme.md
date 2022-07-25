@@ -21,10 +21,6 @@ Para el correcto cálculo del área hidráulica y perímetro mojado, la línea q
 ![R.HydroTools.SeccionTransvInicioEntrega.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/SeccionTransvInicioEntrega/Screenshot/Screenshot4.png)
 
 
-| v.20211018 | 
-| v.20211016 | Inclusión de coordenadas de localización de secciones de inicio y entrega en intersección con red de drenaje. Inclusión de selectores de estación inicial y final para estimación del ancho superficial T. Inclusión de localización geográfica e hipervinculación para visualización en Google Maps. Estimación de largo del valle recto sin puntos de cambio de dirección. Estimación del factor de sinuosidad característico Fs. Actualización general de gráficas.
-
-
 ### Control de versiones
 
 | Versión     | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Autor                                      | Horas |
