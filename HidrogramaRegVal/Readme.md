@@ -16,22 +16,22 @@ Este libro de cálculo es utilizado para registrar y validar los pulsos obtenido
 * [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) 2013 o superior
 
 
-### Guidelines for the selection of return period
+### Guidelines for the selection of return period [^1]
 
-| Type of project or feature                      | Tr - return period, yr |
-|-------------------------------------------------|------------------------|
-| Urban drainage [low risk] (up to 100 ha)        | 5 to 10                |                 
-| Urban drainage [medium risk] (more than 100 ha) | 25 to 50               |               
-| Road drainage                                   | 25 to 50               |                
-| Principal spillways (dams)                      | 25 to 100              |               
-| Highway drainage                                | 50 to 100              |               
-| Levees [medium risk]                            | 50 to 100              |               
-| Urban drainage [high risk] (more than 1,000 ha) | 50 to 100              |               
-| Flood plain development                         | 100                    |                     
-| Bridge design (piers)                           | 100 to 500             |              
-| Levees [high risk]                              | 200 to 1000            |            
-| Emergency spillways (dams)                      | 100 to 10,000 (PMP)    |     
-| Freeboard hydrograph [for a class (c) dam]      | 10,000 (PMP)           |            
+| Type of project or feature                       | Tr - return period, yr  |
+|:-------------------------------------------------|:------------------------|
+| Urban drainage [low risk] (up to 100 ha)         | 5 to 10                 |                 
+| Urban drainage [medium risk] (more than 100 ha)  | 25 to 50                |               
+| Road drainage                                    | 25 to 50                |                
+| Principal spillways (dams)                       | 25 to 100               |               
+| Highway drainage                                 | 50 to 100               |               
+| Levees [medium risk]                             | 50 to 100               |               
+| Urban drainage [high risk] (more than 1,000 ha)  | 50 to 100               |               
+| Flood plain development                          | 100                     |                     
+| Bridge design (piers)                            | 100 to 500              |              
+| Levees [high risk]                               | 200 to 1000             |            
+| Emergency spillways (dams)                       | 100 to 10,000 (PMP)     |     
+| Freeboard hydrograph [for a class (c) dam]       | 10,000 (PMP)            |            
 
 
 ### Ilustraciones
@@ -40,11 +40,6 @@ Este libro de cálculo es utilizado para registrar y validar los pulsos obtenido
 ![R.HydroTools.HidrogramaRegVal.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/HidrogramaRegVal/Screenshot/Screenshot2.png)
 ![R.HydroTools.HidrogramaRegVal.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/HidrogramaRegVal/Screenshot/Screenshot3.png)
 ![R.HydroTools.HidrogramaRegVal.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/HidrogramaRegVal/Screenshot/Screenshot4.png)
-
-
-### Referencias
-
-* http://ponce.sdsu.edu/return_period.html
 
 
 ### Control de versiones
@@ -62,3 +57,5 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 
 | [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.HydroTools/discussions/19) |
 |------------------------------------------------------------------|-------------------------------------------------------------------------------|
+
+[^1]: http://ponce.sdsu.edu/return_period.html
