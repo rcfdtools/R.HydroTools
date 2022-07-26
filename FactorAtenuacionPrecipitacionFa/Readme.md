@@ -14,7 +14,7 @@ Luego de la modelación o tránsito hidrológico, los valores de caudal pico e h
 
 Para subcuencas pequeñas menores a 25 km² en cauces laterales al río artificial a diseñar, puede suponerse que el centro de tormenta cubre toda esta área y por consiguiente el factor multiplicador será de 1.
 
-Consulta la compilación bibliográfica de factores de atenuación realizada por rcfdtools [aquí](https://github.com/rcfdtools/R.HydroTools/blob/main/FactorAtenuacionPrecipitacionFa/R.HydroTools.FactorAtenuacionPrecipitacionFa.pdf). 
+Consulta la compilación bibliográfica de factores de atenuación [aquí](https://github.com/rcfdtools/R.HydroTools/blob/main/FactorAtenuacionPrecipitacionFa/R.HydroTools.FactorAtenuacionPrecipitacionFa.pdf). 
 
 
 ### Requerimientos
