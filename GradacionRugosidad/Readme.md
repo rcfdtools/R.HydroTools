@@ -51,10 +51,10 @@ Tamaño característico del material que compone el lecho o la zona de corte en 
 
 ### Valores de referencia para las rugosidades n de Manning[^1]
 
-La selección de un valor apropiado de la Rugosidad n de Manning es muy significativo en el momento de calcular la elevación de la lámina de agua en un canal. El n de Manning es altamente variable y depende de múltiples factores, tales como: 
+La selección de un valor apropiado de la Rugosidad n de Manning es muy significativo al momento de calcular la elevación de la lámina de agua en un canal. El n de Manning es altamente variable y depende de múltiples factores, tales como: 
 
 * Rugosidad de la superficie o lecho
-* Vegetación acuática, en los taludes y en la llanura
+* Vegetación acuática, en los taludes y en llanura
 * Irregularidades en el canal
 * Tipo de alineamiento (recto, sinuoso, meandriforme, trenzado...)
 * Arrastre y depositación de sedimentos
@@ -82,7 +82,7 @@ Existen múltiples referencias de valores típicos de rugosidades n de Manning p
 * http://artemisa.unicauca.edu.co/~hdulica/T_TRANSPORTE_SEDIMENTOS.pdf
 * http://wwwrcamnl.wr.usgs.gov/sws/fieldmethods/Indirects/nvalues/index.htm
 * US Army Corps of Engineers. HEC-RAS River Analysis System, Hydraulic Reference Manual, Versión 5.0. CPD-69. 2016.2
-* Escuela de Geociencias y Medio Ambiente, Ramiro Marbello Pérez
+* Universidad Nacional de Colombia, sede Medellín. Escuela de Geociencias y Medio Ambiente, Ramiro Marbello Pérez
 * Open Channel Hydraulics, 1985. French, R.
 * Open Channel Hydraulics, 1959. Chow, Ven Te.
 * http://bdigital.unal.edu.co/12697/60/3353962.2005.Parte%2011.pdf
