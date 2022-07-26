@@ -9,7 +9,7 @@ Tamaño característico del material que compone el lecho o la zona de corte en 
 * [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) 2013 o superior
 
 
-### Métodos incluidos para estimar el valor característico de la rugosidad de Manning
+### Ecuaciones empíricas para estimar el valor característico de la rugosidad de Manning
 
 
 #### Basados en d50
@@ -49,6 +49,27 @@ Tamaño característico del material que compone el lecho o la zona de corte en 
 | Yen, 1992                    | 𝑛=0.0384(𝐷<sub>90</sub>)<sup>0.16<sup> | Universidad Nacional de Colombia, sede Medellín. Escuela de Geociencias y Medio Ambiente, Ramiro Marbello Pérez                  |                  
 
 
+### Valores de referencia para las rugosidades n de Manning[^1]
+
+La selección de un valor apropiado de la Rugosidad n de Manning es muy significativo en el momento de calcular la elevación de la lámina de agua en un canal. El n de Manning es altamente variable y depende de múltiples factores, tales como: 
+
+* Rugosidad de la superficie o lecho
+* Vegetación acuática, en los taludes y en la llanura
+* Irregularidades en el canal
+* Tipo de alineamiento (recto, sinuoso, meandriforme, trenzado...)
+* Arrastre y depositación de sedimentos
+* Obstrucciones
+* Tamaño y forma geométrica del canal
+* Almacenamiento y descarga
+* Cambios debidos a los ciclos estacionales
+* Temperatura
+* Material en suspensión y tipo de lecho.
+
+En general, el coeficiente n de Manning debería ser calibrado a partir de observaciones realizadas respecto a la elevación de la lámina de agua en el canal (estaciones de medición limnimétricas y/o limnigráficas, marcas de agua) cuando estos datos están disponibles. Cuando no existen datos de medición de altura de lámina en el canal, se pueden utilizar valores de n obtenidos de cauces con similares condiciones o a partir de valores obtenidos experimentalmente.
+
+Existen múltiples referencias de valores típicos de rugosidades n de Manning para canales, p. ej. en el libro de _Hidráulica de canales a superficie libre de Ven Te Chow, 1959_ se encuentra una compilación detallada de estos valores para los tipos de canales más usuales. En el [Manual de referencia técnico del Cuerpo de Ingenieros Militares de Estados Unidos de América](https://www.hec.usace.army.mil/confluence/rasdocs/ras1dtechref/latest/basic-data-requirements/geometric-data/energy-loss-coefficients), se encuentra una tabla resumen de los valores típicos presentados por Chow. 
+
+
 ### Ilustraciones
 
 ![R.HydroTools.GradacionRugosidad.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/GradacionRugosidad/Screenshot/Screenshot1.png)
@@ -63,6 +84,7 @@ Tamaño característico del material que compone el lecho o la zona de corte en 
 * US Army Corps of Engineers. HEC-RAS River Analysis System, Hydraulic Reference Manual, Versión 5.0. CPD-69. 2016.2
 * Escuela de Geociencias y Medio Ambiente, Ramiro Marbello Pérez
 * Open Channel Hydraulics, 1985. French, R.
+* Open Channel Hydraulics, 1959. Chow, Ven Te.
 * http://bdigital.unal.edu.co/12697/60/3353962.2005.Parte%2011.pdf
 
 
@@ -81,3 +103,5 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 
 | [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.HydroTools/discussions/18)  |
 |------------------------------------------------------------------|-------------------------------------------------------------------------------|
+
+[^1]: https://www.hec.usace.army.mil/confluence/rasdocs/ras1dtechref/latest/basic-data-requirements/geometric-data/energy-loss-coefficients
