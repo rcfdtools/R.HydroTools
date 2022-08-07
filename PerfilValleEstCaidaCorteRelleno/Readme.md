@@ -39,8 +39,7 @@ El abscisado en HEC-RAS siempre se realiza en el sentido inverso del flujo. Agua
 | 2020.10.11  | Inclusión análisis de relación corte vs. relleno.      | [rcfdtools](https://github.com/rcfdtools)  |   4   |
 | 2014.09.08  | Versión inicial.                                       | [rcfdtools](https://github.com/rcfdtools)  |  12   |
 
-
-R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio.
+_R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 

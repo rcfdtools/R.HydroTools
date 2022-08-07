@@ -57,7 +57,7 @@ Las Curvas de Duración de Caudal o FDC (Flow Duration Curve) son utilizadas en 
 | 2021.11.04  | Separación de datos en hoja independiente para opciones de filtrado. Graficación de datos filtrados para comparación de series de datos medidos y simulados. Hoja Setup con títulos dinámicos para gráficas de la herramienta. Gráfico de matriz de dispersión de valores medidos vs. calculados. | [rcfdtools](https://github.com/rcfdtools)  |   4   |
 | 2021.11.02  | Actualización general de análisis, gráficas y formato. Inclusión de columna para registro de fechas. Inclusión de tabla y gráfica dinámica.                                                                                                                                                       | [rcfdtools](https://github.com/rcfdtools)  |   6   |
 
-R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio.
+_R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 

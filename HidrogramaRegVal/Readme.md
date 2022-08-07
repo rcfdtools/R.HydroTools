@@ -61,8 +61,7 @@ Este libro de cálculo es utilizado para registrar y validar los pulsos obtenido
 | 2021.10.11  | Inclusión de regresión logarítmica para la estimación de pulsos para periodos de retorno superiores a los registrados por factor Trn / Tr100. Ejemplo en hoja Hidrograma4a. | [rcfdtools](https://github.com/rcfdtools)  |   4   |
 | 2014.09.06  | Versión inicial.                                                                                                                                                            | [rcfdtools](https://github.com/rcfdtools)  |  12   |
 
-
-R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio.
+_R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 

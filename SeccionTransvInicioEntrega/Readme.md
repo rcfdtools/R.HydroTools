@@ -30,8 +30,7 @@ Para el correcto cálculo del área hidráulica y perímetro mojado, la línea q
 | 2021.10.16  | Inclusión de coordenadas de localización de secciones de inicio y entrega en intersección con red de drenaje. Inclusión de selectores de estación inicial y final para estimación del ancho superficial T. Inclusión de localización geográfica e hipervinculación para visualización en Google Maps. Estimación de largo del valle recto sin puntos de cambio de dirección. Estimación del factor de sinuosidad característico Fs. Actualización general de gráficas. | [rcfdtools](https://github.com/rcfdtools)  |   3   |
 | 2016.05.20  | Versión inicial.                                                                                                                                                                                                                                                                                                                                                                                                                                                       | [rcfdtools](https://github.com/rcfdtools)  |   6   |
 
-
-R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio.
+_R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 

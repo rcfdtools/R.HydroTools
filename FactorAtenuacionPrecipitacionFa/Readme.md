@@ -45,8 +45,7 @@ Consulta la compilación bibliográfica de factores de atenuación [aquí](https
 | 2021.10.13  | Actualización general de formato. Inclusión de gráfica independiente con curvas potenciales para factores de atenuación California Montañoso - USA. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
 | 2014.09.05  | Versión inicial.                                                                                                                                    | [rcfdtools](https://github.com/rcfdtools)  |  12   |
 
-
-R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio.
+_R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
