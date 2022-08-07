@@ -9,6 +9,19 @@ Existen diversas metodologías para estimar la curvatura de suavizado del eje re
 * [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) 2013 o superior
 
 
+### Consideraciones generales para el trazado del eje de valle
+
+Generalmente, el alineamiento, ancho y suavizado del valle está condicionado por múltiples restricciones.
+
+| Condición o restricción   | Descripción                                                                                                                                                                                                                                                               |
+|:--------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Topográfica               | Zonas con bajos que impiden que el canal se trace en corte o zonas que hidráulicamente drenan hacia otras cuencas.                                                                                                                                                        |
+| Geotécnica                | Fallas, afloramientos rocosos, acuíferos.                                                                                                                                                                                                                                 |
+| Eco-ambiental             | Fauna y flora nativa en suelos de protección. Corredor para el transito de especies endémicas protegidas.                                                                                                                                                                 |
+| Infraestructura existente | Instalaciones, vías, canales, tanques, bocatomas, asentamientos humanos.                                                                                                                                                                                                  |
+| Territorial               | Incompatibilidad con los usos del suelo definidos en los POT, rondas de protección, zonas declararas de interés histórico. Resguardos indígenas y asentamientos de comunidades protegidas. Zonas agropecuarias productivas con puntos de agua superficial concesionada. |
+
+
 ### Métodos incluidos
 
 | Método                                                                                          | Descripción                                                                                                                                                                                                                                                                                                                                                   |
