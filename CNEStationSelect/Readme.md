@@ -26,7 +26,7 @@ El desarrollo de proyectos hidrológicos requiere del estudio de la red de estac
 ### Requerimientos
 
 * [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) 2013 o superior
-* Análisis geográfico de la zona geográfica del proyecto para la delimitación de la zona de estudio u la obtención del límite espacial. [:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation)
+* Análisis geográfico de la zona geográfica del proyecto para la obtención del límite espacial. [:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation)
 
 
 ### Atributos que componen el catálogo nacional de estaciones
@@ -155,9 +155,7 @@ En la siguiente tabla preliminar desarrollada por [rcfdtools](https://github.com
 
 1. Para obtener la versión actualizada del catálogo nacional, ingresar al portal _http://dhime.ideam.gov.co/atencionciudadano/_, aceptar los términos y condiciones para descargar información del Banco de Datos del IDEAM, dar clic en la pestaña de recursos y descargar el Catálogo nacional de estaciones del IDEAM y el Catálogo nacional de otras entidades en formato Microsoft Excel. Opcionalmente, el catálogo puede ser descargado desde el portal del IDEAM desde [Solicitud de Información](http://www.ideam.gov.co/solicitud-de-informacion).
 
-2. En la hoja _CNEStationSelect_ del libro [R.HydroTools.CNEStationSelect.xlsx](), copie y peque los registros de las estaciones del IDEAM y de otra entidades en las celdas con texto azul en el siguiente orden: 
-
-CODIGO, nombre, CATEGORIA, TECNOLOGIA, ESTADO, FECHA_INSTALACION, altitud, latitud, longitud, DEPARTAMENTO, MUNICIPIO, AREA_OPERATIVA, AREA_HIDROGRAFICA, ZONA_HIDROGRAFICA, observacion, CORRIENTE, FECHA_SUSPENSION, SUBZONA_HIDROGRAFICA, ENTIDAD, subred.
+2. En la hoja _CNEStationSelect_ del libro [R.HydroTools.CNEStationSelect.xlsx](), copie y peque los registros de las estaciones del IDEAM y de otra entidades en las celdas con texto azul en el siguiente orden: CODIGO, nombre, CATEGORIA, TECNOLOGIA, ESTADO, FECHA_INSTALACION, altitud, latitud, longitud, DEPARTAMENTO, MUNICIPIO, AREA_OPERATIVA, AREA_HIDROGRAFICA, ZONA_HIDROGRAFICA, observacion, CORRIENTE, FECHA_SUSPENSION, SUBZONA_HIDROGRAFICA, ENTIDAD, subred.
 
 3. En la hoja _CNEStationSelect_, registre la versión o fecha de descarga del catálogo, defina la fecha inicial y final de la ventana de tiempo establecida para el proyecto, defina los límites del área geográfica inmediata a la zona de estudio y defina la relación de aferencia para crear un buffer al rededor de la zona de estudio.
 
@@ -167,15 +165,13 @@ CODIGO, nombre, CATEGORIA, TECNOLOGIA, ESTADO, FECHA_INSTALACION, altitud, latit
 
 6. Desde el campo `L. Dias TW`, filtre las longitudes en días mayores o iguales a la longitud mínima que se debe considerar para seleccionar o no una estación, p. ej. para datos de precipitación puede definir que al menos la longitud hipotética debe ser de 10 años correspondientes a 3650 días, para datos de temperatura y evaporación puede utilizar 5 o más años correspondientes a 1825 días.
 
-7. Luego de realizado los filtros, copie los registros de las siguientes columnas:
-
-Inicio TW, Fin TW, En polígono, L. Dias, L. Dias TW, Homg. TW, CODIGO, nombre, CATEGORIA, TECNOLOGIA, ESTADO, FECHA_INSTALACION, altitud, latitud, longitud, DEPARTAMENTO, MUNICIPIO, AREA_OPERATIVA, AREA_HIDROGRAFICA, ZONA_HIDROGRAFICA, observacion, CORRIENTE, FECHA_SUSPENSION, SUBZONA_HIDROGRAFICA, ENTIDAD, subred.
+7. Luego de realizado los filtros, copie los registros de las siguientes columnas: Inicio TW, Fin TW, En polígono, L. Dias, L. Dias TW, Homg. TW, CODIGO, nombre, CATEGORIA, TECNOLOGIA, ESTADO, FECHA_INSTALACION, altitud, latitud, longitud, DEPARTAMENTO, MUNICIPIO, AREA_OPERATIVA, AREA_HIDROGRAFICA, ZONA_HIDROGRAFICA, observacion, CORRIENTE, FECHA_SUSPENSION, SUBZONA_HIDROGRAFICA, ENTIDAD, subred.
 
 8. En la hoja _Resoults_, pegue los registros de las estaciones obtenidas.
 
 9. En las hojas _ChartFull_ y _ChartTW_, analice visualmente los diagramas de barras de Gantt y ajuste los valores iniciales y finales de las fechas y el número de estaciones a representar que deberá coincidir con el número de estaciones registradas en la hoja _Resoults_. 
 
-Con los registros obtenidos para el parámetro requerido dentro de la zona de estudio, podrá ahora iniciar el proceso de descarga de las series de las estaciones desde la plataforma http://dhime.ideam.gov.co 
+> Con los registros obtenidos con esta herramienta y para el parámetro requerido dentro de la zona de estudio, podrá ahora iniciar el proceso de descarga de las series de las estaciones desde la plataforma http://dhime.ideam.gov.co 
 
 
 ### Ilustraciones
@@ -184,8 +180,6 @@ Con los registros obtenidos para el parámetro requerido dentro de la zona de es
 ![R.HydroTools](https://github.com/rcfdtools/R.HydroTools/blob/main/CNEStationSelect/Screenshot/Screenshot2.png)
 ![R.HydroTools](https://github.com/rcfdtools/R.HydroTools/blob/main/CNEStationSelect/Screenshot/Screenshot3.png)
 ![R.HydroTools](https://github.com/rcfdtools/R.HydroTools/blob/main/CNEStationSelect/Screenshot/Screenshot4.png)
-
-
 
 
 ### Referencias
@@ -198,14 +192,14 @@ Con los registros obtenidos para el parámetro requerido dentro de la zona de es
 
 | Versión    | Descripción                                                                          | Autor                                      | Horas |
 |------------|:-------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.08 | Actualización general de documentación.                                              | [rcfdtools](https://github.com/rcfdtools)  |   1   |
-| 2022.07.06 | Incorporación de límites zona de estudio, relación de aferencia.                     | [rcfdtools](https://github.com/rcfdtools)  |   3   |
-| 2021.10.05 | Creación de versión preliminar con gráficos de Gantt para análisis de superposición. | [rcfdtools](https://github.com/rcfdtools)  |   4   |
+| 2022.08.07 | Actualización general de documentación.                                              | [rcfdtools](https://github.com/rcfdtools)  |   1   |
+| 2022.08.06 | Incorporación de límites zona de estudio, relación de aferencia.                     | [rcfdtools](https://github.com/rcfdtools)  |   3   |
+| 2022.08.05 | Creación de versión preliminar con gráficos de Gantt para análisis de superposición. | [rcfdtools](https://github.com/rcfdtools)  |   4   |
 
 
 _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.HydroTools/discussions/999) |
-|------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.HydroTools/discussions/26) |
+|------------------------------------------------------------------|------------------------------------------------------------------------------|
