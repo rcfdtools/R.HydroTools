@@ -1,5 +1,5 @@
 ## Catálogo nacional de estaciones de Colombia - CNE, análisis de longitud hipotética de series y selección de estaciones para estudios hidrológicos
-Keywords: `CNE` `IDEAM` `Study zone`   
+Keywords: `CNE` `IDEAM` `Study zone` `Gantt chart`  
 
 El desarrollo de proyectos hidrológicos requiere del estudio de la red de estaciones terrestres para determinar su localización y selección a partir de la evaluación de la longitud hipotética de las series disponibles, en las que se considera que las estaciones deben disponer de registros continuos para los parámetros asociados a su categoría desde su fecha de instalación o puesta en funcionamiento y hasta su fecha de suspensión o hasta la fecha actual para estaciones que continúan en operación.
 
@@ -159,10 +159,23 @@ En la siguiente tabla preliminar desarrollada por [rcfdtools](https://github.com
 
 CODIGO, nombre, CATEGORIA, TECNOLOGIA, ESTADO, FECHA_INSTALACION, altitud, latitud, longitud, DEPARTAMENTO, MUNICIPIO, AREA_OPERATIVA, AREA_HIDROGRAFICA, ZONA_HIDROGRAFICA, observacion, CORRIENTE, FECHA_SUSPENSION, SUBZONA_HIDROGRAFICA, ENTIDAD, subred.
 
-3. En la hoja _CNEStationSelect_, registre la versión 
+3. En la hoja _CNEStationSelect_, registre la versión o fecha de descarga del catálogo, defina la fecha inicial y final de la ventana de tiempo establecida para el proyecto, defina los límites del área geográfica inmediata a la zona de estudio y defina la relación de aferencia para crear un buffer al rededor de la zona de estudio.
 
+4. Realice el filtro por categoría de estaciones a través del campo `CATEGORIA` para el parámetro a estudiar, p. ej. para análisis de temperatura, filtre por categoría: Agrometeorológica, Climática Ordinaria, Climática Principal, Pluviográfica, Pluviométrica, Sinóptica Principal y Sinóptica Secundaria.
 
- 
+5. Desde el campo `En polígono`, filtre todas aquellas estaciones que están dentro de la zona de estudio seleccionando los valores iguales a 1.
+
+6. Desde el campo `L. Dias TW`, filtre las longitudes en días mayores o iguales a la longitud mínima que se debe considerar para seleccionar o no una estación, p. ej. para datos de precipitación puede definir que al menos la longitud hipotética debe ser de 10 años correspondientes a 3650 días, para datos de temperatura y evaporación puede utilizar 5 o más años correspondientes a 1825 días.
+
+7. Luego de realizado los filtros, copie los registros de las siguientes columnas:
+
+Inicio TW, Fin TW, En polígono, L. Dias, L. Dias TW, Homg. TW, CODIGO, nombre, CATEGORIA, TECNOLOGIA, ESTADO, FECHA_INSTALACION, altitud, latitud, longitud, DEPARTAMENTO, MUNICIPIO, AREA_OPERATIVA, AREA_HIDROGRAFICA, ZONA_HIDROGRAFICA, observacion, CORRIENTE, FECHA_SUSPENSION, SUBZONA_HIDROGRAFICA, ENTIDAD, subred.
+
+8. En la hoja _Resoults_, pegue los registros de las estaciones obtenidas.
+
+9. En las hojas _ChartFull_ y _ChartTW_, analice visualmente los diagramas de barras de Gantt y ajuste los valores iniciales y finales de las fechas y el número de estaciones a representar que deberá coincidir con el número de estaciones registradas en la hoja _Resoults_. 
+
+Con los registros obtenidos para el parámetro requerido dentro de la zona de estudio, podrá ahora iniciar el proceso de descarga de las series de las estaciones desde la plataforma http://dhime.ideam.gov.co 
 
 
 ### Ilustraciones
