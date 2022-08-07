@@ -20,7 +20,7 @@ El desarrollo de proyectos hidrológicos requiere del estudio de la red de estac
 
 > En la cabecera del análisis se incluye una tabla de referencia de las categorías requeridas para obtener datos de diferentes parámetros. El filtro de categoría se debe realizar manualmente.
 > 
-> En la versión actual, el número de registro y las posiciones temporales deben ser ajustados manualmente por el usuario.
+> En la versión actual de las gráficas, el número de registros o estaciones a representar y las posiciones temporales deben ser ajustados manualmente por el usuario.
 
 
 ### Requerimientos
@@ -171,7 +171,7 @@ En la siguiente tabla preliminar desarrollada por [rcfdtools](https://github.com
 
 9. En las hojas _ChartFull_ y _ChartTW_, analice visualmente los diagramas de barras de Gantt y ajuste los valores iniciales y finales de las fechas y el número de estaciones a representar que deberá coincidir con el número de estaciones registradas en la hoja _Resoults_. 
 
-> Con los registros obtenidos con esta herramienta y para el parámetro requerido dentro de la zona de estudio, podrá ahora iniciar el proceso de descarga de las series de las estaciones desde la plataforma http://dhime.ideam.gov.co 
+> Con los registros obtenidos con esta herramienta y para el parámetro requerido dentro de la zona de estudio, podrá ahora iniciar el proceso de descarga de las series de las estaciones válidas para su proyecto desde la plataforma http://dhime.ideam.gov.co 
 
 
 ### Ilustraciones
