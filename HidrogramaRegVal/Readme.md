@@ -6,10 +6,10 @@ Este libro de cálculo es utilizado para registrar y validar los pulsos obtenido
 
 ### Consideraciones para estimación de caudales pico para Tr > 100 años 
 
-* Para la estimación de caudales pico para periodos de retorno superiores a 100 años, puede ser utilizada la regresión con tendencia logarítmica a partir de los periodos de retorno de 2.33, 5, 10, 25, 50 y 100 años. 
+* Para la estimación aproximada de caudales pico para periodos de retorno superiores a 100 años, puede utilizar la regresión con tendencia logarítmica a partir de los caudales obtenidos para los periodos de retorno de 2.33, 5, 10, 25, 50 y 100 años. 
 * El tiempo al pico se va reduciendo a medida que se aumenta el periodo de retorno.
 * Para periodos de retorno altos, el tiempo al pico presenta poca variabilidad.
-* En caso de disponer de lluvias extremas para el periodo requerido, p. ej. Tr = 250 años, es recomendable generar hietogramas y realizar el tránsito hidrológico. 
+* En caso de disponer de lluvias extremas para el periodo de retorno requerido, p. ej. Tr = 250 años, es recomendable generar hietogramas y realizar el tránsito hidrológico. 
 
 
 ### Requerimientos
@@ -39,7 +39,7 @@ Este libro de cálculo es utilizado para registrar y validar los pulsos obtenido
 
 ### Lineamientos generales para modelos hidrológicos en HEC-HMS
 
-1. Para importación de archivos .csv en HEC-DSS 3.2.3 o superior, es necesario saltar y no importar el último registro de la tabla en el proceso de extracción - transformación y cargue (ETL). Los archivos de hietogramas están compuestos de múltiples registros, de los cuales 5 corresponden a cabeceras de importación de unidades y partes A,B,C,F, los demás registros corresponden a datos, excepto el último registro que corresponde al salto de línea final del archivo .csv que no debe ser importado. Para saltar este registro, de clic derecho en el número de registro (p. ej. el número 295) y seleccione la opción Skip, para finalizar de clic en Import.
+1. Para importación de archivos .csv en HEC-DSS 3.2.3 o superior, es necesario saltar y no importar el último registro de la tabla en el proceso de extracción - transformación y cargue (ETL). Los archivos de hietogramas están compuestos de múltiples registros, de los cuales 5 corresponden a cabeceras de importación de unidades y partes A, B, C, F, los demás registros corresponden a datos, excepto el último registro que corresponde al salto de línea final del archivo .csv que no debe ser importado. Para saltar este registro, de clic derecho en el número de registro (p. ej. el número 295) y seleccione la opción Skip, para finalizar de clic en Import.
 2. En subcuencas laterales que no tienen subdivisiones o tránsitos hidrológicos se toma el hidrograma obtenido de la transformación lluvia - escorrentía y para subcuencas laterales con subdivisiones y tránsitos, se toma el hidrograma del último tramo en tránsito de la subcuenca lateral más el hidrograma de la última subcuenca que corresponde a la transformación lluvia escorrentía de la cuenca del tramo en tránsito indicado.
 3. En subcuencas laterales inmediatas al punto de entrega sobre un nuevo eje del valle, se debe descontar para cada pulso y proporcionalmente en función del área, la fracción correspondiente remanente luego del punto de entrega. Aplica tanto para subcuencas únicas laterales o subcuencas laterales con tramos en tránsito y su correspondiente subcuenca.
 4. Para cuencas laterales se debe estimar un factor de atenuación de toda el área que aporta hasta el punto de descarga sobre el nuevo eje de valle; se realiza la modelación hidrológica con esos factores y se obtienen los hidrogramas. Para esas mismas cuencas también es necesario extraer los hidrogramas pero con el factor de atenuación del punto combinado. Los primeros hidrogramas se utilizan para diseñar las estructuras de entrega, los segundos hidrogramas para la modelación hidráulica conjunta del cauce principal con entregas laterales. 
@@ -67,6 +67,6 @@ _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
 | [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.HydroTools/discussions/19) |
-|------------------------------------------------------------------|-------------------------------------------------------------------------------|
+|------------------------------------------------------------------|------------------------------------------------------------------------------|
 
 [^1]: http://ponce.sdsu.edu/return_period.html
