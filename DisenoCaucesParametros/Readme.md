@@ -89,11 +89,12 @@ Este libro de cálculo contiene lineamientos generales, parámetros para diseño
 
 ### Control de versiones
 
-| Versión     | Descripción                                                                                                         | Autor                                      | Horas |
-|-------------|:--------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.25  | Actualización general de documentación.                                                                             | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
-| 2021.10.13  | Actualización e inclusión de referencias aportadas por grupo UECIJG HCMC 2021-02. Actualización general de formato. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
-| 2014.01.11  | Versión inicial.                                                                                                    | [rcfdtools](https://github.com/rcfdtools)  |  18   |
+| Versión    | Descripción                                                                                                         | Autor                                      | Horas |
+|------------|:--------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.08.14 | Actualización libro de parámetros con inclusión de referencias y correcciones curso HCMC 2020-2.                    | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2022.07.25 | Actualización general de documentación.                                                                             | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
+| 2021.10.13 | Actualización e inclusión de referencias aportadas por grupo UECIJG HCMC 2021-02. Actualización general de formato. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2014.01.11 | Versión inicial.                                                                                                    | [rcfdtools](https://github.com/rcfdtools)  |  18   |
 
 _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio._
 
