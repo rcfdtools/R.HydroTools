@@ -11,14 +11,10 @@ Reporta referencias adicionales a través de este [hilo de discusión](https://g
 | Dolores, M., Martín, M., Castillo, Luis G. (2009). Modelización hidrológica e hidráulica y sistemas de captación en cauces efímeros. España: Universidad Politécnica de Cartagena.<br>[ModelizacionHidrologicaHidraulicaSistemasCaptacionCaucesEfimeros2009.pdf](https://www.researchgate.net/publication/228822195_Modelizacion_hidrologica_e_hidraulica_y_sistemas_de_captacion_en_cauces_efimeros)        | [AmaliaAS](https://github.com/AmaliaAS) |
 | Martín Vide, Juan P. (2006). Ingeniería de Ríos.<br>[Google Book.](https://books.google.com.co/books?hl=es&lr=&id=DIDodO5iHEYC&oi=fnd&pg=PT6&dq=DESVIACI%C3%93N+DEL+CAUCE+DEL+R%C3%8DO+por+medio+de+canales)                                                                                                                                                                                                 | [AmaliaAS](https://github.com/AmaliaAS) |
 | Pinzón Melo, Juan C., Suárez Blanco, Juan C. (2011). Determinación de crecientes extremas en las cuencas de alta montaña del Río Guadalupe y la Quebrada Piedras Blancas mediante la aplicación del Método Gradex. Colombia: Pontificia Universidad Javeriana. <br>[UJaverianaDeterminacionCrecientesExtremasMetodoGradex.pdf](https://repository.javeriana.edu.co/bitstream/handle/10554/7427/tesis518.pdf) | [AmaliaAS](https://github.com/AmaliaAS) |
+| Food and Agriculture Organization of the United Nations. Estructuras de conducción de agua. https://www.fao.org/<br>[FAOEstructurasConduccionAgua.pdf](https://www.fao.org/fishery/docs/CDrom/FAO_Training/FAO_Training/General/x6708s/x6708s08.htm)<br>Notas: Velocidades medias máximas y coeficientes de rugosidad.                                                                                       | [AmaliaAS](https://github.com/AmaliaAS) |
+
 
 <br>
-
-
-
-; 
-
-
 
 > Nos encontramos en proceso de adaptación de nuestras referencias a las normas APA, encuentra más información [aquí](https://normas-apa.org/referencias/).
 > 
