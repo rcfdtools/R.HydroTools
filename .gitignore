@@ -8,7 +8,7 @@
 # General exclusions
 #.gitignore
 .git/
-.github/
+#.github/
 .idea/
 venv/
 
