@@ -17,7 +17,7 @@ Este libro de cálculo es utilizado para registrar y validar los pulsos obtenido
 * [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) 2013 o superior
 
 
-### Guidelines for the selection of return period [^1]
+### Guidelines for the selection of return period[^1]
 
 | Type of project or feature                       | Tr - return period, yr  |
 |:-------------------------------------------------|:------------------------|
@@ -35,6 +35,33 @@ Este libro de cálculo es utilizado para registrar y validar los pulsos obtenido
 | Freeboard hydrograph [for a class (c) dam]       | 10,000 (PMP)            |            
 
 > PMP: precipitación máxima probable.
+
+
+### Internal HEC-DSS data type label for different types of time-series data[^2] 
+
+| Time-Series           | Type     | Description                                                                                                                                                 |
+|-----------------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Precipitation         | PER-CUM  | The incremental precipitation during each time interval. The C-part should be "PRECIP-INC".                                                                 |
+| Precipitation         | INST-CUM | The cumulative precipitation at the end of each interval. The C-part should be "PRECIP-CUM".                                                                |
+| Discharge             | PER-AVER | The average flow rate during each time interval, usually for time steps of 24 hours or longer. The C-part should be "FLOW".                                 |
+| Discharge             | INST-VAL | The instantaneous flow rate at the end of each time interval. The C-part should be "FLOW".                                                                  |
+| Stage                 | PER-AVER | The average elevation during each interval, usually time steps of 24 hours or longer. The C-part should be "STAGE".                                         |
+| Stage                 | INST-VAL | The instantaneous elevation at the end of each time interval. The C-part should be "STAGE".                                                                 |
+| Temperature           | PER-AVER | The average temperature, in degrees, during each time interval. The C-part should be "TEMPERATURE".                                                         |
+| Temperature           | INST-VAL | The instantaneous temperature, in degrees, at the end of each time interval. The C-part should be "TEMPERATURE".                                            |
+| Radiation             | PER-AVER | The average radiation, in power per area, occurring during each time interval. The C-part should be "RADIATION".                                            |
+| Windspeed             | INST-VAL | The instantaneous windspeed at the end of each time interval. The C-part should be "WINDSPEED".                                                             |
+| Air pressure          | INST-VAL | The instantaneous air pressure at the end of each time interval. The C-part should be "PRESSURE".                                                           |
+| Humidity              | INST-VAL | The instantaneous humidity at the end of each time interval. The C-part should be "HUMIDITY".                                                               |
+| Altitude              | INST-VAL | The instantaneous altitude at the end of each time interval. The C-part should be "ALTITUDE".                                                               |
+| Crop Coefficient      | INST-VAL | The instantaneous crop coefficient, as a dimensionless decimal number, occurring at the end of each time interval. The C-part should be "CROP COEFFICIENT". |
+| Snow Water Equivalent | INST-VAL | The instantaneous snow water equivalent, as a depth at the end of each time interval. The C-part should be "SWE".                                           |
+| Sediment Load         | PER-CUM  | The total sediment load during each time interval. The C-part should be "LOAD".                                                                             |
+| Concentration         | INST-VAL | The instantaneous concentration at the end of each time interval. The C-part should be "CONC".                                                              |
+| Percent               | INST-VAL | The instantaneous percent at the end of each time interval. The C-part should be "PERCENT".                                                                 |
+| Evapotranspiration    | PER-CUM  | The incremental evapo-transpiration during each time interval. The C-part should be "ET".                                                                   |
+| Sunshine              | PER-AVER | The average sunshine during each time interval. The C-part should be "SUNSHINE HOURS".                                                                      |
+
 
 
 ### Lineamientos generales para modelos hidrológicos en HEC-HMS
@@ -70,3 +97,4 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 |------------------------------------------------------------------|------------------------------------------------------------------------------|
 
 [^1]: http://ponce.sdsu.edu/return_period.html
+[^2]: 
