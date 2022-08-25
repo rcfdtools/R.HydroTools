@@ -22,4 +22,4 @@ Reporta referencias adicionales a través de este [hilo de discusión](https://g
 
 > Nos encontramos en proceso de adaptación de nuestras referencias a las normas APA, encuentra más información [aquí](https://normas-apa.org/referencias/).
 > 
-> Referenciar con: Información del autor o autores. (Fecha). Título. Fuente. 
+> Referenciar como: información del autor o autores. (Fecha). Título. Fuente. 
