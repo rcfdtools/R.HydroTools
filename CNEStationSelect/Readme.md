@@ -186,6 +186,7 @@ En la siguiente tabla preliminar desarrollada por [rcfdtools](https://github.com
 
 * http://dhime.ideam.gov.co/atencionciudadano/
 * http://www.ideam.gov.co/solicitud-de-informacion
+* [Cómo crear un DIAGRAMA de GANTT en Excel - Cronograma usando los gráficos, por Saber Programas](https://www.youtube.com/watch?v=chR6kx4btDQ)
 
 
 ### Control de versiones
