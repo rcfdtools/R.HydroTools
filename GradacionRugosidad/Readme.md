@@ -87,6 +87,7 @@ Existen múltiples referencias de valores típicos de rugosidades n de Manning p
 * Open Channel Hydraulics, 1959. Chow, Ven Te.
 * http://bdigital.unal.edu.co/12697/60/3353962.2005.Parte%2011.pdf
 * https://pubs.usgs.gov/wsp/2339/report.pdf
+* https://www.fsl.orst.edu/geowater/FX3/help/8_Hydraulic_Reference/Mannings_n_Tables.htm
 
 
 ### Control de versiones
