@@ -6,11 +6,9 @@
 # Large files over 100MB have be compress in 95MB file parts.
 
 # General exclusions
-#.gitignore
-.git/
-#.github/
 .idea/
-venv/
+.git/
+.venv/
 
 # Large files exclusions
 DisenoEstructuraContraccionExpansionSubcritico/MDT/TIN/
