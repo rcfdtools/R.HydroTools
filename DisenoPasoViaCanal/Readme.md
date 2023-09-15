@@ -36,7 +36,7 @@ Dimensionar la geometría de sección requerida para transportar el caudal de di
 4. Con el comando _Sweep_, seleccione la circunferencia, de enter y luego el eje del tubo.
 5. Desde el menú _Visualize_, active la vista _Conceptual_.
 6. Ejecute el comando _SolidEdit_, seleccione _Body_, _Shell_, seleccione el sólido desde la parte exterior del tubo, luego la cara frontal, luego la cara posterior y de Enter, ingrese el espesor de la tubería, p.ej., 0.1m y de Enter.
-7. Utilizando el comando Copy, copie varias veces las tuberías sobre los ejes 3D.
+7. Utilizando el comando Copy, replique varias veces las tuberías sobre los ejes 3D.
 
 ### Descripción de archivos y carpetas
 
