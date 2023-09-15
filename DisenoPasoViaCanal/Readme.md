@@ -29,13 +29,13 @@ Dimensionar la geometría de sección requerida para transportar el caudal de di
 
 ### Procedimiento tuberías 3D Autocad
 
-0. Abrir archivo R.HydroTools\DisenoPasoViaCanal\CAD\R.HydroTools.DisenoPasoViaLineaCAD.dwg y guardar como R.HydroTools.DisenoPasoViaLineaCAD3D.dwg.
+0. Abrir archivo _R.HydroTools\DisenoPasoViaCanal\CAD\R.HydroTools.DisenoPasoViaLineaCAD.dwg_ y guardar como _R.HydroTools.DisenoPasoViaLineaCAD3D.dwg_.
 1. Desde el _Workspace Switchting_ ubicado en la parte inferior de la pantalla (ícono setup o piñon), seleccionar 3D Basic.
 2. Active la vista de navegación con el comando _NAVBAR_ y desde el Orbit rote la vista 3D.
 3. Para las tuberías principales cree circunferencias con díametro igual al definido en el diseño del paso de vía, p.ej., 2 metros.
 4. Con el comando _Sweep_, seleccione la circunferencia, de enter y luego el eje del tubo.
 5. Desde el menú _Visualize_, active la vista _Conceptual_.
-6. Ejecute el comando _SolidEdit_, seleccione _Body_, _Shell_, seleccione el sólido desde la parte exterior del tubo, luego la cara frontal, luego la cara posterior y de Enter, ingrese el espesor de la tubería, p.ej., 0.m y de Enter.
+6. Ejecute el comando _SolidEdit_, seleccione _Body_, _Shell_, seleccione el sólido desde la parte exterior del tubo, luego la cara frontal, luego la cara posterior y de Enter, ingrese el espesor de la tubería, p.ej., 0.1m y de Enter.
 7. Utilizando el comando Copy, copie varias veces las tuberías sobre los ejes 3D.
 
 ### Descripción de archivos y carpetas
