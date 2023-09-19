@@ -3,23 +3,22 @@ Keywords: `Hydraulics` `Hydraulic design` `Culvert design` `ModelBuilder` `Inver
 
 Dimensionar la geometría de sección requerida para transportar el caudal de diseño de creciente bajo pasos de vía usando área equivalente. Es recomendable ubicar los pasos de vía en zonas de corte, en la que se disponga de una profundidad a la base del canal dominante mayor a la profundidad hidráulica de diseño; de este modo se podrán utilizar tuberías de diámetros superiores garantizando el tránsito hidráulico a descarga libre. 
 
-
 ### Requerimientos
 
 * [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) 2013 o superior
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
 * [Autodesk Autocad](https://www.autodesk.com/products/autocad/) (opcional)
 
-
 ### Funcionalidades
+
 * Resuelve el número de alcantarillas principales y secundarias requeridas a partir de los parámetros de entrada.
 * Grafica las secciones del canal y paso de vía con localización de alcantarillas obtenidas.
 * Crea la tabla de datos geográficos para la creación de nodos y líneas 3D de eje, clave y batea.
 * Resuelve la pendiente de las alcantarillas para modelos 1D en función de las secciones de referencia utilizadas para la localización.
 * Mediante la caja de herramientas ESRI ArcGIS for Desktop _R.HydroTools.DisenoPasoViaCanal.tbx_, crea los nodos y líneas 3D y exporta las líneas cota, eje y batea a Autocad.
 
-
 ### Procedimiento general
+
 0. Realizar el diseño geométrico e hidráulico vertical de la sección compuesta utilizando el módulo de diseño HD de HEC-RAS o el [Libro de diseño de R.HydroTools](https://github.com/rcfdtools/R.HydroTools/tree/main/DisenoGeometricoHidraulicoVertical).
 1. Realizar el diseño geométrico del paso de vía utilizando el libro _R.HydroTools.DisenoPasoViaCanal.xlsm_.
 2. Copiar todos los datos de la hoja GISCulvertPoint al libro de Excel _R.HydroTools.DisenoPasoViaCanalGIS.xls_.
@@ -28,6 +27,16 @@ Dimensionar la geometría de sección requerida para transportar el caudal de di
 5. Crear sólidos de las tuberías 3D en CIVIL3D o en Autocad usando Sweep y SolidEdit.
 6. Realizar el diseño de la expansión y la contracción utilizando el libro de diseño _R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.xlsm_ (HCMC0013).
 
+### Procedimiento tuberías 3D Autocad
+
+0. Abrir archivo _R.HydroTools\DisenoPasoViaCanal\CAD\R.HydroTools.DisenoPasoViaLineaCAD.dwg_ y guardar como _R.HydroTools.DisenoPasoViaLineaCAD3D.dwg_.
+1. Desde el _Workspace Switchting_ ubicado en la parte inferior de la pantalla (ícono setup o piñon), seleccionar 3D Basic.
+2. Active la vista de navegación con el comando _NAVBAR_ y desde el Orbit rote la vista 3D.
+3. Para las tuberías principales cree circunferencias con díametro igual al definido en el diseño del paso de vía, p.ej., 2 metros.
+4. Con el comando _Sweep_, seleccione la circunferencia, de enter y luego el eje del tubo.
+5. Desde el menú _Visualize_, active la vista _Conceptual_.
+6. Ejecute el comando _SolidEdit_, seleccione _Body_, _Shell_, seleccione el sólido desde la parte exterior del tubo, luego la cara frontal, luego la cara posterior y de Enter, ingrese el espesor de la tubería, p.ej., 0.1m y de Enter.
+7. Utilizando el comando Copy, replique varias veces las tuberías sobre los ejes 3D.
 
 ### Descripción de archivos y carpetas
 
