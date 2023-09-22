@@ -7,7 +7,7 @@ A partir de la estimación de los radios de curvatura característicos de los me
 * Longitud sinuosa del río, Lr.
 * Número de ondas sinuosas, n.
 * Longitud hidráulica de cada onda, Lb.
-* Longitud de aproximación entre ondas, La.
+* Longitud de aproximación entre ondas o entre-tangencia, La.
 * Número de subdivisiones en el eje del valle suavizado, Lc * (Lm/4).
 
 
