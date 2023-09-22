@@ -38,7 +38,7 @@ End Sub
 Sub FUNCIONOBJ_ALPHA_Rc_max()
     ' Calcular el valor del ángulo de radio de giro (Alpha)
     Mensaje = MsgBox("Utilice Solver para obtener alpha y Rc máximo", vbOKCancel, "R.HydroTools")
-    Application.SendKeys "%D"
+    Application.SendKeys "%a"
     Application.SendKeys "Y2"
 End Sub
 ```
