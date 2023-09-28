@@ -268,11 +268,12 @@ End Function
 
 ### Control de versiones
 
-| Versión     | Descripción                                            | Autor                                      | Horas |
-|-------------|:-------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.25  | Actualización general de documentación.                | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
-| 2021.10.19  | Actualización general de análisis, gráficas y formato. | [rcfdtools](https://github.com/rcfdtools)  |   4   |
-| 2016.08.14  | Versión inicial.                                       | [rcfdtools](https://github.com/rcfdtools)  |  22   |
+| Versión    | Descripción                                                                                                                                             | Autor                                      | Horas |
+|------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2023.09.27 | Inclusión de esquemas automáticos de perfiles de flujo (aporte por [juanrodace](https://github.com/juanrodace) y dibujo automático de sección circular. | [rcfdtools](https://github.com/rcfdtools)  |   3   |
+| 2022.07.25 | Actualización general de documentación.                                                                                                                 | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
+| 2021.10.19 | Actualización general de análisis, gráficas y formato.                                                                                                  | [rcfdtools](https://github.com/rcfdtools)  |   4   |
+| 2016.08.14 | Versión inicial.                                                                                                                                        | [rcfdtools](https://github.com/rcfdtools)  |  22   |
 
 _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio._
 
