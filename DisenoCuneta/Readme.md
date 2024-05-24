@@ -1,13 +1,13 @@
 ## Hydraulic ditch design & model
 
+> The recommended 2D area cell size has to be at least 2 times the DEM resolution.
+
 
 ### HDitchL20W10D1CSlp01SSlp02
 
 * DEM range (msnm): 97.02 to 99.98
 * DEM resolution (m): 0.1
 * Manning Roughness: concrete 0.018
-
-> The recommended 2D area cell size has to be at least 2 times the DEM resolution.
 
 
 ### HDitchL20W10D1CSlp001SSlp02

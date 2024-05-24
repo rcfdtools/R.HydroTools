@@ -5,16 +5,16 @@ Initial Storage Elev=Perimeter 1     ,0.05
 Boundary Location=                ,                ,        ,        ,                ,Perimeter 1     ,                ,US                              ,                                
 Interval=1SEC
 Flow Hydrograph= 100 
-       0   .0025   .0125   .0225   .0325   .0425   .0525   .0625   .0725   .0825
-   .0925   .1025   .1125   .1225   .1325   .1425   .1525   .1625   .1725   .1825
-   .1925   .2025   .2125   .2225   .2325   .2425     .25     .25     .25     .25
-     .25     .25     .25     .25     .25     .25     .25     .25     .25     .25
-     .25     .25     .25     .25     .25     .25     .25     .25     .25     .25
-     .25     .25     .25     .25     .25     .25     .25     .25     .25     .25
-     .25     .25     .25     .25     .25     .25     .25     .25     .25     .25
-     .25     .25     .25     .25     .25     .25     .25     .25     .25     .25
-     .25     .25     .25     .25     .25     .25     .25     .25     .25     .25
-     .25     .25     .25     .25     .25     .25     .25     .25     .25     .25
+       0     .01     .05     .09     .13     .17     .21     .25     .29     .33
+     .37     .41     .45     .49     .53     .57     .61     .65     .69     .73
+     .77     .81     .85     .89     .93     .97       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
 Stage Hydrograph TW Check=0
 Flow Hydrograph Slope= 0.1 
 DSS Path=
@@ -73,17 +73,17 @@ Met BC=Air Pressure|Constant Value=1013.2
 Met BC=Air Pressure|Constant Units=mb
 Met BC=Air Pressure|Point Interpolation=
 Met BC=Air Pressure|Gridded Source=DSS
-Non-Newtonian Method= 0 ,       
+Non-Newtonian Method= 0 ,        
 Non-Newtonian Constant Vol Conc=0
-Non-Newtonian Yield Method= 0 ,       
+Non-Newtonian Yield Method= 0 ,        
 Non-Newtonian Yield Coef=0, 0
 User Yeild=   0
-Non-Newtonian Sed Visc= 0 ,       
+Non-Newtonian Sed Visc= 0 ,        
 Non-Newtonian Obrian B=0
 User Viscosity=0
 User Viscosity Ratio=0
 Herschel-Bulkley Coef=0, 0
-Clastic Method= 0 ,       
+Clastic Method= 0 ,        
 Coulomb Phi=0
 Voellmy X=0
 Non-Newtonian Hindered FV= 0 
