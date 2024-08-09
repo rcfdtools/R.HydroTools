@@ -19,6 +19,8 @@ Este libro de cálculo es utilizado para registrar y validar los pulsos obtenido
 
 ### Guidelines for the selection of return period[^1]
 
+<div align="center">
+
 | Type of project or feature                       | Tr - return period, yr  |
 |:-------------------------------------------------|:------------------------|
 | Urban drainage [low risk] (up to 100 ha)         | 5 to 10                 |                 
@@ -34,7 +36,24 @@ Este libro de cálculo es utilizado para registrar y validar los pulsos obtenido
 | Emergency spillways (dams)                       | 100 to 10,000 (PMP)     |     
 | Freeboard hydrograph [for a class (c) dam]       | 10,000 (PMP)            |            
 
+</div>
+
 > PMP: precipitación máxima probable.
+
+
+### Periodos de retorno en normativa de Colombia - Suramérica
+
+| Norma                                      | Proyecto u obra                                                                                                                                                      | Tr - Periodo de retorno, años |
+|:-------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------|
+| RAS - Resolución 330 de 2017, Artículo 53  | Diseño de estructuras de captación de agua superficial - Altura de muros de protección y la estabilidad de las obras ante eventos de crecientes.                     | 100                           |
+| RAS - Resolución 330 de 2017, Artículo 135 | Diseño de colectores y canales de aguas lluvias - Tramos iniciales en zonas residenciales con áreas tributarias menores de 2 hectáreas.                              | 3                             |
+| RAS - Resolución 330 de 2017, Artículo 135 | Diseño de colectores y canales de aguas lluvias - Tramos iniciales en zonas comerciales o industriales, con áreas tributarias menores de 2 hectáreas.                | 5                             |
+| RAS - Resolución 330 de 2017, Artículo 135 | Diseño de colectores y canales de aguas lluvias - Tramos de alcantarillado con áreas tributarias entre 2 y 10 hectáreas.                                             | 5                             |
+| RAS - Resolución 330 de 2017, Artículo 135 | Diseño de colectores y canales de aguas lluvias - Tramos de alcantarillado con áreas tributarias mayores de 10 hectáreas.                                            | 10                            |
+| RAS - Resolución 330 de 2017, Artículo 135 | Diseño de colectores y canales de aguas lluvias - Canales abiertos que drenan áreas menores a 1000 hectáreas.                                                        | 50                            |
+| RAS - Resolución 330 de 2017, Artículo 135 | Diseño de colectores y canales de aguas lluvias - Canales abiertos en zonas planas y que drenan áreas mayores a 1000 hectáreas.                                      | 100                           |
+| RAS - Resolución 330 de 2017, Artículo 135 | Diseño de colectores y canales de aguas lluvias - Canales abiertos en zonas montañosas (alta velocidad) o a media ladera, que drenan áreas mayores a 1000 hectáreas. | 100                           |
+|                                            |                                                                                                                                                                      |                               |
 
 
 ### Internal HEC-DSS data type label for different types of time-series data[^2] 
