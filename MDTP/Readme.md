@@ -20,6 +20,9 @@ Para la creación de la Curva adimensional a utilizar en la construcción de los
 
 ![Screenshot1](Screenshot/Screenshot01.png)
 ![Screenshot2](Screenshot/Screenshot02.png)
+![Screenshot3](Screenshot/Screenshot03.png)
+![Screenshot4](Screenshot/Screenshot04.png)
+![Screenshot5](Screenshot/Screenshot05.png)
 
 
 ### Referencias
