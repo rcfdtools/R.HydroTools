@@ -18,8 +18,8 @@ Para la creación de la Curva adimensional a utilizar en la construcción de los
 
 ### Ilustraciones
 
-![Screenshot1](../Screenshot/Screenshot1.png)
-![Screenshot2](../Screenshot/Screenshot2.png)
+![Screenshot1](Screenshot/Screenshot1.png)
+![Screenshot2](Screenshot/Screenshot2.png)
 
 
 ### Referencias
