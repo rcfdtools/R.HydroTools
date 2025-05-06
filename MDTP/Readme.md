@@ -22,6 +22,10 @@ Para la creación de la Curva adimensional a utilizar en la construcción de los
 ![Screenshot2](../Screenshot/Screenshot2.png)
 
 
+### Referencias
+
+* https://blog.minitab.com/es/analisis-de-regresion-como-puedo-interpretar-el-r-cuadrado-y-evaluar-la-bondad-de-ajuste?gclid=CjwKCAjwg-DpBRBbEiwAEV1_-IN8yqAoE2jUF5f8wUpvvuoT4srtK6RwntiS4yhUl9jBKRPq7-HjfxoCrDsQAvD_BwE
+
 
 ### Control de versiones
 
