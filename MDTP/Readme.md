@@ -1,5 +1,5 @@
 ## Curva adimensional para construcción de hietogramas, MDTP Modelo de distribución temporal de la precipitación
-Keywords: `rain` `Stream gradient` `River slope`
+Keywords: `rain` `mdtp` `rain-time-pattern-distribution`
 
 Para la creación de la Curva adimensional a utilizar en la construcción de los hietogramas, analizaremos el comportamiento de las tormentas registradas en una estación pluviométrica particular, localizada en la zona de estudio y operada por un particular. La curva obtenida solo será válida para la zona de estudio.
 
