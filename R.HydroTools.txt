@@ -4,3 +4,105 @@ https://github.com/rcfdtools/R.HydroTools.git
 R.HydroTools.Wiki
 https://github.com/rcfdtools/R.HydroTools.wiki.git
 
+
+✓✕
+
+Python 2.7.14 QGIS 2.18.28 >>> C:\Program Files\QGIS 2.18\bin\python.exe (Do no setup over PyCharm because is not callable)
+
+Pending
+	
+	Tema 1
+		Crear video usando imagenes tif t matplotlib. Usar imagenes de https://github.com/rcfdtools/R.GISPython/tree/main/TableInterpolatedGrid
+	Tema 2 - Procesamiento de tablas geocodificadas
+		Actualización de elevaciones en el catálogo nacional de estaciones hidrometeorológicas del IDEAM - Colombia
+		Creación de capas geográficas en formato shapefile a partir de tablas geocodificadas
+		Creación de modelos de terreno a partir de tablas geocodificadas
+		Representación espacial de tablas geocodificadas con rasterio
+	Tema 3 - Fundamentos generales de SIG
+		Métodos de clasificación de capas geográficas en QGIS
+		Reproyección masiva de archivos de formas shapefile
+		NetCDF sample with ERA data https://xarray.pydata.org/en/stable/index.html
+		Seaborn, Plotly, Geoplotlib, Gleam, Ggplot, Bokeh and Missingo. 
+
+Repair syncing problems with VCS - Version control system
+Sync issues can be
+	1. Close PyCharm
+	2. From the directory project delete .idea and .git folders.
+	3. Open Pycharm and reopen the project in a new windows.
+	4. Open the main Readme.md file and make a simple change.
+	5. Check and Commit.
+	Done
+
+How to return to push commits and files in the .main
+	1. Close PyCharm
+	2. Rename the current folder of the project (don't delete the local files because you can lose your last modifications in the files) D:\R.GISPythonOld
+	3. Open PyCharm, select the current project, go to File and select Close current project. You can redirect automatically to the Welcome To Pycharm window.
+	4. In the Welcome To Pycharm window, select the option 'Get from VCS', select Version control: Git, type your URL: https://github.com/rcfdtools/R.GISPython.git, select the local drive D:\R.GISPython and hit in the 'Clone' button.
+	5. Check what files you update locally in the renamed folder D:\R.GISPythonOld and copy manually to the official folder D:\R.GISPython.
+	6. Open the main Readme.md file and make a simple change.
+	7. Check and Commit.
+	Done
+
+# Función para impresión de títulos con líneas v20211227
+def printTitle(titleText,titleType='Both'):
+    # titleType: Top, Bottom, Both
+    nc='-'
+    nVal=len(titleText)
+    if titleType == 'Both':
+        print(nc*nVal)
+        print(titleText)
+        print(nc * nVal)
+    elif titleType == 'Top':
+        print(nc*nVal)
+        print(titleText)
+    else:
+        print(titleText)
+        print(nc*nVal)
+
+Data sample with Pandas from https://www.codegrepper.com/
+df['date'] = pd.to_datetime(df['date'],format='%Y%m%d')
+df['year'] = pd.DatetimeIndex(df['date']).year
+df['month'] = pd.DatetimeIndex(df['date']).month
+#Exctract month and create a dedicated column df["Month"] from a 
+#column in datetime format df["Date"]
+df['Month'] = pd.DatetimeIndex(df['Date']).month
+
+git push -u origin main
+
+Git large file storage https://git-lfs.github.com/
+
+GitHub issues syncing
+https://stackoverflow.com/questions/59282476/error-rpc-failed-curl-92-http-2-stream-0-was-not-closed-cleanly-protocol-erro
+error: RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: CANCEL (err 8)
+Solition 1 (doesn't work with 2GB files for sync>>> git config --global http.postBuffer 524288000
+Solition 2 >>> 
+	$ git config --global http.version HTTP/1.1
+	After it push was ok and I have changed HTTP version to 2 again:
+	$ git config --global http.version HTTP/2
+Solition 3 >>> git config http.postBuffer 524288000
+
+
+
+# Install Rasterio over Python 3.10
+# https://rasterio.readthedocs.io/en/latest/topics/plotting.html
+
+import rasterio
+from matplotlib import pyplot
+src = rasterio.open("D:\R.GISPython\TableInterpolatedGrid\OutputGrid\GRDM039.tif")
+pyplot.imshow(src.read(1), cmap='pink')
+#<matplotlib.image.AxesImage object at 0x...>
+pyplot.show()
+
+
+Imprimir con relleno de ceros como cadena de texto
+def printfloat(n, decimals=3):
+    print(f"{n:.{decimals}f}")
+
+Imprimir con relleno de ceros en flotantes como cadena de texto
+printlog('| ' + str(iAux) + ' | ' + (f'{round(i[0],3):.3f}') + ' | ' + str(f'{round(i[1],3):.3f}') + ' | ' + str(f'{round(i[2],3):.3f}') + ' |')
+
+
+References
+
+	PEP 8 -- Style Guide for Python Code >>> https://www.python.org/dev/peps/pep-0008/
+
