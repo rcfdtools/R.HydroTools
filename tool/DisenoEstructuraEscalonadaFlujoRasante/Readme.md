@@ -1,5 +1,7 @@
+<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
+
 ## Estructura escalonada en sección rectangular a flujo rasante, método Iwao Ohtsu
-Keywords: `Hydraulics` `Hydraulic structure` `Hydraulic Stepped structure`
+Keywords: `hydraulics` `hydraulic-structure` `hydraulic-stepped-structure`
 
 El diseño y construcción de canales hidráulicos requiere frecuentemente del diseño de estructuras escalonadas, cuando existen diferencias importantes de nivel entre el fondo del cauce intervenido y el cauce o canal receptor.
 
@@ -34,12 +36,12 @@ El diseño y construcción de canales hidráulicos requiere frecuentemente del d
 
 | Archivo / Folder                                                                                                                                                                                                                            | Descripción                                                                                                                                    |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| [R.HydroTools.DisenoEstructuraEscalonadaFlujoRasanteGIS.mxd ](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/R.HydroTools.DisenoEstructuraEscalonadaFlujoRasanteGIS.mxd)                        | Mapa ArcMap 10.2.2 para visualización 2D de resultados de ejecución del Toolbox.                                                               |
-| [R.HydroTools.DisenoEstructuraEscalonadaFlujoRasanteGIS.sxd ](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/R.HydroTools.DisenoEstructuraEscalonadaFlujoRasanteGIS.sxd)                        | Escena ArcScene 10.2.2 para visualización 3D de modelos de terreno y capas vectoriales de la estructura generados por el Toolbox.              |
-| [R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.xlsm ](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.xlsm)                            | Libro de diseño de la estructura.                                                                                                              |
-| [R.HydroTools.DisenoEstructuraEscalonadaFlujoRasanteFolderStructure.zip](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/R.HydroTools.DisenoEstructuraEscalonadaFlujoRasanteFolderStructure.zip) | Comprimido con estructura de directorios requerida en D:\ para la ejecución del Toolbox.                                                       | 
-| [R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.tbx](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.tbx)                               | Caja de herramientas ToolBox ESRI ArcGIS for Desktop con modelador de procesos para creación de archivos de formas 3D.                         |
-| [R.HydroTools.DisenoEstructuraEscalonadaFlujoRasanteGIS.xls](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/R.HydroTools.DisenoEstructuraEscalonadaFlujoRasanteGIS.xls)                         | Tabla geocodificada con localización de nodos 3D de la estructura. Requerido por el modelador de procesos geográficos contenido en el Toolbox. |
+| [R.HydroTools.DisenoEstructuraEscalonadaFlujoRasanteGIS.mxd ](R.HydroTools.DisenoEstructuraEscalonadaFlujoRasanteGIS.mxd)                        | Mapa ArcMap 10.2.2 para visualización 2D de resultados de ejecución del Toolbox.                                                               |
+| [R.HydroTools.DisenoEstructuraEscalonadaFlujoRasanteGIS.sxd ](R.HydroTools.DisenoEstructuraEscalonadaFlujoRasanteGIS.sxd)                        | Escena ArcScene 10.2.2 para visualización 3D de modelos de terreno y capas vectoriales de la estructura generados por el Toolbox.              |
+| [R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.xlsm ](R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.xlsm)                            | Libro de diseño de la estructura.                                                                                                              |
+| [R.HydroTools.DisenoEstructuraEscalonadaFlujoRasanteFolderStructure.zip](R.HydroTools.DisenoEstructuraEscalonadaFlujoRasanteFolderStructure.zip) | Comprimido con estructura de directorios requerida en D:\ para la ejecución del Toolbox.                                                       | 
+| [R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.tbx](R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.tbx)                               | Caja de herramientas ToolBox ESRI ArcGIS for Desktop con modelador de procesos para creación de archivos de formas 3D.                         |
+| [R.HydroTools.DisenoEstructuraEscalonadaFlujoRasanteGIS.xls](R.HydroTools.DisenoEstructuraEscalonadaFlujoRasanteGIS.xls)                         | Tabla geocodificada con localización de nodos 3D de la estructura. Requerido por el modelador de procesos geográficos contenido en el Toolbox. |
 | /MDT/                                                                                                                                                                                                                                       | Carpeta de volcado de modelos de terreno en formato vectorial TIN y ráster generado por el Toolbox.                                            |
 | /SHP/                                                                                                                                                                                                                                       | Carpeta de volcado de nodos y caras 3D del modelo de terreno vectorial en formato ESRI Shapefile.                                              |
 
@@ -112,18 +114,18 @@ End Sub
 
 ### Ilustraciones
 
-![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/Screenshot/Screenshot1.png)
-![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/Screenshot/Screenshot2.png)
-![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/Screenshot/Screenshot3.png)
-![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/Screenshot/Screenshot4.png)
-![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot5](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/Screenshot/Screenshot5.png)
-![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot6](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/Screenshot/Screenshot6.png)
-![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot7](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/Screenshot/Screenshot7.png)
-![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot8](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/Screenshot/Screenshot8.png)
-![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot9](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/Screenshot/Screenshot9.png)
-![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot10](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/Screenshot/Screenshot10.png)
-![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot11](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/Screenshot/Screenshot11.png)
-![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot12](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraEscalonadaFlujoRasante/Screenshot/Screenshot12.png)
+![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot1](Screenshot/Screenshot1.png)
+![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot2](Screenshot/Screenshot2.png)
+![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot3](Screenshot/Screenshot3.png)
+![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot4](Screenshot/Screenshot4.png)
+![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot5](Screenshot/Screenshot5.png)
+![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot6](Screenshot/Screenshot6.png)
+![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot7](Screenshot/Screenshot7.png)
+![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot8](Screenshot/Screenshot8.png)
+![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot9](Screenshot/Screenshot9.png)
+![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot10](Screenshot/Screenshot10.png)
+![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot11](Screenshot/Screenshot11.png)
+![R.HydroTools.DisenoEstructuraEscalonadaFlujoRasante.Screenshot12](Screenshot/Screenshot12.png)
 
 
 ### Referencias
@@ -145,5 +147,5 @@ _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, 
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/12) |
+| [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/12) |
 |------------------------------------------------------------------|-------------------------------------------------------------------------------|
