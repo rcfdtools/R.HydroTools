@@ -10,10 +10,6 @@
 * DEM range (msnm): 97.02 to 99.98
 * DEM resolution (m): 0.1
 * Manning Roughness: concrete 0.018
-
-
-### HDitchL20W10D1CSlp001SSlp02
-
 * Length: 20
 * Width: 10
 * Chanel slope: 0.001
