@@ -21,10 +21,10 @@ El diseño y construcción de canales hidráulicos requiere frecuentemente del d
 
 ### Ilustraciones
 
-![R.HydroTools.DisenoEstructuraCaidaSinContraescalon.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraCaidaSinContraescalon/Screenshot/Screenshot1.png)
-![R.HydroTools.DisenoEstructuraCaidaSinContraescalon.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraCaidaSinContraescalon/Screenshot/Screenshot2.png)
-![R.HydroTools.DisenoEstructuraCaidaSinContraescalon.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraCaidaSinContraescalon/Screenshot/Screenshot3.png)
-![R.HydroTools.DisenoEstructuraCaidaSinContraescalon.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraCaidaSinContraescalon/Screenshot/Screenshot4.png)
+![R.HydroTools.DisenoEstructuraCaidaSinContraescalon.Screenshot1](Screenshot/Screenshot1.png)
+![R.HydroTools.DisenoEstructuraCaidaSinContraescalon.Screenshot2](Screenshot/Screenshot2.png)
+![R.HydroTools.DisenoEstructuraCaidaSinContraescalon.Screenshot3](Screenshot/Screenshot3.png)
+![R.HydroTools.DisenoEstructuraCaidaSinContraescalon.Screenshot4](Screenshot/Screenshot4.png)
 
 
 ### Referencias
