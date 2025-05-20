@@ -1,5 +1,7 @@
+<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
+
 ## Análisis de la pendiente de diseño en cauce y valle
-Keywords: `Hydraulics` `Stream gradient` `River slope`
+Keywords: `hydraulics` `stream-gradient` `river-slope`
 
 Utilizando el modelo de muestreo en HEC-RAS y a partir de la longitud del tramo natural a reemplazar y de las secciones existentes, determinar la pendiente de referencia para el diseño geométrico e hidráulico. Dentro de las consideraciones para el diseño de la sección del canal artificial, es importante evaluar la condición de equilibrio del cauce natural existente, expresada por la pendiente del cauce dominante y el equilibrio entre la erosión y agradación del lecho determinado por la edad del cauce.
 
@@ -15,8 +17,8 @@ En caso de que existan restricciones de trazado y sea necesario utilizar una pen
 
 ### Ilustraciones
 
-![R.HydroTools.PendienteCauceValle.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/PendienteCauceValle/Screenshot/Screenshot1.png)
-![R.HydroTools.PendienteCauceValle.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/PendienteCauceValle/Screenshot/Screenshot2.png)
+![R.HydroTools.PendienteCauceValle.Screenshot1](Screenshot/Screenshot1.png)
+![R.HydroTools.PendienteCauceValle.Screenshot2](Screenshot/Screenshot2.png)
 
 
 ### Control de versiones
@@ -31,5 +33,5 @@ _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, 
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/20)  |
-|------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| [:house: Inicio](../../README.mdi) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/20) |
+|------------------------------------|-----------------------------------------------------------------------------------------|
