@@ -1,3 +1,5 @@
+<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
+
 ## Diques de protección o encausamiento usando RAS Mapper
 Keywords: `Hydraulics` `Leeve design` `Leeve protection` `Overflow protection`
 
@@ -37,10 +39,10 @@ El diseño hidráulico de canales requiere de la verificación de zonas suscepti
 
 ### Ilustraciones
 
-![R.HydroTools.DisenoDique.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoDique/Screenshot/Screenshot1.png)
-![R.HydroTools.DisenoDique.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoDique/Screenshot/Screenshot2.png)
-![R.HydroTools.DisenoDique.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoDique/Screenshot/Screenshot3.png)
-![R.HydroTools.DisenoDique.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoDique/Screenshot/Screenshot4.png)
+![R.HydroTools.DisenoDique.Screenshot1](Screenshot/Screenshot1.png)
+![R.HydroTools.DisenoDique.Screenshot2](Screenshot/Screenshot2.png)
+![R.HydroTools.DisenoDique.Screenshot3](Screenshot/Screenshot3.png)
+![R.HydroTools.DisenoDique.Screenshot4](Screenshot/Screenshot4.png)
 
 
 ### Referencias
@@ -60,6 +62,6 @@ _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, 
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/8) |
+| [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/8) |
 |------------------------------------------------------------------|-----------------------------------------------------------------------------|
 
