@@ -1,11 +1,11 @@
 <div align="center">
   <img alt="R.HydroTools" src="https://github.com/rcfdtools/R.HydroTools/blob/main/.Icons/R.HydroTools.svg" width="300px">
-  <br><b>Tools for hydrological and hydraulics computational analysis</b><br>by r.cfdtools@gmail.com<br><br>
+  <br><b>Tools for GIS, hydrological and hydraulics computational analysis</b><br>by r.cfdtools<br><br>
 </div>
 
 ## ¿Qué es R.HydroTools?
 
-R.HydroTools es un proyecto de desarrollo colaborativo para crear y compartir herramientas computacionales relacionadas con modelación hidrológica, modelación hidráulica, análisis estadístico, analítica de datos espaciales y sistemas de información geográfica.
+_R.HydroTools_ es un proyecto de desarrollo colaborativo para crear y compartir herramientas computacionales relacionadas con modelación hidrológica, modelación hidráulica, análisis estadístico, analítica de datos espaciales y sistemas de información geográfica.
 
 ## Herramientas hidrología
 
@@ -68,3 +68,7 @@ R.HydroTools es un proyecto de desarrollo colaborativo para crear y compartir he
 **Clonación:** para compatibilidad completa de las rutas utilizadas en los scripts y herramientas de R.HydroTools, en Microsoft Windows clonar y/o descomprimir en _D:\R.HydroTools_. Enlace para clonación https://github.com/rcfdtools/R.HydroTools.git.
 
 _¡Encontraste útil este proyecto!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
+
+
+| [:sun_with_face: Contribuye](Contribute.md) | [:infinity: Otros cursos y herramientas](https://github.com/rcfdtools) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.SIGE/discussions/1) | [:notebook: Referencias](file/ref/Readme.md) | [:label: Abreviaturas y definiciones](Definitions.md) |
+|------------------------------------------------------------|------------------------------------------------------------------------|----------------------------------------------------------------------------------|----------------------------------------------|-------------------------------------------------------|
