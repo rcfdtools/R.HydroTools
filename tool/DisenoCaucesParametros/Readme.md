@@ -1,3 +1,5 @@
+<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
+
 ## Parámetros generales para el diseño y modelación de cauces
 Keywords: `Hydrology` `Hydraulics` `River design parameters` `Velocity` `Shear` `Side slope` `River` `Bank`
 
@@ -80,11 +82,11 @@ Este libro de cálculo contiene lineamientos generales, parámetros para diseño
 
 ### Ilustraciones
 
-![R.HydroTools.DisenoCaucesParametros.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoCaucesParametros/Screenshot/ScreenshotTecnicoRequerido.png)
-![R.HydroTools.DisenoCaucesParametros.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoCaucesParametros/Screenshot/ScreenshotTecnicoEstimado.png)
-![R.HydroTools.DisenoCaucesParametros.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoCaucesParametros/Screenshot/ScreenshotNormativo.png)
-![R.HydroTools.DisenoCaucesParametros.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoCaucesParametros/Screenshot/ScreenshotGeotecnicoAmbientalSocial.png)
-![R.HydroTools.DisenoCaucesParametros.Screenshot5](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoCaucesParametros/Screenshot/ScreenshotTerritorial.png)
+![R.HydroTools.DisenoCaucesParametros.Screenshot1](Screenshot/ScreenshotTecnicoRequerido.png)
+![R.HydroTools.DisenoCaucesParametros.Screenshot2](Screenshot/ScreenshotTecnicoEstimado.png)
+![R.HydroTools.DisenoCaucesParametros.Screenshot3](Screenshot/ScreenshotNormativo.png)
+![R.HydroTools.DisenoCaucesParametros.Screenshot4](Screenshot/ScreenshotGeotecnicoAmbientalSocial.png)
+![R.HydroTools.DisenoCaucesParametros.Screenshot5](Screenshot/ScreenshotTerritorial.png)
 
 
 ### Control de versiones
@@ -101,7 +103,7 @@ _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, 
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/6) |
+| [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/6) |
 |------------------------------------------------------------------|------------------------------------------------------------------------------|
 
 [^1]: https://www.minvivienda.gov.co/viceministerio-de-agua-y-saneamiento-basico/reglamento-tecnico-sector/reglamento-tecnico-del-sector-de-agua-potable-y-saneamiento-basico-ras
