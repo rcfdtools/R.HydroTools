@@ -1,9 +1,11 @@
+<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
+
 ## Script básico
-Keywords: `Concentration time` `Giandotti` `Subbasin` `Hydrology` `GIS` 
+Keywords: `concentration-time` `giandotti` `subbasin` `hydrology` `gis` 
 
 Un script en Python, es un archivo que contiene diferentes instrucciones que pueden ser ejecutadas por el intérprete de comandos. Generalmente los archivos son almacenados con la extensión .py y son usados para ejecutar o automatizar tareas repetitivas. Para la creación de los scripts, es recomendable utilizar un editor de código que permita identificar con facilidad la estructura y escritura propia del lenguaje o un entorno de desarrollo de aplicaciones (IDE), por ejemplo, Notepad++, Sublime Text, Gedit, Anaconda o PyCharm. En QGIS (p.e, 3.10), desde la consola de Python es posible acceder al editor de scripts, desde el cual se puede crear, abrir, editar y ejecutar directamente este tipo de archivos. En ArcGIS Desktop, es posible editar y ejecutar archivos .py directamente desde el ambiente integrado de desarrollo o IDLE de Python incorporado.
 
-![BasicScript.png](https://github.com/rcfdtools/R.GISPython/blob/main/BasicScript/Screenshot/BasicScript.png)
+![BasicScript.png](Screenshot/BasicScript.png)
 
 
 ### Objetivos
@@ -48,7 +50,7 @@ Para el desarrollo del script, estimaremos el tiempo de concentración en una cu
 
 <br>
 <div  align="center">
-    <img align="center"  alt="R.GISPython.BasicScript.TcGiangotti" src="https://github.com/rcfdtools/R.GISPython/blob/main/BasicScript/Screenshot/TcGiangotti.png" width="240px"/>
+    <img align="center"  alt="R.GISPython.BasicScript.TcGiangotti" src="Screenshot/TcGiangotti.png" width="240px"/>
 </div>
 
 #### Parámetros
@@ -76,7 +78,7 @@ print ('Script básico en Python')
 print ('------------------------\n')
 print ('Cálculo del tiempo de concentración Tc de una cuenca hidrográfica utilizando la expresión de Giandotti.')
 print ('Python versión: ' + str(sys.version))
-print ('Encuentra este script en https://github.com/rcfdtools/R.GISPython/tree/main/BasicScript')
+print ('Encuentra este script en ../BasicScript')
 print ('Cláusulas y condiciones de uso en https://github.com/rcfdtools/R.GISPython/wiki/License')
 print ('Créditos: r.cfdtools@gmail.com')
 
@@ -115,13 +117,13 @@ print ('\tTc(min): ' + str(TcGiandotti*60)) #Impresión en pantalla usando +, co
 
 >PyCharm requiere de configuración previa del intérprete de Python a utilizar en la ejecución del script. Oprima `Ctrl+Alt+S` para acceder a la ventana de configuración y en la pestaña _Project: R.GISPython_ configurar los intérpretes disponibles en su equipo.
 
-![PyCharm2021.3SetupPythonInterpreter.png](https://github.com/rcfdtools/R.GISPython/blob/main/BasicScript/Screenshot/PyCharm2021.3SetupPythonInterpreter.png)
+![PyCharm2021.3SetupPythonInterpreter.png](Screenshot/PyCharm2021.3SetupPythonInterpreter.png)
 
 Ejecución en PyCharm usando Python 2.7.5 de ArcGIS for Desktop 10.2.2. En esta versión podrá notar diferencias en la impresión concatenada usando comas o +. 
-![Python2.7.5ArcGISDesktop10.2.2PyCharm2021.3.png](https://github.com/rcfdtools/R.GISPython/blob/main/BasicScript/Screenshot/Python2.7.5ArcGISDesktop10.2.2PyCharm2021.3.png)
+![Python2.7.5ArcGISDesktop10.2.2PyCharm2021.3.png](Screenshot/Python2.7.5ArcGISDesktop10.2.2PyCharm2021.3.png)
 
 Ejecución en PyCharm usando Python 3.10.0. En esta versión las dos impresiones son idénticas sin importar si se concatenó con comas o +.
-![Python3.10.0StandalonePyCharm2021.3.png](https://github.com/rcfdtools/R.GISPython/blob/main/BasicScript/Screenshot/Python3.10.0StandalonePyCharm2021.3.png)
+![Python3.10.0StandalonePyCharm2021.3.png](Screenshot/Python3.10.0StandalonePyCharm2021.3.png)
 
 
 ### Ejecución usando el IDLE de Python de ArcGIS for Desktop
@@ -131,7 +133,7 @@ En el explorador de Windows abrir la carpeta D:\R.GISPython\BasicScript y dar cl
 >Ejecutar oprimiendo F5. En Windows podrá lanzar manualmente la interfaz gráfica del IDLE buscando la aplicación _IDLE (Python GUI)_.
 
 Script sobre IDLE de Python 2.7.5 en ArcGIS for Desktop.
-![Python2.7.5ArcGISDesktop10.2.2IDLE.png](https://github.com/rcfdtools/R.GISPython/blob/main/BasicScript/Screenshot/Python2.7.5ArcGISDesktop10.2.2IDLE.png)
+![Python2.7.5ArcGISDesktop10.2.2IDLE.png](Screenshot/Python2.7.5ArcGISDesktop10.2.2IDLE.png)
 
 >Nota: para lanzar correctamente el IDLE de ArcGIS Desktop, es necesario definir, en variables del sistema operativo Windows, el direccionamiento al directorio C:\Python27.
 
@@ -145,10 +147,10 @@ Para ejecutar desde la consola de comandos CMD del sistema operativo Windows usa
 ```C:\py -3.10 D:\R.GISPython\BasicScript\Tc_v0.py```
 
 Ejecución en consola CMD Python 2.7.5 de ArcGIS for Desktop 10.2.2. En esta versión, la codificación de texto no imprime correctamente caracteres acentuados del español.
-![Python2.7.5ArcGISDesktop10.2.2CMD.png](https://github.com/rcfdtools/R.GISPython/blob/main/BasicScript/Screenshot/Python2.7.5ArcGISDesktop10.2.2CMD.png)
+![Python2.7.5ArcGISDesktop10.2.2CMD.png](Screenshot/Python2.7.5ArcGISDesktop10.2.2CMD.png)
 
 Ejecución en consola CMD Python 3.10.0 Standalone.
-![Python3.10.0StandaloneCMD.png](https://github.com/rcfdtools/R.GISPython/blob/main/BasicScript/Screenshot/Python3.10.0StandaloneCMD.png)
+![Python3.10.0StandaloneCMD.png](Screenshot/Python3.10.0StandaloneCMD.png)
 
 
 ### Ejecución desde la consola Python de QGIS
@@ -156,14 +158,14 @@ Ejecución en consola CMD Python 3.10.0 Standalone.
 Para ejecutar desde QGIS, abrir la consola de Python, luego el editor de texto y el archivo creado. Observará que los resultados de los dos print son idénticos debido a que se ejecutó con la versión 3.9.5.
 
 Ejecución en Python 3.9.5 sobre QGIS 3.22.1.
-![Python3.9.5QGIS3.22.1.png](https://github.com/rcfdtools/R.GISPython/blob/main/BasicScript/Screenshot/Python3.9.5QGIS3.22.1.png)
+![Python3.9.5QGIS3.22.1.png](Screenshot/Python3.9.5QGIS3.22.1.png)
 
 
 ### Ejecución usando ArcGIS for Desktop
 
 En ArcMap, dar clic en el ícono de Python, en la consola embebida, dar clic derecho y seleccionar la opción _Load..._, buscar la ruta D:\R.GISPython\BasicScript\Tc_v0.py y abrir el archivo. Para ejecutar dar Enter.
 
-![Python2.7.5ArcGISDesktop10.2.2.png](https://github.com/rcfdtools/R.GISPython/blob/main/BasicScript/Screenshot/Python2.7.5ArcGISDesktop10.2.2.png)
+![Python2.7.5ArcGISDesktop10.2.2.png](Screenshot/Python2.7.5ArcGISDesktop10.2.2.png)
 
 
 ### Ejecución usando ArcGIS Pro
@@ -172,12 +174,12 @@ Desde el Command o CMD de Microsoft Windows
 
 ```c:\Progra~1\ArcGIS\Pro\bin\Python\scripts\propy.bat D:\R.GISPython\BasicScript\Tc_v0.py```
 
-![Python3.7.11ArcGISPro2.9CMD.png](https://github.com/rcfdtools/R.GISPython/blob/main/BasicScript/Screenshot/Python3.7.11ArcGISPro2.9CMD.png)
+![Python3.7.11ArcGISPro2.9CMD.png](Screenshot/Python3.7.11ArcGISPro2.9CMD.png)
 
 Desde Python Window dentro de ArcGIS Pro
 
 En el menú _Analysis_ dar clic en el ícono de opciones de Python y seleccionar Python Window, luego dar clic derecho en la línea de entrada de comando, seleccionar la opción _Load Code_ y seleccionar el script. 
-![Python3.7.11ArcGISPro2.9PythonWindow.png](https://github.com/rcfdtools/R.GISPython/blob/main/BasicScript/Screenshot/Python3.7.11ArcGISPro2.9PythonWindow.png)
+![Python3.7.11ArcGISPro2.9PythonWindow.png](Screenshot/Python3.7.11ArcGISPro2.9PythonWindow.png)
 
 Desde Python Notebook dentro de ArcGIS Pro
 
@@ -185,9 +187,9 @@ En el menú _Analysis_ dar clic en el ícono de opciones de Python y seleccionar
 
 ```%run -i D:\R.GISPython\BasicScript\Tc_v0.py```
 
-![Python3.7.11ArcGISPro2.9PythonNotebook.png](https://github.com/rcfdtools/R.GISPython/blob/main/BasicScript/Screenshot/Python3.7.11ArcGISPro2.9PythonNotebook.png)
+![Python3.7.11ArcGISPro2.9PythonNotebook.png](Screenshot/Python3.7.11ArcGISPro2.9PythonNotebook.png)
 
-![Python3.7.11ArcGISPro2.9PythonNotebookCod.png](https://github.com/rcfdtools/R.GISPython/blob/main/BasicScript/Screenshot/Python3.7.11ArcGISPro2.9PythonNotebookCode.png)
+![Python3.7.11ArcGISPro2.9PythonNotebookCod.png](Screenshot/Python3.7.11ArcGISPro2.9PythonNotebookCode.png)
 
 
 ### Referencias
@@ -214,9 +216,9 @@ En el menú _Analysis_ dar clic en el ícono de opciones de Python y seleccionar
 
 ### Licencia, cláusulas y condiciones de uso
 
-_R.GISPython es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio dando [clic aquí](https://github.com/rcfdtools/R.GISPython/wiki/License)._
+_R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](../../LICENSE.md) y como referenciar los contenidos publicados en este repositorio._
 
-_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
+_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](https://github.com/rcfdtools/R.GISPython/tree/main/PythonAsCalculator) | [:house: Inicio](https://github.com/rcfdtools/R.GISPython/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.GISPython/discussions/6) | [Siguiente](https://github.com/rcfdtools/R.GISPython/tree/main/InteractiveScript) |
-|-----------------------------------------------------------------------------------|-----------------------------------------------------------------|----------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| [Anterior](../PythonAsCalculator) | [:house: Inicio](../../README.md)    | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.GISPython/discussions/xxxxx) | [Siguiente](../InteractiveScript)       |
+|-----------------------------------|--------------------------------------|-------------------------------------------------------------------------------------------|-----------------------------------------|
