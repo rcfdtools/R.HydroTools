@@ -1,7 +1,7 @@
 <div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
 
 ## Evaluación de taludes de referencia para diseño de sección a partir de secciones transversales de cauces naturales
-Keywords: `gydraulics` `side-slope` 'z:n'
+Keywords: `gydraulics` `side-slope` `#v:1h`
 
 A partir de la información topográfica disponible y de las secciones transversales trazadas en el modelo de muestreo HEC-GeoRAS arriba del punto de inicio y abajo del punto de entrega sobre cauces naturales existentes y en cauces laterales, estudiar la inclinación actual de los taludes que será utilizada como referencia para el diseño del canal artificial compuesto, correspondiente al talud estable del cauce natural luego de todos los procesos erosivos y de sedimentación.
 
