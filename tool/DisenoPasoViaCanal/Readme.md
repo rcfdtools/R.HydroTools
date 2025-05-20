@@ -34,7 +34,7 @@ Dimensionar la geometría de sección requerida para transportar el caudal de di
 0. Abrir archivo _R.HydroTools\DisenoPasoViaCanal\CAD\R.HydroTools.DisenoPasoViaLineaCAD.dwg_ y guardar como _R.HydroTools.DisenoPasoViaLineaCAD3D.dwg_.
 1. Desde el _Workspace Switchting_ ubicado en la parte inferior de la pantalla (ícono setup o piñon), seleccionar 3D Basic.
 2. Active la vista de navegación con el comando _NAVBAR_ y desde el Orbit rote la vista 3D.
-3. Para las tuberías principales cree circunferencias con díametro igual al definido en el diseño del paso de vía, p.ej., 2 metros.
+3. Para las tuberías principales cree circunferencias con diámetro igual al definido en el diseño del paso de vía, p.ej., 2 metros.
 4. Con el comando _Sweep_, seleccione la circunferencia, de enter y luego el eje del tubo.
 5. Desde el menú _Visualize_, active la vista _Conceptual_.
 6. Ejecute el comando _SolidEdit_, seleccione _Body_, _Shell_, seleccione el sólido desde la parte exterior del tubo, luego la cara frontal, luego la cara posterior y de Enter, ingrese el espesor de la tubería, p.ej., 0.1m y de Enter.
@@ -44,16 +44,16 @@ Dimensionar la geometría de sección requerida para transportar el caudal de di
 
 | Archivo / Folder                                                                                                                                            | Descripción                                                                                                                                      |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| [GISCulvertPoint.bas](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/GISCulvertPoint.bas)                                           | Código para generación de tabla de datos geográficos para generación de puntos 3D inicio - fin de alcantarillas para batea, eje y clave.         |         
-| [R.HydroTools.DisenoPasoViaCanal.tbx](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/R.HydroTools.DisenoPasoViaCanal.tbx)           | Caja de herramientas ToolBox ESRI ArcGIS for Desktop con modelador de procesos para creación de archivos de formas 3D y archivo CAD 3D.          |          
-| [R.HydroTools.DisenoPasoViaCanal.xlsm](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/R.HydroTools.DisenoPasoViaCanal.xlsm)         | Libro de diseño de pasos de vía.                                                                                                                 |                                                                                                                 
-| [R.HydroTools.DisenoPasoViaCanalCanal.sxd](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/R.HydroTools.DisenoPasoViaCanalCanal.sxd) | Escena ArcScene 10.2.2 para visualización 3D de nodos y alcantarillas 3D generadas.                                                              |                                                              
-| [R.HydroTools.DisenoPasoViaCanalGIS.xls](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/R.HydroTools.DisenoPasoViaCanalGIS.xls)     | Tabla geocodificada con localización de nodos 3D para alcantarillas. Requerido por el modelador de procesos geográficos contenido en el Toolbox. | 
+| [GISCulvertPoint.bas](GISCulvertPoint.bas)                                           | Código para generación de tabla de datos geográficos para generación de puntos 3D inicio - fin de alcantarillas para batea, eje y clave.         |         
+| [R.HydroTools.DisenoPasoViaCanal.tbx](R.HydroTools.DisenoPasoViaCanal.tbx)           | Caja de herramientas ToolBox ESRI ArcGIS for Desktop con modelador de procesos para creación de archivos de formas 3D y archivo CAD 3D.          |          
+| [R.HydroTools.DisenoPasoViaCanal.xlsm](R.HydroTools.DisenoPasoViaCanal.xlsm)         | Libro de diseño de pasos de vía.                                                                                                                 |                                                                                                                 
+| [R.HydroTools.DisenoPasoViaCanalCanal.sxd](R.HydroTools.DisenoPasoViaCanalCanal.sxd) | Escena ArcScene 10.2.2 para visualización 3D de nodos y alcantarillas 3D generadas.                                                              |                                                              
+| [R.HydroTools.DisenoPasoViaCanalGIS.xls](R.HydroTools.DisenoPasoViaCanalGIS.xls)     | Tabla geocodificada con localización de nodos 3D para alcantarillas. Requerido por el modelador de procesos geográficos contenido en el Toolbox. | 
 | /CAD/                                                                                                                                                       | Carpeta de volcado de archivo CAD 3D generado.                                                                                                   |                                                                                                   
 | /SHP/                                                                                                                                                       | Carpeta de volcado de nodos y lineas 3D en formato ESRI Shapefile.                                                                               |                                                                               
 
 
-### Módulo VBA [GISCulvertPoint.bas](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/GISCulvertPoint.bas)
+### Módulo VBA [GISCulvertPoint.bas](GISCulvertPoint.bas)
 
 ```
 'Diseno geometrico de pasos de via en canales usando alcantarillas por area equivalente a descarga libre.
@@ -424,19 +424,19 @@ End Sub
 ### Ilustraciones
 
 ![R.HydroTools.DisenoPasoViaCanal.Screenshot1](Screenshot/Screenshot1.png)
-![R.HydroTools.DisenoPasoViaCanal.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/Screenshot/Screenshot2.png)
-![R.HydroTools.DisenoPasoViaCanal.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/Screenshot/Screenshot3.png)
-![R.HydroTools.DisenoPasoViaCanal.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/Screenshot/Screenshot4.png)
-![R.HydroTools.DisenoPasoViaCanal.Screenshot5](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/Screenshot/Screenshot5.png)
-![R.HydroTools.DisenoPasoViaCanal.Screenshot6](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/Screenshot/Screenshot6.png)
-![R.HydroTools.DisenoPasoViaCanal.Screenshot7](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/Screenshot/Screenshot7.png)
-![R.HydroTools.DisenoPasoViaCanal.Screenshot8](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/Screenshot/Screenshot8.png)
-![R.HydroTools.DisenoPasoViaCanal.Screenshot9](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/Screenshot/Screenshot9.png)
-![R.HydroTools.DisenoPasoViaCanal.Screenshot10](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/Screenshot/Screenshot10.png)
-![R.HydroTools.DisenoPasoViaCanal.Screenshot11](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/Screenshot/Screenshot11.png)
-![R.HydroTools.DisenoPasoViaCanal.Screenshot12](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/Screenshot/Screenshot12.png)
-![R.HydroTools.DisenoPasoViaCanal.Screenshot13](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/Screenshot/Screenshot13.png)
-![R.HydroTools.DisenoPasoViaCanal.Screenshot14](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/Screenshot/Screenshot14.png)
+![R.HydroTools.DisenoPasoViaCanal.Screenshot2](Screenshot/Screenshot2.png)
+![R.HydroTools.DisenoPasoViaCanal.Screenshot3](Screenshot/Screenshot3.png)
+![R.HydroTools.DisenoPasoViaCanal.Screenshot4](Screenshot/Screenshot4.png)
+![R.HydroTools.DisenoPasoViaCanal.Screenshot5](Screenshot/Screenshot5.png)
+![R.HydroTools.DisenoPasoViaCanal.Screenshot6](Screenshot/Screenshot6.png)
+![R.HydroTools.DisenoPasoViaCanal.Screenshot7](Screenshot/Screenshot7.png)
+![R.HydroTools.DisenoPasoViaCanal.Screenshot8](Screenshot/Screenshot8.png)
+![R.HydroTools.DisenoPasoViaCanal.Screenshot9](Screenshot/Screenshot9.png)
+![R.HydroTools.DisenoPasoViaCanal.Screenshot10](Screenshot/Screenshot10.png)
+![R.HydroTools.DisenoPasoViaCanal.Screenshot11](Screenshot/Screenshot11.png)
+![R.HydroTools.DisenoPasoViaCanal.Screenshot12](Screenshot/Screenshot12.png)
+![R.HydroTools.DisenoPasoViaCanal.Screenshot13](Screenshot/Screenshot13.png)
+![R.HydroTools.DisenoPasoViaCanal.Screenshot14](Screenshot/Screenshot14.png)
 
 
 ### Control de versiones
