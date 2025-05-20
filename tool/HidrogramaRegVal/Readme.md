@@ -1,5 +1,7 @@
+<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
+
 ## Registro y validación de hidrogramas obtenidos a partir de modelación hidrológica en HEC-HMS
-Keywords: `Hydrology` `Hydrograph` `Water flow` `Tr - Design return period` 
+Keywords: `hydrology` `hydrograph` `water-flow` `tr-design-return-period` 
 
 Este libro de cálculo es utilizado para registrar y validar los pulsos obtenidos en modelos hidrológicos de eventos discretos o de valores máximos. La hoja _Hidrograma4a_ presenta un ejemplo para la estimación de pulsos de hidrogramas para periodos de retorno superiores a partir de los valores pico obtenidos en los periodos de retorno registrados. 
 
@@ -95,10 +97,10 @@ Este libro de cálculo es utilizado para registrar y validar los pulsos obtenido
 
 ### Ilustraciones
 
-![R.HydroTools.HidrogramaRegVal.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/HidrogramaRegVal/Screenshot/Screenshot1.png)
-![R.HydroTools.HidrogramaRegVal.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/HidrogramaRegVal/Screenshot/Screenshot2.png)
-![R.HydroTools.HidrogramaRegVal.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/HidrogramaRegVal/Screenshot/Screenshot3.png)
-![R.HydroTools.HidrogramaRegVal.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/HidrogramaRegVal/Screenshot/Screenshot4.png)
+![R.HydroTools.HidrogramaRegVal.Screenshot1](Screenshot/Screenshot1.png)
+![R.HydroTools.HidrogramaRegVal.Screenshot2](Screenshot/Screenshot2.png)
+![R.HydroTools.HidrogramaRegVal.Screenshot3](Screenshot/Screenshot3.png)
+![R.HydroTools.HidrogramaRegVal.Screenshot4](Screenshot/Screenshot4.png)
 
 
 ### Control de versiones
@@ -115,7 +117,7 @@ _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, 
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/19) |
+| [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/19) |
 |------------------------------------------------------------------|------------------------------------------------------------------------------|
 
 [^1]: http://ponce.sdsu.edu/return_period.html
