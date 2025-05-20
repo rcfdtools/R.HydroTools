@@ -1,0 +1,38 @@
+Parameter,AM,CO,CP,LG,LM,MG,ME,PG,PM,RS,SP,SS
+Precipitación,1,1,1,0,0,0,0,1,1,0,1,1
+Temperatura del aire cerca al suelo,1,1,1,0,0,0,0,0,0,0,1,1
+Temperatura máxima del aire a 2 metros,1,1,1,0,0,0,0,0,0,0,0,0
+Temperatura mínima del aire a 2 metros,1,1,1,0,0,0,0,0,0,0,0,0
+Temperatura del aire en capa alta de atmósfera,0,0,0,0,0,0,0,0,0,1,0,0
+Temperatura extrema del tanque de evaporación,1,0,1,0,0,0,0,0,0,0,0,0
+Temperatura del suelo a varias profundidades,1,0,0,0,0,0,0,0,0,0,0,0
+Temperatura del agua,0,0,0,0,0,1,0,0,0,0,0,0
+Temperaturas extremas,0,0,0,0,0,0,0,0,0,0,1,0
+Evaporación,1,1,1,0,0,0,0,0,0,0,0,0
+Brillo solar,1,0,1,0,0,0,0,0,0,0,0,0
+Radiación solar,1,0,1,0,0,0,0,0,0,0,0,0
+Humedad del aire cerca al suelo,1,1,1,0,0,0,0,0,0,0,1,1
+Humedad relativa en capa alta de atmósfera,0,0,0,0,0,0,0,0,0,1,0,0
+Humedad - Características,0,0,0,0,0,0,0,0,0,0,1,0
+Viento - Dirección,1,0,1,0,0,0,0,0,0,0,1,1
+Viento - Velocidad,1,0,1,0,0,0,0,0,0,0,1,1
+Viento - Recorrido,1,0,1,0,0,0,0,0,0,0,1,1
+Viento - Dirección en capa alta de atmósfera,0,0,0,0,0,0,0,0,0,1,0,0
+Viento - Velocidad en capa alta de atmósfera,0,0,0,0,0,0,0,0,0,1,0,0
+Presión en capa alta de atmósfera,0,0,0,0,0,0,0,0,0,1,0,0
+Presión atmosférica cercana al suelo,0,0,0,0,0,0,0,0,0,0,1,1
+Nubosidad - Octas,1,0,1,0,0,0,0,0,0,0,1,1
+Nubosidad - Tipo,0,0,0,0,0,0,0,0,0,0,1,0
+Nubosidad - Altura de nubes,0,0,0,0,0,0,0,0,0,0,1,0
+Nubosidad - Capas significativas,0,0,0,0,0,0,0,0,0,0,1,0
+Visibilidad,0,0,0,0,0,0,0,0,0,0,1,1
+Nivel lámina agua,0,0,0,1,1,1,0,0,0,0,0,0
+Heladas,0,0,0,0,0,0,1,0,0,0,0,0
+Secuencia fenómenos atmosféricos,0,0,0,0,0,0,0,0,0,0,1,1
+Tiempo atmosférico,0,0,0,0,0,0,0,0,0,0,0,1
+Estado del suelo,0,0,0,0,0,0,0,0,0,0,0,1
+Salinidad agua marina,0,0,0,0,0,1,0,0,0,0,0,0
+Fenómenos especiales,1,0,1,0,0,0,1,0,0,0,1,1
+Tanque evaporación (no siempre),0,1,1,0,0,0,0,0,0,0,0,0
+Heliógrafo (no siempre),0,1,0,0,0,0,0,0,0,0,0,0
+Anenómetro (no siempre),0,1,0,0,0,0,0,0,0,0,0,0
