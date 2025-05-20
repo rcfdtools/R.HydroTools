@@ -9,6 +9,8 @@
 .git/
 .idea/
 .venv/
+.venvPython310/
+.venvPython311/
 
 # Large files exclusions
 tool/DisenoEstructuraContraccionExpansionSubcritico/MDT/TIN/
@@ -19,6 +21,19 @@ tool/DisenoEstructuraEscalonadaFlujoRasante/MDT/TIN/
 tool/DisenoEstructuraEscalonadaFlujoRasante/MDT/*.tif
 tool/DisenoEstructuraEscalonadaFlujoRasante/MDT/*.tfw
 tool/DisenoEstructuraEscalonadaFlujoRasante/MDT/*.tif.*
+tool/GISMobile/GISMobile_EAB_CO/GDB.gdb
+tool/GISMobile/GISMobile_EAB_CO/dem/AlosPalsarZE*.tif*
+tool/CNEDensity/**/*.tif*
+# tool/HydroGeoZone/Output/
+tool/HydroGeoZone/Data/Drenaje_Sencillo.*
+tool/HydroGeoZone/Output/DrenajeSencilloIntersect.*
+tool/HydroGeoZone/Output/DrenajeSencilloFiltro.*
+tool/TableInterpolatedGrid/OutputColorMap/
+tool/TableInterpolatedGrid/OutputGrid/
+tool/UnpivotTable/*.csv
+tool/MultipleTableJoin/*.csv
+tool/MultipleTableJoin/EAAB_CO/eaab_sih_monthly_records.csv
+
 
 # Some samples
 # http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files
