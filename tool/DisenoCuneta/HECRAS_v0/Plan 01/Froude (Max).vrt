@@ -1,0 +1,32 @@
+<VRTDataset rasterXSize="100" rasterYSize="200">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["MAGNA_Colombia_Origen_Unico",GEOGCS["MAGNA-SIRGAS",DATUM["Marco_Geocentrico_Nacional_de_Referencia",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6686"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",4],PARAMETER["central_meridian",-73],PARAMETER["scale_factor",0.9992],PARAMETER["false_easting",5000000],PARAMETER["false_northing",2000000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH]]</SRS>
+  <GeoTransform>  5.0000000000000000e+06,  1.0000000000000001e-01,  0.0000000000000000e+00,  2.0000000000000000e+06,  0.0000000000000000e+00, -1.0000000000000001e-01</GeoTransform>
+  <VRTRasterBand dataType="Float32" band="1">
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">9.4462804794312</MDI>
+      <MDI key="STATISTICS_MEAN">3.6660229446407</MDI>
+      <MDI key="STATISTICS_MINIMUM">0.42320638895035</MDI>
+      <MDI key="STATISTICS_STDDEV">1.0953597650388</MDI>
+    </Metadata>
+    <NoDataValue>-9999</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <Histograms>
+      <HistItem>
+        <HistMin>0.423206388950348</HistMin>
+        <HistMax>9.446280479431151</HistMax>
+        <BucketCount>256</BucketCount>
+        <IncludeOutOfRange>1</IncludeOutOfRange>
+        <Approximate>0</Approximate>
+        <HistCounts>1|3|2|1|1|3|15|12|7|3|3|0|1|2|1|1|0|0|0|2|0|1|2|2|1|0|2|0|2|2|1|2|1|1|3|1|6|2|3|8|8|9|9|18|20|23|22|23|23|33|25|28|26|41|43|53|60|67|65|72|91|75|88|95|93|94|122|159|188|190|228|238|214|214|223|215|247|261|242|212|232|231|233|241|203|196|176|172|143|139|149|114|131|110|103|93|84|79|74|65|57|64|58|68|50|56|44|51|46|52|43|53|60|44|55|39|54|48|43|58|43|31|37|41|57|43|42|37|30|42|54|37|45|44|50|43|27|26|29|38|44|20|34|27|25|32|28|24|33|24|25|24|27|30|20|19|18|24|19|24|20|25|30|26|23|16|16|16|22|20|24|18|13|9|18|12|12|4|6|9|7|2|8|5|4|3|8|2|2|3|4|5|3|1|0|4|4|1|0|3|3|4|2|1|4|4|2|0|3|0|0|1|0|0|2|2|2|3|1|0|1|1|1|0|0|0|0|0|0|0|0|0|0|1|0|0|1|1|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|1|1</HistCounts>
+      </HistItem>
+    </Histograms>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">Froude (Max).Terrain.DEMGIS.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="100" RasterYSize="200" DataType="Float32" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0" yOff="0" xSize="100" ySize="200" />
+      <DstRect xOff="0" yOff="0" xSize="100" ySize="200" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+</VRTDataset>

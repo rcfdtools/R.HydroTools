@@ -1,0 +1,32 @@
+<VRTDataset rasterXSize="100" rasterYSize="200">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["MAGNA_Colombia_Origen_Unico",GEOGCS["MAGNA-SIRGAS",DATUM["Marco_Geocentrico_Nacional_de_Referencia",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6686"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",4],PARAMETER["central_meridian",-73],PARAMETER["scale_factor",0.9992],PARAMETER["false_easting",5000000],PARAMETER["false_northing",2000000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH]]</SRS>
+  <GeoTransform>  5.0000000000000000e+06,  1.0000000000000001e-01,  0.0000000000000000e+00,  2.0000000000000000e+06,  0.0000000000000000e+00, -1.0000000000000001e-01</GeoTransform>
+  <VRTRasterBand dataType="Float32" band="1">
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">0.016666667535901</MDI>
+      <MDI key="STATISTICS_MEAN">0.0051823206268508</MDI>
+      <MDI key="STATISTICS_MINIMUM">0.000277777784504</MDI>
+      <MDI key="STATISTICS_STDDEV">0.0022134800483734</MDI>
+    </Metadata>
+    <NoDataValue>-9999</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <Histograms>
+      <HistItem>
+        <HistMin>0.000277777784503996</HistMin>
+        <HistMax>0.0166666675359011</HistMax>
+        <BucketCount>256</BucketCount>
+        <IncludeOutOfRange>1</IncludeOutOfRange>
+        <Approximate>0</Approximate>
+        <HistCounts>6|0|0|0|33|0|0|0|74|0|0|0|0|111|0|0|0|151|0|0|0|171|0|0|0|0|219|0|0|0|252|0|0|0|288|0|0|0|0|346|0|0|0|332|0|0|0|346|0|0|0|0|372|0|0|0|395|0|0|0|422|0|0|0|0|459|0|0|0|496|0|0|0|523|0|0|0|0|524|0|0|0|556|0|0|0|550|0|0|0|0|546|0|0|0|587|0|0|0|486|0|0|0|0|274|0|0|0|224|0|0|0|225|0|0|0|0|208|0|0|0|156|0|0|0|153|0|0|0|0|122|0|0|0|99|0|0|0|73|0|0|0|0|51|0|0|0|53|0|0|0|42|0|0|0|0|26|0|0|0|22|0|0|0|23|0|0|0|0|24|0|0|0|13|0|0|0|12|0|0|0|0|13|0|0|0|10|0|0|0|4|0|0|0|0|6|0|0|0|0|0|0|0|4|0|0|0|0|3|0|0|0|13|0|0|0|0|0|0|0|0|3|0|0|0|4|0|0|0|6|0|0|0|0|0|0|0|0|5|0|0|0|6|0|0|0|0|6|0|0|0|4|0|0|0|2</HistCounts>
+      </HistItem>
+    </Histograms>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">Arrival Time (hrs).Terrain.DEMGIS.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="100" RasterYSize="200" DataType="Float32" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0" yOff="0" xSize="100" ySize="200" />
+      <DstRect xOff="0" yOff="0" xSize="100" ySize="200" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+</VRTDataset>
