@@ -1,4 +1,4 @@
-<div align="center"><img alt="R.HydroTools" src="file/graph/R.HydroTools.svg" width="300px"></div>
+<div align="center"><img alt="R.HydroTools" src="../file/graph/R.HydroTools.svg" width="300px"></div>
 
 ## Estimación de borde libre en canales - Freeboard
 Keywords: `Hydraulics` `Freeboard` 
