@@ -1,3 +1,5 @@
+## Ayuda o colabora
+
 Crea tu cuenta de usuario en GitHub y marca este repositorio como favorito con la opción `⭐`, de esta forma podrás seguir este proyecto y podrás acceder a la [zona de discusión, reporte de fallos y soporte](https://github.com/rcfdtools/R.HydroTools/issues).
 
 
