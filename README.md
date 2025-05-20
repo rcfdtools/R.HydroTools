@@ -1,6 +1,6 @@
 <div align="center">
   <img alt="R.HydroTools" src="file/graph/R.HydroTools.svg" width="300px">
-  <br><b>Tools for GIS, hydrological and hydraulics computational analysis</b>
+  <br>Tools for GIS, hydrological and hydraulics computational analysis
 </div>
 
 ## ¿Qué es R.HydroTools?
@@ -70,5 +70,5 @@ _R.HydroTools_ es un proyecto de desarrollo colaborativo para crear y compartir 
 _¡Encontraste útil este proyecto!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
 
- [:infinity: Otros cursos y herramientas](https://github.com/rcfdtools) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/1) | [:notebook: Referencias](.ref/Readme.md) | [:label: Abreviaturas y definiciones](Definitions.md) |
-|------------------------------------------------------------------------|----------------------------------------------------------------------------------------|------------------------------------------|-------------------------------------------------------|
+ [:infinity: Otros cursos y herramientas](https://github.com/rcfdtools) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/1) | [:notebook: Referencias](file/ref/Readme.md) | [:label: Abreviaturas y definiciones](Definitions.md) |
+|------------------------------------------------------------------------|----------------------------------------------------------------------------------------|----------------------------------------------|-------------------------------------------------------|
