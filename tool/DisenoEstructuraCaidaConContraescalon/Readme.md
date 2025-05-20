@@ -40,7 +40,10 @@ El diseño y construcción de canales hidráulicos requiere frecuentemente del d
 | 2021.11.05  | Actualización general de análisis, gráficas y formato. Incorporación pendiente del canal para dibujo de fondo en tramos de aproximación de inicio y entrega. Hoja con secuencia de comandos para dibujo de estructura en CAD. | [rcfdtools](https://github.com/rcfdtools)                                                    |   4   |
 | 2014.08.08  | Versión inicial.                                                                                                                                                                                                              | [rcfdtools](https://github.com/rcfdtools)<br>[frankv13](https://github.com/frankv13)<br>jagm |   8   |
 
-_R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio._
+
+### Licencia, cláusulas y condiciones de uso
+
+_R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](../../LICENSE.md) y como referenciar los contenidos publicados en este repositorio._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 

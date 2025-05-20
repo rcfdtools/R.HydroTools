@@ -99,7 +99,10 @@ Este libro de cálculo contiene lineamientos generales, parámetros para diseño
 | 2021.10.13 | Actualización e inclusión de referencias aportadas por grupo UECIJG HCMC 2021-02. Actualización general de formato. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
 | 2014.01.11 | Versión inicial.                                                                                                    | [rcfdtools](https://github.com/rcfdtools)  |  18   |
 
-_R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio._
+
+### Licencia, cláusulas y condiciones de uso
+
+_R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](../../LICENSE.md) y como referenciar los contenidos publicados en este repositorio._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 

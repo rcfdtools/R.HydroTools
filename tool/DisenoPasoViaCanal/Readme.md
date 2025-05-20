@@ -449,7 +449,10 @@ End Sub
 | 2020.09.21  | Inclusión de evaluación de tuberías paralelas mediante cuadrantes direccionales NE, NW, SE, SW en VBA. Permite obtener ejes en cualquier dirección.                                                                                                                                                                                                                                                                                                                                                                                             | [rcfdtools](https://github.com/rcfdtools)  |   8   |
 | 2019.05.23  | Versión inicial con tuberías paralelas funcionales para cuadrante direccional NE.                                                                                                                                                                                                                                                                                                                                                                                                                                                               | [rcfdtools](https://github.com/rcfdtools)  |  20   |
 
-_R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio._
+
+### Licencia, cláusulas y condiciones de uso
+
+_R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](../../LICENSE.md) y como referenciar los contenidos publicados en este repositorio._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 

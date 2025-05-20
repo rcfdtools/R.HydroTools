@@ -125,7 +125,10 @@ End Sub
 | 2021.10.30 | Actualización general de análisis, gráficas y formato. Optimización de graficación de perfiles. Correcciones generales en lineas de perfil. Inclusión y actualización de botones de acción para resolver: rápida ajustando pendiente para obtener longitud del tramo 1-2 ingresada por el usuario , profundidad de colchón de disipación cambiando el ancho en la zona de la rápida, altura total de la estructura a partir de valor ingresado por el usuario y largo de la rápida en tramo 4-5 a partir de valor ingresado por el usuario. | [rcfdtools](https://github.com/rcfdtools)  |   8   |
 | 2020.08.14 | Versión inicial.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | [rcfdtools](https://github.com/rcfdtools)  |  24   |
 
-_R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio._
+
+### Licencia, cláusulas y condiciones de uso
+
+_R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](../../LICENSE.md) y como referenciar los contenidos publicados en este repositorio._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 

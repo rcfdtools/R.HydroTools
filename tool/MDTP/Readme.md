@@ -39,7 +39,10 @@ Para la creación de la Curva adimensional a utilizar en la construcción de los
 | 2021.11.26  | Actualización general de análisis, gráficas, formato, inclusión de hasta 100 tormentas. | [rcfdtools](https://github.com/rcfdtools)  |   8   |
 | 2017.05.28  | Versión inicial.                                       | [rcfdtools](https://github.com/rcfdtools)  |  16   |
 
-_R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio._
+
+### Licencia, cláusulas y condiciones de uso
+
+_R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](../../LICENSE.md) y como referenciar los contenidos publicados en este repositorio._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 

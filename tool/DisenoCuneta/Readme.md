@@ -29,9 +29,13 @@ Prototipos para diseño y modelación bidimensional de cunetas en HEC-RAS y RAS-
 * https://www.wsdot.wa.gov/publications/fulltext/Hydraulics/StormSHED/WestBegDitch.pdf
 * https://irrigationtoolbox.com/NEH/Part624_Drainage/NEH%2016%20Chapter%205.pdf
 
+
+### Licencia, cláusulas y condiciones de uso
+
 _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](../../LICENSE.md) y como referenciar los contenidos publicados en este repositorio._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
+
 
 | [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/30) |
 |-----------------------------------|-----------------------------------------------------------------------------------------|

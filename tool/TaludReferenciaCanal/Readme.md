@@ -39,7 +39,10 @@ Para el estudio de los taludes de referencia, en el libro de análisis se pueden
 | 2020.10.11 | Inclusión de tabla y gráfico con taludes de referencia y recubrimientos típicos en canales con relación y ángulo de inclinación. | [rcfdtools](https://github.com/rcfdtools)  |   3   |
 | 2016.05.22 | Versión inicial.                                                                                                                 | [rcfdtools](https://github.com/rcfdtools)  |  12   |
 
-_R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](https://github.com/rcfdtools/R.HydroTools/wiki/License) y como referenciar los contenidos publicados en este repositorio._
+
+### Licencia, cláusulas y condiciones de uso
+
+_R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](../../LICENSE.md) y como referenciar los contenidos publicados en este repositorio._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
