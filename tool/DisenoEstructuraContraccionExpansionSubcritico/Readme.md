@@ -1,5 +1,7 @@
+<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
+
 ## Diseño de estructura hidráulica de contracción y expansión a flujo subcrítico
-Keywords: `Hydraulics` `Hydraulic structure` `Hydraulic transition` `Hydraulic expansion` `Hydraulic contraction`
+Keywords: `hydraulics` `hydraulic-structure` `hydraulic-transition` `hydraulic-expansion` `hydraulic-contraction`
 
 El diseño y construcción de canales hidráulicos requiere frecuentemente del diseño de estructuras de transición por contracción y expansión con diferentes geometrías. A través de esta herramienta podrá diseñar transiciones combinando geometrías trapezoidales, triangulares y rectangulares.
 
@@ -34,12 +36,12 @@ El diseño y construcción de canales hidráulicos requiere frecuentemente del d
 
 | Archivo / Folder                                                                                                                                                                                                                                                     | Descripción                                                                                                                                     |
 |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------|
-| [R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.mxd](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.mxd)                                | Mapa ArcMap 10.2.2 para visualización 2D de resultados de ejecución del Toolbox.                                                                |                                                               
-| [R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.sxd](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.sxd)                                | Escena ArcScene 10.2.2 para visualización 3D de modelos de terreno y capas vectoriales de la estructura generados por el Toolbox.               |              
-| [R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.xlsm](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.xlsm)                              | Libro de diseño de la estructura.                                                                                                               |                                                                                                              
-| [R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoFolderStructure.zip](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoFolderStructure.zip)  | Comprimido con estructura de directorios requerida en D:\ para la ejecución del Toolbox.                                                        |                                                       
-| [R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.tbx](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.tbx)                          | Caja de herramientas ToolBox ESRI ArcGIS for Desktop con modelador de procesos para creación de archivos de formas 3D.                          |                         
-| [R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.xls](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.xls)                          | Tabla geocodificada con localización de nodos 3D de la estructura. Requerido por el modelador de procesos geográficos contenido en el Toolbox.  | 
+| [R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.mxd](R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.mxd)                                | Mapa ArcMap 10.2.2 para visualización 2D de resultados de ejecución del Toolbox.                                                                |                                                               
+| [R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.sxd](R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.sxd)                                | Escena ArcScene 10.2.2 para visualización 3D de modelos de terreno y capas vectoriales de la estructura generados por el Toolbox.               |              
+| [R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.xlsm](R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.xlsm)                              | Libro de diseño de la estructura.                                                                                                               |                                                                                                              
+| [R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoFolderStructure.zip](R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoFolderStructure.zip)  | Comprimido con estructura de directorios requerida en D:\ para la ejecución del Toolbox.                                                        |                                                       
+| [R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.tbx](R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.tbx)                          | Caja de herramientas ToolBox ESRI ArcGIS for Desktop con modelador de procesos para creación de archivos de formas 3D.                          |                         
+| [R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.xls](R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.xls)                          | Tabla geocodificada con localización de nodos 3D de la estructura. Requerido por el modelador de procesos geográficos contenido en el Toolbox.  | 
 | /MDT/                                                                                                                                                                                                                                                                | Carpeta de volcado de modelos de terreno en formato vectorial TIN y Ráster generado por el Toolbox.                                             |                                            
 | /SHP/                                                                                                                                                                                                                                                                | Carpeta de volcado de nodos y caras 3D del modelo de terreno vectorial en formato ESRI Shapefile.                                               |                                              
 
@@ -51,23 +53,23 @@ El diseño y construcción de canales hidráulicos requiere frecuentemente del d
 3. En ArcMAP, cargue y ejecute el ToolBox _R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoGIS.tbx_. Se recomienda el uso de las rutas predeterminadas: _D:\R.HydroTools\DisenoEstructuraContraccionExpansionSubcritico_. Dentro de esta carpeta es necesario crear las carpetas MDT y SHP.
 4. Visualice los resultados obtenidos en ArcMAP y en ArcScene.
 
-> El archivo [R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoFolderStructure.zip](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoFolderStructure.zip) contiene la estructura de directorios requerida en la unidad D:\.
+> El archivo [R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoFolderStructure.zip](R.HydroTools.DisenoEstructuraContraccionExpansionSubcriticoFolderStructure.zip) contiene la estructura de directorios requerida en la unidad D:\.
 
 
 ### Ilustraciones
 
-![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/Screenshot/Screenshot1.png)
-![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/Screenshot/Screenshot2.png)
-![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/Screenshot/Screenshot3.png)
-![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/Screenshot/Screenshot4.png)
-![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot5](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/Screenshot/Screenshot5.png)
-![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot6](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/Screenshot/Screenshot6.png)
-![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot7](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/Screenshot/Screenshot7.png)
-![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot8](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/Screenshot/Screenshot8.png)
-![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot9](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/Screenshot/Screenshot9.png)
-![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot10](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/Screenshot/Screenshot10.png)
-![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot11](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/Screenshot/Screenshot11.png)
-![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot12](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraContraccionExpansionSubcritico/Screenshot/Screenshot12.png)
+![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot1](Screenshot/Screenshot1.png)
+![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot2](Screenshot/Screenshot2.png)
+![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot3](Screenshot/Screenshot3.png)
+![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot4](Screenshot/Screenshot4.png)
+![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot5](Screenshot/Screenshot5.png)
+![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot6](Screenshot/Screenshot6.png)
+![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot7](Screenshot/Screenshot7.png)
+![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot8](Screenshot/Screenshot8.png)
+![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot9](Screenshot/Screenshot9.png)
+![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot10](Screenshot/Screenshot10.png)
+![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot11](Screenshot/Screenshot11.png)
+![R.HydroTools.DisenoEstructuraContraccionExpansionSubcritico.Screenshot12](Screenshot/Screenshot12.png)
 
 
 ### Referencias
@@ -94,5 +96,5 @@ _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, 
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/11) |
-|------------------------------------------------------------------|------------------------------------------------------------------------------|
+| [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/11) |
+|-----------------------------------|-----------------------------------------------------------------------------------------|
