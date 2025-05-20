@@ -1,5 +1,7 @@
+<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
+
 ## Gradación y rugosidad de diseño en canales
-Keywords: `Hydraulics` `Manning roughness` `Soil bed gradation` 
+Keywords: `hydraulics` `manning-roughness` `soil-bed-gradation` 
 
 Tamaño característico del material que compone el lecho o la zona de corte en canales realineados y valores de rugosidad a utilizar en el diseño hidráulico de la sección compuesta para la aplicación de diferentes métodos de diseño (Shields, Lane) usando HEC-RAS o el libro de diseño r.cfdtools. El análisis de gradación para determinar los valores d16, d50, d65, d75, d84 y d90, utiliza como referencia la metodología Norma INV-E213-13 - Colombia - Suramérica.
 
@@ -72,9 +74,9 @@ Existen múltiples referencias de valores típicos de rugosidades n de Manning p
 
 ### Ilustraciones
 
-![R.HydroTools.GradacionRugosidad.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/GradacionRugosidad/Screenshot/Screenshot1.png)
-![R.HydroTools.GradacionRugosidad.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/GradacionRugosidad/Screenshot/Screenshot2.png)
-![R.HydroTools.GradacionRugosidad.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/GradacionRugosidad/Screenshot/Screenshot3.png)
+![R.HydroTools.GradacionRugosidad.Screenshot1](Screenshot/Screenshot1.png)
+![R.HydroTools.GradacionRugosidad.Screenshot2](Screenshot/Screenshot2.png)
+![R.HydroTools.GradacionRugosidad.Screenshot3](Screenshot/Screenshot3.png)
 
 
 ### Referencias
@@ -102,7 +104,7 @@ _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, 
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/18)  |
+| [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/18)  |
 |------------------------------------------------------------------|-------------------------------------------------------------------------------|
 
 [^1]: https://www.hec.usace.army.mil/confluence/rasdocs/ras1dtechref/latest/basic-data-requirements/geometric-data/energy-loss-coefficients
