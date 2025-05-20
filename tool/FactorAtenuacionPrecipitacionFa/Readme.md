@@ -1,5 +1,7 @@
+<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
+
 ## Fa - Factor de atenuación de la precipitación máxima por área simultánea en una cuenca
-Keywords: `Hydrology` `Area-reduction curves` 
+Keywords: `hydrology` `area-reduction-curves` 
 
 
 ### ¿Qué es y para qué sirve?
@@ -14,7 +16,7 @@ Luego de la modelación o tránsito hidrológico, los valores de caudal pico e h
 
 Para subcuencas pequeñas menores a 25 km² en cauces laterales al río artificial a diseñar, puede suponerse que el centro de tormenta cubre toda esta área y por consiguiente el factor multiplicador será de 1.
 
-Consulta la compilación bibliográfica de factores de atenuación [aquí](https://github.com/rcfdtools/R.HydroTools/blob/main/FactorAtenuacionPrecipitacionFa/R.HydroTools.FactorAtenuacionPrecipitacionFa.pdf). 
+Consulta la compilación bibliográfica de factores de atenuación [aquí](R.HydroTools.FactorAtenuacionPrecipitacionFa.pdf). 
 
 
 ### Requerimientos
@@ -32,9 +34,9 @@ Consulta la compilación bibliográfica de factores de atenuación [aquí](https
 
 ### Ilustraciones
 
-![R.HydroTools.FactorAtenuacionPrecipitacionFa.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/FactorAtenuacionPrecipitacionFa/Screenshot/Screenshot1.png)
-![R.HydroTools.FactorAtenuacionPrecipitacionFa.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/FactorAtenuacionPrecipitacionFa/Screenshot/Screenshot2.png)
-![R.HydroTools.FactorAtenuacionPrecipitacionFa.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/FactorAtenuacionPrecipitacionFa/Screenshot/Screenshot3.png)
+![R.HydroTools.FactorAtenuacionPrecipitacionFa.Screenshot1](Screenshot/Screenshot1.png)
+![R.HydroTools.FactorAtenuacionPrecipitacionFa.Screenshot2](Screenshot/Screenshot2.png)
+![R.HydroTools.FactorAtenuacionPrecipitacionFa.Screenshot3](Screenshot/Screenshot3.png)
 
 
 ### Control de versiones
@@ -49,5 +51,5 @@ _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, 
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/17) |
+| [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/17) |
 |------------------------------------------------------------------|------------------------------------------------------------------------------|
