@@ -1,5 +1,7 @@
+<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
+
 ## Diseño geométrico e hidráulico vertical de canales a superficie libre
-Keywords: `Hydraulics` `Hydraulic design` `Critical depth` `Normal depth` `Yn` `Yc` `HEC-RAS hydraulic design` `Trapezoidal` `Circular` `Rectangular` `Triangular` `Tractive force`
+Keywords: `hydraulics` `hydraulic-design` `critical-depth` `normal-depth` `yn` `yc` `hec-ras-hydraulic-design` `trapezoidal` `circular` `rectangular` `triangular` `tractive-force`
 
 Dimensionar la sección hidráulica dominante y de creciente del cauce principal y de los cauces laterales menores, verificando a flujo uniforme la capacidad hidráulica de la sección compuesta y el borde libre requerido.
 
@@ -25,7 +27,7 @@ Dimensionar la sección hidráulica dominante y de creciente del cauce principal
 3. With the current selección, press F2 and then press <kbd>Shift</kbd>+<kbd>Ctrl</kbd>+<kbd>Enter</kbd>.
 
 
-### Módulo VBA [YnYc.bas](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoGeometricoHidraulicoVertical/YnYc.bas)
+### Módulo VBA [YnYc.bas](YnYc.bas)
 
 ```
 'Cálculo de profundidad normal y crítica y propopiedades hidráulicas en canales a superficie libre.
@@ -248,14 +250,14 @@ End Function
 
 ### Ilustraciones
 
-![R.HydroTools.DisenoGeometricoHidraulicoVertical.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoGeometricoHidraulicoVertical/Screenshot/Screenshot1.png)
-![R.HydroTools.DisenoGeometricoHidraulicoVertical.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoGeometricoHidraulicoVertical/Screenshot/Screenshot2.png)
-![R.HydroTools.DisenoGeometricoHidraulicoVertical.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoGeometricoHidraulicoVertical/Screenshot/Screenshot3.png)
-![R.HydroTools.DisenoGeometricoHidraulicoVertical.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoGeometricoHidraulicoVertical/Screenshot/Screenshot4.png)
-![R.HydroTools.DisenoGeometricoHidraulicoVertical.Screenshot5](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoGeometricoHidraulicoVertical/Screenshot/Screenshot5.png)
-![R.HydroTools.DisenoGeometricoHidraulicoVertical.Screenshot6](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoGeometricoHidraulicoVertical/Screenshot/Screenshot6.png)
-![R.HydroTools.DisenoGeometricoHidraulicoVertical.Screenshot7](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoGeometricoHidraulicoVertical/Screenshot/Screenshot7.png)
-![R.HydroTools.DisenoGeometricoHidraulicoVertical.Screenshot8](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoGeometricoHidraulicoVertical/Screenshot/Screenshot8.png)
+![R.HydroTools.DisenoGeometricoHidraulicoVertical.Screenshot1](Screenshot/Screenshot1.png)
+![R.HydroTools.DisenoGeometricoHidraulicoVertical.Screenshot2](Screenshot/Screenshot2.png)
+![R.HydroTools.DisenoGeometricoHidraulicoVertical.Screenshot3](Screenshot/Screenshot3.png)
+![R.HydroTools.DisenoGeometricoHidraulicoVertical.Screenshot4](Screenshot/Screenshot4.png)
+![R.HydroTools.DisenoGeometricoHidraulicoVertical.Screenshot5](Screenshot/Screenshot5.png)
+![R.HydroTools.DisenoGeometricoHidraulicoVertical.Screenshot6](Screenshot/Screenshot6.png)
+![R.HydroTools.DisenoGeometricoHidraulicoVertical.Screenshot7](Screenshot/Screenshot7.png)
+![R.HydroTools.DisenoGeometricoHidraulicoVertical.Screenshot8](Screenshot/Screenshot8.png)
 
 
 ### Referencias
@@ -279,5 +281,5 @@ _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, 
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/14) |
+| [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/14) |
 |------------------------------------------------------------------|------------------------------------------------------------------------------|
