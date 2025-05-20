@@ -1,6 +1,8 @@
 <div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
 
-## Hydraulic ditch design & model
+## Hydraulic ditch design & model  
+Keywords: `ditch` `hydraulic-channel`
+
 
 > The recommended 2D area cell size has to be at least 2 times the DEM resolution.
 

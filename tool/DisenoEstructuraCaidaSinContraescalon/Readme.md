@@ -1,5 +1,7 @@
+<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
+
 ## Diseño de estructura de caída sin contra-escalón en sección rectangular
-Keywords: `Hydraulics` `Hydraulic structure` `Spillway` `Tank` `Hydraulic jump`
+Keywords: `hydraulics` `hydraulic-structure` `spillway` `tank` `hydraulic-jump`
 
 El diseño y construcción de canales hidráulicos requiere frecuentemente del diseño de estructuras de caída, especialmente cuando se busca ajustar o mantener la pendiente de diseño, cuando no se realiza el diseño de cauce sinuoso confinado en valle o cuando debido a procesos erosivos el fondo del canal se degrada y es necesario que este se agrade para recuperar su condición inicial.
 
@@ -42,5 +44,5 @@ _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, 
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/10) |
+| [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/10) |
 |------------------------------------------------------------------|-------------------------------------------------------------------------------|

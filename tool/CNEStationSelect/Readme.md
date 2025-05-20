@@ -1,7 +1,7 @@
 <div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
 
 ## Catálogo nacional de estaciones de Colombia - CNE, análisis de longitud hipotética de series y selección de estaciones para estudios hidrológicos
-Keywords: `CNE` `IDEAM` `Study zone` `Gantt chart`  
+Keywords: `cne` `ideam` `study-zone` `gantt-chart`  
 
 El desarrollo de proyectos hidrológicos requiere del estudio de la red de estaciones terrestres para determinar su localización y selección a partir de la evaluación de la longitud hipotética de las series disponibles, en las que se considera que las estaciones deben disponer de registros continuos para los parámetros asociados a su categoría desde su fecha de instalación o puesta en funcionamiento y hasta su fecha de suspensión o hasta la fecha actual para estaciones que continúan en operación.
 

@@ -1,7 +1,7 @@
 <div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
 
 ## Parámetros generales para el diseño y modelación de cauces
-Keywords: `Hydrology` `Hydraulics` `River design parameters` `Velocity` `Shear` `Side slope` `River` `Bank`
+Keywords: `hydrology` `hydraulics` `river-design-parameters` `velocity` `shear` `side-slope` `river` `bank`
 
 Este libro de cálculo contiene lineamientos generales, parámetros para diseño y construcción de canales y obras hidráulicas, permite registrar:
 
