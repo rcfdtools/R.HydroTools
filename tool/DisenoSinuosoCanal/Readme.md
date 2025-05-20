@@ -1,5 +1,7 @@
+<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
+
 ## Diseño geométrico horizontal sinuoso de canales
-Keywords: `Hydraulics` `Hydraulic design` `Sinusoidal river design` 
+Keywords: `hydraulics` `hydraulic-design` `sinusoidal-river-design` 
 
 A partir de la estimación de los radios de curvatura característicos de los meandros existentes en cauces naturales, el índice de sinuosidad y los anchos de sección diseñados hidráulicamente para el transporte del caudal dominante y creciente; determinar los siguientes atributos geométricos requeridos para el trazado del corredor del cauce sinuoso en Autodesk Civil 3D:
 
@@ -45,13 +47,13 @@ End Sub
 
 ### Ilustraciones
 
-![R.HydroTools.DisenoSinuosoCanal.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoSinuosoCanal/Screenshot/Screenshot1.png)
-![R.HydroTools.DisenoSinuosoCanal.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoSinuosoCanal/Screenshot/Screenshot2.png)
-![R.HydroTools.DisenoSinuosoCanal.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoSinuosoCanal/Screenshot/Screenshot3.png)
-![R.HydroTools.DisenoSinuosoCanal.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoSinuosoCanal/Screenshot/Screenshot4.png)
-![R.HydroTools.DisenoSinuosoCanal.Screenshot5](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoSinuosoCanal/Screenshot/Screenshot5.png)
+![R.HydroTools.DisenoSinuosoCanal.Screenshot1](Screenshot/Screenshot1.png)
+![R.HydroTools.DisenoSinuosoCanal.Screenshot2](Screenshot/Screenshot2.png)
+![R.HydroTools.DisenoSinuosoCanal.Screenshot3](Screenshot/Screenshot3.png)
+![R.HydroTools.DisenoSinuosoCanal.Screenshot4](Screenshot/Screenshot4.png)
+![R.HydroTools.DisenoSinuosoCanal.Screenshot5](Screenshot/Screenshot5.png)
 <div align="center">
-<br><img alt="R.HydroTools" src="https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoSinuosoCanal/Screenshot/Screenshot6.png" width="60%"><br>
+<br><img alt="R.HydroTools" src="Screenshot/Screenshot6.png" width="60%"><br>
 </div>
 
 
@@ -72,5 +74,5 @@ _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, 
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/16) |
-|------------------------------------------------------------------|------------------------------------------------------------------------------|
+| [:house: Inicio](../../README.md)         | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/16) |
+|-------------------------------------------|-----------------------------------------------------------------------------------------|
