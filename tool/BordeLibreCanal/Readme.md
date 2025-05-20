@@ -1,7 +1,4 @@
-<div align="center">
-  <img alt="R.HydroTools" src="https://github.com/rcfdtools/R.HydroTools/blob/main/.Icons/R.HydroTools.svg" width="300px">
-  <br><b>Tools for GIS, hydrological and hydraulics computational analysis.</b>
-</div>
+<div align="center"><img alt="R.HydroTools" src="file/graph/R.HydroTools.svg" width="300px"></div>
 
 ## Estimación de borde libre en canales - Freeboard
 Keywords: `Hydraulics` `Freeboard` 
@@ -27,10 +24,10 @@ Sobreelevación requerida o borde libre en la sección de un canal, capaz de con
 
 ### Ilustraciones
 
-![R.HydroTools.BordeLibreCanal.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/BordeLibreCanal/Screenshot/Screenshot1.png)
-![R.HydroTools.BordeLibreCanal.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/BordeLibreCanal/Screenshot/Screenshot2.png)
-![R.HydroTools.BordeLibreCanal.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/BordeLibreCanal/Screenshot/Screenshot3.png)
-![R.HydroTools.BordeLibreCanal.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/BordeLibreCanal/Screenshot/Screenshot4.png)
+![R.HydroTools.BordeLibreCanal.Screenshot1](Screenshot/Screenshot1.png)
+![R.HydroTools.BordeLibreCanal.Screenshot2](Screenshot/Screenshot2.png)
+![R.HydroTools.BordeLibreCanal.Screenshot3](Screenshot/Screenshot3.png)
+![R.HydroTools.BordeLibreCanal.Screenshot4](Screenshot/Screenshot4.png)
 
 
 ### Referencias
@@ -54,5 +51,5 @@ _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, 
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/4) |
-|------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/4) |
+|-----------------------------------------------------------------------|----------------------------------------------------------------------------------------|
