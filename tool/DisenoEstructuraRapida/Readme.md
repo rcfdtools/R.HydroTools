@@ -1,5 +1,7 @@
+<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
+
 ## Diseño hidráulico y geométrico de rápidas
-Keywords: `Hydraulics` `Hydraulic structure` `Hydraulic jump` `Hydraulic fall`
+Keywords: `hydraulics` `hydraulic-structure` `hydraulic-jump` `hydraulic-fall`
 
 Una rápida es un canal de gran pendiente que conecta dos tramos de un canal con pendiente suave entre los que existe un desnivel considerable en una longitud corta. Obliga a conducir el agua en ese tramo sobre pendientes pronunciadas y con altas velocidades. Cuando la longitud de la rápida es corta, se la denomina caída inclinada y su diseño hidráulico es el mismo que el de la rápida.
 
@@ -88,19 +90,19 @@ End Sub
 
 ### Ilustraciones
 
-![R.HydroTools.DisenoEstructuraRapida.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraRapida/Screenshot/Screenshot1.png)
-![R.HydroTools.DisenoEstructuraRapida.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraRapida/Screenshot/Screenshot2.png)
-![R.HydroTools.DisenoEstructuraRapida.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraRapida/Screenshot/Screenshot3.png)
-![R.HydroTools.DisenoEstructuraRapida.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraRapida/Screenshot/Screenshot4.png)
-![R.HydroTools.DisenoEstructuraRapida.Screenshot5](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraRapida/Screenshot/Screenshot5.png)
-![R.HydroTools.DisenoEstructuraRapida.Screenshot6](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraRapida/Screenshot/Screenshot6.png)
-![R.HydroTools.DisenoEstructuraRapida.Screenshot7](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraRapida/Screenshot/Screenshot7.png)
-![R.HydroTools.DisenoEstructuraRapida.Screenshot8](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraRapida/Screenshot/Screenshot8.png)
-![R.HydroTools.DisenoEstructuraRapida.Screenshot9](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraRapida/Screenshot/Screenshot9.png)
-![R.HydroTools.DisenoEstructuraRapida.Screenshot10](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraRapida/Screenshot/Screenshot10.png)
-![R.HydroTools.DisenoEstructuraRapida.Screenshot11](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraRapida/Screenshot/Screenshot11.png)
-![R.HydroTools.DisenoEstructuraRapida.Screenshot12](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraRapida/Screenshot/Screenshot12.png)
-![R.HydroTools.DisenoEstructuraRapida.Screenshot13](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraRapida/Screenshot/Screenshot13.png)
+![R.HydroTools.DisenoEstructuraRapida.Screenshot1](Screenshot/Screenshot1.png)
+![R.HydroTools.DisenoEstructuraRapida.Screenshot2](Screenshot/Screenshot2.png)
+![R.HydroTools.DisenoEstructuraRapida.Screenshot3](Screenshot/Screenshot3.png)
+![R.HydroTools.DisenoEstructuraRapida.Screenshot4](Screenshot/Screenshot4.png)
+![R.HydroTools.DisenoEstructuraRapida.Screenshot5](Screenshot/Screenshot5.png)
+![R.HydroTools.DisenoEstructuraRapida.Screenshot6](Screenshot/Screenshot6.png)
+![R.HydroTools.DisenoEstructuraRapida.Screenshot7](Screenshot/Screenshot7.png)
+![R.HydroTools.DisenoEstructuraRapida.Screenshot8](Screenshot/Screenshot8.png)
+![R.HydroTools.DisenoEstructuraRapida.Screenshot9](Screenshot/Screenshot9.png)
+![R.HydroTools.DisenoEstructuraRapida.Screenshot10](Screenshot/Screenshot10.png)
+![R.HydroTools.DisenoEstructuraRapida.Screenshot11](Screenshot/Screenshot11.png)
+![R.HydroTools.DisenoEstructuraRapida.Screenshot12](Screenshot/Screenshot12.png)
+![R.HydroTools.DisenoEstructuraRapida.Screenshot13](Screenshot/Screenshot13.png)
 
 
 ### Referencias
@@ -127,5 +129,5 @@ _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, 
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/13) |
+| [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/13) |
 |------------------------------------------------------------------|-------------------------------------------------------------------------------|
