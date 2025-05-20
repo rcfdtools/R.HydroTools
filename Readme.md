@@ -61,13 +61,10 @@ R.HydroTools es un proyecto de desarrollo colaborativo para crear y compartir he
 | [Diques de protección o encausamiento usando RAS Mapper](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoDique/Readme.md) | El diseño hidráulico de canales requiere de la verificación de zonas suceptibles a inundación, bien sea por que la creciente de diseño no puede ser encausada sin desbordarse previamente al pasar al canal diseñado en su zona de inicio, o por que en su punto de descarga no existen cotas de confinamiento hidráulico que garanticen que el flujo no desborde o inunde zonas próximas, razón por la cual es necesario realizar el diseño y localización de diques complementarios.  | 
 
 
-
-
-**Licencia, cláusulas y condiciones de uso:**  R.HydroTools es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.HydroTools/wiki/License).
+**Licencia, cláusulas y condiciones de uso:** R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](License.md) y como referenciar los contenidos publicados en este repositorio.
 
 **Ayuda y soporte:** a través de la pestaña _[Discussions](https://github.com/rcfdtools/R.HydroTools/discussions)_ localizada en la parte superior de esta ventana, podrás encontrar y participar en los [_anuncios o noticias_](https://github.com/rcfdtools/R.HydroTools/discussions/categories/announcements) publicados, enviarnos tus [_ideas_](https://github.com/rcfdtools/R.HydroTools/discussions/categories/ideas) para herramientas complementarias, participar en preguntas, respuestas y consultas específicas [_Q&A_](https://github.com/rcfdtools/R.HydroTools/discussions/categories/q-a) y realizar [_publicaciones o consultas generales_](https://github.com/rcfdtools/R.HydroTools/discussions/categories/general).
 
-_¡Encontraste útil este proyecto!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
+**Clonación:** para compatibilidad completa de las rutas utilizadas en los scripts y herramientas de R.HydroTools, en Microsoft Windows clonar y/o descomprimir en _D:\R.HydroTools_. Enlace para clonación https://github.com/rcfdtools/R.HydroTools.git.
 
-| [Explorar herramientas disponibles](https://github.com/rcfdtools/R.HydroTools/wiki) |
-|-------------------------------------------------------------------------------------|
+_¡Encontraste útil este proyecto!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
