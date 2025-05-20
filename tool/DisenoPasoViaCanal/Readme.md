@@ -1,5 +1,7 @@
+<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
+
 ## Diseño geométrico de pasos de vía en canales usando alcantarillas por área equivalente a descarga libre para modelos hidráulicos en HEC-RAS.
-Keywords: `Hydraulics` `Hydraulic design` `Culvert design` `ModelBuilder` `Invert elevation`
+Keywords: `hydraulics` `hydraulic-design` `culvert-design` `model-builder` `invert-elevation`
 
 Dimensionar la geometría de sección requerida para transportar el caudal de diseño de creciente bajo pasos de vía usando área equivalente. Es recomendable ubicar los pasos de vía en zonas de corte, en la que se disponga de una profundidad a la base del canal dominante mayor a la profundidad hidráulica de diseño; de este modo se podrán utilizar tuberías de diámetros superiores garantizando el tránsito hidráulico a descarga libre. 
 
@@ -12,7 +14,7 @@ Dimensionar la geometría de sección requerida para transportar el caudal de di
 ### Funcionalidades
 
 * Resuelve el número de alcantarillas principales y secundarias requeridas a partir de los parámetros de entrada.
-* Grafica las secciones del canal y paso de vía con localización de alcantarillas obtenidas.
+* Gráfica las secciones del canal y paso de vía con localización de alcantarillas obtenidas.
 * Crea la tabla de datos geográficos para la creación de nodos y líneas 3D de eje, clave y batea.
 * Resuelve la pendiente de las alcantarillas para modelos 1D en función de las secciones de referencia utilizadas para la localización.
 * Mediante la caja de herramientas ESRI ArcGIS for Desktop _R.HydroTools.DisenoPasoViaCanal.tbx_, crea los nodos y líneas 3D y exporta las líneas cota, eje y batea a Autocad.
@@ -421,7 +423,7 @@ End Sub
 
 ### Ilustraciones
 
-![R.HydroTools.DisenoPasoViaCanal.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/Screenshot/Screenshot1.png)
+![R.HydroTools.DisenoPasoViaCanal.Screenshot1](Screenshot/Screenshot1.png)
 ![R.HydroTools.DisenoPasoViaCanal.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/Screenshot/Screenshot2.png)
 ![R.HydroTools.DisenoPasoViaCanal.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/Screenshot/Screenshot3.png)
 ![R.HydroTools.DisenoPasoViaCanal.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoPasoViaCanal/Screenshot/Screenshot4.png)
@@ -451,5 +453,5 @@ _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, 
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/15) |
+| [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/15) |
 |------------------------------------------------------------------|-------------------------------------------------------------------------------|
