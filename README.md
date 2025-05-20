@@ -75,27 +75,10 @@ A través de las actividades disponibles en este repositorio, aprenderá los con
 * En ArcGIS Pro (p.e, 2.9.0), la versión integrada de Python es 3.7.11, por defecto se instala en C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3 y por clonación en el directorio de usuario (p.e, Admin) en C:\Users\Admin\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone.
 * En QGIS (p.e, 3.22.1), la versión integrada de Python es la 3.9.5, por defecto se instalan en Microsoft Windows en el directorio de archivos de programa localizado en C:\Program Files\QGIS 3.10\apps cuando se trata de versiones de 64 bits.
 
-
-**Requerimientos**
-
-* [ESRI ArcGIS for Desktop 10+](www.esri.com)
-* [ESRI ArcGIS Pro 2.9+](www.esri.com)
-* [QGIS 2.18.28 (opcional)](www.qgis.org)
-* [QGIS 3.22.1+]( www.qgis.org)
-* [Python 2.7.17 standalone (opcional)](www.python.org)
-* [Python 3.10.0 standalone](www.python.org)
-* [Anaconda (opcional)](www.anaconda.com)
-* [PyCharm Community](www.jetbrains.com/pycharm)
-* [PyCharm for Anaconda (opcional)](www.jetbrains.com/lp/pycharm-anaconda)
-
-> Requerimientos específicos adicionales son indicados en cada script o en cada actividad/microcontenido.
-> 
-> Las versiones indicadas pueden variar dependiendo de las actualizaciones y nuevas versiones de las herramientas y librerías utilizadas.
-> 
-> Para la actualización de librerías existentes o la instalación de librerías adicionales, se recomienda la creación y uso de ambientes virtuales para no modificar las versiones originales de Python instaladas sobre ArcGIS for Desktop, ArcGIS Pro y QGIS.
+> Requerimientos específicos adicionales son indicados en cada script o en cada actividad/microcontenido. Para la actualización de librerías existentes o la instalación de librerías adicionales, se recomienda la creación y uso de ambientes virtuales para no modificar las versiones originales de Python instaladas sobre ArcGIS for Desktop, ArcGIS Pro y QGIS.
 
 
-### 1. Fundamentos generales de Python
+### 1. Fundamentos de Python
 
 Este tema presenta los fundamentos básicos generales necesarios para la comprensión de la sintaxis propia de este lenguaje, requerida para la ejecución de instrucciones por consola o para la codificación de scripts.  
 
