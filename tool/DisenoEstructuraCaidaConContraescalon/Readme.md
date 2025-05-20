@@ -1,5 +1,7 @@
+<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
+
 ## Diseño de estructura de caída con contra-escalón en sección rectangular
-Keywords: `Hydraulics` `Hydraulic structure` `Spillway` `Tank` `Hydraulic jump`
+Keywords: `hydraulics` `hydraulic-structure` `spillway` `tank` `hydraulic-jump`
 
 El diseño y construcción de canales hidráulicos requiere frecuentemente del diseño de estructuras de caída, especialmente cuando se busca ajustar o mantener la pendiente de diseño, cuando no se realiza el diseño de cauce sinuoso confinado en valle o cuando debido a procesos erosivos el fondo del canal se degrada y es necesario que este se agrade para recuperar su condición inicial. El contra escalón permite controlar la posición del resalto dentro de la estructura y crea un tanque que funciona como disipador de energía en la caída previniendo así la erosión del lecho.
 
@@ -19,10 +21,10 @@ El diseño y construcción de canales hidráulicos requiere frecuentemente del d
 
 ### Ilustraciones
 
-![R.HydroTools.DisenoEstructuraCaidaConContraescalon.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraCaidaConContraescalon/Screenshot/Screenshot1.png)
-![R.HydroTools.DisenoEstructuraCaidaConContraescalon.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraCaidaConContraescalon/Screenshot/Screenshot2.png)
-![R.HydroTools.DisenoEstructuraCaidaConContraescalon.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraCaidaConContraescalon/Screenshot/Screenshot3.png)
-![R.HydroTools.DisenoEstructuraCaidaConContraescalon.Screenshot4](https://github.com/rcfdtools/R.HydroTools/blob/main/DisenoEstructuraCaidaConContraescalon/Screenshot/Screenshot4.png)
+![R.HydroTools.DisenoEstructuraCaidaConContraescalon.Screenshot1](Screenshot/Screenshot1.png)
+![R.HydroTools.DisenoEstructuraCaidaConContraescalon.Screenshot2](Screenshot/Screenshot2.png)
+![R.HydroTools.DisenoEstructuraCaidaConContraescalon.Screenshot3](Screenshot/Screenshot3.png)
+![R.HydroTools.DisenoEstructuraCaidaConContraescalon.Screenshot4](Screenshot/Screenshot4.png)
 
 
 ### Referencias
@@ -42,5 +44,5 @@ _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, 
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/9) |
+| [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/9) |
 |------------------------------------------------------------------|------------------------------------------------------------------------------|
