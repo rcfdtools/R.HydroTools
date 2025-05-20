@@ -1,3 +1,8 @@
+<div align="center">
+  <img alt="R.HydroTools" src="https://github.com/rcfdtools/R.HydroTools/blob/main/.Icons/R.HydroTools.svg" width="300px">
+  <br><b>Tools for GIS, hydrological and hydraulics computational analysis.</b>
+</div>
+
 ## Estimación de borde libre en canales - Freeboard
 Keywords: `Hydraulics` `Freeboard` 
 
