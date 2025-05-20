@@ -1,5 +1,7 @@
+<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
+
 ## Evaluación de taludes de referencia para diseño de sección a partir de secciones transversales de cauces naturales
-Keywords: `Hydraulics` `Side slope`
+Keywords: `gydraulics` `side-slope` 'z:n'
 
 A partir de la información topográfica disponible y de las secciones transversales trazadas en el modelo de muestreo HEC-GeoRAS arriba del punto de inicio y abajo del punto de entrega sobre cauces naturales existentes y en cauces laterales, estudiar la inclinación actual de los taludes que será utilizada como referencia para el diseño del canal artificial compuesto, correspondiente al talud estable del cauce natural luego de todos los procesos erosivos y de sedimentación.
 
@@ -23,9 +25,9 @@ Para el estudio de los taludes de referencia, en el libro de análisis se pueden
 
 ### Ilustraciones
 
-![R.HydroTools.TaludReferenciaCanal.Screenshot1](https://github.com/rcfdtools/R.HydroTools/blob/main/TaludReferenciaCanal/Screenshot/Screenshot1.png)
-![R.HydroTools.TaludReferenciaCanal.Screenshot2](https://github.com/rcfdtools/R.HydroTools/blob/main/TaludReferenciaCanal/Screenshot/Screenshot2.png)
-![R.HydroTools.TaludReferenciaCanal.Screenshot3](https://github.com/rcfdtools/R.HydroTools/blob/main/TaludReferenciaCanal/Screenshot/Screenshot3.png)
+![R.HydroTools.TaludReferenciaCanal.Screenshot1](Screenshot/Screenshot1.png)
+![R.HydroTools.TaludReferenciaCanal.Screenshot2](Screenshot/Screenshot2.png)
+![R.HydroTools.TaludReferenciaCanal.Screenshot3](Screenshot/Screenshot3.png)
 
 
 ### Control de versiones
@@ -41,5 +43,5 @@ _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, 
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/25) |
-|------------------------------------------------------------------|------------------------------------------------------------------------------|
+| [:house: Inicio](../../README.md)  | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/25) |
+|------------------------------------|-----------------------------------------------------------------------------------------|
