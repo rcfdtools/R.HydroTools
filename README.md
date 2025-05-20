@@ -113,7 +113,7 @@ En el siguiente cuadro se indican algunos de los nombres y rutas asociadas en Py
 > Para la actualización de librerías existentes o la instalación de librerías adicionales, se recomienda la creación y uso de ambientes virtuales para no modificar las versiones originales de Python instaladas sobre ArcGIS for Desktop, ArcGIS Pro y QGIS.
 
 
-## 1. Fundamentos generales de Python
+### 1. Fundamentos generales de Python
 
 Este tema presenta los fundamentos básicos generales necesarios para la comprensión de la sintaxis propia de este lenguaje, requerida para la ejecución de instrucciones por consola o para la codificación de scripts.  
 
@@ -132,7 +132,7 @@ Este tema presenta los fundamentos básicos generales necesarios para la compren
 | [Introducción a pandas - Representación estadística de Municipios de Colombia](tool/PandasBasic)                        | Pandas es una librería complementaria al lenguaje de programación Python que permite leer, representar y manipular datos almacenados en diferentes formatos, p.ej, en archivos de texto separados por comas .csv (CSV - Comma separated values) y archivos en formatos de libro de cálculo electrónico como Microsoft Excel en formato .xls y .xlsx.                                                        |
 
 
-## 2 - Procesamiento de tablas geo-codificadas
+### 2 - Procesamiento de tablas geo-codificadas
 
 Las tablas geo-codificadas contienen columnas de atributos que hacen referencia a la localización espacial de puntos o sucesiones de puntos (utilizados para el trazado de polilíneas o polígonos), su procesamiento permite representar y crear espacialmente diferentes geometrías.
 
@@ -144,7 +144,7 @@ Las tablas geo-codificadas contienen columnas de atributos que hacen referencia 
 | [Interpolación y representación espacial de series de datos meteorológicos con simbología de rampa única](tool/TableInterpolatedGrid)   | A partir de series de datos diarias o mensuales contenidas en registros discretos dentro de archivos de texto separados por comas o CSV, interpolar y representar espacialmente datos hidrometeorológicos usando re-escalamiento a rampa única de color. Para representar correctamente la serie temporal de la variable en estudio y poder visualizar bidimensional o tridimensionalmente las grillas de resultados, es necesario re-escalar los valores de todas las grillas a mapas de colores únicos a partir del mínimo y máximo encontrado en toda la serie de datos de entrada; de esta forma, en la representación, un valor discreto (p.ej, 100 milímetros de lluvia) existente en múltiples grillas será representado con el mismo color en la visualización.                                                                                                                                                                                                                                                                                                                                                                    |
 
 
-## 3. Procesamiento y análisis de capas geográficas y datasets
+### 3. Procesamiento y análisis de capas geográficas y datasets
 
 En el desarrollo de proyectos con componente geográfico, es necesario conocer los datos y metadatos de las diferentes capas que se utilizarán en los análisis, de esta forma, al ejecutar los diferentes geoprocesos, el analista podrá definir fácilmente los parámetros de entrada y entender como serán generadas las capas resultantes. 
 
@@ -157,7 +157,7 @@ En el desarrollo de proyectos con componente geográfico, es necesario conocer l
 | [Convertir una tabla o dataset dinámico en una tabla de registros apilados](tool/UnpivotTable)                      | Este script permite crear una tabla de registros apilados de series de tiempo para cargue masivo y visualización en GIS.                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 
-## 4. Enlaces de interés
+### 4. Enlaces de interés
 
 * [Python.org](https://www.python.org/)
 * [Pandas.pydata.org](https://pandas.pydata.org/)
