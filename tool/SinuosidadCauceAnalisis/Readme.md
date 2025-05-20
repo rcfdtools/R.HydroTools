@@ -1,5 +1,7 @@
+<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
+
 ## Evaluación y análisis de sinuosidad en cauces naturales
-Keywords: `Hydraulics` `Sinuosity` `River bend` `Channel length` `Valley length`
+Keywords: `hydraulics` `sinuosity` `river-bend` `channel-length` `valley-length`
 
 A partir de las líneas de drenaje restituidas y las líneas esquemáticas que representan tránsito hidrológico en el modelo geográfico de HEC-GeoHMS, determinar el factor de sinuosidad por los siguientes métodos geográficos:
 
@@ -112,7 +114,7 @@ _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, 
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](https://github.com/rcfdtools/R.HydroTools/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/24) |
+| [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/24) |
 |------------------------------------------------------------------|------------------------------------------------------------------------------|
 
 [^1]: Imágenes tomadas de [Google Maps](http://maps.google.com) y https://www.centerforfoodsafety.org/issues/4729/water/californias-state-water-project.
