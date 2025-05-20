@@ -1,6 +1,6 @@
 <div align="center">
   <img alt="R.HydroTools" src="file/graph/R.HydroTools.svg" width="300px">
-  <br><b>Tools for GIS, hydrological and hydraulics computational analysis.</b>
+  <br><b>Tools for GIS, hydrological and hydraulics computational analysis</b>
 </div>
 
 ## ¿Qué es R.HydroTools?
