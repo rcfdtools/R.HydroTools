@@ -1,5 +1,18 @@
 ## Referencias
 
+**Enlaces de interés Python**
+
+* [Python.org](https://www.python.org/)
+* [Pandas.pydata.org](https://pandas.pydata.org/)
+* [NumPy.org](https://pandas.pydata.org/)
+* [matplotlib.org](https://matplotlib.org/)
+* [pypi.org](https://pypi.org/)
+* [rasterio](https://pypi.org/project/rasterio/)
+* [drawio](https://app.diagrams.net/)
+* [Excepciones en Python](https://docs.python.org/3/library/exceptions.html)
+* [PEP 8 – Style Guide for Python Code](https://peps.python.org/pep-0008/#naming-conventions)
+* [Enlaces y referencias complementarias](https://github.com/rcfdtools/R.GISPython/wiki/Referencias)  
+
 Reporta referencias adicionales a través de este [hilo de discusión](https://github.com/rcfdtools/R.HydroTools/discussions/27).
 
 | Referencia APA / Archivo                                                                                                                                                                                                                                                                                                                                                                                                                                             | Referencia por                             |

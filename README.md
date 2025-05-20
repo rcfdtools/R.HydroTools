@@ -76,11 +76,6 @@ A través de las actividades disponibles en este repositorio, aprenderá los con
 * En QGIS (p.e, 3.22.1), la versión integrada de Python es la 3.9.5, por defecto se instalan en Microsoft Windows en el directorio de archivos de programa localizado en C:\Program Files\QGIS 3.10\apps cuando se trata de versiones de 64 bits.
 
 
-**¿Qué es un Script en Python?**
-
-Un script en Python, es un archivo que contiene diferentes instrucciones o código que pueden ser ejecutadas por el intérprete de comandos. Generalmente los archivos son almacenados con la extensión .py y son usados para ejecutar o automatizar tareas repetitivas. Para la creación de scripts, es recomendable utilizar un editor de código que permita identificar con facilidad la estructura y escritura propia del lenguaje o un entorno de desarrollo de aplicaciones (IDE), por ejemplo, Notepad++, Sublime Text, Gedit, Anaconda o PyCharm. En QGIS (p.e, 3.10), desde la consola de Python es posible acceder al editor de scripts, desde el cual se puede crear, abrir, editar y ejecutar directamente este tipo de archivos. En ArcGIS for Desktop, es posible editar y ejecutar archivos .py directamente desde el ambiente integrado de desarrollo o IDLE de Python incorporado.
-
-
 **Requerimientos**
 
 * [ESRI ArcGIS for Desktop 10+](www.esri.com)
@@ -94,22 +89,9 @@ Un script en Python, es un archivo que contiene diferentes instrucciones o códi
 * [PyCharm for Anaconda (opcional)](www.jetbrains.com/lp/pycharm-anaconda)
 
 > Requerimientos específicos adicionales son indicados en cada script o en cada actividad/microcontenido.
-
-
-**Intérpretes de Python en PyCharm** 
-
-En el siguiente cuadro se indican algunos de los nombres y rutas asociadas en PyCharm que son utilizadas durante el desarrollo de los microcontenidos de este repositorio. En PyCharm, oprimir `Ctrl+Alt+S` para ingresar a _Settings_, seleccionar el proyecto y definir los intérpretes de Python. 
-
-| Nombre y versión de Python             | Ruta asociada                                                        |
-|----------------------------------------|----------------------------------------------------------------------|
-| Python 2.7.5 ArcGIS for Desktop 10.2.2 | C:\Python27\ArcGIS10.2\python.exe                                    |
-| Python 3.7.11 ArcGIS Pro 2.9.1         | C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\python.exe |
-| Python 3.10.2 Standalone               | C:\Python310\python.exe                                              |
-| Python 3.9.5 QGIS 3.22.3               | C:\Program Files\QGIS 3.22.3\apps\Python39\python.exe               |
-| Python 3.8.10 Standalone               | C:\Python381\python.exe                                              |
-
+> 
 > Las versiones indicadas pueden variar dependiendo de las actualizaciones y nuevas versiones de las herramientas y librerías utilizadas.
-
+> 
 > Para la actualización de librerías existentes o la instalación de librerías adicionales, se recomienda la creación y uso de ambientes virtuales para no modificar las versiones originales de Python instaladas sobre ArcGIS for Desktop, ArcGIS Pro y QGIS.
 
 
@@ -155,21 +137,6 @@ En el desarrollo de proyectos con componente geográfico, es necesario conocer l
 | [Zonificación hidrográfica de Colombia - Análisis de forma y densidad usando Python](tool/HydroGeoZone)             | Estudiar la forma y densidad de las áreas, zonas y subzonas hidrográficas de Colombia a partir de la delimitación geográfica realizada por el [Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM](http://www.ideam.gov.co/) de Colombia, adscrito al [Ministerio de Medio Ambiente - Minambiente](https://www.minambiente.gov.co/) y la red de drenajes sencillos digitalizada a escala 1:100k por el [Instituto Geográfico Agustín Codazzi - IGAC](https://www.igac.gov.co/).                                  |
 | [Unión de múltiples tablas de datos hidro-climatológicos en un dataset único](tool/MultipleTableJoin)               | Isolated time-series file parameters, has to be joined in a unique table if you want to use dynamic ArcGIS map views related with gauge stations or basin polygons through an ETL process. Current ETL scripts include the datasets [CAMELS-BR](tool/MultipleTableJoin/CAMELS_BR), [ANA-BR](tool/MultipleTableJoin/ANA_BR) & [CAR-CO](tool/MultipleTableJoin/CAR_CO).                    |
 | [Convertir una tabla o dataset dinámico en una tabla de registros apilados](tool/UnpivotTable)                      | Este script permite crear una tabla de registros apilados de series de tiempo para cargue masivo y visualización en GIS.                                                                                                                                                                                                                                                                                                                                                                                                           |
-
-
-### 4. Enlaces de interés
-
-* [Python.org](https://www.python.org/)
-* [Pandas.pydata.org](https://pandas.pydata.org/)
-* [NumPy.org](https://pandas.pydata.org/)
-* [matplotlib.org](https://matplotlib.org/)
-* [pypi.org](https://pypi.org/)
-* [rasterio](https://pypi.org/project/rasterio/)
-* [drawio](https://app.diagrams.net/)
-* [Excepciones en Python](https://docs.python.org/3/library/exceptions.html)
-* [PEP 8 – Style Guide for Python Code](https://peps.python.org/pep-0008/#naming-conventions)
-* [Enlaces y referencias complementarias](https://github.com/rcfdtools/R.GISPython/wiki/Referencias)  
-
 
 
 **Licencia, cláusulas y condiciones de uso:** R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](License.md) y como referenciar los contenidos publicados en este repositorio.
