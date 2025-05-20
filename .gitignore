@@ -6,8 +6,8 @@
 # Large files over 100MB have be compress in 95MB file parts.
 
 # General exclusions
-.idea/
 .git/
+.idea/
 .venv/
 
 # Large files exclusions
