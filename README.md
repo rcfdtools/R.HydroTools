@@ -78,7 +78,6 @@ Python es un potente lenguaje de programación interpretado con licencia de cód
 > Requerimientos específicos adicionales son indicados en cada script o en cada actividad/microcontenido. Para la actualización de librerías existentes o la instalación de librerías adicionales, se recomienda la creación y uso de ambientes virtuales para no modificar las versiones originales de Python instaladas sobre ArcGIS for Desktop, ArcGIS Pro y QGIS.
 
 
-
 ### 1. Fundamentos
 
 Este tema presenta los fundamentos básicos generales necesarios para la comprensión de la sintaxis propia de este lenguaje, requerida para la ejecución de instrucciones por consola o para la codificación de scripts.  
