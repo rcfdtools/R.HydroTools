@@ -1,7 +1,7 @@
 <div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
 
 ## Generador de rampas de color para representación de grillas en ArcGIS for Desktop y ArcGIS Pro
-Keywords: `ArcGIS` `Python 3` `matplotlib` `sys` `datetime` `open()` `write()` `close()` `abs()` `append()` `range()` `zfill()`
+Keywords: `arcgis` `python-3` `matplotlib` `sys` `datetime` `open()` `write()` `close()` `abs()` `append()` `range()` `zfill()`
 
 ![ColorMapStyle.png](Screenshot/ColorMapStyle.png)
 
