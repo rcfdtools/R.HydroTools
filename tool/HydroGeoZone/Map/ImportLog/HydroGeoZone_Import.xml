@@ -1,0 +1,58 @@
+<ImportMXDLog>	<Messages>
+		<FileName>D:\R.GISPython\HydroGeoZone\Map\HydroGeoZone.mxd</FileName>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>High</Severity>
+			<Description>Basemap Layers cannot be published directly to a service</Description>
+			<Code>00037</Code>
+			<ComponentName>Basemap</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>High</Severity>
+			<Description>Basemap Layers cannot be published directly to a service</Description>
+			<Code>00037</Code>
+			<ComponentName>Basemap</ComponentName>
+			<ComponentType>Layer</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Grids and graticules imported into ArcGIS Pro may appear differently. Modifications to the default appearance may be required.</Description>
+			<Code>20055</Code>
+			<ComponentName>HydroGeoZone</ComponentName>
+			<ComponentType>Layout</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Grids and graticules imported into ArcGIS Pro may appear differently. Modifications to the default appearance may be required.</Description>
+			<Code>20055</Code>
+			<ComponentName>HydroGeoZone</ComponentName>
+			<ComponentType>Layout</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Grids and graticules imported into ArcGIS Pro may appear differently. Modifications to the default appearance may be required.</Description>
+			<Code>20055</Code>
+			<ComponentName>HydroGeoZone</ComponentName>
+			<ComponentType>Layout</ComponentType>
+</Message>
+		<Message>
+			<Name></Name>
+			<MessageType>Warning</MessageType>
+			<Severity>Medium</Severity>
+			<Description>Legends imported into ArcGIS Pro may appear differently due to improvements in the fitting strategy and changes made to legend patch shapes. Modifications to the default appearance may be required.</Description>
+			<Code>20038</Code>
+			<ComponentName>HydroGeoZone</ComponentName>
+			<ComponentType>Layout</ComponentType>
+</Message>
+</Messages>
+</ImportMXDLog>

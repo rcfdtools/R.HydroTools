@@ -1,0 +1,19 @@
+Tareas
+
+Longitudes en red de drenaje 2019
+Drenajes intersect 	1104464.501861
+Zubzona Sum:		1104464.501861
+Zona Sum:			1104464.501861
+AreaH Sum:			1104464.501861
+
+Frecuencias en red de drenaje 2019
+Drenajes intersect 	432554
+ZubzonaH Sum: 		432554
+ZonaH Sum:			432554
+AreaH Sum:			432554
+
+fieldAHCode, fieldZHCode, fieldSZHCode= 'COD_AH', 'COD_ZH', 'COD_SZH'
+fieldAHName, fieldZHName, fieldSZHName= 'NOM_AH', 'NOM_ZH', 'NOM_SZH'
+
+https://www.igac.gov.co/sites/igac.gov.co/files/catalogo_representacion_10k_v1.0.pdf
+
