@@ -1,9 +1,11 @@
+<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
+
 ## Instalación, actualización de paquetes y creación de gráficas básicas usando matplotlib
-Keywords: `Concentration time` `Giandotti` `Subbasin` `Hydrology` `Interactive` `define` `while` `matplotlib` `.lower()` 
+Keywords: `concentration-time` `giandotti` `subbasin` `hydrology` `interactive` `define` `while` `matplotlib` `.lower()` 
 
 Complementariamente a las librerías obtenidas con la instalación de Python, es posible adicionar nuevas librerías que posteriormente podrán ser invocadas desde la consola o desde scripts y también se pueden actualizar las librerías preinstaladas. El procedimiento más común de instalación automatizada se realiza a través del comando de consola `pip` disponible en el directorio _Scripts_ de Python. 
 
-![InstallPackageGraph.png](https://github.com/rcfdtools/R.GISPython/blob/main/InstallPackageGraph/Screenshot/InstallPackageGraph.png)
+![InstallPackageGraph.png](Screenshot/InstallPackageGraph.png)
 
 Para el ejemplo de estimación del tiempo de concentración, además de permitir la entrada de datos del usuario y calcular la variación del tiempo obtenido cambiando la pendiente desde un valor bajo (p.ej, 0.001 m/m) hasta la pendiente ingresada por el usuario y para un determinado número de variaciones (p.ej, 12), crearemos una gráfica que permita analizar visualmente la tendencia de los datos.
 
@@ -48,7 +50,7 @@ Para el desarrollo del script, estimaremos el tiempo de concentración en una cu
 
 <br>
 <div  align="center">
-    <img align="center"  alt="R.GISPython.InteractiveScript.TcGiangotti" src="https://github.com/rcfdtools/R.GISPython/blob/main/InstallPackageGraph/Screenshot/TcGiangotti.png" width="240px"/>
+    <img align="center"  alt="R.GISPython.InteractiveScript.TcGiangotti" src="Screenshot/TcGiangotti.png" width="240px"/>
 </div>
 
 
@@ -177,7 +179,7 @@ plt.show()
 
 > Tenga en cuenta que la ruta instalación de Python 3.10 depende de la ruta definida por el usuario en el momento de la instalación. Para consultar las rutas de las versiones instaladas de Python en su sistema, consultar https://github.com/rcfdtools/R.GISPython/tree/main/PythonVersion
 
-![Python3.10.0StandaloneCMDScriptsDir.png](https://github.com/rcfdtools/R.GISPython/blob/main/InstallPackageGraph/Screenshot/Python3.10.0StandaloneCMDScriptsDir.png)
+![Python3.10.0StandaloneCMDScriptsDir.png](Screenshot/Python3.10.0StandaloneCMDScriptsDir.png)
 
 
 1. En el command o _CMD_ de Windows ejecutar `py -3.10 -m pip install -U pip`. Esta instrucción permite actualizar la versión existente de `pip` antes de instalar paquetes adicionales recientes.
@@ -185,15 +187,15 @@ plt.show()
 > En el evento de que el paquete _pip_ no se encuentre instalado, la instrucción anterior realizará la instalación. <br><br>
 > Para la instalación y actualización sobre la versión por defecto definida en las variables de entorno de Windows, no es necesario especificar la versión de Python y puede utilizar la instrucción `C:\Python -m pip install -U pip`. Tenga en cuenta que si la versión por defecto de Python es la correspondiente a la incluida en instalación de ESRI ArcGIS, se actualizarán las versiones por defecto de la aplicación y podrán presentarse errores o valores errados en la ejecución de los geo-procesos asociados a esta herramienta.
 
-![Python3.10.0StandaloneCMDpipUpdate.png](https://github.com/rcfdtools/R.GISPython/blob/main/InstallPackageGraph/Screenshot/Python3.10.0StandaloneCMDpipUpdate.png)
+![Python3.10.0StandaloneCMDpipUpdate.png](Screenshot/Python3.10.0StandaloneCMDpipUpdate.png)
 
 > La actualización también puede ser realizada directamente desde PyCharm, oprimir `Ctrl+Alt+S`, ir a la pestaña _Project_, seleccionar _Python Interpreter_, seleccionar _Python 3.10_, dar doble clic en el paquete _pip_ y en la ventana _Available Packages_ seleccionar _pip_, especificar la versión a actualizar y dar clic en Install Package.
 
-![Python3.10.0StandalonePyCharm2021.3pipUpdate.png](https://github.com/rcfdtools/R.GISPython/blob/main/InstallPackageGraph/Screenshot/Python3.10.0StandalonePyCharm2021.3pipUpdate.png)
+![Python3.10.0StandalonePyCharm2021.3pipUpdate.png](Screenshot/Python3.10.0StandalonePyCharm2021.3pipUpdate.png)
 
 2. Para la instalación de la versión más actual de _matplotlib_, en el CMD ejecutar `py -3.10 -m pip install -U matplotlib`.
 
-![Python3.10.0StandaloneCMDmatplotlibInstall.png](https://github.com/rcfdtools/R.GISPython/blob/main/InstallPackageGraph/Screenshot/Python3.10.0StandaloneCMDmatplotlibInstall.png)
+![Python3.10.0StandaloneCMDmatplotlibInstall.png](Screenshot/Python3.10.0StandaloneCMDmatplotlibInstall.png)
 
 > matplotlib también puede ser instalado directamente desde el administrador de paquetes de PyCharm para el intérprete de Python seleccionado por el usuario.<br><br>
 > Para desinstalar la librería podrá utilizar la secuencia de comandos `py -3.10 -m pip uninstall matplotlib`<br><br>
@@ -201,24 +203,24 @@ plt.show()
 
 3. Para verificar la correcta instalación de la librería, en el CMD del sistema, ejecutar Python `C:\py -3.10` y realizar el llamado de la librería y consultar la versión y ruta de instalación a través de los comandos `import matplotlib`, `matplotlib.__version__`, `matplotlib.__path__` y `matplotlib.__file__`
 
-![Python3.10.0StandaloneCMDmatplotlibCheck.png](https://github.com/rcfdtools/R.GISPython/blob/main/InstallPackageGraph/Screenshot/Python3.10.0StandaloneCMDmatplotlibCheck.png)
+![Python3.10.0StandaloneCMDmatplotlibCheck.png](Screenshot/Python3.10.0StandaloneCMDmatplotlibCheck.png)
 
 > En Python 2.7.5 de ArcGIS for Desktop 10.2.2, podrá realizar la verificación de la versión preinstalada de matplotlib siguiendo el mismo procedimiento descrito anteriormente.
 
-![Python2.7.5ArcGISDesktop10.2.2CMDmatplotlibCheck.png](https://github.com/rcfdtools/R.GISPython/blob/main/InstallPackageGraph/Screenshot/Python2.7.5ArcGISDesktop10.2.2CMDmatplotlibCheck.png)
+![Python2.7.5ArcGISDesktop10.2.2CMDmatplotlibCheck.png](Screenshot/Python2.7.5ArcGISDesktop10.2.2CMDmatplotlibCheck.png)
 
 
 ### Ejecución desde Pycharm
 
 > PyCharm requiere de configuración previa del intérprete de Python a utilizar en la ejecución del script. Oprima `Ctrl+Alt+S` para acceder a la ventana de configuración y en la pestaña _Project: R.GISPython_ configurar los intérpretes disponibles en su equipo.
 
-![PyCharm2021.3SetupPythonInterpreter.png](https://github.com/rcfdtools/R.GISPython/blob/main/InstallPackageGraph/Screenshot/PyCharm2021.3SetupPythonInterpreter.png)
+![PyCharm2021.3SetupPythonInterpreter.png](Screenshot/PyCharm2021.3SetupPythonInterpreter.png)
 
 Ejecución en PyCharm usando Python 2.7.5 de ArcGIS for Desktop 10.2.2. 
-![Python2.7.5ArcGISDesktop10.2.2PyCharm2021.3.png](https://github.com/rcfdtools/R.GISPython/blob/main/InstallPackageGraph/Screenshot/Python2.7.5ArcGISDesktop10.2.2PyCharm2021.3.png)
+![Python2.7.5ArcGISDesktop10.2.2PyCharm2021.3.png](Screenshot/Python2.7.5ArcGISDesktop10.2.2PyCharm2021.3.png)
 
 Ejecución en PyCharm usando Python 3.10.0.
-![Python3.10.0StandalonePyCharm2021.3.png](https://github.com/rcfdtools/R.GISPython/blob/main/InstallPackageGraph/Screenshot/Python3.10.0StandalonePyCharm2021.3.png)
+![Python3.10.0StandalonePyCharm2021.3.png](Screenshot/Python3.10.0StandalonePyCharm2021.3.png)
 
 
 ### Ejecución desde el Command o CMD de Microsoft Windows
@@ -233,10 +235,10 @@ Ejecución en consola CMD Python 2.7.5 de ArcGIS for Desktop 10.2.2.
 
 > En esta versión, la codificación de texto no imprime correctamente caracteres acentuados del español.
 
-![Python2.7.5ArcGISDesktop10.2.2CMD.png](https://github.com/rcfdtools/R.GISPython/blob/main/InstallPackageGraph/Screenshot/Python2.7.5ArcGISDesktop10.2.2CMD.png)
+![Python2.7.5ArcGISDesktop10.2.2CMD.png](Screenshot/Python2.7.5ArcGISDesktop10.2.2CMD.png)
 
 Ejecución en consola CMD Python 3.10.0 Standalone.
-![Python3.10.0StandaloneCMD.png](https://github.com/rcfdtools/R.GISPython/blob/main/InstallPackageGraph/Screenshot/Python3.10.0StandaloneCMD.png)
+![Python3.10.0StandaloneCMD.png](Screenshot/Python3.10.0StandaloneCMD.png)
 
 
 ### Referencias
@@ -261,9 +263,9 @@ Ejecución en consola CMD Python 3.10.0 Standalone.
 
 ### Licencia, cláusulas y condiciones de uso
 
-_R.GISPython es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio dando [clic aquí](https://github.com/rcfdtools/R.GISPython/wiki/License)._
+_R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](../../LICENSE.md) y como referenciar los contenidos publicados en este repositorio._
 
-_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
+_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](https://github.com/rcfdtools/R.GISPython/tree/main/InteractiveScriptFunction) | [:house: Inicio](https://github.com/rcfdtools/R.GISPython/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.GISPython/discussions/9) | [Siguiente](https://github.com/rcfdtools/R.GISPython/tree/main/ErrorExceptionControl) |
-|------------------------------------------------------------------------------------------|-----------------------------------------------------------------|----------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
+| [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/xxx) |
+|-----------------------------------|------------------------------------------------------------------------------------------|
