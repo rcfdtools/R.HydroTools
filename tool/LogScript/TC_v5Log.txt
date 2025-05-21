@@ -1,0 +1,14 @@
+---------------------------------------------------------------------------------------------------------------------
+Script interactivo e iterativo en Python con graficación, control de excepción de errores y archivo log de resultados
+---------------------------------------------------------------------------------------------------------------------
+Cálculo y graficación del Tiempo de Concentración de una cuenca hidrográfica usando la expresión de Giandotti.
+Python versión: 3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]
+matplotlib versión: 3.5.0
+Encuentra este script en https://github.com/rcfdtools/R.GISPython/tree/main/LogScript
+Cláusulas y condiciones de uso en https://github.com/rcfdtools/R.GISPython/wiki/License
+Créditos: r.cfdtools@gmail.com
+Ejecutado en: 2021-12-11 16:08:31.430428
+
+----------------------------------
+Datos de entrada y cálculo general
+----------------------------------
