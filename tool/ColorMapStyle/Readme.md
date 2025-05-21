@@ -1,7 +1,9 @@
+<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
+
 ## Generador de rampas de color para representación de grillas en ArcGIS for Desktop y ArcGIS Pro
 Keywords: `ArcGIS` `Python 3` `matplotlib` `sys` `datetime` `open()` `write()` `close()` `abs()` `append()` `range()` `zfill()`
 
-![ColorMapStyle.png](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Screenshot/ColorMapStyle.png)
+![ColorMapStyle.png](Screenshot/ColorMapStyle.png)
 
 Las rampas de color son utilizadas para representar los valores de celdas o pixeles contenidos dentro de una grilla o mapa raster. Esri ArcGIS for Desktop y ArcGIS Pro, disponen de múltiples estilos de representación y a partir de la versión Desktop 10.6, estos estilos pueden ser creados por el usuario a través del administrador de estilos disponible en el menú Personalización; sin embargo, la creación de estilos en versiones anteriores y el reescalamiento y representación de grillas interpolas de resultados en una serie temporal, requieren de la creación manual de archivos .clr que luego pueden ser asociados a cada grilla de salida, perimitiendo de esta forma representar un mismo valor de celda en diferentes grillas con un mismo color. El propósito principal de este microcontenido, es crear estilos personalizados que luego serán utilizados en las actividades relacionadas con la [Interpolación y representación espacial de series de datos meteorológicos con simbología de rampa única](https://github.com/rcfdtools/R.GISPython/tree/main/TableInterpolatedGrid).
 
@@ -38,11 +40,11 @@ Para el desarrollo de este microcontenido se recomienda que los scripts y demás
 
 | Directorio                                                                                 | Descripción                                                                                          |
 |--------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| [/Data](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Data)             | Directorio de datos del caso de estudio.                                                             |
-| [/Map](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Map)               | Directorio con mapas de representación en ArcGIS for Desktop y ArcGIS Pro.                           |
-| [/Old](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Old)               | Directorio con versiones antiguas del script.                                                        |
-| [/Output](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output)         | Directorio de salida con rampas de color .clr, previsualización en .png y registro de ejecución .md. |
-| [/Screenshot](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Screenshot) | Capturas de pantalla con resultados de ejecución.                                                    |
+| [/Data](Data)             | Directorio de datos del caso de estudio.                                                             |
+| [/Map](Map)               | Directorio con mapas de representación en ArcGIS for Desktop y ArcGIS Pro.                           |
+| [/Old](Old)               | Directorio con versiones antiguas del script.                                                        |
+| [/Output](Output)         | Directorio de salida con rampas de color .clr, previsualización en .png y registro de ejecución .md. |
+| [/Screenshot](Screenshot) | Capturas de pantalla con resultados de ejecución.                                                    |
 
 > El directorio `/Output` contiene mapas ejemplo para cada rampa de color generada usando la grilla de precipitación mensual media multianual. Para la representación se generaron y utilizaron archivos .clr con 16000 colores. 
 
@@ -51,21 +53,21 @@ Para el desarrollo de este microcontenido se recomienda que los scripts y demás
 
 1. Descargue e instale HidroSIG 4.0 y descomprima la Base de datos de Colombia, [clic aquí](https://minas.medellin.unal.edu.co/departamentos/geocienciasymedioambiente/hidrosig/es/descargas.html).
 
-![HidroSIG4.0Descarga.png](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Screenshot/HidroSIG4.0Descarga.png) 
+![HidroSIG4.0Descarga.png](Screenshot/HidroSIG4.0Descarga.png) 
 
 > HidroSIG 4.0 requiere de la instalación de MapWindow GIS 4.6.
 
 2. En MapWindow GIS, clic en el menú _HidroSIG_ - _Base de Datos_ - _Conectar / Desconectar_, seleccione el proveedor _BD SQLite_ y defina la fuente de datos correspondiente al archivo _Colombia.db_.
 
-![HidroSIG4.0Conectar.png](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Screenshot/HidroSIG4.0Conectar.png) 
+![HidroSIG4.0Conectar.png](Screenshot/HidroSIG4.0Conectar.png) 
 
 3. En MapWindow GIS, clic en el menú _HidroSIG_ - _Base de Datos_ - Explorar datos. En el panel derecho, expanda Conexiones - Data y de _doble clic_ sobre _Precipitación KDE_, correspondiente a la precipitación analizada mediante el núcleo de estimación de densidad. Luego de dar _doble clic_ el mapa será cargado automáticamente al visor de MapWindow GIS.
 
-![HidroSIG4.0Visualizar.png](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Screenshot/HidroSIG4.0Visualizar.png)
+![HidroSIG4.0Visualizar.png](Screenshot/HidroSIG4.0Visualizar.png)
 
 4. Exporte la grilla utilizando el botón _Exportar_ que se encuentra en la esquina inferior derecha del Explorador de bases de datos, nombre como `PrecipitacionKDE.asc` en la carpeta `D:\R.GISPython\ColorMapStyle\Data`. La grilla será exportada en formato Ascii (.asc) y sin sistema de proyección de coordenadas embebido.
 
-![HidroSIG4.0Exportar.png](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Screenshot/HidroSIG4.0Exportar.png)
+![HidroSIG4.0Exportar.png](Screenshot/HidroSIG4.0Exportar.png)
 
 > Complementaria a la grilla de precipitación KDE, se ha incluido en la carpeta `/Datos`, una capa vectorial en formato Shapefile (Country.shp) con el límite de Colombia - Suramérica, el cual ha sido creado a partir de la delimitación de Subzonas Hidrográficas - SZH realizada por el [Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM](http://www.ideam.gov.co/) de Colombia y es utilizado para ejemplificar el límite de la zona de estudio. Más información acerca de las SZH en [Zonificación hidrográfica de Colombia - Análisis de forma y densidad usando Python](https://github.com/rcfdtools/R.GISPython/tree/main/HydroGeoZone).
 
@@ -74,11 +76,11 @@ Para el desarrollo de este microcontenido se recomienda que los scripts y demás
 
 1. Utilizando GitHub, clone el presente repositorio o manualmente realice la descarga los scripts en Python y cree la estructura de directorios recomendada en `D:\R.GISPython\ColorMapStyle`.
 
-![MicrosoftWindowsFolder.png](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Screenshot/MicrosoftWindowsFolder.png)
+![MicrosoftWindowsFolder.png](Screenshot/MicrosoftWindowsFolder.png)
 
 2. En PyCharm, abra y explore el archivo de definición de rampas de color denominado `ColorMapStyleValue.py`, encontrará múltiples estilos predefinidos. 
 
-![PyCharmColorMapStyleValue.png](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Screenshot/PyCharmColorMapStyleValue.png)
+![PyCharmColorMapStyleValue.png](Screenshot/PyCharmColorMapStyleValue.png)
 
 > En caso de que quiera crear un nuevo estilo, al final de este script, agregue un nuevo arreglo continuando con el número consecutivo de la secuencia definida, p.ej, `ColorMap14 = []`.
 
@@ -90,25 +92,25 @@ styleNumber = 13
 numColor = 256
 ```
 
-![PyCharmColorMapStyleParameter.png](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Screenshot/PyCharmColorMapStyleParameter.png)
+![PyCharmColorMapStyleParameter.png](Screenshot/PyCharmColorMapStyleParameter.png)
 
 4. Ejecute el script, verifique los resultados detallados en la consola de ejecución y los archivos generados. Para los parámetros establecidos en el ejemplo, automáticamente se crearán en la carpeta `\Output` los siguientes archivos:
 
-| Archivo | Descripción |
-|---|---|
-| [ColorMapArcGIS256s13.clr](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGIS256s13.clr) | Archivo de rampa de color no codificado. |
-| [ColorMapArcGIS256s13.png](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGIS256s13.png) | Previsualización de la rampa de color. |
-| [ColorMapArcGIS256s13.md](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGIS256s13.md) | Registro detallado de ejecución en formato Markdown. |
+| Archivo                                                     | Descripción                                          |
+|-------------------------------------------------------------|------------------------------------------------------|
+| [ColorMapArcGIS256s13.clr](Output/ColorMapArcGIS256s13.clr) | Archivo de rampa de color no codificado.             |
+| [ColorMapArcGIS256s13.png](Output/ColorMapArcGIS256s13.png) | Previsualización de la rampa de color.               |
+| [ColorMapArcGIS256s13.md](Output/ColorMapArcGIS256s13.md)   | Registro detallado de ejecución en formato Markdown. |
 
-![PyCharmColorMapStyleRun1.png](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Screenshot/PyCharmColorMapStyleRun1.png)
-![PyCharmColorMapStyleRun2.png](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Screenshot/PyCharmColorMapStyleRun2.png)
-![PyCharmColorMapStyleRun3.png](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Screenshot/PyCharmColorMapStyleRun3.png)
-![PyCharmColorMapStyleRun4.png](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Screenshot/PyCharmColorMapStyleRun4.png)
+![PyCharmColorMapStyleRun1.png](Screenshot/PyCharmColorMapStyleRun1.png)
+![PyCharmColorMapStyleRun2.png](Screenshot/PyCharmColorMapStyleRun2.png)
+![PyCharmColorMapStyleRun3.png](Screenshot/PyCharmColorMapStyleRun3.png)
+![PyCharmColorMapStyleRun4.png](Screenshot/PyCharmColorMapStyleRun4.png)
 
 
 ### Asociación de rampa de color y visualización en ArcGIS for Desktop y ArcGIS Pro
 
-1. Utilizando el procedimiento anterior, para el estilo 13 cree una rampa de 16 mil colores, obtendrá en `\Output` un archivo denimonado [ColorMapArcGIS16000s13.clr](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGIS16000s13.clr).
+1. Utilizando el procedimiento anterior, para el estilo 13 cree una rampa de 16 mil colores, obtendrá en `\Output` un archivo denimonado [ColorMapArcGIS16000s13.clr](Output/ColorMapArcGIS16000s13.clr).
 
 2. Copie el archivo ColorMapArcGIS16000s13.clr en la carpeta `\Data` y renombre con el nombre actual de la grilla de precipitación como `PrecipitacionKDE.clr`.
 
@@ -118,11 +120,11 @@ numColor = 256
 
 > El sistema de referencia de coordenadas - CRS contenido en la capa geográfica `Country.shp` corresponde a MAGNA Colombia para la franja Bogotá o WKID 3116. Cargue primero esta capa o defina el sistema de proyección del mapa a partir de su archivo `.prj`.
 
-![ArcGISDesktop10.2.2ColorMapStyle.png](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Screenshot/ArcGISDesktop10.2.2ColorMapStyle.png)
+![ArcGISDesktop10.2.2ColorMapStyle.png](Screenshot/ArcGISDesktop10.2.2ColorMapStyle.png)
 
 4. En ArcGIS Pro, cree un proyecto nuevo y nómbrelo en la carpeta `\Map` como `ColorMapStyle`, agregue la capa denominada `Country.shp` correspondiente al límite de Colombia - Suramérica y establezca el borde en color blanco, grosor 3 y sin relleno, para finalizar agregue la grilla de precipitación. Podrá observar que en la versión Pro se mantiene la representación de color definida.
 
-![ArcGISPro2.9.0ColorMapStyle.png](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Screenshot/ArcGISPro2.9.0ColorMapStyle.png)
+![ArcGISPro2.9.0ColorMapStyle.png](Screenshot/ArcGISPro2.9.0ColorMapStyle.png)
 
 
 ## Rampas disponibles
@@ -133,15 +135,15 @@ numColor = 256
 * RGB Color values: 2
 * Colors: White - Black
 * Deep color file (.clr): 
-[128, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS128s1.clr)
-[256. ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s1.clr)
+[128, ](Output/ColorMapArcGIS128s1.clr)
+[256. ](Output/ColorMapArcGIS256s1.clr)
 * Log de ejecución (.md): 
-[128, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS128s1.md)
-[256.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s1.md)
+[128, ](Output/ColorMapArcGIS128s1.md)
+[256.](Output/ColorMapArcGIS256s1.md)
 
 | Sample ramp                                                                                               | Sample map                                                                                                |
 |-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| ![512](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGIS128s1.png) | ![1024](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGISs1Map.png) |
+| ![512](Output/ColorMapArcGIS128s1.png) | ![1024](Output/ColorMapArcGISs1Map.png) |
 
 
 ### Style 2
@@ -150,15 +152,15 @@ numColor = 256
 * RGB Color values: 2
 * Colors: Black - White
 * Deep color file (.clr): 
-[128, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS128s2.clr)
-[256.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s2.clr)
+[128, ](Output/ColorMapArcGIS128s2.clr)
+[256.](Output/ColorMapArcGIS256s2.clr)
 * Log de ejecución (.md): 
-[128, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS128s2.md)
-[256.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s2.md)
+[128, ](Output/ColorMapArcGIS128s2.md)
+[256.](Output/ColorMapArcGIS256s2.md)
 
 | Sample ramp                                                                                               | Sample map                                                                                                |
 |-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| ![512](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGIS128s2.png) | ![1024](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGISs2Map.png) |
+| ![512](Output/ColorMapArcGIS128s2.png) | ![1024](Output/ColorMapArcGISs2Map.png) |
 
 
 ### Style 3
@@ -167,15 +169,15 @@ numColor = 256
 * RGB Color values: 2
 * Colors: Blue - Red
 * Deep color file (.clr): 
-[128, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS128s3.clr)
-[256.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s3.clr)
+[128, ](Output/ColorMapArcGIS128s3.clr)
+[256.](Output/ColorMapArcGIS256s3.clr)
 * Log de ejecución (.md): 
-[128, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS128s3.md)
-[256.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s3.md)
+[128, ](Output/ColorMapArcGIS128s3.md)
+[256.](Output/ColorMapArcGIS256s3.md)
 
 | Sample ramp                                                                                               | Sample map                                                                                                |
 |-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| ![512](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGIS128s3.png) | ![1024](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGISs3Map.png) |
+| ![512](Output/ColorMapArcGIS128s3.png) | ![1024](Output/ColorMapArcGISs3Map.png) |
 
 
 ### Style 4
@@ -184,15 +186,15 @@ numColor = 256
 * RGB Color values: 3
 * Colors: Blue - Red - Green
 * Deep color file (.clr): 
-[128, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS128s4.clr)
-[256.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s4.clr)
+[128, ](Output/ColorMapArcGIS128s4.clr)
+[256.](Output/ColorMapArcGIS256s4.clr)
 * Log de ejecución (.md): 
-[128, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS128s4.md)
-[256.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s4.md)
+[128, ](Output/ColorMapArcGIS128s4.md)
+[256.](Output/ColorMapArcGIS256s4.md)
 
 | Sample ramp                                                                                              | Sample map                                                                                               |
 |----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| ![512](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGIS128s4.png) | ![1024](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGISs4Map.png) |
+| ![512](Output/ColorMapArcGIS128s4.png) | ![1024](Output/ColorMapArcGISs4Map.png) |
 
 
 ### Style 5
@@ -201,15 +203,15 @@ numColor = 256
 * RGB Color values: 4
 * Colors: Blue - Red - Green - Yellow
 * Deep color file (.clr): 
-[256, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s5.clr)
-[512.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS512s5.clr)
+[256, ](Output/ColorMapArcGIS256s5.clr)
+[512.](Output/ColorMapArcGIS512s5.clr)
 * Log de ejecución (.md): 
-[256, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s5.md)
-[512.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS512s5.md)
+[256, ](Output/ColorMapArcGIS256s5.md)
+[512.](Output/ColorMapArcGIS512s5.md)
 
 | Sample ramp                                                                                               | Sample map                                                                                                |
 |-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| ![512](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGIS256s5.png) | ![1024](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGISs5Map.png) |
+| ![512](Output/ColorMapArcGIS256s5.png) | ![1024](Output/ColorMapArcGISs5Map.png) |
 
 
 ### Style 6
@@ -218,17 +220,17 @@ numColor = 256
 * RGB Color values: 7
 * Colors: Orange - Light BLue - Magenta - Dark Blue - Yellow - Green - Red
 * Deep color file (.clr):
-[256, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s6.clr)
-[512, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS512s6.clr)
-[1024.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS1024s6.clr)
+[256, ](Output/ColorMapArcGIS256s6.clr)
+[512, ](Output/ColorMapArcGIS512s6.clr)
+[1024.](Output/ColorMapArcGIS1024s6.clr)
 * Log de ejecución (.md): 
-[256, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s6.md)
-[512, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS512s6.md)
-[1024.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS1024s6.md)
+[256, ](Output/ColorMapArcGIS256s6.md)
+[512, ](Output/ColorMapArcGIS512s6.md)
+[1024.](Output/ColorMapArcGIS1024s6.md)
 
 | Sample ramp                                                                                               | Sample map                                                                                                |
 |-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| ![512](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGIS256s6.png) | ![1024](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGISs6Map.png) |
+| ![512](Output/ColorMapArcGIS256s6.png) | ![1024](Output/ColorMapArcGISs6Map.png) |
 
 
 ### Style 7
@@ -237,17 +239,17 @@ numColor = 256
 * RGB Color values: 7
 * Colors: Yellow - Pink - Green - Blue
 * Deep color file (.clr):
-[256, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s7.clr)
-[512, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS512s7.clr)
-[1024.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS1024s7.clr)
+[256, ](Output/ColorMapArcGIS256s7.clr)
+[512, ](Output/ColorMapArcGIS512s7.clr)
+[1024.](Output/ColorMapArcGIS1024s7.clr)
 * Log de ejecución (.md): 
-[256, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s7.md)
-[512, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS512s7.md)
-[1024.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS1024s7.md)
+[256, ](Output/ColorMapArcGIS256s7.md)
+[512, ](Output/ColorMapArcGIS512s7.md)
+[1024.](Output/ColorMapArcGIS1024s7.md)
 
 | Sample ramp                                                                                               | Sample map                                                                                               |
 |-----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| ![512](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGIS256s7.png) | ![1024](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGISs7Map.png) |
+| ![512](Output/ColorMapArcGIS256s7.png) | ![1024](Output/ColorMapArcGISs7Map.png) |
 
 
 ### Style 8
@@ -256,17 +258,17 @@ numColor = 256
 * RGB Color values: 7
 * Colors: Gray - Aquamarine - Sea Blue
 * Deep color file (.clr):
-[256, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s8.clr)
-[512, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS512s8.clr)
-[1024.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS1024s8.clr)
+[256, ](Output/ColorMapArcGIS256s8.clr)
+[512, ](Output/ColorMapArcGIS512s8.clr)
+[1024.](Output/ColorMapArcGIS1024s8.clr)
 * Log de ejecución (.md): 
-[256, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s8.md)
-[512, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS512s8.md)
-[1024.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS1024s8.md)
+[256, ](Output/ColorMapArcGIS256s8.md)
+[512, ](Output/ColorMapArcGIS512s8.md)
+[1024.](Output/ColorMapArcGIS1024s8.md)
 
 | Sample ramp                                                                                               | Sample map                                                                                                |
 |-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| ![512](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGIS256s8.png) | ![1024](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGISs8Map.png) |
+| ![512](Output/ColorMapArcGIS256s8.png) | ![1024](Output/ColorMapArcGISs8Map.png) |
 
 
 ### Style 9
@@ -275,17 +277,17 @@ numColor = 256
 * RGB Color values: 13
 * Colors: Dark Pink - Mercury - Lime - Green
 * Deep color file (.clr):
-[256, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s9.clr)
-[512, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS512s9.clr)
-[1024.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS1024s9.clr)
+[256, ](Output/ColorMapArcGIS256s9.clr)
+[512, ](Output/ColorMapArcGIS512s9.clr)
+[1024.](Output/ColorMapArcGIS1024s9.clr)
 * Log de ejecución (.md): 
-[256, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s9.md)
-[512, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS512s9.md)
-[1024.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS1024s9.md)
+[256, ](Output/ColorMapArcGIS256s9.md)
+[512, ](Output/ColorMapArcGIS512s9.md)
+[1024.](Output/ColorMapArcGIS1024s9.md)
 
 | Sample ramp                                                                                               | Sample map                                                                                                 |
 |-----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| ![512](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGIS256s9.png) | ![1024](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGISs9Map.png) |
+| ![512](Output/ColorMapArcGIS256s9.png) | ![1024](Output/ColorMapArcGISs9Map.png) |
 
 ### Style 10
 
@@ -293,17 +295,17 @@ numColor = 256
 * RGB Color values: 15
 * Colors: Green to yellow to red
 * Deep color file (.clr):
-[256, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s10.clr)
-[512, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS512s10.clr)
-[1024.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS1024s10.clr)
+[256, ](Output/ColorMapArcGIS256s10.clr)
+[512, ](Output/ColorMapArcGIS512s10.clr)
+[1024.](Output/ColorMapArcGIS1024s10.clr)
 * Log de ejecución (.md): 
-[256, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s10.md)
-[512, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS512s10.md)
-[1024.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS1024s10.md)
+[256, ](Output/ColorMapArcGIS256s10.md)
+[512, ](Output/ColorMapArcGIS512s10.md)
+[1024.](Output/ColorMapArcGIS1024s10.md)
 
 | Sample ramp                                                                                               | Sample map                                                                                                 |
 |-----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| ![512](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGIS256s10.png) | ![1024](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGISs10Map.png) |
+| ![512](Output/ColorMapArcGIS256s10.png) | ![1024](Output/ColorMapArcGISs10Map.png) |
 
 ### Style 11
 
@@ -311,19 +313,19 @@ numColor = 256
 * RGB Color values: 22
 * Colors: Green to yellow to red to purple
 * Deep color file (.clr): 
-[256, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s11.clr)
-[512, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS512s11.clr)
-[1024, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS1024s11.clr)
-[2048.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS2048s11.clr)
+[256, ](Output/ColorMapArcGIS256s11.clr)
+[512, ](Output/ColorMapArcGIS512s11.clr)
+[1024, ](Output/ColorMapArcGIS1024s11.clr)
+[2048.](Output/ColorMapArcGIS2048s11.clr)
 * Log de ejecución (.md): 
-[256, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s11.md)
-[512, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS512s11.md)
-[1024, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS1024s11.md)
-[2048.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS2048s11.md)
+[256, ](Output/ColorMapArcGIS256s11.md)
+[512, ](Output/ColorMapArcGIS512s11.md)
+[1024, ](Output/ColorMapArcGIS1024s11.md)
+[2048.](Output/ColorMapArcGIS2048s11.md)
 
 | Sample ramp                                                                                               | Sample map                                                                                                 |
 |-----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| ![512](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGIS512s11.png) | ![1024](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGISs11Map.png) |
+| ![512](Output/ColorMapArcGIS512s11.png) | ![1024](Output/ColorMapArcGISs11Map.png) |
 
 
 ### Style 12
@@ -332,19 +334,19 @@ numColor = 256
 * RGB Color values: 20
 * Colors: Green Sea - Blue Sea - Purple - Red - Orange - Yellow
 * Deep color file (.clr): 
-[256, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s12.clr)
-[512, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS512s12.clr)
-[1024, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS1024s12.clr)
-[2048.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS2048s12.clr)
+[256, ](Output/ColorMapArcGIS256s12.clr)
+[512, ](Output/ColorMapArcGIS512s12.clr)
+[1024, ](Output/ColorMapArcGIS1024s12.clr)
+[2048.](Output/ColorMapArcGIS2048s12.clr)
 * Log de ejecución (.md): 
-[256, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s12.md)
-[512, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS512s12.md)
-[1024, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS1024s12.md)
-[2048.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS2048s12.md)
+[256, ](Output/ColorMapArcGIS256s12.md)
+[512, ](Output/ColorMapArcGIS512s12.md)
+[1024, ](Output/ColorMapArcGIS1024s12.md)
+[2048.](Output/ColorMapArcGIS2048s12.md)
 
 | Sample ramp                                                                                               | Sample map                                                                                                 |
 |-----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| ![512](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGIS512s12.png) | ![1024](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGISs12Map.png) |
+| ![512](Output/ColorMapArcGIS512s12.png) | ![1024](Output/ColorMapArcGISs12Map.png) |
 
 ### Style 13
 
@@ -352,24 +354,24 @@ numColor = 256
 * RGB Color values: 42
 * Colors: Green Sea - Blue Sea - Purple - Red - Orange - Yellow - Green to yellow to red to purple
 * Deep color file (.clr): 
-[256, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s13.clr)
-[512, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS512s13.clr)
-[1024, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS1024s13.clr)
-[2048.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS2048s13.clr)
+[256, ](Output/ColorMapArcGIS256s13.clr)
+[512, ](Output/ColorMapArcGIS512s13.clr)
+[1024, ](Output/ColorMapArcGIS1024s13.clr)
+[2048.](Output/ColorMapArcGIS2048s13.clr)
 * Log de ejecución (.md): 
-[256, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS256s13.md)
-[512, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS512s13.md)
-[1024, ](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS1024s13.md)
-[2048.](https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle/Output/ColorMapArcGIS2048s13.md)
+[256, ](Output/ColorMapArcGIS256s13.md)
+[512, ](Output/ColorMapArcGIS512s13.md)
+[1024, ](Output/ColorMapArcGIS1024s13.md)
+[2048.](Output/ColorMapArcGIS2048s13.md)
 
 | Sample ramp                                                                                              | Sample map                                                                                                 |
 |----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| ![512](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGIS512s13.png) | ![1024](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/Output/ColorMapArcGISs13Map.png)  |
+| ![512](Output/ColorMapArcGIS512s13.png) | ![1024](Output/ColorMapArcGISs13Map.png)  |
 
 
 ### Scripts
 
-#### Script [ColorMapStyle.py](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/ColorMapStyle.py)
+#### Script [ColorMapStyle.py](ColorMapStyle.py)
 
 ```
 # -*- coding: UTF-8 -*-
@@ -559,7 +561,7 @@ if printPlotOnScreen: plt.show()
 fileLog.close()
 ```
 
-#### Script [ColorMapStyleValue.py](https://github.com/rcfdtools/R.GISPython/blob/main/ColorMapStyle/ColorMapStyleValue.py)
+#### Script [ColorMapStyleValue.py](ColorMapStyleValue.py)
 
 ```
 # Color map style arrays
@@ -826,9 +828,9 @@ ColorMap13 = [[164, 203, 194],
 
 ### Licencia, cláusulas y condiciones de uso
 
-_R.GISPython es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio dando [clic aquí](https://github.com/rcfdtools/R.GISPython/wiki/License)._
+_R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](../../LICENSE.md) y como referenciar los contenidos publicados en este repositorio._
 
-_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
+_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](https://github.com/rcfdtools/R.GISPython/tree/main/OpenWeather) | [:house: Inicio](https://github.com/rcfdtools/R.GISPython/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.GISPython/discussions/15) | [Siguiente](https://github.com/rcfdtools/R.GISPython/tree/main/TableInterpolatedGrid) |
-|------------------------------------------------------------------------------------|-----------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| [:house: Inicio](../../README.md)  | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/xxx) |
+|------------------------------------|------------------------------------------------------------------------------------------|

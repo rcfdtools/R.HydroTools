@@ -4,7 +4,7 @@
 Keywords: `IDEAM` `Station` `Weather` `Plot` `matplotlib` `Pandas` `os` `Meteorological` `Pivot Table` `Graph` `Catalog`
 
 <div  align="center">
-    <img align="center"  alt="CNEStationStatistic.png" src="https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/Screenshot/CNEStationStatistic.png" width="800px"/>
+    <img align="center"  alt="CNEStationStatistic.png" src="Screenshot/CNEStationStatistic.png" width="800px"/>
 </div>
 
 
@@ -120,17 +120,17 @@ Tomado de [Anexo 2 - Definiciones CNE](http://www.ideam.gov.co/documents/10182/5
 
 Para la ejecución correcta del script, es necesario clonar, descargar o crear la estructura de directorios definida en la siguiente tabla en el directorio `D:\R.GISPython\CNEStationStatistic`.
 
-| Directorio                                                                                              | Descripción                                                                                                                                                                                                                                                                                                                                                                   |
-|---------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [/BasicTable](https://github.com/rcfdtools/R.GISPython/tree/main/CNEStationStatistic/BasicTable)        | Directorio para volcado de tablas de estadísticos básicos y normalizados en formato de valores separados por comas [CSV](https://en.wikipedia.org/wiki/Comma-separated_values).                                                                                                                                                                                               |
-| [/Data](https://github.com/rcfdtools/R.GISPython/tree/main/CNEStationStatistic/Data)                    | Directorio de descarga del archivo CNE_IDEAM.xls con registro de versiones.                                                                                                                                                                                                                                                                                                   |
-| [/Graph](https://github.com/rcfdtools/R.GISPython/tree/main/CNEStationStatistic/Graph)                  | Directorio para volcado de gráficas en formato [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) (Portable Network Graphic) .png. Para cada ejecución se crea un nuevo grupo de imágenes con registro de versiones.                                                                                                                                              |
-| [/Graph/PlotMap](https://github.com/rcfdtools/R.GISPython/tree/main/CNEStationStatistic/Graph/PlotMap)  | Directorio para volcado de gráficas por departamento en formato [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) (Portable Network Graphic) .png. Para cada ejecución se crea un nuevo grupo de imágenes con registro de versiones.                                                                                                                             |
-| [/Old](https://github.com/rcfdtools/R.GISPython/tree/main/CNEStationStatistic/Old)                      | Directorio con versiones antiguas del script.                                                                                                                                                                                                                                                                                                                                 |
-| [/PDF](https://github.com/rcfdtools/R.GISPython/tree/main/CNEStationStatistic/PDF)                      | Directorio de impresión de la ventana de ejecución del script. Directamente no se realiza la escritura en un archivo .log de resultados por lo que su impresión se realiza de forma manual. En este directorio pueden existir versiones para clasificación de pisos térmicos con rangos convencionales o con los rangos definidos por Francisco José de Caldas en el año 1802. |
-| [/PivotTable](https://github.com/rcfdtools/R.GISPython/tree/main/CNEStationStatistic/PivotTable)        | Directorio para volcado de las tablas dinámicas producidas por el script en formato de valores separados por comas [CSV](https://en.wikipedia.org/wiki/Comma-separated_values).  Para cada ejecución se crea un nuevo grupo de archivos .csv con registro de versiones.                                                                                                       |
-| [/Reference](https://github.com/rcfdtools/R.GISPython/tree/main/CNEStationStatistic/Reference)          | Documentos de referencias bibliográficas recopiladas.                                                                                                                                                                                                                                                                                                                         |
-| [/Screenshot](https://github.com/rcfdtools/R.GISPython/tree/main/CNEStationStatistic/Screenshot)        | Capturas de pantalla de ejecución y configuración.                                                                                                                                                                                                                                                                                                                            |
+| Directorio                      | Descripción                                                                                                                                                                                                                                                                                                                                                                   |
+|---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [/BasicTable](BasicTable)       | Directorio para volcado de tablas de estadísticos básicos y normalizados en formato de valores separados por comas [CSV](https://en.wikipedia.org/wiki/Comma-separated_values).                                                                                                                                                                                               |
+| [/Data](Data)                   | Directorio de descarga del archivo CNE_IDEAM.xls con registro de versiones.                                                                                                                                                                                                                                                                                                   |
+| [/Graph](Graph)                 | Directorio para volcado de gráficas en formato [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) (Portable Network Graphic) .png. Para cada ejecución se crea un nuevo grupo de imágenes con registro de versiones.                                                                                                                                              |
+| [/Graph/PlotMap](Graph/PlotMap) | Directorio para volcado de gráficas por departamento en formato [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) (Portable Network Graphic) .png. Para cada ejecución se crea un nuevo grupo de imágenes con registro de versiones.                                                                                                                             |
+| [/Old](Old)                     | Directorio con versiones antiguas del script.                                                                                                                                                                                                                                                                                                                                 |
+| [/PDF](PDF)                     | Directorio de impresión de la ventana de ejecución del script. Directamente no se realiza la escritura en un archivo .log de resultados por lo que su impresión se realiza de forma manual. En este directorio pueden existir versiones para clasificación de pisos térmicos con rangos convencionales o con los rangos definidos por Francisco José de Caldas en el año 1802. |
+| [/PivotTable](PivotTable)       | Directorio para volcado de las tablas dinámicas producidas por el script en formato de valores separados por comas [CSV](https://en.wikipedia.org/wiki/Comma-separated_values).  Para cada ejecución se crea un nuevo grupo de archivos .csv con registro de versiones.                                                                                                       |
+| [/Reference](Reference)         | Documentos de referencias bibliográficas recopiladas.                                                                                                                                                                                                                                                                                                                         |
+| [/Screenshot](Screenshot)       | Capturas de pantalla de ejecución y configuración.                                                                                                                                                                                                                                                                                                                            |
 
 > Para los archivos generados u obtenidos a través de la ejecución del script, se conserva el registro de versiones a partir de la fecha de ejecución utilizando el formato aaaammdd.
 
@@ -163,7 +163,7 @@ Para la ejecución correcta del script, es necesario clonar, descargar o crear l
 
 ### Resumen general de datos analizados y publicados
 
-Para cada ejecución del script principal, se analizan y publican en este repositorio diferentes [gráficas](https://github.com/rcfdtools/R.GISPython/tree/main/CNEStationStatistic/Graph), [tablas básicas](https://github.com/rcfdtools/R.GISPython/tree/main/CNEStationStatistic/BasicTable) y [tablas dinámicas](https://github.com/rcfdtools/R.GISPython/tree/main/CNEStationStatistic/PivotTable) que son ordenadas cronológicamente y a partir de las cuales se presenta el siguiente resumen general. 
+Para cada ejecución del script principal, se analizan y publican en este repositorio diferentes [gráficas](Graph), [tablas básicas](BasicTable) y [tablas dinámicas](PivotTable) que son ordenadas cronológicamente y a partir de las cuales se presenta el siguiente resumen general. 
 
 | Fecha       | Activa | Suspendida | En Mantenimiento  |
 |-------------|--------|------------|-------------------|
@@ -176,56 +176,56 @@ Para cada ejecución del script principal, se analizan y publican en este reposi
 
 > PyCharm requiere de configuración previa del intérprete de Python a utilizar en la ejecución del script. Oprima `Ctrl+Alt+S` para acceder a la ventana de configuración y en la pestaña _Project: R.GISPython_ configurar los intérpretes disponibles en su equipo.
 
-![PyCharm2021.3SetupPythonInterpreter.png](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/Screenshot/PyCharm2021.3SetupPythonInterpreter.png)
+![PyCharm2021.3SetupPythonInterpreter.png](Screenshot/PyCharm2021.3SetupPythonInterpreter.png)
 
 Ventana de ejecución con atributos obtenidos. 
-![Python3.10.0StandalonePyCharm2021.3Attributes.png](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/Screenshot/Python3.10.0StandalonePyCharm2021.3Attributes.png)
+![Python3.10.0StandalonePyCharm2021.3Attributes.png](Screenshot/Python3.10.0StandalonePyCharm2021.3Attributes.png)
 
 Ventana de ejecución con atributos estadísticas generales. 
-![Python3.10.0StandalonePyCharm2021.3GeneralStatistic.png](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/Screenshot/Python3.10.0StandalonePyCharm2021.3GeneralStatistic.png)
+![Python3.10.0StandalonePyCharm2021.3GeneralStatistic.png](Screenshot/Python3.10.0StandalonePyCharm2021.3GeneralStatistic.png)
 
 Ventana de ejecución con tablas dinámicas. 
-![Python3.10.0StandalonePyCharm2021.3PivotTable.png](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/Screenshot/Python3.10.0StandalonePyCharm2021.3PivotTable.png)
+![Python3.10.0StandalonePyCharm2021.3PivotTable.png](Screenshot/Python3.10.0StandalonePyCharm2021.3PivotTable.png)
 
 Ventana de ejecución con clasificación por piso térmico. 
-![Python3.10.0StandalonePyCharm2021.3ThermalLevel.png](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/Screenshot/Python3.10.0StandalonePyCharm2021.3ThermalLevel.png)
+![Python3.10.0StandalonePyCharm2021.3ThermalLevel.png](Screenshot/Python3.10.0StandalonePyCharm2021.3ThermalLevel.png)
 
 
 ### Configuración para impresión de log de ejecución en PyCharm 2021.3
 
 Configuración general de impresión.
 
-![Pycharm2021.3RunSetupPrintSettings.png](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/Screenshot/Pycharm2021.3RunSetupPrintSettings.png)
+![Pycharm2021.3RunSetupPrintSettings.png](Screenshot/Pycharm2021.3RunSetupPrintSettings.png)
 
 Configuración de cabecera y pie de página.
 
-![Pycharm2021.3RunSetupPrintHeaderFooter.png](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/Screenshot/Pycharm2021.3RunSetupPrintHeaderFooter.png)
+![Pycharm2021.3RunSetupPrintHeaderFooter.png](Screenshot/Pycharm2021.3RunSetupPrintHeaderFooter.png)
 
 Configuración avanzada.
 
-![Pycharm2021.3RunSetupPrintAdvanced.png](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/Screenshot/Pycharm2021.3RunSetupPrintAdvanced.png)
+![Pycharm2021.3RunSetupPrintAdvanced.png](Screenshot/Pycharm2021.3RunSetupPrintAdvanced.png)
 
 
 ### Ejemplo de gráficas obtenidas
 
-![CategoryPivot20211214.png](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/Graph/CategoryPivot20211214.png)
-![GeoHydroAreaPivot20211214.png](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/Graph/GeoHydroAreaPivot20211214.png)
-![GeoHydroSubzonePivot20211214.png](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/Graph/GeoHydroSubzonePivot20211214.png)
-![GeoHydroZonePivot20211214.png](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/Graph/GeoHydroZonePivot20211214.png)
-![GeoOperativeAreaPivot20211214.png](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/Graph/GeoOperativeAreaPivot20211214.png)
-![GeoStatePivot20211214.png](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/Graph/GeoStatePivot20211214.png)
-![InstallationYearPivot20211214.png](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/Graph/InstallationYearPivot20211214.png)
-![TechnologyPivot20211214.png](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/Graph/TechnologyPivot20211214.png)
-![TechnologyPivotPie20211214.png](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/Graph/TechnologyPivotPie20211214.png)
-![ThermalLevelPivot20211214.png](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/Graph/ThermalLevelPivot20211214.png)
-![ThermalLevelPivotPie20211214.png](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/Graph/ThermalLevelPivotPie20211214.png)
-![StationScatterPlotMapCundinamarca20211215.png](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/Graph/PlotMap/StationScatterPlotMapCundinamarca20211215.png)
-![CNEStationStatisticPlotMapDirectory.png](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/Screenshot/CNEStationStatisticPlotMapDirectory.png)
+![CategoryPivot20211214.png](Graph/CategoryPivot20211214.png)
+![GeoHydroAreaPivot20211214.png](Graph/GeoHydroAreaPivot20211214.png)
+![GeoHydroSubzonePivot20211214.png](Graph/GeoHydroSubzonePivot20211214.png)
+![GeoHydroZonePivot20211214.png](Graph/GeoHydroZonePivot20211214.png)
+![GeoOperativeAreaPivot20211214.png](Graph/GeoOperativeAreaPivot20211214.png)
+![GeoStatePivot20211214.png](Graph/GeoStatePivot20211214.png)
+![InstallationYearPivot20211214.png](Graph/InstallationYearPivot20211214.png)
+![TechnologyPivot20211214.png](Graph/TechnologyPivot20211214.png)
+![TechnologyPivotPie20211214.png](Graph/TechnologyPivotPie20211214.png)
+![ThermalLevelPivot20211214.png](Graph/ThermalLevelPivot20211214.png)
+![ThermalLevelPivotPie20211214.png](Graph/ThermalLevelPivotPie20211214.png)
+![StationScatterPlotMapCundinamarca20211215.png](Graph/PlotMap/StationScatterPlotMapCundinamarca20211215.png)
+![CNEStationStatisticPlotMapDirectory.png](Screenshot/CNEStationStatisticPlotMapDirectory.png)
 
 
 ### Scripts
 
-#### Script principal [CNEStationStatistic.py](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/CNEStationStatistic.py)
+#### Script principal [CNEStationStatistic.py](CNEStationStatistic.py)
 
 ```
 # -*- coding: UTF-8 -*-
@@ -617,7 +617,7 @@ for i in CNEStationDictionary.stationTechnologyDictEs:
     print(i[0]+': '+i[1]+'\n')
 ```
 
-#### Script diccionario [CNEStationDictionary.py](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/CNEStationDictionary.py)
+#### Script diccionario [CNEStationDictionary.py](CNEStationDictionary.py)
 
 ```
 # -*- coding: UTF-8 -*-
@@ -685,8 +685,8 @@ stationTechnologyDictEs = [
 | Versión    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Autor                                     | Horas |
 |------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:-----:|
 | 2021.12.16 | Documentación general.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | [rcfdtools](https://github.com/rcfdtools) |   8   |
-| 2021.12.15 | Impresión de hiperenlaces en ventana de ejecución para cada gráfica y tabla dinámica generada. Generación de tablas con estadísticos básicos y normalizados en carpeta [/BasicTable](https://github.com/rcfdtools/R.GISPython/tree/main/CNEStationStatistic/BasicTable). Creación de [diccionario](https://github.com/rcfdtools/R.GISPython/blob/main/CNEStationStatistic/CNEStationDictionary.py) general con impresión en consola. Gráfica de localización de estaciones por departamento en [/Graph/PlotMap](https://github.com/rcfdtools/R.GISPython/tree/main/CNEStationStatistic/Graph/PlotMap) | [rcfdtools](https://github.com/rcfdtools) |   8   |
-| 2021.12.14 | Incorporación de [gráficas](https://github.com/rcfdtools/R.GISPython/tree/main/CNEStationStatistic/Graph) y [tablas dinámicas](https://github.com/rcfdtools/R.GISPython/tree/main/CNEStationStatistic/PivotTable), inclusión de clasificación Caldas.                                                                                                                                                                                                                                                                                                                                                 | [rcfdtools](https://github.com/rcfdtools) |   8   |
+| 2021.12.15 | Impresión de hiperenlaces en ventana de ejecución para cada gráfica y tabla dinámica generada. Generación de tablas con estadísticos básicos y normalizados en carpeta [/BasicTable](BasicTable). Creación de [diccionario](CNEStationDictionary.py) general con impresión en consola. Gráfica de localización de estaciones por departamento en [/Graph/PlotMap](Graph/PlotMap) | [rcfdtools](https://github.com/rcfdtools) |   8   |
+| 2021.12.14 | Incorporación de [gráficas](Graph) y [tablas dinámicas](PivotTable), inclusión de clasificación Caldas.                                                                                                                                                                                                                                                                                                                                                 | [rcfdtools](https://github.com/rcfdtools) |   8   |
 | 2021.12.13 | Versión inicial con estadísticos básicos y clasificación de pisos térmicos.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | [rcfdtools](https://github.com/rcfdtools) |   8   |
 
 
