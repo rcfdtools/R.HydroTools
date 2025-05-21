@@ -1,0 +1,5 @@
+
+Mapas de muestra
+	Escala: 1:8000000
+	Resolución: 100dpi
+	Papel: Carta

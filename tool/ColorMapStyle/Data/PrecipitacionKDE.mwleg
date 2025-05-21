@@ -1,0 +1,6 @@
+<ColoringScheme SchemeType="Grid" GridName="PrecipitacionKDE" GroupName="Data Layers">
+  <GridColoringScheme AmbientIntensity="0.7" Key="" LightSourceAzimuth="90" LightSourceElevation="45" LightSourceIntensity="0.7" NoDataColor="-16777216">
+    <Break Caption="" LowValue="232.585525512695" HighValue="7360.54471588135" LowColor="-16096246" HighColor="-3702211" ColoringType="0" GradientModel="1" />
+    <Break Caption="" LowValue="7360.54471588135" HighValue="14488.50390625" LowColor="-3702211" HighColor="-926587" ColoringType="0" GradientModel="1" />
+  </GridColoringScheme>
+</ColoringScheme>
