@@ -1,11 +1,11 @@
 <div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
 
-## Análisis de la distribución espacial de la red de estaciones hidroclimatológicas de Colombia y su importancia en los estudios hidrológicos (en construcción)
+## Análisis de la distribución espacial de la red de estaciones hidro-climatológicas de Colombia y su importancia en los estudios hidrológicos (en construcción)
 Keywords: `cne` `cne-spatial-disbribution`
  
 en: Spatial distribution analysis from the National Colombia stations catalog and their relevance in hydrologic studies
 
-Estudio general de la distribución espacial de la estaciones hidro-climatológicas de Colombia. 
+Estudio general de la distribución espacial de las estaciones hidro-climatológicas de Colombia. 
 
 
 ### Preliminary (ok)

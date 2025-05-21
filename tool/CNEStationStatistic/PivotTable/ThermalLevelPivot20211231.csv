@@ -1,0 +1,7 @@
+ThermalLevelValue,Activa,En Mantenimiento,Suspendida
+"Cálido, T>=24°C, <=800meter",1473.0,10.0,1238.0
+"Extremadamente Frio, 6°C>T>0°C, <=4700meter",24.0,,17.0
+"Frío, 18°C>T>12°C, <=2800meter",430.0,3.0,225.0
+"Muy Frío, 12°C>T>6°C, <=3700meter",140.0,,44.0
+"Nival, T<0°C, >4700meter",3.0,,1.0
+"Templado, 24°C>T>18°C, <=1800meter",575.0,4.0,307.0

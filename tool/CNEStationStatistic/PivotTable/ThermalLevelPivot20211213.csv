@@ -1,0 +1,6 @@
+ThermalLevelValue,Activa,En Mantenimiento,Suspendida
+"Cálido, 24°C+, <= 1000 meters",1597.0,11.0,1316.0
+"Frío, 12°C+, <= 3000 meters",403.0,3.0,197.0
+"Glacial, 0°C-, > 4000 meters",17.0,,11.0
+"Páramo, 0°C, <= 4000 meters",85.0,,36.0
+"Templado, 18°C+, <= 2000 meters",541.0,3.0,272.0
