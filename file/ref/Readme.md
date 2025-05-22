@@ -1,6 +1,6 @@
 ## Referencias
 
-**Enlaces de interés Python**
+### Enlaces de interés Python
 
 * [Python.org](https://www.python.org/)
 * [Pandas.pydata.org](https://pandas.pydata.org/)
@@ -12,6 +12,40 @@
 * [Excepciones en Python](https://docs.python.org/3/library/exceptions.html)
 * [PEP 8 – Style Guide for Python Code](https://peps.python.org/pep-0008/#naming-conventions)
 * [Enlaces y referencias complementarias](https://github.com/rcfdtools/R.GISPython/wiki/Referencias)  
+* [sqlite3 — DB-API 2.0 interface for SQLite databases.](https://docs.python.org/3/library/sqlite3.html)
+* [Bokeh - Interactive visualizations for modern web browsers.](https://docs.bokeh.org/)
+* [LUX - A Python API for Intelligent Visual Discovery.](https://github.com/lux-org/lux)
+* [MITO - Python Data Analysis in Seconds.](https://trymito.io/)
+* [Beautiful - pulling data out of HTML and XML files](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+
+
+### Enlaces generales
+
+* [Interpreter (computing)](https://en.wikipedia.org/wiki/Interpreted_language)
+* [Data Analysis with Python for Excel Users Course.](https://www.freecodecamp.org/news/data-analysis-with-python-for-excel-users-course/) 
+* [Python for beginers](https://www.makeuseof.com/python-for-beginners/)
+* [Python 2.7 tutorial](http://docs.python.org/2.7/tutorial/)
+* [Python console](https://docs.qgis.org/testing/en/docs/user_manual/plugins/python_console.html) 
+* [Learning Python with GIS: A Lecture for the Absolute Beginner: Part 1 of 5 ( ArcGIS Pro Python Tour)](https://www.youtube.com/watch?v=znpjoOt9mtU)
+* [Plot smooth line with PyPlot.](https://stackoverflow.com/questions/5283649/plot-smooth-line-with-pyplot)
+* [Difference between programing and coding.](https://www.educba.com/programming-vs-scripting/)
+* [Stand-alone PyQGIS scripts with OSGeo4W.](https://anitagraser.com/2019/03/03/stand-alone-pyqgis-scripts-with-osgeo4w/amp/)
+* [Four Functions to Level up Your Pandas Skills.](https://towardsdatascience.com/four-functions-to-level-up-your-pandas-skills-c89f95a1773a)
+* [How to Develop Interpretable Time Series Forecasts with Deep Learning.](https://towardsdatascience.com/how-to-develop-interpretable-time-series-forecasts-with-deep-learning-50b27bfcb8a1)
+* [Introduction to APIs with Python FastAPI.](https://medium.com/codex/introduction-to-apis-with-python-fastapi-bd72601e5ab5)
+* [10 Python Code Snippets For Everyday Programming Problems.](https://www.geeksforgeeks.org/10-python-code-snippets-for-everyday-programming-problems/)
+* [All You Need to Know About Python Dictionaries.](https://towardsdatascience.com/all-you-need-to-know-about-python-dictionaries-ccd05e5c61dd)
+* [Count shape files and Select by Location (2 Real world ArcPy examples).](https://www.youtube.com/watch?v=QMbSbvNBPM8)
+* [10 Tools Python Programmers Can Learn in 2022.](https://dev.to/javinpaul/10-tools-python-programmers-can-learn-in-2022-49ll)
+* [Configuration Files in Python.](https://www.codeproject.com/Articles/5319621/Configuration-Files-in-Python)
+* [5 GitHub Repositories for learning developers.](https://dev.to/crater90/5-github-repositories-for-learning-developers-4kn6)
+* [5 Python GUI Frameworks to Create Desktop, Web, and Even Mobile Apps.](https://towardsdatascience.com/5-python-gui-frameworks-to-create-desktop-web-and-even-mobile-apps-c25f1bcfb561)
+* [5 Data Science Libaries for Python Every Data Scientist Should Use.](https://www.makeuseof.com/data-science-libraries-for-python/)
+* [Sweigart, Al. Automate the Boring Stuff with Python, 2nd Edition: Practical Programming for Total Beginners 2nd Edition.](https://automatetheboringstuff.com/)
+* [Sweigart, Al. The Big Book of Small Python Projects: 81 Easy Practice Programs.](https://inventwithpython.com/bigbookpython/)
+* [Sweigart, Al. Beyond the Basic Stuff with Python: Best Practices for Writing Clean Code.](http://inventwithpython.com/beyond/)
+* [Sweigart, Al. Cracking Codes with Python: An Introduction to Building and Breaking Ciphers.](https://inventwithpython.com/cracking/)
+
 
 Reporta referencias adicionales a través de este [hilo de discusión](https://github.com/rcfdtools/R.HydroTools/discussions/27).
 
