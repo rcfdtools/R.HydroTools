@@ -1,0 +1,5 @@
+Futuras actualizaciones
+	Plot color ramps with pandas. Read files as module does. 
+	Ejemplo de cada rampa de color disponible.
+	Log de ejecución detallado en formato Markdown.
+	Incluir múltiples métodos de interpolación espacial. Usuario selecciona 1.

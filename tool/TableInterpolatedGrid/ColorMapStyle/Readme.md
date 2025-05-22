@@ -1,0 +1,1 @@
+Mas información acerca de como crear rampas de color personalizadas en https://github.com/rcfdtools/R.GISPython/tree/main/ColorMapStyle
