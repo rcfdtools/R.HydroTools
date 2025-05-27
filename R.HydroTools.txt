@@ -10,7 +10,8 @@ https://github.com/rcfdtools/R.HydroTools.wiki.git
 Python 2.7.14 QGIS 2.18.28 >>> C:\Program Files\QGIS 2.18\bin\python.exe (Do no setup over PyCharm because is not callable)
 
 Pending
-	
+	Integrate R.HydroStormMarkerIDF into HydroTools.
+
 	Tema 1
 		Crear video usando imagenes tif t matplotlib. Usar imagenes de https://github.com/rcfdtools/R.GISPython/tree/main/TableInterpolatedGrid
 	Tema 2 - Procesamiento de tablas geocodificadas
