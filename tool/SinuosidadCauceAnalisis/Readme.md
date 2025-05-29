@@ -76,8 +76,6 @@ Procedimiento usando ArcGIS:
 
 | Versión    | Descripción                                                                          | Autor                                      | Horas |
 |------------|:-------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.08.20 | Inclusión de nuevo realineamiento de referencia, Realineamiento de los ríos gemelos. | [rcfdtools](https://github.com/rcfdtools)  | 0.25  |
-| 2022.08.14 | Inclusión de nuevos realineamientos de referencia, Canal del Dique a Arroyo Bruno.   | [rcfdtools](https://github.com/rcfdtools)  |   2   |
 | 2022.07.25 | Actualización general de documentación.                                              | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
 | 2021.10.19 | Actualización general de análisis, gráficas y formato.                               | [rcfdtools](https://github.com/rcfdtools)  |   2   |
 | 2016.05.21 | Versión inicial.                                                                     | [rcfdtools](https://github.com/rcfdtools)  |   8   |
@@ -92,4 +90,3 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 | [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/24) |
 |------------------------------------------------------------------|------------------------------------------------------------------------------|
 
-[^1]: Imágenes tomadas de [Google Maps](http://maps.google.com) y https://www.centerforfoodsafety.org/issues/4729/water/californias-state-water-project.
