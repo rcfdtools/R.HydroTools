@@ -71,7 +71,7 @@ En general, el coeficiente n de Manning debería ser calibrado a partir de obser
 
 Existen múltiples referencias de valores típicos de rugosidades n de Manning para canales, p. ej. en el libro de _Hidráulica de canales a superficie libre de Ven Te Chow, 1959_ se encuentra una compilación detallada de estos valores para los tipos de canales más usuales. En el [Manual de referencia técnico del Cuerpo de Ingenieros Militares de Estados Unidos de América](https://www.hec.usace.army.mil/confluence/rasdocs/ras1dtechref/latest/basic-data-requirements/geometric-data/energy-loss-coefficients), se encuentra una tabla resumen de los valores típicos presentados por Chow. 
 
-Table Manning's n Values from www.hec.usace.army.mil/
+Manning's n Values from www.hec.usace.army.mil
 
 | Type of Channel and Description                                                                                 |  Minimum  |  Normal  |  Maximum  |
 |-----------------------------------------------------------------------------------------------------------------|:---------:|:--------:|:---------:|
