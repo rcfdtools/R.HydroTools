@@ -3,7 +3,7 @@
 ## Estructura escalonada en sección rectangular a flujo rasante, método Iwao Ohtsu
 Keywords: `hydraulics` `hydraulic-structure` `hydraulic-stepped-structure`
 
-El diseño y construcción de canales hidráulicos requiere frecuentemente del diseño de estructuras escalonadas, cuando existen diferencias importantes de nivel entre el fondo del cauce intervenido y el cauce o canal receptor.
+El diseño y construcción de canales hidráulicos, requiere frecuentemente del diseño de estructuras escalonadas cuando existen diferencias importantes de nivel entre el fondo del cauce lateral intervenido y el cauce o canal receptor.
 
 
 ### Casos en los que se requiere del uso de estructuras escalonadas
