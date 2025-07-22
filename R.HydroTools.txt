@@ -107,3 +107,16 @@ References
 
 	PEP 8 -- Style Guide for Python Code >>> https://www.python.org/dev/peps/pep-0008/
 
+
+
+A comparison study of one-and two-dimensional hydraulic models for river environments.
+dot_32362_DS1.pdf
+https://rosap.ntl.bts.gov/view/dot/32362
+
+A comparative study of 1D and 2D approaches for simulating flows at right angled dividing junctions
+https://www.sciencedirect.com/science/article/abs/pii/S0096300312012155
+
+
+Modeling of Unsteady Flow through Junction in Rectangular Channels: Impact of Model Junction in the Downstream Channel Hydrograph
+https://www.scirp.org/html/6-2570158_78017.htm
+CWEEE_2017072715165320.pdf
