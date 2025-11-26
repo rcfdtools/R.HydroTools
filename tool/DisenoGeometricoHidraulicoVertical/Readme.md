@@ -265,7 +265,7 @@ End Function
 * https://es.slideshare.net/Ebene159/mcanica-de-fludos
 * https://www.fullquimica.com/2012/04/densidad-del-agua.html
 * Book: Julian Aguirre
-* Ven Te Chow. Hidráulica de canales  (Ejemplo 7.4 Ven Te Chow)
+* Ven Te Chow. Hidráulica de canales (Ejemplo 7.4 Ven Te Chow)
 
 
 ### Control de versiones
