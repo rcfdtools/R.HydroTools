@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <title>YnYc - Trapezoidal, rectangular and ditch open flow channel</title>
+      <link rel="stylesheet" href="https://pyscript.net/releases/2025.11.1/core.css">
+      <script type="module" src="https://pyscript.net/releases/2025.11.1/core.js"></script>
+  </head>
+  <body>
+    <h1>YnYc</h1>
+    <p>Input your a & b values...</p>
+    a: <input type="text" id="a" placeholder="Type a value..." /><br>
+    b: <input type="text" id="b" value="0.023" /><br><br>
+    <button py-click="run">Run</button>
+    <div id="output"></div>
+    <script type="py" src="./main.py" config="./pyscript.json"></script>
+  </body>
+</html>
