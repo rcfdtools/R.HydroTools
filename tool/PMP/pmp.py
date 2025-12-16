@@ -10,119 +10,119 @@ import pandas as pd
 from scipy import stats
 from pathlib import Path
 import matplotlib.pyplot as plt
-
 import tabulate  # required for print tables in Markdown using pandas
 
 
 # SciPy probability distributions libraries
-# l_pdist_scipy requires: ([Distribution function, parameters, fit method, label, active)]
-l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', False],
-                  ['gumbel_r', 2, 'MM', 'Gumbel Right Skew', False],
-                  ['norm', 2, 'MM', 'Normal', False],
-                  ['lognorm', 3, 'MLE', 'Log Normal', False],
-                  ['foldnorm', 3, 'MM', 'Fold Normal', False],  # Check: not for rain data
-                  ['halfnorm', 2, 'MM', 'Half Normal', False],
-                  ['gennorm', 3, 'MLE', 'Generalized Normal', False],
+# l_pdist_scipy requires: ([Distribution function, # parameters, fit method, label, active)]
+l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
+                  ['gumbel_r', 2, 'MM', 'Gumbel Right Skew', True],
+                  ['norm', 2, 'MM', 'Normal', True],
+                  ['lognorm', 3, 'MLE', 'Log Normal', True],
+                  ['foldnorm', 3, 'MM', 'Fold Normal', True],  # Check: not for rain data
+                  ['halfnorm', 2, 'MM', 'Half Normal', True],
+                  ['gennorm', 3, 'MLE', 'Generalized Normal', True],
                   ['norminvgauss', 4, 'MLE', 'Normal Inverse Gaussian', False],
-                  ['powernorm', 3, 'MLE', 'Power normal', False],
-                  ['powerlognorm', 4, 'MLE', 'Power log-normal', False],
+                  ['powernorm', 3, 'MLE', 'Power normal', True],
+                  ['powerlognorm', 4, 'MLE', 'Power log-normal', True],
                   ['skewnorm', 3, 'MLE', 'Skew normal', True],
-                  ['truncnorm', 4,'MLE', 'Truncated normal', False],
+                  ['truncnorm', 4,'MLE', 'Truncated normal', True],
                   ['pearson3', 3, 'MM', 'Pearson type III', True],
-                  ['genextreme', 3, 'MLE', 'Generalized exponential', False],
-                  ['alpha', 3, 'MLE', 'Alpha', False],
-                  ['anglit', 2, 'MM', 'Anglit', False],
-                  ['arcsine', 2, 'MM', 'Arcsine', False],
+                  ['genextreme', 3, 'MLE', 'Generalized exponential', True],
+                  ['alpha', 3, 'MLE', 'Alpha', True],
+                  ['anglit', 2, 'MM', 'Anglit', True],
+                  ['arcsine', 2, 'MM', 'Arcsine', True],
                   ['argus', 3, 'MLE', 'Argus', False],
-                  ['beta', 4, 'MLE', 'Beta', False],
-                  ['betaprime', 4, 'MLE', 'Beta prime', False],
-                  ['bradford', 3, 'MLE', 'Bradford', False],
-                  ['burr', 4, 'MLE', 'Burr (Type III)', False],
-                  ['burr12', 4, 'MLE', 'Burr (Type III) 12', False],
-                  ['cauchy', 2, 'MLE', 'Cauchy', False],
-                  ['cosine', 2, 'MLE', 'Cosine', False],
-                  ['halfcauchy', 2, 'MLE', 'Half-Cauchy', False],
+                  ['beta', 4, 'MLE', 'Beta', True],
+                  ['betaprime', 4, 'MLE', 'Beta prime', True],
+                  ['bradford', 3, 'MLE', 'Bradford', True],
+                  ['burr', 4, 'MLE', 'Burr (Type III)', True],
+                  ['burr12', 4, 'MLE', 'Burr (Type III) 12', True],
+                  ['cauchy', 2, 'MLE', 'Cauchy', True],
+                  ['cosine', 2, 'MLE', 'Cosine', True],
+                  ['halfcauchy', 2, 'MLE', 'Half-Cauchy', True],
                   ['foldcauchy', 3, 'MLE', 'Fold Cauchy', False],
-                  ['skewcauchy', 3, 'MLE', 'Skewed Cauchy', False],
-                  ['wrapcauchy', 3, 'MLE', 'Wrapped  Cauchy', False],
-                  ['chi2', 3, 'MLE', 'Chi²', False],
-                  ['crystalball', 4, 'MLE', 'Crystalball', False],
-                  ['gamma', 3, 'MLE', 'Gamma', False],
-                  ['dgamma', 3, 'MLE', 'Double gamma', False],
-                  ['gengamma', 4, 'MLE', 'Generalized gamma', False],
-                  ['invgamma', 3, 'MLE', 'Inverted gamma', False],
+                  ['skewcauchy', 3, 'MLE', 'Skewed Cauchy', True],
+                  ['wrapcauchy', 3, 'MLE', 'Wrapped  Cauchy', True],
+                  ['chi2', 3, 'MLE', 'Chi²', True],
+                  ['crystalball', 4, 'MLE', 'Crystalball', True],
+                  ['gamma', 3, 'MLE', 'Gamma', True],
+                  ['dgamma', 3, 'MLE', 'Double gamma', True],
+                  ['gengamma', 4, 'MLE', 'Generalized gamma', True],
+                  ['invgamma', 3, 'MLE', 'Inverted gamma', True],
                   ['loggamma', 3, 'MLE', 'Log gamma', True],
-                  ['expon', 2, 'MLE', 'Exponential', False],
-                  ['genexpon', 5, 'MLE', 'Generalized exponential', False],
-                  ['exponnorm', 3, 'MLE', 'Exponentially modified Normal', False],
-                  ['exponweib', 4, 'MLE', 'Exponentiated Weibull', False],
-                  ['exponpow', 3, 'MLE', 'Exponential power', False],
-                  ['erlang', 3, 'MLE', 'Erlang', False],  # Check: integer value alert
-                  ['fatiguelife', 3, 'MLE', 'Fatigue-life (Birnbaum-Saunders)', False],
-                  ['truncexpon', 3, 'MLE', 'Truncated exponential', False],
-                  ['f', 4, 'MLE', 'F', False],
-                  ['fisk', 3, 'MLE', 'Fisk', False],
-                  ['genlogistic', 3, 'MLE', 'Generalized logistic', False],
-                  ['gausshyper', 6, 'MLE', 'Gauss hypergeometric', False],
-                  ['genhalflogistic', 3, 'MLE', 'Generalized half-logistic', False],
-                  ['genhyperbolic', 5, 'MLE', 'Generalized hyperbolic', False],
-                  ['geninvgauss', 4, 'MLE', 'Generalized Inverse Gaussian', False],
-                  ['gibrat', 2, 'MM', 'Gibrat', False],
+                  ['expon', 2, 'MLE', 'Exponential', True],
+                  ['genexpon', 5, 'MLE', 'Generalized exponential', True],
+                  ['exponnorm', 3, 'MLE', 'Exponentially modified Normal', True],
+                  ['exponweib', 4, 'MLE', 'Exponentiated Weibull', True],
+                  ['exponpow', 3, 'MLE', 'Exponential power', True],
+                  ['erlang', 3, 'MLE', 'Erlang', True],  # Check: integer value alert
+                  ['fatiguelife', 3, 'MLE', 'Fatigue-life (Birnbaum-Saunders)', True],
+                  ['truncexpon', 3, 'MLE', 'Truncated exponential', True],
+                  ['f', 4, 'MLE', 'F', True],
+                  ['fisk', 3, 'MLE', 'Fisk', True],
+                  ['genlogistic', 3, 'MLE', 'Generalized logistic', True],
+                  ['gausshyper', 6, 'MLE', 'Gauss hypergeometric', True],
+                  ['genhalflogistic', 3, 'MLE', 'Generalized half-logistic', True],
+                  ['genhyperbolic', 5, 'MLE', 'Generalized hyperbolic', True],
+                  ['geninvgauss', 4, 'MLE', 'Generalized Inverse Gaussian', True],
+                  ['gibrat', 2, 'MM', 'Gibrat', True],
                   ['gompertz', 3, 'MLE', 'Gompertz (or truncated Gumbel)', True],
-                  ['halflogistic', 2, 'MM', 'Half-logistic', False],
-                  ['halfgennorm', 3, 'MLE', 'Upper half of a generalized normal', False],
-                  ['hypsecant', 2, 'MM', 'hyperbolic secant', False],
-                  ['invgauss', 3, 'MLE', 'Inverse Gaussian', False],
-                  ['invweibull', 3, 'MLE', 'Inverted Weibull', False],
-                  ['johnsonsb', 4, 'MLE', 'Johnson SB', False],
-                  ['johnsonsu', 4, 'MLE', 'Johnson Su', False],
-                  ['kappa4', 4, 'MLE', 'Kappa 4', False],
-                  ['kappa3', 3, 'MLE', 'Kappa 3', False],
-                  ['ksone', 3, 'MLE', 'Kolmogorov-Smirnov one-sided test statistic distribution', False],
+                  ['halflogistic', 2, 'MM', 'Half-logistic', True],
+                  ['halfgennorm', 3, 'MLE', 'Upper half of a generalized normal', True],
+                  ['hypsecant', 2, 'MM', 'hyperbolic secant', True],
+                  ['invgauss', 3, 'MLE', 'Inverse Gaussian', True],
+                  ['invweibull', 3, 'MLE', 'Inverted Weibull', True],
+                  ['johnsonsb', 4, 'MLE', 'Johnson SB', True],
+                  ['johnsonsu', 4, 'MLE', 'Johnson Su', True],
+                  ['kappa4', 4, 'MLE', 'Kappa 4', True],
+                  ['kappa3', 3, 'MLE', 'Kappa 3', True],
+                  ['ksone', 3, 'MLE', 'Kolmogorov-Smirnov one-sided test statistic distribution', True],
                   ['kstwo', 3, 'MLE', 'Kolmogorov-Smirnov two-sided test statistic distribution', False],  # Check: zero division, don't use
-                  ['kstwobign', 2, 'MLE', 'Limiting distribution of scaled Kolmogorov-Smirnov two-sided test statistic', False],
-                  ['laplace', 2, 'MM', 'Laplace', False],
-                  ['laplace_asymmetric', 3, 'MLE', 'Asymmetric Laplace', False],
-                  ['loglaplace', 3, 'MLE', 'Log-Laplace', False],
-                  ['levy', 2, 'MLE', 'Levy', False],
-                  ['levy_l', 2, 'MLE', 'Left-skewed Levy', False],
-                  ['levy_stable', 4, 'MLE', 'Levy-stable', False],
-                  ['logistic', 2, 'MM', 'Logistic (or Sech-squared)', False],
-                  ['maxwell', 2, 'MM', 'Maxwell', False],
-                  ['mielke', 4, 'MLE', 'Mielke Beta-Kappa / Dagum', False],
-                  ['moyal', 2, 'MM', 'Moyal', False],
-                  ['nakagami', 3, 'MLE', 'Nakagami', False],
-                  ['ncx2', 4, 'MLE', 'Non-central chi-squared', False],
-                  ['ncf', 5, 'MLE', 'Non-central F distribution', False],
-                  ['nct', 4, 'MLE', 'Non-central Student’s t', False],
-                  ['pareto', 3, 'MLE', 'Pareto', False],
-                  ['genpareto', 3, 'MLE', 'Generalized Pareto', False],
-                  ['truncpareto', 4, 'MLE', 'Upper truncated Pareto', False],
-                  ['lomax', 3, 'MLE', 'Lomax (Pareto of the second kind)', False],
-                  ['powerlaw', 3, 'MLE', 'Power-function', False],
-                  ['rdist', 3, 'MLE', 'R-distributed (symmetric beta)', False],
-                  ['rayleigh', 2, 'MM', 'Rayleigh', False],
-                  ['rel_breitwigner', 3, 'MLE', 'Relativistic Breit-Wigner', False],
-                  ['rice', 3, 'MLE', 'Rice', False],
-                  ['recipinvgauss', 3, 'MLE', 'Reciprocal inverse Gaussian', False],
-                  ['semicircular', 2, 'MM', 'Semicircular', False],
+                  ['kstwobign', 2, 'MLE', 'Limiting distribution of scaled Kolmogorov-Smirnov two-sided test statistic', True],
+                  ['laplace', 2, 'MM', 'Laplace', True],
+                  ['laplace_asymmetric', 3, 'MLE', 'Asymmetric Laplace', True],
+                  ['loglaplace', 3, 'MLE', 'Log-Laplace', True],
+                  ['levy', 2, 'MLE', 'Levy', True],
+                  ['levy_l', 2, 'MLE', 'Left-skewed Levy', True],
+                  ['levy_stable', 4, 'MLE', 'Levy-stable', True],
+                  ['logistic', 2, 'MM', 'Logistic (or Sech-squared)', True],
+                  ['maxwell', 2, 'MM', 'Maxwell', True],
+                  ['mielke', 4, 'MLE', 'Mielke Beta-Kappa / Dagum', True],
+                  ['moyal', 2, 'MM', 'Moyal', True],
+                  ['nakagami', 3, 'MLE', 'Nakagami', True],
+                  ['ncx2', 4, 'MLE', 'Non-central chi-squared', True],
+                  ['ncf', 5, 'MLE', 'Non-central F distribution', True],
+                  ['nct', 4, 'MLE', 'Non-central Student’s t', True],
+                  ['pareto', 3, 'MLE', 'Pareto', True],
+                  ['genpareto', 3, 'MLE', 'Generalized Pareto', True],
+                  ['truncpareto', 4, 'MLE', 'Upper truncated Pareto', True],
+                  ['lomax', 3, 'MLE', 'Lomax (Pareto of the second kind)', True],
+                  ['powerlaw', 3, 'MLE', 'Power-function', True],
+                  ['rdist', 3, 'MLE', 'R-distributed (symmetric beta)', True],
+                  ['rayleigh', 2, 'MM', 'Rayleigh', True],
+                  ['rel_breitwigner', 3, 'MLE', 'Relativistic Breit-Wigner', True],
+                  ['rice', 3, 'MLE', 'Rice', True],
+                  ['recipinvgauss', 3, 'MLE', 'Reciprocal inverse Gaussian', True],
+                  ['semicircular', 2, 'MM', 'Semicircular', True],
                   ['studentized_range', 4, 'MLE', 'Studentized range', False],  # Check: don't converge
-                  ['t', 3, 'MLE', 'Student’s t', False],
-                  ['trapezoid', 4, 'MLE', 'Trapezoid', False],
-                  ['triang', 3, 'MLE', 'Triangular', False],
-                  ['truncweibull_min', 5, 'MLE', 'Doubly truncated Weibull minimum', False],
-                  ['tukeylambda', 3, 'MLE', 'Tukey-Lamdba', False],
-                  ['uniform', 2, 'MLE', 'Uniform', False],
-                  ['loguniform', 4, 'MLE', 'Log-Uniform or reciprocal', False],
-                  ['vonmises', 3, 'MLE', 'Von Mises', False],  # Check: values out of range
-                  ['vonmises_line', 3, 'MLE', 'Von Mises line', False],
-                  ['wald', 2, 'MM', 'Wald', False],
-                  ['weibull_min', 3, 'MLE', 'Weibull minimum', False],
+                  ['t', 3, 'MLE', 'Student’s t', True],
+                  ['trapezoid', 4, 'MLE', 'Trapezoid', True],
+                  ['triang', 3, 'MLE', 'Triangular', True],
+                  ['truncweibull_min', 5, 'MLE', 'Doubly truncated Weibull minimum', True],
+                  ['tukeylambda', 3, 'MLE', 'Tukey-Lamdba', True],
+                  ['uniform', 2, 'MLE', 'Uniform', True],
+                  ['loguniform', 4, 'MLE', 'Log-Uniform or reciprocal', True],
+                  ['vonmises', 3, 'MLE', 'Von Mises', True],  # Check: values out of range
+                  ['vonmises_line', 3, 'MLE', 'Von Mises line', True],
+                  ['wald', 2, 'MM', 'Wald', True],
+                  ['weibull_min', 3, 'MLE', 'Weibull minimum', True],
                   ['weibull_max', 3, 'MLE', 'Weibull maximum', False],  # Check: not for rain data
                   ['dweibull', 3, 'MLE', 'Double Weibull', False]
                   ])
 
 
+# Fitting test
 def fTestKolmogorov(dfx, p_dist, idk):  # Kolmogorov-Smirnov fit test
     print('Processing Kolmogorov for: %s...' % p_dist)
     dfp = pd.DataFrame()
@@ -146,7 +146,7 @@ def fTestKolmogorov(dfx, p_dist, idk):  # Kolmogorov-Smirnov fit test
     vDeltaKolmogorov['eval'][idk] = 'Δo %s Δ' % operator
     vDeltaKolmogorov['fit'][idk] = fit
 
-
+# Empirical distributions
 emp_dist = ['emp_california', 'emp_hazen', 'emp_weibull', 'emp_beard', 'emp_chegodayev', 'emp_blom', 'emp_tukey', 'emp_gringorten', 'emp_jenkinson', 'emp_cunnane', 'emp_adamowski']
 def pdist_empirical(dfx, emp):
     dfx['empirical_dist'] = emp
@@ -177,7 +177,8 @@ def pdist_empirical(dfx, emp):
     dfx['empirical_tr'] = 1 / (1-dfx['empirical'])
 
 
-def gumbel_yn(n):  # Gumbel Yn parameter
+# Gumbel distribution Yn parameter calculation
+def gumbel_yn(n):
     su = 0
     for m in range(1, n+1):
         ym = -np.log(-np.log((n + 1 - m) / (n + 1)))
@@ -185,8 +186,8 @@ def gumbel_yn(n):  # Gumbel Yn parameter
     mi = su / n
     return mi
 
-
-def gumbel_sn(n, mi):  # Gumbel Sn parameter
+# Gumbel distribution Sn parameter calculation
+def gumbel_sn(n, mi):
     su = 0
     for m in range (1, n+1):
         ym = -np.log(-np.log((n + 1 - m) / (n + 1)))
@@ -195,8 +196,8 @@ def gumbel_sn(n, mi):  # Gumbel Sn parameter
     mi2 = mi ** 0.5
     return mi2
 
-
-def pdist_gumbel(dfx):  # Probability distribution: Gumbel
+# Probability distribution: Gumbel
+def pdist_gumbel(dfx):
     print('Processing CDF: zzgumbel...')  # Only for console
     n = len(dfx[x])
     yn = gumbel_yn(n)
@@ -214,7 +215,8 @@ def pdist_gumbel(dfx):  # Probability distribution: Gumbel
     vDeltaKolmogorov.loc[len(vDeltaKolmogorov)] = vDeltaKolmogorovData  # Add the results as a new record
 
 
-def pdist_loggumbel(dfx):  # Probability distribution: Log-Gumbel
+# Probability distribution: Log-Gumbel
+def pdist_loggumbel(dfx):
     print('Processing CDF: zzloggumbel...')  # Only for console
     n = len(dfx[x])
     yn = gumbel_yn(n)
@@ -232,6 +234,7 @@ def pdist_loggumbel(dfx):  # Probability distribution: Log-Gumbel
     vDeltaKolmogorov.loc[len(vDeltaKolmogorov)] = vDeltaKolmogorovData  # Add the results as a new record
 
 
+# Scipy probability distributions
 def pdist_scipy(dfx, p_dist, n_parameter, fit_method, p_dist_tag):
     # dfx: dataset to eval
     # p_dist: probability distribution function name in SciPy
