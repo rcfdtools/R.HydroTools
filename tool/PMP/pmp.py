@@ -32,7 +32,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['alpha', 3, 'MLE', 'Alpha', True],
                   ['anglit', 2, 'MM', 'Anglit', True],
                   ['arcsine', 2, 'MM', 'Arcsine', True],
-                  ['argus', 3, 'MLE', 'Argus', False],
+                  ['argus', 3, 'MLE', 'Argus', True],
                   ['beta', 4, 'MLE', 'Beta', True],
                   ['betaprime', 4, 'MLE', 'Beta prime', True],
                   ['bradford', 3, 'MLE', 'Bradford', True],
@@ -41,7 +41,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['cauchy', 2, 'MLE', 'Cauchy', True],
                   ['cosine', 2, 'MLE', 'Cosine', True],
                   ['halfcauchy', 2, 'MLE', 'Half-Cauchy', True],
-                  ['foldcauchy', 3, 'MLE', 'Fold Cauchy', False],
+                  ['foldcauchy', 3, 'MLE', 'Fold Cauchy', True],
                   ['skewcauchy', 3, 'MLE', 'Skewed Cauchy', True],
                   ['wrapcauchy', 3, 'MLE', 'Wrapped  Cauchy', True],
                   ['chi2', 3, 'MLE', 'Chi²', True],
@@ -117,7 +117,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['vonmises_line', 3, 'MLE', 'Von Mises line', True],
                   ['wald', 2, 'MM', 'Wald', True],
                   ['weibull_min', 3, 'MLE', 'Weibull minimum', True],
-                  ['weibull_max', 3, 'MLE', 'Weibull maximum', False],  # Check: not for rain data
+                  ['weibull_max', 3, 'MLE', 'Weibull maximum', True],  # Check: not for rain data
                   ['dweibull', 3, 'MLE', 'Double Weibull', False]
                   ])
 
@@ -321,8 +321,8 @@ color_line_plot = 'green'
 dpi = 128  # Save plot resolution
 show_warnings = False  # Show warnings on screen
 low_extreme = False  # Eval low extreme values, if False, evaluates high extreme values
-pdist_gumbel_on = True  # Activate the Gumbel distribution
-pdist_loggumbel_on = True  # Activate the Log-Gumbel distribution
+pdist_gumbel_on = False  # Activate the Gumbel distribution
+pdist_loggumbel_on = False  # Activate the Log-Gumbel distribution
 if not show_warnings: warnings.filterwarnings('ignore')
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
