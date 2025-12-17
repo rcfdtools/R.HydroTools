@@ -32,7 +32,8 @@ ddof = 1  # Standard deviation normalized
 x_label = 'Valor'  # Initial value column name to eval from .csv station file
 date_label = 'Fecha'  # Initial value column name from .csv station file
 # Periodos de retorno y probabilidades
-tr = [2, 2.33, 5, 10, 15, 20, 25, 50, 75, 100, 200, 250, 500, 750, 1000]  # Tr, return period in years
+tr = [2.33, 5, 10, 25, 50, 100]  # Tr, return period in years
+#tr = [2, 2.33, 5, 10, 15, 20, 25, 50, 75, 100, 200, 250, 500, 750, 1000]  # Tr, return period in years
 df_tr = pd.DataFrame(tr, columns=['tr'])
 n_tr = len(df_tr)
 df_tr['prob_l'] = 1-1/df_tr.tr  # P≤, Probability less than, for high extreme values
