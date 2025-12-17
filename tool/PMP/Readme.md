@@ -36,19 +36,23 @@ When the annual values contain zeros, the following distributions has to be avoi
 
 When the annual values contain zeros or because generated extreme values out of range.
 
+* kstwo
+* studentized_range
 * cauchy
 * halfcauchy
 * foldcauchy
 * skewcauchy
 * norminvgauss
-* kstwo
-* studentized_range
 * levy
+* rel_breitwigner
 * exponweib
 * gengamma
 * exponpow
 * halfgennorm
 * ncx2
+* lomax
+* loglaplace
+* semicircular
 
 
 
