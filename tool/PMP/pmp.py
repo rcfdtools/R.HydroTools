@@ -25,7 +25,7 @@ dpi = 128  # Save plot resolution
 show_warnings = False  # Show warnings on screen
 low_extreme = False  # Eval low extreme values, if False, evaluates high extreme values
 pdist_gumbel_on = True  # Activate the Gumbel distribution
-pdist_loggumbel_on = False  # Activate the Log-Gumbel distribution
+pdist_loggumbel_on = True  # Activate the Log-Gumbel distribution
 if not show_warnings: warnings.filterwarnings('ignore')
 plot_legend_ncol = 4  # Columns on the legend
 ddof = 1  # Standard deviation normalized
@@ -92,7 +92,7 @@ for i in range(0, len(df_l_pdist_scipy)):
     dp_evalated += 1
     funcs.pdist_scipy(df, df_l_pdist_scipy['p_dist'][i], df_l_pdist_scipy['n_parameter'][i], df_l_pdist_scipy['fit_method'][i], df_l_pdist_scipy['label'][i], x, low_extreme, df_tr, station_name, vDeltaKolmogorov)
 if pdist_gumbel_on: funcs.pdist_gumbel(df, x, ddof, low_extreme, df_tr, station_name, vDeltaKolmogorov)
-if pdist_loggumbel_on: funcs.pdist_loggumbel(df)
+if pdist_loggumbel_on: funcs.pdist_loggumbel(df, x, low_extreme, df_tr, station_name, vDeltaKolmogorov)
 funcs.print_log(file_log, '\n\n### Cumulative distribution values - CDF (%d evalated, ordered by x ascending) \n\n%s' %(dp_evalated, df.to_markdown()))
 
 # Evaluation for each empirical distribution

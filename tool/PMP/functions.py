@@ -217,7 +217,7 @@ def pdist_gumbel(dfx, x, ddof, low_extreme, df_tr, station_name, vDeltaKolmogoro
 
 
 # Probability distribution: Log-Gumbel
-def pdist_loggumbel(dfx):
+def pdist_loggumbel(dfx, x, low_extreme, df_tr, station_name, vDeltaKolmogorov):
     print('Processing CDF: zzloggumbel...')  # Only for console
     n = len(dfx[x])
     yn = gumbel_yn(n)
