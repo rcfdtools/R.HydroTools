@@ -1,5 +1,13 @@
 <div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
 
+## Pending tast
+
+* Separate functions from executing script
+* Collect PMP from previous researchs: Cesar state projects
+* Collection table with last best fit distributions
+* Massive analysis for automatic stations
+
+
 ## PMP - Precipitación máxima probable utilizando 104 distribuciones de probabilidad
 Keywords: `pmp` `probability-distributions` `scipy`
 
@@ -8,20 +16,40 @@ Estudio de la PMP utilizando las múltiples distribuciones de probabilidad dispo
 
 ### Probability distributions not right for rain analysis
 
-When the annual values contain zeros, the follow distributions has to be avoided.
+When the annual values contain zeros, the following distributions has to be avoided.
 
+* halfcauchy
 * foldcauchy
+* skewcauchy
 * genextreme
 * genhyperbolic
-* halfcauchy
 * halfgennorm
 * levy
 * powerlognorm
 * powernorm
 * burr12
 * cauchy
-* skewcauchy
 * rel_breitwigner
+
+
+### Probability distributions excluded for rain analysis
+
+When the annual values contain zeros or because generated extreme values out of range.
+
+* cauchy
+* halfcauchy
+* foldcauchy
+* skewcauchy
+* norminvgauss
+* kstwo
+* studentized_range
+* levy
+* exponweib
+* gengamma
+* exponpow
+* halfgennorm
+
+
 
 
 ### References
