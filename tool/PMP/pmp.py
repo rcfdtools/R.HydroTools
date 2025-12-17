@@ -82,7 +82,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['kstwobign', 2, 'MLE', 'Limiting distribution of scaled Kolmogorov-Smirnov two-sided test statistic', True],
                   ['laplace', 2, 'MM', 'Laplace', True],
                   ['laplace_asymmetric', 3, 'MLE', 'Asymmetric Laplace', True],
-                  ['loglaplace', 3, 'MLE', 'Log-Laplace', True],
+                  ['loglaplace', 3, 'MLE', 'Log-Laplace', False],
                   ['levy', 2, 'MLE', 'Levy', False],
                   ['levy_l', 2, 'MLE', 'Left-skewed Levy', True],
                   ['levy_stable', 4, 'MLE', 'Levy-stable', True],
@@ -91,20 +91,20 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['mielke', 4, 'MLE', 'Mielke Beta-Kappa / Dagum', True],
                   ['moyal', 2, 'MM', 'Moyal', True],
                   ['nakagami', 3, 'MLE', 'Nakagami', True],
-                  ['ncx2', 4, 'MLE', 'Non-central chi-squared', True],
+                  ['ncx2', 4, 'MLE', 'Non-central chi-squared', False],
                   ['ncf', 5, 'MLE', 'Non-central F distribution', True],
                   ['nct', 4, 'MLE', 'Non-central Student’s t', True],
                   ['pareto', 3, 'MLE', 'Pareto', True],
                   ['genpareto', 3, 'MLE', 'Generalized Pareto', True],
                   ['truncpareto', 4, 'MLE', 'Upper truncated Pareto', True],
-                  ['lomax', 3, 'MLE', 'Lomax (Pareto of the second kind)', True],
+                  ['lomax', 3, 'MLE', 'Lomax (Pareto of the second kind)', False],
                   ['powerlaw', 3, 'MLE', 'Power-function', True],
                   ['rdist', 3, 'MLE', 'R-distributed (symmetric beta)', True],
                   ['rayleigh', 2, 'MM', 'Rayleigh', True],
                   ['rel_breitwigner', 3, 'MLE', 'Relativistic Breit-Wigner', False],
                   ['rice', 3, 'MLE', 'Rice', True],
                   ['recipinvgauss', 3, 'MLE', 'Reciprocal inverse Gaussian', True],
-                  ['semicircular', 2, 'MM', 'Semicircular', True],
+                  ['semicircular', 2, 'MM', 'Semicircular', False],
                   ['studentized_range', 4, 'MLE', 'Studentized range', False],  # Check: don't converge
                   ['t', 3, 'MLE', 'Student’s t', True],
                   ['trapezoid', 4, 'MLE', 'Trapezoid', True],
@@ -322,7 +322,7 @@ dpi = 128  # Save plot resolution
 show_warnings = False  # Show warnings on screen
 low_extreme = False  # Eval low extreme values, if False, evaluates high extreme values
 pdist_gumbel_on = True  # Activate the Gumbel distribution
-pdist_loggumbel_on = True  # Activate the Log-Gumbel distribution
+pdist_loggumbel_on = False  # Activate the Log-Gumbel distribution
 if not show_warnings: warnings.filterwarnings('ignore')
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)

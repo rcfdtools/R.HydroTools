@@ -48,6 +48,7 @@ When the annual values contain zeros or because generated extreme values out of 
 * gengamma
 * exponpow
 * halfgennorm
+* ncx2
 
 
 
