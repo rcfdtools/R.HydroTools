@@ -32,7 +32,7 @@ ddof = 1  # Standard deviation normalized
 x_label = 'Valor'  # Initial value column name to eval from .csv station file
 date_label = 'Fecha'  # Initial value column name from .csv station file
 # Periodos de retorno y probabilidades
-tr = [2.33, 5, 10, 25, 50, 100]  # Tr, return period in years
+tr = [2.33, 5, 10, 25, 50, 100, 250, 500, 750, 1000]  # Tr, return period in years
 #tr = [2, 2.33, 5, 10, 15, 20, 25, 50, 75, 100, 200, 250, 500, 750, 1000]  # Tr, return period in years
 df_tr = pd.DataFrame(tr, columns=['tr'])
 n_tr = len(df_tr)
@@ -192,7 +192,7 @@ for emp in funcs.emp_dist:
         if show_plot: plt.show()
 
     # Print extreme values table
-    vDeltaKolmogorov = vDeltaKolmogorov.sort_values(by=['p_dist'], ascending=True)  # Required for asign the parameters in the right order
+    vDeltaKolmogorov = vDeltaKolmogorov.sort_values(by=['p_dist'], ascending=True)  # Required for assign the parameters in the right order
     vDeltaKolmogorov = vDeltaKolmogorov.reset_index(drop=True)
 
 funcs.print_log(file_log, '\n\n\n## C. Estimate extreme values for specific return periods - Tr\n')
