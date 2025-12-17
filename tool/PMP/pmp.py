@@ -321,8 +321,8 @@ color_line_plot = 'green'
 dpi = 128  # Save plot resolution
 show_warnings = False  # Show warnings on screen
 low_extreme = False  # Eval low extreme values, if False, evaluates high extreme values
-pdist_gumbel_on = False  # Activate the Gumbel distribution
-pdist_loggumbel_on = False  # Activate the Log-Gumbel distribution
+pdist_gumbel_on = True  # Activate the Gumbel distribution
+pdist_loggumbel_on = True  # Activate the Log-Gumbel distribution
 if not show_warnings: warnings.filterwarnings('ignore')
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
