@@ -139,13 +139,14 @@ for station in stations:
         funcs.print_log(file_log, '\n\n#### 1. Empirical values\n\n')
         funcs.print_log(file_log, '%s' %(df[['date', 'x', 'm', 'empirical_dist', 'empirical', 'empirical_tr']].to_markdown()), center_div=True)
         vDeltaKolmogorov['best_fit_sort'] = vDeltaKolmogorov.index+1
+        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file3, center_div=True)
         funcs.print_log(file_log, '\n\n####  2. Parameters & Kolmogorov-Smirnov fit test (sorted by Δ)\n\n%s' % vDeltaKolmogorov[['empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3', 'best_fit', 'best_fit_sort']].to_markdown())
         dp_best = vDeltaKolmogorov[vDeltaKolmogorov.best_fit == 1]
         dp_best = dp_best.reset_index(drop=True)
         dp_best.index.name = 'id'
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file1, center_div=True)
-        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file2, center_div=True)
         funcs.print_log(file_log, '\n\n#### 3. Best fit for\n\n%s' %dp_best.to_markdown())
+        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file2, center_div=True)
 
         # Plot analysis graphs
         if create_plot:
@@ -231,6 +232,7 @@ for station in stations:
     funcs.print_log(file_log, '\n\n\n## C. Estimate extreme values for specific return periods - Tr\n')
     df_tr.index.name = 'id'
     funcs.print_log(file_log,df_tr.to_markdown())
+    funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file4, center_div=True)
     funcs.print_log(file_log,'\n> risk_rate: assuming the return period as the project useful life.')
 
     #print(df.to_csv(index=False))
