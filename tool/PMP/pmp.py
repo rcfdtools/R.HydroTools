@@ -22,8 +22,7 @@ create_plot = False  # Creates and save plots into files
 show_plot = False  # Show plot on screen
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
 color_line_plot = 'green'
-dpi = 128  # Save plot resolution for simple graphs
-dpi_high = 512  # Save plot resolution for multiple extreme graphs
+dpi = 96  # Save plot resolution
 plot_legend_fontsize = 'xx-small' # 'xx-small', 'x-small', 'small', 'medium' (default), 'large', 'x-large', 'xx-large'
 show_warnings = False  # Show warnings on screen
 low_extreme = False  # Eval low extreme values, if False, evaluates high extreme values
@@ -146,11 +145,11 @@ for station in stations:
         dp_best = vDeltaKolmogorov[vDeltaKolmogorov.best_fit == 1]
         dp_best = dp_best.reset_index(drop=True)
         dp_best.index.name = 'id'
-        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1000"></img>' % fig_file1, center_div=True)
+        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file1, center_div=True)
         funcs.print_log(file_log, '\n\n#### 3. Best fit for\n\n%s' %dp_best.to_markdown())
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file2, center_div=True)
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file3, center_div=True)
-        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1000"></img>' % fig_file4, center_div=True)
+        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file4, center_div=True)
 
         # Plot analysis graphs
         if create_plot:
@@ -176,7 +175,7 @@ for station in stations:
             plt.grid(color = 'gray', linestyle = '--', linewidth = 0.1)
             plt.annotate('Station: %s' %(station_code), xy=(0.99, 0.98), xycoords='axes fraction', ha='right', fontsize=9)
             if show_plot: plt.show()
-            plt.savefig(ouput_path + fig_file1, dpi=dpi_high)
+            plt.savefig(ouput_path + fig_file1, dpi=dpi)
             plt.close()
 
             # Plot empirical vs. best fit (graph 2)
@@ -225,7 +224,7 @@ for station in stations:
             plt.grid(color = 'gray', linestyle = '--', linewidth = 0.1)
             plt.annotate('Station: %s (Δo: %f %s)' %(station_code, vDeltaKolmogorov['deltao'][0], emp), xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
             if show_plot: plt.show()
-            plt.savefig(ouput_path + fig_file4, dpi=dpi_high)
+            plt.savefig(ouput_path + fig_file4, dpi=dpi)
             plt.close()
 
         # Print extreme values table
