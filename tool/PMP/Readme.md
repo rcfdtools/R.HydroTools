@@ -79,7 +79,7 @@ Horizontal trending for high return periods Tr > = 100
 * weibull_max
 * wrapcauchy
 
-'''
+```
 l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['gumbel_r', 2, 'MM', 'Gumbel Right Skew', True],
                   ['norm', 2, 'MM', 'Normal', True],
@@ -186,8 +186,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['dweibull', 3, 'MLE', 'Double Weibull', False]
                   ])
 
-'''
-
+```
 
 
 ### References
