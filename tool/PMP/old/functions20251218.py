@@ -198,7 +198,7 @@ def gumbel_sn(n, mi):
 
 
 # Probability distribution: Gumbel
-def pdist_gumbel(dfx, x, ddof, low_extreme, df_tr, station_code, vDeltaKolmogorov):
+def pdist_gumbel(dfx, x, ddof, low_extreme, df_tr, station_name, vDeltaKolmogorov):
     print('Processing CDF: zzgumbel...')  # Only for console
     n = len(dfx[x])
     yn = gumbel_yn(n)
@@ -212,12 +212,12 @@ def pdist_gumbel(dfx, x, ddof, low_extreme, df_tr, station_code, vDeltaKolmogoro
         x_extreme = loc - np.log(-np.log(1 - 1 / df_tr.tr)) * scale
     df_tr['zzgumbel'] = x_extreme
     dfx['gumbel_pdf'] = 0  # <<<<<<<<<<<<<<<<<< pdf not calculated
-    vDeltaKolmogorovData = [station_code, '', '', 0.0, 0.0, '', '', n, loc, scale, yn, sn, '', '']
+    vDeltaKolmogorovData = [station_name, '', '', 0.0, 0.0, '', '', n, loc, scale, yn, sn, '', '']
     vDeltaKolmogorov.loc[len(vDeltaKolmogorov)] = vDeltaKolmogorovData  # Add the results as a new record
 
 
 # Probability distribution: Log-Gumbel
-def pdist_loggumbel(dfx, x, low_extreme, df_tr, station_code, vDeltaKolmogorov):
+def pdist_loggumbel(dfx, x, low_extreme, df_tr, station_name, vDeltaKolmogorov):
     print('Processing CDF: zzloggumbel...')  # Only for console
     n = len(dfx[x])
     yn = gumbel_yn(n)
@@ -231,12 +231,12 @@ def pdist_loggumbel(dfx, x, low_extreme, df_tr, station_code, vDeltaKolmogorov):
         x_extreme = np.exp(loc - np.log(-np.log(1 - 1 / df_tr.tr)) * scale)
     df_tr['zzloggumbel'] = x_extreme
     dfx['loggumbel_pdf'] = 0  # <<<<<<<<<<<<<<<<<< pdf not calculated
-    vDeltaKolmogorovData = [station_code, '', '', 0.0, 0.0, '', '', n, loc, scale, yn, sn, '', '']
+    vDeltaKolmogorovData = [station_name, '', '', 0.0, 0.0, '', '', n, loc, scale, yn, sn, '', '']
     vDeltaKolmogorov.loc[len(vDeltaKolmogorov)] = vDeltaKolmogorovData  # Add the results as a new record
 
 
 # Scipy probability distributions
-def pdist_scipy(dfx, p_dist, n_parameter, fit_method, p_dist_tag, x, low_extreme, df_tr, station_code, vDeltaKolmogorov):
+def pdist_scipy(dfx, p_dist, n_parameter, fit_method, p_dist_tag, x, low_extreme, df_tr, station_name, vDeltaKolmogorov):
     # dfx: dataset to eval
     # p_dist: probability distribution function name in SciPy
     # n_parameter: # parameters required
@@ -296,7 +296,7 @@ def pdist_scipy(dfx, p_dist, n_parameter, fit_method, p_dist_tag, x, low_extreme
     else:
         print('%s\n* Error: check the # parameters entered...')
     dfx[p_dist+'_pdf'] =  frozen_dist.pdf(dfx.x)
-    vDeltaKolmogorovData = [station_code, '', '', 0.0, 0.0, '', '', n, loc, scale, shape, shape1, shape2,shape3]
+    vDeltaKolmogorovData = [station_name, '', '', 0.0, 0.0, '', '', n, loc, scale, shape, shape1, shape2,shape3]
     vDeltaKolmogorov.loc[len(vDeltaKolmogorov)] = vDeltaKolmogorovData  # Add the results as a new record
 
 
