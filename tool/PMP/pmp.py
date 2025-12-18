@@ -6,6 +6,7 @@ import functions as funcs
 import warnings
 from pathlib import Path
 import matplotlib.pyplot as plt
+from matplotlib.pyplot import figure
 import tabulate  # required for print tables in Markdown using pandas
 import numpy as np
 import pandas as pd
@@ -17,24 +18,26 @@ pd.set_option('display.width', None)
 # General setup
 parameter_name = 'rain'  # rain, flow
 parameter_units = '($mm/d$)'  # ($mm/d$), ($m^3/s$)
-create_plot = True  # Creates and print plots
+create_plot = False  # Creates and save plots into files
 show_plot = False  # Show plot on screen
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
 color_line_plot = 'green'
-dpi = 128  # Save plot resolution
+dpi = 128  # Save plot resolution for simple graphs
+dpi_high = 512  # Save plot resolution for multiple extreme graphs
+plot_legend_fontsize = 'xx-small' # 'xx-small', 'x-small', 'small', 'medium' (default), 'large', 'x-large', 'xx-large'
 show_warnings = False  # Show warnings on screen
 low_extreme = False  # Eval low extreme values, if False, evaluates high extreme values
 pdist_gumbel_on = True  # Activate the Gumbel distribution
 pdist_loggumbel_on = True  # Activate the Log-Gumbel distribution
 if not show_warnings: warnings.filterwarnings('ignore')
-plot_legend_ncol = 4  # Columns on plot legend
+plot_legend_ncol = 2  # Columns on plot legend, '' for autofit
 ddof = 1  # Standard deviation normalized
 station_label = 'Station' # Station column name to eval from .csv station file
 x_label = 'Value'  # Value column name to eval from .csv station file
 date_label = 'Date'  # Date column name from .csv station file
 # Return periods and probabilities
-tr = [2.33, 5, 10, 25, 50, 100]  # Tr, return period in years
-#tr = [2, 2.33, 5, 10, 15, 20, 25, 50, 75, 100, 200, 250, 500, 750, 1000]  # Tr, return period in years
+#tr = [2.33, 5, 10, 25, 50, 100]  # Tr, return period in years
+tr = [2, 2.33, 5, 10, 15, 20, 25, 50, 75, 100, 200, 250, 500, 750, 1000]  # Tr, return period in years
 df_tr = pd.DataFrame(tr, columns=['tr'])
 n_tr = len(df_tr)
 df_tr['prob_l'] = 1-1/df_tr.tr  # P≤, Probability less than, for high extreme values
@@ -143,16 +146,17 @@ for station in stations:
         dp_best = vDeltaKolmogorov[vDeltaKolmogorov.best_fit == 1]
         dp_best = dp_best.reset_index(drop=True)
         dp_best.index.name = 'id'
-        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file1, center_div=True)
+        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1000"></img>' % fig_file1, center_div=True)
         funcs.print_log(file_log, '\n\n#### 3. Best fit for\n\n%s' %dp_best.to_markdown())
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file2, center_div=True)
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file3, center_div=True)
-        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file4, center_div=True)
+        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1000"></img>' % fig_file4, center_div=True)
 
         # Plot analysis graphs
         if create_plot:
 
             # Plot empirical vs. all (graph 1)
+            figure(figsize=(15, 12))
             plt.scatter(df[x], df['empirical'], color='black', facecolors='darkgray', s=24, label='%s (Δo: %f)' % (emp, vDeltaKolmogorov['deltao'][0]))
             for i in range(0, len(vDeltaKolmogorov)):
                 dp = vDeltaKolmogorov['p_dist'][i]
@@ -167,11 +171,12 @@ for station in stations:
             plt.title('Cumulative distribution function CDF%s' %(only_fit_txt))
             plt.xlabel(parameter_name + ' ' + parameter_units)
             plt.ylabel('CDF')
+            plt.legend(fontsize=plot_legend_fontsize)
             plt.legend(loc='best', frameon=True, edgecolor='white', framealpha=0.9, ncol=plot_legend_ncol, facecolor='white')
             plt.grid(color = 'gray', linestyle = '--', linewidth = 0.1)
             plt.annotate('Station: %s' %(station_code), xy=(0.99, 0.98), xycoords='axes fraction', ha='right', fontsize=9)
             if show_plot: plt.show()
-            plt.savefig(ouput_path + fig_file1, dpi=dpi)
+            plt.savefig(ouput_path + fig_file1, dpi=dpi_high)
             plt.close()
 
             # Plot empirical vs. best fit (graph 2)
@@ -201,6 +206,7 @@ for station in stations:
             plt.close()
 
             # Plot values over return periods Tr (graph 4)
+            figure(figsize=(15, 12))
             for i in range(0, len(vDeltaKolmogorov)):
                 dp = vDeltaKolmogorov['p_dist'][i]
                 delta = vDeltaKolmogorov['delta'][i]
@@ -214,11 +220,12 @@ for station in stations:
             plt.title('Extreme values for specific return periods%s' %(only_fit_txt))
             plt.xlabel('Tr ($years$)')
             plt.ylabel(parameter_name + ' ' + parameter_units)
-            plt.legend(loc='best', frameon=True, edgecolor='white', framealpha=0.9, ncol=plot_legend_ncol, facecolor='white')
+            plt.legend(fontsize=plot_legend_fontsize)
+            plt.legend(loc='best', frameon=True, edgecolor='white', framealpha=0.9, ncol=4, facecolor='white')
             plt.grid(color = 'gray', linestyle = '--', linewidth = 0.1)
             plt.annotate('Station: %s (Δo: %f %s)' %(station_code, vDeltaKolmogorov['deltao'][0], emp), xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
             if show_plot: plt.show()
-            plt.savefig(ouput_path + fig_file4, dpi=dpi)
+            plt.savefig(ouput_path + fig_file4, dpi=dpi_high)
             plt.close()
 
         # Print extreme values table
