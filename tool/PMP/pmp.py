@@ -49,7 +49,7 @@ df_l_pdist_scipy.index.name = 'id'
 # Execution
 input_path = 'dataset/pmax24h_in/'  # Your local input file folder
 ouput_path = 'dataset/pmax24h_out/'  # Your local input file folder
-station_file = input_path + '25020230_1969_2009.csv'
+station_file = input_path + '25020260_1969_2009.csv'
 station_name = Path(station_file).stem  # File name without extension
 #df_in = pd.read_csv(station_file, delimiter=',', parse_dates=True)  # index_col=0
 df = pd.read_csv(station_file, delimiter=',', parse_dates=True)  # index_col=0
