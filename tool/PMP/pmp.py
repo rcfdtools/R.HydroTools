@@ -115,7 +115,7 @@ for station in stations:
         fig_file1 = 'graph/' + station_code + '_' + emp + '_vs_all.png'
         fig_file2 = 'graph/' + station_code + '_' + emp + '_vs_bestfit.png'
         fig_file3 = 'graph/' + station_code + '_' + emp + '_vs_estimatedpdf.png'
-        fig_file4 = 'graph/' + station_code + '_extreme_values.png'
+        fig_file4 = 'graph/' + station_code + '_' + emp + '_extreme_values.png'
         funcs.print_log(file_log, '\n\n\n### Empirical: %s\n' % emp)
 
         # Return periods & empirical values
@@ -147,6 +147,7 @@ for station in stations:
         funcs.print_log(file_log, '\n\n#### 3. Best fit for\n\n%s' %dp_best.to_markdown())
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file2, center_div=True)
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file3, center_div=True)
+        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file4, center_div=True)
 
         # Plot analysis graphs
         if create_plot:
@@ -170,7 +171,6 @@ for station in stations:
             plt.grid(color = 'gray', linestyle = '--', linewidth = 0.1)
             plt.annotate('Station: %s' %(station_code), xy=(0.99, 0.98), xycoords='axes fraction', ha='right', fontsize=9)
             if show_plot: plt.show()
-            fig_file1 = 'graph/' + station_code + '_' + emp + '_vs_all.png'
             plt.savefig(ouput_path + fig_file1, dpi=dpi)
             plt.close()
 
@@ -184,7 +184,6 @@ for station in stations:
             plt.grid(color = 'gray', linestyle = '--', linewidth = 0.1)
             plt.annotate('Station: %s' % (station_code), xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
             if show_plot: plt.show()
-            fig_file2 = 'graph/' + station_code + '_' + emp + '_vs_bestfit.png'
             plt.savefig(ouput_path + fig_file2, dpi=dpi)
             plt.close()
 
@@ -198,7 +197,6 @@ for station in stations:
             plt.grid(color='gray', linestyle='--', linewidth=0.1)
             plt.annotate('Station: %s' % (station_code), xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
             if show_plot: plt.show()
-            fig_file3 = 'graph/' + station_code + '_' + emp + '_vs_estimatedpdf.png'
             plt.savefig(ouput_path + fig_file3, dpi=dpi)
             plt.close()
 
@@ -220,7 +218,6 @@ for station in stations:
             plt.grid(color = 'gray', linestyle = '--', linewidth = 0.1)
             plt.annotate('Station: %s (Δo: %f %s)' %(station_code, vDeltaKolmogorov['deltao'][0], emp), xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
             if show_plot: plt.show()
-            fig_file4 = 'graph/' + station_code + '_extreme_values.png'
             plt.savefig(ouput_path + fig_file4, dpi=dpi)
             plt.close()
 
@@ -232,7 +229,7 @@ for station in stations:
     funcs.print_log(file_log, '\n\n\n## C. Estimate extreme values for specific return periods - Tr\n')
     df_tr.index.name = 'id'
     funcs.print_log(file_log,df_tr.to_markdown())
-    funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file4, center_div=True)
+    # funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file4, center_div=True)
     funcs.print_log(file_log,'\n> risk_rate: assuming the return period as the project useful life.')
 
     #print(df.to_csv(index=False))
