@@ -64,7 +64,7 @@ for station in stations:
     funcs.print_log(file_log, '# Station: %s' %station_code)
     funcs.print_log(file_log, f'Discrete values table\n\n{df[[date_label, x_label]].transpose().to_markdown()}', center_div=True)
 
-    # Plot x values - Start
+    # Plot x values - Start (graph 0)
     if create_plot:
         #df = df.sort_values(by=date_label)
         plt.plot(df[date_label], df[x_label], color=color_line_plot, lw=2, marker='o', markersize=3, )
@@ -139,7 +139,6 @@ for station in stations:
         funcs.print_log(file_log, '\n\n#### 1. Empirical values\n\n')
         funcs.print_log(file_log, '%s' %(df[['date', 'x', 'm', 'empirical_dist', 'empirical', 'empirical_tr']].to_markdown()), center_div=True)
         vDeltaKolmogorov['best_fit_sort'] = vDeltaKolmogorov.index+1
-        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file3, center_div=True)
         funcs.print_log(file_log, '\n\n####  2. Parameters & Kolmogorov-Smirnov fit test (sorted by Δ)\n\n%s' % vDeltaKolmogorov[['empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3', 'best_fit', 'best_fit_sort']].to_markdown())
         dp_best = vDeltaKolmogorov[vDeltaKolmogorov.best_fit == 1]
         dp_best = dp_best.reset_index(drop=True)
@@ -147,11 +146,12 @@ for station in stations:
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file1, center_div=True)
         funcs.print_log(file_log, '\n\n#### 3. Best fit for\n\n%s' %dp_best.to_markdown())
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file2, center_div=True)
+        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file3, center_div=True)
 
         # Plot analysis graphs
         if create_plot:
 
-            # Plot empirical vs. all
+            # Plot empirical vs. all (graph 1)
             plt.scatter(df[x], df['empirical'], color='black', facecolors='darkgray', s=24, label='%s (Δo: %f)' % (emp, vDeltaKolmogorov['deltao'][0]))
             for i in range(0, len(vDeltaKolmogorov)):
                 dp = vDeltaKolmogorov['p_dist'][i]
@@ -174,7 +174,7 @@ for station in stations:
             plt.savefig(ouput_path + fig_file1, dpi=dpi)
             plt.close()
 
-            # Plot empirical vs. best fit
+            # Plot empirical vs. best fit (graph 2)
             plt.scatter(df[x], df['empirical'], color='black', facecolors='darkgray', s=24, label='%s (Δo: %f)' %(emp, dp_best['deltao'][0]))
             plt.plot(df[x], df[dp_best['p_dist'][0]], color=color_line_plot, lw=2, marker='o', markersize=0, label='%s (Δ: %f)' %(dp_best['p_dist'][0], dp_best['delta'][0]))
             plt.title('Cumulative distribution function CDF (Best fit)')
@@ -188,7 +188,7 @@ for station in stations:
             plt.savefig(ouput_path + fig_file2, dpi=dpi)
             plt.close()
 
-            # Plot Empirical & Estimated PDF - Best Fit
+            # Plot Empirical & Estimated PDF - Best Fit (graph 3)
             plt.hist(df.x, density=True, histtype='stepfilled', alpha=0.4, color='gray', label='Empirical %s' % emp)
             plt.plot(df.x, df[dp_best['p_dist'][0]+'_pdf'], 'r-', lw=2, color=color_line_plot, label='Estimated %s' % dp_best['p_dist'][0])
             plt.legend(loc='best', frameon=False)
@@ -202,7 +202,7 @@ for station in stations:
             plt.savefig(ouput_path + fig_file3, dpi=dpi)
             plt.close()
 
-            # Plot values over return periods Tr
+            # Plot values over return periods Tr (graph 4)
             for i in range(0, len(vDeltaKolmogorov)):
                 dp = vDeltaKolmogorov['p_dist'][i]
                 delta = vDeltaKolmogorov['delta'][i]
