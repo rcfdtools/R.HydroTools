@@ -56,6 +56,10 @@ stations = df_all[station_label].unique()
 print(stations)
 for station in stations:
     station_code = str(station)
+    #station_code = Path(station_file).stem  # File name without extension
+    #df_in = pd.read_csv(station_file, delimiter=',', parse_dates=True)  # index_col=0
+    #df = pd.read_csv(station_file, delimiter=',', parse_dates=True)  # index_col=0
+    #file_log_name = ouput_path + station_code + '.md'  # Markdown file log
     file_log_name = f'{ouput_path}{station_code}.md'  # Markdown file log
     file_log = open(file_log_name, 'w+', encoding='utf-8')   # w+ create the file if it doesn't exist
     df = df_all[df_all[station_label] == station]
@@ -63,7 +67,6 @@ for station in stations:
     df.index.name = 'id'
     funcs.print_log(file_log, '# Station: %s' %station_code)
     funcs.print_log(file_log, f'Discrete values table\n\n{df[[date_label, x_label]].transpose().to_markdown()}', center_div=True)
-
     # Plot x values - Start
     if create_plot:
         #df = df.sort_values(by=date_label)
@@ -75,11 +78,10 @@ for station in stations:
         plt.xticks(rotation=0, ha='center')
         plt.annotate('Station: %s' % station_code, xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
         if show_plot: plt.show()
-        fig_file0 = 'graph/' + station_code + '_data_serie.png'
-        plt.savefig(ouput_path + fig_file0, dpi=dpi)
+        fig_file = 'graph/' + station_code + '_data_serie.png'
+        plt.savefig(ouput_path + fig_file, dpi=dpi)
         plt.close()
-        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file0, center_div=True)
-
+        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file, center_div=True)
     x = x_label
     date = date_label
     df = df.dropna()
@@ -112,10 +114,6 @@ for station in stations:
 
     # Evaluation for each empirical distribution
     for emp in funcs.emp_dist:
-        fig_file1 = 'graph/' + station_code + '_' + emp + '_vs_all.png'
-        fig_file2 = 'graph/' + station_code + '_' + emp + '_vs_bestfit.png'
-        fig_file3 = 'graph/' + station_code + '_' + emp + '_vs_estimatedpdf.png'
-        fig_file4 = 'graph/' + station_code + '_extreme_values.png'
         funcs.print_log(file_log, '\n\n\n### Empirical: %s\n' % emp)
 
         # Return periods & empirical values
@@ -143,8 +141,6 @@ for station in stations:
         dp_best = vDeltaKolmogorov[vDeltaKolmogorov.best_fit == 1]
         dp_best = dp_best.reset_index(drop=True)
         dp_best.index.name = 'id'
-        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file1, center_div=True)
-        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file2, center_div=True)
         funcs.print_log(file_log, '\n\n#### 3. Best fit for\n\n%s' %dp_best.to_markdown())
 
         # Plot analysis graphs
@@ -169,8 +165,6 @@ for station in stations:
             plt.grid(color = 'gray', linestyle = '--', linewidth = 0.1)
             plt.annotate('Station: %s' %(station_code), xy=(0.99, 0.98), xycoords='axes fraction', ha='right', fontsize=9)
             if show_plot: plt.show()
-            fig_file1 = 'graph/' + station_code + '_' + emp + '_vs_all.png'
-            plt.savefig(ouput_path + fig_file1, dpi=dpi)
             plt.close()
 
             # Plot empirical vs. best fit
@@ -183,8 +177,6 @@ for station in stations:
             plt.grid(color = 'gray', linestyle = '--', linewidth = 0.1)
             plt.annotate('Station: %s' % (station_code), xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
             if show_plot: plt.show()
-            fig_file2 = 'graph/' + station_code + '_' + emp + '_vs_bestfit.png'
-            plt.savefig(ouput_path + fig_file2, dpi=dpi)
             plt.close()
 
             # Plot Empirical & Estimated PDF - Best Fit
@@ -197,8 +189,6 @@ for station in stations:
             plt.grid(color='gray', linestyle='--', linewidth=0.1)
             plt.annotate('Station: %s' % (station_code), xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
             if show_plot: plt.show()
-            fig_file3 = 'graph/' + station_code + '_' + emp + '_vs_estimatedpdf.png'
-            plt.savefig(ouput_path + fig_file3, dpi=dpi)
             plt.close()
 
             # Plot values over return periods Tr
@@ -219,14 +209,11 @@ for station in stations:
             plt.grid(color = 'gray', linestyle = '--', linewidth = 0.1)
             plt.annotate('Station: %s (Δo: %f %s)' %(station_code, vDeltaKolmogorov['deltao'][0], emp), xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
             if show_plot: plt.show()
-            fig_file4 = 'graph/' + station_code + '_extreme_values.png'
-            plt.savefig(ouput_path + fig_file4, dpi=dpi)
             plt.close()
 
         # Print extreme values table
         vDeltaKolmogorov = vDeltaKolmogorov.sort_values(by=['p_dist'], ascending=True)  # Required for assign the parameters in the right order
         vDeltaKolmogorov = vDeltaKolmogorov.reset_index(drop=True)
-
 
     funcs.print_log(file_log, '\n\n\n## C. Estimate extreme values for specific return periods - Tr\n')
     df_tr.index.name = 'id'
