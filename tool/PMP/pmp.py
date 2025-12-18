@@ -33,7 +33,7 @@ station_label = 'Station' # Station column name to eval from .csv station file
 x_label = 'Value'  # Value column name to eval from .csv station file
 date_label = 'Date'  # Date column name from .csv station file
 # Return periods and probabilities
-tr = [2.33, 5, 10, 25, 50, 100, 250, 500, 750, 1000]  # Tr, return period in years
+tr = [2.33, 5, 10, 25, 50, 100]  # Tr, return period in years
 #tr = [2, 2.33, 5, 10, 15, 20, 25, 50, 75, 100, 200, 250, 500, 750, 1000]  # Tr, return period in years
 df_tr = pd.DataFrame(tr, columns=['tr'])
 n_tr = len(df_tr)
@@ -63,11 +63,14 @@ for station in stations:
     file_log_name = f'{ouput_path}{station_code}.md'  # Markdown file log
     file_log = open(file_log_name, 'w+', encoding='utf-8')   # w+ create the file if it doesn't exist
     df = df_all[df_all[station_label] == station]
+    df = df.sort_values(by=date_label)
+    df.index.name = 'id'
     print(df)
     funcs.print_log(file_log, '# Station: %s' %station_code)
+    funcs.print_log(file_log, f'Discrete values table\n\n{df[[date_label, x_label]].to_markdown()}', center_div=True)
     # Plot x values - Start
     if create_plot:
-        df = df.sort_values(by=date_label)
+        #df = df.sort_values(by=date_label)
         plt.plot(df[date_label], df[x_label], color=color_line_plot, lw=2, marker='o', markersize=3, )
         plt.grid(color='gray', linestyle='--', linewidth=0.1)
         plt.title('Data serie')  #$_{ } for underscript text
