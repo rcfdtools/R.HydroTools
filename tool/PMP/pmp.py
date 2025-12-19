@@ -86,6 +86,8 @@ for station in stations:
     if create_plot:
         location_map_plot = funcs.location_map(point_latitude, point_longitude, station)
         location_map_plot.savefig(ouput_path + fig_file0a, dpi=dpi)
+        plt.close()
+
     funcs.print_log(file_log, f'\nStation info: [:earth_americas:Google]({google_maps_url}), [:earth_americas:OSM]({openstreetmap_url})\n\n{df_station_info.to_markdown()}')
     funcs.print_log(file_log, '\n<img alt="R.GISPython" src="%s" width="500"></img>' % fig_file0a, center_div=True)
     funcs.print_log(file_log, f'\n\nDiscrete values table\n\n{df[[date_label, x_label]].transpose().to_markdown()}')
