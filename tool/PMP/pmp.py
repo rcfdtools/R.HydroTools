@@ -70,6 +70,7 @@ for station in stations:
     funcs.print_log(file_log, f'Discrete values table\n\n{df[[date_label, x_label]].transpose().to_markdown()}', center_div=True)
 
     # Plot x values - Start (graph 0)
+    fig_file0 = 'graph/' + station_code + '_data_serie.png'
     if create_plot:
         #df = df.sort_values(by=date_label)
         plt.plot(df[date_label], df[x_label], color=color_line_plot, lw=2, marker='o', markersize=3, )
@@ -80,10 +81,9 @@ for station in stations:
         plt.xticks(rotation=0, ha='center')
         plt.annotate('Station: %s' % station_code, xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
         if show_plot: plt.show()
-        fig_file0 = 'graph/' + station_code + '_data_serie.png'
         plt.savefig(ouput_path + fig_file0, dpi=dpi)
         plt.close()
-        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file0, center_div=True)
+    funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file0, center_div=True)
 
     x = x_label
     date = date_label
