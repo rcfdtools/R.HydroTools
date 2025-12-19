@@ -84,7 +84,7 @@ for station in stations:
         if show_plot: plt.show()
         plt.savefig(ouput_path + fig_file0, dpi=dpi)
         plt.close()
-    funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file0, center_div=True)
+    funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file0, center_div=True)
 
     x = x_label
     date = date_label
@@ -154,8 +154,8 @@ for station in stations:
         dp_best_of_best = pd.concat([dp_best, dp_best_of_best])
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file1, center_div=True)
         funcs.print_log(file_log, '\n\n#### 3. Best fit for\n\n%s' %dp_best.to_markdown())
-        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file2, center_div=True)
-        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file3, center_div=True)
+        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file2, center_div=True)
+        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file3, center_div=True)
         #funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file4, center_div=True)
 
         # Plot analysis graphs
@@ -274,6 +274,6 @@ for station in stations:
     funcs.print_log(file_log,f'### Best fit (ordered by delta)\n\n{dp_best_of_best.to_markdown()}')
     funcs.print_log(file_log,f'\n\n### Extreme values\n\n{df_tr.to_markdown()}')
     funcs.print_log(file_log, '\n<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file4, center_div=True)
-    funcs.print_log(file_log, '\n<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file5, center_div=True)
+    funcs.print_log(file_log, '\n<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file5, center_div=True)
     funcs.print_log(file_log,'\n\n> risk_rate: assuming the return period as the project useful life.')
     #print(df.to_csv(index=False))
