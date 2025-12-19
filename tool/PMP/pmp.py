@@ -268,6 +268,6 @@ for station in stations:
     funcs.print_log(file_log,f'### Best fit (ordered by delta)\n\n{dp_best_of_best.to_markdown()}')
     funcs.print_log(file_log,f'\n\n### Extreme values\n\n{df_tr.to_markdown()}')
     funcs.print_log(file_log, '\n<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file4, center_div=True)
-    funcs.print_log(file_log, '\n<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file5, center_div=True)
+    funcs.print_log(file_log, '\n<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file5, center_div=True)
     funcs.print_log(file_log,'\n\n> risk_rate: assuming the return period as the project useful life.')
     #print(df.to_csv(index=False))
