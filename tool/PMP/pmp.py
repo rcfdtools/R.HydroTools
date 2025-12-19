@@ -76,7 +76,7 @@ for station in stations:
 
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True)
     funcs.print_log(file_log, f'# Station ({parameter_name}): {station_code}' )
-    funcs.print_log(file_log, f'\nStation info ([Google Maps]({google_maps_url}))\n\n{df_station_info.to_markdown()}')
+    funcs.print_log(file_log, f'\nStation info ([:pushpin:Google Maps]({google_maps_url}))\n\n{df_station_info.to_markdown()}')
     funcs.print_log(file_log, f'\n\nDiscrete values table\n\n{df[[date_label, x_label]].transpose().to_markdown()}')
 
     # Plot x values - Start (graph 0)
