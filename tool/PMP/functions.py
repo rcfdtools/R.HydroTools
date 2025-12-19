@@ -322,7 +322,7 @@ def location_map(point_latitude, point_longitude, station):
     point_gdf = gpd.GeoDataFrame(geometry=[point_location], crs=shapefile_location.crs)
     fig, ax = plt.subplots(figsize=(6, 7))  # Adjust figure size as needed
     shapefile_location.plot(ax=ax, color='lightgrey', edgecolor='black')
-    point_gdf.plot(ax=ax, color='darkblue', marker='o', markersize=50)  # 'marker' and 'markersize' customize the point
+    point_gdf.plot(ax=ax, color='orange', marker='o', markersize=50)  # 'marker' and 'markersize' customize the point
     ax.set_title("Station location")
     plt.xlabel("Longitude°")
     plt.ylabel("Latitude°")
@@ -332,7 +332,7 @@ def location_map(point_latitude, point_longitude, station):
         xytext=(5, 5),  # Offset the text slightly (e.g., 5 points right, 5 points up)
         textcoords="offset points",
         fontsize=10,
-        color='darkblue',
-        bbox=dict(facecolor='white', alpha=0.9, pad=1)
+        color='orange',
+        bbox=dict(facecolor='black', alpha=0.9, pad=1)
     )
     return plt
