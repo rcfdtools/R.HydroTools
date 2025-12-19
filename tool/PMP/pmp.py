@@ -60,7 +60,7 @@ stations = df_all[station_label].unique()
 print(stations)
 data_types = {'LATITUD': 'float64', 'LONGITUD': 'float64'}
 df_catalog = pd.read_excel(station_catalog_file, sheet_name='CNE', parse_dates=True, dtype=data_types) # , dtype=data_types
-print(df_catalog.dtypes)
+# print(df_catalog.dtypes)
 for station in stations:
     station_code = str(station)
     file_log_name = f'{ouput_path}{station_code}.md'  # Markdown file log
@@ -71,10 +71,12 @@ for station in stations:
     df = df.reset_index(drop=True)
     df_station_info = df_catalog[df_catalog[station_label_catalog] == station]
     df_station_info.index.name = 'id'
+    df_station_info = df_station_info.reset_index(drop=True)
+    google_maps_url = f'http://maps.google.com/maps?q={df_station_info['LATITUD'][0]},{df_station_info['LONGITUD'][0]}'
 
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True)
     funcs.print_log(file_log, f'# Station ({parameter_name}): {station_code}' )
-    funcs.print_log(file_log, f'\nStation info\n\n{df_station_info.to_markdown()}')
+    funcs.print_log(file_log, f'\nStation info ([Google Maps]({google_maps_url}))\n\n{df_station_info.to_markdown()}')
     funcs.print_log(file_log, f'\n\nDiscrete values table\n\n{df[[date_label, x_label]].transpose().to_markdown()}')
 
     # Plot x values - Start (graph 0)
