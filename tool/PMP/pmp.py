@@ -64,7 +64,7 @@ for station in stations:
     df = df.sort_values(by=date_label)
     df.index.name = 'id'
 
-    funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../file/graph/R.HydroTools.svg" width="300px">', center_div=True)
+    funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="300px">', center_div=True)
     funcs.print_log(file_log, '# Station: %s' %station_code)
     funcs.print_log(file_log, f'Discrete values table\n\n{df[[date_label, x_label]].transpose().to_markdown()}', center_div=True)
 
