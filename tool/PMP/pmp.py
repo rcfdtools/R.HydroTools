@@ -70,13 +70,14 @@ for station in stations:
     df.index.name = 'id'
     df = df.reset_index(drop=True)
     df_station_info = df_catalog[df_catalog[station_label_catalog] == station]
-    df_station_info.index.name = 'id'
     df_station_info = df_station_info.reset_index(drop=True)
+    df_station_info.index.name = 'id'
     google_maps_url = f'http://maps.google.com/maps?q={df_station_info['LATITUD'][0]},{df_station_info['LONGITUD'][0]}'
+    openstreetmap_url = f'https://www.openstreetmap.org/#map=12/{df_station_info['LATITUD'][0]}/{df_station_info['LONGITUD'][0]}&layers=P'
 
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True)
     funcs.print_log(file_log, f'# Station ({parameter_name}): {station_code}' )
-    funcs.print_log(file_log, f'\nStation info ([:pushpin:Google Maps]({google_maps_url}))\n\n{df_station_info.to_markdown()}')
+    funcs.print_log(file_log, f'\nStation info | [:pushpin:Google Maps]({google_maps_url}) | [:pushpin:OSM Maps]({openstreetmap_url})\n\n{df_station_info.to_markdown()}')
     funcs.print_log(file_log, f'\n\nDiscrete values table\n\n{df[[date_label, x_label]].transpose().to_markdown()}')
 
     # Plot x values - Start (graph 0)
