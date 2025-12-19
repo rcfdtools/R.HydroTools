@@ -74,11 +74,16 @@ for station in stations:
     df_station_info = df_catalog[df_catalog[station_label_catalog] == station]
     df_station_info = df_station_info.reset_index(drop=True)
     df_station_info.index.name = 'id'
-    google_maps_url = f'http://maps.google.com/maps?q={df_station_info[latitude_label_catalog][0]},{df_station_info[longitude_label_catalog][0]}'
-    openstreetmap_url = f'https://www.openstreetmap.org/#map=12/{df_station_info[latitude_label_catalog][0]}/{df_station_info[longitude_label_catalog][0]}&layers=P'
-
+    point_latitude = df_station_info[latitude_label_catalog][0]
+    point_longitude = df_station_info[longitude_label_catalog][0]
+    google_maps_url = f'http://maps.google.com/maps?q={point_latitude},{point_longitude}'
+    openstreetmap_url = f'https://www.openstreetmap.org/#map=12/{point_latitude}/{point_longitude}&layers=P'
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True)
     funcs.print_log(file_log, f'# Station ({parameter_name}): {station_code}' )
+    location_map_plot = funcs.location_map(point_latitude, point_longitude, station)
+    fig_file0a = 'graph/' + station_code + '_location_map.png'
+    location_map_plot.savefig(ouput_path + fig_file0a, dpi=dpi)
+    funcs.print_log(file_log, '\n<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file0a, center_div=True)
     funcs.print_log(file_log, f'\nStation info: [:earth_americas:Google]({google_maps_url}), [:earth_americas:OSM]({openstreetmap_url})\n\n{df_station_info.to_markdown()}')
     funcs.print_log(file_log, f'\n\nDiscrete values table\n\n{df[[date_label, x_label]].transpose().to_markdown()}')
 

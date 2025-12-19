@@ -6,6 +6,9 @@ from scipy import stats
 import numpy as np
 import math
 import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+from shapely.geometry import Point
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)
@@ -311,3 +314,25 @@ def print_log(file_log, txt_print, on_screen=True, center_div=False):
     if center_div:
         file_log.write('\n\n</div>\n' + '\n')
 
+
+# Location map with GeoPandas
+def location_map(point_latitude, point_longitude, station):
+    shapefile_location = gpd.read_file('dataset/ColombiaState.shp')
+    point_location = Point(point_longitude, point_latitude)
+    point_gdf = gpd.GeoDataFrame(geometry=[point_location], crs=shapefile_location.crs)
+    fig, ax = plt.subplots(figsize=(10, 6))  # Adjust figure size as needed
+    shapefile_location.plot(ax=ax, color='lightgrey', edgecolor='black')
+    point_gdf.plot(ax=ax, color='darkblue', marker='o', markersize=50)  # 'marker' and 'markersize' customize the point
+    ax.set_title("Station location")
+    plt.xlabel("Longitude°")
+    plt.ylabel("Latitude°")
+    ax.annotate(
+        text= station,
+        xy=(point_longitude, point_latitude),
+        xytext=(5, 5),  # Offset the text slightly (e.g., 5 points right, 5 points up)
+        textcoords="offset points",
+        fontsize=10,
+        color='black',
+        bbox=dict(facecolor='white', alpha=0.5, pad=1)
+    )
+    return plt
