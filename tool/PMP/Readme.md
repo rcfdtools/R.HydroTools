@@ -1,12 +1,5 @@
 <div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
 
-## Pending tast
-
-* Separate functions from executing script
-* Collect PMP from previous researchs: Cesar state projects
-* Collection table with last best fit distributions
-* Massive analysis for automatic stations
-
 
 ## PMP - Precipitación máxima probable utilizando 104 distribuciones de probabilidad
 Keywords: `pmp` `probability-distributions` `scipy`
