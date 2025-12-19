@@ -32,9 +32,11 @@ if not show_warnings: warnings.filterwarnings('ignore')
 plot_legend_ncol = 2  # Columns on plot legend, '' for autofit
 ddof = 1  # Standard deviation normalized
 station_label = 'Station' # Station column name to eval from .csv station dataset file
-station_label_catalog = 'CODIGO' # Station column name to eval from .csv station dataset file
 x_label = 'Value'  # Value column name to eval from .csv station file
 date_label = 'Date'  # Date column name from .csv station file
+station_label_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
+latitude_label_catalog = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
+longitude_label_catalog = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
 # Return periods and probabilities
 #tr = [2.33, 5, 10, 25, 50, 100]  # Tr, return period in years
 tr = [2, 2.33, 5, 10, 15, 20, 25, 50, 75, 100, 200, 250, 500, 750, 1000]  # Tr, return period in years
@@ -58,7 +60,7 @@ station_file = input_path + 'conventional.csv'
 df_all = pd.read_csv(station_file, delimiter=',', parse_dates=True)  # index_col=0
 stations = df_all[station_label].unique()
 print(stations)
-data_types = {'LATITUD': 'float64', 'LONGITUD': 'float64'}
+data_types = {latitude_label_catalog: 'float64', longitude_label_catalog: 'float64'}
 df_catalog = pd.read_excel(station_catalog_file, sheet_name='CNE', parse_dates=True, dtype=data_types) # , dtype=data_types
 # print(df_catalog.dtypes)
 for station in stations:
@@ -72,8 +74,8 @@ for station in stations:
     df_station_info = df_catalog[df_catalog[station_label_catalog] == station]
     df_station_info = df_station_info.reset_index(drop=True)
     df_station_info.index.name = 'id'
-    google_maps_url = f'http://maps.google.com/maps?q={df_station_info['LATITUD'][0]},{df_station_info['LONGITUD'][0]}'
-    openstreetmap_url = f'https://www.openstreetmap.org/#map=12/{df_station_info['LATITUD'][0]}/{df_station_info['LONGITUD'][0]}&layers=P'
+    google_maps_url = f'http://maps.google.com/maps?q={df_station_info[latitude_label_catalog][0]},{df_station_info[longitude_label_catalog][0]}'
+    openstreetmap_url = f'https://www.openstreetmap.org/#map=12/{df_station_info[latitude_label_catalog][0]}/{df_station_info[longitude_label_catalog][0]}&layers=P'
 
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True)
     funcs.print_log(file_log, f'# Station ({parameter_name}): {station_code}' )

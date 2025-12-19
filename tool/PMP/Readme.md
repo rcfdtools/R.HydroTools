@@ -1,10 +1,12 @@
 <div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
 
 
-## PMP - Precipitación máxima probable utilizando 104 distribuciones de probabilidad
+## PMP - Probable maximum precipitation with SciPy stat library
 Keywords: `pmp` `probability-distributions` `scipy`
 
-Estudio de la PMP utilizando las múltiples distribuciones de probabilidad disponibles en SciPy con estimación de precipitación para diferentes periodos de retorno - Tr.
+PMP analysis using multiple probability distributions available in SciPy with precipitation estimation for different return periods - Tr.
+
+> Latitude and longitude columns in CNE_IDEAM.xls has to be converted to numeric values replacing comma separator by point separator.
 
 
 ### Probability distributions excluded for rain analysis
@@ -36,7 +38,6 @@ High over extreme values
 * burr12: trend to infinite
 * powerlognorm: trend to infinite
 * powernorm: trend to infinite
-
 
 Horizontal trending for high return periods Tr > = 100
 
