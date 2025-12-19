@@ -18,7 +18,7 @@ pd.set_option('display.width', None)
 # General setup
 parameter_name = 'rain'  # rain, flow
 parameter_units = '($mm/d$)'  # ($mm/d$), ($m^3/s$)
-create_plot = True  # Creates and save plots into files
+create_plot = False  # Creates and save plots into files
 show_plot = False  # Show plot on screen
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
 color_line_plot = 'black' # green
@@ -65,7 +65,7 @@ for station in stations:
     df.index.name = 'id'
     df = df.reset_index(drop=True)
 
-    funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="300px">', center_div=True)
+    funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="200px">', center_div=True)
     funcs.print_log(file_log, '# Station: %s' %station_code)
     funcs.print_log(file_log, f'Discrete values table\n\n{df[[date_label, x_label]].transpose().to_markdown()}', center_div=True)
 
@@ -116,6 +116,7 @@ for station in stations:
     funcs.print_log(file_log, '\n\n### Cumulative distribution values - CDF (%d evalated, ordered by x ascending) \n\n%s' %(dp_evalated, df.to_markdown()))
 
     # Evaluation for each empirical distribution
+    dp_best_of_best = pd.DataFrame()
     for emp in funcs.emp_dist:
         fig_file1 = 'graph/' + station_code + '_' + emp + '_vs_all.png'
         fig_file2 = 'graph/' + station_code + '_' + emp + '_vs_bestfit.png'
@@ -124,7 +125,7 @@ for station in stations:
         funcs.print_log(file_log, '\n\n\n### Empirical: %s\n' % emp)
 
         # Return periods & empirical values
-        df_tr['empirical_dist '] = emp
+        df_tr['empirical_dist'] = emp
         df_tr['station'] = station_code
         df_tr['n'] = len(df)
         df_tr['risk_rate'] = 1-(1-1/df_tr['tr'])**df_tr['tr']
@@ -148,6 +149,7 @@ for station in stations:
         dp_best = vDeltaKolmogorov[vDeltaKolmogorov.best_fit == 1]
         dp_best = dp_best.reset_index(drop=True)
         dp_best.index.name = 'id'
+        dp_best_of_best = pd.concat([dp_best, dp_best_of_best])
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file1, center_div=True)
         funcs.print_log(file_log, '\n\n#### 3. Best fit for\n\n%s' %dp_best.to_markdown())
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file2, center_div=True)
@@ -235,10 +237,16 @@ for station in stations:
         vDeltaKolmogorov = vDeltaKolmogorov.reset_index(drop=True)
 
 
-    funcs.print_log(file_log, '\n\n\n## C. Estimate extreme values for specific return periods - Tr\n')
+    funcs.print_log(file_log, '\n\n\n## C. Best CDF fit & Estimate extreme values for specific return periods - Tr\n\n')
+    print(df_tr.columns)
+    df_tr.drop('empirical_dist', axis=1, inplace=True)
     df_tr.index.name = 'id'
-    funcs.print_log(file_log,df_tr.to_markdown())
+    dp_best_of_best = dp_best_of_best.sort_values(by='delta', ascending=True)
+    dp_best_of_best = dp_best_of_best.reset_index(drop=True)
+    dp_best_of_best.index.name = 'id'
+    dp_best_of_best['best_fit_sort'] = dp_best_of_best.index+1
+    funcs.print_log(file_log,f'Best CDF fit (order by delta)\n\n{dp_best_of_best.to_markdown()}')
+    funcs.print_log(file_log,f'\n\nExtreme values\n\n{df_tr.to_markdown()}')
     # funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file4, center_div=True)
-    funcs.print_log(file_log,'\n> risk_rate: assuming the return period as the project useful life.')
-
+    funcs.print_log(file_log,'\n\n> risk_rate: assuming the return period as the project useful life.')
     #print(df.to_csv(index=False))
