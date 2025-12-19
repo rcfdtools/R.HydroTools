@@ -16,9 +16,9 @@ pd.set_option('display.width', None)
 
 
 # General setup
-parameter_name = 'rain'  # rain, flow
+parameter_name = 'rain max 24h'  # rain, flow
 parameter_units = '($mm/d$)'  # ($mm/d$), ($m^3/s$)
-create_plot = False  # Creates and save plots into files
+create_plot = True  # Creates and save plots into files
 show_plot = False  # Show plot on screen
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
 color_line_plot = 'black' # green
