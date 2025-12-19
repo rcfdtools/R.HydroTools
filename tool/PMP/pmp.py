@@ -18,7 +18,7 @@ pd.set_option('display.width', None)
 # General setup
 parameter_name = 'rain'  # rain, flow
 parameter_units = '($mm/d$)'  # ($mm/d$), ($m^3/s$)
-create_plot = True  # Creates and save plots into files
+create_plot = False  # Creates and save plots into files
 show_plot = False  # Show plot on screen
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
 color_line_plot = 'black' # green
@@ -73,7 +73,7 @@ for station in stations:
     fig_file0 = 'graph/' + station_code + '_data_serie.png'
     if create_plot:
         #df = df.sort_values(by=date_label)
-        plt.plot(df[date_label], df[x_label], color=color_line_plot, lw=1.5, marker='o', markersize=3, )
+        plt.plot(df[date_label], df[x_label], color=color_line_plot, lw=1.5, marker='o', markersize=3)
         plt.grid(color='gray', linestyle='--', linewidth=0.1)
         plt.title('Data serie')  #$_{ } for underscript text
         plt.xlabel('Year')
@@ -121,7 +121,8 @@ for station in stations:
         fig_file1 = 'graph/' + station_code + '_' + emp + '_vs_all.png'
         fig_file2 = 'graph/' + station_code + '_' + emp + '_vs_bestfit.png'
         fig_file3 = 'graph/' + station_code + '_' + emp + '_vs_estimatedpdf.png'
-        fig_file4 = 'graph/' + station_code + '_' + emp + '_extreme_values.png'
+        fig_file4 = 'graph/' + station_code + '_extreme_values.png'
+        fig_file5 = 'graph/' + station_code + '_extreme_values_bestfit.png'
         funcs.print_log(file_log, '\n\n\n### Empirical: %s\n' % emp)
 
         # Return periods & empirical values
@@ -213,9 +214,15 @@ for station in stations:
         vDeltaKolmogorov = vDeltaKolmogorov.sort_values(by=['p_dist'], ascending=True)  # Required for assign the parameters in the right order
         vDeltaKolmogorov = vDeltaKolmogorov.reset_index(drop=True)
 
-    # Plot for extreme values
+    # Best of best & Plot for extreme values
+    dp_best_of_best = dp_best_of_best.sort_values(by='delta', ascending=True)
+    dp_best_of_best = dp_best_of_best.reset_index(drop=True)
+    dp_best_of_best.index.name = 'id'
+    dp_best_of_best['best_fit_sort'] = dp_best_of_best.index+1
+    best_of_best_p_dist = dp_best_of_best[dp_best_of_best['best_fit_sort']==1]['p_dist'][0]
+    print(f'>>>>>>>>>>>>>>>>> Best of best: {best_of_best_p_dist}')
     if create_plot:
-        # Plot values over return periods Tr (graph 4)
+        # Plot multiple extreme values over return periods Tr (graph 4)
         figure(figsize=(15, 12))
         for i in range(0, len(vDeltaKolmogorov)):
             dp = vDeltaKolmogorov['p_dist'][i]
@@ -241,16 +248,26 @@ for station in stations:
         plt.savefig(ouput_path + fig_file4, dpi=dpi)
         plt.close()
 
+        # Plot best fit values over return periods Tr (graph 5)
+        #plt.plot(df_tr['tr'], df_tr[best_of_best_p_dist], color=color_line_plot, lw=1.5, marker='o', markersize=3, label='%s (Δ: %f)' % (dp_best['p_dist'][0], dp_best['delta'][0]))
+        plt.plot(df_tr['tr'], df_tr[best_of_best_p_dist], color=color_line_plot, lw=1.5, marker='o', markersize=3, label=best_of_best_p_dist)
+        plt.title('Extreme values for specific return periods (Best fit)')
+        plt.xlabel('Tr ($years$)')
+        plt.ylabel(parameter_name + ' ' + parameter_units)
+        plt.legend(loc='best', frameon=False)
+        plt.grid(color='gray', linestyle='--', linewidth=0.1)
+        plt.annotate('Station: %s' % (station_code), xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
+        if show_plot: plt.show()
+        plt.savefig(ouput_path + fig_file5, dpi=dpi)
+        plt.close()
+
     funcs.print_log(file_log, '\n\n\n## C. Best CDF fit & Estimate extreme values for specific return periods - Tr\n\n')
     print(df_tr.columns)
     df_tr.drop('empirical_dist', axis=1, inplace=True)
     df_tr.index.name = 'id'
-    dp_best_of_best = dp_best_of_best.sort_values(by='delta', ascending=True)
-    dp_best_of_best = dp_best_of_best.reset_index(drop=True)
-    dp_best_of_best.index.name = 'id'
-    dp_best_of_best['best_fit_sort'] = dp_best_of_best.index+1
     funcs.print_log(file_log,f'### Best fit (ordered by delta)\n\n{dp_best_of_best.to_markdown()}')
     funcs.print_log(file_log,f'\n\n### Extreme values\n\n{df_tr.to_markdown()}')
     funcs.print_log(file_log, '\n<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file4, center_div=True)
+    funcs.print_log(file_log, '\n<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file5, center_div=True)
     funcs.print_log(file_log,'\n\n> risk_rate: assuming the return period as the project useful life.')
     #print(df.to_csv(index=False))
