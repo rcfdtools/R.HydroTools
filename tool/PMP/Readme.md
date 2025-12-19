@@ -74,6 +74,7 @@ Horizontal trending for high return periods Tr > = 100
 * weibull_max
 * wrapcauchy
 * levy_stable: takes long time processing
+* kappa3
 
 ```
 l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
@@ -137,7 +138,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['johnsonsb', 4, 'MLE', 'Johnson SB', False],
                   ['johnsonsu', 4, 'MLE', 'Johnson Su', True],
                   ['kappa4', 4, 'MLE', 'Kappa 4', False],
-                  ['kappa3', 3, 'MLE', 'Kappa 3', True],
+                  ['kappa3', 3, 'MLE', 'Kappa 3', False],
                   ['ksone', 3, 'MLE', 'Kolmogorov-Smirnov one-sided test statistic distribution', False],
                   ['kstwo', 3, 'MLE', 'Kolmogorov-Smirnov two-sided test statistic distribution', False],  # Check: zero division, don't use
                   ['kstwobign', 2, 'MLE', 'Limiting distribution of scaled Kolmogorov-Smirnov two-sided test statistic', True],

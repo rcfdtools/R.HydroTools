@@ -236,7 +236,7 @@ for station in stations:
         plt.legend(loc='best', frameon=True, edgecolor='white', framealpha=0.9, ncol=4, facecolor='white')
         plt.grid(color='gray', linestyle='--', linewidth=0.1)
         #plt.annotate('Station: %s (Δo: %f %s)' % (station_code, vDeltaKolmogorov['deltao'][0], emp), xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
-        plt.annotate('Station: %s (Δo: %f)' % (station_code, vDeltaKolmogorov['deltao'][0]), xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
+        plt.annotate(f'Station: {station_code}', xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
         if show_plot: plt.show()
         plt.savefig(ouput_path + fig_file4, dpi=dpi)
         plt.close()
