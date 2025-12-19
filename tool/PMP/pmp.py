@@ -57,8 +57,10 @@ station_catalog_file = 'dataset/CNE_IDEAM.xls'
 station_file = input_path + 'conventional.csv'
 df_all = pd.read_csv(station_file, delimiter=',', parse_dates=True)  # index_col=0
 stations = df_all[station_label].unique()
-df_catalog = pd.read_excel(station_catalog_file, sheet_name='CNE', parse_dates=True)
 print(stations)
+data_types = {'LATITUD': 'float64', 'LONGITUD': 'float64'}
+df_catalog = pd.read_excel(station_catalog_file, sheet_name='CNE', parse_dates=True, dtype=data_types) # , dtype=data_types
+print(df_catalog.dtypes)
 for station in stations:
     station_code = str(station)
     file_log_name = f'{ouput_path}{station_code}.md'  # Markdown file log
@@ -68,11 +70,12 @@ for station in stations:
     df.index.name = 'id'
     df = df.reset_index(drop=True)
     df_station_info = df_catalog[df_catalog[station_label_catalog] == station]
+    df_station_info.index.name = 'id'
 
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True)
     funcs.print_log(file_log, f'# Station ({parameter_name}): {station_code}' )
-    funcs.print_log(file_log, f'Station info\n\n{df_station_info.to_markdown()}', center_div=True)
-    funcs.print_log(file_log, f'Discrete values table\n\n{df[[date_label, x_label]].transpose().to_markdown()}', center_div=True)
+    funcs.print_log(file_log, f'\nStation info\n\n{df_station_info.to_markdown()}')
+    funcs.print_log(file_log, f'\n\nDiscrete values table\n\n{df[[date_label, x_label]].transpose().to_markdown()}')
 
     # Plot x values - Start (graph 0)
     fig_file0 = 'graph/' + station_code + '_data_serie.png'
@@ -89,7 +92,7 @@ for station in stations:
         if show_plot: plt.show()
         plt.savefig(ouput_path + fig_file0, dpi=dpi)
         plt.close()
-    funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file0, center_div=True)
+    funcs.print_log(file_log, '\n<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file0, center_div=True)
 
     x = x_label
     date = date_label
