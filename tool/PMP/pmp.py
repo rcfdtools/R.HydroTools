@@ -18,7 +18,7 @@ pd.set_option('display.width', None)
 # General setup
 parameter_name = 'rain'  # rain, flow
 parameter_units = '($mm/d$)'  # ($mm/d$), ($m^3/s$)
-create_plot = False  # Creates and save plots into files
+create_plot = True  # Creates and save plots into files
 show_plot = False  # Show plot on screen
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
 color_line_plot = 'black' # green
@@ -80,6 +80,7 @@ for station in stations:
         plt.ylabel(parameter_name + ' ' + parameter_units)
         plt.xticks(rotation=0, ha='center')
         plt.annotate('Station: %s' % station_code, xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
+        plt.annotate('github.com/rcfdtools', xy=(1.0275, 0.01), xycoords='axes fraction', ha='right', va='bottom', rotation='vertical', fontsize=7.5)
         if show_plot: plt.show()
         plt.savefig(ouput_path + fig_file0, dpi=dpi)
         plt.close()
@@ -180,6 +181,7 @@ for station in stations:
             plt.legend(loc='best', frameon=True, edgecolor='white', framealpha=0.9, ncol=plot_legend_ncol, facecolor='white')
             plt.grid(color = 'gray', linestyle = '--', linewidth = 0.1)
             plt.annotate('Station: %s' %(station_code), xy=(0.99, 0.98), xycoords='axes fraction', ha='right', fontsize=9)
+            plt.annotate('github.com/rcfdtools', xy=(1.0275, 0.01), xycoords='axes fraction', ha='right', va='bottom', rotation='vertical', fontsize=7.5)
             if show_plot: plt.show()
             plt.savefig(ouput_path + fig_file1, dpi=dpi)
             plt.close()
@@ -193,6 +195,7 @@ for station in stations:
             plt.legend(loc='best', frameon=False)
             plt.grid(color = 'gray', linestyle = '--', linewidth = 0.1)
             plt.annotate('Station: %s' % (station_code), xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
+            plt.annotate('github.com/rcfdtools', xy=(1.0275, 0.01), xycoords='axes fraction', ha='right', va='bottom', rotation='vertical', fontsize=7.5)
             if show_plot: plt.show()
             plt.savefig(ouput_path + fig_file2, dpi=dpi)
             plt.close()
@@ -206,6 +209,7 @@ for station in stations:
             plt.ylabel('PDF')
             plt.grid(color='gray', linestyle='--', linewidth=0.1)
             plt.annotate('Station: %s' % (station_code), xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
+            plt.annotate('github.com/rcfdtools', xy=(1.0275, 0.01), xycoords='axes fraction', ha='right', va='bottom', rotation='vertical', fontsize=7.5)
             if show_plot: plt.show()
             plt.savefig(ouput_path + fig_file3, dpi=dpi)
             plt.close()
@@ -244,6 +248,7 @@ for station in stations:
         plt.grid(color='gray', linestyle='--', linewidth=0.1)
         #plt.annotate('Station: %s (Δo: %f %s)' % (station_code, vDeltaKolmogorov['deltao'][0], emp), xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
         plt.annotate(f'Station: {station_code}', xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
+        plt.annotate('github.com/rcfdtools', xy=(1.0275, 0.01), xycoords='axes fraction', ha='right', va='bottom', rotation='vertical', fontsize=7.5)
         if show_plot: plt.show()
         plt.savefig(ouput_path + fig_file4, dpi=dpi)
         plt.close()
@@ -257,6 +262,7 @@ for station in stations:
         plt.legend(loc='best', frameon=False)
         plt.grid(color='gray', linestyle='--', linewidth=0.1)
         plt.annotate('Station: %s' % (station_code), xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
+        plt.annotate('github.com/rcfdtools', xy=(1.0275, 0.01), xycoords='axes fraction', ha='right', va='bottom', rotation='vertical', fontsize=7.5)
         if show_plot: plt.show()
         plt.savefig(ouput_path + fig_file5, dpi=dpi)
         plt.close()
