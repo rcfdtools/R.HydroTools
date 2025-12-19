@@ -63,6 +63,7 @@ for station in stations:
     df = df_all[df_all[station_label] == station]
     df = df.sort_values(by=date_label)
     df.index.name = 'id'
+    df = df.reset_index(drop=True)
 
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="300px">', center_div=True)
     funcs.print_log(file_log, '# Station: %s' %station_code)
