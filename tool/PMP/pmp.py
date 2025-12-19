@@ -67,8 +67,8 @@ for station in stations:
     file_log = open(file_log_name, 'w+', encoding='utf-8')   # w+ create the file if it doesn't exist
     df = df_all[df_all[station_label] == station]
     df = df.sort_values(by=date_label)
-    df.index.name = 'id'
     df = df.reset_index(drop=True)
+    df.index.name = 'id'
     df_station_info = df_catalog[df_catalog[station_label_catalog] == station]
     df_station_info = df_station_info.reset_index(drop=True)
     df_station_info.index.name = 'id'
@@ -77,7 +77,7 @@ for station in stations:
 
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True)
     funcs.print_log(file_log, f'# Station ({parameter_name}): {station_code}' )
-    funcs.print_log(file_log, f'\nStation info ([:earth_americas:Google]({google_maps_url}), [:earth_americas:OSM]({openstreetmap_url}))\n\n{df_station_info.to_markdown()}')
+    funcs.print_log(file_log, f'\nStation info: [:earth_americas:Google]({google_maps_url}), [:earth_americas:OSM]({openstreetmap_url})\n\n{df_station_info.to_markdown()}')
     funcs.print_log(file_log, f'\n\nDiscrete values table\n\n{df[[date_label, x_label]].transpose().to_markdown()}')
 
     # Plot x values - Start (graph 0)
@@ -156,7 +156,7 @@ for station in stations:
         vDeltaKolmogorov = vDeltaKolmogorov.reset_index(drop=True)
         vDeltaKolmogorov.index.name = 'id'
         funcs.print_log(file_log, '\n\n#### 1. Empirical values\n\n')
-        funcs.print_log(file_log, '%s' %(df[['date', 'x', 'm', 'empirical_dist', 'empirical', 'empirical_tr']].transpose().to_markdown()), center_div=True)
+        funcs.print_log(file_log, (df[['date', 'x', 'm', 'empirical_dist', 'empirical', 'empirical_tr']].transpose().to_markdown()), center_div=True)
         vDeltaKolmogorov['best_fit_sort'] = vDeltaKolmogorov.index+1
         funcs.print_log(file_log, '\n\n####  2. Parameters & Kolmogorov-Smirnov fit test (sorted by Δ)\n\n%s' % vDeltaKolmogorov[['empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3', 'best_fit', 'best_fit_sort']].to_markdown())
         dp_best = vDeltaKolmogorov[vDeltaKolmogorov.best_fit == 1]
