@@ -18,7 +18,7 @@ pd.set_option('display.width', None)
 # General setup
 parameter_name = 'rain'  # rain, flow
 parameter_units = '($mm/d$)'  # ($mm/d$), ($m^3/s$)
-create_plot = True  # Creates and save plots into files
+create_plot = False  # Creates and save plots into files
 show_plot = False  # Show plot on screen
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
 color_line_plot = 'black' # green
@@ -154,7 +154,7 @@ for station in stations:
         funcs.print_log(file_log, '\n\n#### 3. Best fit for\n\n%s' %dp_best.to_markdown())
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file2, center_div=True)
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file3, center_div=True)
-        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file4, center_div=True)
+        #funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file4, center_div=True)
 
         # Plot analysis graphs
         if create_plot:
@@ -209,6 +209,7 @@ for station in stations:
             plt.savefig(ouput_path + fig_file3, dpi=dpi)
             plt.close()
 
+            '''
             # Plot values over return periods Tr (graph 4)
             figure(figsize=(15, 12))
             for i in range(0, len(vDeltaKolmogorov)):
@@ -231,11 +232,38 @@ for station in stations:
             if show_plot: plt.show()
             plt.savefig(ouput_path + fig_file4, dpi=dpi)
             plt.close()
+            '''
 
         # Print extreme values table
         vDeltaKolmogorov = vDeltaKolmogorov.sort_values(by=['p_dist'], ascending=True)  # Required for assign the parameters in the right order
         vDeltaKolmogorov = vDeltaKolmogorov.reset_index(drop=True)
 
+    if create_plot:
+        # Plot values over return periods Tr (graph 4)
+        figure(figsize=(15, 12))
+        for i in range(0, len(vDeltaKolmogorov)):
+            dp = vDeltaKolmogorov['p_dist'][i]
+            delta = vDeltaKolmogorov['delta'][i]
+            if plot_only_fit:
+                only_fit_txt = ' (only Δo > Δ)'
+                if vDeltaKolmogorov['fit'][i] == 1:
+                    plt.plot(df_tr.tr, df_tr[dp], lw=1, marker='o', markersize=0, alpha=0.75,
+                             label='%s (Δ: %f)' % (dp, delta))
+            else:
+                only_fit_txt = ''
+                plt.plot(df_tr.tr, df_tr[dp], lw=1, marker='o', markersize=0, alpha=0.75,
+                         label='%s (Δ: %f)' % (dp, delta))
+        plt.title('Extreme values for specific return periods%s' % (only_fit_txt))
+        plt.xlabel('Tr ($years$)')
+        plt.ylabel(parameter_name + ' ' + parameter_units)
+        plt.legend(fontsize=plot_legend_fontsize)
+        plt.legend(loc='best', frameon=True, edgecolor='white', framealpha=0.9, ncol=4, facecolor='white')
+        plt.grid(color='gray', linestyle='--', linewidth=0.1)
+        plt.annotate('Station: %s (Δo: %f %s)' % (station_code, vDeltaKolmogorov['deltao'][0], emp), xy=(0.99, 0.01),
+                     xycoords='axes fraction', ha='right', fontsize=9)
+        if show_plot: plt.show()
+        plt.savefig(ouput_path + fig_file4, dpi=dpi)
+        plt.close()
 
     funcs.print_log(file_log, '\n\n\n## C. Best CDF fit & Estimate extreme values for specific return periods - Tr\n\n')
     print(df_tr.columns)
@@ -245,8 +273,8 @@ for station in stations:
     dp_best_of_best = dp_best_of_best.reset_index(drop=True)
     dp_best_of_best.index.name = 'id'
     dp_best_of_best['best_fit_sort'] = dp_best_of_best.index+1
-    funcs.print_log(file_log,f'### Best CDF fit (order by delta)\n\n{dp_best_of_best.to_markdown()}')
+    funcs.print_log(file_log,f'### Best fit (ordered by delta)\n\n{dp_best_of_best.to_markdown()}')
     funcs.print_log(file_log,f'\n\n### Extreme values\n\n{df_tr.to_markdown()}')
-    # funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="700"></img>' % fig_file4, center_div=True)
+    funcs.print_log(file_log, '\n<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file4, center_div=True)
     funcs.print_log(file_log,'\n\n> risk_rate: assuming the return period as the project useful life.')
     #print(df.to_csv(index=False))
