@@ -18,10 +18,10 @@ pd.set_option('display.width', None)
 # General setup
 parameter_name = 'rain'  # rain, flow
 parameter_units = '($mm/d$)'  # ($mm/d$), ($m^3/s$)
-create_plot = False  # Creates and save plots into files
+create_plot = True  # Creates and save plots into files
 show_plot = False  # Show plot on screen
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
-color_line_plot = 'green'
+color_line_plot = 'black' # green
 dpi = 96  # Save plot resolution
 plot_legend_fontsize = 'xx-small' # 'xx-small', 'x-small', 'small', 'medium' (default), 'large', 'x-large', 'xx-large'
 show_warnings = False  # Show warnings on screen
