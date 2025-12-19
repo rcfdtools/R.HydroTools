@@ -34,6 +34,8 @@ High over extreme values
 * loglaplace
 * levy: trend to infinite
 * burr12: trend to infinite
+* powerlognorm: trend to infinite
+* powernorm: trend to infinite
 
 
 Horizontal trending for high return periods Tr > = 100
@@ -71,6 +73,7 @@ Horizontal trending for high return periods Tr > = 100
 * vonmises_line
 * weibull_max
 * wrapcauchy
+* levy_stable: takes long time processing
 
 ```
 l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
@@ -81,8 +84,8 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['halfnorm', 2, 'MM', 'Half Normal', True],
                   ['gennorm', 3, 'MLE', 'Generalized Normal', False],
                   ['norminvgauss', 4, 'MLE', 'Normal Inverse Gaussian', False],
-                  ['powernorm', 3, 'MLE', 'Power normal', True],
-                  ['powerlognorm', 4, 'MLE', 'Power log-normal', True],
+                  ['powernorm', 3, 'MLE', 'Power normal', False],
+                  ['powerlognorm', 4, 'MLE', 'Power log-normal', False],
                   ['skewnorm', 3, 'MLE', 'Skew normal', False],
                   ['truncnorm', 4,'MLE', 'Truncated normal', True],
                   ['pearson3', 3, 'MM', 'Pearson type III', True],
@@ -143,7 +146,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['loglaplace', 3, 'MLE', 'Log-Laplace', False],
                   ['levy', 2, 'MLE', 'Levy', False],
                   ['levy_l', 2, 'MLE', 'Left-skewed Levy', False],
-                  ['levy_stable', 4, 'MLE', 'Levy-stable', True],
+                  ['levy_stable', 4, 'MLE', 'Levy-stable', False],
                   ['logistic', 2, 'MM', 'Logistic (or Sech-squared)', True],
                   ['maxwell', 2, 'MM', 'Maxwell', True],
                   ['mielke', 4, 'MLE', 'Mielke Beta-Kappa / Dagum', True],
