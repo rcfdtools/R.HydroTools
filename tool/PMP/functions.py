@@ -310,3 +310,4 @@ def print_log(file_log, txt_print, on_screen=True, center_div=False):
     file_log.write(txt_print)
     if center_div:
         file_log.write('\n\n</div>\n' + '\n')
+

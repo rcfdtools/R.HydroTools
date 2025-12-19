@@ -188,6 +188,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 
 ### References
 
+* http://dhime.ideam.gov.co/atencionciudadano/
 * https://xiaoganghe.github.io/python-climate-visuals/chapters/data-analytics/scipy-basic.html
 * https://docs.scipy.org/doc/scipy/reference/stats.html
 * https://docs.scipy.org/doc/scipy/tutorial/stats.html

@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-# Tested with: Python 3.10, SciPy 1.11.3, NumPy 1.26.1, Pandas 2.1.3
+# Tested with: Python 3.10, SciPy 1.11.3, NumPy 1.26.1, Pandas 2.1.3, xlrd
 
 # General libraries
 import functions as funcs
@@ -31,7 +31,8 @@ pdist_loggumbel_on = True  # Activate the Log-Gumbel distribution
 if not show_warnings: warnings.filterwarnings('ignore')
 plot_legend_ncol = 2  # Columns on plot legend, '' for autofit
 ddof = 1  # Standard deviation normalized
-station_label = 'Station' # Station column name to eval from .csv station file
+station_label = 'Station' # Station column name to eval from .csv station dataset file
+station_label_catalog = 'CODIGO' # Station column name to eval from .csv station dataset file
 x_label = 'Value'  # Value column name to eval from .csv station file
 date_label = 'Date'  # Date column name from .csv station file
 # Return periods and probabilities
@@ -51,10 +52,12 @@ df_l_pdist_scipy.index.name = 'id'
 
 # Execution
 input_path = 'dataset/pmax24h_in/'  # Your local input file folder
-ouput_path = 'dataset/pmax24h_out/'  # Your local input file folder
+ouput_path = 'dataset/pmax24h_out/'  # Your local output file folder
+station_catalog_file = 'dataset/CNE_IDEAM.xls'
 station_file = input_path + 'conventional.csv'
 df_all = pd.read_csv(station_file, delimiter=',', parse_dates=True)  # index_col=0
 stations = df_all[station_label].unique()
+df_catalog = pd.read_excel(station_catalog_file, sheet_name='CNE', parse_dates=True)
 print(stations)
 for station in stations:
     station_code = str(station)
@@ -64,9 +67,11 @@ for station in stations:
     df = df.sort_values(by=date_label)
     df.index.name = 'id'
     df = df.reset_index(drop=True)
+    df_station_info = df_catalog[df_catalog[station_label_catalog] == station]
 
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True)
     funcs.print_log(file_log, f'# Station ({parameter_name}): {station_code}' )
+    funcs.print_log(file_log, f'Station info\n\n{df_station_info.to_markdown()}', center_div=True)
     funcs.print_log(file_log, f'Discrete values table\n\n{df[[date_label, x_label]].transpose().to_markdown()}', center_div=True)
 
     # Plot x values - Start (graph 0)
