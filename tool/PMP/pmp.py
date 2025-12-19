@@ -66,7 +66,7 @@ for station in stations:
     df = df.reset_index(drop=True)
 
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="200px">', center_div=True)
-    funcs.print_log(file_log, f'# Station: {station_code} ({parameter_name}, {parameter_units})' )
+    funcs.print_log(file_log, f'# Station ({parameter_name}): {station_code}' )
     funcs.print_log(file_log, f'Discrete values table\n\n{df[[date_label, x_label]].transpose().to_markdown()}', center_div=True)
 
     # Plot x values - Start (graph 0)
