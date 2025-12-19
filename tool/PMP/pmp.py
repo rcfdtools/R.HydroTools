@@ -73,7 +73,7 @@ for station in stations:
     fig_file0 = 'graph/' + station_code + '_data_serie.png'
     if create_plot:
         #df = df.sort_values(by=date_label)
-        plt.plot(df[date_label], df[x_label], color=color_line_plot, lw=2, marker='o', markersize=3, )
+        plt.plot(df[date_label], df[x_label], color=color_line_plot, lw=1.5, marker='o', markersize=3, )
         plt.grid(color='gray', linestyle='--', linewidth=0.1)
         plt.title('Data serie')  #$_{ } for underscript text
         plt.xlabel('Year')
@@ -183,7 +183,7 @@ for station in stations:
 
             # Plot empirical vs. best fit (graph 2)
             plt.scatter(df[x], df['empirical'], color='black', facecolors='darkgray', s=24, label='%s (Δo: %f)' %(emp, dp_best['deltao'][0]))
-            plt.plot(df[x], df[dp_best['p_dist'][0]], color=color_line_plot, lw=2, marker='o', markersize=0, label='%s (Δ: %f)' %(dp_best['p_dist'][0], dp_best['delta'][0]))
+            plt.plot(df[x], df[dp_best['p_dist'][0]], color=color_line_plot, lw=1.5, marker='o', markersize=0, label='%s (Δ: %f)' %(dp_best['p_dist'][0], dp_best['delta'][0]))
             plt.title('Cumulative distribution function CDF (Best fit)')
             plt.xlabel(parameter_name + ' ' + parameter_units)
             plt.ylabel('CDF')
@@ -196,7 +196,7 @@ for station in stations:
 
             # Plot Empirical & Estimated PDF - Best Fit (graph 3)
             plt.hist(df.x, density=True, histtype='stepfilled', alpha=0.4, color='gray', label='Empirical %s' % emp)
-            plt.plot(df.x, df[dp_best['p_dist'][0]+'_pdf'], 'r-', lw=2, color=color_line_plot, label='Estimated %s' % dp_best['p_dist'][0])
+            plt.plot(df.x, df[dp_best['p_dist'][0]+'_pdf'], 'r-', lw=1.5, color=color_line_plot, label='Estimated %s' % dp_best['p_dist'][0])
             plt.legend(loc='best', frameon=False)
             plt.title('Empirical & Estimated PDF (Best fit)')
             plt.xlabel(parameter_name + ' ' + parameter_units)
