@@ -131,7 +131,11 @@ for station in stations:
     df = df.rename(columns={x: 'x', date: 'date'})
     x = 'x'  # New value column name
     date = 'date'  # New date column name
-    funcs.print_log(file_log, '\n## B. Active continuous probability distributions from SciPy (%d of %d available)\n\n%s' % (len(df_l_pdist_scipy.query('active == True')), len(funcs.l_pdist_scipy), df_l_pdist_scipy.query('active == True').to_markdown()))
+    #funcs.print_log(file_log, '\n## B. Active continuous probability distributions from SciPy (%d of %d available)\n\n' % (len(df_l_pdist_scipy.query('active == True')), len(funcs.l_pdist_scipy), df_l_pdist_scipy.query('active == True').to_markdown()))
+    funcs.print_log(file_log, '\n## B. Active continuous probability distributions from SciPy (%d of %d available)' % (len(df_l_pdist_scipy.query('active == True')), len(funcs.l_pdist_scipy)))
+    funcs.print_log(file_log,
+                    '\n\nA continuous probability distribution describes probabilities for variables that can take any value within a range (like rain any time), unlike discrete variables with specific outcomes (like temperature). It uses a Probability Density Function (PDF), a curve where the total area under it equals 1, and the probability of the variable falling within an interval (a to b) is found by calculating the area under the curve between those points. A key feature is that the probability of hitting any single exact value is zero, so probabilities are always expressed for ranges, e.g., $P(a ≤ X ≤ b)$.\n')
+    funcs.print_log(file_log, f'\n{df_l_pdist_scipy.query('active == True').to_markdown()}')
     funcs.print_log(file_log, '\n\n> Gumbel and Lob-Gumbel probability distributions are not shown in the above table.  \n> n_parameter = # arguments & localization & scale.  \n> Fit methods: (MLE) maximum likelihood, (MM) L-moments.')
     funcs.print_log(file_log, '\n\n\n## C. Probability distributions')
     vDeltaKolmogorov = pd.DataFrame(columns=['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3'])
@@ -311,7 +315,9 @@ for station in stations:
     df_tr.to_csv(f'{ouput_path}table/extreme_{station_code}.csv', index=False)
     funcs.print_log(file_log,f'\n### Best fit (ordered by delta Δ)\n\n{dp_best_of_best.to_markdown()}')
     funcs.print_log(file_log, f'\n\n:file_folder:Tables: [bestfit_{station_code}.csv](table/bestfit_{station_code}.csv) | [extreme_{station_code}.csv](table/extreme_{station_code}.csv)')
-    funcs.print_log(file_log,f'\n\n\n### Extreme values\n\n{df_tr.to_markdown()}\n')
+    funcs.print_log(file_log,f'\n\n\n### Extreme values\n\n')
+    funcs.print_log(file_log,'In hydrology, a return period (or recurrence interval) is the statistical average time between extreme events like floods or droughts of a specific magnitude, indicating how rare an event is, with a 100-year flood, for example, having a 1% chance of occurring in any given year, not that it happens exactly every century. It is a key tool for infrastructure design (like bridges or dams) and risk assessment, calculated from historical data to determine the probability of future events, although it is important to remember it is statistical average, and events can cluster or be missed.')
+    funcs.print_log(file_log,f'\n\n{df_tr.to_markdown()}\n')
     funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file4, center_div=True)
     funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file5, center_div=True)
     funcs.print_log(file_log, '\n<sub>**APP DISCLAIMER**: NO WARRANTY - This software is provided by [github.com/rcfdtools](https://github.com/rcfdtools) "as is", without any express or implied warranty, including warranties of merchantability, fitness for a particular purpose, or non-infringement. There is no guarantee that the software will be error-free or operate without interruption. LIMITATION OF LIABILITY - Neither the authors nor copyright holders will be liable for claims or damages arising from the software or its use. You are responsible for determining if the software is appropriate for your use and assume all associated risks, including errors, legal compliance, and data loss. NO PROFESSIONAL ADVICE - The software provides general information and does not offer professional advice. It should not replace consultation with professional advisors.</sub>')
