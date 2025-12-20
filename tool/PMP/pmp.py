@@ -86,7 +86,7 @@ for station in stations:
     google_maps_url = f'http://maps.google.com/maps?q={point_latitude},{point_longitude}'
     openstreetmap_url = f'https://www.openstreetmap.org/#map=18/{point_latitude}/{point_longitude}&layers=P'
     bing_map_url = f'https://www.bing.com/maps?cp={point_latitude}~{point_longitude}&lvl=18'
-    apple_map_url = f'https://maps.apple.com/frame?center={point_latitude}%2C{point_longitude}&span=0.002'
+    apple_map_url = f'https://maps.apple.com/frame?center={point_latitude}%2C{point_longitude}&span=0.003%2C0.006'
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True)
     funcs.print_log(file_log, f'# Station ({parameter_name}): {station_code}' )
     funcs.print_log(file_log, f'\n\n## A. General information\n\n### 1. General running parameters\n\n')
