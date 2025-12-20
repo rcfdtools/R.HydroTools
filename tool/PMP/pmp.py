@@ -132,13 +132,12 @@ for station in stations:
     df = df.rename(columns={x: 'x', date: 'date'})
     x = 'x'  # New value column name
     date = 'date'  # New date column name
-    #funcs.print_log(file_log, '\n## B. Active continuous probability distributions from SciPy (%d of %d available)\n\n' % (len(df_l_pdist_scipy.query('active == True')), len(funcs.l_pdist_scipy), df_l_pdist_scipy.query('active == True').to_markdown()))
-    funcs.print_log(file_log, '\n## B. Active continuous probability distributions from SciPy (%d of %d available)' % (len(df_l_pdist_scipy.query('active == True')), len(funcs.l_pdist_scipy)))
+    funcs.print_log(file_log, '\n### 4. Active continuous probability distributions from SciPy (%d of %d available)' % (len(df_l_pdist_scipy.query('active == True')), len(funcs.l_pdist_scipy)))
     funcs.print_log(file_log,
                     '\n\nA continuous probability distribution describes probabilities for variables that can take any value within a range (like rain any time), unlike discrete variables with specific outcomes (like temperature). It uses a Probability Density Function (PDF), a curve where the total area under it equals 1, and the probability of the variable falling within an interval (a to b) is found by calculating the area under the curve between those points. A key feature is that the probability of hitting any single exact value is zero, so probabilities are always expressed for ranges, e.g., $P(a ≤ X ≤ b)$.\n')
     funcs.print_log(file_log, f'\n{df_l_pdist_scipy.query('active == True').to_markdown()}')
     funcs.print_log(file_log, '\n\n> Gumbel and Lob-Gumbel probability distributions are not shown in the above table.  \n> n_parameter = # arguments & localization & scale.  \n> Fit methods: (MLE) maximum likelihood, (MM) L-moments.')
-    funcs.print_log(file_log, '\n\n\n## C. Probability distributions vs. Empirical distributions')
+    funcs.print_log(file_log, '\n\n\n## B. Probability distributions vs. Empirical distributions')
     funcs.print_log(file_log, f'\n\nAn Empirical Distribution Function (EDF) is a step-function estimate of a true cumulative distribution function (CDF) based on observed sample data, representing the proportion of data points less than or equal to a given value. It is calculated by ordering your data and jumping up by $1/n$ (where $n$ is sample size) at each unique data point, allowing analysis without assuming an underlying population distribution, and it gets closer to the true CDF as the sample size grows.')
     vDeltaKolmogorov = pd.DataFrame(columns=['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3'])
 
@@ -309,7 +308,7 @@ for station in stations:
         plt.close()
 
     # Best CDF fit & Estimate extreme values for specific return periods - Tr
-    funcs.print_log(file_log, '\n## D. Best fit & Estimate extreme values for specific return periods - Tr\n\n')
+    funcs.print_log(file_log, '\n## E. Best fit & Estimate extreme values for specific return periods - Tr\n\n')
     funcs.print_log(file_log,'> risk_rate: assuming the return period as the project useful life.\n\n')
     print(df_tr.columns)
     df_tr.drop('empirical_dist', axis=1, inplace=True)
