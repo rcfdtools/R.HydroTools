@@ -42,7 +42,7 @@ pdist_gumbel_on = True  # Eval the Gumbel distribution (non include in SciPy)
 pdist_loggumbel_on = True  # Eval the Log-Gumbel distribution (non include in SciPy)
 if not show_warnings: warnings.filterwarnings('ignore')
 plot_legend_ncol = 2  # Columns on plot legend, '' for autofit
-ddof = 1  # Standard deviation normalized
+ddof = 1.00  # Standard deviation normalized
 runtime = datetime.now()
 
 
@@ -59,6 +59,7 @@ df_l_pdist_scipy = df_l_pdist_scipy.query('active == True')
 df_l_pdist_scipy = df_l_pdist_scipy.sort_values(by=['p_dist'], ascending=True)
 df_l_pdist_scipy = df_l_pdist_scipy.reset_index(drop=True)
 df_l_pdist_scipy.index.name = 'id'
+
 
 # Execution
 df_all = pd.read_csv(station_dataset_file, delimiter=',', parse_dates=True)  # index_col=0
@@ -86,12 +87,12 @@ for station in stations:
     openstreetmap_url = f'https://www.openstreetmap.org/#map=12/{point_latitude}/{point_longitude}&layers=P'
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True)
     funcs.print_log(file_log, f'# Station ({parameter_name}): {station_code}' )
-    funcs.print_log(file_log, f'\n\n## A. General information\n\n### General running parameters\n\n')
+    funcs.print_log(file_log, f'\n\n## A. General information\n\n### 1. General running parameters\n\n')
     for dict_var in dictionary.dicts:
-        funcs.print_log(file_log, f'**{dict_var[1]}:** {eval(dict_var[0])}. ')
-    funcs.print_log(file_log, f'\n\n### Station info and location: [:earth_americas:Google]({google_maps_url}), [:earth_americas:OSM]({openstreetmap_url})\n\n{df_station_info.to_markdown()}')
+        funcs.print_log(file_log, f'●{dict_var[1]}: {eval(dict_var[0])}. ')
+    funcs.print_log(file_log, f'\n\n### 2. Station info and location\n[:earth_americas:Google]({google_maps_url}), [:earth_americas:OSM]({openstreetmap_url})\n\n{df_station_info.to_markdown()}')
     funcs.print_log(file_log, '\n<img alt="R.GISPython" src="%s" width="500"></img>' % fig_file0a, center_div=True)
-    funcs.print_log(file_log, f'\n### Discrete values table\n\n{df[[label_date, label_x]].transpose().to_markdown()}')
+    funcs.print_log(file_log, f'\n### 3. Discrete values table\n\n{df[[label_date, label_x]].transpose().to_markdown()}')
     funcs.print_log(file_log, '\n<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file0, center_div=True)
 
     # Plot location map & Plot x values

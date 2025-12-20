@@ -212,6 +212,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 * https://zhauniarovich.com/post/2022/2022-09-matplotlib-graphs-in-research-papers/
 * https://www3.nd.edu/~pkamat/pdf/graphs.pdf
 * https://github.com/jbmouret/matplotlib_for_papers
+* https://library.wmo.int/records/item/35708-manual-on-estimation-of-probable-maximum-precipitation-pmp
 
 
 **How to show more lines in the PyCharm RUN console**
