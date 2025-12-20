@@ -308,7 +308,7 @@ for station in stations:
         plt.close()
 
     # Best CDF fit & Estimate extreme values for specific return periods - Tr
-    funcs.print_log(file_log, '\n## E. Best fit & Estimate extreme values for specific return periods - Tr\n\n')
+    funcs.print_log(file_log, '\n## C. Best fit & Estimate extreme values for specific return periods - Tr\n\n')
     funcs.print_log(file_log,'> risk_rate: assuming the return period as the project useful life.\n\n')
     print(df_tr.columns)
     df_tr.drop('empirical_dist', axis=1, inplace=True)
