@@ -305,9 +305,10 @@ for station in stations:
     print(df_tr.columns)
     df_tr.drop('empirical_dist', axis=1, inplace=True)
     df_tr.index.name = 'id'
-    dp_best_of_best.to_csv(f'{ouput_path}table/bestfit_{station_code}.csv', index=False) ##############
+    dp_best_of_best.to_csv(f'{ouput_path}table/bestfit_{station_code}.csv', index=False)
+    df_tr.to_csv(f'{ouput_path}table/extreme_{station_code}.csv', index=False)
     funcs.print_log(file_log,f'\n### Best fit (ordered by delta Δ)\n\n{dp_best_of_best.to_markdown()}')
-    funcs.print_log(file_log, f'\n\n[Table: bestfit_{station_code}.csv](table/bestfit_{station_code}.csv)')
+    funcs.print_log(file_log, f'\n\n:file_folder:Tables: [bestfit_{station_code}.csv](table/bestfit_{station_code}.csv) | [extreme_{station_code}.csv](table/extreme_{station_code}.csv)')
     funcs.print_log(file_log,f'\n\n\n### Extreme values\n\n{df_tr.to_markdown()}\n')
     funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file4, center_div=True)
     funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file5, center_div=True)
