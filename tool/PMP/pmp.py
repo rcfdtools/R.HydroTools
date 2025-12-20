@@ -7,6 +7,7 @@ import dictionary as dictionary
 import warnings
 from pathlib import Path
 import matplotlib.pyplot as plt
+plt.style.use('grayscale')
 from matplotlib.pyplot import figure
 import tabulate  # required for print tables in Markdown using pandas
 import numpy as np
@@ -31,7 +32,7 @@ label_date = 'Date'  # Date column name from .csv station file
 label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
-create_plot = False  # Creates and save plots into files
+create_plot = True  # Creates and save plots into files
 show_plot = False  # Show plot on Python screen console
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
 color_line_plot = 'black' # green
