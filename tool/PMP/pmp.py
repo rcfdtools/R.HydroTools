@@ -149,6 +149,7 @@ for station in stations:
     if pdist_gumbel_on: funcs.pdist_gumbel(df, x, ddof, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     if pdist_loggumbel_on: funcs.pdist_loggumbel(df, x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     funcs.print_log(file_log, '\n\n\n### Cumulative distribution values - CDF (%d evalated, ordered by x ascending) \n\n%s\n\n' %(dp_evalated, df.to_markdown()))
+    funcs.print_log(file_log, f'\nAn Empirical Distribution Function (EDF) is a step-function estimate of a true cumulative distribution function (CDF) based on observed sample data, representing the proportion of data points less than or equal to a given value. It is calculated by ordering your data and jumping up by $1/n$ (where $n$ is sample size) at each unique data point, allowing analysis without assuming an underlying population distribution, and it gets closer to the true CDF as the sample size grows.\n')
 
     # Evaluation for each empirical distribution
     dp_best_of_best = pd.DataFrame()
@@ -301,7 +302,7 @@ for station in stations:
         plt.close()
 
     # Best CDF fit & Estimate extreme values for specific return periods - Tr
-    funcs.print_log(file_log, '\n## D. Best CDF fit & Estimate extreme values for specific return periods - Tr\n\n')
+    funcs.print_log(file_log, '\n## D. Best fit & Estimate extreme values for specific return periods - Tr\n\n')
     funcs.print_log(file_log,'> risk_rate: assuming the return period as the project useful life.\n\n')
     print(df_tr.columns)
     df_tr.drop('empirical_dist', axis=1, inplace=True)
