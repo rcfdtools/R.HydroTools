@@ -89,12 +89,12 @@ for station in stations:
     apple_map_url = f'https://maps.apple.com/frame?center={point_latitude}%2C{point_longitude}&span=0.003%2C0.006'
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True)
     funcs.print_log(file_log, f'# Station ({parameter_name}): {station_code}' )
-    funcs.print_log(file_log, f'\n\n## A. General information\n\n### 1. General running parameters\n\n')
+    funcs.print_log(file_log, f'\n\n\n## A. General information\n\n\n### 1. General running parameters\n\n')
     for dict_var in dictionary.dicts:
-        funcs.print_log(file_log, f'●{dict_var[1]}: {eval(dict_var[0])}. ')
-    funcs.print_log(file_log, f'\n\n### 2. Station info and location\n\n{df_station_info.to_markdown()}')
+        funcs.print_log(file_log, f'●{dict_var[1]}: _{eval(dict_var[0])}_. ')
+    funcs.print_log(file_log, f'\n\n\n### 2. Station info and location\n\n{df_station_info.to_markdown()}\n')
     funcs.print_log(file_log, f'Map location in: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url})<br>\n<img alt="R.GISPython" src="{fig_file0a}" width="500"></img>', center_div=True)
-    funcs.print_log(file_log, f'\n### 3. Discrete values table and plot\n\n{df[[label_date, label_x]].transpose().to_markdown()}')
+    funcs.print_log(file_log, f'\n### 3. Discrete values table and plot\n\n{df[[label_date, label_x]].transpose().to_markdown()}\n')
     funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file0, center_div=True)
 
     # Plot location map & Plot x values
@@ -130,7 +130,7 @@ for station in stations:
     df = df.rename(columns={x: 'x', date: 'date'})
     x = 'x'  # New value column name
     date = 'date'  # New date column name
-    funcs.print_log(file_log, '\n\n## B. Active continuous probability distributions from SciPy (%d of %d available)\n\n%s' % (len(df_l_pdist_scipy.query('active == True')), len(funcs.l_pdist_scipy), df_l_pdist_scipy.query('active == True').to_markdown()))
+    funcs.print_log(file_log, '\n## B. Active continuous probability distributions from SciPy (%d of %d available)\n\n%s' % (len(df_l_pdist_scipy.query('active == True')), len(funcs.l_pdist_scipy), df_l_pdist_scipy.query('active == True').to_markdown()))
     funcs.print_log(file_log, '\n\n> Gumbel and Lob-Gumbel probability distributions are not shown in the above table.  \n> n_parameter = # arguments & localization & scale.  \n> Fit methods: (MLE) maximum likelihood, (MM) L-moments.')
     funcs.print_log(file_log, '\n\n\n## C. Probability distributions')
     vDeltaKolmogorov = pd.DataFrame(columns=['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3'])
@@ -147,7 +147,7 @@ for station in stations:
         funcs.pdist_scipy(df, df_l_pdist_scipy['p_dist'][i], df_l_pdist_scipy['n_parameter'][i], df_l_pdist_scipy['fit_method'][i], df_l_pdist_scipy['label'][i], x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     if pdist_gumbel_on: funcs.pdist_gumbel(df, x, ddof, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     if pdist_loggumbel_on: funcs.pdist_loggumbel(df, x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
-    funcs.print_log(file_log, '\n\n### Cumulative distribution values - CDF (%d evalated, ordered by x ascending) \n\n%s' %(dp_evalated, df.to_markdown()))
+    funcs.print_log(file_log, '\n\n\n### Cumulative distribution values - CDF (%d evalated, ordered by x ascending) \n\n%s\n\n' %(dp_evalated, df.to_markdown()))
 
     # Evaluation for each empirical distribution
     dp_best_of_best = pd.DataFrame()
@@ -157,7 +157,7 @@ for station in stations:
         fig_file3 = 'graph/' + station_code + '_' + emp + '_vs_estimatedpdf.png'
         fig_file4 = 'graph/' + station_code + '_extreme_values.png'
         fig_file5 = 'graph/' + station_code + '_extreme_values_bestfit.png'
-        funcs.print_log(file_log, '\n\n\n### Empirical: %s\n' % emp)
+        funcs.print_log(file_log, '\n### Empirical: %s\n' % emp)
 
         # Return periods & empirical values
         df_tr['empirical_dist'] = emp
@@ -177,16 +177,16 @@ for station in stations:
         vDeltaKolmogorov = vDeltaKolmogorov.sort_values(by=['delta'], ascending=True)
         vDeltaKolmogorov = vDeltaKolmogorov.reset_index(drop=True)
         vDeltaKolmogorov.index.name = 'id'
-        funcs.print_log(file_log, '\n\n#### 1. Empirical values\n\n')
+        funcs.print_log(file_log, '\n\n#### 1. Empirical values\n')
         funcs.print_log(file_log, (df[['date', 'x', 'm', 'empirical_dist', 'empirical', 'empirical_tr']].transpose().to_markdown()), center_div=True)
         vDeltaKolmogorov['best_fit_sort'] = vDeltaKolmogorov.index+1
-        funcs.print_log(file_log, '\n\n####  2. Parameters & Kolmogorov-Smirnov fit test (sorted by Δ)\n\n%s' % vDeltaKolmogorov[['empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3', 'best_fit', 'best_fit_sort']].to_markdown())
+        funcs.print_log(file_log, '\n####  2. Parameters & Kolmogorov-Smirnov fit test (sorted by Δ)\n\n%s\n' % vDeltaKolmogorov[['empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3', 'best_fit', 'best_fit_sort']].to_markdown())
         dp_best = vDeltaKolmogorov[vDeltaKolmogorov.best_fit == 1]
         dp_best = dp_best.reset_index(drop=True)
         dp_best.index.name = 'id'
         dp_best_of_best = pd.concat([dp_best, dp_best_of_best])
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file1, center_div=True)
-        funcs.print_log(file_log, '\n\n#### 3. Best fit for\n\n%s' %dp_best.to_markdown())
+        funcs.print_log(file_log, '\n#### 3. Best fit\n\n%s\n' %dp_best.to_markdown())
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file2, center_div=True)
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file3, center_div=True)
         #funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file4, center_div=True)
@@ -300,13 +300,15 @@ for station in stations:
         plt.close()
 
     # Best CDF fit & Estimate extreme values for specific return periods - Tr
-    funcs.print_log(file_log, '\n\n\n## D. Best CDF fit & Estimate extreme values for specific return periods - Tr\n\n')
+    funcs.print_log(file_log, '\n## D. Best CDF fit & Estimate extreme values for specific return periods - Tr\n\n')
     funcs.print_log(file_log,'> risk_rate: assuming the return period as the project useful life.\n\n')
     print(df_tr.columns)
     df_tr.drop('empirical_dist', axis=1, inplace=True)
     df_tr.index.name = 'id'
-    funcs.print_log(file_log,f'### Best fit (ordered by delta)\n\n{dp_best_of_best.to_markdown()}')
-    funcs.print_log(file_log,f'\n\n### Extreme values\n\n{df_tr.to_markdown()}\n')
+    dp_best_of_best.to_csv(f'{ouput_path}table/bestfit_{station_code}.csv', index=False) ##############
+    funcs.print_log(file_log,f'\n### Best fit (ordered by delta Δ)\n\n{dp_best_of_best.to_markdown()}')
+    funcs.print_log(file_log, f'\n\n[Table: bestfit_{station_code}.csv](table/bestfit_{station_code}.csv)')
+    funcs.print_log(file_log,f'\n\n\n### Extreme values\n\n{df_tr.to_markdown()}\n')
     funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file4, center_div=True)
     funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file5, center_div=True)
     funcs.print_log(file_log, '\n<sub>**APP DISCLAIMER**: NO WARRANTY - This software is provided by [github.com/rcfdtools](https://github.com/rcfdtools) "as is", without any express or implied warranty, including warranties of merchantability, fitness for a particular purpose, or non-infringement. There is no guarantee that the software will be error-free or operate without interruption. LIMITATION OF LIABILITY - Neither the authors nor copyright holders will be liable for claims or damages arising from the software or its use. You are responsible for determining if the software is appropriate for your use and assume all associated risks, including errors, legal compliance, and data loss. NO PROFESSIONAL ADVICE - The software provides general information and does not offer professional advice. It should not replace consultation with professional advisors.</sub>')
