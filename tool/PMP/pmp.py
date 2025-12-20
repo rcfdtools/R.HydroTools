@@ -84,7 +84,7 @@ for station in stations:
     point_latitude = df_station_info[label_latitude][0]
     point_longitude = df_station_info[label_longitude][0]
     google_maps_url = f'http://maps.google.com/maps?q={point_latitude},{point_longitude}'
-    openstreetmap_url = f'https://www.openstreetmap.org/#map=12/{point_latitude}/{point_longitude}&layers=P'
+    openstreetmap_url = f'https://www.openstreetmap.org/#map=18/{point_latitude}/{point_longitude}&layers=P'
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True)
     funcs.print_log(file_log, f'# Station ({parameter_name}): {station_code}' )
     funcs.print_log(file_log, f'\n\n## A. General information\n\n### 1. General running parameters\n\n')
