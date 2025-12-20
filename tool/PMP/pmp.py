@@ -85,13 +85,14 @@ for station in stations:
     point_longitude = df_station_info[label_longitude][0]
     google_maps_url = f'http://maps.google.com/maps?q={point_latitude},{point_longitude}'
     openstreetmap_url = f'https://www.openstreetmap.org/#map=18/{point_latitude}/{point_longitude}&layers=P'
+    bing_map_url = f'https://www.bing.com/maps?cp={point_latitude}~{point_longitude}&lvl=18'
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True)
     funcs.print_log(file_log, f'# Station ({parameter_name}): {station_code}' )
     funcs.print_log(file_log, f'\n\n## A. General information\n\n### 1. General running parameters\n\n')
     for dict_var in dictionary.dicts:
         funcs.print_log(file_log, f'●{dict_var[1]}: {eval(dict_var[0])}. ')
     funcs.print_log(file_log, f'\n\n### 2. Station info and location\n\n{df_station_info.to_markdown()}')
-    funcs.print_log(file_log, f'[:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url})<br>\n<img alt="R.GISPython" src="{fig_file0a}" width="500"></img>', center_div=True)
+    funcs.print_log(file_log, f'[:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url})<br>\n<img alt="R.GISPython" src="{fig_file0a}" width="500"></img>', center_div=True)
     funcs.print_log(file_log, f'\n### 3. Discrete values table\n\n{df[[label_date, label_x]].transpose().to_markdown()}')
     funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file0, center_div=True)
 
