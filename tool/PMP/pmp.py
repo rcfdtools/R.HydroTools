@@ -90,10 +90,10 @@ for station in stations:
     funcs.print_log(file_log, f'\n\n## A. General information\n\n### 1. General running parameters\n\n')
     for dict_var in dictionary.dicts:
         funcs.print_log(file_log, f'●{dict_var[1]}: {eval(dict_var[0])}. ')
-    funcs.print_log(file_log, f'\n\n### 2. Station info and location\n[:earth_americas:Google]({google_maps_url}), [:earth_americas:OSM]({openstreetmap_url})\n\n{df_station_info.to_markdown()}')
-    funcs.print_log(file_log, '\n<img alt="R.GISPython" src="%s" width="500"></img>' % fig_file0a, center_div=True)
+    funcs.print_log(file_log, f'\n\n### 2. Station info and location\n\n{df_station_info.to_markdown()}')
+    funcs.print_log(file_log, '[:earth_americas:Google]({google_maps_url}), [:earth_americas:OSM]({openstreetmap_url})\n<img alt="R.GISPython" src="%s" width="500"></img>' % fig_file0a, center_div=True)
     funcs.print_log(file_log, f'\n### 3. Discrete values table\n\n{df[[label_date, label_x]].transpose().to_markdown()}')
-    funcs.print_log(file_log, '\n<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file0, center_div=True)
+    funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file0, center_div=True)
 
     # Plot location map & Plot x values
     if create_plot:
