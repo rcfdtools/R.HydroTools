@@ -178,16 +178,16 @@ for station in stations:
         vDeltaKolmogorov = vDeltaKolmogorov.sort_values(by=['delta'], ascending=True)
         vDeltaKolmogorov = vDeltaKolmogorov.reset_index(drop=True)
         vDeltaKolmogorov.index.name = 'id'
-        funcs.print_log(file_log, '\n\n#### 1. Empirical values\n')
+        funcs.print_log(file_log, '\n\n**1. Empirical values**\n')
         funcs.print_log(file_log, (df[['date', 'x', 'm', 'empirical_dist', 'empirical', 'empirical_tr']].transpose().to_markdown()), center_div=True)
         vDeltaKolmogorov['best_fit_sort'] = vDeltaKolmogorov.index+1
-        funcs.print_log(file_log, '\n####  2. Parameters & Kolmogorov-Smirnov fit test (sorted by Δ)\n\n%s\n' % vDeltaKolmogorov[['empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3', 'best_fit', 'best_fit_sort']].to_markdown())
+        funcs.print_log(file_log, '\n**2. Parameters & Kolmogorov-Smirnov fit test (sorted by Δ)**\n\n%s\n' % vDeltaKolmogorov[['empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3', 'best_fit', 'best_fit_sort']].to_markdown())
         dp_best = vDeltaKolmogorov[vDeltaKolmogorov.best_fit == 1]
         dp_best = dp_best.reset_index(drop=True)
         dp_best.index.name = 'id'
         dp_best_of_best = pd.concat([dp_best, dp_best_of_best])
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file1, center_div=True)
-        funcs.print_log(file_log, '\n#### 3. Best fit\n\n%s\n' %dp_best.to_markdown())
+        funcs.print_log(file_log, '\n**3. Best fit**\n\n%s\n' %dp_best.to_markdown())
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file2, center_div=True)
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file3, center_div=True)
         #funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file4, center_div=True)
