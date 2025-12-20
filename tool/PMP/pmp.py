@@ -86,12 +86,12 @@ for station in stations:
     openstreetmap_url = f'https://www.openstreetmap.org/#map=12/{point_latitude}/{point_longitude}&layers=P'
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True)
     funcs.print_log(file_log, f'# Station ({parameter_name}): {station_code}' )
-    funcs.print_log(file_log, f'\n\n**General running parameters:** ')
+    funcs.print_log(file_log, f'\n\n## A. General information\n\n### General running parameters: ')
     for dict_var in dictionary.dicts:
         funcs.print_log(file_log, f'{dict_var[1]}: _{eval(dict_var[0])}_, ')
-    funcs.print_log(file_log, f'\n\nStation info: [:earth_americas:Google]({google_maps_url}), [:earth_americas:OSM]({openstreetmap_url})\n\n{df_station_info.to_markdown()}')
+    funcs.print_log(file_log, f'\n\n### Station info and location: [:earth_americas:Google]({google_maps_url}), [:earth_americas:OSM]({openstreetmap_url})\n\n{df_station_info.to_markdown()}')
     funcs.print_log(file_log, '\n<img alt="R.GISPython" src="%s" width="500"></img>' % fig_file0a, center_div=True)
-    funcs.print_log(file_log, f'\nDiscrete values table\n\n{df[[label_date, label_x]].transpose().to_markdown()}')
+    funcs.print_log(file_log, f'\n### Discrete values table\n\n{df[[label_date, label_x]].transpose().to_markdown()}')
     funcs.print_log(file_log, '\n<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file0, center_div=True)
 
     # Plot location map & Plot x values
@@ -127,9 +127,9 @@ for station in stations:
     df = df.rename(columns={x: 'x', date: 'date'})
     x = 'x'  # New value column name
     date = 'date'  # New date column name
-    funcs.print_log(file_log, '\n\n## A. Active continuous probability distributions from SciPy (%d of %d available)\n\n%s' % (len(df_l_pdist_scipy.query('active == True')), len(funcs.l_pdist_scipy), df_l_pdist_scipy.query('active == True').to_markdown()))
+    funcs.print_log(file_log, '\n\n## B. Active continuous probability distributions from SciPy (%d of %d available)\n\n%s' % (len(df_l_pdist_scipy.query('active == True')), len(funcs.l_pdist_scipy), df_l_pdist_scipy.query('active == True').to_markdown()))
     funcs.print_log(file_log, '\n\n> Gumbel and Lob-Gumbel probability distributions are not shown in the above table.  \n> n_parameter = # arguments & localization & scale.  \n> Fit methods: (MLE) maximum likelihood, (MM) L-moments.')
-    funcs.print_log(file_log, '\n\n\n## B. Probability distributions')
+    funcs.print_log(file_log, '\n\n\n## C. Probability distributions')
     vDeltaKolmogorov = pd.DataFrame(columns=['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3'])
 
     # CDF calculations
@@ -297,7 +297,7 @@ for station in stations:
         plt.close()
 
     # Best CDF fit & Estimate extreme values for specific return periods - Tr
-    funcs.print_log(file_log, '\n\n\n## C. Best CDF fit & Estimate extreme values for specific return periods - Tr\n\n')
+    funcs.print_log(file_log, '\n\n\n## D. Best CDF fit & Estimate extreme values for specific return periods - Tr\n\n')
     print(df_tr.columns)
     df_tr.drop('empirical_dist', axis=1, inplace=True)
     df_tr.index.name = 'id'
