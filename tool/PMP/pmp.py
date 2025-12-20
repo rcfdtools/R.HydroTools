@@ -32,7 +32,7 @@ label_date = 'Date'  # Date column name from .csv station file
 label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
-create_plot = True  # Creates and save plots into files
+create_plot = False  # Creates and save plots into files
 show_plot = False  # Show plot on Python screen console
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
 color_line_plot = 'black' # green
@@ -138,7 +138,8 @@ for station in stations:
                     '\n\nA continuous probability distribution describes probabilities for variables that can take any value within a range (like rain any time), unlike discrete variables with specific outcomes (like temperature). It uses a Probability Density Function (PDF), a curve where the total area under it equals 1, and the probability of the variable falling within an interval (a to b) is found by calculating the area under the curve between those points. A key feature is that the probability of hitting any single exact value is zero, so probabilities are always expressed for ranges, e.g., $P(a ≤ X ≤ b)$.\n')
     funcs.print_log(file_log, f'\n{df_l_pdist_scipy.query('active == True').to_markdown()}')
     funcs.print_log(file_log, '\n\n> Gumbel and Lob-Gumbel probability distributions are not shown in the above table.  \n> n_parameter = # arguments & localization & scale.  \n> Fit methods: (MLE) maximum likelihood, (MM) L-moments.')
-    funcs.print_log(file_log, '\n\n\n## C. Probability distributions')
+    funcs.print_log(file_log, '\n\n\n## C. Probability distributions vs. Empirical distributions')
+    funcs.print_log(file_log, f'\n\nAn Empirical Distribution Function (EDF) is a step-function estimate of a true cumulative distribution function (CDF) based on observed sample data, representing the proportion of data points less than or equal to a given value. It is calculated by ordering your data and jumping up by $1/n$ (where $n$ is sample size) at each unique data point, allowing analysis without assuming an underlying population distribution, and it gets closer to the true CDF as the sample size grows.')
     vDeltaKolmogorov = pd.DataFrame(columns=['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3'])
 
     # CDF calculations
@@ -154,7 +155,6 @@ for station in stations:
     if pdist_gumbel_on: funcs.pdist_gumbel(df, x, ddof, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     if pdist_loggumbel_on: funcs.pdist_loggumbel(df, x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     funcs.print_log(file_log, '\n\n\n### Cumulative distribution values - CDF (%d evalated, ordered by x ascending) \n\n%s\n\n' %(dp_evalated, df.to_markdown()))
-    funcs.print_log(file_log, f'\nAn Empirical Distribution Function (EDF) is a step-function estimate of a true cumulative distribution function (CDF) based on observed sample data, representing the proportion of data points less than or equal to a given value. It is calculated by ordering your data and jumping up by $1/n$ (where $n$ is sample size) at each unique data point, allowing analysis without assuming an underlying population distribution, and it gets closer to the true CDF as the sample size grows.\n')
 
     # Evaluation for each empirical distribution
     dp_best_of_best = pd.DataFrame()
@@ -164,7 +164,7 @@ for station in stations:
         fig_file3 = 'graph/' + station_code + '_' + emp + '_vs_estimatedpdf.png'
         fig_file4 = 'graph/' + station_code + '_extreme_values.png'
         fig_file5 = 'graph/' + station_code + '_extreme_values_bestfit.png'
-        funcs.print_log(file_log, '\n### Empirical: %s\n' % emp)
+        funcs.print_log(file_log, '\n### ● Empirical: %s\n' % emp)
 
         # Return periods & empirical values
         df_tr['empirical_dist'] = emp
