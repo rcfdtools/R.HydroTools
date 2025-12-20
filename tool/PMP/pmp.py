@@ -93,7 +93,7 @@ for station in stations:
     funcs.print_log(file_log, f'\n\nProbable Maximum Precipitation (PMP) is the greatest amount of rainfall for a specific duration that is meteorologically possible for a given location, acting as a "worst-case" scenario for extreme storms, crucial for designing safety-critical infrastructure like bridges, river deviations, dams, spillways, and nuclear plants to prevent catastrophic failure. PMP is calculated by hydrologists using meteorological data to determine the upper limit of extreme rainfall, often leading to the Probable Maximum Flood (PMF) for flood control design, and is increasingly being studied for climate change impacts.')
     funcs.print_log(file_log, f'\n\n\n## A. General information\n\n\n### 1. General running parameters\n\n')
     for dict_var in dictionary.dicts:
-        funcs.print_log(file_log, f'●{dict_var[1]}: _{eval(dict_var[0])}_. ')
+        funcs.print_log(file_log, f'• {dict_var[1]}: _{eval(dict_var[0])}_. ')
     funcs.print_log(file_log, f'\n\n\n### 2. Station info and location\n\n{df_station_info.to_markdown()}\n')
     funcs.print_log(file_log, f'Map location in: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url})<br>\n<img alt="R.GISPython" src="{fig_file0a}" width="500"></img>', center_div=True)
     funcs.print_log(file_log, f'\n### 3. Discrete values table and plot\n\n{df[[label_date, label_x]].transpose().to_markdown()}\n')
@@ -158,13 +158,14 @@ for station in stations:
 
     # Evaluation for each empirical distribution
     dp_best_of_best = pd.DataFrame()
+    num_inc = 1
     for emp in funcs.emp_dist:
         fig_file1 = 'graph/' + station_code + '_' + emp + '_vs_all.png'
         fig_file2 = 'graph/' + station_code + '_' + emp + '_vs_bestfit.png'
         fig_file3 = 'graph/' + station_code + '_' + emp + '_vs_estimatedpdf.png'
         fig_file4 = 'graph/' + station_code + '_extreme_values.png'
         fig_file5 = 'graph/' + station_code + '_extreme_values_bestfit.png'
-        funcs.print_log(file_log, '\n### ● Empirical: %s\n' % emp)
+        funcs.print_log(file_log, f'\n### {num_inc}. Empirical: {emp}\n')
 
         # Return periods & empirical values
         df_tr['empirical_dist'] = emp
@@ -184,19 +185,20 @@ for station in stations:
         vDeltaKolmogorov = vDeltaKolmogorov.sort_values(by=['delta'], ascending=True)
         vDeltaKolmogorov = vDeltaKolmogorov.reset_index(drop=True)
         vDeltaKolmogorov.index.name = 'id'
-        funcs.print_log(file_log, '\n\n**1. Empirical values**\n')
+        funcs.print_log(file_log, f'\n\n**{num_inc}.1. Empirical values**\n')
         funcs.print_log(file_log, (df[['date', 'x', 'm', 'empirical_dist', 'empirical', 'empirical_tr']].transpose().to_markdown()), center_div=True)
         vDeltaKolmogorov['best_fit_sort'] = vDeltaKolmogorov.index+1
-        funcs.print_log(file_log, '\n**2. Parameters & Kolmogorov-Smirnov fit test (sorted by Δ)**\n\n%s\n' % vDeltaKolmogorov[['empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3', 'best_fit', 'best_fit_sort']].to_markdown())
+        funcs.print_log(file_log, f'\n**{num_inc}.2. Parameters & Kolmogorov-Smirnov fit test (sorted by Δ)**\n\n%s\n' % vDeltaKolmogorov[['empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3', 'best_fit', 'best_fit_sort']].to_markdown())
         dp_best = vDeltaKolmogorov[vDeltaKolmogorov.best_fit == 1]
         dp_best = dp_best.reset_index(drop=True)
         dp_best.index.name = 'id'
         dp_best_of_best = pd.concat([dp_best, dp_best_of_best])
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file1, center_div=True)
-        funcs.print_log(file_log, '\n**3. Best fit**\n\n%s\n' %dp_best.to_markdown())
+        funcs.print_log(file_log, f'\n**{num_inc}.3. Best fit**\n\n%s\n' %dp_best.to_markdown())
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file2, center_div=True)
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file3, center_div=True)
         #funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file4, center_div=True)
+        num_inc += 1
 
         # Plot analysis graphs
         if create_plot:
@@ -314,9 +316,9 @@ for station in stations:
     df_tr.index.name = 'id'
     dp_best_of_best.to_csv(f'{ouput_path}table/bestfit_{station_code}.csv', index=False)
     df_tr.to_csv(f'{ouput_path}table/extreme_{station_code}.csv', index=False)
-    funcs.print_log(file_log,f'\n### Best fit (ordered by delta Δ)\n\n{dp_best_of_best.to_markdown()}')
+    funcs.print_log(file_log,f'\n### 1. Best fit (ordered by delta Δ)\n\n{dp_best_of_best.to_markdown()}')
     funcs.print_log(file_log, f'\n\n:file_folder:Tables: [bestfit_{station_code}.csv](table/bestfit_{station_code}.csv) | [extreme_{station_code}.csv](table/extreme_{station_code}.csv)')
-    funcs.print_log(file_log,f'\n\n\n### Extreme values\n\n')
+    funcs.print_log(file_log,f'\n\n\n### 2. Extreme values\n\n')
     funcs.print_log(file_log,'In hydrology, a return period (or recurrence interval) is the statistical average time between extreme events like floods or droughts of a specific magnitude, indicating how rare an event is, with a 100-year flood, for example, having a 1% chance of occurring in any given year, not that it happens exactly every century. It is a key tool for infrastructure design (like bridges or dams) and risk assessment, calculated from historical data to determine the probability of future events, although it is important to remember it is statistical average, and events can cluster or be missed.')
     funcs.print_log(file_log,f'\n\n{df_tr.to_markdown()}\n')
     funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file4, center_div=True)
