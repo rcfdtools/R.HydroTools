@@ -309,7 +309,6 @@ for station in stations:
 
     # Best CDF fit & Estimate extreme values for specific return periods - Tr
     funcs.print_log(file_log, '\n## C. Best fit & Estimate extreme values for specific return periods - Tr\n\n')
-    funcs.print_log(file_log,'> risk_rate: assuming the return period as the project useful life.\n\n')
     print(df_tr.columns)
     df_tr.drop('empirical_dist', axis=1, inplace=True)
     df_tr.index.name = 'id'
@@ -319,6 +318,7 @@ for station in stations:
     funcs.print_log(file_log, f'\n\n:file_folder:Tables: [bestfit_{station_code}.csv](table/bestfit_{station_code}.csv) | [extreme_{station_code}.csv](table/extreme_{station_code}.csv)')
     funcs.print_log(file_log,f'\n\n\n### 2. Extreme values\n\n')
     funcs.print_log(file_log,'In hydrology, a return period (or recurrence interval) is the statistical average time between extreme events like floods or droughts of a specific magnitude, indicating how rare an event is, with a 100-year flood, for example, having a 1% chance of occurring in any given year, not that it happens exactly every century. It is a key tool for infrastructure design (like bridges or dams) and risk assessment, calculated from historical data to determine the probability of future events, although it is important to remember it is statistical average, and events can cluster or be missed.')
+    funcs.print_log(file_log,'\n\n> risk_rate: assuming the return period as the project useful life.')
     funcs.print_log(file_log,f'\n\n{df_tr.to_markdown()}\n')
     funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file4, center_div=True)
     funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file5, center_div=True)
