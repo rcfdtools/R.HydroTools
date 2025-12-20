@@ -120,7 +120,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['weibull_min', 3, 'MLE', 'Weibull minimum', True],
                   ['weibull_max', 3, 'MLE', 'Weibull maximum', False],  # Check: not for rain data
                   ['dweibull', 3, 'MLE', 'Double Weibull', False]
-                  ])
+                 ])
 
 
 # Fitting test Kolmogorov

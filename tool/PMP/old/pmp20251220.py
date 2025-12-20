@@ -3,7 +3,6 @@
 
 # General libraries
 import functions as funcs
-import dictionary as dictionary
 import warnings
 from pathlib import Path
 import matplotlib.pyplot as plt
@@ -11,41 +10,33 @@ from matplotlib.pyplot import figure
 import tabulate  # required for print tables in Markdown using pandas
 import numpy as np
 import pandas as pd
-from datetime import datetime
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)
 
 
 # General setup
-app_version = 'v20251220'
-input_path = 'dataset/pmax24h_in/'  # Your local input file folder
-ouput_path = 'dataset/pmax24h_out/'  # Your local output file folder
-station_catalog_file = 'dataset/CNE_IDEAM.xls' # CNE catalog for stations info
-station_dataset_file = input_path + 'conventional.csv' # Stations dataset
-parameter_name = 'rain, Pmax24h'  # rain, flow
+parameter_name = 'rain max 24h'  # rain, flow
 parameter_units = '($mm/d$)'  # ($mm/d$), ($m^3/s$)
-label_station = 'Station' # Station column name to eval from .csv station dataset file
-label_x = 'Value'  # Value column name to eval from .csv station file
-label_date = 'Date'  # Date column name from .csv station file
-label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
-label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
-label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
-create_plot = False  # Creates and save plots into files
-show_plot = False  # Show plot on Python screen console
+create_plot = True  # Creates and save plots into files
+show_plot = False  # Show plot on screen
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
 color_line_plot = 'black' # green
-dpi = 96  # Graph plot resolution
+dpi = 96  # Save plot resolution
+plot_legend_fontsize = 'xx-small' # 'xx-small', 'x-small', 'small', 'medium' (default), 'large', 'x-large', 'xx-large'
 show_warnings = False  # Show warnings on screen
 low_extreme = False  # Eval low extreme values, if False, evaluates high extreme values
-pdist_gumbel_on = True  # Eval the Gumbel distribution (non include in SciPy)
-pdist_loggumbel_on = True  # Eval the Log-Gumbel distribution (non include in SciPy)
+pdist_gumbel_on = True  # Activate the Gumbel distribution
+pdist_loggumbel_on = True  # Activate the Log-Gumbel distribution
 if not show_warnings: warnings.filterwarnings('ignore')
 plot_legend_ncol = 2  # Columns on plot legend, '' for autofit
 ddof = 1  # Standard deviation normalized
-runtime = datetime.now()
-
-
+station_label = 'Station' # Station column name to eval from .csv station dataset file
+x_label = 'Value'  # Value column name to eval from .csv station file
+date_label = 'Date'  # Date column name from .csv station file
+station_label_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
+latitude_label_catalog = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
+longitude_label_catalog = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
 # Return periods and probabilities
 #tr = [2.33, 5, 10, 25, 50, 100]  # Tr, return period in years
 tr = [2, 2.33, 5, 10, 15, 20, 25, 50, 75, 100, 200, 250, 500, 750, 1000]  # Tr, return period in years
@@ -60,51 +51,52 @@ df_l_pdist_scipy = df_l_pdist_scipy.sort_values(by=['p_dist'], ascending=True)
 df_l_pdist_scipy = df_l_pdist_scipy.reset_index(drop=True)
 df_l_pdist_scipy.index.name = 'id'
 
+
 # Execution
-df_all = pd.read_csv(station_dataset_file, delimiter=',', parse_dates=True)  # index_col=0
-stations = df_all[label_station].unique()
+input_path = 'dataset/pmax24h_in/'  # Your local input file folder
+ouput_path = 'dataset/pmax24h_out/'  # Your local output file folder
+station_catalog_file = 'dataset/CNE_IDEAM.xls'
+station_file = input_path + 'conventional.csv'
+df_all = pd.read_csv(station_file, delimiter=',', parse_dates=True)  # index_col=0
+stations = df_all[station_label].unique()
 print(stations)
-data_types = {label_latitude: 'float64', label_longitude: 'float64'}
+data_types = {latitude_label_catalog: 'float64', longitude_label_catalog: 'float64'}
 df_catalog = pd.read_excel(station_catalog_file, sheet_name='CNE', parse_dates=True, dtype=data_types) # , dtype=data_types
 # print(df_catalog.dtypes)
 for station in stations:
     station_code = str(station)
-    fig_file0 = 'graph/' + station_code + '_data_serie.png'
-    fig_file0a = 'graph/' + station_code + '_location_map.png'
     file_log_name = f'{ouput_path}{station_code}.md'  # Markdown file log
     file_log = open(file_log_name, 'w+', encoding='utf-8')   # w+ create the file if it doesn't exist
-    df = df_all[df_all[label_station] == station]
-    df = df.sort_values(by=label_date)
+    df = df_all[df_all[station_label] == station]
+    df = df.sort_values(by=date_label)
     df = df.reset_index(drop=True)
     df.index.name = 'id'
-    df_station_info = df_catalog[df_catalog[label_station_catalog] == station]
+    df_station_info = df_catalog[df_catalog[station_label_catalog] == station]
     df_station_info = df_station_info.reset_index(drop=True)
     df_station_info.index.name = 'id'
-    point_latitude = df_station_info[label_latitude][0]
-    point_longitude = df_station_info[label_longitude][0]
+    point_latitude = df_station_info[latitude_label_catalog][0]
+    point_longitude = df_station_info[longitude_label_catalog][0]
     google_maps_url = f'http://maps.google.com/maps?q={point_latitude},{point_longitude}'
     openstreetmap_url = f'https://www.openstreetmap.org/#map=12/{point_latitude}/{point_longitude}&layers=P'
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True)
     funcs.print_log(file_log, f'# Station ({parameter_name}): {station_code}' )
-    funcs.print_log(file_log, f'\n\nGeneral parameters >>> ')
-    for dict_var in dictionary.dicts:
-        funcs.print_log(file_log, f'{dict_var[1]}: {eval(dict_var[0])}, ')
-    funcs.print_log(file_log, f'\n\nStation info: [:earth_americas:Google]({google_maps_url}), [:earth_americas:OSM]({openstreetmap_url})\n\n{df_station_info.to_markdown()}')
-    funcs.print_log(file_log, '\n<img alt="R.GISPython" src="%s" width="500"></img>' % fig_file0a, center_div=True)
-    funcs.print_log(file_log, f'\nDiscrete values table\n\n{df[[label_date, label_x]].transpose().to_markdown()}')
-    funcs.print_log(file_log, '\n<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file0, center_div=True)
 
-    # Plot location map & Plot x values
+    # Plot location map
+    fig_file0a = 'graph/' + station_code + '_location_map.png'
     if create_plot:
-
-        # Location map (graph 0a)
         location_map_plot = funcs.location_map(point_latitude, point_longitude, station)
         location_map_plot.savefig(ouput_path + fig_file0a, dpi=dpi)
         plt.close()
 
-        # Plot x values  (graph 0)
-        #df = df.sort_values(by=label_date)
-        plt.plot(df[label_date], df[label_x], color=color_line_plot, lw=1.5, marker='o', markersize=3)
+    funcs.print_log(file_log, f'\nStation info: [:earth_americas:Google]({google_maps_url}), [:earth_americas:OSM]({openstreetmap_url})\n\n{df_station_info.to_markdown()}')
+    funcs.print_log(file_log, '\n<img alt="R.GISPython" src="%s" width="500"></img>' % fig_file0a, center_div=True)
+    funcs.print_log(file_log, f'\n\nDiscrete values table\n\n{df[[date_label, x_label]].transpose().to_markdown()}')
+
+    # Plot x values - Start (graph 0)
+    fig_file0 = 'graph/' + station_code + '_data_serie.png'
+    if create_plot:
+        #df = df.sort_values(by=date_label)
+        plt.plot(df[date_label], df[x_label], color=color_line_plot, lw=1.5, marker='o', markersize=3)
         plt.grid(color='gray', linestyle='--', linewidth=0.1)
         plt.title('Data serie')  #$_{ } for underscript text
         plt.xlabel('Year')
@@ -115,9 +107,10 @@ for station in stations:
         if show_plot: plt.show()
         plt.savefig(ouput_path + fig_file0, dpi=dpi)
         plt.close()
+    funcs.print_log(file_log, '\n<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file0, center_div=True)
 
-    x = label_x
-    date = label_date
+    x = x_label
+    date = date_label
     df = df.dropna()
     df = df.sort_values(by=x, ascending=True)
     df = df.reset_index(drop=True)
@@ -207,6 +200,7 @@ for station in stations:
             plt.title('Cumulative distribution function CDF%s' %(only_fit_txt))
             plt.xlabel(parameter_name + ' ' + parameter_units)
             plt.ylabel('CDF')
+            plt.legend(fontsize=plot_legend_fontsize)
             plt.legend(loc='best', frameon=True, edgecolor='white', framealpha=0.9, ncol=plot_legend_ncol, facecolor='white')
             plt.grid(color = 'gray', linestyle = '--', linewidth = 0.1)
             plt.annotate('Station: %s' %(station_code), xy=(0.99, 0.98), xycoords='axes fraction', ha='right', fontsize=9)
@@ -254,9 +248,8 @@ for station in stations:
     dp_best_of_best['best_fit_sort'] = dp_best_of_best.index+1
     best_of_best_p_dist = dp_best_of_best[dp_best_of_best['best_fit_sort']==1]['p_dist'][0]
     print(f'>>>>>>>>>>>>>>>>> Best of best: {best_of_best_p_dist}')
-
-    # Plot multiple extreme values over return periods Tr (graph 4)
     if create_plot:
+        # Plot multiple extreme values over return periods Tr (graph 4)
         figure(figsize=(15, 12))
         for i in range(0, len(vDeltaKolmogorov)):
             dp = vDeltaKolmogorov['p_dist'][i]
@@ -273,6 +266,7 @@ for station in stations:
         plt.title('Extreme values for specific return periods%s' % (only_fit_txt))
         plt.xlabel('Tr ($years$)')
         plt.ylabel(parameter_name + ' ' + parameter_units)
+        plt.legend(fontsize=plot_legend_fontsize)
         plt.legend(loc='best', frameon=True, edgecolor='white', framealpha=0.9, ncol=4, facecolor='white')
         plt.grid(color='gray', linestyle='--', linewidth=0.1)
         #plt.annotate('Station: %s (Δo: %f %s)' % (station_code, vDeltaKolmogorov['deltao'][0], emp), xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
@@ -296,7 +290,6 @@ for station in stations:
         plt.savefig(ouput_path + fig_file5, dpi=dpi)
         plt.close()
 
-    # Best CDF fit & Estimate extreme values for specific return periods - Tr
     funcs.print_log(file_log, '\n\n\n## C. Best CDF fit & Estimate extreme values for specific return periods - Tr\n\n')
     print(df_tr.columns)
     df_tr.drop('empirical_dist', axis=1, inplace=True)
