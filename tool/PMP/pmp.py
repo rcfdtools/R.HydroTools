@@ -89,6 +89,7 @@ for station in stations:
     apple_map_url = f'https://maps.apple.com/frame?center={point_latitude}%2C{point_longitude}&span=0.003%2C0.006'
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True)
     funcs.print_log(file_log, f'# Station ({parameter_name}): {station_code}' )
+    funcs.print_log(file_log, f'\n\nProbable Maximum Precipitation (PMP) is the greatest amount of rainfall for a specific duration that is meteorologically possible for a given location, acting as a "worst-case" scenario for extreme storms, crucial for designing safety-critical infrastructure like bridges, river deviations, dams, spillways, and nuclear plants to prevent catastrophic failure. PMP is calculated by hydrologists using meteorological data to determine the upper limit of extreme rainfall, often leading to the Probable Maximum Flood (PMF) for flood control design, and is increasingly being studied for climate change impacts.')
     funcs.print_log(file_log, f'\n\n\n## A. General information\n\n\n### 1. General running parameters\n\n')
     for dict_var in dictionary.dicts:
         funcs.print_log(file_log, f'●{dict_var[1]}: _{eval(dict_var[0])}_. ')
