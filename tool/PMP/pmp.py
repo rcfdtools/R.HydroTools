@@ -203,7 +203,6 @@ for station in stations:
 
             # Plot empirical vs. all (graph 1)
             figure(figsize=(15, 12))
-            plt.scatter(df[x], df['empirical'], color='black', facecolors='darkgray', s=24, label='%s (Δo: %f)' % (emp, vDeltaKolmogorov['deltao'][0]))
             for i in range(0, len(vDeltaKolmogorov)):
                 dp = vDeltaKolmogorov['p_dist'][i]
                 delta = vDeltaKolmogorov['delta'][i]
@@ -214,6 +213,7 @@ for station in stations:
                 else:
                     plt.plot(df[x], df[dp], lw=1, marker='o', markersize=0, alpha=0.75, label='%s (Δ: %f)' %(dp, delta))
                     only_fit_txt = ''
+            plt.scatter(df[x], df['empirical'], color='black', facecolors='darkgray', s=24, label='%s (Δo: %f)' % (emp, vDeltaKolmogorov['deltao'][0]))
             plt.title('Cumulative distribution function CDF%s' %(only_fit_txt))
             plt.xlabel(parameter_name + ' ' + parameter_units)
             plt.ylabel('CDF')
@@ -226,8 +226,8 @@ for station in stations:
             plt.close()
 
             # Plot empirical vs. best fit (graph 2)
-            plt.scatter(df[x], df['empirical'], color='black', facecolors='darkgray', s=24, label='%s (Δo: %f)' %(emp, dp_best['deltao'][0]))
             plt.plot(df[x], df[dp_best['p_dist'][0]], color=color_line_plot, lw=1.5, marker='o', markersize=0, label='%s (Δ: %f)' %(dp_best['p_dist'][0], dp_best['delta'][0]))
+            plt.scatter(df[x], df['empirical'], color='black', facecolors='darkgray', s=24, label='%s (Δo: %f)' %(emp, dp_best['deltao'][0]))
             plt.title('Cumulative distribution function CDF (Best fit)')
             plt.xlabel(parameter_name + ' ' + parameter_units)
             plt.ylabel('CDF')
