@@ -86,7 +86,7 @@ for station in stations:
     openstreetmap_url = f'https://www.openstreetmap.org/#map=12/{point_latitude}/{point_longitude}&layers=P'
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True)
     funcs.print_log(file_log, f'# Station ({parameter_name}): {station_code}' )
-    funcs.print_log(file_log, f'\n\n## A. General information\n\n### General running parameters: ')
+    funcs.print_log(file_log, f'\n\n## A. General information\n\n### General running parameters\n\n')
     for dict_var in dictionary.dicts:
         funcs.print_log(file_log, f'{dict_var[1]}: _{eval(dict_var[0])}_, ')
     funcs.print_log(file_log, f'\n\n### Station info and location: [:earth_americas:Google]({google_maps_url}), [:earth_americas:OSM]({openstreetmap_url})\n\n{df_station_info.to_markdown()}')
