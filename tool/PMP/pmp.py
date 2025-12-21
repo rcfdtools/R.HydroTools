@@ -46,7 +46,8 @@ if not show_warnings: warnings.filterwarnings('ignore')
 plot_legend_ncol = 2  # Columns on plot legend, '' for autofit
 ddof = 1.00  # Standard deviation normalized
 runtime = datetime.now()
-minimum_sample = 10 # Exclude a station when doesn't have the minimum data sample (0 means any).
+minimum_sample = 10 # Exclude a station when doesn't have the minimum data sample (0 means any)
+zscore = 3 # Z-Score threshold to adjust a value, 0 means disable
 avoid_zeros = True # Exclude dataframe zeros, e.g. rain = 0
 avoid_nans = True # Exclude null values
 
@@ -78,7 +79,8 @@ df_all_stats_join = pd.merge(df_all, df_all_stats, on=label_station, how='inner'
 df_all_stats_join['zscore'] = (df_all_stats_join[label_x]-df_all_stats_join['mean'])/df_all_stats_join['std']
 df_all = df_all_stats_join
 df_all[f'{label_x}_initial'] = df_all_stats_join[label_x]
-df_all[label_x] = np.where(abs(df_all['zscore']) > 3, df_all['mean'], df_all[label_x]) ##################
+if zscore > 0:
+    df_all[label_x] = np.where(abs(df_all['zscore']) > zscore, df_all['mean'], df_all[label_x])
 print(df_all.to_markdown())
 if minimum_sample > 0:
     df_all = df_all[df_all['count'] >= minimum_sample]
@@ -120,6 +122,7 @@ for station in stations:
     funcs.print_log(file_log, f'Map location in: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url})<br>\n<img alt="R.GISPython" src="{fig_file0a}" width="500"></img>', center_div=True)
     funcs.print_log(file_log, f'\n### 3. Discrete values table and plot\n\n{df[[label_date, label_x, f'{label_x}_initial', 'count', 'mean', 'std', 'zscore']].transpose().to_markdown()}\n')
     funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file0, center_div=True)
+    funcs.print_log(file_log, '> If Z-Score is active, values out of range are replace with the station mean value.\n')
 
     # Plot location map & Plot x values
     if create_plot:
@@ -131,7 +134,8 @@ for station in stations:
 
         # Plot x values  (graph 0)
         #df = df.sort_values(by=label_date)
-        plt.plot(df[label_date], df[label_x], color=color_line_plot, lw=1.5, marker='o', markersize=3)
+        plt.plot(df[label_date], df[f'{label_x}_initial'], color=color_line_plot, lw=0.5, marker='o', markersize=2, label='Original', linestyle='dashed')
+        plt.plot(df[label_date], df[label_x], color=color_line_plot, lw=1.25, marker='o', markersize=3, label='Adjusted (Z-Score)')
         plt.grid(color='gray', linestyle='--', linewidth=0.1)
         plt.title('Data serie')  #$_{ } for underscript text
         plt.xlabel('Year')
@@ -139,6 +143,7 @@ for station in stations:
         plt.xticks(rotation=0, ha='center')
         plt.annotate('Station: %s' % station_code, xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
         plt.annotate('github.com/rcfdtools', xy=(1.0275, 0.01), xycoords='axes fraction', ha='right', va='bottom', rotation='vertical', fontsize=7.5)
+        plt.legend(loc='best', frameon=False)
         if show_plot: plt.show()
         plt.savefig(ouput_path + fig_file0, dpi=dpi)
         plt.close()
