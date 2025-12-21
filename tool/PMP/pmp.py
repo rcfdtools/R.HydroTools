@@ -77,6 +77,8 @@ print(df_all_stats.to_markdown())
 df_all_stats_join = pd.merge(df_all, df_all_stats, on=label_station, how='inner')
 df_all_stats_join['zscore'] = (df_all_stats_join[label_x]-df_all_stats_join['mean'])/df_all_stats_join['std']
 df_all = df_all_stats_join
+df_all[f'{label_x}_initial'] = df_all_stats_join[label_x]
+df_all[label_x] = np.where(abs(df_all['zscore']) > 3, df_all['mean'], df_all[label_x]) ##################
 print(df_all.to_markdown())
 if minimum_sample > 0:
     df_all = df_all[df_all['count'] >= minimum_sample]
@@ -116,7 +118,7 @@ for station in stations:
     funcs.print_log(file_log, f'[:file_folder:Dataset file.](../../{station_dataset_file})') ####################
     funcs.print_log(file_log, f'\n\n\n### 2. Station info and location\n\n{df_station_info.to_markdown()}\n')
     funcs.print_log(file_log, f'Map location in: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url})<br>\n<img alt="R.GISPython" src="{fig_file0a}" width="500"></img>', center_div=True)
-    funcs.print_log(file_log, f'\n### 3. Discrete values table and plot\n\n{df[[label_date, label_x, 'count', 'mean', 'std', 'zscore']].transpose().to_markdown()}\n')
+    funcs.print_log(file_log, f'\n### 3. Discrete values table and plot\n\n{df[[label_date, label_x, f'{label_x}_initial', 'count', 'mean', 'std', 'zscore']].transpose().to_markdown()}\n')
     funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file0, center_div=True)
 
     # Plot location map & Plot x values
