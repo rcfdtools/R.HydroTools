@@ -45,6 +45,8 @@ if not show_warnings: warnings.filterwarnings('ignore')
 plot_legend_ncol = 2  # Columns on plot legend, '' for autofit
 ddof = 1.00  # Standard deviation normalized
 runtime = datetime.now()
+avoid_zeros = True # Exclude dataframe zeros, e.g. rain = 0
+avoid_nans = True # Exclude null values
 
 
 # Return periods and probabilities
@@ -62,8 +64,15 @@ df_l_pdist_scipy = df_l_pdist_scipy.reset_index(drop=True)
 df_l_pdist_scipy.index.name = 'id'
 
 
-# Execution
+# Initial dataset cleaning
 df_all = pd.read_csv(station_dataset_file, delimiter=',', parse_dates=True)  # index_col=0
+if avoid_zeros:
+    df_all = df_all[df_all[label_x] != 0]
+if avoid_nans:
+    df_all = df_all.dropna(subset=[label_station, label_x, label_date])
+
+
+# Execution
 stations = df_all[label_station].unique()
 print(stations)
 data_types = {label_latitude: 'float64', label_longitude: 'float64'}

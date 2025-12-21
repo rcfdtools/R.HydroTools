@@ -12,7 +12,9 @@ dicts = ([['app_version', 'app_version'], # App control version
           ['pdist_gumbel_on', 'Eval Gumbel distribution, non include in SciPy (pdist_loggumbel_on)'],
           ['pdist_loggumbel_on', 'Eval Log-Gumbel distribution, non include in SciPy (pdist_loggumbel_on)'],
           ['ddof', 'Standard deviation normalized (ddof)'],
-          ['tr', 'Return periods to eval in years (Tr)']
+          ['tr', 'Return periods to eval in years (Tr)'],
+          ['avoid_zeros', 'Avoid zeros, e.g. rain = 0 (avoid_zeros)'],
+          ['avoid_nans', 'Avoid null values (avoid_nans)']
          ])
 
 
