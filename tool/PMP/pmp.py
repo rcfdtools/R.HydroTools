@@ -1,5 +1,6 @@
 # -*- coding: UTF-8 -*-
 # Tested with: Python 3.10, SciPy 1.11.3, NumPy 1.26.1, Pandas 2.1.3, xlrd
+from numpy.ma.core import minimum
 
 # General libraries
 import functions as funcs
@@ -45,6 +46,7 @@ if not show_warnings: warnings.filterwarnings('ignore')
 plot_legend_ncol = 2  # Columns on plot legend, '' for autofit
 ddof = 1.00  # Standard deviation normalized
 runtime = datetime.now()
+minimum_sample = 10 # Exclude a station when doesn't have the minimum data sample (0 means any).
 avoid_zeros = True # Exclude dataframe zeros, e.g. rain = 0
 avoid_nans = True # Exclude null values
 
@@ -76,10 +78,12 @@ df_all_stats_join = pd.merge(df_all, df_all_stats, on=label_station, how='inner'
 df_all_stats_join['zscore'] = (df_all_stats_join[label_x]-df_all_stats_join['mean'])/df_all_stats_join['std']
 df_all = df_all_stats_join
 print(df_all.to_markdown())
+if minimum_sample > 0:
+    df_all = df_all[df_all['count'] >= minimum_sample]
 
 
 # Execution
-stations = df_all_stats[label_station].unique()
+stations = df_all[label_station].unique()
 print(stations)
 data_types = {label_station_catalog: 'str', label_latitude: 'float64', label_longitude: 'float64'}
 df_catalog = pd.read_excel(station_catalog_file, sheet_name='CNE', parse_dates=True, dtype=data_types) # , dtype=data_types
@@ -109,7 +113,7 @@ for station in stations:
     funcs.print_log(file_log, f'\n\n\n## A. General information\n\n\n### 1. General running parameters\n\n')
     for dict_var in dictionary.dicts:
         funcs.print_log(file_log, f'• {dict_var[1]}: _{eval(dict_var[0])}_. ')
-    funcs.print_log(file_log, f'[:file_folder:Dataset file.](../../{station_dataset_file})\n') ####################
+    funcs.print_log(file_log, f'[:file_folder:Dataset file.](../../{station_dataset_file})') ####################
     funcs.print_log(file_log, f'\n\n\n### 2. Station info and location\n\n{df_station_info.to_markdown()}\n')
     funcs.print_log(file_log, f'Map location in: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url})<br>\n<img alt="R.GISPython" src="{fig_file0a}" width="500"></img>', center_div=True)
     funcs.print_log(file_log, f'\n### 3. Discrete values table and plot\n\n{df[[label_date, label_x, 'count', 'mean', 'std', 'zscore']].transpose().to_markdown()}\n')
