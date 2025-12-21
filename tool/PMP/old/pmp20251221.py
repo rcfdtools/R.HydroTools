@@ -182,10 +182,10 @@ for station in stations:
     if pdist_loggumbel_on: funcs.pdist_loggumbel(df, x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     funcs.print_log(file_log, '\n\n\n### Cumulative distribution values - CDF (%d evalated, ordered by x ascending) \n\n%s\n\n' %(dp_evalated, df.to_markdown()))
 
-    # Evaluation for each empirical distribution function
+    # Evaluation for each empirical distribution
     dp_best_of_best = pd.DataFrame()
     num_inc = 1
-    for emp in funcs.edf_dist:
+    for emp in funcs.emp_dist:
         fig_file1 = 'graph/' + station_code + '_' + emp + '_vs_all.png'
         fig_file2 = 'graph/' + station_code + '_' + emp + '_vs_bestfit.png'
         fig_file3 = 'graph/' + station_code + '_' + emp + '_vs_estimatedpdf.png'

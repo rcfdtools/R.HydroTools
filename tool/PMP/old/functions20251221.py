@@ -148,31 +148,31 @@ def fTestKolmogorov(dfx, p_dist, idk, emp, vDeltaKolmogorov):  # Kolmogorov-Smir
     vDeltaKolmogorov['fit'][idk] = fit
 
 
-# Empirical distributions function
-edf_dist = ['edf_california', 'edf_hazen', 'edf_weibull', 'edf_beard', 'edf_chegodayev', 'edf_blom', 'edf_tukey', 'edf_gringorten', 'edf_jenkinson', 'edf_cunnane', 'edf_adamowski']
+# Empirical distributions
+emp_dist = ['emp_california', 'emp_hazen', 'emp_weibull', 'emp_beard', 'emp_chegodayev', 'emp_blom', 'emp_tukey', 'emp_gringorten', 'emp_jenkinson', 'emp_cunnane', 'emp_adamowski']
 def pdist_empirical(dfx, emp, x):
     dfx['empirical_dist'] = emp
-    if emp == 'edf_california':  # 1923
+    if emp == 'emp_california':  # 1923
         dfx['empirical'] = dfx['m'] / len(dfx[x])
-    elif emp == 'edf_hazen':  # Year 1930
+    elif emp == 'emp_hazen':  # Year 1930
         dfx['empirical'] = (dfx['m']-0.5) / len(dfx[x])
-    elif emp == 'edf_weibull':  # Year 1939
+    elif emp == 'emp_weibull':  # Year 1939
         dfx['empirical'] = dfx['m'] / (len(dfx[x]) + 1)
-    elif emp == 'edf_beard':  # Year 1943
+    elif emp == 'emp_beard':  # Year 1943
         dfx['empirical'] = (dfx['m']-0.31) / (len(dfx[x])+0.38)
-    elif emp == 'edf_chegodayev':  # Year 1955
+    elif emp == 'emp_chegodayev':  # Year 1955
         dfx['empirical'] = (dfx['m']-0.3) / (len(dfx[x])+0.4)
-    elif emp == 'edf_blom':  # Year 1958
+    elif emp == 'emp_blom':  # Year 1958
         dfx['empirical'] = (dfx['m']-0.375) / (len(dfx[x]) + 0.25)
-    elif emp == 'edf_tukey':  # Year 1962
+    elif emp == 'emp_tukey':  # Year 1962
         dfx['empirical'] = (3*dfx['m']-1) / (3*len(dfx[x]) + 1)
-    elif emp == 'edf_gringorten':  # Year 1963
+    elif emp == 'emp_gringorten':  # Year 1963
         dfx['empirical'] = (dfx['m']-0.44) / (len(dfx[x]) + 0.12)
-    elif emp == 'edf_jenkinson':  # Year 1977
+    elif emp == 'emp_jenkinson':  # Year 1977
         dfx['empirical'] = (dfx['m']-0.31) / (len(dfx[x]) + 0.38)
-    elif emp == 'edf_cunnane':  # Year 1978
+    elif emp == 'emp_cunnane':  # Year 1978
         dfx['empirical'] = (dfx['m']-0.4) / (len(dfx[x]) + 0.2)
-    elif emp == 'edf_adamowski':  # Year 1981
+    elif emp == 'emp_adamowski':  # Year 1981
         dfx['empirical'] = (dfx['m']-0.25) / (len(dfx[x]) + 0.5)
     else:
         dfx['empirical'] = dfx['m'] / len(dfx[x])  # California
