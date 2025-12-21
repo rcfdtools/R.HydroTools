@@ -94,6 +94,7 @@ for station in stations:
     funcs.print_log(file_log, f'\n\n\n## A. General information\n\n\n### 1. General running parameters\n\n')
     for dict_var in dictionary.dicts:
         funcs.print_log(file_log, f'• {dict_var[1]}: _{eval(dict_var[0])}_. ')
+    funcs.print_log(file_log, f'[:file_folder:Dataset file.]({station_dataset_file})\n') ####################
     funcs.print_log(file_log, f'\n\n\n### 2. Station info and location\n\n{df_station_info.to_markdown()}\n')
     funcs.print_log(file_log, f'Map location in: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url})<br>\n<img alt="R.GISPython" src="{fig_file0a}" width="500"></img>', center_div=True)
     funcs.print_log(file_log, f'\n### 3. Discrete values table and plot\n\n{df[[label_date, label_x]].transpose().to_markdown()}\n')
