@@ -65,23 +65,18 @@ df_l_pdist_scipy.index.name = 'id'
 
 
 # Initial dataset cleaning
-df_all = pd.read_csv(station_dataset_file, delimiter=',', parse_dates=True, dtype={label_station: 'str'})  # index_col=0
+df_all = pd.read_csv(station_dataset_file, delimiter=',', parse_dates=True)  # index_col=0
 if avoid_zeros:
     df_all = df_all[df_all[label_x] != 0]
 if avoid_nans:
     df_all = df_all.dropna(subset=[label_station, label_x, label_date])
-df_all_stats = df_all.groupby(label_station)[label_x].agg(['count', 'mean', 'std']).reset_index()
-print(df_all_stats.to_markdown())
-df_all_stats_join = pd.merge(df_all, df_all_stats, on=label_station, how='inner')
-df_all_stats_join['zscore'] = (df_all_stats_join[label_x]-df_all_stats_join['mean'])/df_all_stats_join['std']
-df_all = df_all_stats_join
-print(df_all.to_markdown())
 
 
 # Execution
-stations = df_all_stats[label_station].unique()
+stations = df_all[label_station].unique()
+#stations = df_all[label_station].value_counts()
 print(stations)
-data_types = {label_station_catalog: 'str', label_latitude: 'float64', label_longitude: 'float64'}
+data_types = {label_latitude: 'float64', label_longitude: 'float64'}
 df_catalog = pd.read_excel(station_catalog_file, sheet_name='CNE', parse_dates=True, dtype=data_types) # , dtype=data_types
 # print(df_catalog.dtypes)
 for station in stations:
@@ -112,7 +107,7 @@ for station in stations:
     funcs.print_log(file_log, f'[:file_folder:Dataset file.](../../{station_dataset_file})\n') ####################
     funcs.print_log(file_log, f'\n\n\n### 2. Station info and location\n\n{df_station_info.to_markdown()}\n')
     funcs.print_log(file_log, f'Map location in: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url})<br>\n<img alt="R.GISPython" src="{fig_file0a}" width="500"></img>', center_div=True)
-    funcs.print_log(file_log, f'\n### 3. Discrete values table and plot\n\n{df[[label_date, label_x, 'count', 'mean', 'std', 'zscore']].transpose().to_markdown()}\n')
+    funcs.print_log(file_log, f'\n### 3. Discrete values table and plot\n\n{df[[label_date, label_x]].transpose().to_markdown()}\n')
     funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file0, center_div=True)
 
     # Plot location map & Plot x values
