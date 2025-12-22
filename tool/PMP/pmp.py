@@ -201,6 +201,7 @@ for station in stations:
         fig_file3 = 'graph/' + station_code + '_' + emp + '_vs_estimatedpdf.png'
         fig_file4 = 'graph/' + station_code + '_extreme_values.png'
         fig_file5 = 'graph/' + station_code + '_extreme_values_bestfit.png'
+        fig_file6 = 'graph/' + station_code + '_extreme_values_riskrate.png'
         funcs.print_log(file_log, f'\n### {num_inc}. Empirical - {df_edf_dist_dict_filter['edf_name'].to_string(index=False, header=False)} ({df_edf_dist_dict_filter['edf_year'].to_string(index=False, header=False)})\n')
         funcs.print_log(file_log, f'\n{df_edf_dist_dict_filter['edf_desc'].to_string(index=False, header=False)}\n')
         funcs.print_log(file_log, f'\n${df_edf_dist_dict_filter['edf_expression'].to_string(index=False, header=False)}$\n', center_div=True)
@@ -331,7 +332,7 @@ for station in stations:
         plt.savefig(ouput_path + fig_file4, dpi=dpi)
         plt.close()
 
-        # Plot best fit values over return periods Tr (graph 5)
+        # Plot extreme values for specific return periods (Best fit) (graph 5)
         #plt.plot(df_tr['tr'], df_tr[best_of_best_p_dist], color=color_line_plot, lw=1.5, marker='o', markersize=3, label='%s (Δ: %f)' % (dp_best['p_dist'][0], dp_best['delta'][0]))
         plt.plot(df_tr['tr'], df_tr[best_of_best_p_dist], color=color_line_plot, lw=1.5, marker='o', markersize=3, label=best_of_best_p_dist)
         plt.title('Extreme values for specific return periods (Best fit)')
@@ -343,6 +344,19 @@ for station in stations:
         plt.annotate('github.com/rcfdtools', xy=(1.0275, 0.01), xycoords='axes fraction', ha='right', va='bottom', rotation='vertical', fontsize=7.5)
         if show_plot: plt.show()
         plt.savefig(ouput_path + fig_file5, dpi=dpi)
+        plt.close()
+
+        # Plot risk rate for specific return periods (graph 5)
+        plt.plot(df_tr['tr'], df_tr['risk_rate'], color=color_line_plot, lw=1.5, marker='o', markersize=3, label=best_of_best_p_dist)
+        plt.title('Risk rate values for specific return periods')
+        plt.xlabel('Tr ($years$)')
+        plt.ylabel('Risk rate')
+        plt.legend(loc='best', frameon=False)
+        plt.grid(color='gray', linestyle='--', linewidth=0.1)
+        plt.annotate('Station: %s' % (station_code), xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
+        plt.annotate('github.com/rcfdtools', xy=(1.0275, 0.01), xycoords='axes fraction', ha='right', va='bottom', rotation='vertical', fontsize=7.5)
+        if show_plot: plt.show()
+        plt.savefig(ouput_path + fig_file6, dpi=dpi)
         plt.close()
 
     # Best CDF fit & Estimate extreme values for specific return periods - Tr
@@ -358,7 +372,7 @@ for station in stations:
     funcs.print_log(file_log,'In hydrology, a return period (or recurrence interval) is the statistical average time between extreme events like floods or droughts of a specific magnitude, indicating how rare an event is, with a 100-year flood, for example, having a 1% chance of occurring in any given year, not that it happens exactly every century. It is a key tool for infrastructure design (like bridges or dams) and risk assessment, calculated from historical data to determine the probability of future events, although it is important to remember it is statistical average, and events can cluster or be missed.')
     funcs.print_log(file_log,'\n\n> risk_rate: assuming the return period as the project useful life.')
     funcs.print_log(file_log,f'\n\n{df_tr.to_markdown()}\n')
-    funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file4, center_div=True)
-    funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file5, center_div=True)
+    funcs.print_log(file_log, f'<img alt="R.GISPython" src="{fig_file4}" width="1200"></img>', center_div=True)
+    funcs.print_log(file_log, f'<img alt="R.GISPython" src="{fig_file5}" width="500"></img><img alt="R.GISPython" src="{fig_file6}" width="500"></img>', center_div=True)
     funcs.print_log(file_log, '\n<sub>**APP DISCLAIMER**: NO WARRANTY - This software is provided by [github.com/rcfdtools](https://github.com/rcfdtools) "as is", without any express or implied warranty, including warranties of merchantability, fitness for a particular purpose, or non-infringement. There is no guarantee that the software will be error-free or operate without interruption. LIMITATION OF LIABILITY - Neither the authors nor copyright holders will be liable for claims or damages arising from the software or its use. You are responsible for determining if the software is appropriate for your use and assume all associated risks, including errors, legal compliance, and data loss. NO PROFESSIONAL ADVICE - The software provides general information and does not offer professional advice. It should not replace consultation with professional advisors.</sub>')
     #print(df.to_csv(index=False))
