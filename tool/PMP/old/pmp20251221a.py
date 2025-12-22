@@ -12,7 +12,6 @@ from matplotlib.pyplot import figure
 import tabulate  # required for print tables in Markdown using pandas
 import numpy as np
 import pandas as pd
-pd.set_option('display.max_colwidth', None)
 from datetime import datetime
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
@@ -65,8 +64,6 @@ df_l_pdist_scipy = df_l_pdist_scipy.query('active == True')
 df_l_pdist_scipy = df_l_pdist_scipy.sort_values(by=['p_dist'], ascending=True)
 df_l_pdist_scipy = df_l_pdist_scipy.reset_index(drop=True)
 df_l_pdist_scipy.index.name = 'id'
-df_edf_dist_dict = pd.DataFrame(funcs.edf_dist_dict, columns=['edf_dist', 'edf_name', 'edf_expression', 'edf_year', 'edf_desc'])
-edf_dist = df_edf_dist_dict['edf_dist'].unique()
 
 
 # Initial dataset cleaning
@@ -119,7 +116,7 @@ for station in stations:
     funcs.print_log(file_log, f'\n\n\n## A. General information\n\n\n### 1. General running parameters\n\n')
     for dict_var in funcs.dicts:
         funcs.print_log(file_log, f'• {dict_var[1]}: _{eval(dict_var[0])}_. ')
-    funcs.print_log(file_log, f'[:file_folder:Dataset file.](../../{station_dataset_file})')
+    funcs.print_log(file_log, f'[:file_folder:Dataset file.](../../{station_dataset_file})') ####################
     funcs.print_log(file_log, f'\n\n\n### 2. Station info and location\n\n{df_station_info.to_markdown()}\n')
     funcs.print_log(file_log, f'Map location in: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url})<br>\n<img alt="R.GISPython" src="{fig_file0a}" width="500"></img>', center_div=True)
     funcs.print_log(file_log, f'\n### 3. Discrete values table and plot\n\n{df[[label_date, label_x, f'{label_x}_initial', 'count', 'mean', 'std', 'zscore']].transpose().to_markdown()}\n')
@@ -171,32 +168,29 @@ for station in stations:
     vDeltaKolmogorov = pd.DataFrame(columns=['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3'])
 
     # CDF calculations
-    dp_evaluated = 0 # cdf to eval
+    dp_evalated = 0 # cdf to eval
     if pdist_gumbel_on:
-        dp_evaluated += 1
+        dp_evalated += 1
     if pdist_loggumbel_on:
-        dp_evaluated += 1
+        dp_evalated += 1
     for i in range(0, len(df_l_pdist_scipy)):
         print('Processing CDF: %s...' % df_l_pdist_scipy['p_dist'][i])  # Only for console
-        dp_evaluated += 1
+        dp_evalated += 1
         funcs.pdist_scipy(df, df_l_pdist_scipy['p_dist'][i], df_l_pdist_scipy['n_parameter'][i], df_l_pdist_scipy['fit_method'][i], df_l_pdist_scipy['label'][i], x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     if pdist_gumbel_on: funcs.pdist_gumbel(df, x, ddof, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     if pdist_loggumbel_on: funcs.pdist_loggumbel(df, x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
-    funcs.print_log(file_log, '\n\n\n### Cumulative distribution values - CDF (%d evalated, ordered by x ascending) \n\n%s\n\n' %(dp_evaluated, df.to_markdown()))
+    funcs.print_log(file_log, '\n\n\n### Cumulative distribution values - CDF (%d evalated, ordered by x ascending) \n\n%s\n\n' %(dp_evalated, df.to_markdown()))
 
     # Evaluation for each empirical distribution function
     dp_best_of_best = pd.DataFrame()
     num_inc = 1
-    for emp in edf_dist:
-        df_edf_dist_dict_filter = df_edf_dist_dict[df_edf_dist_dict['edf_dist'] == emp]
+    for emp in funcs.edf_dist:
         fig_file1 = 'graph/' + station_code + '_' + emp + '_vs_all.png'
         fig_file2 = 'graph/' + station_code + '_' + emp + '_vs_bestfit.png'
         fig_file3 = 'graph/' + station_code + '_' + emp + '_vs_estimatedpdf.png'
         fig_file4 = 'graph/' + station_code + '_extreme_values.png'
         fig_file5 = 'graph/' + station_code + '_extreme_values_bestfit.png'
-        funcs.print_log(file_log, f'\n### {num_inc}. Empirical (year {df_edf_dist_dict_filter['edf_year'].to_string(index=False, header=False)}): {df_edf_dist_dict_filter['edf_name'].to_string(index=False, header=False)}\n')
-        funcs.print_log(file_log, f'\n{df_edf_dist_dict_filter['edf_desc'].to_string(index=False, header=False)}\n') #############################
-        funcs.print_log(file_log, f'\n${df_edf_dist_dict_filter['edf_expression'].to_string(index=False, header=False)}$\n') #############################
+        funcs.print_log(file_log, f'\n### {num_inc}. Empirical: {emp}\n')
 
         # Return periods & empirical values
         df_tr['empirical_dist'] = emp
