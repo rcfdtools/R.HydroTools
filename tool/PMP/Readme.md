@@ -10,6 +10,10 @@ PMP analysis using multiple probability distributions available in SciPy with pr
 
 > Latitude and longitude columns in CNE_IDEAM.xls has to be converted to numeric values replacing comma separator by point separator.
 
+|   |   |
+|---|---|
+|   |   |
+
 
 ### Probability distributions excluded for rain analysis
 
