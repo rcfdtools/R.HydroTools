@@ -116,8 +116,9 @@ for station in stations:
     apple_map_url = f'https://maps.apple.com/frame?center={point_latitude}%2C{point_longitude}&span=0.003%2C0.006'
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True)
     funcs.print_log(file_log, f'# Station ({parameter_name}): {station_code}' )
-    funcs.print_log(file_log, f'\n\nProbable Maximum Precipitation (PMP) is the greatest amount of rainfall for a specific duration that is meteorologically possible for a given location, acting as a "worst-case" scenario for extreme storms, crucial for designing safety-critical infrastructure like bridges, river deviations, dams, spillways, and nuclear plants to prevent catastrophic failure. PMP is calculated by hydrologists using meteorological data to determine the upper limit of extreme rainfall, often leading to the Probable Maximum Flood (PMF) for flood control design, and is increasingly being studied for climate change impacts.')
-    funcs.print_log(file_log, f'\n\n\n## A. General information\n\n\n### 1. General running parameters\n\n')
+    funcs.print_log(file_log, f'\n\nProbable Maximum Precipitation (PMP) is the greatest amount of rainfall for a specific duration that is meteorologically possible for a given location, acting as a "worst-case" scenario for extreme storms, crucial for designing safety-critical infrastructure like bridges, river deviations, dams, spillways, and nuclear plants to prevent catastrophic failure. PMP is calculated by hydrologists using meteorological data to determine the upper limit of extreme rainfall, often leading to the Probable Maximum Flood (PMF) for flood control design, and is increasingly being studied for climate change impacts.\n')
+    funcs.print_log(file_log, f'<img alt="R.GISPython" src="{fig_file0a}" width="500"></img>\n', center_div=True)
+    funcs.print_log(file_log, f'\n\n## A. General information\n\n\n### 1. General running parameters\n\n')
     for dict_var in funcs.dicts:
         funcs.print_log(file_log, f'• {dict_var[1]}: _{eval(dict_var[0])}_. ')
     funcs.print_log(file_log, f'[:file_folder:Dataset file.](../../{station_dataset_file})')
@@ -125,7 +126,6 @@ for station in stations:
     funcs.print_log(file_log, f'Map location in: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url})', center_div=True)
     geojson = '```geojson\n{\n  "type": "Feature",\n  "geometry": {\n    "type": "Point", \n    "coordinates": ['+str(point_longitude)+', '+str(point_latitude)+']\n  }, \n  "properties": {\n    "Name": "'+station+'"\n  }\n}\n```'
     funcs.print_log(file_log, f'{geojson}', center_div=True)
-    funcs.print_log(file_log, f'<img alt="R.GISPython" src="{fig_file0a}" width="500"></img>\n', center_div=True)
     funcs.print_log(file_log, f'\n### 3. Discrete values table and plot\n\n{df[[label_date, label_x, f'{label_x}_initial', 'count', 'mean', 'std', 'zscore']].transpose().to_markdown()}\n')
     funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file0, center_div=True)
     funcs.print_log(file_log, '> If Z-Score is active, values out of range or outliers are replaced with the station mean value.\n')
