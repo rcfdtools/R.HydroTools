@@ -4,7 +4,6 @@ from numpy.ma.core import minimum
 
 # General libraries
 import functions as funcs
-import dictionary as dictionary
 import warnings
 from pathlib import Path
 import matplotlib.pyplot as plt
@@ -115,7 +114,7 @@ for station in stations:
     funcs.print_log(file_log, f'# Station ({parameter_name}): {station_code}' )
     funcs.print_log(file_log, f'\n\nProbable Maximum Precipitation (PMP) is the greatest amount of rainfall for a specific duration that is meteorologically possible for a given location, acting as a "worst-case" scenario for extreme storms, crucial for designing safety-critical infrastructure like bridges, river deviations, dams, spillways, and nuclear plants to prevent catastrophic failure. PMP is calculated by hydrologists using meteorological data to determine the upper limit of extreme rainfall, often leading to the Probable Maximum Flood (PMF) for flood control design, and is increasingly being studied for climate change impacts.')
     funcs.print_log(file_log, f'\n\n\n## A. General information\n\n\n### 1. General running parameters\n\n')
-    for dict_var in dictionary.dicts:
+    for dict_var in funcs.dicts:
         funcs.print_log(file_log, f'• {dict_var[1]}: _{eval(dict_var[0])}_. ')
     funcs.print_log(file_log, f'[:file_folder:Dataset file.](../../{station_dataset_file})') ####################
     funcs.print_log(file_log, f'\n\n\n### 2. Station info and location\n\n{df_station_info.to_markdown()}\n')

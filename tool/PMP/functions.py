@@ -14,7 +14,25 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)
 
 
-# SciPy probability distributions libraries
+# General vars description
+dicts = ([['app_version', 'app_version'], # App control version
+          ['runtime', 'runtime'],
+          ['station_dataset_file', 'Stations dataset (station_dataset_file)'],
+          ['station_catalog_file', 'Stations catalog (station_catalog_file)'],
+          ['plot_only_fit', 'Plot only fit distributions with Δo > Δ (plot_only_fit)'],
+          ['low_extreme', 'Eval low extreme values, if False, evaluates high extreme values (low_extreme)'],
+          ['pdist_gumbel_on', 'Eval Gumbel distribution, non include in SciPy (pdist_loggumbel_on)'],
+          ['pdist_loggumbel_on', 'Eval Log-Gumbel distribution, non include in SciPy (pdist_loggumbel_on)'],
+          ['ddof', 'Standard deviation normalized (ddof)'],
+          ['tr', 'Return periods to eval in years (Tr)'],
+          ['minimum_sample', 'Minimum data sample per station, 0 means any (minimum_sample)'],
+          ['zscore', 'Z-Score threshold to adjust a value, 0 means disable (zscore)'],
+          ['avoid_zeros', 'Avoid zeros, e.g. rain = 0 (avoid_zeros)'],
+          ['avoid_nans', 'Avoid null values (avoid_nans)']
+         ])
+
+
+# Probability density function - PDF (from SciPy)
 # l_pdist_scipy requires: ([Distribution function, # parameters, fit method, label, active)]
 l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['gumbel_r', 2, 'MM', 'Gumbel Right Skew', True],
@@ -123,6 +141,51 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                  ])
 
 
+# Empirical distributions function - EDF
+# edf_dist_dict requires: ([EDF function, EDF name, expression, year, description)]
+edf_dist_dict = ([
+                  ['edf_california', 'EDF California', '$P=m/n$', '1923', 'California´s estimates the true probability distribution of water-related data (like rainfall, streamflow) using observed samples, crucial for risk assessment.'],
+                  ['edf_hazen', 'EDF Hazen', '$P=(m-0.5)/n$', '1930', 'Hazen method for plotting positions is a formula used to estimate the empirical cumulative probability distribution of flood events or other hydrological data. This formula often results in biased estimations, particularly when extrapolating to extreme events (high return periods).'],
+                  ['edf_weibull', 'EDF Weibull', '$P=m/(n+1)$', '1939', 'Weibull plotting position formula is an empirical method used to estimate the non-exceedance probability or plotting position for a set of observed data, is often recommended or widely used in practice, particularly in flood frequency analysis.'],
+                  ['edf_beard', 'EDF Beard', '$P=(m-0.31)/(n+0.38)$', '1943', 'The Beard formula (or Beard´s plotting position formula) in hydrology is used to estimate the empirical non-exceedance probability $(P)$ of a flood event (or other extreme hydrological data point) within a given dataset.'],
+                  ['edf_chegodayev', 'EDF Chegodayev', '$P=(m-b)/(n+1-2b)$', '1955', 'The Chegodayev formula is an empirical plotting position formula used in hydrological frequency analysis to estimate the exceedance probability or return period of a specific event from a set of observed data. It is primarily used for plotting observed data points on probability paper to fit a theoretical distribution, particularly for analyzing extreme events like maximum flood flows or rainfall intensities. The constant $b$ value in the generalized plotting position formula is 0.3.'],
+                  ['edf_blom', 'EDF Blom', '$P=(m-a)/(n+1-2a)$', '1958', 'The Blom formula is a specific "plotting position" formula used in hydrology and statistical analysis to estimate the empirical cumulative probability (or non-exceedance probability) of a data series. It is particularly recommended for data that are approximately normally distributed. The constant $a$ is set to 0.375 (or 3/8).'],
+                  ['edf_tukey', 'EDF Tukey', '$P=(m-c)/(n+1-2c)$', '1962', 'In hydrology, the Tukey formula is used as a plotting position formula to estimate the empirical probability or frequency of a flood event (or other hydrological data). The formula parameter is given as $c=0.333$ (or 1/3).'],
+                  ['edf_gringorten', 'EDF Gringorten', '$P=(m-a)/(n+1-2a)$', '1963', 'Gringorten plotting position formula is essential for estimating the probability and return periods of extreme events like floods and heavy rainfall. The constant $a=0.44$.'],
+                  ['edf_jenkinson', 'EDF Jenkinson', '$P=(m-a)/(n+b)$', '1977', 'The Jenkinson formula in hydrology is an empirical plotting position formula used to estimate the non-exceedance probability $(P)$ or return period $(T)$ of a given ordered observation within a sample. It is a widely used method in the frequency analysis of extreme events such as floods and rainfall, as it provides a distribution-free way to plot data. $a≈0.31$ and $b≈0.38$ are constants derived to approximate the median of the probability distribution for the given rank.'],
+                  ['edf_cunnane', 'EDF Cunnane', '$P=(m-b)/(n+1-2b)$', '1978', 'Cunnane´s work in statistical hydrology has focused on the performance and evaluation of different probability distributions (such as GEV, Gumbel, Lognormal) for flood frequency estimation. $b$ is a constant, typically set to 0.4.'],
+                  ['edf_adamowski', 'EDF Adamowski', '$P=(m-0.25)/(n+0.5)$', '1981', 'The Adamowski formula in hydrology refers to a specific plotting position formula used for estimating the non-parametric empirical distribution of hydrological events (like flood peaks) to calculate their return periods. This formula provides an alternative to traditional parametric methods (like the Gumbel or Log Pearson Type III distributions). ']
+                 ])
+edf_dist = ['edf_california', 'edf_hazen', 'edf_weibull', 'edf_beard', 'edf_chegodayev', 'edf_blom', 'edf_tukey', 'edf_gringorten', 'edf_jenkinson', 'edf_cunnane', 'edf_adamowski']
+def pdist_empirical(dfx, edf, x):
+    dfx['empirical_dist'] = edf
+    if edf == 'edf_california':  # Year 1923
+        dfx['empirical'] = dfx['m'] / len(dfx[x])
+    elif edf == 'edf_hazen':  # Year 1930
+        dfx['empirical'] = (dfx['m']-0.5) / len(dfx[x])
+    elif edf == 'edf_weibull':  # Year 1939
+        dfx['empirical'] = dfx['m'] / (len(dfx[x]) + 1)
+    elif edf == 'edf_beard':  # Year 1943
+        dfx['empirical'] = (dfx['m']-0.31) / (len(dfx[x])+0.38)
+    elif edf == 'edf_chegodayev':  # Year 1955
+        dfx['empirical'] = (dfx['m']-0.3) / (len(dfx[x])+0.4)
+    elif edf == 'edf_blom':  # Year 1958
+        dfx['empirical'] = (dfx['m']-0.375) / (len(dfx[x]) + 0.25)
+    elif edf == 'edf_tukey':  # Year 1962
+        dfx['empirical'] = (3*dfx['m']-1) / (3*len(dfx[x]) + 1)
+    elif edf == 'edf_gringorten':  # Year 1963
+        dfx['empirical'] = (dfx['m']-0.44) / (len(dfx[x]) + 0.12)
+    elif edf == 'edf_jenkinson':  # Year 1977
+        dfx['empirical'] = (dfx['m']-0.31) / (len(dfx[x]) + 0.38)
+    elif edf == 'edf_cunnane':  # Year 1978
+        dfx['empirical'] = (dfx['m']-0.4) / (len(dfx[x]) + 0.2)
+    elif edf == 'edf_adamowski':  # Year 1981
+        dfx['empirical'] = (dfx['m']-0.25) / (len(dfx[x]) + 0.5)
+    else:
+        dfx['empirical'] = dfx['m'] / len(dfx[x])  # California
+    dfx['empirical_tr'] = 1 / (1-dfx['empirical'])
+
+
 # Fitting test Kolmogorov
 def fTestKolmogorov(dfx, p_dist, idk, emp, vDeltaKolmogorov):  # Kolmogorov-Smirnov fit test
     print('Processing Kolmogorov for: %s...' % p_dist)
@@ -146,37 +209,6 @@ def fTestKolmogorov(dfx, p_dist, idk, emp, vDeltaKolmogorov):  # Kolmogorov-Smir
     vDeltaKolmogorov['deltao'][idk] = deltao
     vDeltaKolmogorov['eval'][idk] = 'Δo %s Δ' % operator
     vDeltaKolmogorov['fit'][idk] = fit
-
-
-# Empirical distributions function
-edf_dist = ['edf_california', 'edf_hazen', 'edf_weibull', 'edf_beard', 'edf_chegodayev', 'edf_blom', 'edf_tukey', 'edf_gringorten', 'edf_jenkinson', 'edf_cunnane', 'edf_adamowski']
-def pdist_empirical(dfx, emp, x):
-    dfx['empirical_dist'] = emp
-    if emp == 'edf_california':  # 1923
-        dfx['empirical'] = dfx['m'] / len(dfx[x])
-    elif emp == 'edf_hazen':  # Year 1930
-        dfx['empirical'] = (dfx['m']-0.5) / len(dfx[x])
-    elif emp == 'edf_weibull':  # Year 1939
-        dfx['empirical'] = dfx['m'] / (len(dfx[x]) + 1)
-    elif emp == 'edf_beard':  # Year 1943
-        dfx['empirical'] = (dfx['m']-0.31) / (len(dfx[x])+0.38)
-    elif emp == 'edf_chegodayev':  # Year 1955
-        dfx['empirical'] = (dfx['m']-0.3) / (len(dfx[x])+0.4)
-    elif emp == 'edf_blom':  # Year 1958
-        dfx['empirical'] = (dfx['m']-0.375) / (len(dfx[x]) + 0.25)
-    elif emp == 'edf_tukey':  # Year 1962
-        dfx['empirical'] = (3*dfx['m']-1) / (3*len(dfx[x]) + 1)
-    elif emp == 'edf_gringorten':  # Year 1963
-        dfx['empirical'] = (dfx['m']-0.44) / (len(dfx[x]) + 0.12)
-    elif emp == 'edf_jenkinson':  # Year 1977
-        dfx['empirical'] = (dfx['m']-0.31) / (len(dfx[x]) + 0.38)
-    elif emp == 'edf_cunnane':  # Year 1978
-        dfx['empirical'] = (dfx['m']-0.4) / (len(dfx[x]) + 0.2)
-    elif emp == 'edf_adamowski':  # Year 1981
-        dfx['empirical'] = (dfx['m']-0.25) / (len(dfx[x]) + 0.5)
-    else:
-        dfx['empirical'] = dfx['m'] / len(dfx[x])  # California
-    dfx['empirical_tr'] = 1 / (1-dfx['empirical'])
 
 
 # Gumbel distribution Yn parameter calculation
