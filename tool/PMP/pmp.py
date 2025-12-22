@@ -33,7 +33,7 @@ label_date = 'Date'  # Date column name from .csv station file
 label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
-create_plot = True  # Creates and save plots into files
+create_plot = False  # Creates and save plots into files
 show_plot = False  # Show plot on Python screen console
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
 color_line_plot = 'black' # green
@@ -61,6 +61,7 @@ df_tr['prob_l'] = 1-1/df_tr.tr  # P≤, Probability less than, for high extreme 
 df_tr['prob_g'] = 1/df_tr.tr  # P≥, Probability greater than, for low extreme values
 df_l_pdist_scipy = pd.DataFrame(funcs.l_pdist_scipy, columns=['p_dist', 'n_parameter', 'fit_method', 'label', 'active'])
 df_l_pdist_scipy['ref'] = '[:mortar_board:](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.'+df_l_pdist_scipy.p_dist+'.html)'
+df_l_pdist_scipy_inactive = df_l_pdist_scipy.query('active == False')
 df_l_pdist_scipy = df_l_pdist_scipy.query('active == True')
 df_l_pdist_scipy = df_l_pdist_scipy.sort_values(by=['p_dist'], ascending=True)
 df_l_pdist_scipy = df_l_pdist_scipy.reset_index(drop=True)
@@ -76,21 +77,21 @@ if avoid_zeros:
 if avoid_nans:
     df_all = df_all.dropna(subset=[label_station, label_x, label_date])
 df_all_stats = df_all.groupby(label_station)[label_x].agg(['count', 'mean', 'std']).reset_index()
-print(df_all_stats.to_markdown())
+#print(df_all_stats.to_markdown())
 df_all_stats_join = pd.merge(df_all, df_all_stats, on=label_station, how='inner')
 df_all_stats_join['zscore'] = (df_all_stats_join[label_x]-df_all_stats_join['mean'])/df_all_stats_join['std']
 df_all = df_all_stats_join
 df_all[f'{label_x}_initial'] = df_all_stats_join[label_x]
 if zscore > 0:
     df_all[label_x] = np.where(abs(df_all['zscore']) > zscore, df_all['mean'], df_all[label_x])
-print(df_all.to_markdown())
+#print(df_all.to_markdown())
 if minimum_sample > 0:
     df_all = df_all[df_all['count'] >= minimum_sample]
 
 
 # Execution
 stations = df_all[label_station].unique()
-print(stations)
+print(f'Stations in dataset: {stations}\n')
 data_types = {label_station_catalog: 'str', label_latitude: 'float64', label_longitude: 'float64'}
 df_catalog = pd.read_excel(station_catalog_file, sheet_name='CNE', parse_dates=True, dtype=data_types) # , dtype=data_types
 # print(df_catalog.dtypes)
@@ -165,6 +166,9 @@ for station in stations:
     funcs.print_log(file_log, '\n\n[scipy.stats](https://docs.scipy.org/doc/scipy/reference/stats.html) is a Python´s powerful submodule within the SciPy library for comprehensive statistical analysis, offering over 130 probability distributions (like Normal, Poisson), functions for descriptive stats (mean, variance), hypothesis testing (t-tests, chi-square), random variable generation, and statistical tests, making it essential for data science, modeling, and research. It provides tools to explore, model, and draw conclusions from data efficiently, working seamlessly with NumPy.')
     funcs.print_log(file_log, f'\n\n{df_l_pdist_scipy.query('active == True').to_markdown()}')
     funcs.print_log(file_log, '\n\n> Gumbel and Lob-Gumbel probability distributions are not shown in the above table.  \n> n_parameter = # arguments & localization & scale.  \n> Fit methods: (MLE) maximum likelihood, (MM) L-moments.')
+    funcs.print_log(file_log, (f'  \n> Inactives: '))
+    for inactives in df_l_pdist_scipy_inactive['p_dist'].values:
+        funcs.print_log(file_log, (f'{inactives}, '))
     funcs.print_log(file_log, '\n\n\n## B. Probability distributions vs. Empirical distributions')
     funcs.print_log(file_log, '\n\nA continuous probability distribution describes probabilities for variables that can take any value within a range (like rain any time), unlike discrete variables with specific outcomes (like temperature). It uses a Probability Density Function (PDF), a curve where the total area under it equals 1, and the probability of the variable falling within an interval (a to b) is found by calculating the area under the curve between those points. A key feature is that the probability of hitting any single exact value is zero, so probabilities are always expressed for ranges, e.g., $P(a ≤ X ≤ b)$.')
     vDeltaKolmogorov = pd.DataFrame(columns=['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3'])
