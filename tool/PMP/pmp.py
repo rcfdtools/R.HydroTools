@@ -123,9 +123,9 @@ for station in stations:
     funcs.print_log(file_log, f'[:file_folder:Dataset file.](../../{station_dataset_file})')
     funcs.print_log(file_log, f'\n\n\n### 2. Station info and location\n\n{df_station_info.to_markdown()}\n')
     funcs.print_log(file_log, f'Map location in: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url})', center_div=True)
-    geojson = '```geojson<br>{<br>  "type": "Feature",<br>  "geometry": {<br>    "type": "Point", <br>    "coordinates": ['+str(point_longitude)+', '+str(point_latitude)+']<br>  }, <br>  "properties": {<br>    "Name": "'+station+'"<br>  }<br>}<br>```'
+    geojson = '```geojson\n{\n  "type": "Feature",\n  "geometry": {\n    "type": "Point", \n    "coordinates": ['+str(point_longitude)+', '+str(point_latitude)+']\n  }, \n  "properties": {\n    "Name": "'+station+'"\n  }\n}\n```'
     funcs.print_log(file_log, f'{geojson}', center_div=True)
-    funcs.print_log(file_log, f'\n<img alt="R.GISPython" src="{fig_file0a}" width="500"></img>\n', center_div=True)
+    funcs.print_log(file_log, f'<img alt="R.GISPython" src="{fig_file0a}" width="500"></img>\n', center_div=True)
     funcs.print_log(file_log, f'\n### 3. Discrete values table and plot\n\n{df[[label_date, label_x, f'{label_x}_initial', 'count', 'mean', 'std', 'zscore']].transpose().to_markdown()}\n')
     funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file0, center_div=True)
     funcs.print_log(file_log, '> If Z-Score is active, values out of range or outliers are replaced with the station mean value.\n')
