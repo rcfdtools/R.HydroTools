@@ -156,7 +156,6 @@ edf_dist_dict = ([
                   ['edf_cunnane', 'EDF Cunnane', 'P=(m-b)/(n+1-2b)', '1978', 'Cunnane´s work in statistical hydrology has focused on the performance and evaluation of different probability distributions (such as GEV, Gumbel, Lognormal) for flood frequency estimation. _b_ is a constant, typically set to 0.4.'],
                   ['edf_adamowski', 'EDF Adamowski', 'P=(m-0.25)/(n+0.5)', '1981', 'The Adamowski formula in hydrology refers to a specific plotting position formula used for estimating the non-parametric empirical distribution of hydrological events (like flood peaks) to calculate their return periods. This formula provides an alternative to traditional parametric methods (like the Gumbel or Log Pearson Type III distributions). ']
                  ])
-#edf_dist = ['edf_california', 'edf_hazen', 'edf_weibull', 'edf_beard', 'edf_chegodayev', 'edf_blom', 'edf_tukey', 'edf_gringorten', 'edf_jenkinson', 'edf_cunnane', 'edf_adamowski']
 def pdist_empirical(dfx, edf, x):
     dfx['empirical_dist'] = edf
     if edf == 'edf_california':  # Year 1923
@@ -353,18 +352,18 @@ def location_map(point_latitude, point_longitude, station):
     point_location = Point(point_longitude, point_latitude)
     point_gdf = gpd.GeoDataFrame(geometry=[point_location], crs=shapefile_location.crs)
     fig, ax = plt.subplots(figsize=(6, 7))  # Adjust figure size as needed
-    shapefile_location.plot(ax=ax, color='lightgrey', edgecolor='black')
-    point_gdf.plot(ax=ax, color='orange', marker='o', markersize=50)  # 'marker' and 'markersize' customize the point
+    shapefile_location.plot(ax=ax, color='lightgrey', edgecolor='black', linewidth=0.75)
+    point_gdf.plot(ax=ax, marker='o', color='black', markersize=40)  # color='black', 'marker' and 'markersize' customize the point
     ax.set_title("Station location")
     plt.xlabel("Longitude°")
     plt.ylabel("Latitude°")
     ax.annotate(
         text= station,
         xy=(point_longitude, point_latitude),
-        xytext=(5, 5),  # Offset the text slightly (e.g., 5 points right, 5 points up)
+        xytext=(6, 6),  # Offset the text slightly (e.g., 5 points right, 5 points up)
         textcoords="offset points",
-        fontsize=10,
-        color='orange',
-        bbox=dict(facecolor='black', alpha=0.9, pad=1)
+        fontsize=9,
+        color='white',
+        bbox=dict(boxstyle='round', facecolor='black', alpha=0.9, pad=0.25)
     )
     return plt
