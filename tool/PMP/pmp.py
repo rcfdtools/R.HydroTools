@@ -24,7 +24,7 @@ app_version = 'v20251220'
 input_path = 'dataset/pmax24h_in/'  # Your local input file folder
 ouput_path = 'dataset/pmax24h_out/'  # Your local output file folder
 station_catalog_file = 'dataset/CNE_IDEAM.xls' # CNE catalog for stations info
-station_dataset_file = input_path + 'conventional.csv' # Stations dataset
+station_dataset_file = input_path + 'conventional_1959_2009.csv' # Stations dataset
 parameter_name = 'rain, Pmax24h'  # rain, flow
 parameter_units = '($mm/d$)'  # ($mm/d$), ($m^3/s$)
 label_station = 'Station' # Station column name to eval from .csv station dataset file
@@ -46,8 +46,8 @@ if not show_warnings: warnings.filterwarnings('ignore')
 plot_legend_ncol = 2  # Columns on plot legend, '' for autofit
 ddof = 1.00  # Standard deviation normalized
 runtime = datetime.now()
-minimum_sample = 10 # Exclude a station when doesn't have the minimum data sample (0 means any)
-zscore = 3 # Z-Score threshold to adjust a value, 0 means disable
+minimum_sample = 5 # Exclude a station when doesn't have the minimum data sample (0 means any)
+zscore = 3.5 # Z-Score threshold to adjust a value, 0 means disable
 avoid_zeros = True # Exclude dataframe zeros, e.g. rain = 0
 avoid_nans = True # Exclude null values
 

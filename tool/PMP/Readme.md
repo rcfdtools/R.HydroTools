@@ -10,17 +10,14 @@ PMP analysis using multiple probability distributions available in SciPy with pr
 
 > Latitude and longitude columns in CNE_IDEAM.xls has to be converted to numeric values replacing comma separator by point separator.
 
-|   |   |
-|---|---|
-|   |   |
-
 
 ### Probability distributions excluded for rain analysis
 
-When the annual values contain zeros, the following distributions has to be avoided.
+When the annual values contain zeros o few recors, the following distributions has to be avoided.
 
 * powerlognorm
 * powernorm
+* geninvgauss: doesn't converge with low values or at least 10 records
 
 
 High over extreme values
@@ -134,7 +131,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['gausshyper', 6, 'MLE', 'Gauss hypergeometric', False],
                   ['genhalflogistic', 3, 'MLE', 'Generalized half-logistic', False],
                   ['genhyperbolic', 5, 'MLE', 'Generalized hyperbolic', False],
-                  ['geninvgauss', 4, 'MLE', 'Generalized Inverse Gaussian', True],
+                  ['geninvgauss', 4, 'MLE', 'Generalized Inverse Gaussian', False],
                   ['gibrat', 2, 'MM', 'Gibrat', True],
                   ['gompertz', 3, 'MLE', 'Gompertz (or truncated Gumbel)', True],
                   ['halflogistic', 2, 'MM', 'Half-logistic', True],
