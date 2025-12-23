@@ -24,7 +24,7 @@ app_version = 'v20251220'
 input_path = 'dataset/pmax24h_in/'  # Your local input file folder
 ouput_path = 'dataset/pmax24h_out/'  # Your local output file folder
 station_catalog_file = 'dataset/CNE_IDEAM.xls' # CNE catalog for stations info
-station_dataset_file = input_path + 'conventional_1959_2009.csv' # Stations dataset
+station_dataset_file = input_path + 'conventional_cesarcolombia_1959_2015.csv' # Stations dataset
 parameter_name = 'rain, Pmax24h'  # rain, flow
 parameter_units = '($mm/d$)'  # ($mm/d$), ($m^3/s$)
 label_station = 'Station' # Station column name to eval from .csv station dataset file
@@ -41,7 +41,7 @@ dpi = 96  # Graph plot resolution
 show_warnings = False  # Show warnings on screen
 low_extreme = False  # Eval low extreme values, if False, evaluates high extreme values
 pdist_gumbel_on = True  # Eval the Gumbel distribution (non include in SciPy)
-pdist_loggumbel_on = True  # Eval the Log-Gumbel distribution (non include in SciPy)
+pdist_loggumbel_on = False  # Eval the Log-Gumbel distribution (non include in SciPy)
 if not show_warnings: warnings.filterwarnings('ignore')
 plot_legend_ncol = 2  # Columns on plot legend, '' for autofit
 ddof = 1.00  # Standard deviation normalized
