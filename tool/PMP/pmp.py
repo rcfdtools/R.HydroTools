@@ -33,7 +33,7 @@ label_date = 'Date'  # Date column name from .csv station file
 label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
-create_plot = False  # Creates and save plots into files
+create_plot = True  # Creates and save plots into files
 show_plot = False  # Show plot on Python screen console
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
 color_line_plot = 'black' # green
@@ -97,8 +97,8 @@ df_catalog = pd.read_excel(station_catalog_file, sheet_name='CNE', parse_dates=T
 # print(df_catalog.dtypes)
 for station in stations:
     station_code = str(station)
-    fig_file0 = 'graph/' + station_code + '_data_serie.png'
-    fig_file0a = 'graph/' + station_code + '_location_map.png'
+    fig_file0 = 'graph/' + station_code + '_dataserie.png'
+    fig_file0a = 'graph/' + station_code + '_locationmap.png'
     file_log_name = f'{ouput_path}{station_code}.md'  # Markdown file log
     file_log = open(file_log_name, 'w+', encoding='utf-8')   # w+ create the file if it doesn't exist
     df = df_all[df_all[label_station] == station]
@@ -195,13 +195,13 @@ for station in stations:
     num_inc = 1
     funcs.print_log(file_log, f'An Empirical Distribution Function (EDF) is a step-function estimate of a true cumulative distribution function (CDF) based on observed sample data, representing the proportion of data points less than or equal to a given value. It is calculated by ordering your data and jumping up by $1/n$ (where $n$ is sample size) at each unique data point, allowing analysis without assuming an underlying population distribution, and it gets closer to the true CDF as the sample size grows.\n\n')
     for emp in edf_dist:
+        fig_file1 = 'graph/' + station_code + '_' + emp + '_all.png'
+        fig_file2 = 'graph/' + station_code + '_' + emp + '_bestfit.png'
+        fig_file3 = 'graph/' + station_code + '_' + emp + '_estimatedpdf.png'
+        fig_file4 = 'graph/' + station_code + '_extremevalues.png'
+        fig_file5 = 'graph/' + station_code + '_extremevalues_bestfit.png'
+        fig_file6 = 'graph/' + station_code + '_extremevalues_riskrate.png'
         df_edf_dist_dict_filter = df_edf_dist_dict[df_edf_dist_dict['edf_dist'] == emp]
-        fig_file1 = 'graph/' + station_code + '_' + emp + '_vs_all.png'
-        fig_file2 = 'graph/' + station_code + '_' + emp + '_vs_bestfit.png'
-        fig_file3 = 'graph/' + station_code + '_' + emp + '_vs_estimatedpdf.png'
-        fig_file4 = 'graph/' + station_code + '_extreme_values.png'
-        fig_file5 = 'graph/' + station_code + '_extreme_values_bestfit.png'
-        fig_file6 = 'graph/' + station_code + '_extreme_values_riskrate.png'
         funcs.print_log(file_log, f'\n### {num_inc}. Empirical - {df_edf_dist_dict_filter['edf_name'].to_string(index=False, header=False)} ({df_edf_dist_dict_filter['edf_year'].to_string(index=False, header=False)})\n')
         funcs.print_log(file_log, f'\n{df_edf_dist_dict_filter['edf_desc'].to_string(index=False, header=False)}\n')
         funcs.print_log(file_log, f'\n${df_edf_dist_dict_filter['edf_expression'].to_string(index=False, header=False)}$\n', center_div=True)
