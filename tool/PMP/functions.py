@@ -362,7 +362,7 @@ def location_map(point_latitude, point_longitude, station):
         xy=(point_longitude, point_latitude),
         xytext=(6, 6),  # Offset the text slightly (e.g., 5 points right, 5 points up)
         textcoords="offset points",
-        fontsize=9,
+        fontsize=10,
         color='white',
         bbox=dict(boxstyle='round', facecolor='black', alpha=0.9, pad=0.25)
     )
