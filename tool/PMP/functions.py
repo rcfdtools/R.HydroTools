@@ -224,7 +224,7 @@ def pdist_scipy_log(dfx, p_dist, n_parameter, fit_method, p_dist_tag, x, low_ext
             x_extreme = frozen_dist.ppf(1 / df_tr.tr)
         else:
             x_extreme = frozen_dist.ppf(1 - 1 / df_tr.tr)
-        df_tr[p_dist] = np.exp(x_extreme)
+        df_tr[f'log{p_dist}'] = np.exp(x_extreme)
     elif n_parameter == 3:
         shape, loc, scale = eval('stats.'+p_dist).fit(np.log(dfx[x]), method=fit_method)
         dfx[f'log{p_dist}'] = eval('stats.'+p_dist).cdf(np.log(dfx[x]), shape, loc, scale)  # Cumulative distribution function
@@ -234,7 +234,7 @@ def pdist_scipy_log(dfx, p_dist, n_parameter, fit_method, p_dist_tag, x, low_ext
             x_extreme = frozen_dist.ppf(1 / df_tr.tr)
         else:
             x_extreme = frozen_dist.ppf(1 - 1 / df_tr.tr)
-        df_tr[p_dist] = x_extreme
+        df_tr[f'log{p_dist}'] = np.exp(x_extreme)
     elif n_parameter == 4:
         shape, shape1, loc, scale = eval('stats.'+p_dist).fit(np.log(dfx[x]), method=fit_method)
         dfx[f'log{p_dist}'] = eval('stats.'+p_dist).cdf(np.log(dfx[x]), shape, shape1, loc, scale)  # Cumulative distribution function
@@ -244,7 +244,7 @@ def pdist_scipy_log(dfx, p_dist, n_parameter, fit_method, p_dist_tag, x, low_ext
             x_extreme = frozen_dist.ppf(1 / df_tr.tr)
         else:
             x_extreme = frozen_dist.ppf(1 - 1 / df_tr.tr)
-        df_tr[p_dist] = x_extreme
+        df_tr[f'log{p_dist}'] = np.exp(x_extreme)
     elif n_parameter == 5:
         shape, shape1, shape2, loc, scale = eval('stats.'+p_dist).fit(np.log(dfx[x]), method=fit_method)
         dfx[f'log{p_dist}'] = eval('stats.'+p_dist).cdf(np.log(dfx[x]), shape, shape1, shape2, loc, scale)  # Cumulative distribution function
@@ -254,7 +254,7 @@ def pdist_scipy_log(dfx, p_dist, n_parameter, fit_method, p_dist_tag, x, low_ext
             x_extreme = frozen_dist.ppf(1 / df_tr.tr)
         else:
             x_extreme = frozen_dist.ppf(1 - 1 / df_tr.tr)
-        df_tr[p_dist] = x_extreme
+        df_tr[f'log{p_dist}'] = np.exp(x_extreme)
     elif n_parameter == 6:
         shape, shape1, shape2, shape3, loc, scale = eval('stats.'+p_dist).fit(np.log(dfx[x]), method=fit_method)
         dfx[f'log{p_dist}'] = eval('stats.'+p_dist).cdf(np.log(dfx[x]), shape, shape1, shape2, shape3, loc, scale)  # Cumulative distribution function
@@ -263,7 +263,7 @@ def pdist_scipy_log(dfx, p_dist, n_parameter, fit_method, p_dist_tag, x, low_ext
             x_extreme = frozen_dist.ppf(1 / df_tr.tr)
         else:
             x_extreme = frozen_dist.ppf(1 - 1 / df_tr.tr)
-        df_tr[p_dist] = x_extreme
+        df_tr[f'log{p_dist}'] = np.exp(x_extreme)
     else:
         print('%s\n* Error: check the # parameters entered...')
     dfx[f'log{p_dist}_pdf'] =  frozen_dist.pdf(np.log(dfx.x))
