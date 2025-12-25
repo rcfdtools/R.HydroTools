@@ -391,8 +391,9 @@ for station in stations:
     df_tr.index.name = 'id'
     dp_best_of_best.to_csv(f'{ouput_path}table/bestfit_{station_code}.csv', index=False)
     df_tr.to_csv(f'{ouput_path}table/extreme_{station_code}.csv', index=False)
-    funcs.print_log(file_log,f'\n### 1. Best fit (ordered by delta Δ)\n\n{dp_best_of_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown()}')
-    funcs.print_log(file_log, f'\n\n:file_folder:Tables: [bestfit_{station_code}.csv](table/bestfit_{station_code}.csv) | [extreme_{station_code}.csv](table/extreme_{station_code}.csv)')
+    funcs.print_log(file_log,f'\n### 1. Best fit (ordered by delta Δ)\n')
+    funcs.print_log(file_log,f'{dp_best_of_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown()}', center_div=True)
+    funcs.print_log(file_log, f':file_folder:Tables: [bestfit_{station_code}.csv](table/bestfit_{station_code}.csv) | [extreme_{station_code}.csv](table/extreme_{station_code}.csv)')
     funcs.print_log(file_log,f'\n\n\n### 2. Extreme values\n\n')
     funcs.print_log(file_log,'In hydrology, a return period (or recurrence interval) is the statistical average time between extreme events like floods or droughts of a specific magnitude, indicating how rare an event is, with a 100-year flood, for example, having a 1% chance of occurring in any given year, not that it happens exactly every century. It is a key tool for infrastructure design (like bridges or dams) and risk assessment, calculated from historical data to determine the probability of future events, although it is important to remember it is statistical average, and events can cluster or be missed.')
     funcs.print_log(file_log,'\n\n> risk_rate: assuming the return period as the project useful life.')
