@@ -33,7 +33,7 @@ label_date = 'Date'  # Date column name from .csv station file
 label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
-create_plot = True  # Creates and save plots into files
+create_plot = False  # Creates and save plots into files
 show_plot = False  # Show plot on Python screen console
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
 color_line_plot = 'black' # green
@@ -193,8 +193,11 @@ for station in stations:
             print('Processing LogCDF: %s...' % df_l_pdist_scipy['p_dist'][i])  # Only for console
             dp_evaluated += 1
             funcs.pdist_scipy_log(df, df_l_pdist_scipy['p_dist'][i], df_l_pdist_scipy['n_parameter'][i], df_l_pdist_scipy['fit_method'][i], df_l_pdist_scipy['label'][i], x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
-    funcs.print_log(file_log, f'\n\nDistributions parameters\n\n{vDeltaKolmogorov[['station', 'p_dist', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3']].to_markdown()}')
-    #print(f'\n\nInitial vDeltaKolmogorov: {station}\n{vDeltaKolmogorov.to_markdown()}')
+    funcs.print_log(file_log, f'\n\n**Distributions parameters**')
+    funcs.print_log(file_log, f'\n\n> **loc** (Location Parameter): This shifts the distribution along the x-axis. For many common distributions, like the normal (Gaussian) distribution, loc represents the mean $μ$. For others, like the uniform distribution, it might represent the minimum value, or for the beta distribution, the left end of the support interval.')
+    funcs.print_log(file_log, f'\n\n> **scale** (Scale Parameter): This determines the width or spread of the distribution. For the normal distribution, scale represents the standard deviation $σ$. For a uniform distribution, it defines the length of the interval (from $loc$ to $loc + scale$).')
+    funcs.print_log(file_log, f'\n\n{vDeltaKolmogorov[['station', 'p_dist', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3']].to_markdown()}')
+    #print(f'\n\n**Distributions parameters**\n{vDeltaKolmogorov.to_markdown()}')
     if pdist_gumbel_on: funcs.pdist_gumbel(df, x, ddof, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     if pdist_loggumbel_on: funcs.pdist_loggumbel(df, x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     funcs.print_log(file_log, f'\n\n\n### 0. Cumulative distribution values - CDF ({dp_evaluated} evalated, ordered by x ascending) \n\n{df.to_markdown()}\n\n')
