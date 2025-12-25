@@ -323,6 +323,7 @@ def fTestKolmogorov(dfx, p_dist, idk, emp, vDeltaKolmogorov):  # Kolmogorov-Smir
     dfp['dfp'] = abs(dfx['empirical']-dfx[p_dist])
     dfp = dfp.sort_values(by='dfp', ascending=[False])
     dfp = dfp.reset_index(drop=True)
+    print(f'\n\nDataset dfp for Kolmogorov:\n{dfp.to_markdown()}')  ################ <<<<<<<<<<<<<<<<<<<<<<<< Check
     n = len(dfp)
     if (n < 35):
         deltao = 0.000003848186*n**4-0.00033109622*n**3+0.010220554*n**2-0.141035449935*n+1.07518805168
@@ -339,7 +340,7 @@ def fTestKolmogorov(dfx, p_dist, idk, emp, vDeltaKolmogorov):  # Kolmogorov-Smir
     vDeltaKolmogorov['deltao'][idk] = deltao
     vDeltaKolmogorov['eval'][idk] = 'Δo %s Δ' % operator
     vDeltaKolmogorov['fit'][idk] = fit
-    print(f'\n\nvDeltaKolmogorov:\n{vDeltaKolmogorov.to_markdown()}')
+    print(f'\n\nFinal DeltaKolmogorov:\n{vDeltaKolmogorov.to_markdown()}') ################################
 
 
 # Gumbel distribution Yn parameter calculation

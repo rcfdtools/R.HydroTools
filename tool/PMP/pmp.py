@@ -33,7 +33,7 @@ label_date = 'Date'  # Date column name from .csv station file
 label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
-create_plot = True  # Creates and save plots into files
+create_plot = False  # Creates and save plots into files
 show_plot = False  # Show plot on Python screen console
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
 color_line_plot = 'black' # green
@@ -42,7 +42,7 @@ show_warnings = False  # Show warnings on screen
 low_extreme = False  # Eval low extreme values, if False, evaluates high extreme values
 pdist_gumbel_on = False  # Eval the Gumbel distribution (non include in SciPy)
 pdist_loggumbel_on = False  # Eval the Log-Gumbel distribution (non include in SciPy)
-pdist_logarithmic_on = True # Eval every SciPy distribution as logarithmic
+pdist_logarithmic_on = False # Eval every SciPy distribution as logarithmic
 if not show_warnings: warnings.filterwarnings('ignore')
 plot_legend_ncol = 2  # Columns on plot legend, '' for autofit
 ddof = 1.00  # Standard deviation normalized
@@ -192,7 +192,7 @@ for station in stations:
             print('Processing LogCDF: %s...' % df_l_pdist_scipy['p_dist'][i])  # Only for console
             dp_evaluated += 1
             funcs.pdist_scipy_log(df, df_l_pdist_scipy['p_dist'][i], df_l_pdist_scipy['n_parameter'][i], df_l_pdist_scipy['fit_method'][i], df_l_pdist_scipy['label'][i], x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
-    print(f'\n\nvDeltaKolmogorov:\n{vDeltaKolmogorov.to_markdown()}')
+    print(f'\n\nInitial DeltaKolmogorov:\n{vDeltaKolmogorov.to_markdown()}')
     if pdist_gumbel_on: funcs.pdist_gumbel(df, x, ddof, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     if pdist_loggumbel_on: funcs.pdist_loggumbel(df, x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     funcs.print_log(file_log, f'\n\n\n### 0. Cumulative distribution values - CDF ({dp_evaluated} evalated, ordered by x ascending) \n\n{df.to_markdown()}\n\n')
@@ -201,7 +201,7 @@ for station in stations:
     dp_best_of_best = pd.DataFrame()
     num_inc = 1
     funcs.print_log(file_log, f'An Empirical Distribution Function (EDF) is a step-function estimate of a true cumulative distribution function (CDF) based on observed sample data, representing the proportion of data points less than or equal to a given value. It is calculated by ordering your data and jumping up by $1/n$ (where $n$ is sample size) at each unique data point, allowing analysis without assuming an underlying population distribution, and it gets closer to the true CDF as the sample size grows.\n\n')
-    idk = 0 ################ <<<<<<<<<<<<<<<<<<<<<<<< Check
+    # idk = 0 ################ <<<<<<<<<<<<<<<<<<<<<<<< Check
     for emp in edf_dist:
         fig_file1 = 'graph/' + station_code + '_' + emp + '_all.png'
         fig_file2 = 'graph/' + station_code + '_' + emp + '_bestfit.png'
@@ -222,8 +222,9 @@ for station in stations:
         funcs.pdist_empirical(df, emp, x)
 
         # Kolmogorov-Smirnov test & best fit ################ <<<<<<<<<<<<<<<<<<<<<<<< Check
-        #idk = 0
+        idk = 0
         #vDeltaKolmogorov_filter = vDeltaKolmogorov[vDeltaKolmogorov['p_dist'].str.startswith('log', na=False)]
+        print(f'\n\nDataset df for Kolmogorov:\n{df.to_markdown()}')  ################ <<<<<<<<<<<<<<<<<<<<<<<< Check
         for i in df_l_pdist_scipy['p_dist']:
             funcs.fTestKolmogorov(df, i, idk, emp, vDeltaKolmogorov)
             idk += 1
