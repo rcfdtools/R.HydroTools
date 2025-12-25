@@ -250,14 +250,14 @@ for station in stations:
         funcs.print_log(file_log, (df[['date', 'x', 'm', 'empirical_dist', 'empirical', 'empirical_tr']].transpose().to_markdown()), center_div=True)
         vDeltaKolmogorov['best_fit_sort'] = vDeltaKolmogorov.index+1
         funcs.print_log(file_log, f'\n**{num_inc}.2. Parameters & Kolmogorov-Smirnov fit test (sorted by Δ)**\n\n')
-        funcs.print_log(file_log, f'{vDeltaKolmogorov[['empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown()}', center_div=True)
+        funcs.print_log(file_log, f'{vDeltaKolmogorov[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown()}', center_div=True)
         #funcs.print_log(file_log, f'\n**{num_inc}.2. Parameters & Kolmogorov-Smirnov fit test (sorted by Δ)**\n\n%s\n' % vDeltaKolmogorov[['empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3', 'best_fit', 'best_fit_sort']].to_markdown())
         dp_best = vDeltaKolmogorov[vDeltaKolmogorov.best_fit == 1]
         dp_best = dp_best.reset_index(drop=True)
         dp_best.index.name = 'id'
         dp_best_of_best = pd.concat([dp_best, dp_best_of_best])
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file1, center_div=True)
-        funcs.print_log(file_log, f'\n**{num_inc}.3. Best fit**\n\n%s\n' %dp_best.to_markdown())
+        funcs.print_log(file_log, f'\n**{num_inc}.3. Best fit**\n\n%s\n' %dp_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown())
         funcs.print_log(file_log, f'<img alt="R.GISPython" src="{fig_file2}" width="500"></img><img alt="R.GISPython" src="{fig_file3}" width="500"></img>', center_div=True)
         #funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file4, center_div=True)
         num_inc += 1
@@ -390,7 +390,7 @@ for station in stations:
     df_tr.index.name = 'id'
     dp_best_of_best.to_csv(f'{ouput_path}table/bestfit_{station_code}.csv', index=False)
     df_tr.to_csv(f'{ouput_path}table/extreme_{station_code}.csv', index=False)
-    funcs.print_log(file_log,f'\n### 1. Best fit (ordered by delta Δ)\n\n{dp_best_of_best.to_markdown()}')
+    funcs.print_log(file_log,f'\n### 1. Best fit (ordered by delta Δ)\n\n{dp_best_of_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown()}')
     funcs.print_log(file_log, f'\n\n:file_folder:Tables: [bestfit_{station_code}.csv](table/bestfit_{station_code}.csv) | [extreme_{station_code}.csv](table/extreme_{station_code}.csv)')
     funcs.print_log(file_log,f'\n\n\n### 2. Extreme values\n\n')
     funcs.print_log(file_log,'In hydrology, a return period (or recurrence interval) is the statistical average time between extreme events like floods or droughts of a specific magnitude, indicating how rare an event is, with a 100-year flood, for example, having a 1% chance of occurring in any given year, not that it happens exactly every century. It is a key tool for infrastructure design (like bridges or dams) and risk assessment, calculated from historical data to determine the probability of future events, although it is important to remember it is statistical average, and events can cluster or be missed.')
