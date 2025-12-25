@@ -36,7 +36,7 @@ dicts = ([['app_version', 'app_version'], # App control version
 # l_pdist_scipy requires: ([Distribution function, # parameters, fit method, label, active)]
 l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', False],
                   ['gumbel_r', 2, 'MM', 'Gumbel Right Skew', False],
-                  ['norm', 2, 'MM', 'Normal', True],
+                  ['norm', 2, 'MM', 'Normal', False],
                   ['lognorm', 3, 'MLE', 'Log Normal', False],
                   ['foldnorm', 3, 'MM', 'Fold Normal', False],  # Check: not for rain data
                   ['halfnorm', 2, 'MM', 'Half Normal', False],
@@ -52,7 +52,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', False],
                   ['anglit', 2, 'MM', 'Anglit', False],
                   ['arcsine', 2, 'MM', 'Arcsine', False],
                   ['argus', 3, 'MLE', 'Argus', False],
-                  ['beta', 4, 'MLE', 'Beta', False],
+                  ['beta', 4, 'MLE', 'Beta', True],
                   ['betaprime', 4, 'MLE', 'Beta prime', False],
                   ['bradford', 3, 'MLE', 'Bradford', False],
                   ['burr', 4, 'MLE', 'Burr (Type III)', False],
@@ -140,7 +140,6 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', False],
                   ['dweibull', 3, 'MLE', 'Double Weibull', False]
                  ])
 
-
 # Scipy probability distributions
 def pdist_scipy(dfx, p_dist, n_parameter, fit_method, p_dist_tag, x, low_extreme, df_tr, station_code, vDeltaKolmogorov):
     # dfx: dataset to eval
@@ -202,7 +201,8 @@ def pdist_scipy(dfx, p_dist, n_parameter, fit_method, p_dist_tag, x, low_extreme
     else:
         print('%s\n* Error: check the # parameters entered...')
     dfx[p_dist+'_pdf'] =  frozen_dist.pdf(dfx.x)
-    vDeltaKolmogorovData = [station_code, '', '', 0.0, 0.0, '', '', n, loc, scale, shape, shape1, shape2,shape3]
+    #vDeltaKolmogorovData = [station_code, '', '', 0.0, 0.0, '', '', n, loc, scale, shape, shape1, shape2,shape3]
+    vDeltaKolmogorovData = [station_code, '', p_dist, 0.0, 0.0, '', '', n, loc, scale, shape, shape1, shape2,shape3]
     vDeltaKolmogorov.loc[len(vDeltaKolmogorov)] = vDeltaKolmogorovData  # Add the results as a new record
 
 
@@ -267,7 +267,8 @@ def pdist_scipy_log(dfx, p_dist, n_parameter, fit_method, p_dist_tag, x, low_ext
     else:
         print('%s\n* Error: check the # parameters entered...')
     dfx[f'log{p_dist}_pdf'] =  frozen_dist.pdf(np.log(dfx.x))
-    vDeltaKolmogorovData = [station_code, '', '', 0.0, 0.0, '', '', n, loc, scale, shape, shape1, shape2,shape3]
+    #vDeltaKolmogorovData = [station_code, '', '', 0.0, 0.0, '', '', n, loc, scale, shape, shape1, shape2,shape3]
+    vDeltaKolmogorovData = [station_code, '', f'log{p_dist}', 0.0, 0.0, '', '', n, loc, scale, shape, shape1, shape2,shape3]
     vDeltaKolmogorov.loc[len(vDeltaKolmogorov)] = vDeltaKolmogorovData  # Add the results as a new record
 
 
@@ -338,6 +339,7 @@ def fTestKolmogorov(dfx, p_dist, idk, emp, vDeltaKolmogorov):  # Kolmogorov-Smir
     vDeltaKolmogorov['deltao'][idk] = deltao
     vDeltaKolmogorov['eval'][idk] = 'Δo %s Δ' % operator
     vDeltaKolmogorov['fit'][idk] = fit
+    print(f'\n\nvDeltaKolmogorov:\n{vDeltaKolmogorov.to_markdown()}')
 
 
 # Gumbel distribution Yn parameter calculation

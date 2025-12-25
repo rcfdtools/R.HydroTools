@@ -187,8 +187,12 @@ for station in stations:
         print('Processing CDF: %s...' % df_l_pdist_scipy['p_dist'][i])  # Only for console
         dp_evaluated += 1
         funcs.pdist_scipy(df, df_l_pdist_scipy['p_dist'][i], df_l_pdist_scipy['n_parameter'][i], df_l_pdist_scipy['fit_method'][i], df_l_pdist_scipy['label'][i], x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
-        if pdist_logarithmic_on: ########### logarithmic #############
+    if pdist_logarithmic_on: ########### logarithmic #############
+        for i in range(0, len(df_l_pdist_scipy)):
+            print('Processing LogCDF: %s...' % df_l_pdist_scipy['p_dist'][i])  # Only for console
+            dp_evaluated += 1
             funcs.pdist_scipy_log(df, df_l_pdist_scipy['p_dist'][i], df_l_pdist_scipy['n_parameter'][i], df_l_pdist_scipy['fit_method'][i], df_l_pdist_scipy['label'][i], x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
+    print(f'\n\nvDeltaKolmogorov:\n{vDeltaKolmogorov.to_markdown()}')
     if pdist_gumbel_on: funcs.pdist_gumbel(df, x, ddof, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     if pdist_loggumbel_on: funcs.pdist_loggumbel(df, x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     funcs.print_log(file_log, f'\n\n\n### 0. Cumulative distribution values - CDF ({dp_evaluated} evalated, ordered by x ascending) \n\n{df.to_markdown()}\n\n')
@@ -197,6 +201,7 @@ for station in stations:
     dp_best_of_best = pd.DataFrame()
     num_inc = 1
     funcs.print_log(file_log, f'An Empirical Distribution Function (EDF) is a step-function estimate of a true cumulative distribution function (CDF) based on observed sample data, representing the proportion of data points less than or equal to a given value. It is calculated by ordering your data and jumping up by $1/n$ (where $n$ is sample size) at each unique data point, allowing analysis without assuming an underlying population distribution, and it gets closer to the true CDF as the sample size grows.\n\n')
+    idk = 0 ################ <<<<<<<<<<<<<<<<<<<<<<<< Check
     for emp in edf_dist:
         fig_file1 = 'graph/' + station_code + '_' + emp + '_all.png'
         fig_file2 = 'graph/' + station_code + '_' + emp + '_bestfit.png'
@@ -216,15 +221,18 @@ for station in stations:
         df_tr['risk_rate'] = 1-(1-1/df_tr['tr'])**df_tr['tr']
         funcs.pdist_empirical(df, emp, x)
 
-        # Kolmogorov-Smirnov test & best fit
-        idk = 0
+        # Kolmogorov-Smirnov test & best fit ################ <<<<<<<<<<<<<<<<<<<<<<<< Check
+        #idk = 0
+        #vDeltaKolmogorov_filter = vDeltaKolmogorov[vDeltaKolmogorov['p_dist'].str.startswith('log', na=False)]
         for i in df_l_pdist_scipy['p_dist']:
             funcs.fTestKolmogorov(df, i, idk, emp, vDeltaKolmogorov)
             idk += 1
-        for i in df_l_pdist_scipy['p_dist']:
-            if pdist_logarithmic_on:  ########### logarithmic #############
+        #vDeltaKolmogorov_filter = vDeltaKolmogorov[vDeltaKolmogorov['p_dist'].str.startswith('log', na=True)]
+        #idk = 0
+        if pdist_logarithmic_on: ########### logarithmic #############
+            for i in df_l_pdist_scipy['p_dist']:
                 funcs.fTestKolmogorov(df, f'log{i}', idk, emp, vDeltaKolmogorov)
-            idk += 1
+                idk += 1
 
         if pdist_gumbel_on: funcs.fTestKolmogorov(df, 'zzgumbel', idk, emp, vDeltaKolmogorov)  # Run always after for i in df_l_pdist_scipy['p_dist']
         if pdist_loggumbel_on: funcs.fTestKolmogorov(df, 'zzloggumbel', idk+1, emp, vDeltaKolmogorov)  # Run always after for i in df_l_pdist_scipy['p_dist']
