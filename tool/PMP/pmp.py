@@ -166,9 +166,9 @@ for station in stations:
     df = df.rename(columns={x: 'x', date: 'date'})
     x = 'x'  # New value column name
     date = 'date'  # New date column name
-    funcs.print_log(file_log, f'\n### 4. Active continuous probability distributions from SciPy ({len(df_l_pdist_scipy.query('active == True'))} of {len(funcs.l_pdist_scipy)} available)', center_div=True)
+    funcs.print_log(file_log, f'\n### 4. Active continuous probability distributions from SciPy ({len(df_l_pdist_scipy.query('active == True'))} of {len(funcs.l_pdist_scipy)} available)')
     funcs.print_log(file_log, '\n\n[scipy.stats](https://docs.scipy.org/doc/scipy/reference/stats.html) is a Python´s powerful submodule within the SciPy library for comprehensive statistical analysis, offering over 130 probability distributions (like Normal, Poisson), functions for descriptive stats (mean, variance), hypothesis testing (t-tests, chi-square), random variable generation, and statistical tests, making it essential for data science, modeling, and research. It provides tools to explore, model, and draw conclusions from data efficiently, working seamlessly with NumPy.')
-    funcs.print_log(file_log, f'\n\n{df_l_pdist_scipy.query('active == True').to_markdown()}')
+    funcs.print_log(file_log, f'\n\n{df_l_pdist_scipy.query('active == True').to_markdown()}', center_div=True)
     funcs.print_log(file_log, '\n\n>Gumbel and Lob-Gumbel probability distributions are not shown in the above table.\n>\n>**n_parameter:** # arguments & localization & scale.\n>\n>**Fit methods:** (MLE) maximum likelihood, (MM) L-moments.')
     funcs.print_log(file_log, (f'\n>\n>**Inactive:** '))
     for inactives in df_l_pdist_scipy_inactive['p_dist'].values:
