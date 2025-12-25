@@ -46,7 +46,7 @@ pdist_gumbel_on = False  # Eval the Gumbel distribution (non include in SciPy)
 pdist_loggumbel_on = False  # Eval the Log-Gumbel distribution (non include in SciPy)
 pdist_logarithmic_on = True # Eval every SciPy distribution as logarithmic
 if not show_warnings: warnings.filterwarnings('ignore')
-plot_legend_ncol = 2  # Columns on plot legend, '' for autofit
+plot_legend_ncol = 3  # Columns on plot legend, '' for autofit
 ddof = 1.00  # Standard deviation normalized
 runtime = datetime.now()
 minimum_sample = 5 # Exclude a station when doesn't have the minimum data sample (0 means any)
