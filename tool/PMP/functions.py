@@ -201,8 +201,9 @@ def pdist_scipy(dfx, p_dist, n_parameter, fit_method, p_dist_tag, x, low_extreme
     else:
         print('%s\n* Error: check the # parameters entered...')
     dfx[p_dist+'_pdf'] =  frozen_dist.pdf(dfx.x)
-    #vDeltaKolmogorovData = [station_code, '', '', 0.0, 0.0, '', '', n, loc, scale, shape, shape1, shape2,shape3]
     vDeltaKolmogorovData = [station_code, '', p_dist, 0.0, 0.0, '', '', n, loc, scale, shape, shape1, shape2,shape3]
+    #vDeltaKolmogorovData = [station_code, '', '', 0.0, 0.0, '', '', n, loc, scale, shape, shape1, shape2,shape3]
+    #vDeltaKolmogorovData = [station_code, '', '', 0.0, 0.0, '', '', n]
     vDeltaKolmogorov.loc[len(vDeltaKolmogorov)] = vDeltaKolmogorovData  # Add the results as a new record
 
 
@@ -267,8 +268,9 @@ def pdist_scipy_log(dfx, p_dist, n_parameter, fit_method, p_dist_tag, x, low_ext
     else:
         print('%s\n* Error: check the # parameters entered...')
     dfx[f'log{p_dist}_pdf'] =  frozen_dist.pdf(np.log(dfx.x))
-    #vDeltaKolmogorovData = [station_code, '', '', 0.0, 0.0, '', '', n, loc, scale, shape, shape1, shape2,shape3]
     vDeltaKolmogorovData = [station_code, '', f'log{p_dist}', 0.0, 0.0, '', '', n, loc, scale, shape, shape1, shape2,shape3]
+    #vDeltaKolmogorovData = [station_code, '', '', 0.0, 0.0, '', '', n, loc, scale, shape, shape1, shape2,shape3]
+    #vDeltaKolmogorovData = [station_code, '', '', 0.0, 0.0, '', '', n]
     vDeltaKolmogorov.loc[len(vDeltaKolmogorov)] = vDeltaKolmogorovData  # Add the results as a new record
 
 
@@ -323,7 +325,7 @@ def fTestKolmogorov(dfx, p_dist, idk, emp, vDeltaKolmogorov):  # Kolmogorov-Smir
     dfp['dfp'] = abs(dfx['empirical']-dfx[p_dist])
     dfp = dfp.sort_values(by='dfp', ascending=[False])
     dfp = dfp.reset_index(drop=True)
-    print(f'\n\nDataset dfp for Kolmogorov:\n{dfp.to_markdown()}')  ################ <<<<<<<<<<<<<<<<<<<<<<<< Check
+    print(f'\n\nDataset dfp for Kolmogorov: {emp} vs. {p_dist}\n{dfp.to_markdown()}')  ################ <<<<<<<<<<<<<<<<<<<<<<<< Check
     n = len(dfp)
     if (n < 35):
         deltao = 0.000003848186*n**4-0.00033109622*n**3+0.010220554*n**2-0.141035449935*n+1.07518805168
@@ -340,7 +342,7 @@ def fTestKolmogorov(dfx, p_dist, idk, emp, vDeltaKolmogorov):  # Kolmogorov-Smir
     vDeltaKolmogorov['deltao'][idk] = deltao
     vDeltaKolmogorov['eval'][idk] = 'Δo %s Δ' % operator
     vDeltaKolmogorov['fit'][idk] = fit
-    print(f'\n\nFinal DeltaKolmogorov:\n{vDeltaKolmogorov.to_markdown()}') ################################
+    print(f'\n\nFinal vDeltaKolmogorov: {emp} vs. {p_dist}\n{vDeltaKolmogorov.to_markdown()}') ################################
 
 
 # Gumbel distribution Yn parameter calculation
