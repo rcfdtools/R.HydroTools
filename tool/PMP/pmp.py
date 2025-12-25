@@ -3,6 +3,8 @@
 from numpy.ma.core import minimum
 
 # General libraries
+import platform
+import scipy
 import functions as funcs
 import warnings
 from pathlib import Path
@@ -20,7 +22,7 @@ pd.set_option('display.width', None)
 
 
 # General setup
-app_version = 'v20251220'
+app_version = 'v20251225'
 input_path = 'dataset/pmax24h_in/'  # Your local input file folder
 ouput_path = 'dataset/pmax24h_out/'  # Your local output file folder
 station_catalog_file = 'dataset/CNE_IDEAM.xls' # CNE catalog for stations info
@@ -33,7 +35,7 @@ label_date = 'Date'  # Date column name from .csv station file
 label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
-create_plot = False  # Creates and save plots into files
+create_plot = True  # Creates and save plots into files
 show_plot = False  # Show plot on Python screen console
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
 color_line_plot = 'black' # green
@@ -51,6 +53,10 @@ minimum_sample = 5 # Exclude a station when doesn't have the minimum data sample
 zscore = 3.5 # Z-Score threshold to adjust a value, 0 means disable
 avoid_zeros = True # Exclude dataframe zeros, e.g. rain = 0
 avoid_nans = True # Exclude null values
+python_version = platform.python_version()
+scipy_version = scipy.__version__
+pandas_version = pd.__version__
+numpy_version = np.__version__
 
 
 # Return periods and probabilities
