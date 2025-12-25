@@ -33,7 +33,7 @@ label_date = 'Date'  # Date column name from .csv station file
 label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
-create_plot = True  # Creates and save plots into files
+create_plot = False  # Creates and save plots into files
 show_plot = False  # Show plot on Python screen console
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
 color_line_plot = 'black' # green
@@ -42,7 +42,6 @@ show_warnings = False  # Show warnings on screen
 low_extreme = False  # Eval low extreme values, if False, evaluates high extreme values
 pdist_gumbel_on = False  # Eval the Gumbel distribution (non include in SciPy)
 pdist_loggumbel_on = False  # Eval the Log-Gumbel distribution (non include in SciPy)
-pdist_logarithmic_on = True # Eval every SciPy distribution as logarithmic
 if not show_warnings: warnings.filterwarnings('ignore')
 plot_legend_ncol = 2  # Columns on plot legend, '' for autofit
 ddof = 1.00  # Standard deviation normalized
@@ -187,8 +186,8 @@ for station in stations:
         print('Processing CDF: %s...' % df_l_pdist_scipy['p_dist'][i])  # Only for console
         dp_evaluated += 1
         funcs.pdist_scipy(df, df_l_pdist_scipy['p_dist'][i], df_l_pdist_scipy['n_parameter'][i], df_l_pdist_scipy['fit_method'][i], df_l_pdist_scipy['label'][i], x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
-        if pdist_logarithmic_on: ########### logarithmic #############
-            funcs.pdist_scipy_log(df, df_l_pdist_scipy['p_dist'][i], df_l_pdist_scipy['n_parameter'][i], df_l_pdist_scipy['fit_method'][i], df_l_pdist_scipy['label'][i], x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
+        ########### testing log #############
+        funcs.pdist_scipy_log(df, df_l_pdist_scipy['p_dist'][i], df_l_pdist_scipy['n_parameter'][i], df_l_pdist_scipy['fit_method'][i], df_l_pdist_scipy['label'][i], x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     if pdist_gumbel_on: funcs.pdist_gumbel(df, x, ddof, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     if pdist_loggumbel_on: funcs.pdist_loggumbel(df, x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     funcs.print_log(file_log, f'\n\n\n### 0. Cumulative distribution values - CDF ({dp_evaluated} evalated, ordered by x ascending) \n\n{df.to_markdown()}\n\n')
@@ -221,11 +220,6 @@ for station in stations:
         for i in df_l_pdist_scipy['p_dist']:
             funcs.fTestKolmogorov(df, i, idk, emp, vDeltaKolmogorov)
             idk += 1
-        for i in df_l_pdist_scipy['p_dist']:
-            if pdist_logarithmic_on:  ########### logarithmic #############
-                funcs.fTestKolmogorov(df, f'log{i}', idk, emp, vDeltaKolmogorov)
-            idk += 1
-
         if pdist_gumbel_on: funcs.fTestKolmogorov(df, 'zzgumbel', idk, emp, vDeltaKolmogorov)  # Run always after for i in df_l_pdist_scipy['p_dist']
         if pdist_loggumbel_on: funcs.fTestKolmogorov(df, 'zzloggumbel', idk+1, emp, vDeltaKolmogorov)  # Run always after for i in df_l_pdist_scipy['p_dist']
         vDeltaKolmogorov['best_fit'] = np.where((vDeltaKolmogorov['delta'] == vDeltaKolmogorov['delta'].min()), 1, 0)
