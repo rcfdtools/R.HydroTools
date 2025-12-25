@@ -198,7 +198,7 @@ for station in stations:
     #print(f'\n\n**Distributions parameters**\n{vDeltaKolmogorov.to_markdown()}')
     funcs.print_log(file_log, f'\n\n> **loc** (Location parameter): This shifts the distribution along the x-axis. For many common distributions, like the normal (Gaussian) distribution, loc represents the mean $μ$. For others, like the uniform distribution, it might represent the minimum value, or for the beta distribution, the left end of the support interval.')
     funcs.print_log(file_log, f'\n\n> **scale** (Scale parameter): This determines the width or spread of the distribution. For the normal distribution, scale represents the standard deviation $σ$. For a uniform distribution, it defines the length of the interval (from $loc$ to $loc + scale$).')
-    funcs.print_log(file_log, f'\n\n> **shape** (Shape parameter): Refers to parameters that define the specific form of a probability distribution, distinct from its location (loc) and scale (scale). These parameters are required arguments for most distribution functions. For example, a normal (Gaussian) distribution is fully defined by its location (mean) and scale (standard deviation), so it has no specific shape parameters beyond loc and scale. However, other distributions have intrinsic properties that need specification, as Gamma distribution takes a shape parameter, often named $a$ or $alpha$.')
+    funcs.print_log(file_log, f'\n\n> **shape** (Shape parameters): Refers to parameters that define the specific form of a probability distribution, distinct from its location (loc) and scale (scale). These parameters are required arguments for most distribution functions. For example, a normal (Gaussian) distribution is fully defined by its location (mean) and scale (standard deviation), so it has no specific shape parameters beyond loc and scale. However, other distributions have intrinsic properties that need specification, as Gamma distribution that takes a shape parameter, often named $a$ or $alpha$.')
     if pdist_gumbel_on: funcs.pdist_gumbel(df, x, ddof, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     if pdist_loggumbel_on: funcs.pdist_loggumbel(df, x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     funcs.print_log(file_log, f'\n\n\n### 0. Cumulative distribution values - CDF ({dp_evaluated} evalated, ordered by x ascending) \n\n{df.to_markdown()}\n\n')
@@ -250,7 +250,8 @@ for station in stations:
         funcs.print_log(file_log, f'\n**{num_inc}.1. Empirical values**\n')
         funcs.print_log(file_log, (df[['date', 'x', 'm', 'empirical_dist', 'empirical', 'empirical_tr']].transpose().to_markdown()), center_div=True)
         vDeltaKolmogorov['best_fit_sort'] = vDeltaKolmogorov.index+1
-        funcs.print_log(file_log, f'\n**{num_inc}.2. Parameters & Kolmogorov-Smirnov fit test (sorted by Δ)**\n\n%s\n' % vDeltaKolmogorov[['empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown())
+        funcs.print_log(file_log, f'\n**{num_inc}.2. Parameters & Kolmogorov-Smirnov fit test (sorted by Δ)**\n\n')
+        funcs.print_log(file_log, f'{vDeltaKolmogorov[['empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown()}', center_div=True)
         #funcs.print_log(file_log, f'\n**{num_inc}.2. Parameters & Kolmogorov-Smirnov fit test (sorted by Δ)**\n\n%s\n' % vDeltaKolmogorov[['empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3', 'best_fit', 'best_fit_sort']].to_markdown())
         dp_best = vDeltaKolmogorov[vDeltaKolmogorov.best_fit == 1]
         dp_best = dp_best.reset_index(drop=True)
