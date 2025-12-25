@@ -257,7 +257,8 @@ for station in stations:
         dp_best.index.name = 'id'
         dp_best_of_best = pd.concat([dp_best, dp_best_of_best])
         funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file1, center_div=True)
-        funcs.print_log(file_log, f'\n**{num_inc}.3. Best fit**\n\n%s\n' %dp_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown())
+        funcs.print_log(file_log, f'\n**{num_inc}.3. Best fit**\n')
+        funcs.print_log(file_log, f'{dp_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown()}', center_div=True)
         funcs.print_log(file_log, f'<img alt="R.GISPython" src="{fig_file2}" width="500"></img><img alt="R.GISPython" src="{fig_file3}" width="500"></img>', center_div=True)
         #funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file4, center_div=True)
         num_inc += 1
