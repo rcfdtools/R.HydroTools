@@ -30,13 +30,15 @@ station_catalog_file = 'dataset/CNE_IDEAM.xls' # CNE catalog for stations info
 station_dataset_file = input_path + 'test.csv' # Stations dataset
 parameter_name = 'rain, Pmax24h'  # rain, flow
 parameter_units = '($mm/d$)'  # ($mm/d$), ($m^3/s$)
+date_min = 1990 # Minimum year to eval til year_max
+date_max = 2024 # Maximum year to eval since year_min
 label_station = 'Station' # Station column name to eval from .csv station dataset file
 label_x = 'Value'  # Value column name to eval from .csv station file
 label_date = 'Date'  # Date column name from .csv station file
 label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
-create_plot = True  # Creates and save plots into files
+create_plot = False  # Creates, save and include plots into reports
 show_plot = False  # Show plot on Python screen console
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
 color_line_plot = 'black' # green
@@ -72,12 +74,13 @@ df_l_pdist_scipy = df_l_pdist_scipy.query('active == True')
 df_l_pdist_scipy = df_l_pdist_scipy.sort_values(by=['p_dist'], ascending=True)
 df_l_pdist_scipy = df_l_pdist_scipy.reset_index(drop=True)
 df_l_pdist_scipy.index.name = 'id'
-df_edf_dist_dict = pd.DataFrame(funcs.edf_dist_dict, columns=['edf_dist', 'edf_name', 'edf_expression', 'edf_year', 'edf_desc'])
+df_edf_dist_dict = pd.DataFrame(dictionary.edf_dist_dict, columns=['edf_dist', 'edf_name', 'edf_expression', 'edf_year', 'edf_desc'])
 edf_dist = df_edf_dist_dict['edf_dist'].unique()
 
 
-# Initial dataset cleaning
+# Initial dataset filtering and cleaning
 df_all = pd.read_csv(station_dataset_file, delimiter=',', parse_dates=True, dtype={label_station: 'str'})  # index_col=0
+df_all = df_all[(df_all[label_date] >= date_min) & (df_all[label_date] <= date_max)] # Filter the required date range
 if avoid_zeros:
     df_all = df_all[df_all[label_x] != 0]
 if avoid_nans:
@@ -102,9 +105,10 @@ data_types = {label_station_catalog: 'str', label_latitude: 'float64', label_lon
 df_catalog = pd.read_excel(station_catalog_file, sheet_name='CNE', parse_dates=True, dtype=data_types) # , dtype=data_types
 # print(df_catalog.dtypes)
 for station in stations:
+    print(f'\n>>>>>>>>>>>>>>>>>>>> Station: {station} <<<<<<<<<<<<<<<<<<<<<<<<<\n\n')
     station_code = str(station)
-    fig_file0 = 'graph/' + station_code + '_dataserie.png'
     fig_file0a = 'graph/' + station_code + '_locationmap.png'
+    fig_file0 = 'graph/' + station_code + '_dataserie.png'
     file_log_name = f'{ouput_path}{station_code}.md'  # Markdown file log
     file_log = open(file_log_name, 'w+', encoding='utf-8')   # w+ create the file if it doesn't exist
     df = df_all[df_all[label_station] == station]
@@ -133,17 +137,15 @@ for station in stations:
     geojson = '```geojson\n{\n  "type": "Feature",\n  "geometry": {\n    "type": "Point", \n    "coordinates": ['+str(point_longitude)+', '+str(point_latitude)+']\n  }, \n  "properties": {\n    "Name": "'+station+'"\n  }\n}\n```'
     funcs.print_log(file_log, f'{geojson}', center_div=True)
     funcs.print_log(file_log, f'\n### 3. Discrete values table and plot\n\n{df[[label_date, label_x, f'{label_x}_initial', 'count', 'mean', 'std', 'zscore']].transpose().to_markdown()}\n')
-    funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file0, center_div=True)
+    if create_plot: funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file0, center_div=True)
     funcs.print_log(file_log, '> If Z-Score is active, values out of range or outliers are replaced with the station mean value.\n')
 
     # Plot location map & Plot x values
+    # Location map always (graph 0a)
+    location_map_plot = funcs.location_map(point_latitude, point_longitude, station)
+    location_map_plot.savefig(ouput_path + fig_file0a, dpi=dpi)
+    plt.close()
     if create_plot:
-
-        # Location map (graph 0a)
-        location_map_plot = funcs.location_map(point_latitude, point_longitude, station)
-        location_map_plot.savefig(ouput_path + fig_file0a, dpi=dpi)
-        plt.close()
-
         # Plot x values  (graph 0)
         #df = df.sort_values(by=label_date)
         plt.plot(df[label_date], df[f'{label_x}_initial'], color=color_line_plot, lw=0.5, marker='o', markersize=2, label='Original', linestyle='dashed')
@@ -253,11 +255,11 @@ for station in stations:
         dp_best = dp_best.reset_index(drop=True)
         dp_best.index.name = 'id'
         dp_best_of_best = pd.concat([dp_best, dp_best_of_best])
-        funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file1, center_div=True)
+        if create_plot: funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file1, center_div=True)
         funcs.print_log(file_log, f'\n**{num_inc}.3. Best fit**\n')
         funcs.print_log(file_log, f'{dp_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown()}', center_div=True)
-        funcs.print_log(file_log, f'<img alt="R.GISPython" src="{fig_file2}" width="500"></img><img alt="R.GISPython" src="{fig_file3}" width="500"></img>', center_div=True)
-        #funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file4, center_div=True)
+        if create_plot: funcs.print_log(file_log, f'<img alt="R.GISPython" src="{fig_file2}" width="500"></img><img alt="R.GISPython" src="{fig_file3}" width="500"></img>', center_div=True)
+        #if create_plot: funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file4, center_div=True)
         num_inc += 1
 
         # Plot analysis graphs
@@ -395,7 +397,7 @@ for station in stations:
     funcs.print_log(file_log,f'{dictionary.dicts['tr']}')
     funcs.print_log(file_log,'\n\n> risk_rate: assuming the return period as the project useful life.')
     funcs.print_log(file_log,f'\n\n{df_tr.to_markdown()}\n')
-    funcs.print_log(file_log, f'<img alt="R.GISPython" src="{fig_file4}" width="1200"></img>', center_div=True)
-    funcs.print_log(file_log, f'<img alt="R.GISPython" src="{fig_file5}" width="500"></img><img alt="R.GISPython" src="{fig_file6}" width="500"></img>', center_div=True)
+    if create_plot: funcs.print_log(file_log, f'<img alt="R.GISPython" src="{fig_file4}" width="1200"></img>', center_div=True)
+    if create_plot: funcs.print_log(file_log, f'<img alt="R.GISPython" src="{fig_file5}" width="500"></img><img alt="R.GISPython" src="{fig_file6}" width="500"></img>', center_div=True)
     funcs.print_log(file_log, f'\n<sub>{dictionary.dicts['disclaimer']}</sub>')
     #print(df.to_csv(index=False))

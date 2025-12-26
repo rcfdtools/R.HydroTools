@@ -223,7 +223,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 
 * File --> Settings --> Editor --> General --> Console -->
 * Then check "Override console cycle buffer size (1024 KB)"
-* Change that values to whatever you need, p.e. 4096
+* Change that values to whatever you need, e.g. 4096
 
 
 ### Licencia, cláusulas y condiciones de uso
