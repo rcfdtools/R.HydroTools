@@ -43,6 +43,8 @@ color_line_plot = 'black' # green
 dpi = 96  # Graph plot resolution
 show_warnings = False  # Show warnings on screen
 low_extreme = False  # Eval low extreme values, if False, evaluates high extreme values
+pdist_gumbel_on = False  # Eval manually the Gumbel distribution (include in SciPy as gumbel_r)
+pdist_loggumbel_on = False  # Eval manually the Log-Gumbel distribution (include in SciPy as log(gumbel_r))
 pdist_logarithmic_on = True # Eval every SciPy distribution as logarithmic
 if not show_warnings: warnings.filterwarnings('ignore')
 plot_legend_ncol = 3  # Columns on plot legend, '' for autofit
@@ -125,7 +127,7 @@ for station in stations:
     funcs.print_log(file_log, f'\n\n{dictionary.dicts['pmp']}\n')
     funcs.print_log(file_log, f'<img alt="R.GISPython" src="{fig_file0a}" width="500"></img>', center_div=True)
     funcs.print_log(file_log, f'\n## A. General information\n\n\n### 1. General running parameters\n\n')
-    for dict_var in dictionary.general_vars:
+    for dict_var in funcs.dicts:
         funcs.print_log(file_log, f'• {dict_var[1]}: _{eval(dict_var[0])}_. ')
     funcs.print_log(file_log, f'[:file_folder:Dataset file.](../../{station_dataset_file})')
     funcs.print_log(file_log, f'\n\n\n### 2. Station info and location\n\n{df_station_info.to_markdown()}\n')
@@ -185,6 +187,10 @@ for station in stations:
 
     # CDF calculations
     dp_evaluated = 0 # cdf to eval
+    if pdist_gumbel_on:
+        dp_evaluated += 1
+    if pdist_loggumbel_on:
+        dp_evaluated += 1
     for i in range(0, len(df_l_pdist_scipy)):
         print('Processing CDF: %s...' % df_l_pdist_scipy['p_dist'][i])  # Only for console
         dp_evaluated += 1
@@ -199,6 +205,8 @@ for station in stations:
     funcs.print_log(file_log, f'> {dictionary.dicts['loc']}')
     funcs.print_log(file_log, f'\n>\n> {dictionary.dicts['scale']}')
     funcs.print_log(file_log, f'\n>\n> {dictionary.dicts['shape']}')
+    if pdist_gumbel_on: funcs.pdist_gumbel(df, x, ddof, low_extreme, df_tr, station_code, vDeltaKolmogorov)
+    if pdist_loggumbel_on: funcs.pdist_loggumbel(df, x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     if pdist_logarithmic_on: dp_evaluated_txt = 'and calculating $log(f(x))$ separately'
     funcs.print_log(file_log, f'\n\n\n### 0. Cumulative distribution values - CDF ({dp_evaluated} evaluated)\n\n> Ordered by x ascending {dp_evaluated_txt}. \n\n{df.to_markdown()}\n\n')
 
@@ -239,6 +247,9 @@ for station in stations:
             for i in df_l_pdist_scipy['p_dist']:
                 funcs.fTestKolmogorov(df, f'log{i}', idk, emp, vDeltaKolmogorov)
                 idk += 1
+
+        if pdist_gumbel_on: funcs.fTestKolmogorov(df, 'zzgumbel', idk, emp, vDeltaKolmogorov)  # Run always after for i in df_l_pdist_scipy['p_dist']
+        if pdist_loggumbel_on: funcs.fTestKolmogorov(df, 'zzloggumbel', idk+1, emp, vDeltaKolmogorov)  # Run always after for i in df_l_pdist_scipy['p_dist']
         vDeltaKolmogorov['best_fit'] = np.where((vDeltaKolmogorov['delta'] == vDeltaKolmogorov['delta'].min()), 1, 0)
         vDeltaKolmogorov = vDeltaKolmogorov.sort_values(by=['delta'], ascending=True)
         vDeltaKolmogorov = vDeltaKolmogorov.reset_index(drop=True)

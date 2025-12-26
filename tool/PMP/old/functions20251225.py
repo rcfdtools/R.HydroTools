@@ -14,6 +14,29 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)
 
 
+# General vars description
+dicts = ([['app_version', 'app_version'], # App control version
+          ['runtime', 'runtime'],
+          ['python_version', 'Python version'],
+          ['scipy_version', 'SciPy version'],
+          ['pandas_version', 'Pandas version'],
+          ['numpy_version', 'NumPy version'],
+          ['station_dataset_file', 'Stations dataset (station_dataset_file)'],
+          ['station_catalog_file', 'Stations catalog (station_catalog_file)'],
+          ['plot_only_fit', 'Plot only fit distributions with Δo > Δ (plot_only_fit)'],
+          ['low_extreme', 'Eval low extreme values, if False, evaluates high extreme values (low_extreme)'],
+          ['pdist_gumbel_on', 'Eval Gumbel distribution, non include in SciPy (pdist_loggumbel_on)'],
+          ['pdist_loggumbel_on', 'Eval Log-Gumbel distribution, non include in SciPy (pdist_loggumbel_on)'],
+          ['pdist_logarithmic_on', 'Eval every SciPy distribution as logarithmic (pdist_logarithmic_on)'],
+          ['ddof', 'Standard deviation normalized (ddof)'],
+          ['tr', 'Return periods to eval in years (Tr)'],
+          ['minimum_sample', 'Minimum data sample per station, 0 means any (minimum_sample)'],
+          ['zscore', 'Z-Score threshold to adjust a value, 0 means disable (zscore)'],
+          ['avoid_zeros', 'Avoid zeros, e.g. rain = 0 (avoid_zeros)'],
+          ['avoid_nans', 'Avoid null values (avoid_nans)']
+         ])
+
+
 # Probability density function - PDF (from SciPy)
 # l_pdist_scipy requires: ([Distribution function, # parameters, fit method, label, active)]
 l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
@@ -326,6 +349,65 @@ def fTestKolmogorov(dfx, p_dist, idk, emp, vDeltaKolmogorov):  # Kolmogorov-Smir
     vDeltaKolmogorov['eval'][idk] = 'Δo %s Δ' % operator
     vDeltaKolmogorov['fit'][idk] = fit
     #print(f'\n\nFinal vDeltaKolmogorov: {emp} vs. {p_dist}\n{vDeltaKolmogorov.to_markdown()}') ################################
+
+
+# Gumbel distribution Yn parameter calculation
+def gumbel_yn(n):
+    su = 0
+    for m in range(1, n+1):
+        ym = -np.log(-np.log((n + 1 - m) / (n + 1)))
+        su = su + ym
+    mi = su / n
+    return mi
+
+
+# Gumbel distribution Sn parameter calculation
+def gumbel_sn(n, mi):
+    su = 0
+    for m in range (1, n+1):
+        ym = -np.log(-np.log((n + 1 - m) / (n + 1)))
+        su = su + (ym - mi) ** 2
+    mi = su / n
+    mi2 = mi ** 0.5
+    return mi2
+
+
+# Probability distribution: Gumbel
+def pdist_gumbel(dfx, x, ddof, low_extreme, df_tr, station_code, vDeltaKolmogorov):
+    print('Processing CDF: zzgumbel...')  # Only for console
+    n = len(dfx[x])
+    yn = gumbel_yn(n)
+    sn = gumbel_sn(n, yn)
+    scale = math.sqrt(6) * dfx[x].std(ddof=ddof) / math.pi
+    loc = dfx[x].mean() - yn / scale
+    dfx['zzgumbel'] = np.exp(-np.exp(-(dfx[x] - loc) / scale))  ## zzgumbel: zz used to put this manual distribution at the end of the tables
+    if low_extreme:
+        x_extreme = loc - np.log(-np.log(1 / df_tr.tr)) * scale
+    else:
+        x_extreme = loc - np.log(-np.log(1 - 1 / df_tr.tr)) * scale
+    df_tr['zzgumbel'] = x_extreme
+    dfx['gumbel_pdf'] = 0  # <<<<<<<<<<<<<<<<<< pdf not calculated
+    vDeltaKolmogorovData = [station_code, '', '', 0.0, 0.0, '', '', n, loc, scale, yn, sn, '', '']
+    vDeltaKolmogorov.loc[len(vDeltaKolmogorov)] = vDeltaKolmogorovData  # Add the results as a new record
+
+
+# Probability distribution: Log-Gumbel
+def pdist_loggumbel(dfx, x, low_extreme, df_tr, station_code, vDeltaKolmogorov):
+    print('Processing CDF: zzloggumbel...')  # Only for console
+    n = len(dfx[x])
+    yn = gumbel_yn(n)
+    sn = gumbel_sn(n, yn)
+    scale = math.sqrt(6) * np.std(np.log(dfx[x])) / math.pi
+    loc = np.mean(np.log(dfx[x])) - yn * scale
+    dfx['zzloggumbel'] = np.exp(-np.exp(-(np.log(dfx[x]) - loc) / scale))  ## zzloggumbel: zz used to put this manual distribution at the end of the tables
+    if low_extreme:
+        x_extreme = np.exp(loc - np.log(-np.log(1 / df_tr.tr)) * scale)
+    else:
+        x_extreme = np.exp(loc - np.log(-np.log(1 - 1 / df_tr.tr)) * scale)
+    df_tr['zzloggumbel'] = x_extreme
+    dfx['loggumbel_pdf'] = 0  # <<<<<<<<<<<<<<<<<< pdf not calculated
+    vDeltaKolmogorovData = [station_code, '', '', 0.0, 0.0, '', '', n, loc, scale, yn, sn, '', '']
+    vDeltaKolmogorov.loc[len(vDeltaKolmogorov)] = vDeltaKolmogorovData  # Add the results as a new record
 
 
 # Function for print and show results in a log file
