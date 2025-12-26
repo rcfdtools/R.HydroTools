@@ -104,7 +104,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['rayleigh', 2, 'MM', 'Rayleigh', True],
                   ['rel_breitwigner', 3, 'MLE', 'Relativistic Breit-Wigner', False],
                   ['rice', 3, 'MLE', 'Rice', True],
-                  ['recipinvgauss', 3, 'MLE', 'Reciprocal inverse Gaussian', True],
+                  ['recipinvgauss', 3, 'MLE', 'Reciprocal inverse Gaussian', False],
                   ['semicircular', 2, 'MM', 'Semicircular', False],
                   ['studentized_range', 4, 'MLE', 'Studentized range', False],  # Check: don't converge
                   ['t', 3, 'MLE', 'Student’s t', True],
