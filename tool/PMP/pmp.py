@@ -27,11 +27,11 @@ app_version = 'v20251225'
 input_path = 'dataset/pmax24h_in/'  # Your local input file folder
 ouput_path = 'dataset/pmax24h_out/'  # Your local output file folder
 station_catalog_file = 'dataset/CNE_IDEAM.xls' # CNE catalog for stations info
-station_dataset_file = input_path + 'test.csv' # Stations dataset
+station_dataset_file = input_path + 'conventional_cesarcolombia_1970_2021.csv' # Stations dataset
 parameter_name = 'rain, Pmax24h'  # rain, flow
 parameter_units = '($mm/d$)'  # ($mm/d$), ($m^3/s$)
-date_min = 1990 # Minimum year to eval til year_max
-date_max = 2024 # Maximum year to eval since year_min
+date_min = 1970 # Minimum year to eval til year_max
+date_max = 2021 # Maximum year to eval since year_min
 label_station = 'Station' # Station column name to eval from .csv station dataset file
 label_x = 'Value'  # Value column name to eval from .csv station file
 label_date = 'Date'  # Date column name from .csv station file
@@ -80,7 +80,7 @@ edf_dist = df_edf_dist_dict['edf_dist'].unique()
 
 # Initial dataset filtering and cleaning
 df_all = pd.read_csv(station_dataset_file, delimiter=',', parse_dates=True, dtype={label_station: 'str'})  # index_col=0
-df_all = df_all[(df_all[label_date] >= date_min) & (df_all[label_date] <= date_max)] # Filter the required date range
+df_all = df_all[(df_all[label_date] >= date_min) & (df_all[label_date] <= date_max)] # Filter the required date range. &=and, |=or.
 if avoid_zeros:
     df_all = df_all[df_all[label_x] != 0]
 if avoid_nans:
