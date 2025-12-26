@@ -19,6 +19,7 @@ When the annual values contain zeros o few records, the following distributions 
 * powernorm
 * geninvgauss: doesn't converge with low values or at least 10 records
 * recipinvgauss: doesn't converge with low values or at least 10 records
+* dgamma: over PDF estimation
 
 
 High over extreme values
@@ -114,7 +115,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['chi2', 3, 'MLE', 'Chi²', True],
                   ['crystalball', 4, 'MLE', 'Crystalball', True],
                   ['gamma', 3, 'MLE', 'Gamma', True],
-                  ['dgamma', 3, 'MLE', 'Double gamma', True],
+                  ['dgamma', 3, 'MLE', 'Double gamma', False],
                   ['gengamma', 4, 'MLE', 'Generalized gamma', False],
                   ['invgamma', 3, 'MLE', 'Inverted gamma', True],
                   ['loggamma', 3, 'MLE', 'Log gamma', True],
