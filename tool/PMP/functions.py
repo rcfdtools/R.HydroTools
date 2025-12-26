@@ -268,6 +268,7 @@ edf_dist_dict = ([
                   ['edf_blom', 'EDF Blom', 'P=(m-a)/(n+1-2a)', '1958', 'The Blom formula is a specific "plotting position" formula used in hydrology and statistical analysis to estimate the empirical cumulative probability (or non-exceedance probability) of a data series. It is particularly recommended for data that are approximately normally distributed. The constant _a_ is set to 0.375 (or 3/8).'],
                   ['edf_tukey', 'EDF Tukey', 'P=(m-c)/(n+1-2c)', '1962', 'In hydrology, the Tukey formula is used as a plotting position formula to estimate the empirical probability or frequency of a flood event (or other hydrological data). The formula parameter is given as _c=0.333_ (or 1/3).'],
                   ['edf_gringorten', 'EDF Gringorten', 'P=(m-a)/(n+1-2a)', '1963', 'Gringorten plotting position formula is essential for estimating the probability and return periods of extreme events like floods and heavy rainfall. The constant _a=0.44_.'],
+                  ['edf_filliben', 'EDF Filliben', 'P=(m-0.3175)/(n+0.365)', '1975', 'The specific values of the constants \(0.3175\) (often denoted as \(\alpha \)) and \(0.365\) are derived from a method proposed by James J. Filliben in a 1975 paper. This particular formula is the mean value of the \(i\)-th order statistic of the normal distribution and is considered a robust and effective plotting position formula for the normal probability plot correlation coefficient test for normality.'],
                   ['edf_jenkinson', 'EDF Jenkinson', 'P=(m-a)/(n+b)', '1977', 'The Jenkinson formula in hydrology is an empirical plotting position formula used to estimate the non-exceedance probability _(P)_ or return period _(T)_ of a given ordered observation within a sample. It is a widely used method in the frequency analysis of extreme events such as floods and rainfall, as it provides a distribution-free way to plot data. _a≈0.31_ and _b≈0.38_ are constants derived to approximate the median of the probability distribution for the given rank.'],
                   ['edf_cunnane', 'EDF Cunnane', 'P=(m-b)/(n+1-2b)', '1978', 'Cunnane´s work in statistical hydrology has focused on the performance and evaluation of different probability distributions (such as GEV, Gumbel, Lognormal) for flood frequency estimation. _b_ is a constant, typically set to 0.4.'],
                   ['edf_adamowski', 'EDF Adamowski', 'P=(m-0.25)/(n+0.5)', '1981', 'The Adamowski formula in hydrology refers to a specific plotting position formula used for estimating the non-parametric empirical distribution of hydrological events (like flood peaks) to calculate their return periods. This formula provides an alternative to traditional parametric methods (like the Gumbel or Log Pearson Type III distributions). ']
@@ -290,6 +291,8 @@ def pdist_empirical(dfx, edf, x):
         dfx['empirical'] = (3*dfx['m']-1) / (3*len(dfx[x]) + 1)
     elif edf == 'edf_gringorten':  # Year 1963
         dfx['empirical'] = (dfx['m']-0.44) / (len(dfx[x]) + 0.12)
+    elif edf == 'edf_filliben':  # Year 1975
+        dfx['empirical'] = (dfx['m'] - 0.3175) / (len(dfx[x]) + 0.365)
     elif edf == 'edf_jenkinson':  # Year 1977
         dfx['empirical'] = (dfx['m']-0.31) / (len(dfx[x]) + 0.38)
     elif edf == 'edf_cunnane':  # Year 1978
