@@ -35,7 +35,7 @@ label_date = 'Date'  # Date column name from .csv station file
 label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
-create_plot = True  # Creates and save plots into files
+create_plot = False  # Creates and save plots into files
 show_plot = False  # Show plot on Python screen console
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
 color_line_plot = 'black' # green
@@ -206,7 +206,8 @@ for station in stations:
     funcs.print_log(file_log, f'\n\n> **shape** (Shape parameters): Refers to parameters that define the specific form of a probability distribution, distinct from its location (loc) and scale (scale). These parameters are required arguments for most distribution functions. For example, a normal (Gaussian) distribution is fully defined by its location (mean) and scale (standard deviation), so it has no specific shape parameters beyond loc and scale. However, other distributions have intrinsic properties that need specification, as Gamma distribution that takes a shape parameter, often named $a$ or $alpha$.')
     if pdist_gumbel_on: funcs.pdist_gumbel(df, x, ddof, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     if pdist_loggumbel_on: funcs.pdist_loggumbel(df, x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
-    funcs.print_log(file_log, f'\n\n\n### 0. Cumulative distribution values - CDF ({dp_evaluated} evalated, ordered by x ascending) \n\n{df.to_markdown()}\n\n')
+    if pdist_logarithmic_on: dp_evaluated_txt = 'including $log(f(x))$'
+    funcs.print_log(file_log, f'\n\n\n### 0. Cumulative distribution values - CDF ({dp_evaluated} evaluated {dp_evaluated_txt}, ordered by x ascending) \n\n{df.to_markdown()}\n\n')
 
     # Evaluation for each empirical distribution function
     dp_best_of_best = pd.DataFrame()
@@ -235,7 +236,7 @@ for station in stations:
         # Kolmogorov-Smirnov test & best fit ################ <<<<<<<<<<<<<<<<<<<<<<<< Check
         idk = 0
         #vDeltaKolmogorov_filter = vDeltaKolmogorov[vDeltaKolmogorov['p_dist'].str.startswith('log', na=False)]
-        print(f'\n\nDataset df for Kolmogorov:\n{df.to_markdown()}')  ################ <<<<<<<<<<<<<<<<<<<<<<<< Check
+        #print(f'\n\nDataset df for Kolmogorov:\n{df.to_markdown()}')  ################ <<<<<<<<<<<<<<<<<<<<<<<< Check
         for i in df_l_pdist_scipy['p_dist']:
             funcs.fTestKolmogorov(df, i, idk, emp, vDeltaKolmogorov)
             idk += 1
@@ -255,8 +256,8 @@ for station in stations:
         funcs.print_log(file_log, f'\n**{num_inc}.1. Empirical values**\n')
         funcs.print_log(file_log, (df[['date', 'x', 'm', 'empirical_dist', 'empirical', 'empirical_tr']].transpose().to_markdown()), center_div=True)
         vDeltaKolmogorov['best_fit_sort'] = vDeltaKolmogorov.index+1
-        funcs.print_log(file_log, f'\n**{num_inc}.2. Parameters & Kolmogorov-Smirnov fit test (sorted by Δ)**\n\n')
-        funcs.print_log(file_log, f'{vDeltaKolmogorov[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown()}', center_div=True)
+        funcs.print_log(file_log, f'\n**{num_inc}.2. Kolmogorov-Smirnov fit test (sorted by Δ)**\n\n')
+        funcs.print_log(file_log, f'{vDeltaKolmogorov[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].transpose().to_markdown()}', center_div=True)
         #funcs.print_log(file_log, f'\n**{num_inc}.2. Parameters & Kolmogorov-Smirnov fit test (sorted by Δ)**\n\n%s\n' % vDeltaKolmogorov[['empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3', 'best_fit', 'best_fit_sort']].to_markdown())
         dp_best = vDeltaKolmogorov[vDeltaKolmogorov.best_fit == 1]
         dp_best = dp_best.reset_index(drop=True)
@@ -334,7 +335,7 @@ for station in stations:
     dp_best_of_best.index.name = 'id'
     dp_best_of_best['best_fit_sort'] = dp_best_of_best.index+1
     best_of_best_p_dist = dp_best_of_best[dp_best_of_best['best_fit_sort']==1]['p_dist'][0]
-    print(f'>>>>>>>>>>>>>>>>> Best of best: {best_of_best_p_dist}')
+    #print(f'>>>>>>>>>>>>>>>>> Best of best: {best_of_best_p_dist}')
 
     # Plot multiple extreme values over return periods Tr (graph 4)
     if create_plot:
@@ -392,10 +393,10 @@ for station in stations:
 
     # Best CDF fit & Estimate extreme values for specific return periods - Tr
     funcs.print_log(file_log, '\n## C. Best fit & Estimate extreme values for specific return periods - Tr\n\n')
-    print(df_tr.columns)
+    #print(df_tr.columns)
     df_tr.drop('empirical_dist', axis=1, inplace=True)
     df_tr.index.name = 'id'
-    dp_best_of_best.to_csv(f'{ouput_path}table/bestfit_{station_code}.csv', index=False)
+    dp_best_of_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_csv(f'{ouput_path}table/bestfit_{station_code}.csv', index=False)
     df_tr.to_csv(f'{ouput_path}table/extreme_{station_code}.csv', index=False)
     funcs.print_log(file_log,f'\n### 1. Best fit (ordered by delta Δ)\n')
     funcs.print_log(file_log,f'{dp_best_of_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown()}', center_div=True)
