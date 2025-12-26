@@ -207,7 +207,7 @@ for station in stations:
     if pdist_gumbel_on: funcs.pdist_gumbel(df, x, ddof, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     if pdist_loggumbel_on: funcs.pdist_loggumbel(df, x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     if pdist_logarithmic_on: dp_evaluated_txt = 'and including $log(f(x))$'
-    funcs.print_log(file_log, f'\n\n\n### 0. Cumulative distribution values - CDF ({dp_evaluated} evaluated)\n\n> Ordered by x ascending {dp_evaluated_txt}) \n\n{df.to_markdown()}\n\n')
+    funcs.print_log(file_log, f'\n\n\n### 0. Cumulative distribution values - CDF ({dp_evaluated} evaluated)\n\n> Ordered by x ascending {dp_evaluated_txt}. \n\n{df.to_markdown()}\n\n')
 
     # Evaluation for each empirical distribution function
     dp_best_of_best = pd.DataFrame()
