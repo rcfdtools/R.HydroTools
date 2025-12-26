@@ -23,22 +23,22 @@ pd.set_option('display.width', None)
 
 
 # General setup
-app_version = 'v20251225'
+app_version = 'v20251226'
 input_path = 'dataset/pmax24h_in/'  # Your local input file folder
 ouput_path = 'dataset/pmax24h_out/'  # Your local output file folder
 station_catalog_file = 'dataset/CNE_IDEAM.xls' # CNE catalog for stations info
-station_dataset_file = input_path + 'conventional_cesarcolombia_1970_2021.csv' # Stations dataset
+station_dataset_file = input_path + 'automatic_colombia_2003_2024.csv' # Stations dataset
 parameter_name = 'rain, Pmax24h'  # rain, flow
 parameter_units = '($mm/d$)'  # ($mm/d$), ($m^3/s$)
-date_min = 1970 # Minimum year to eval til year_max
-date_max = 2021 # Maximum year to eval since year_min
+date_min = 2003 # Minimum year to eval til year_max
+date_max = 2024 # Maximum year to eval since year_min
 label_station = 'Station' # Station column name to eval from .csv station dataset file
 label_x = 'Value'  # Value column name to eval from .csv station file
 label_date = 'Date'  # Date column name from .csv station file
 label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
-create_plot = True  # Creates, save and include plots into reports
+create_plot = False  # Creates, save and include plots into reports
 show_plot = False  # Show plot on Python screen console
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
 color_line_plot = 'black' # green
@@ -127,7 +127,7 @@ for station in stations:
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True)
     funcs.print_log(file_log, f'# Station ({parameter_name}): {station_code}' )
     funcs.print_log(file_log, f'\n\n{dictionary.dicts['pmp']}\n')
-    funcs.print_log(file_log, f'<img alt="R.GISPython" src="{fig_file0a}" width="500"></img>', center_div=True)
+    funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="500"></img>', center_div=True)
     funcs.print_log(file_log, f'\n## A. General information\n\n\n### 1. General running parameters\n\n')
     for dict_var in dictionary.general_vars:
         funcs.print_log(file_log, f'• {dict_var[1]}: _{eval(dict_var[0])}_. ')
@@ -137,7 +137,7 @@ for station in stations:
     geojson = '```geojson\n{\n  "type": "Feature",\n  "geometry": {\n    "type": "Point", \n    "coordinates": ['+str(point_longitude)+', '+str(point_latitude)+']\n  }, \n  "properties": {\n    "Name": "'+station+'"\n  }\n}\n```'
     funcs.print_log(file_log, f'{geojson}', center_div=True)
     funcs.print_log(file_log, f'\n### 3. Discrete values table and plot\n\n{df[[label_date, label_x, f'{label_x}_initial', 'count', 'mean', 'std', 'zscore']].transpose().to_markdown()}\n')
-    if create_plot: funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="600"></img>' % fig_file0, center_div=True)
+    if create_plot: funcs.print_log(file_log, '<img alt="R.HydroTools" src="%s" width="600"></img>' % fig_file0, center_div=True)
     funcs.print_log(file_log, '> If Z-Score is active, values out of range or outliers are replaced with the station mean value.\n')
 
     # Plot location map & Plot x values
@@ -255,11 +255,11 @@ for station in stations:
         dp_best = dp_best.reset_index(drop=True)
         dp_best.index.name = 'id'
         dp_best_of_best = pd.concat([dp_best, dp_best_of_best])
-        if create_plot: funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file1, center_div=True)
+        if create_plot: funcs.print_log(file_log, '<img alt="R.HydroTools" src="%s" width="1200"></img>' % fig_file1, center_div=True)
         funcs.print_log(file_log, f'\n**{num_inc}.3. Best fit**\n')
         funcs.print_log(file_log, f'{dp_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown()}', center_div=True)
-        if create_plot: funcs.print_log(file_log, f'<img alt="R.GISPython" src="{fig_file2}" width="500"></img><img alt="R.GISPython" src="{fig_file3}" width="500"></img>', center_div=True)
-        #if create_plot: funcs.print_log(file_log, '<img alt="R.GISPython" src="%s" width="1200"></img>' % fig_file4, center_div=True)
+        if create_plot: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file2}" width="500"></img><img alt="R.HydroTools" src="{fig_file3}" width="500"></img>', center_div=True)
+        #if create_plot: funcs.print_log(file_log, '<img alt="R.HydroTools" src="%s" width="1200"></img>' % fig_file4, center_div=True)
         num_inc += 1
 
         # Plot analysis graphs
@@ -397,7 +397,7 @@ for station in stations:
     funcs.print_log(file_log,f'{dictionary.dicts['tr']}')
     funcs.print_log(file_log,'\n\n> risk_rate: assuming the return period as the project useful life.')
     funcs.print_log(file_log,f'\n\n{df_tr.to_markdown()}\n')
-    if create_plot: funcs.print_log(file_log, f'<img alt="R.GISPython" src="{fig_file4}" width="1200"></img>', center_div=True)
-    if create_plot: funcs.print_log(file_log, f'<img alt="R.GISPython" src="{fig_file5}" width="500"></img><img alt="R.GISPython" src="{fig_file6}" width="500"></img>', center_div=True)
+    if create_plot: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file4}" width="1200"></img>', center_div=True)
+    if create_plot: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file5}" width="500"></img><img alt="R.HydroTools" src="{fig_file6}" width="500"></img>', center_div=True)
     funcs.print_log(file_log, f'\n<sub>{dictionary.dicts['disclaimer']}</sub>')
     #print(df.to_csv(index=False))
