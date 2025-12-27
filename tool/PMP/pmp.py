@@ -31,6 +31,7 @@ station_catalog_file = 'dataset/CNE_IDEAM.xls' # CNE catalog for stations info
 station_catalog_columns_drop = ['OBSERVACION', 'SUBRED'] # Dropped columns from CNE
 parameter_name = 'rain, Pmax24h'  # rain, flow
 parameter_units = '($mm/d$)'  # ($mm/d$), ($m^3/s$)
+parameter_title = 'PMP'
 date_min = 1900 # Minimum year to eval til year_max ●
 date_max = 2024 # Maximum year to eval since year_min ●
 label_station = 'Station' # Station column name to eval from .csv station dataset file
@@ -127,7 +128,7 @@ for station in stations:
     bing_map_url = f'https://www.bing.com/maps?cp={point_latitude}~{point_longitude}&lvl=18'
     apple_map_url = f'https://maps.apple.com/frame?center={point_latitude}%2C{point_longitude}&span=0.003%2C0.006'
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True)
-    funcs.print_log(file_log, f'# PMP Station ({parameter_name}): {station_code}' )
+    funcs.print_log(file_log, f'# {parameter_title} Station ({parameter_name}): {station_code}' )
     funcs.print_log(file_log, f'\n\n{dictionary.dicts['pmp']}\n')
     funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="500"></img>', center_div=True)
     funcs.print_log(file_log, f'\n## A. General information\n\n\n### 1. General running parameters\n\n')
