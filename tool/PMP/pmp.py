@@ -131,8 +131,8 @@ for station in stations:
     funcs.print_log(file_log, f'\n## A. General information\n\n\n### 1. General running parameters\n\n')
     for dict_var in dictionary.general_vars:
         funcs.print_log(file_log, f'• {dict_var[1]}: _{eval(dict_var[0])}_. ')
-    funcs.print_log(file_log, f'\n\n> {dictionary.dicts['ddof']}')
     funcs.print_log(file_log, f'[:file_folder:Dataset file.](../../{station_dataset_file})')
+    funcs.print_log(file_log, f'\n\n> {dictionary.dicts['ddof']}')
     funcs.print_log(file_log, f'\n\n\n### 2. Station info and location\n\n{df_station_info.to_markdown()}\n')
     funcs.print_log(file_log, f'Map location in: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url})', center_div=True)
     geojson = '```geojson\n{\n  "type": "Feature",\n  "geometry": {\n    "type": "Point", \n    "coordinates": ['+str(point_longitude)+', '+str(point_latitude)+']\n  }, \n  "properties": {\n    "Name": "'+station+'"\n  }\n}\n```'
@@ -204,8 +204,8 @@ for station in stations:
     funcs.print_log(file_log, f'\n>\n> {dictionary.dicts['shape']}')
     if pdist_logarithmic_on: dp_evaluated_txt = 'and calculating $log(f(x))$ separately'
     funcs.print_log(file_log, f'\n\n\n### 0. Cumulative distribution values - CDF ({dp_evaluated} evaluated)\n\n')
-    funcs.print_log(file_log, f'> {dictionary.dicts['cdf']}\n\nOrdered by x ascending {dp_evaluated_txt}.')
-    funcs.print_log(file_log, f'\n\n{df.to_markdown()}\n\n')
+    funcs.print_log(file_log, f'{dictionary.dicts['cdf']}\n')
+    funcs.print_log(file_log, f'CDF ordered by x ascending {dp_evaluated_txt}\n{df.to_markdown()}\n\n', center_div=True)
 
     # Evaluation for each empirical distribution function
     dp_best_of_best = pd.DataFrame()
