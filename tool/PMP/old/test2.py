@@ -8,6 +8,17 @@ from scipy.stats import gumbel_l, gumbel_r
 import numpy as np
 from scipy.stats import pearson3
 
+
+# Join multiple .csv files
+folder_path = '../dataset/pmax24h_out/table/'
+folder_output = ''
+extension = 'csv'
+all_filenames = [i for i in glob.glob(os.path.join(folder_path, 'bestfit_*.{}'.format(extension)))]
+combined_csv_df = pd.concat([pd.read_csv(f) for f in all_filenames], ignore_index=True)
+combined_csv_df.to_csv(f'{folder_output}bestfit.csv', index=False, encoding='utf-8')
+print(f'Successfully combined {len(all_filenames)} files into combined_output.csv')
+
+
 # Pandas dataset sample
 '''
 station_label = 'Station'
@@ -48,16 +59,6 @@ ax.annotate(
 )
 plt.show()
 '''
-
-# Join multiple .csv files
-folder_path = '../dataset/pmax24h_out/table/'
-folder_output = ''
-extension = 'csv'
-all_filenames = [i for i in glob.glob(os.path.join(folder_path, 'bestfit_*.{}'.format(extension)))]
-combined_csv_df = pd.concat([pd.read_csv(f) for f in all_filenames], ignore_index=True)
-combined_csv_df.to_csv(f'{folder_output}bestfit.csv', index=False, encoding='utf-8')
-print(f'Successfully combined {len(all_filenames)} files into combined_output.csv')
-
 
 # Gumbel log cumulative distribution function (logcdf) with scipy.stats
 '''
