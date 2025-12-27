@@ -50,15 +50,14 @@ plt.show()
 '''
 
 # Join multiple .csv files
-'''
-folder_path = 'dataset/pmax24h_out/table/'
-folder_output = 'old/'
+folder_path = '../dataset/pmax24h_out/table/'
+folder_output = ''
 extension = 'csv'
 all_filenames = [i for i in glob.glob(os.path.join(folder_path, 'bestfit_*.{}'.format(extension)))]
 combined_csv_df = pd.concat([pd.read_csv(f) for f in all_filenames], ignore_index=True)
 combined_csv_df.to_csv(f'{folder_output}bestfit.csv', index=False, encoding='utf-8')
 print(f'Successfully combined {len(all_filenames)} files into combined_output.csv')
-'''
+
 
 # Gumbel log cumulative distribution function (logcdf) with scipy.stats
 '''
@@ -82,6 +81,7 @@ print(f'LogCDF (custom params): {logcdf_custom}')
 
 # Estimate the 100-year flood event (Annual Exceedance Probability AEP = 0.01 or 1% chance) with Log-Pearson3
 # Example data (replace with your actual data)
+'''
 data = np.array([100, 250, 500, 800, 1200, 1500, 2000, 3000, 4500, 6000])
 AEP_100yr = 1/50 # Return period Tr = 100
 print(f'Estimate the 100-year flood event (Annual Exceedance Probability AEP = 0.01 or 1% chance)\n\nPearson3\nFlow data: {data}')
@@ -102,3 +102,4 @@ log_flood_100yr = pearson3.ppf(1 - AEP_100yr, shape, loc=loc, scale=scale)
 # Convert back to original units using np.exp()
 flood_100yr = np.exp(log_flood_100yr)
 print(f"Estimated 100-year flood (original units): {flood_100yr}")
+'''
