@@ -26,19 +26,19 @@ pd.set_option('display.width', None)
 app_version = 'v20251226'
 input_path = 'dataset/pmax24h_in/'  # Your local input file folder
 ouput_path = 'dataset/pmax24h_out/'  # Your local output file folder
-station_catalog_file = 'dataset/CNE_IDEAM.xls' # CNE catalog for stations info
-station_dataset_file = input_path + 'automatic_colombia_2003_2024.csv' # Stations dataset
+station_catalog_file = 'dataset/CNE_IDEAM.xls' # CNE catalog for stations info ●
+station_dataset_file = input_path + 'test.csv' # Stations dataset
 parameter_name = 'rain, Pmax24h'  # rain, flow
 parameter_units = '($mm/d$)'  # ($mm/d$), ($m^3/s$)
-date_min = 2003 # Minimum year to eval til year_max
-date_max = 2024 # Maximum year to eval since year_min
+date_min = 1900 # Minimum year to eval til year_max ●
+date_max = 2024 # Maximum year to eval since year_min ●
 label_station = 'Station' # Station column name to eval from .csv station dataset file
 label_x = 'Value'  # Value column name to eval from .csv station file
 label_date = 'Date'  # Date column name from .csv station file
 label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
-create_plot = False  # Creates, save and include plots into reports
+create_plot = False  # Creates, save and include plots into reports ●
 show_plot = False  # Show plot on Python screen console
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
 color_line_plot = 'black' # green
@@ -50,8 +50,8 @@ if not show_warnings: warnings.filterwarnings('ignore')
 plot_legend_ncol = 3  # Columns on plot legend, '' for autofit
 ddof = 1.00  # Standard deviation normalized
 runtime = datetime.now()
-minimum_sample = 5 # Exclude a station when doesn't have the minimum data sample (0 means any)
-zscore = 3.5 # Z-Score threshold to adjust a value, 0 means disable
+minimum_sample = 5 # Exclude a station when doesn't have the minimum data sample (0 means any) ●
+zscore = 3.5 # Z-Score threshold to adjust a value, 0 means disable ●
 avoid_zeros = True # Exclude dataframe zeros, e.g. rain = 0
 avoid_nans = True # Exclude null values
 python_version = platform.python_version()
@@ -131,6 +131,7 @@ for station in stations:
     funcs.print_log(file_log, f'\n## A. General information\n\n\n### 1. General running parameters\n\n')
     for dict_var in dictionary.general_vars:
         funcs.print_log(file_log, f'• {dict_var[1]}: _{eval(dict_var[0])}_. ')
+    funcs.print_log(file_log, f'\n\n> {dictionary.dicts['ddof']}')
     funcs.print_log(file_log, f'[:file_folder:Dataset file.](../../{station_dataset_file})')
     funcs.print_log(file_log, f'\n\n\n### 2. Station info and location\n\n{df_station_info.to_markdown()}\n')
     funcs.print_log(file_log, f'Map location in: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url})', center_div=True)
@@ -202,7 +203,9 @@ for station in stations:
     funcs.print_log(file_log, f'\n>\n> {dictionary.dicts['scale']}')
     funcs.print_log(file_log, f'\n>\n> {dictionary.dicts['shape']}')
     if pdist_logarithmic_on: dp_evaluated_txt = 'and calculating $log(f(x))$ separately'
-    funcs.print_log(file_log, f'\n\n\n### 0. Cumulative distribution values - CDF ({dp_evaluated} evaluated)\n\n> Ordered by x ascending {dp_evaluated_txt}. \n\n{df.to_markdown()}\n\n')
+    funcs.print_log(file_log, f'\n\n\n### 0. Cumulative distribution values - CDF ({dp_evaluated} evaluated)\n\n')
+    funcs.print_log(file_log, f'> {dictionary.dicts['cdf']}\n\nOrdered by x ascending {dp_evaluated_txt}.')
+    funcs.print_log(file_log, f'\n\n{df.to_markdown()}\n\n')
 
     # Evaluation for each empirical distribution function
     dp_best_of_best = pd.DataFrame()
