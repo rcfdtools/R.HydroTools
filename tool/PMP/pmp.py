@@ -26,21 +26,21 @@ pd.set_option('display.width', None)
 app_version = 'v20251226'
 input_path = 'dataset/pmax24h_in/'  # Your local input file folder
 ouput_path = 'dataset/pmax24h_out/'  # Your local output file folder
-station_dataset_file = input_path + 'test.csv' # Stations dataset ●
+station_dataset_file = input_path + 'conventional_cesarcolombia_1959_2022.csv' # Stations dataset ●
 station_catalog_file = 'dataset/CNE_IDEAM.xls' # CNE catalog for stations info
 station_catalog_columns_drop = ['OBSERVACION', 'SUBRED'] # Dropped columns from CNE
 parameter_name = 'rain, Pmax24h'  # rain, flow
 parameter_units = '($mm/d$)'  # ($mm/d$), ($m^3/s$)
 parameter_title = 'PMP'
-date_min = 1900 # Minimum year to eval til year_max ●
-date_max = 2024 # Maximum year to eval since year_min ●
+date_min = 1959 # Minimum year to eval til year_max ●
+date_max = 2022 # Maximum year to eval since year_min ●
 label_station = 'Station' # Station column name to eval from .csv station dataset file
 label_x = 'Value'  # Value column name to eval from .csv station file
 label_date = 'Date'  # Date column name from .csv station file
 label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
-create_plot = False  # Creates, save and include plots into reports ●
+create_plot = True  # Creates, save and include plots into reports ●
 show_plot = False  # Show plot on Python screen console
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
 color_line_plot = 'black' # green
@@ -407,3 +407,5 @@ for station in stations:
     if create_plot: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file5}" width="500"></img><img alt="R.HydroTools" src="{fig_file6}" width="500"></img>', center_div=True)
     funcs.print_log(file_log, f'\n<sub>{dictionary.dicts['disclaimer']}</sub>')
     #print(df.to_csv(index=False))
+
+print(f'Stations in dataset: {stations}\n')
