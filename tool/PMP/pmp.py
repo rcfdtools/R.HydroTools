@@ -26,8 +26,9 @@ pd.set_option('display.width', None)
 app_version = 'v20251226'
 input_path = 'dataset/pmax24h_in/'  # Your local input file folder
 ouput_path = 'dataset/pmax24h_out/'  # Your local output file folder
-station_catalog_file = 'dataset/CNE_IDEAM.xls' # CNE catalog for stations info ●
-station_dataset_file = input_path + 'test.csv' # Stations dataset
+station_dataset_file = input_path + 'test.csv' # Stations dataset ●
+station_catalog_file = 'dataset/CNE_IDEAM.xls' # CNE catalog for stations info
+station_catalog_columns_drop = ['OBSERVACION', 'SUBRED'] # Dropped columns from CNE
 parameter_name = 'rain, Pmax24h'  # rain, flow
 parameter_units = '($mm/d$)'  # ($mm/d$), ($m^3/s$)
 date_min = 1900 # Minimum year to eval til year_max ●
@@ -103,6 +104,7 @@ stations = df_all[label_station].unique()
 print(f'Stations in dataset: {stations}\n')
 data_types = {label_station_catalog: 'str', label_latitude: 'float64', label_longitude: 'float64'}
 df_catalog = pd.read_excel(station_catalog_file, sheet_name='CNE', parse_dates=True, dtype=data_types) # , dtype=data_types
+df_catalog = df_catalog.drop(columns=station_catalog_columns_drop)
 # print(df_catalog.dtypes)
 for station in stations:
     print(f'\n>>>>>>>>>>>>>>>>>>>> Station: {station} <<<<<<<<<<<<<<<<<<<<<<<<<\n\n')
@@ -139,7 +141,7 @@ for station in stations:
     funcs.print_log(file_log, f'{geojson}', center_div=True)
     funcs.print_log(file_log, f'\n### 3. Discrete values table and plot\n\n{df[[label_date, label_x, f'{label_x}_initial', 'count', 'mean', 'std', 'zscore']].transpose().to_markdown()}\n')
     if create_plot: funcs.print_log(file_log, '<img alt="R.HydroTools" src="%s" width="600"></img>' % fig_file0, center_div=True)
-    funcs.print_log(file_log, '> If Z-Score is active, values out of range or outliers are replaced with the station mean value.\n')
+    funcs.print_log(file_log, f'\n> {dictionary.dicts['value_initial']}\n')
 
     # Plot location map & Plot x values
     # Location map always (graph 0a)
@@ -197,7 +199,7 @@ for station in stations:
             print('Processing LogCDF: %s...' % df_l_pdist_scipy['p_dist'][i])  # Only for console
             dp_evaluated += 1
             funcs.pdist_scipy_log(df, df_l_pdist_scipy['p_dist'][i], df_l_pdist_scipy['n_parameter'][i], df_l_pdist_scipy['fit_method'][i], df_l_pdist_scipy['label'][i], x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
-    funcs.print_log(file_log, f'Distributions parameters\n{vDeltaKolmogorov[['station', 'p_dist', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3']].to_markdown()}', center_div=True)
+    funcs.print_log(file_log, f'Distributions parameters from station values\n{vDeltaKolmogorov[['station', 'p_dist', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3']].to_markdown()}', center_div=True)
     #print(f'\n\n**Distributions parameters**\n{vDeltaKolmogorov.to_markdown()}')
     funcs.print_log(file_log, f'> {dictionary.dicts['loc']}')
     funcs.print_log(file_log, f'\n>\n> {dictionary.dicts['scale']}')
