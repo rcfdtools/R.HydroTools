@@ -12,7 +12,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 plt.style.use('grayscale')
 from matplotlib.pyplot import figure
-import tabulate  # required for print tables in Markdown using pandas
+import tabulate # required for print tables in Markdown using pandas
 import numpy as np
 import pandas as pd
 pd.set_option('display.max_colwidth', None)
@@ -24,34 +24,34 @@ pd.set_option('display.width', None)
 
 # General setup
 app_version = 'v20251228'
-input_path = 'dataset/pmax24h_in/'  # Your local input file folder
-ouput_path = 'dataset/pmax24h_out/'  # Your local output file folder
-station_dataset_file = input_path + 'automatic_colombia_2003_2024.csv' # Stations dataset ●
+input_path = 'dataset/pmax24h_in/' # Your local input file folder
+ouput_path = 'dataset/pmax24h_out/' # Your local output file folder
+station_dataset_file = input_path + 'automatic_test.csv' # Stations dataset ●
 station_catalog_file = 'dataset/CNE_IDEAM.xls' # CNE catalog for stations info
 station_catalog_columns_drop = ['OBSERVACION', 'SUBRED'] # Dropped columns from CNE
-parameter_name = 'rain, Pmax24h'  # rain, flow
-parameter_units = '($mm/d$)'  # ($mm/d$), ($m^3/s$)
+parameter_name = 'rain, Pmax24h' # rain, flow
+parameter_units = '($mm/d$)' # ($mm/d$), ($m^3/s$)
 parameter_title = 'PMP'
 date_min = 1900 # Minimum year to eval til year_max ●
 date_max = 2024 # Maximum year to eval since year_min ●
 label_station = 'Station' # Station column name to eval from .csv station dataset file
-label_x = 'Value'  # Value column name to eval from .csv station file
-label_date = 'Date'  # Date column name from .csv station file
+label_x = 'Value' # Value column name to eval from .csv station file
+label_date = 'Date' # Date column name from .csv station file
 label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
-create_plot = False  # Creates, save and include plots into reports ●
-show_plot = False  # Show plot on Python screen console
-plot_only_fit = True  # Plot only fit distributions with Δo > Δ
+create_plot = True # Creates, save and include plots into reports ●
+show_plot = False # Show plot on Python screen console
+plot_only_fit = True # Plot only fit distributions with Δo > Δ
 print_on_screen = False
 color_line_plot = 'black' # green
-dpi = 96  # Graph plot resolution
-show_warnings = False  # Show warnings on screen
-low_extreme = False  # Eval low extreme values, if False, evaluates high extreme values
+dpi = 96 # Graph plot resolution
+show_warnings = False # Show warnings on screen
+low_extreme = False # Eval low extreme values, if False, evaluates high extreme values
 pdist_logarithmic_on = True # Eval every SciPy distribution as logarithmic
 if not show_warnings: warnings.filterwarnings('ignore')
-plot_legend_ncol = 3  # Columns on plot legend, '' for autofit
-ddof = 1.00  # Standard deviation normalized
+plot_legend_ncol = 3 # Columns on plot legend, '' for autofit
+ddof = 1.00 # Standard deviation normalized
 runtime = datetime.now()
 minimum_sample = 5 # Exclude a station when doesn't have the minimum data sample (0 means any) ●
 zscore_max = 3.5 # Z-Score maximum threshold to adjust a value, 0 means disable ●
@@ -133,7 +133,7 @@ for station in stations:
     apple_map_url = f'https://maps.apple.com/frame?center={point_latitude}%2C{point_longitude}&span=0.003%2C0.006'
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen = print_on_screen)
     funcs.print_log(file_log, f'# {parameter_title} Station ({parameter_name}): {station_code}', on_screen = print_on_screen)
-    funcs.print_log(file_log, f'\n\n{dictionary.dicts['pmp']}\n')
+    funcs.print_log(file_log, f'\n\n{dictionary.dicts['pmp']}\n', on_screen = print_on_screen)
     funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="500"></img>', center_div=True, on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n## A. General information\n\n\n### 1. General running parameters\n\n', on_screen = print_on_screen)
     for dict_var in dictionary.general_vars:
@@ -412,4 +412,4 @@ for station in stations:
     funcs.print_log(file_log, f'\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
     #print(df.to_csv(index=False))
 
-print(f'Stations in dataset: {stations}\n')
+print(f'\nStations in dataset: {stations}\n')
