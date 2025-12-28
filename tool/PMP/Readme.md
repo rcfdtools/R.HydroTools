@@ -43,6 +43,7 @@ High over extreme values
 * burr12: trend to infinite
 * powerlognorm: trend to infinite
 * powernorm: trend to infinite
+* pareto: trend to infinite for datasets with lower standard deviation
 
 Horizontal trending for high return periods Tr > = 100
 
@@ -162,7 +163,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['ncx2', 4, 'MLE', 'Non-central chi-squared', False],
                   ['ncf', 5, 'MLE', 'Non-central F distribution', True],
                   ['nct', 4, 'MLE', 'Non-central Student’s t', True],
-                  ['pareto', 3, 'MLE', 'Pareto', True],
+                  ['pareto', 3, 'MLE', 'Pareto', False],
                   ['genpareto', 3, 'MLE', 'Generalized Pareto', False],
                   ['truncpareto', 4, 'MLE', 'Upper truncated Pareto', False],
                   ['lomax', 3, 'MLE', 'Lomax (Pareto of the second kind)', False],
