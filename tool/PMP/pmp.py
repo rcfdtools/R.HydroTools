@@ -27,7 +27,7 @@ pd.set_option('display.width', None)
 app_version = 'v20251228'
 input_path = 'dataset/pmax24h_in/' # Your local input file folder
 ouput_path = 'dataset/pmax24h_out/' # Your local output file folder
-station_dataset_file = input_path + 'conventional_cesarcolombia_1959_2022.csv' # Stations dataset ●
+station_dataset_file = input_path + 'automatic_test.csv' # Stations dataset ●
 station_catalog_file = 'dataset/CNE_IDEAM.xls' # CNE catalog for stations info
 station_catalog_columns_drop = ['OBSERVACION', 'SUBRED'] # Dropped columns from CNE
 parameter_name = 'rain, Pmax24h' # rain, flow
@@ -44,13 +44,15 @@ label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
 create_plot = True # Creates, save and include plots into reports ●
 show_plot = False # Show plot on Python screen console
 plot_only_fit = True # Plot only fit distributions with Δo > Δ
+plot_rounding_val = 6 # Rounding values in plots to # decimal positions ●
 print_on_screen = False
 color_line_plot = 'black' # green
 dpi = 96 # Graph plot resolution
 show_warnings = False # Show warnings on screen
 low_extreme = False # Eval low extreme values, if False, evaluates high extreme values
 pdist_logarithmic_on = True # Eval every SciPy distribution as logarithmic
-if not show_warnings: warnings.filterwarnings('ignore')
+if not show_warnings:
+    warnings.filterwarnings('ignore')
 plot_legend_ncol = 3 # Columns on plot legend, '' for autofit
 ddof = 1.00 # Standard deviation normalized
 runtime = datetime.now()
@@ -285,11 +287,11 @@ for station in stations:
                 if plot_only_fit:
                     only_fit_txt = ' (only Δo > Δ)'
                     if vDeltaKolmogorov['fit'][i] == 1:
-                        plt.plot(df[x], df[dp], lw=1, marker='o', markersize=0, alpha=0.75, label=f'{dp} (Δ: {delta})')
+                        plt.plot(df[x], df[dp], lw=1, marker='o', markersize=0, alpha=0.75, label=f'{dp} (Δ: {round(delta,plot_rounding_val)})')
                 else:
-                    plt.plot(df[x], df[dp], lw=1, marker='o', markersize=0, alpha=0.75, label=f'{dp} (Δ: {delta})')
+                    plt.plot(df[x], df[dp], lw=1, marker='o', markersize=0, alpha=0.75, label=f'{dp} (Δ: {round(delta,plot_rounding_val)})')
                     only_fit_txt = ''
-            plt.scatter(df[x], df['empirical'], color='black', facecolors='darkgray', s=24, label=f'{emp} (Δo: {vDeltaKolmogorov['deltao'][0]})')
+            plt.scatter(df[x], df['empirical'], color='black', facecolors='darkgray', s=24, label=f'{emp} (Δo: {round(vDeltaKolmogorov['deltao'][0], plot_rounding_val)})')
             plt.title(f'Cumulative distribution function CDF{only_fit_txt}')
             plt.xlabel(parameter_name + ' ' + parameter_units)
             plt.ylabel('CDF')
@@ -302,8 +304,8 @@ for station in stations:
             plt.close()
 
             # Plot empirical vs. best fit (graph 2)
-            plt.plot(df[x], df[dp_best['p_dist'][0]], color=color_line_plot, lw=1.5, marker='o', markersize=0, label=f'{dp_best['p_dist'][0]} (Δ: {dp_best['delta'][0]})')
-            plt.scatter(df[x], df['empirical'], color='black', facecolors='darkgray', s=24, label=f'{emp} (Δo: {dp_best['deltao'][0]})')
+            plt.plot(df[x], df[dp_best['p_dist'][0]], color=color_line_plot, lw=1.5, marker='o', markersize=0, label=f'{dp_best['p_dist'][0]} (Δ: {round(dp_best['delta'][0], plot_rounding_val)})')
+            plt.scatter(df[x], df['empirical'], color='black', facecolors='darkgray', s=24, label=f'{emp} (Δo: {round(dp_best['deltao'][0], plot_rounding_val)})')
             plt.title('Cumulative distribution function CDF (Best fit)')
             plt.xlabel(parameter_name + ' ' + parameter_units)
             plt.ylabel('CDF')
@@ -351,11 +353,11 @@ for station in stations:
                 only_fit_txt = ' (only Δo > Δ)'
                 if vDeltaKolmogorov['fit'][i] == 1:
                     plt.plot(df_tr.tr, df_tr[dp], lw=1, marker='o', markersize=0, alpha=0.75,
-                             label=f'{dp} (Δ: {delta})')
+                             label=f'{dp} (Δ: {round(delta,plot_rounding_val)})')
             else:
                 only_fit_txt = ''
                 plt.plot(df_tr.tr, df_tr[dp], lw=1, marker='o', markersize=0, alpha=0.75,
-                         label=f'{dp} (Δ: {delta})')
+                         label=f'{dp} (Δ: {round(delta,plot_rounding_val)})')
         plt.title(f'Extreme values for specific return periods{only_fit_txt}')
         plt.xlabel('Tr ($years$)')
         plt.ylabel(parameter_name + ' ' + parameter_units)
