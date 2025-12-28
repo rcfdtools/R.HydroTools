@@ -26,7 +26,7 @@ pd.set_option('display.width', None)
 app_version = 'v20251227'
 input_path = 'dataset/pmax24h_in/'  # Your local input file folder
 ouput_path = 'dataset/pmax24h_out/'  # Your local output file folder
-station_dataset_file = input_path + 'automatic_test.csv' # Stations dataset ●
+station_dataset_file = input_path + 'conventional_cesarcolombia_1959_2022.csv' # Stations dataset ●
 station_catalog_file = 'dataset/CNE_IDEAM.xls' # CNE catalog for stations info
 station_catalog_columns_drop = ['OBSERVACION', 'SUBRED'] # Dropped columns from CNE
 parameter_name = 'rain, Pmax24h'  # rain, flow
@@ -53,8 +53,8 @@ plot_legend_ncol = 3  # Columns on plot legend, '' for autofit
 ddof = 1.00  # Standard deviation normalized
 runtime = datetime.now()
 minimum_sample = 5 # Exclude a station when doesn't have the minimum data sample (0 means any) ●
-zscore_max = 3.25 # Z-Score maximum threshold to adjust a value, 0 means disable ●
-zscore_min= -2 # Z-Score minimum threshold to adjust a value, 0 means disable ●
+zscore_max = 3.5 # Z-Score maximum threshold to adjust a value, 0 means disable ●
+zscore_min= -2.5 # Z-Score minimum threshold to adjust a value, 0 means disable ●
 avoid_zeros = True # Exclude dataframe zeros, e.g. rain = 0
 avoid_nans = True # Exclude null values
 python_version = platform.python_version()
