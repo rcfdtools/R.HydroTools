@@ -26,7 +26,7 @@ pd.set_option('display.width', None)
 app_version = 'v20251227'
 input_path = 'dataset/pmax24h_in/'  # Your local input file folder
 ouput_path = 'dataset/pmax24h_out/'  # Your local output file folder
-station_dataset_file = input_path + 'test1.csv' # Stations dataset ●
+station_dataset_file = input_path + 'automatic_test.csv' # Stations dataset ●
 station_catalog_file = 'dataset/CNE_IDEAM.xls' # CNE catalog for stations info
 station_catalog_columns_drop = ['OBSERVACION', 'SUBRED'] # Dropped columns from CNE
 parameter_name = 'rain, Pmax24h'  # rain, flow
@@ -40,7 +40,7 @@ label_date = 'Date'  # Date column name from .csv station file
 label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
-create_plot = False  # Creates, save and include plots into reports ●
+create_plot = True  # Creates, save and include plots into reports ●
 show_plot = False  # Show plot on Python screen console
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
 color_line_plot = 'black' # green
@@ -53,7 +53,8 @@ plot_legend_ncol = 3  # Columns on plot legend, '' for autofit
 ddof = 1.00  # Standard deviation normalized
 runtime = datetime.now()
 minimum_sample = 5 # Exclude a station when doesn't have the minimum data sample (0 means any) ●
-zscore = 3.5 # Z-Score threshold to adjust a value, 0 means disable ●
+zscore_max = 3.25 # Z-Score maximum threshold to adjust a value, 0 means disable ●
+zscore_min= -2 # Z-Score minimum threshold to adjust a value, 0 means disable ●
 avoid_zeros = True # Exclude dataframe zeros, e.g. rain = 0
 avoid_nans = True # Exclude null values
 python_version = platform.python_version()
@@ -93,8 +94,11 @@ df_all_stats_join = pd.merge(df_all, df_all_stats, on=label_station, how='inner'
 df_all_stats_join['zscore'] = (df_all_stats_join[label_x]-df_all_stats_join['mean'])/df_all_stats_join['std']
 df_all = df_all_stats_join
 df_all[f'{label_x}_initial'] = df_all_stats_join[label_x]
-if zscore > 0:
-    df_all[label_x] = np.where(abs(df_all['zscore']) > zscore, df_all['mean'], df_all[label_x])
+if zscore_max > 0:
+    #df_all[label_x] = np.where(abs(df_all['zscore']) > zscore, df_all['mean'], df_all[label_x])
+    df_all[label_x] = np.where(df_all['zscore'] > zscore_max, df_all['mean'], df_all[label_x])
+if zscore_min < 0:
+    df_all[label_x] = np.where(df_all['zscore'] < zscore_min, df_all['mean'], df_all[label_x])
 #print(df_all.to_markdown())
 if minimum_sample > 0:
     df_all = df_all[df_all['count'] >= minimum_sample]

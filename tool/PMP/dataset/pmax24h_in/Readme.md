@@ -3,9 +3,14 @@
 > Record with null values can't contain spaces. Python will no process de data field if it contents spaces.
 
 
-## test.csv (r.cfdtools)
+## conventional_test.csv (r.cfdtools)
 
 * Stations: 25020230, 25020260, 25020280.
+
+
+## automatic_test.csv (r.cfdtools)
+
+* Stations: 21209920, 21206930, 21195170.
 
 
 ## automatic_colombia_2003_2024.csv (r.cfdtools)

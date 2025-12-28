@@ -19,7 +19,8 @@ general_vars = ([['app_version', 'app_version'], # App control version
           ['ddof', 'Standard deviation normalized (ddof)'],
           ['tr', 'Return periods to eval in years (Tr)'],
           ['minimum_sample', 'Minimum data sample per station, 0 means any (minimum_sample)'],
-          ['zscore', 'Z-Score threshold to adjust a value, 0 means disable (zscore)'],
+          ['zscore_max', 'Z-Score maximum threshold to adjust a value, 0 means disable (zscore_max)'],
+          ['zscore_min', 'Z-Score minimum threshold to adjust a value, 0 means disable (zscore_min)'],
           ['avoid_zeros', 'Avoid zeros, e.g. rain = 0 (avoid_zeros)'],
           ['avoid_nans', 'Avoid null values (avoid_nans)']
          ])
