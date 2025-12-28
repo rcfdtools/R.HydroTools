@@ -23,10 +23,10 @@ pd.set_option('display.width', None)
 
 
 # General setup
-app_version = 'v20251227'
+app_version = 'v20251228'
 input_path = 'dataset/pmax24h_in/'  # Your local input file folder
 ouput_path = 'dataset/pmax24h_out/'  # Your local output file folder
-station_dataset_file = input_path + 'conventional_cesarcolombia_1959_2022.csv' # Stations dataset ●
+station_dataset_file = input_path + 'automatic_colombia_2003_2024.csv' # Stations dataset ●
 station_catalog_file = 'dataset/CNE_IDEAM.xls' # CNE catalog for stations info
 station_catalog_columns_drop = ['OBSERVACION', 'SUBRED'] # Dropped columns from CNE
 parameter_name = 'rain, Pmax24h'  # rain, flow
@@ -40,9 +40,10 @@ label_date = 'Date'  # Date column name from .csv station file
 label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
-create_plot = True  # Creates, save and include plots into reports ●
+create_plot = False  # Creates, save and include plots into reports ●
 show_plot = False  # Show plot on Python screen console
 plot_only_fit = True  # Plot only fit distributions with Δo > Δ
+print_on_screen = False
 color_line_plot = 'black' # green
 dpi = 96  # Graph plot resolution
 show_warnings = False  # Show warnings on screen
@@ -95,7 +96,6 @@ df_all_stats_join['zscore'] = (df_all_stats_join[label_x]-df_all_stats_join['mea
 df_all = df_all_stats_join
 df_all[f'{label_x}_initial'] = df_all_stats_join[label_x]
 if zscore_max > 0:
-    #df_all[label_x] = np.where(abs(df_all['zscore']) > zscore, df_all['mean'], df_all[label_x])
     df_all[label_x] = np.where(df_all['zscore'] > zscore_max, df_all['mean'], df_all[label_x])
 if zscore_min < 0:
     df_all[label_x] = np.where(df_all['zscore'] < zscore_min, df_all['mean'], df_all[label_x])
@@ -131,22 +131,22 @@ for station in stations:
     openstreetmap_url = f'https://www.openstreetmap.org/#map=18/{point_latitude}/{point_longitude}&layers=P'
     bing_map_url = f'https://www.bing.com/maps?cp={point_latitude}~{point_longitude}&lvl=18'
     apple_map_url = f'https://maps.apple.com/frame?center={point_latitude}%2C{point_longitude}&span=0.003%2C0.006'
-    funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True)
-    funcs.print_log(file_log, f'# {parameter_title} Station ({parameter_name}): {station_code}' )
+    funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen = print_on_screen)
+    funcs.print_log(file_log, f'# {parameter_title} Station ({parameter_name}): {station_code}', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n\n{dictionary.dicts['pmp']}\n')
-    funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="500"></img>', center_div=True)
-    funcs.print_log(file_log, f'\n## A. General information\n\n\n### 1. General running parameters\n\n')
+    funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="500"></img>', center_div=True, on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n## A. General information\n\n\n### 1. General running parameters\n\n', on_screen = print_on_screen)
     for dict_var in dictionary.general_vars:
-        funcs.print_log(file_log, f'• {dict_var[1]}: _{eval(dict_var[0])}_. ')
-    funcs.print_log(file_log, f'[:file_folder:Dataset file.](../../{station_dataset_file})')
-    funcs.print_log(file_log, f'\n\n> {dictionary.dicts['ddof']}')
-    funcs.print_log(file_log, f'\n\n\n### 2. Station info and location\n\n{df_station_info.to_markdown()}\n')
-    funcs.print_log(file_log, f'Map location in: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url})', center_div=True)
+        funcs.print_log(file_log, f'• {dict_var[1]}: _{eval(dict_var[0])}_. ', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'[:file_folder:Dataset file.](../../{station_dataset_file})', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n\n> {dictionary.dicts['ddof']}', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n\n\n### 2. Station info and location\n\n{df_station_info.to_markdown()}\n', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'Map location in: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url})', center_div=True, on_screen = print_on_screen)
     geojson = '```geojson\n{\n  "type": "Feature",\n  "geometry": {\n    "type": "Point", \n    "coordinates": ['+str(point_longitude)+', '+str(point_latitude)+']\n  }, \n  "properties": {\n    "Name": "'+station+'"\n  }\n}\n```'
-    funcs.print_log(file_log, f'{geojson}', center_div=True)
-    funcs.print_log(file_log, f'\n### 3. Discrete values table and plot\n\n{df[[label_date, label_x, f'{label_x}_initial', 'count', 'mean', 'std', 'zscore']].transpose().to_markdown()}\n')
-    if create_plot: funcs.print_log(file_log, '<img alt="R.HydroTools" src="%s" width="600"></img>' % fig_file0, center_div=True)
-    funcs.print_log(file_log, f'\n> {dictionary.dicts['value_initial']}\n')
+    funcs.print_log(file_log, f'{geojson}', center_div=True, on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n### 3. Discrete values table and plot\n\n{df[[label_date, label_x, f'{label_x}_initial', 'count', 'mean', 'std', 'zscore']].transpose().to_markdown()}\n', on_screen = print_on_screen)
+    if create_plot: funcs.print_log(file_log, '<img alt="R.HydroTools" src="%s" width="600"></img>' % fig_file0, center_div=True, on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n> {dictionary.dicts['value_initial']}\n', on_screen = print_on_screen)
 
     # Plot location map & Plot x values
     # Location map always (graph 0a)
@@ -181,15 +181,15 @@ for station in stations:
     df = df.rename(columns={x: 'x', date: 'date'})
     x = 'x'  # New value column name
     date = 'date'  # New date column name
-    funcs.print_log(file_log, f'\n\n### 4. Active continuous probability distributions from SciPy ({len(df_l_pdist_scipy.query('active == True'))} of {len(funcs.l_pdist_scipy)} available)')
-    funcs.print_log(file_log, f'\n\n{dictionary.dicts['scipy_stats']}\n')
-    funcs.print_log(file_log, f'{df_l_pdist_scipy.query('active == True').to_markdown()}', center_div=True)
-    funcs.print_log(file_log, '> **n_parameter:** # arguments & localization & scale.\n>\n> **Fit methods:** (MLE) maximum likelihood, (MM) L-moments.')
-    funcs.print_log(file_log, (f'\n>\n>**Inactive:** '))
+    funcs.print_log(file_log, f'\n\n### 4. Active continuous probability distributions from SciPy ({len(df_l_pdist_scipy.query('active == True'))} of {len(funcs.l_pdist_scipy)} available)', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n\n{dictionary.dicts['scipy_stats']}\n', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'{df_l_pdist_scipy.query('active == True').to_markdown()}', center_div=True, on_screen = print_on_screen)
+    funcs.print_log(file_log, '> **n_parameter:** # arguments & localization & scale.\n>\n> **Fit methods:** (MLE) maximum likelihood, (MM) L-moments.', on_screen = print_on_screen)
+    funcs.print_log(file_log, (f'\n>\n>**Inactive:** '), on_screen = print_on_screen)
     for inactives in df_l_pdist_scipy_inactive['p_dist'].values:
-        funcs.print_log(file_log, (f'{inactives}, '))
-    funcs.print_log(file_log, '\n\n\n## B. Probability distributions vs. Empirical distributions')
-    funcs.print_log(file_log, f'\n\n{dictionary.dicts['cpd']}\n')
+        funcs.print_log(file_log, (f'{inactives}, '), on_screen = print_on_screen)
+    funcs.print_log(file_log, '\n\n\n## B. Probability distributions vs. Empirical distributions', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n\n{dictionary.dicts['cpd']}\n', on_screen = print_on_screen)
     vDeltaKolmogorov = pd.DataFrame(columns=['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3'])
     #vDeltaKolmogorov = pd.DataFrame(columns=['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n'])
 
@@ -204,20 +204,20 @@ for station in stations:
             print('Processing LogCDF: %s...' % df_l_pdist_scipy['p_dist'][i])  # Only for console
             dp_evaluated += 1
             funcs.pdist_scipy_log(df, df_l_pdist_scipy['p_dist'][i], df_l_pdist_scipy['n_parameter'][i], df_l_pdist_scipy['fit_method'][i], df_l_pdist_scipy['label'][i], x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
-    funcs.print_log(file_log, f'Distributions parameters from station values\n{vDeltaKolmogorov[['station', 'p_dist', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3']].to_markdown()}', center_div=True)
+    funcs.print_log(file_log, f'Distributions parameters from station values\n{vDeltaKolmogorov[['station', 'p_dist', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3']].to_markdown()}', center_div=True, on_screen = print_on_screen)
     #print(f'\n\n**Distributions parameters**\n{vDeltaKolmogorov.to_markdown()}')
-    funcs.print_log(file_log, f'> {dictionary.dicts['loc']}')
-    funcs.print_log(file_log, f'\n>\n> {dictionary.dicts['scale']}')
-    funcs.print_log(file_log, f'\n>\n> {dictionary.dicts['shape']}')
+    funcs.print_log(file_log, f'> {dictionary.dicts['loc']}', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n>\n> {dictionary.dicts['scale']}', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n>\n> {dictionary.dicts['shape']}', on_screen = print_on_screen)
     if pdist_logarithmic_on: dp_evaluated_txt = 'and calculating $log(f(x))$ separately'
-    funcs.print_log(file_log, f'\n\n\n### 0. Cumulative distribution values - CDF ({dp_evaluated} evaluated)\n\n')
-    funcs.print_log(file_log, f'{dictionary.dicts['cdf']}\n')
-    funcs.print_log(file_log, f'CDF ordered by x ascending {dp_evaluated_txt}\n{df.to_markdown()}\n\n', center_div=True)
+    funcs.print_log(file_log, f'\n\n\n### 0. Cumulative distribution values - CDF ({dp_evaluated} evaluated)\n\n', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'{dictionary.dicts['cdf']}\n', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'CDF ordered by x ascending {dp_evaluated_txt}\n{df.to_markdown()}\n\n', center_div=True, on_screen = print_on_screen)
 
     # Evaluation for each empirical distribution function
     dp_best_of_best = pd.DataFrame()
     num_inc = 1
-    funcs.print_log(file_log, f'{dictionary.dicts['edf']}\n\n')
+    funcs.print_log(file_log, f'{dictionary.dicts['edf']}\n\n', on_screen = print_on_screen)
     # idk = 0 ################ <<<<<<<<<<<<<<<<<<<<<<<< Check
     for emp in edf_dist:
         fig_file1 = 'graph/' + station_code + '_' + emp + '_all.png'
@@ -227,9 +227,9 @@ for station in stations:
         fig_file5 = 'graph/' + station_code + '_extremevalues_bestfit.png'
         fig_file6 = 'graph/' + station_code + '_extremevalues_riskrate.png'
         df_edf_dist_dict_filter = df_edf_dist_dict[df_edf_dist_dict['edf_dist'] == emp]
-        funcs.print_log(file_log, f'\n### {num_inc}. Empirical - {df_edf_dist_dict_filter['edf_name'].to_string(index=False, header=False)} ({df_edf_dist_dict_filter['edf_year'].to_string(index=False, header=False)})\n')
-        funcs.print_log(file_log, f'\n{df_edf_dist_dict_filter['edf_desc'].to_string(index=False, header=False)}\n')
-        funcs.print_log(file_log, f'\n${df_edf_dist_dict_filter['edf_expression'].to_string(index=False, header=False)}$\n', center_div=True)
+        funcs.print_log(file_log, f'\n### {num_inc}. Empirical - {df_edf_dist_dict_filter['edf_name'].to_string(index=False, header=False)} ({df_edf_dist_dict_filter['edf_year'].to_string(index=False, header=False)})\n', on_screen = print_on_screen)
+        funcs.print_log(file_log, f'\n{df_edf_dist_dict_filter['edf_desc'].to_string(index=False, header=False)}\n', on_screen = print_on_screen)
+        funcs.print_log(file_log, f'\n${df_edf_dist_dict_filter['edf_expression'].to_string(index=False, header=False)}$\n', center_div=True, on_screen = print_on_screen)
 
         # Return periods & empirical values
         df_tr['empirical_dist'] = emp
@@ -255,20 +255,20 @@ for station in stations:
         vDeltaKolmogorov = vDeltaKolmogorov.sort_values(by=['delta'], ascending=True)
         vDeltaKolmogorov = vDeltaKolmogorov.reset_index(drop=True)
         vDeltaKolmogorov.index.name = 'id'
-        funcs.print_log(file_log, f'\n**{num_inc}.1. Empirical values**\n')
-        funcs.print_log(file_log, (df[['date', 'x', 'm', 'empirical_dist', 'empirical', 'empirical_tr']].transpose().to_markdown()), center_div=True)
+        funcs.print_log(file_log, f'\n**{num_inc}.1. Empirical values**\n', on_screen = print_on_screen)
+        funcs.print_log(file_log, (df[['date', 'x', 'm', 'empirical_dist', 'empirical', 'empirical_tr']].transpose().to_markdown()), center_div=True, on_screen = print_on_screen)
         vDeltaKolmogorov['best_fit_sort'] = vDeltaKolmogorov.index+1
-        funcs.print_log(file_log, f'\n**{num_inc}.2. Kolmogorov-Smirnov fit test (sorted by Δ)**\n\n')
-        funcs.print_log(file_log, f'{vDeltaKolmogorov[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].transpose().to_markdown()}', center_div=True)
+        funcs.print_log(file_log, f'\n**{num_inc}.2. Kolmogorov-Smirnov fit test (sorted by Δ)**\n\n', on_screen = print_on_screen)
+        funcs.print_log(file_log, f'{vDeltaKolmogorov[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].transpose().to_markdown()}', center_div=True, on_screen = print_on_screen)
         #funcs.print_log(file_log, f'\n**{num_inc}.2. Parameters & Kolmogorov-Smirnov fit test (sorted by Δ)**\n\n%s\n' % vDeltaKolmogorov[['empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3', 'best_fit', 'best_fit_sort']].to_markdown())
         dp_best = vDeltaKolmogorov[vDeltaKolmogorov.best_fit == 1]
         dp_best = dp_best.reset_index(drop=True)
         dp_best.index.name = 'id'
         dp_best_of_best = pd.concat([dp_best, dp_best_of_best])
-        if create_plot: funcs.print_log(file_log, '<img alt="R.HydroTools" src="%s" width="1200"></img>' % fig_file1, center_div=True)
-        funcs.print_log(file_log, f'\n**{num_inc}.3. Best fit**\n')
-        funcs.print_log(file_log, f'{dp_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown()}', center_div=True)
-        if create_plot: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file2}" width="500"></img><img alt="R.HydroTools" src="{fig_file3}" width="500"></img>', center_div=True)
+        if create_plot: funcs.print_log(file_log, '<img alt="R.HydroTools" src="%s" width="1200"></img>' % fig_file1, center_div=True, on_screen = print_on_screen)
+        funcs.print_log(file_log, f'\n**{num_inc}.3. Best fit**\n', on_screen = print_on_screen)
+        funcs.print_log(file_log, f'{dp_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown()}', center_div=True, on_screen = print_on_screen)
+        if create_plot: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file2}" width="500"></img><img alt="R.HydroTools" src="{fig_file3}" width="500"></img>', center_div=True, on_screen = print_on_screen)
         #if create_plot: funcs.print_log(file_log, '<img alt="R.HydroTools" src="%s" width="1200"></img>' % fig_file4, center_div=True)
         num_inc += 1
 
@@ -394,22 +394,22 @@ for station in stations:
         plt.close()
 
     # Best CDF fit & Estimate extreme values for specific return periods - Tr
-    funcs.print_log(file_log, '\n## C. Best fit & Estimate extreme values for specific return periods - Tr\n\n')
+    funcs.print_log(file_log, '\n## C. Best fit & Estimate extreme values for specific return periods - Tr\n\n', on_screen = print_on_screen)
     #print(df_tr.columns)
     df_tr.drop('empirical_dist', axis=1, inplace=True)
     df_tr.index.name = 'id'
     dp_best_of_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_csv(f'{ouput_path}table/bestfit_{station_code}.csv', index=False)
     df_tr.to_csv(f'{ouput_path}table/extreme_{station_code}.csv', index=False)
-    funcs.print_log(file_log,f'\n### 1. Best fit (ordered by delta Δ)\n')
-    funcs.print_log(file_log,f'{dp_best_of_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown()}', center_div=True)
-    funcs.print_log(file_log, f':file_folder:Tables: [bestfit_{station_code}.csv](table/bestfit_{station_code}.csv) | [extreme_{station_code}.csv](table/extreme_{station_code}.csv)')
-    funcs.print_log(file_log,f'\n\n\n### 2. Extreme values\n\n')
-    funcs.print_log(file_log,f'{dictionary.dicts['tr']}')
-    funcs.print_log(file_log,'\n\n> risk_rate: assuming the return period as the project useful life.')
-    funcs.print_log(file_log,f'\n\n{df_tr.to_markdown()}\n')
-    if create_plot: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file4}" width="1200"></img>', center_div=True)
-    if create_plot: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file5}" width="500"></img><img alt="R.HydroTools" src="{fig_file6}" width="500"></img>', center_div=True)
-    funcs.print_log(file_log, f'\n<sub>{dictionary.dicts['disclaimer']}</sub>')
+    funcs.print_log(file_log,f'\n### 1. Best fit (ordered by delta Δ)\n', on_screen = print_on_screen)
+    funcs.print_log(file_log,f'{dp_best_of_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown()}', center_div=True, on_screen = print_on_screen)
+    funcs.print_log(file_log, f':file_folder:Tables: [bestfit_{station_code}.csv](table/bestfit_{station_code}.csv) | [extreme_{station_code}.csv](table/extreme_{station_code}.csv)', on_screen = print_on_screen)
+    funcs.print_log(file_log,f'\n\n\n### 2. Extreme values\n\n', on_screen = print_on_screen)
+    funcs.print_log(file_log,f'{dictionary.dicts['tr']}', on_screen = print_on_screen)
+    funcs.print_log(file_log,'\n\n> risk_rate: assuming the return period as the project useful life.', on_screen = print_on_screen)
+    funcs.print_log(file_log,f'\n\n{df_tr.to_markdown()}\n', on_screen = print_on_screen)
+    if create_plot: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file4}" width="1200"></img>', center_div=True, on_screen = print_on_screen)
+    if create_plot: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file5}" width="500"></img><img alt="R.HydroTools" src="{fig_file6}" width="500"></img>', center_div=True, on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
     #print(df.to_csv(index=False))
 
 print(f'Stations in dataset: {stations}\n')
