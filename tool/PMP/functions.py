@@ -291,7 +291,7 @@ def pdist_empirical(dfx, edf, x):
 
 # Fitting test Kolmogorov
 def fTestKolmogorov(dfx, p_dist, idk, emp, vDeltaKolmogorov):  # Kolmogorov-Smirnov fit test
-    print('Processing Kolmogorov for: %s...' % p_dist)
+    print(f'Processing Kolmogorov: {emp} vs. {p_dist}')
     dfp = pd.DataFrame()
     dfp['dfp'] = abs(dfx['empirical']-dfx[p_dist])
     dfp = dfp.sort_values(by='dfp', ascending=[False])
