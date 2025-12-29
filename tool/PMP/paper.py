@@ -78,11 +78,13 @@ if create_geojson_map:
 
 # Stations list
 funcs.print_log(file_log, '\n\nStations evaluated:  \n', center_div=False, on_screen = print_on_screen)
+#funcs.print_log(file_log, f'\n\n## Stations\n\n{df_catalog_filter.to_markdown()}', center_div=False, on_screen = print_on_screen)
 for index, row in selected_columns.iterrows():
     station_url = (f'•[{row[label_station_catalog]}](../{row[label_station_catalog]}.md)')
-    funcs.print_log(file_log, f'{station_url}, ', on_screen=print_on_screen)
+    funcs.print_log(file_log, f'{station_url} ', on_screen=print_on_screen)
+    '''
     if index <= len(df_catalog_filter) - 2:
         funcs.print_log(file_log, f'{station_url}, ', on_screen=print_on_screen)
     else:
         funcs.print_log(file_log, f'{station_url}.', on_screen=print_on_screen)
-#funcs.print_log(file_log, f'\n\n## Stations\n\n{df_catalog_filter.to_markdown()}', center_div=False, on_screen = print_on_screen)
+    '''
