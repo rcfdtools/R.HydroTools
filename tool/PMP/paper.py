@@ -47,7 +47,7 @@ funcs.print_log(file_log, '# PMP paper\n', center_div=False, on_screen = print_o
 data_types = {label_station_catalog: 'str', label_latitude: 'float64', label_longitude: 'float64'}
 df_catalog = pd.read_excel(station_catalog_file, sheet_name='CNE', parse_dates=True, dtype=data_types) # , dtype=data_types
 df_catalog = df_catalog.drop(columns=station_catalog_columns_drop)
-print(f'\ndf_catalog types: \n{df_catalog.dtypes}')
+#print(f'\ndf_catalog types: \n{df_catalog.dtypes}')
 #print(df_catalog.head())
 df_catalog_filter = df_catalog[df_catalog[label_station_catalog].isin(df_stations[label_station])]
 #print(f'\nfiltered_df types: \n{filtered_df.dtypes}')
