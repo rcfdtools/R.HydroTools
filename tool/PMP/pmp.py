@@ -27,7 +27,7 @@ pd.set_option('display.width', None)
 app_version = 'v20251228'
 input_path = 'dataset/pmax24h_in/' # Your local input file folder
 output_path = 'dataset/pmax24h_out/' # Your local output file folder
-station_dataset_file = input_path + 'XXXXXconventional_test.csv' # Stations dataset ●
+station_dataset_file = input_path + 'conventional_test.csv' # Stations dataset ●
 station_catalog_file = 'dataset/CNE_IDEAM.xls' # CNE catalog for stations info
 station_catalog_columns_drop = ['OBSERVACION', 'SUBRED'] # Dropped columns from CNE
 parameter_name = 'rain, Pmax24h' # rain, flow
@@ -147,7 +147,8 @@ for station in stations:
     funcs.print_log(file_log, f'Map location in: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url})', center_div=True, on_screen = print_on_screen)
     geojson = '```geojson\n{\n  "type": "Feature",\n  "geometry": {\n    "type": "Point", \n    "coordinates": ['+str(point_longitude)+', '+str(point_latitude)+']\n  }, \n  "properties": {\n    "Name": "'+station+'"\n  }\n}\n```'
     funcs.print_log(file_log, f'{geojson}', center_div=True, on_screen = print_on_screen)
-    funcs.print_log(file_log, f'\n### 3. Discrete values table and plot\n\n{df[[label_date, label_x, f'{label_x}_initial', 'count', 'mean', 'std', 'zscore']].transpose().to_markdown()}\n', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n### 3. Discrete values table and plot\n', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'{df[[label_date, label_x, f'{label_x}_initial', 'count', 'mean', 'std', 'zscore']].transpose().to_markdown()}\n', center_div=True, on_screen = print_on_screen)
     if create_plot: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0}" width="600"></img>', center_div=True, on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n> {dictionary.dicts['value_initial']}\n', on_screen = print_on_screen)
 
