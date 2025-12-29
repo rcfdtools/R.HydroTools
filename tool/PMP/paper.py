@@ -53,13 +53,13 @@ df_catalog_filter = df_catalog_filter.reset_index(drop=True)
 #print(f'\n{df_catalog_filter.head().to_markdown()}')
 
 # Create GeoJSON map
-funcs.print_log(file_log, 'Map location', center_div=True, on_screen = print_on_screen)
+funcs.print_log(file_log, 'Dynamic Map Location', center_div=True, on_screen = print_on_screen)
 funcs.print_log(file_log, '```topojson\n{"type": "Topology", "objects": {"example": {"type": "GeometryCollection","geometries": [\n', on_screen = print_on_screen)
-selected_columns = df_catalog_filter[[label_station_catalog, label_name, label_latitude, label_longitude, label_category]]
+selected_columns = df_catalog_filter[[label_station_catalog, label_name, label_category, label_technology, label_active, label_install_date, label_latitude, label_longitude]]
 for index, row in selected_columns.iterrows():
     #print (index)
     #print(f"Code: {row['CODIGO']}, Name: {row['NOMBRE']}")
-    properties = (f'"Code": "{row[label_station_catalog]}", "Name": "{row[label_name]}", "Latitude": "{row[label_latitude]}", "Longitude": "{row[label_longitude]}", "Category": "{row[label_category]}"')
+    properties = (f'"Code": "{row[label_station_catalog]}", "Name": "{row[label_name]}", "Category": "{row[label_category]}, "Technology": "{row[label_technology]}, "Active": "{row[label_active]}, "Installateion date": "{row[label_install_date]}, "Latitude": "{row[label_latitude]}", "Longitude": "{row[label_longitude]}""')
     print_geojson = '{"type": "Point","properties": {'+str(properties)+'},"coordinates": [' + str(row[label_longitude]) + ',' + str(row[label_latitude]) + ']}'
     funcs.print_log(file_log, print_geojson, on_screen = print_on_screen)
     if index <= len(df_catalog_filter) - 2:
