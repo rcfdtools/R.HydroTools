@@ -24,7 +24,7 @@ label_county = 'MUNICIPIO' # Station column county in CNE_IDEAM.xls
 print_on_screen = False # Global print control in screen
 file_log_name = f'{output_path}{'paper'}.md'  # Markdown file log
 file_log = open(file_log_name, 'w+', encoding='utf-8')   # w+ create the file if it doesn't exist
-
+create_geojson_map = True
 
 
 # Join best fit .csv results files
@@ -53,22 +53,35 @@ df_catalog_filter = df_catalog[df_catalog[label_station_catalog].isin(df_station
 #print(f'\nfiltered_df types: \n{filtered_df.dtypes}')
 df_catalog_filter = df_catalog_filter.reset_index(drop=True)
 #print(f'\n{df_catalog_filter.head().to_markdown()}')
+selected_columns = df_catalog_filter[[label_station_catalog, label_name, label_category, label_technology, label_active, label_install_date, label_latitude, label_longitude, label_state, label_county]]
 
 
 # Create GeoJSON map
-funcs.print_log(file_log, 'Dynamic Map Location', center_div=True, on_screen = print_on_screen)
-funcs.print_log(file_log, '```topojson\n{"type": "Topology", "objects": {"example": {"type": "GeometryCollection","geometries": [\n', on_screen = print_on_screen)
-selected_columns = df_catalog_filter[[label_station_catalog, label_name, label_category, label_technology, label_active, label_install_date, label_latitude, label_longitude, label_state, label_county]]
-for index, row in selected_columns.iterrows():
-    #print (index)
-    #print(f"Code: {row['CODIGO']}, Name: {row['NOMBRE']}")
-    properties = (f'"Code": "{row[label_station_catalog]}", "Name": "{row[label_name]}", "Category": "{row[label_category]}", "Technology": "{row[label_technology]}", "Active": "{row[label_active]}", "Installation date": "{row[label_install_date]}", "Latitude": "{row[label_latitude]}", "Longitude": "{row[label_longitude]}", "State": "{row[label_state]}", "County": "{row[label_county]}"')
-    print_geojson = '{"type": "Point","properties": {'+str(properties)+'},"coordinates": [' + str(row[label_longitude]) + ',' + str(row[label_latitude]) + ']}'
-    funcs.print_log(file_log, print_geojson, on_screen = print_on_screen)
-    if index <= len(df_catalog_filter) - 2:
-        funcs.print_log(file_log, ',\n', on_screen = print_on_screen)
-    else:
-        funcs.print_log(file_log, '\n', on_screen = print_on_screen)
-funcs.print_log(file_log, ']}}}\n\n```', on_screen = print_on_screen)
+if create_geojson_map:
+    funcs.print_log(file_log, 'Dynamic Map Location', center_div=True, on_screen = print_on_screen)
+    funcs.print_log(file_log, '```topojson\n{"type": "Topology", "objects": {"example": {"type": "GeometryCollection","geometries": [\n', on_screen = print_on_screen)
+    for index, row in selected_columns.iterrows():
+        #print (index)
+        #print(f"Code: {row['CODIGO']}, Name: {row['NOMBRE']}")
+        properties = (f'"Code": "{row[label_station_catalog]}", "Name": "{row[label_name]}", "Category": "{row[label_category]}", "Technology": "{row[label_technology]}", "Active": "{row[label_active]}", "Installation date": "{row[label_install_date]}", "Latitude": "{row[label_latitude]}", "Longitude": "{row[label_longitude]}", "State": "{row[label_state]}", "County": "{row[label_county]}"')
+        print_geojson = '{"type": "Point","properties": {'+str(properties)+'},"coordinates": [' + str(row[label_longitude]) + ',' + str(row[label_latitude]) + ']}'
+        funcs.print_log(file_log, print_geojson, on_screen = print_on_screen)
+        if index <= len(df_catalog_filter) - 2:
+            funcs.print_log(file_log, ',\n', on_screen = print_on_screen)
+        else:
+            funcs.print_log(file_log, '\n', on_screen = print_on_screen)
+    funcs.print_log(file_log, ']}}}\n\n```', on_screen = print_on_screen)
 
+
+# Create Static map
+
+
+# Stations list
+funcs.print_log(file_log, '\n\nStations list: ', center_div=False, on_screen = print_on_screen)
+for index, row in selected_columns.iterrows():
+    station_url = (f'[{row[label_name]}](../{row[label_station_catalog]}.md)')
+    if index <= len(df_catalog_filter) - 2:
+        funcs.print_log(file_log, f'{station_url}, ', on_screen=print_on_screen)
+    else:
+        funcs.print_log(file_log, f'{station_url}.', on_screen=print_on_screen)
 #funcs.print_log(file_log, f'\n\n## Stations\n\n{df_catalog_filter.to_markdown()}', center_div=False, on_screen = print_on_screen)
