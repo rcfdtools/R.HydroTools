@@ -20,12 +20,12 @@ label_install_date = 'FECHA_INSTALACION' # Station column activation date in CNE
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
 print_on_screen = False # Global print control in screen
-
-
 file_log_name = f'{output_path}{'paper'}.md'  # Markdown file log
 file_log = open(file_log_name, 'w+', encoding='utf-8')   # w+ create the file if it doesn't exist
+
+
 funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen = print_on_screen)
-funcs.print_log(file_log, '# PMP paper', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, '# PMP paper\n', center_div=False, on_screen = print_on_screen)
 
 
 # Join the best fil .csv results files
