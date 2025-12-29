@@ -25,7 +25,7 @@
 
 ```topojson
 {"type": "Topology", "objects": {"example": {"type": "GeometryCollection","geometries": [
-{"type": "Point","properties": {"Code": "11027030", "Name": "EL SIETE 11027030", "Latitude": "5.862", "Longitude": "-76.15205556", "url": "Hello R."},"coordinates"}: [-76.15205556,5.862]},
+{"type": "Point","properties": {"Code": "11027030", "Name": "EL SIETE 11027030", "Latitude": "5.862", "Longitude": "-76.15205556", "url": "Hello R."},"coordinates": [-76.15205556,5.862]},
 {"type": "Point","properties": {"Code": "11027070", "Name": "BORAUDO 11027070", "Latitude": "5.514611111", "Longitude": "-76.57569444", "url": "Hello R."},"coordinates": [-76.57569444,5.514611111]},
 {"type": "Point","properties": {"Code": "21202200", "Name": "No data", "Latitude": "4.0", "Longitude": "-72.0", "url": "Hello R."},"coordinates": [-72.0,4.0]}
 ]}}}
