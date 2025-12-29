@@ -31,11 +31,12 @@ automatic_tag_not_in = 'Convencional' # Tag to exclude. Keep in mind some conven
 stations_to_exclude = ['25020230', '25020240', '25020250', '25020260', '25020280', '25020690', '25020920', '25021240', '25021650', '25025250', '28010070', '28020080', '28020150', '28020230', '28020310', '28020420', '28020440', '28020460', '28020600', '28025070', '28025080', '28025090', '28035010', '28035040', '28040310', '28040350']
 
 
-# Join best fit .csv results files
+# Join best fit .csv results files and read and filter the CNE catalog
 extension = 'csv'
 all_filenames = [i for i in glob.glob(os.path.join(input_path, 'bestfit_*.{}'.format(extension)))]
 df_bestfit = pd.concat([pd.read_csv(f) for f in all_filenames], ignore_index=True)
 df_bestfit[label_station] = df_bestfit[label_station].astype(str)
+df_bestfit = df_bestfit[~df_bestfit[label_station].isin(stations_to_exclude)] # Excluding stations using isin() with Boolean Negation (~)
 #print(f'\ndf_bestfit types: \n{df_bestfit.dtypes}')
 df_bestfit.to_csv(f'{output_path}bestfit.csv', index=False, encoding='utf-8')
 print(f'\nSuccessfully combined {len(all_filenames)} files into combined_output.csv')
@@ -43,8 +44,6 @@ stations = df_bestfit[label_station].unique()
 df_stations = pd.DataFrame(stations, columns=[label_station])
 #print(f'\ndf_stations types:\n{df_stations.dtypes}')
 #print(f'Stations in dataset:\n{stations}\n')
-
-
 # Read and filter CNE catalog
 funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen = print_on_screen)
 funcs.print_log(file_log, '# PMP paper\n', center_div=False, on_screen = print_on_screen)
@@ -86,11 +85,11 @@ if create_geojson_map:
 
 
 # Stations list
-funcs.print_log(file_log, f'\n\n## Stations\n\n', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n\n## Stations evaluated\n\n', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, f'> {dictionary.dicts['limnimetric']}\n', on_screen = print_on_screen)
 funcs.print_log(file_log, f'>\n> {dictionary.dicts['conventional_station']}\n\n', on_screen = print_on_screen)
 # funcs.print_log(file_log, f'\n\n{df_catalog_filter.to_markdown()}', center_div=False, on_screen = print_on_screen)
-funcs.print_log(file_log, 'Stations evaluated:  \n', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, 'Stations list: ', center_div=False, on_screen = print_on_screen)
 for index, row in selected_columns.iterrows():
     station_url = (f'•[{row[label_station_catalog]}](../{row[label_station_catalog]}.md)')
     funcs.print_log(file_log, f'{station_url} ', on_screen=print_on_screen)
