@@ -88,8 +88,7 @@ if create_geojson_map:
 # Stations list
 funcs.print_log(file_log, f'\n\n## Stations\n\n', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, f'> {dictionary.dicts['limnimetric']}\n\n', on_screen = print_on_screen)
-funcs.print_log(file_log, f'{df_catalog_filter.to_markdown()}', center_div=False, on_screen = print_on_screen)
-
+#funcs.print_log(file_log, f'{df_catalog_filter.to_markdown()}', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, '\n\nStations evaluated:  \n', center_div=False, on_screen = print_on_screen)
 for index, row in selected_columns.iterrows():
     station_url = (f'•[{row[label_station_catalog]}](../{row[label_station_catalog]}.md)')
