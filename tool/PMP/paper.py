@@ -77,7 +77,7 @@ if create_geojson_map:
 
 
 # Stations list
-funcs.print_log(file_log, '\n\nEvaluated stations:\n', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, '\n\nEvaluated stations:\n\n', center_div=False, on_screen = print_on_screen)
 for index, row in selected_columns.iterrows():
     station_url = (f'•[{row[label_station_catalog]}](../{row[label_station_catalog]}.md)')
     if index <= len(df_catalog_filter) - 2:
