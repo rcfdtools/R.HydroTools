@@ -19,16 +19,15 @@ label_active = 'ESTADO' # Station column active in CNE_IDEAM.xls
 label_install_date = 'FECHA_INSTALACION' # Station column activation date in CNE_IDEAM.xls
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
+label_state = 'DEPARTAMENTO' # Station column state in CNE_IDEAM.xls
+label_county = 'MUNICIPIO' # Station column county in CNE_IDEAM.xls
 print_on_screen = False # Global print control in screen
 file_log_name = f'{output_path}{'paper'}.md'  # Markdown file log
 file_log = open(file_log_name, 'w+', encoding='utf-8')   # w+ create the file if it doesn't exist
 
 
-funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen = print_on_screen)
-funcs.print_log(file_log, '# PMP paper\n', center_div=False, on_screen = print_on_screen)
 
-
-# Join the best fil .csv results files
+# Join best fit .csv results files
 extension = 'csv'
 all_filenames = [i for i in glob.glob(os.path.join(input_path, 'bestfit_*.{}'.format(extension)))]
 df_bestfit = pd.concat([pd.read_csv(f) for f in all_filenames], ignore_index=True)
@@ -41,7 +40,10 @@ df_stations = pd.DataFrame(stations, columns=[label_station])
 #print(f'\ndf_stations types:\n{df_stations.dtypes}')
 #print(f'Stations in dataset:\n{stations}\n')
 
+
 # Read and filter CNE catalog
+funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen = print_on_screen)
+funcs.print_log(file_log, '# PMP paper\n', center_div=False, on_screen = print_on_screen)
 data_types = {label_station_catalog: 'str', label_latitude: 'float64', label_longitude: 'float64'}
 df_catalog = pd.read_excel(station_catalog_file, sheet_name='CNE', parse_dates=True, dtype=data_types) # , dtype=data_types
 df_catalog = df_catalog.drop(columns=station_catalog_columns_drop)
@@ -52,14 +54,15 @@ df_catalog_filter = df_catalog[df_catalog[label_station_catalog].isin(df_station
 df_catalog_filter = df_catalog_filter.reset_index(drop=True)
 #print(f'\n{df_catalog_filter.head().to_markdown()}')
 
+
 # Create GeoJSON map
 funcs.print_log(file_log, 'Dynamic Map Location', center_div=True, on_screen = print_on_screen)
 funcs.print_log(file_log, '```topojson\n{"type": "Topology", "objects": {"example": {"type": "GeometryCollection","geometries": [\n', on_screen = print_on_screen)
-selected_columns = df_catalog_filter[[label_station_catalog, label_name, label_category, label_technology, label_active, label_install_date, label_latitude, label_longitude]]
+selected_columns = df_catalog_filter[[label_station_catalog, label_name, label_category, label_technology, label_active, label_install_date, label_latitude, label_longitude, label_state, label_county]]
 for index, row in selected_columns.iterrows():
     #print (index)
     #print(f"Code: {row['CODIGO']}, Name: {row['NOMBRE']}")
-    properties = (f'"Code": "{row[label_station_catalog]}", "Name": "{row[label_name]}", "Category": "{row[label_category]}", "Technology": "{row[label_technology]}", "Active": "{row[label_active]}", "Installation date": "{row[label_install_date]}", "Latitude": "{row[label_latitude]}", "Longitude": "{row[label_longitude]}"')
+    properties = (f'"Code": "{row[label_station_catalog]}", "Name": "{row[label_name]}", "Category": "{row[label_category]}", "Technology": "{row[label_technology]}", "Active": "{row[label_active]}", "Installation date": "{row[label_install_date]}", "Latitude": "{row[label_latitude]}", "Longitude": "{row[label_longitude]}"", "State": "{row[label_state]}"", "County": "{row[label_county]}"')
     print_geojson = '{"type": "Point","properties": {'+str(properties)+'},"coordinates": [' + str(row[label_longitude]) + ',' + str(row[label_latitude]) + ']}'
     funcs.print_log(file_log, print_geojson, on_screen = print_on_screen)
     if index <= len(df_catalog_filter) - 2:
