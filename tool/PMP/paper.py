@@ -59,7 +59,7 @@ selected_columns = df_catalog_filter[[label_station_catalog, label_name, label_c
 for index, row in selected_columns.iterrows():
     #print (index)
     #print(f"Code: {row['CODIGO']}, Name: {row['NOMBRE']}")
-    properties = (f'"Code": "{row[label_station_catalog]}", "Name": "{row[label_name]}", "Category": "{row[label_category]}, "Technology": "{row[label_technology]}, "Active": "{row[label_active]}, "Installateion date": "{row[label_install_date]}, "Latitude": "{row[label_latitude]}", "Longitude": "{row[label_longitude]}""')
+    properties = (f'"Code": "{row[label_station_catalog]}", "Name": "{row[label_name]}", "Category": "{row[label_category]}, "Technology": "{row[label_technology]}, "Active": "{row[label_active]}, "Installation date": "{row[label_install_date]}, "Latitude": "{row[label_latitude]}", "Longitude": "{row[label_longitude]}"')
     print_geojson = '{"type": "Point","properties": {'+str(properties)+'},"coordinates": [' + str(row[label_longitude]) + ',' + str(row[label_latitude]) + ']}'
     funcs.print_log(file_log, print_geojson, on_screen = print_on_screen)
     if index <= len(df_catalog_filter) - 2:
