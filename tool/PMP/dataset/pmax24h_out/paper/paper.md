@@ -595,6 +595,8 @@ Dynamic map
 ## Stations
 
 > Limnimetric stations and rain gauges are distinct instruments, but they often work in tandem at the same monitoring locations. A limnimetric station (or gauging station) is used to measure and record water levels (stage) in open-air waterways such as rivers, lakes, and reservoirs. A rain gauge (also known as a pluviometer or udometer) is a specific instrument used to gather and measure the amount of liquid precipitation over a predefined area. While a limnimetric station itself measures water levels in a body of water, it does not typically contain the internal mechanism to directly record rainfall. Instead, hydrologists commonly install separate rain gauges (pluviometric stations) nearby to collect precipitation data. This allows them to correlate rainfall events with subsequent changes in river or lake levels, which is crucial for flood forecasting and water resource management.
+>
+> Note: In the National Stations Catalog (CNE), multiple stations are currently tagged as Conventional technology despite multiple has been upgrated to Automatics ones.
 
 
 
