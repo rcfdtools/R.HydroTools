@@ -26,13 +26,13 @@ pd.set_option('display.width', None)
 # General setup
 app_version = 'v20251228'
 input_path = 'dataset/pmax24h_in/' # Your local input file folder
-ouput_path = 'dataset/pmax24h_out/' # Your local output file folder
-station_dataset_file = input_path + 'conventional_cesarcolombia_1959_2022.csv' # Stations dataset ●
+output_path = 'dataset/pmax24h_out/' # Your local output file folder
+station_dataset_file = input_path + 'XXXXXconventional_test.csv' # Stations dataset ●
 station_catalog_file = 'dataset/CNE_IDEAM.xls' # CNE catalog for stations info
 station_catalog_columns_drop = ['OBSERVACION', 'SUBRED'] # Dropped columns from CNE
 parameter_name = 'rain, Pmax24h' # rain, flow
 parameter_units = '($mm/d$)' # ($mm/d$), ($m^3/s$)
-parameter_title = 'PMP'
+parameter_title = 'PMP' # Probable Maximum Precipitation (PMP) or Probable Maximum Flood (PMF)
 date_min = 1900 # Minimum year to eval til year_max ●
 date_max = 2024 # Maximum year to eval since year_min ●
 label_station = 'Station' # Station column name to eval from .csv station dataset file
@@ -119,7 +119,7 @@ for station in stations:
     station_code = str(station)
     fig_file0a = 'graph/' + station_code + '_locationmap.png'
     fig_file0 = 'graph/' + station_code + '_dataserie.png'
-    file_log_name = f'{ouput_path}{station_code}.md'  # Markdown file log
+    file_log_name = f'{output_path}{station_code}.md'  # Markdown file log
     file_log = open(file_log_name, 'w+', encoding='utf-8')   # w+ create the file if it doesn't exist
     df = df_all[df_all[label_station] == station]
     df = df.sort_values(by=label_date)
@@ -154,7 +154,7 @@ for station in stations:
     # Plot location map & Plot x values
     # Location map always (graph 0a)
     location_map_plot = funcs.location_map(point_latitude, point_longitude, station)
-    location_map_plot.savefig(ouput_path + fig_file0a, dpi=dpi)
+    location_map_plot.savefig(output_path + fig_file0a, dpi=dpi)
     plt.close()
     if create_plot:
         # Plot x values  (graph 0)
@@ -172,7 +172,7 @@ for station in stations:
         plt.annotate('github.com/rcfdtools', xy=(1.0275, 0.01), xycoords='axes fraction', ha='right', va='bottom', rotation='vertical', fontsize=7.5)
         plt.legend(loc='best', frameon=False)
         if show_plot: plt.show()
-        plt.savefig(ouput_path + fig_file0, dpi=dpi)
+        plt.savefig(output_path + fig_file0, dpi=dpi)
         ax.xaxis.set_major_locator(MaxNLocator(integer=False))
         plt.close()
 
@@ -300,7 +300,7 @@ for station in stations:
             plt.annotate(f'Station: {station_code}', xy=(0.99, 0.98), xycoords='axes fraction', ha='right', fontsize=9)
             plt.annotate('github.com/rcfdtools', xy=(1.0275, 0.01), xycoords='axes fraction', ha='right', va='bottom', rotation='vertical', fontsize=7.5)
             if show_plot: plt.show()
-            plt.savefig(ouput_path + fig_file1, dpi=dpi)
+            plt.savefig(output_path + fig_file1, dpi=dpi)
             plt.close()
 
             # Plot empirical vs. best fit (graph 2)
@@ -314,7 +314,7 @@ for station in stations:
             plt.annotate(f'Station: {station_code}', xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
             plt.annotate('github.com/rcfdtools', xy=(1.0275, 0.01), xycoords='axes fraction', ha='right', va='bottom', rotation='vertical', fontsize=7.5)
             if show_plot: plt.show()
-            plt.savefig(ouput_path + fig_file2, dpi=dpi)
+            plt.savefig(output_path + fig_file2, dpi=dpi)
             plt.close()
 
             # Plot Empirical & Estimated PDF - Best Fit (graph 3)
@@ -328,7 +328,7 @@ for station in stations:
             plt.annotate(f'Station: {station_code}', xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
             plt.annotate('github.com/rcfdtools', xy=(1.0275, 0.01), xycoords='axes fraction', ha='right', va='bottom', rotation='vertical', fontsize=7.5)
             if show_plot: plt.show()
-            plt.savefig(ouput_path + fig_file3, dpi=dpi)
+            plt.savefig(output_path + fig_file3, dpi=dpi)
             plt.close()
 
         # Print extreme values table
@@ -366,7 +366,7 @@ for station in stations:
         plt.annotate(f'Station: {station_code}', xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
         plt.annotate('github.com/rcfdtools', xy=(1.0275, 0.01), xycoords='axes fraction', ha='right', va='bottom', rotation='vertical', fontsize=7.5)
         if show_plot: plt.show()
-        plt.savefig(ouput_path + fig_file4, dpi=dpi)
+        plt.savefig(output_path + fig_file4, dpi=dpi)
         plt.close()
 
         # Plot extreme values for specific return periods (Best fit) (graph 5)
@@ -379,7 +379,7 @@ for station in stations:
         plt.annotate(f'Station: {station_code}', xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
         plt.annotate('github.com/rcfdtools', xy=(1.0275, 0.01), xycoords='axes fraction', ha='right', va='bottom', rotation='vertical', fontsize=7.5)
         if show_plot: plt.show()
-        plt.savefig(ouput_path + fig_file5, dpi=dpi)
+        plt.savefig(output_path + fig_file5, dpi=dpi)
         plt.close()
 
         # Plot risk rate for specific return periods (graph 5)
@@ -392,7 +392,7 @@ for station in stations:
         plt.annotate(f'Station: {station_code}', xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
         plt.annotate('github.com/rcfdtools', xy=(1.0275, 0.01), xycoords='axes fraction', ha='right', va='bottom', rotation='vertical', fontsize=7.5)
         if show_plot: plt.show()
-        plt.savefig(ouput_path + fig_file6, dpi=dpi)
+        plt.savefig(output_path + fig_file6, dpi=dpi)
         plt.close()
 
     # Best CDF fit & Estimate extreme values for specific return periods - Tr
@@ -400,8 +400,8 @@ for station in stations:
     #print(df_tr.columns)
     df_tr.drop('empirical_dist', axis=1, inplace=True)
     df_tr.index.name = 'id'
-    dp_best_of_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_csv(f'{ouput_path}table/bestfit_{station_code}.csv', index=False)
-    df_tr.to_csv(f'{ouput_path}table/extreme_{station_code}.csv', index=False)
+    dp_best_of_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_csv(f'{output_path}table/bestfit_{station_code}.csv', index=False)
+    df_tr.to_csv(f'{output_path}table/extreme_{station_code}.csv', index=False)
     funcs.print_log(file_log,f'\n### 1. Best fit (ordered by delta Δ)\n', on_screen = print_on_screen)
     funcs.print_log(file_log,f'{dp_best_of_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown()}', center_div=True, on_screen = print_on_screen)
     funcs.print_log(file_log, f':file_folder:Tables: [bestfit_{station_code}.csv](table/bestfit_{station_code}.csv) | [extreme_{station_code}.csv](table/extreme_{station_code}.csv)', on_screen = print_on_screen)

@@ -1,0 +1,49 @@
+import pandas as pd
+import glob
+import os
+import tabulate # required for print tables in Markdown using pandas
+import functions as funcs
+
+# General setup
+app_version = 'v20251229'
+input_path = 'dataset/pmax24h_out/table/' # Your local input file folder
+output_path = 'dataset/pmax24h_out/paper/' # Your local output file folder
+station_catalog_file = 'dataset/CNE_IDEAM.xls' # CNE catalog for stations info
+station_catalog_columns_drop = ['OBSERVACION', 'SUBRED'] # Dropped columns from CNE
+label_station = 'station' # Station column name to eval from .csv station dataset file
+label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
+label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
+label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
+print_on_screen = False
+
+file_log_name = f'{output_path}{'paper'}.md'  # Markdown file log
+file_log = open(file_log_name, 'w+', encoding='utf-8')   # w+ create the file if it doesn't exist
+funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen = print_on_screen)
+funcs.print_log(file_log, '# PMP paper', center_div=False, on_screen = print_on_screen)
+
+
+# Join the best fil .csv results files
+extension = 'csv'
+all_filenames = [i for i in glob.glob(os.path.join(input_path, 'bestfit_*.{}'.format(extension)))]
+df_bestfit = pd.concat([pd.read_csv(f) for f in all_filenames], ignore_index=True)
+df_bestfit[label_station] = df_bestfit[label_station].astype(str)
+#print(f'\ndf_bestfit types: \n{df_bestfit.dtypes}')
+df_bestfit.to_csv(f'{output_path}bestfit.csv', index=False, encoding='utf-8')
+print(f'\nSuccessfully combined {len(all_filenames)} files into combined_output.csv')
+stations = df_bestfit[label_station].unique()
+df_stations = pd.DataFrame(stations, columns=[label_station])
+#print(f'\ndf_stations types:\n{df_stations.dtypes}')
+#print(f'Stations in dataset:\n{stations}\n')
+
+# Read and filter CNE catalog
+data_types = {label_station_catalog: 'str', label_latitude: 'float64', label_longitude: 'float64'}
+df_catalog = pd.read_excel(station_catalog_file, sheet_name='CNE', parse_dates=True, dtype=data_types) # , dtype=data_types
+df_catalog = df_catalog.drop(columns=station_catalog_columns_drop)
+#print(f'\ndf_catalog types: \n{df_catalog.dtypes}')
+#print(df_catalog.head())
+df_catalog_filter = df_catalog[df_catalog[label_station_catalog].isin(df_stations[label_station])]
+#print(f'\nfiltered_df types: \n{filtered_df.dtypes}')
+funcs.print_log(file_log, f'\n\n## Stations\n\n{df_catalog_filter.to_markdown()}', center_div=False, on_screen = print_on_screen)
+print(f'\n{df_catalog_filter.head().to_markdown()}')
+
+#
