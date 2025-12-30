@@ -25,6 +25,7 @@ label_county = 'MUNICIPIO' # Station column county in CNE_IDEAM.xls
 print_on_screen = False # Global print control in screen
 file_log_name = f'{output_path}{'paper'}.md'  # Markdown file log
 file_log = open(file_log_name, 'w+', encoding='utf-8')   # w+ create the file if it doesn't exist
+dpi = 96 # Graph plot resolution
 create_geojson_map = True
 only_automatic_stations = False # Evaluated only stations with automatic technology avoiding only conventional ones
 automatic_tag_not_in = 'Convencional' # Tag to exclude. Keep in mind some conventional stations are now automatic
@@ -85,9 +86,11 @@ if create_geojson_map:
 
 
 # Stations list
+fig_file0a = 'locationmap.png'
 funcs.print_log(file_log, f'\n\n## Stations evaluated\n\n', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, f'> {dictionary.dicts['limnimetric']}\n', on_screen = print_on_screen)
 funcs.print_log(file_log, f'>\n> {dictionary.dicts['conventional_station']}\n\n', on_screen = print_on_screen)
+funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="500"></img>', center_div=True, on_screen = print_on_screen)
 # funcs.print_log(file_log, f'\n\n{df_catalog_filter.to_markdown()}', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, 'Stations list: ', center_div=False, on_screen = print_on_screen)
 for index, row in selected_columns.iterrows():
@@ -99,3 +102,8 @@ for index, row in selected_columns.iterrows():
     else:
         funcs.print_log(file_log, f'{station_url}.', on_screen=print_on_screen)
     '''
+
+# Static map
+location_map_plot = funcs.location_map_multiple(selected_columns, label_latitude, label_longitude)
+location_map_plot.savefig(output_path + fig_file0a, dpi=dpi)
+#location_map_plot.show()

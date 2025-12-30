@@ -328,7 +328,7 @@ def print_log(file_log, txt_print, on_screen=True, center_div=False):
         file_log.write('\n\n</div>\n' + '\n')
 
 
-# Location map with GeoPandas
+# Location map with GeoPandas (single)
 def location_map(point_latitude, point_longitude, station):
     shapefile_location = gpd.read_file('dataset/ColombiaState.shp')
     point_location = Point(point_longitude, point_latitude)
@@ -348,4 +348,21 @@ def location_map(point_latitude, point_longitude, station):
         color='white',
         bbox=dict(boxstyle='round', facecolor='black', alpha=0.9, pad=0.25)
     )
+    return plt
+
+
+# Location map with GeoPandas (multiple)
+def location_map_multiple(df, label_latitude, label_longitude):
+    shapefile_location = gpd.read_file('dataset/ColombiaState.shp')
+    point_gdf = gpd.GeoDataFrame(
+        df,
+        geometry=gpd.points_from_xy(eval(f'df.{label_longitude}'), eval(f'df.{label_latitude}')),
+        crs=shapefile_location.crs
+    )
+    fig, ax = plt.subplots(figsize=(6, 7))  # Adjust figure size as needed
+    shapefile_location.plot(ax=ax, color='lightgrey', edgecolor='black', linewidth=0.75)
+    point_gdf.plot(ax=ax, marker='o', color='black', markersize=10, legend=True)  # color='black', 'marker' and 'markersize' customize the point
+    ax.set_title("Stations Map")
+    plt.xlabel("Longitude°")
+    plt.ylabel("Latitude°")
     return plt
