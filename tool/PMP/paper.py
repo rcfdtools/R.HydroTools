@@ -62,14 +62,15 @@ df_catalog_filter = df_catalog_filter.reset_index(drop=True)
 df_catalog_filter.index.name = 'id'
 #print(f'\nfiltered_df types: \n{filtered_df.dtypes}')
 #print(f'\n{df_catalog_filter.head().to_markdown()}')
-selected_columns = df_catalog_filter[[label_station_catalog, label_name, label_category, label_technology, label_active, label_install_date, label_latitude, label_longitude, label_state, label_county]]
+df_catalog_filter_selected_columns = df_catalog_filter[[label_station_catalog, label_name, label_category, label_technology, label_active, label_install_date, label_latitude, label_longitude, label_state, label_county]]
+df_catalog_filter.to_csv(f'{output_path}stations.csv', index=False)
 
 
 # Create GeoJSON map
 if create_geojson_map:
     funcs.print_log(file_log, 'Dynamic map', center_div=True, on_screen = print_on_screen)
     funcs.print_log(file_log, '```topojson\n{"type": "Topology", "objects": {"example": {"type": "GeometryCollection","geometries": [\n', on_screen = print_on_screen)
-    for index, row in selected_columns.iterrows():
+    for index, row in df_catalog_filter_selected_columns.iterrows():
         #print (index)
         #print(f"Code: {row['CODIGO']}, Name: {row['NOMBRE']}")
         properties = (f'"Code": "{row[label_station_catalog]}", "Name": "{row[label_name]}", "Category": "{row[label_category]}", "Technology": "{row[label_technology]}", "Active": "{row[label_active]}", "Installation date": "{row[label_install_date]}", "Latitude": "{row[label_latitude]}", "Longitude": "{row[label_longitude]}", "State": "{row[label_state]}", "County": "{row[label_county]}"')
@@ -93,7 +94,7 @@ funcs.print_log(file_log, f'>\n> {dictionary.dicts['conventional_station']}\n\n'
 funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="500"></img>', center_div=True, on_screen = print_on_screen)
 # funcs.print_log(file_log, f'\n\n{df_catalog_filter.to_markdown()}', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, 'Stations list: ', center_div=False, on_screen = print_on_screen)
-for index, row in selected_columns.iterrows():
+for index, row in df_catalog_filter_selected_columns.iterrows():
     station_url = (f'•[{row[label_station_catalog]}](../{row[label_station_catalog]}.md)')
     funcs.print_log(file_log, f'{station_url} ', on_screen=print_on_screen)
     '''
@@ -104,6 +105,6 @@ for index, row in selected_columns.iterrows():
     '''
 
 # Static map
-location_map_plot = funcs.location_map_multiple(selected_columns, label_latitude, label_longitude)
+location_map_plot = funcs.location_map_multiple(df_catalog_filter_selected_columns, label_latitude, label_longitude)
 location_map_plot.savefig(output_path + fig_file0a, dpi=dpi)
 #location_map_plot.show()

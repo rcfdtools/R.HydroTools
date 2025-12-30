@@ -360,9 +360,9 @@ def location_map_multiple(df, label_latitude, label_longitude):
         crs=shapefile_location.crs
     )
     fig, ax = plt.subplots(figsize=(6, 7))  # Adjust figure size as needed
-    shapefile_location.plot(ax=ax, color='lightgrey', edgecolor='black', linewidth=0.75)
+    shapefile_location.plot(ax=ax, color='lightgrey', edgecolor='black', linewidth=0.75, legend=True)
     point_gdf.plot(ax=ax, marker='o', color='black', markersize=10, legend=True)  # color='black', 'marker' and 'markersize' customize the point
-    ax.set_title("Stations Map")
+    ax.set_title("Stations location")
     plt.xlabel("Longitude°")
     plt.ylabel("Latitude°")
     return plt
