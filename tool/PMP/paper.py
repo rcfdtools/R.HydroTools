@@ -63,7 +63,6 @@ df_catalog_filter.index.name = 'id'
 #print(f'\nfiltered_df types: \n{filtered_df.dtypes}')
 #print(f'\n{df_catalog_filter.head().to_markdown()}')
 df_catalog_filter_selected_columns = df_catalog_filter[[label_station_catalog, label_name, label_category, label_technology, label_active, label_install_date, label_latitude, label_longitude, label_state, label_county]]
-df_catalog_filter.to_csv(f'{output_path}stations.csv', index=False)
 
 
 # Create GeoJSON map
@@ -83,14 +82,13 @@ if create_geojson_map:
     funcs.print_log(file_log, ']}}}\n\n```', on_screen = print_on_screen)
 
 
-# Create Static map
-
-
 # Stations list
 fig_file0a = 'locationmap.png'
+df_catalog_filter.to_csv(f'{output_path}stations.csv', index=False)
 funcs.print_log(file_log, f'\n\n## Stations evaluated\n\n', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, f'> {dictionary.dicts['limnimetric']}\n', on_screen = print_on_screen)
 funcs.print_log(file_log, f'>\n> {dictionary.dicts['conventional_station']}\n\n', on_screen = print_on_screen)
+funcs.print_log(file_log, f'>\n> [:file_folder:Tables: Stations dataset]({output_path}stations.csv)\n\n', on_screen = print_on_screen) #######################
 funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="500"></img>', center_div=True, on_screen = print_on_screen)
 # funcs.print_log(file_log, f'\n\n{df_catalog_filter.to_markdown()}', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, 'Stations list: ', center_div=False, on_screen = print_on_screen)
@@ -104,7 +102,7 @@ for index, row in df_catalog_filter_selected_columns.iterrows():
         funcs.print_log(file_log, f'{station_url}.', on_screen=print_on_screen)
     '''
 
-# Static map
+# Create Static map
 location_map_plot = funcs.location_map_multiple(df_catalog_filter_selected_columns, label_latitude, label_longitude)
 location_map_plot.savefig(output_path + fig_file0a, dpi=dpi)
 #location_map_plot.show()
