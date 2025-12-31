@@ -28,7 +28,7 @@ file_log = open(file_log_name, 'w+', encoding='utf-8')   # w+ create the file if
 dpi = 96 # Graph plot resolution
 create_geojson_map = True
 only_automatic_stations = False # Evaluated only stations with automatic technology avoiding only conventional ones
-automatic_tag_not_in = 'Convencional' # Tag to exclude. Keep in mind some conventional stations are now automatic
+automatic_tag_not_in = ['Convencional'] # Tag to exclude. Keep in mind some conventional stations are now automatic
 stations_to_exclude = ['25020230', '25020240', '25020250', '25020260', '25020280', '25020690', '25020920', '25021240', '25021650', '25025250', '28010070', '28020080', '28020150', '28020230', '28020310', '28020420', '28020440', '28020460', '28020600', '28025070', '28025080', '28025090', '28035010', '28035040', '28040310', '28040350']
 
 
@@ -54,7 +54,8 @@ df_catalog = df_catalog.drop(columns=station_catalog_columns_drop)
 #print(f'\ndf_catalog types: \n{df_catalog.dtypes}')
 #print(df_catalog.head())
 if only_automatic_stations:
-    df_catalog = df_catalog[df_catalog[label_technology] != automatic_tag_not_in]
+    #df_catalog = df_catalog[df_catalog[label_technology] != automatic_tag_not_in]
+    df_catalog = df_catalog[~df_catalog[label_technology].isin(automatic_tag_not_in)]
 df_catalog = df_catalog[~df_catalog[label_station_catalog].isin(stations_to_exclude)] # Excluding stations using isin() with Boolean Negation (~)
 df_catalog_filter = df_catalog[df_catalog[label_station_catalog].isin(df_stations[label_station])]
 df_catalog_filter = df_catalog_filter.sort_values(by=[label_station_catalog], ascending=True)
@@ -88,9 +89,10 @@ df_catalog_filter.to_csv(f'{output_path}stations.csv', index=False)
 funcs.print_log(file_log, f'\n\n## Stations evaluated\n\n', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, f'> {dictionary.dicts['limnimetric']}\n', on_screen = print_on_screen)
 funcs.print_log(file_log, f'>\n> {dictionary.dicts['conventional_station']}\n\n', on_screen = print_on_screen)
-funcs.print_log(file_log, f'>\n[:file_folder:Tables: Stations dataset](stations.csv)\n\n', on_screen = print_on_screen) #######################
+funcs.print_log(file_log, f'>\n:file_folder:Tables:[Stations dataset](stations.csv), [Bestfit probability distributions](bestfit.csv).\n\n', on_screen = print_on_screen) #######################
 funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="500"></img>', center_div=True, on_screen = print_on_screen)
-# funcs.print_log(file_log, f'\n\n{df_catalog_filter.to_markdown()}', center_div=False, on_screen = print_on_screen)
+#funcs.print_log(file_log, f'\n\n{df_catalog_filter.to_markdown()}', center_div=False, on_screen = print_on_screen) # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+print(f'\nFiltered stations catalog:\n{df_catalog_filter.to_markdown()}') # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 funcs.print_log(file_log, 'Stations list: ', center_div=False, on_screen = print_on_screen)
 for index, row in df_catalog_filter_selected_columns.iterrows():
     station_url = (f'•[{row[label_station_catalog]}](../{row[label_station_catalog]}.md)')
