@@ -599,7 +599,7 @@ Dynamic map
 > Note: In the National Stations Catalog (CNE), multiple stations are currently tagged as Conventional technology despite multiple has been upgrated to Automatics ones.
 
 >
-> [:file_folder:Tables: Stations dataset](dataset/pmax24h_out/paper/stations.csv)
+[:file_folder:Tables: Stations dataset](stations.csv)
 
 
 <div align="center">
