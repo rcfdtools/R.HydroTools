@@ -642,7 +642,7 @@ Hydrometeorological stations are categorized by their function and automation, i
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/stations_by_CATEGORIA.png" width="600"></img>
+<img alt="R.HydroTools" src="graph/stations_by_CATEGORIA.png" width="800"></img>
 
 </div>
 
@@ -666,7 +666,7 @@ Hydrometeorological stations use both conventional (manual) and modern (automate
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/stations_by_TECNOLOGIA.png" width="600"></img>
+<img alt="R.HydroTools" src="graph/stations_by_TECNOLOGIA.png" width="800"></img>
 
 </div>
 
@@ -688,7 +688,7 @@ The status of hydrometeorological stations (active or inactive) is generally mai
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/stations_by_ESTADO.png" width="600"></img>
+<img alt="R.HydroTools" src="graph/stations_by_ESTADO.png" width="800"></img>
 
 </div>
 
@@ -738,7 +738,7 @@ A geographic state refers to a defined territory with a sovereign government, ch
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/stations_by_DEPARTAMENTO.png" width="600"></img>
+<img alt="R.HydroTools" src="graph/stations_by_DEPARTAMENTO.png" width="800"></img>
 
 </div>
 
@@ -762,7 +762,7 @@ A hydrographic area, often called a river basin, watershed, or drainage basin, i
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/stations_by_AREA_HIDROGRAFICA.png" width="600"></img>
+<img alt="R.HydroTools" src="graph/stations_by_AREA_HIDROGRAFICA.png" width="800"></img>
 
 </div>
 
@@ -812,7 +812,7 @@ A hydrographic zone is essentially a river basin or watershed: a geographic area
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/stations_by_ZONA_HIDROGRAFICA.png" width="600"></img>
+<img alt="R.HydroTools" src="graph/stations_by_ZONA_HIDROGRAFICA.png" width="800"></img>
 
 </div>
 

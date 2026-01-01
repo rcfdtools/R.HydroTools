@@ -132,7 +132,7 @@ for general in general_stat_vars:
     funcs.print_log(file_log, f'{catalog_count.to_markdown()}', center_div=True, on_screen = print_on_screen)
     general_index += 1
     if create_plot:
-        funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/stations_by_{eval(general)}.png" width="600"></img>',center_div=True, on_screen=print_on_screen)
+        funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/stations_by_{eval(general)}.png" width="800"></img>',center_div=True, on_screen=print_on_screen)
         # Bar plot
         fig, ax = plt.subplots(figsize=(10, 7))
         bars = ax.barh(catalog_count['plot_label'], catalog_count['Count'], color='black')
