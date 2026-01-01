@@ -72,7 +72,7 @@ df_catalog_filter = df_catalog_filter.reset_index(drop=True)
 df_catalog_filter.index.name = 'id'
 #print(f'\nfiltered_df types: \n{filtered_df.dtypes}')
 #print(f'\n{df_catalog_filter.head().to_markdown()}')
-df_catalog_filter_selected_columns = df_catalog_filter[[label_station_catalog, label_name, label_category, label_technology, label_status, label_install_date, label_latitude, label_longitude, label_state, label_county]]
+df_catalog_filter_selected_columns = df_catalog_filter[[label_station_catalog, label_name, label_category, label_technology, label_status, label_install_date, label_latitude, label_longitude, label_state, label_county, label_ah, label_zh, label_szh]]
 
 
 # Create GeoJSON map
@@ -82,7 +82,7 @@ if create_geojson_map:
     for index, row in df_catalog_filter_selected_columns.iterrows():
         #print (index)
         #print(f"Code: {row['CODIGO']}, Name: {row['NOMBRE']}")
-        properties = (f'"Code": "{row[label_station_catalog]}", "Name": "{row[label_name]}", "Category": "{row[label_category]}", "Technology": "{row[label_technology]}", "Active": "{row[label_status]}", "Installation date": "{row[label_install_date]}", "Latitude": "{row[label_latitude]}", "Longitude": "{row[label_longitude]}", "State": "{row[label_state]}", "County": "{row[label_county]}"')
+        properties = (f'"Code": "{row[label_station_catalog]}", "Name": "{row[label_name]}", "Category": "{row[label_category]}", "Technology": "{row[label_technology]}", "Status": "{row[label_status]}", "Installation date": "{row[label_install_date]}", "Latitude": "{row[label_latitude]}", "Longitude": "{row[label_longitude]}", "State": "{row[label_state]}", "County": "{row[label_county]}", "AH": "{row[label_ah]}", "ZH": "{row[label_zh]}", "SZH": "{row[label_szh]}"')
         print_geojson = '{"type": "Point","properties": {'+str(properties)+'},"coordinates": [' + str(row[label_longitude]) + ',' + str(row[label_latitude]) + ']}'
         funcs.print_log(file_log, print_geojson, on_screen = print_on_screen)
         if index <= len(df_catalog_filter) - 2:
