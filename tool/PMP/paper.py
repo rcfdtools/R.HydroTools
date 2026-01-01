@@ -122,7 +122,7 @@ for general in general_stat_vars:
     catalog_count=df_catalog_filter[eval(general)].value_counts().reset_index(name='Count').sort_values(by=eval(general))
     catalog_count = catalog_count.reset_index(drop=True)
     catalog_count.index.name = 'id'
-    funcs.print_log(file_log, f'\n### Stations by {general}\n\n{dictionary.dicts[general]}\n', center_div=False, on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n### Stations by {eval(general)}\n\n{dictionary.dicts[general]}\n', center_div=False, on_screen = print_on_screen)
     funcs.print_log(file_log, f'{catalog_count.to_markdown()}', center_div=True, on_screen = print_on_screen)
 
 
