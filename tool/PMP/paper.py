@@ -136,7 +136,7 @@ for general in general_stat_vars:
         # Bar plot
         fig, ax = plt.subplots(figsize=(10, 8))
         bars = ax.barh(catalog_count['plot_label'], catalog_count['Count'], color='black')
-        plt.yticks(rotation=35, ha='right')
+        plt.yticks(rotation=0, ha='right')
         ax.bar_label(bars, padding=3)
         ax.set_title(f'Stations by {eval(general)}')
         ax.set_xlabel('Count')
