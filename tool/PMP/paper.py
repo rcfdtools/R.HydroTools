@@ -5,6 +5,7 @@ import os
 import tabulate # required for print tables in Markdown using pandas
 import functions as funcs
 import dictionary as dictionary
+import matplotlib.pyplot as plt
 
 
 # General setup
@@ -32,6 +33,8 @@ label_szh = 'SUBZONA_HIDROGRAFICA' # Station column hydrographic subzone in CNE_
 print_on_screen = False # Global print control in screen
 file_log_name = f'{output_path}{'paper'}.md'  # Markdown file log
 file_log = open(file_log_name, 'w+', encoding='utf-8')   # w+ create the file if it doesn't exist
+create_plot = True # Creates, save and include plots into reports ●
+show_plot = False # Show plot on Python screen console
 dpi = 96 # Graph plot resolution
 create_geojson_map = True
 only_automatic_stations = True  # Evaluated only stations with automatic technology avoiding only conventional ones
@@ -120,12 +123,23 @@ general_stat_vars = ['label_category', 'label_technology', 'label_status', 'labe
 funcs.print_log(file_log, f'\n\n', center_div=False, on_screen=print_on_screen)
 general_index = 1
 for general in general_stat_vars:
-    catalog_count=df_catalog_filter[eval(general)].value_counts().reset_index(name='Count').sort_values(by=eval(general))
+    #catalog_count=df_catalog_filter[eval(general)].value_counts().reset_index(name='Count').sort_values(by=eval(general)) # sort by var
+    catalog_count=df_catalog_filter[eval(general)].value_counts().reset_index(name='Count').sort_values(by='Count', ascending=False) # sort by count
     catalog_count = catalog_count.reset_index(drop=True)
     catalog_count.index.name = 'id'
     funcs.print_log(file_log, f'\n### {general_index}. Stations by {eval(general)}\n\n{dictionary.dicts[general]}\n', center_div=False, on_screen = print_on_screen)
     funcs.print_log(file_log, f'{catalog_count.to_markdown()}', center_div=True, on_screen = print_on_screen)
     general_index += 1
-
+    if create_plot:
+        funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/stations_by_{eval(general)}.png" width="600"></img>',center_div=True, on_screen=print_on_screen)
+        # Bar plot
+        plt.bar(catalog_count[eval(general)], catalog_count['Count'], color='darkgray')
+        # Add labels and title
+        plt.xlabel(eval(general))
+        plt.ylabel('Count')
+        plt.title(f'Stations by {eval(general)}')
+        plt.savefig(f'{output_path}graph/stations_by_{eval(general)}.png', dpi=dpi)
+        if show_plot: plt.show()
+        plt.close()
 
 funcs.print_log(file_log, f'\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
