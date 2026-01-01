@@ -124,7 +124,7 @@ funcs.print_log(file_log, f'\n\n', center_div=False, on_screen=print_on_screen)
 general_index = 1
 for general in general_stat_vars:
     #catalog_count=df_catalog_filter[eval(general)].value_counts().reset_index(name='Count').sort_values(by=eval(general)) # sort by var
-    catalog_count=df_catalog_filter[eval(general)].value_counts().reset_index(name='Count').sort_values(by='Count', ascending=False) # sort by count
+    catalog_count=df_catalog_filter[eval(general)].value_counts().reset_index(name='Count').sort_values(by='Count', ascending=True) # sort by count
     catalog_count = catalog_count.reset_index(drop=True)
     catalog_count.index.name = 'id'
     catalog_count['plot_label']= catalog_count[eval(general)].str[:40] # short labels
@@ -140,7 +140,7 @@ for general in general_stat_vars:
         ax.bar_label(bars, padding=3)
         ax.set_title(f'Stations by {eval(general)}')
         ax.set_xlabel('Count')
-        plt.tight_layout()
+        plt.tight_layout() # Important >>> prevents cutting labels
         plt.subplots_adjust(bottom=0.075)
         plt.savefig(f'{output_path}graph/stations_by_{eval(general)}.png', dpi=dpi)
         if show_plot: plt.show()

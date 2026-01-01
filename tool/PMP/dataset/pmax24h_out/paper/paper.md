@@ -624,18 +624,18 @@ Hydrometeorological stations are categorized by their function and automation, i
 
 |   id | CATEGORIA               |   Count | plot_label              |
 |-----:|:------------------------|--------:|:------------------------|
-|    0 | Climatológica Principal |     276 | Climatológica Principal |
-|    1 | Limnigráfica            |     137 | Limnigráfica            |
-|    2 | Climatológica Ordinaria |      47 | Climatológica Ordinaria |
-|    3 | Agrometeorológica       |      33 | Agrometeorológica       |
-|    4 | Pluviométrica           |      27 | Pluviométrica           |
-|    5 | Sinóptica Principal     |      16 | Sinóptica Principal     |
-|    6 | Limnimétrica            |      14 | Limnimétrica            |
-|    7 | Pluviográfica           |       7 | Pluviográfica           |
-|    8 | Meteorologica Marina    |       5 | Meteorologica Marina    |
-|    9 | Meteorológica Especial  |       4 | Meteorológica Especial  |
-|   10 | HidroMeteorologica      |       4 | HidroMeteorologica      |
-|   11 | Sinóptica Secundaria    |       1 | Sinóptica Secundaria    |
+|    0 | Sinóptica Secundaria    |       1 | Sinóptica Secundaria    |
+|    1 | Meteorológica Especial  |       4 | Meteorológica Especial  |
+|    2 | HidroMeteorologica      |       4 | HidroMeteorologica      |
+|    3 | Meteorologica Marina    |       5 | Meteorologica Marina    |
+|    4 | Pluviográfica           |       7 | Pluviográfica           |
+|    5 | Limnimétrica            |      14 | Limnimétrica            |
+|    6 | Sinóptica Principal     |      16 | Sinóptica Principal     |
+|    7 | Pluviométrica           |      27 | Pluviométrica           |
+|    8 | Agrometeorológica       |      33 | Agrometeorológica       |
+|    9 | Climatológica Ordinaria |      47 | Climatológica Ordinaria |
+|   10 | Limnigráfica            |     137 | Limnigráfica            |
+|   11 | Climatológica Principal |     276 | Climatológica Principal |
 
 </div>
 
@@ -657,9 +657,9 @@ Hydrometeorological stations use both conventional (manual) and modern (automate
 
 |   id | TECNOLOGIA                              |   Count | plot_label                              |
 |-----:|:----------------------------------------|--------:|:----------------------------------------|
-|    0 | Automática con Telemetría               |     333 | Automática con Telemetría               |
+|    0 | Convencional                            |      14 | Convencional                            |
 |    1 | Automática con Telemetría, Convencional |     224 | Automática con Telemetría, Convencional |
-|    2 | Convencional                            |      14 | Convencional                            |
+|    2 | Automática con Telemetría               |     333 | Automática con Telemetría               |
 
 </div>
 
@@ -679,9 +679,9 @@ The status of hydrometeorological stations (active or inactive) is generally mai
 
 |   id | ESTADO           |   Count | plot_label       |
 |-----:|:-----------------|--------:|:-----------------|
-|    0 | Activa           |     398 | Activa           |
+|    0 | Suspendida       |      34 | Suspendida       |
 |    1 | En Mantenimiento |     139 | En Mantenimiento |
-|    2 | Suspendida       |      34 | Suspendida       |
+|    2 | Activa           |     398 | Activa           |
 
 </div>
 
@@ -701,37 +701,37 @@ A geographic state refers to a defined territory with a sovereign government, ch
 
 |   id | DEPARTAMENTO                                             |   Count | plot_label                              |
 |-----:|:---------------------------------------------------------|--------:|:----------------------------------------|
-|    0 | Cundinamarca                                             |      68 | Cundinamarca                            |
-|    1 | Boyacá                                                   |      49 | Boyacá                                  |
-|    2 | Antioquia                                                |      40 | Antioquia                               |
-|    3 | Santander                                                |      35 | Santander                               |
-|    4 | Tolima                                                   |      33 | Tolima                                  |
-|    5 | Bogotá                                                   |      32 | Bogotá                                  |
-|    6 | Huila                                                    |      29 | Huila                                   |
-|    7 | Caldas                                                   |      27 | Caldas                                  |
-|    8 | Nariño                                                   |      26 | Nariño                                  |
-|    9 | Valle Del Cauca                                          |      24 | Valle Del Cauca                         |
-|   10 | Norte De Santander                                       |      22 | Norte De Santander                      |
-|   11 | Cordoba                                                  |      18 | Cordoba                                 |
-|   12 | Cauca                                                    |      17 | Cauca                                   |
-|   13 | Magdalena                                                |      16 | Magdalena                               |
-|   14 | Choco                                                    |      15 | Choco                                   |
-|   15 | Risaralda                                                |      13 | Risaralda                               |
-|   16 | Cesar                                                    |      13 | Cesar                                   |
-|   17 | Casanare                                                 |      13 | Casanare                                |
-|   18 | Meta                                                     |      12 | Meta                                    |
-|   19 | La Guajira                                               |      11 | La Guajira                              |
-|   20 | Bolivar                                                  |      11 | Bolivar                                 |
-|   21 | Quindío                                                  |       9 | Quindío                                 |
-|   22 | Sucre                                                    |       7 | Sucre                                   |
-|   23 | Caqueta                                                  |       7 | Caqueta                                 |
-|   24 | Atlantico                                                |       7 | Atlantico                               |
-|   25 | Archipielago De San Andres, Providencia Y Santa Catalina |       5 | Archipielago De San Andres, Providencia |
-|   26 | Putumayo                                                 |       5 | Putumayo                                |
-|   27 | Arauca                                                   |       3 | Arauca                                  |
-|   28 | Amazonas                                                 |       2 | Amazonas                                |
-|   29 | Guainía                                                  |       1 | Guainía                                 |
-|   30 | Vaupes                                                   |       1 | Vaupes                                  |
+|    0 | Vaupes                                                   |       1 | Vaupes                                  |
+|    1 | Guainía                                                  |       1 | Guainía                                 |
+|    2 | Amazonas                                                 |       2 | Amazonas                                |
+|    3 | Arauca                                                   |       3 | Arauca                                  |
+|    4 | Archipielago De San Andres, Providencia Y Santa Catalina |       5 | Archipielago De San Andres, Providencia |
+|    5 | Putumayo                                                 |       5 | Putumayo                                |
+|    6 | Caqueta                                                  |       7 | Caqueta                                 |
+|    7 | Sucre                                                    |       7 | Sucre                                   |
+|    8 | Atlantico                                                |       7 | Atlantico                               |
+|    9 | Quindío                                                  |       9 | Quindío                                 |
+|   10 | Bolivar                                                  |      11 | Bolivar                                 |
+|   11 | La Guajira                                               |      11 | La Guajira                              |
+|   12 | Meta                                                     |      12 | Meta                                    |
+|   13 | Risaralda                                                |      13 | Risaralda                               |
+|   14 | Cesar                                                    |      13 | Cesar                                   |
+|   15 | Casanare                                                 |      13 | Casanare                                |
+|   16 | Choco                                                    |      15 | Choco                                   |
+|   17 | Magdalena                                                |      16 | Magdalena                               |
+|   18 | Cauca                                                    |      17 | Cauca                                   |
+|   19 | Cordoba                                                  |      18 | Cordoba                                 |
+|   20 | Norte De Santander                                       |      22 | Norte De Santander                      |
+|   21 | Valle Del Cauca                                          |      24 | Valle Del Cauca                         |
+|   22 | Nariño                                                   |      26 | Nariño                                  |
+|   23 | Caldas                                                   |      27 | Caldas                                  |
+|   24 | Huila                                                    |      29 | Huila                                   |
+|   25 | Bogotá                                                   |      32 | Bogotá                                  |
+|   26 | Tolima                                                   |      33 | Tolima                                  |
+|   27 | Santander                                                |      35 | Santander                               |
+|   28 | Antioquia                                                |      40 | Antioquia                               |
+|   29 | Boyacá                                                   |      49 | Boyacá                                  |
+|   30 | Cundinamarca                                             |      68 | Cundinamarca                            |
 
 </div>
 
@@ -751,11 +751,11 @@ A hydrographic area, often called a river basin, watershed, or drainage basin, i
 
 |   id | AREA_HIDROGRAFICA   |   Count | plot_label      |
 |-----:|:--------------------|--------:|:----------------|
-|    0 | Magdalena Cauca     |     381 | Magdalena Cauca |
-|    1 | Caribe              |      70 | Caribe          |
+|    0 | Amazonas            |      18 | Amazonas        |
+|    1 | Pacifico            |      40 | Pacifico        |
 |    2 | Orinoco             |      62 | Orinoco         |
-|    3 | Pacifico            |      40 | Pacifico        |
-|    4 | Amazonas            |      18 | Amazonas        |
+|    3 | Caribe              |      70 | Caribe          |
+|    4 | Magdalena Cauca     |     381 | Magdalena Cauca |
 
 </div>
 
@@ -775,37 +775,37 @@ A hydrographic zone is essentially a river basin or watershed: a geographic area
 
 |   id | ZONA_HIDROGRAFICA                |   Count | plot_label                       |
 |-----:|:---------------------------------|--------:|:---------------------------------|
-|    0 | Alto Magdalena                   |     122 | Alto Magdalena                   |
-|    1 | Cauca                            |      84 | Cauca                            |
-|    2 | Medio Magdalena                  |      59 | Medio Magdalena                  |
-|    3 | Sogamoso                         |      52 | Sogamoso                         |
-|    4 | Meta                             |      49 | Meta                             |
-|    5 | Patía                            |      22 | Patía                            |
-|    6 | Bajo Magdalena                   |      20 | Bajo Magdalena                   |
-|    7 | Bajo Magdalena- Cauca -San Jorge |      19 | Bajo Magdalena- Cauca -San Jorge |
-|    8 | Catatumbo                        |      19 | Catatumbo                        |
-|    9 | Caribe - Guajira                 |      17 | Caribe - Guajira                 |
-|   10 | Atrato - Darién                  |      13 | Atrato - Darién                  |
-|   11 | Cesar                            |      13 | Cesar                            |
-|   12 | Caquetá                          |      11 | Caquetá                          |
-|   13 | Sinú                             |       8 | Sinú                             |
-|   14 | Caribe - Litoral                 |       8 | Caribe - Litoral                 |
-|   15 | Tapaje - Dagua - Directos        |       6 | Tapaje - Dagua - Directos        |
-|   16 | Saldaña                          |       6 | Saldaña                          |
-|   17 | Nechí                            |       6 | Nechí                            |
-|   18 | Mira                             |       6 | Mira                             |
-|   19 | Islas Caribe                     |       5 | Islas Caribe                     |
-|   20 | San Juán                         |       5 | San Juán                         |
-|   21 | Guaviare                         |       4 | Guaviare                         |
-|   22 | Arauca                           |       4 | Arauca                           |
-|   23 | Putumayo                         |       3 | Putumayo                         |
-|   24 | Casanare                         |       3 | Casanare                         |
-|   25 | Amazonas - Directos              |       2 | Amazonas - Directos              |
-|   26 | Inírida                          |       1 | Inírida                          |
-|   27 | Vaupes                           |       1 | Vaupes                           |
-|   28 | Vichada                          |       1 | Vichada                          |
-|   29 | Caguán                           |       1 | Caguán                           |
-|   30 | Baudó - Directos Pacifico        |       1 | Baudó - Directos Pacifico        |
+|    0 | Baudó - Directos Pacifico        |       1 | Baudó - Directos Pacifico        |
+|    1 | Inírida                          |       1 | Inírida                          |
+|    2 | Caguán                           |       1 | Caguán                           |
+|    3 | Vaupes                           |       1 | Vaupes                           |
+|    4 | Vichada                          |       1 | Vichada                          |
+|    5 | Amazonas - Directos              |       2 | Amazonas - Directos              |
+|    6 | Casanare                         |       3 | Casanare                         |
+|    7 | Putumayo                         |       3 | Putumayo                         |
+|    8 | Arauca                           |       4 | Arauca                           |
+|    9 | Guaviare                         |       4 | Guaviare                         |
+|   10 | San Juán                         |       5 | San Juán                         |
+|   11 | Islas Caribe                     |       5 | Islas Caribe                     |
+|   12 | Tapaje - Dagua - Directos        |       6 | Tapaje - Dagua - Directos        |
+|   13 | Mira                             |       6 | Mira                             |
+|   14 | Saldaña                          |       6 | Saldaña                          |
+|   15 | Nechí                            |       6 | Nechí                            |
+|   16 | Sinú                             |       8 | Sinú                             |
+|   17 | Caribe - Litoral                 |       8 | Caribe - Litoral                 |
+|   18 | Caquetá                          |      11 | Caquetá                          |
+|   19 | Cesar                            |      13 | Cesar                            |
+|   20 | Atrato - Darién                  |      13 | Atrato - Darién                  |
+|   21 | Caribe - Guajira                 |      17 | Caribe - Guajira                 |
+|   22 | Bajo Magdalena- Cauca -San Jorge |      19 | Bajo Magdalena- Cauca -San Jorge |
+|   23 | Catatumbo                        |      19 | Catatumbo                        |
+|   24 | Bajo Magdalena                   |      20 | Bajo Magdalena                   |
+|   25 | Patía                            |      22 | Patía                            |
+|   26 | Meta                             |      49 | Meta                             |
+|   27 | Sogamoso                         |      52 | Sogamoso                         |
+|   28 | Medio Magdalena                  |      59 | Medio Magdalena                  |
+|   29 | Cauca                            |      84 | Cauca                            |
+|   30 | Alto Magdalena                   |     122 | Alto Magdalena                   |
 
 </div>
 
