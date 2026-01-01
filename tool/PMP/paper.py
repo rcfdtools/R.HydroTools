@@ -162,7 +162,7 @@ if create_plot:
     funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/stations_histogram_count.png" width="800"></img>', center_div=True, on_screen=print_on_screen)
     custom_bins = [5, 6, 7, 8, 9, 10, 15, 20, 25]
     fig, ax = plt.subplots(figsize=(10, 6))
-    N, bins, patches = ax.hist(df_station_record['n'], bins=custom_bins, color=color_plot, rwidth=1) # edgecolor='black'
+    N, bins, patches = ax.hist(df_station_record['n'], bins=custom_bins, color=color_plot, edgecolor='white', rwidth=1) # edgecolor='black'
     ax.bar_label(patches, labels=[f'{int(c)}' for c in N], label_type='edge', padding=5)
     ax.set_title('Histogram of n')
     ax.set_xlabel('Value Bins')
