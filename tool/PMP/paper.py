@@ -127,19 +127,23 @@ for general in general_stat_vars:
     catalog_count=df_catalog_filter[eval(general)].value_counts().reset_index(name='Count').sort_values(by='Count', ascending=False) # sort by count
     catalog_count = catalog_count.reset_index(drop=True)
     catalog_count.index.name = 'id'
+    catalog_count['plot_label']= catalog_count[eval(general)].str[:30]
     funcs.print_log(file_log, f'\n### {general_index}. Stations by {eval(general)}\n\n{dictionary.dicts[general]}\n', center_div=False, on_screen = print_on_screen)
     funcs.print_log(file_log, f'{catalog_count.to_markdown()}', center_div=True, on_screen = print_on_screen)
     general_index += 1
     if create_plot:
         funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/stations_by_{eval(general)}.png" width="600"></img>',center_div=True, on_screen=print_on_screen)
         # Bar plot
-        plt.bar(catalog_count[eval(general)], catalog_count['Count'], color='darkgray')
-        # Add labels and title
-        plt.xlabel(eval(general))
-        plt.ylabel('Count')
-        plt.title(f'Stations by {eval(general)}')
+        fig, ax = plt.subplots(figsize=(10, 7))
+        bars = ax.barh(catalog_count['plot_label'], catalog_count['Count'], color='black')
+        plt.yticks(rotation=45, ha='right')
+        ax.bar_label(bars, padding=3)
+        ax.set_title(f'Stations by {eval(general)}')
+        ax.set_xlabel('Count')
+        plt.subplots_adjust(bottom=0.15)
         plt.savefig(f'{output_path}graph/stations_by_{eval(general)}.png', dpi=dpi)
         if show_plot: plt.show()
         plt.close()
+
 
 funcs.print_log(file_log, f'\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)

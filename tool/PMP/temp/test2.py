@@ -10,6 +10,7 @@ from scipy.stats import pearson3
 
 
 # Join multiple .csv files
+'''
 folder_path = '../dataset/pmax24h_out/table/'
 folder_output = ''
 extension = 'csv'
@@ -17,6 +18,7 @@ all_filenames = [i for i in glob.glob(os.path.join(folder_path, 'bestfit_*.{}'.f
 combined_csv_df = pd.concat([pd.read_csv(f) for f in all_filenames], ignore_index=True)
 combined_csv_df.to_csv(f'{folder_output}bestfit.csv', index=False, encoding='utf-8')
 print(f'Successfully combined {len(all_filenames)} files into combined_output.csv')
+'''
 
 
 # Pandas dataset sample
@@ -104,3 +106,27 @@ log_flood_100yr = pearson3.ppf(1 - AEP_100yr, shape, loc=loc, scale=scale)
 flood_100yr = np.exp(log_flood_100yr)
 print(f"Estimated 100-year flood (original units): {flood_100yr}")
 '''
+
+# Simple rotated bar plot with python matplotlib sample fit labels
+# Data for the plot
+categories = ['Category One With A Long Name',
+              'Category Two Name',
+              'Category Three Is Even Longer',
+              'Category Four']
+values = [10, 25, 13, 18]
+# Create the figure and axes
+fig, ax = plt.subplots(figsize=(12, 6)) # Adjust figure size as needed
+# Create the bar plot
+bars = ax.barh(categories, values)
+# Rotate the x-axis labels
+# Using rotation=45 degrees and ha='right' (horizontal alignment) often works well
+plt.yticks(rotation=45, ha='right')
+# Add labels to the bars (optional, but requested)
+ax.bar_label(bars, padding=3)
+# Set title and axis labels
+ax.set_title("Simple Rotated Bar Plot with Labels")
+ax.set_ylabel("Values")
+# Adjust subplot params to fit labels (prevents labels from being cut off at the bottom)
+plt.subplots_adjust(bottom=0.15) # Increase bottom margin as needed
+# Display the plot
+plt.show()
