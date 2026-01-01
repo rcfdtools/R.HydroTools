@@ -160,15 +160,15 @@ funcs.print_log(file_log, f'\n### {general_index+1}. Records for Station (histog
 #funcs.print_log(file_log, f'{df_station_record.to_markdown()}', center_div=True, on_screen = print_on_screen)
 if create_plot:
     funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/stations_histogram_count.png" width="800"></img>', center_div=True, on_screen=print_on_screen)
-    custom_bins = [0, 5, 6, 7, 8, 9, 10, 15, 20, 25, 30]
+    custom_bins = [5, 6, 7, 8, 9, 10, 15, 20, 25]
     fig, ax = plt.subplots(figsize=(10, 6))
-    N, bins, patches = ax.hist(df_station_record['n'], bins=custom_bins, color=color_plot, edgecolor='black', rwidth=0.95)
+    N, bins, patches = ax.hist(df_station_record['n'], bins=custom_bins, color=color_plot, rwidth=1) # edgecolor='black'
     ax.bar_label(patches, labels=[f'{int(c)}' for c in N], label_type='edge', padding=5)
     ax.set_title('Histogram of n')
     ax.set_xlabel('Value Bins')
     ax.set_ylabel('Frequency')
     ax.set_xticks(bins[:-1] + np.diff(bins) / 2)  # Centers the x-tick labels within the bars
-    ax.set_xticklabels([f'{bins[i].astype(int)}-{bins[i + 1].astype(int)}' for i in range(len(bins) - 1)], rotation=0, ha='center')
+    ax.set_xticklabels([f'{bins[i].astype(int)}-{bins[i + 1].astype(int)}' for i in range(len(bins) - 1)], rotation=90, ha='center')
     plt.tight_layout()  # Adjust layout to prevent labels from being cut off
     plt.savefig(f'{output_path}graph/stations_histogram_count.png', dpi=dpi)
     if show_plot: plt.show()
