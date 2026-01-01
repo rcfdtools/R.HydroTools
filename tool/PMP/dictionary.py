@@ -57,6 +57,8 @@ edf_dist_dict = ([
 
 # General definitions
 dicts = {
+    'study_name': 'Study and analysis of the Probable Maximum Precipitation (PMP) recorded in the network of automatic stations in Colombia - South America and estimation of extreme values for different return periods from multiple probability distributions.',
+
     'pmp': 'Probable Maximum Precipitation (PMP) is the greatest amount of rainfall for a specific duration that is meteorologically possible for a given location, acting as a "worst-case" scenario for extreme storms, crucial for designing safety-critical infrastructure like bridges, river deviations, dams, spillways, and nuclear plants to prevent catastrophic failure. PMP is calculated by hydrologists using meteorological data to determine the upper limit of extreme rainfall, often leading to the Probable Maximum Flood (PMF) for flood control design, and is increasingly being studied for climate change impacts.',
 
     'scipy_stats': '[scipy.stats](https://docs.scipy.org/doc/scipy/reference/stats.html) is a Python´s powerful submodule within the SciPy library for comprehensive statistical analysis, offering over 130 probability distributions (like Normal, Poisson), functions for descriptive stats (mean, variance), hypothesis testing (t-tests, chi-square), random variable generation, and statistical tests, making it essential for data science, modeling, and research. It provides tools to explore, model, and draw conclusions from data efficiently, working seamlessly with NumPy.',
@@ -103,7 +105,7 @@ dicts = {
 
     'hydrometeorological_station': 'A hydrometeorological station is a facility with instruments to measure both weather (meteorological) (temperature, wind, humidity, pressure) and water (hydrological) (river levels, flow, rainfall, soil moisture, water quality) data, providing a comprehensive view of the water cycle for forecasting floods, droughts, managing resources, and supporting agriculture and ecosystems. These stations are crucial for understanding the interaction between water and atmosphere, enabling better decision-making for disaster preparedness and sustainable water management.',
 
-    'station_list': 'The following list contains the stations used in the current study, each one contains an specific detailed report that contains the probability distributions analysis.',
+    'station_list': 'The following list contains the stations used in the current study, each one contains an specific detailed report with the probability distributions analysis andthe extreme values for different recurrence intervals.',
 
     'disclaimer': '**APP DISCLAIMER**: NO WARRANTY - This software is provided by [github.com/rcfdtools](https://github.com/rcfdtools) "as is", without any express or implied warranty, including warranties of merchantability, fitness for a particular purpose, or non-infringement. There is no guarantee that the software will be error-free or operate without interruption. LIMITATION OF LIABILITY - Neither the authors nor copyright holders will be liable for claims or damages arising from the software or its use. You are responsible for determining if the software is appropriate for your use and assume all associated risks, including errors, legal compliance, and data loss. NO PROFESSIONAL ADVICE - The software provides general information and does not offer professional advice. It should not replace consultation with professional advisors.',
 }

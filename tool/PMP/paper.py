@@ -42,7 +42,8 @@ stations_to_exclude = ['25020230', '25020240', '25020250', '25020260', '25020280
 
 # Header & join best fit .csv results files and read and filter the CNE catalog
 funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen = print_on_screen)
-funcs.print_log(file_log, '# PMP paper\n', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'# {dictionary.dicts['study_name']}\n', on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n\n{dictionary.dicts['pmp']}\n', on_screen = print_on_screen)
 extension = 'csv'
 all_filenames = [i for i in glob.glob(os.path.join(input_path, 'bestfit_*.{}'.format(extension)))]
 df_bestfit = pd.concat([pd.read_csv(f) for f in all_filenames], ignore_index=True)
