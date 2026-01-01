@@ -823,7 +823,7 @@ Number of records founded per station in the integrated bestfit table.
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/stations_histogram_count.png.png" width="800"></img>
+<img alt="R.HydroTools" src="graph/stations_histogram_count.png" width="800"></img>
 
 </div>
 
