@@ -97,7 +97,7 @@ funcs.print_log(file_log, f'\n:file_folder:Filtered tables: [Stations dataset](s
 funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="500"></img>', center_div=True, on_screen = print_on_screen)
 #funcs.print_log(file_log, f'\n\n{df_catalog_filter.to_markdown()}', center_div=False, on_screen = print_on_screen) # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 print(f'\nFiltered stations catalog:\n{df_catalog_filter.to_markdown()}') # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-funcs.print_log(file_log, 'Stations list: ', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, 'Stations list:  \n', center_div=False, on_screen = print_on_screen)
 for index, row in df_catalog_filter_selected_columns.iterrows():
     station_url = (f'<sub>•[{row[label_station_catalog]}](../{row[label_station_catalog]}.md)</sub>')
     funcs.print_log(file_log, f'{station_url} ', on_screen=print_on_screen)
@@ -119,4 +119,4 @@ for general in general_stat_vars:
     catalog_count=df_catalog_filter[general].value_counts().reset_index(name='Count').sort_values(by=general)
     catalog_count = catalog_count.reset_index(drop=True)
     catalog_count.index.name = 'id'
-    funcs.print_log(file_log, f'Stations by {general}  \n{catalog_count.to_markdown()}', center_div=True, on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\nStations by {general}  \n{catalog_count.to_markdown()}', center_div=True, on_screen = print_on_screen)
