@@ -5,7 +5,7 @@
 
 </div>
 
-# Study and analysis of the Probable Maximum Precipitation (PMP) recorded in the network of automatic stations in Colombia - South America and estimation of extreme values for different return periods from multiple probability distributions.
+# Study and analysis of the Probable Maximum Precipitation (PMP) in the network of automatic stations in Colombia - South America and estimation of extreme values for different return periods from Multiple probability distributions.
 
 
 Probable Maximum Precipitation (PMP) is the greatest amount of rainfall for a specific duration that is meteorologically possible for a given location, acting as a "worst-case" scenario for extreme storms, crucial for designing safety-critical infrastructure like bridges, river deviations, dams, spillways, and nuclear plants to prevent catastrophic failure. PMP is calculated by hydrologists using meteorological data to determine the upper limit of extreme rainfall, often leading to the Probable Maximum Flood (PMF) for flood control design, and is increasingly being studied for climate change impacts.
@@ -644,7 +644,7 @@ Hydrometeorological stations are categorized by their function and automation, i
 
 Hydrometeorological stations use both conventional (manual) and modern (automated/technological) methods to monitor a wide range of weather and water-related parameters, providing data for forecasting, resource management, and disaster preparedness. Conventional methods typically involve manual observations and basic, robust instruments that require human interaction at regular intervals. Modern technology has largely automated data collection, enabling real-time monitoring and data transmission, especially in remote or hazardous environments.
 
-> In the National Stations Catalog (CNE), multiple stations are currently tagged as Conventional technology despite multiple has been upgraded to Automatics ones.
+> In the Colombia National Stations Catalog (CNE), multiple stations are currently tagged as Conventional technology despite multiple has been upgraded to Automatic ones.
 
 <div align="center">
 
