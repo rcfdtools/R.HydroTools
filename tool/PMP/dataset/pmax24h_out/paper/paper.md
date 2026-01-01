@@ -819,7 +819,7 @@ A hydrographic zone is essentially a river basin or watershed: a geographic area
 
 ### 8. Records per Station (histogram)
 
-Number of records (yearly values) founded per station in the best fit integrated table.
+Number of records (yearly values) founded per station for the probability distributions analysis. The current study, consider as valid any station with at least 10 years of records.
 
 <div align="center">
 
