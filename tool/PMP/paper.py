@@ -96,8 +96,6 @@ if create_geojson_map:
 fig_file0a = 'locationmap.png'
 df_catalog_filter.to_csv(f'{output_path}stations.csv', index=False)
 funcs.print_log(file_log, f'\n\n## A. Stations evaluated\n\n{dictionary.dicts['hydrometeorological_station']}\n', center_div=False, on_screen = print_on_screen)
-funcs.print_log(file_log, f'> {dictionary.dicts['limnimetric']}\n', on_screen = print_on_screen)
-funcs.print_log(file_log, f'>\n> {dictionary.dicts['conventional_station']}\n\n', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n:file_folder:Filtered tables: [Stations dataset](stations.csv) | [Bestfit probability distributions](bestfit.csv).\n\n', on_screen = print_on_screen) #######################
 funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="500"></img>', center_div=True, on_screen = print_on_screen)
 #funcs.print_log(file_log, f'\n\n{df_catalog_filter.to_markdown()}', center_div=False, on_screen = print_on_screen) # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
