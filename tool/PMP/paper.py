@@ -5,26 +5,29 @@ import tabulate # required for print tables in Markdown using pandas
 import functions as funcs
 import dictionary as dictionary
 
+
 # General setup
 app_version = 'v20251229'
 input_path = 'dataset/pmax24h_out/table/' # Your local input file folder
 output_path = 'dataset/pmax24h_out/paper/' # Your local output file folder
 station_catalog_file = 'dataset/CNE.xls' # CNE catalog for stations info
 station_catalog_columns_drop = ['OBSERVACION', 'SUBRED'] # Dropped columns from CNE
+parameter_name = 'Rain, Pmax24h' # rain, flow
+parameter_title = 'PMP' # Probable Maximum Precipitation (PMP) or Probable Maximum Flood (PMF)
 label_station = 'station' # Station column name to eval from .csv station dataset file
 label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
 label_name = 'NOMBRE' # Station column nome in CNE_IDEAM.xls
 label_category = 'CATEGORIA' # Station column category in CNE_IDEAM.xls
 label_technology = 'TECNOLOGIA' # Station column technology in CNE_IDEAM.xls
-label_active = 'ESTADO' # Station column active in CNE_IDEAM.xls
+label_status = 'ESTADO' # Station column active in CNE_IDEAM.xls
 label_install_date = 'FECHA_INSTALACION' # Station column activation date in CNE_IDEAM.xls
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
 label_state = 'DEPARTAMENTO' # Station column state in CNE_IDEAM.xls
 label_county = 'MUNICIPIO' # Station column county in CNE_IDEAM.xls
-label_AH = 'AREA_HIDROGRAFICA' # Station column hydrographic area in CNE_IDEAM.xls
-label_ZH = 'ZONA_HIDROGRAFICA' # Station column hydrographic zone in CNE_IDEAM.xls
-label_SZH = 'SUBZONA_HIDROGRAFICA' # Station column hydrographic subzone in CNE_IDEAM.xls
+label_ah = 'AREA_HIDROGRAFICA' # Station column hydrographic area in CNE_IDEAM.xls
+label_zh = 'ZONA_HIDROGRAFICA' # Station column hydrographic zone in CNE_IDEAM.xls
+label_szh = 'SUBZONA_HIDROGRAFICA' # Station column hydrographic subzone in CNE_IDEAM.xls
 print_on_screen = False # Global print control in screen
 file_log_name = f'{output_path}{'paper'}.md'  # Markdown file log
 file_log = open(file_log_name, 'w+', encoding='utf-8')   # w+ create the file if it doesn't exist
@@ -67,7 +70,7 @@ df_catalog_filter = df_catalog_filter.reset_index(drop=True)
 df_catalog_filter.index.name = 'id'
 #print(f'\nfiltered_df types: \n{filtered_df.dtypes}')
 #print(f'\n{df_catalog_filter.head().to_markdown()}')
-df_catalog_filter_selected_columns = df_catalog_filter[[label_station_catalog, label_name, label_category, label_technology, label_active, label_install_date, label_latitude, label_longitude, label_state, label_county]]
+df_catalog_filter_selected_columns = df_catalog_filter[[label_station_catalog, label_name, label_category, label_technology, label_status, label_install_date, label_latitude, label_longitude, label_state, label_county]]
 
 
 # Create GeoJSON map
@@ -77,7 +80,7 @@ if create_geojson_map:
     for index, row in df_catalog_filter_selected_columns.iterrows():
         #print (index)
         #print(f"Code: {row['CODIGO']}, Name: {row['NOMBRE']}")
-        properties = (f'"Code": "{row[label_station_catalog]}", "Name": "{row[label_name]}", "Category": "{row[label_category]}", "Technology": "{row[label_technology]}", "Active": "{row[label_active]}", "Installation date": "{row[label_install_date]}", "Latitude": "{row[label_latitude]}", "Longitude": "{row[label_longitude]}", "State": "{row[label_state]}", "County": "{row[label_county]}"')
+        properties = (f'"Code": "{row[label_station_catalog]}", "Name": "{row[label_name]}", "Category": "{row[label_category]}", "Technology": "{row[label_technology]}", "Active": "{row[label_status]}", "Installation date": "{row[label_install_date]}", "Latitude": "{row[label_latitude]}", "Longitude": "{row[label_longitude]}", "State": "{row[label_state]}", "County": "{row[label_county]}"')
         print_geojson = '{"type": "Point","properties": {'+str(properties)+'},"coordinates": [' + str(row[label_longitude]) + ',' + str(row[label_latitude]) + ']}'
         funcs.print_log(file_log, print_geojson, on_screen = print_on_screen)
         if index <= len(df_catalog_filter) - 2:
@@ -93,7 +96,7 @@ df_catalog_filter.to_csv(f'{output_path}stations.csv', index=False)
 funcs.print_log(file_log, f'\n\n## Stations evaluated\n\n', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, f'> {dictionary.dicts['limnimetric']}\n', on_screen = print_on_screen)
 funcs.print_log(file_log, f'>\n> {dictionary.dicts['conventional_station']}\n\n', on_screen = print_on_screen)
-funcs.print_log(file_log, f'\n:file_folder:Filtered tables: [Stations dataset](stations.csv), [Bestfit probability distributions](bestfit.csv).\n\n', on_screen = print_on_screen) #######################
+funcs.print_log(file_log, f'\n:file_folder:Filtered tables: [Stations dataset](stations.csv) | [Bestfit probability distributions](bestfit.csv).\n\n', on_screen = print_on_screen) #######################
 funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="500"></img>', center_div=True, on_screen = print_on_screen)
 #funcs.print_log(file_log, f'\n\n{df_catalog_filter.to_markdown()}', center_div=False, on_screen = print_on_screen) # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 print(f'\nFiltered stations catalog:\n{df_catalog_filter.to_markdown()}') # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -113,10 +116,15 @@ location_map_plot.savefig(output_path + fig_file0a, dpi=dpi)
 
 
 # Stations catalog general statistics
-general_stat_vars = [label_category, label_technology, label_active, label_state, label_AH, label_ZH]
+general_stat_vars = ['label_category', 'label_technology', 'label_status', 'label_state', 'label_ah', 'label_zh'] # As text for the dictionary definitions call
 funcs.print_log(file_log, f'\n\n', center_div=False, on_screen=print_on_screen)
 for general in general_stat_vars:
-    catalog_count=df_catalog_filter[general].value_counts().reset_index(name='Count').sort_values(by=general)
+    catalog_count=df_catalog_filter[eval(general)].value_counts().reset_index(name='Count').sort_values(by=eval(general))
     catalog_count = catalog_count.reset_index(drop=True)
     catalog_count.index.name = 'id'
-    funcs.print_log(file_log, f'\nStations by {general}  \n{catalog_count.to_markdown()}', center_div=True, on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n### Stations by {general}\n\n{dictionary.dicts[general]}\n', center_div=False, on_screen = print_on_screen)
+    funcs.print_log(file_log, f'{catalog_count.to_markdown()}', center_div=True, on_screen = print_on_screen)
+
+
+
+funcs.print_log(file_log, f'\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
