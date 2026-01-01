@@ -6,6 +6,7 @@ import tabulate # required for print tables in Markdown using pandas
 import functions as funcs
 import dictionary as dictionary
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 # General setup
@@ -35,6 +36,7 @@ file_log_name = f'{output_path}{'paper'}.md'  # Markdown file log
 file_log = open(file_log_name, 'w+', encoding='utf-8')   # w+ create the file if it doesn't exist
 create_plot = True # Creates, save and include plots into reports ●
 show_plot = False # Show plot on Python screen console
+color_plot = '#3b3b3b' # Global plot color
 dpi = 96 # Graph plot resolution
 create_geojson_map = True
 only_automatic_stations = True  # Evaluated only stations with automatic technology avoiding only conventional ones
@@ -63,8 +65,8 @@ df_stations = pd.DataFrame(stations, columns=[label_station])
 data_types = {label_station_catalog: 'str', label_latitude: 'float64', label_longitude: 'float64'}
 df_catalog = pd.read_excel(station_catalog_file, sheet_name='CNE', parse_dates=True, dtype=data_types) # , dtype=data_types
 df_catalog = df_catalog.drop(columns=station_catalog_columns_drop)
-#print(f'\ndf_catalog types: \n{df_catalog.dtypes}')
-#print(df_catalog.head())
+#print(f'\ndf_catalog types: \n{df_catalog.dtypes.to_markdown()}') # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#print(f'\ndf_catalog.head().to_markdown()') # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 if only_automatic_stations:
     #df_catalog = df_catalog[df_catalog[label_technology] != automatic_tag_not_in]
     df_catalog = df_catalog[~df_catalog[label_technology].isin(automatic_tag_not_in)] # Excluding stations using isin() with Boolean Negation (~)
@@ -102,7 +104,7 @@ funcs.print_log(file_log, f'\n\n## A. Stations evaluated\n\n{dictionary.dicts['h
 funcs.print_log(file_log, f'\n:file_folder:Filtered tables: [Stations dataset](stations.csv) | [Bestfit probability distributions](bestfit.csv).\n\n', on_screen = print_on_screen) #######################
 funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="500"></img>', center_div=True, on_screen = print_on_screen)
 #funcs.print_log(file_log, f'\n\n{df_catalog_filter.to_markdown()}', center_div=False, on_screen = print_on_screen) # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-print(f'\nFiltered stations catalog:\n{df_catalog_filter.to_markdown()}') # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#print(f'\nFiltered stations catalog:\n{df_catalog_filter.to_markdown()}') # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 funcs.print_log(file_log, f'\n### 0. Stations list ({len(df_catalog_filter_selected_columns)} used)\n\n{dictionary.dicts['station_list']}\n\n', center_div=False, on_screen = print_on_screen)
 for index, row in df_catalog_filter_selected_columns.iterrows():
     station_url = (f'<sub>•[{row[label_station_catalog]}](../{row[label_station_catalog]}.md)</sub>')
@@ -115,6 +117,7 @@ for index, row in df_catalog_filter_selected_columns.iterrows():
     '''
 location_map_plot = funcs.location_map_multiple(df_catalog_filter_selected_columns, label_latitude, label_longitude)
 location_map_plot.savefig(output_path + fig_file0a, dpi=dpi)
+plt.close()
 #location_map_plot.show()
 
 
@@ -135,7 +138,7 @@ for general in general_stat_vars:
         funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/stations_by_{eval(general)}.png" width="800"></img>',center_div=True, on_screen=print_on_screen)
         # Bar plot
         fig, ax = plt.subplots(figsize=(10, 6))
-        bars = ax.barh(catalog_count['plot_label'], catalog_count['Count'], color='#3b3b3b')
+        bars = ax.barh(catalog_count['plot_label'], catalog_count['Count'], color=color_plot)
         plt.yticks(rotation=0, ha='right')
         ax.bar_label(bars, padding=3)
         ax.set_title(f'Stations by {eval(general)}')
@@ -147,4 +150,31 @@ for general in general_stat_vars:
         plt.close()
 
 
+# Station bestfit records analysis
+#general_stat_vars = ['label_category', 'label_technology', 'label_status', 'label_state', 'label_ah', 'label_zh'] # As text for the dictionary definitions call
+df_station_record = df_bestfit.groupby(label_station)['n'].mean().reset_index()
+df_station_record = df_station_record.sort_values(by=['n', label_station], ascending=False)
+df_station_record = df_station_record.reset_index(drop=True)
+df_station_record.index.name = 'id'
+funcs.print_log(file_log, f'\n### {general_index+1}. Records for Station (histogram)\n\n{dictionary.dicts['station_record']}\n', center_div=False, on_screen = print_on_screen)
+#funcs.print_log(file_log, f'{df_station_record.to_markdown()}', center_div=True, on_screen = print_on_screen)
+if create_plot:
+    funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/stations_histogram_count.png.png" width="800"></img>', center_div=True, on_screen=print_on_screen)
+    custom_bins = [0, 5, 10, 15, 20, 25, 30]
+    fig, ax = plt.subplots(figsize=(10, 6))
+    N, bins, patches = ax.hist(df_station_record['n'], bins=custom_bins, color=color_plot, edgecolor='black', rwidth=0.95)
+    ax.bar_label(patches, labels=[f'{int(c)}' for c in N], label_type='edge', padding=5)
+    ax.set_title('Histogram of n')
+    ax.set_xlabel('Value Bins')
+    ax.set_ylabel('Frequency')
+    ax.set_xticks(bins[:-1] + np.diff(bins) / 2)  # Centers the x-tick labels within the bars
+    ax.set_xticklabels([f'{bins[i].astype(int)}-{bins[i + 1].astype(int)}' for i in range(len(bins) - 1)], rotation=0, ha='center')
+    plt.tight_layout()  # Adjust layout to prevent labels from being cut off
+    plt.savefig(f'{output_path}graph/stations_histogram_count.png', dpi=dpi)
+    if show_plot: plt.show()
+    plt.close()
+
+
+
+# Footer
 funcs.print_log(file_log, f'\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)

@@ -27,7 +27,7 @@ pd.set_option('display.width', None)
 app_version = 'v20251228'
 input_path = 'dataset/pmax24h_in/' # Your local input file folder
 output_path = 'dataset/pmax24h_out/' # Your local output file folder
-station_dataset_file = input_path + 'conventional_test.csv' # Stations dataset ●
+station_dataset_file = input_path + 'XXXconventional_test.csv' # Stations dataset ●
 station_catalog_file = 'dataset/CNE.xls' # CNE catalog for stations info
 station_catalog_columns_drop = ['OBSERVACION', 'SUBRED'] # Dropped columns from CNE
 parameter_name = 'Rain, Pmax24h' # rain, flow
@@ -46,7 +46,7 @@ show_plot = False # Show plot on Python screen console
 plot_only_fit = True # Plot only fit distributions with Δo > Δ
 plot_rounding_val = 6 # Rounding values in plots to # decimal positions ●
 print_on_screen = False # Global print control in screen
-color_line_plot = 'black' # green
+color_plot = 'black' # Global plot color
 dpi = 96 # Graph plot resolution
 show_warnings = False # Show warnings on screen
 low_extreme = False # Eval low extreme values, if False, evaluates high extreme values
@@ -162,8 +162,8 @@ for station in stations:
         #df = df.sort_values(by=label_date)
         ax = plt.gca()
         ax.xaxis.set_major_locator(MaxNLocator(integer=True))
-        plt.plot(df[label_date], df[f'{label_x}_initial'], color=color_line_plot, lw=0.5, marker='o', markersize=2, label='Original', linestyle='dashed')
-        plt.plot(df[label_date], df[label_x], color=color_line_plot, lw=1.25, marker='o', markersize=3, label='Adjusted (Z-Score)')
+        plt.plot(df[label_date], df[f'{label_x}_initial'], color=color_plot, lw=0.5, marker='o', markersize=2, label='Original', linestyle='dashed')
+        plt.plot(df[label_date], df[label_x], color=color_plot, lw=1.25, marker='o', markersize=3, label='Adjusted (Z-Score)')
         plt.grid(color='gray', linestyle='--', linewidth=0.1)
         plt.title('Data serie')  #$_{ } for underscript text
         plt.xlabel('Year')
@@ -305,7 +305,7 @@ for station in stations:
             plt.close()
 
             # Plot empirical vs. best fit (graph 2)
-            plt.plot(df[x], df[dp_best['p_dist'][0]], color=color_line_plot, lw=1.5, marker='o', markersize=0, label=f'{dp_best['p_dist'][0]} (Δ: {round(dp_best['delta'][0], plot_rounding_val)})')
+            plt.plot(df[x], df[dp_best['p_dist'][0]], color=color_plot, lw=1.5, marker='o', markersize=0, label=f'{dp_best['p_dist'][0]} (Δ: {round(dp_best['delta'][0], plot_rounding_val)})')
             plt.scatter(df[x], df['empirical'], color='black', facecolors='darkgray', s=24, label=f'{emp} (Δo: {round(dp_best['deltao'][0], plot_rounding_val)})')
             plt.title('Cumulative distribution function CDF (Best fit)')
             plt.xlabel(parameter_name + ' ' + parameter_units)
@@ -320,7 +320,7 @@ for station in stations:
 
             # Plot Empirical & Estimated PDF - Best Fit (graph 3)
             plt.hist(df.x, density=True, histtype='stepfilled', alpha=0.4, color='gray', label=f'Empirical {emp}')
-            plt.plot(df.x, df[dp_best['p_dist'][0]+'_pdf'], 'r-', lw=1.5, color=color_line_plot, label=f'Estimated {dp_best['p_dist'][0]}')
+            plt.plot(df.x, df[dp_best['p_dist'][0]+'_pdf'], 'r-', lw=1.5, color=color_plot, label=f'Estimated {dp_best['p_dist'][0]}')
             plt.legend(loc='best', frameon=False)
             plt.title('Empirical & Estimated PDF (Best fit)')
             plt.xlabel(parameter_name + ' ' + parameter_units)
@@ -371,7 +371,7 @@ for station in stations:
         plt.close()
 
         # Plot extreme values for specific return periods (Best fit) (graph 5)
-        plt.plot(df_tr['tr'], df_tr[best_of_best_p_dist], color=color_line_plot, lw=1.5, marker='o', markersize=3, label=best_of_best_p_dist)
+        plt.plot(df_tr['tr'], df_tr[best_of_best_p_dist], color=color_plot, lw=1.5, marker='o', markersize=3, label=best_of_best_p_dist)
         plt.title('Extreme values for specific return periods (Best fit)')
         plt.xlabel('Tr ($years$)')
         plt.ylabel(parameter_name + ' ' + parameter_units)
@@ -384,7 +384,7 @@ for station in stations:
         plt.close()
 
         # Plot risk rate for specific return periods (graph 5)
-        plt.plot(df_tr['tr'], df_tr['risk_rate'], color=color_line_plot, lw=1.5, marker='o', markersize=3, label=best_of_best_p_dist)
+        plt.plot(df_tr['tr'], df_tr['risk_rate'], color=color_plot, lw=1.5, marker='o', markersize=3, label=best_of_best_p_dist)
         plt.title('Risk rate values for specific return periods')
         plt.xlabel('Tr ($years$)')
         plt.ylabel('Risk rate')
