@@ -160,7 +160,7 @@ funcs.print_log(file_log, f'\n### {general_index+1}. Records for Station (histog
 #funcs.print_log(file_log, f'{df_station_record.to_markdown()}', center_div=True, on_screen = print_on_screen)
 if create_plot:
     funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/stations_histogram_count.png" width="800"></img>', center_div=True, on_screen=print_on_screen)
-    custom_bins = [0, 5, 10, 15, 20, 25, 30]
+    custom_bins = [0, 5, 6, 7, 8, 9, 10, 15, 20, 25, 30]
     fig, ax = plt.subplots(figsize=(10, 6))
     N, bins, patches = ax.hist(df_station_record['n'], bins=custom_bins, color=color_plot, edgecolor='black', rwidth=0.95)
     ax.bar_label(patches, labels=[f'{int(c)}' for c in N], label_type='edge', padding=5)
