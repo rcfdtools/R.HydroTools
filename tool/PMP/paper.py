@@ -135,7 +135,7 @@ for general in general_stat_vars:
         funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/stations_by_{eval(general)}.png" width="800"></img>',center_div=True, on_screen=print_on_screen)
         # Bar plot
         fig, ax = plt.subplots(figsize=(10, 6))
-        bars = ax.barh(catalog_count['plot_label'], catalog_count['Count'], color='black')
+        bars = ax.barh(catalog_count['plot_label'], catalog_count['Count'], color='#3b3b3b')
         plt.yticks(rotation=0, ha='right')
         ax.bar_label(bars, padding=3)
         ax.set_title(f'Stations by {eval(general)}')
