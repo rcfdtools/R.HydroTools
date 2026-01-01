@@ -602,7 +602,7 @@ A hydrometeorological station is a facility with instruments to measure both wea
 
 <div align="center">
 
-<img alt="R.HydroTools" src="locationmap.png" width="500"></img>
+<img alt="R.HydroTools" src="graph/locationmap.png" width="500"></img>
 
 </div>
 

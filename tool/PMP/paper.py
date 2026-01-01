@@ -96,7 +96,7 @@ if create_geojson_map:
 
 
 # Stations list & Static map
-fig_file0a = 'locationmap.png'
+fig_file0a = 'graph/locationmap.png'
 df_catalog_filter.to_csv(f'{output_path}stations.csv', index=False)
 funcs.print_log(file_log, f'\n\n## A. Stations evaluated\n\n{dictionary.dicts['hydrometeorological_station']}\n', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n:file_folder:Filtered tables: [Stations dataset](stations.csv) | [Bestfit probability distributions](bestfit.csv).\n\n', on_screen = print_on_screen) #######################
