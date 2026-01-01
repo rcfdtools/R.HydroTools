@@ -156,9 +156,9 @@ df_station_record = df_bestfit.groupby(label_station)['n'].mean().reset_index()
 df_station_record = df_station_record.sort_values(by=['n', label_station], ascending=False)
 df_station_record = df_station_record.reset_index(drop=True)
 df_station_record.index.name = 'id'
-funcs.print_log(file_log, f'\n### {general_index+1}. Records for Station (histogram)\n\n{dictionary.dicts['station_record']}\n', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n### {general_index+1}. Records per Station (histogram)\n\n{dictionary.dicts['station_record']}\n', center_div=False, on_screen = print_on_screen)
 #funcs.print_log(file_log, f'{df_station_record.to_markdown()}', center_div=True, on_screen = print_on_screen)
-if create_plot:
+if create_plot: # Histogram plot
     funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/stations_histogram_count.png" width="800"></img>', center_div=True, on_screen=print_on_screen)
     custom_bins = [5, 6, 7, 8, 9, 10, 15, 20, 25]
     fig, ax = plt.subplots(figsize=(10, 6))

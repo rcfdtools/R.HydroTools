@@ -101,7 +101,7 @@ dicts = {
 
     'station_list': 'The following list contains the stations used in the current study, each one contains an specific detailed report with the probability distributions analysis and the extreme values for different recurrence intervals. Note: some conventional stations may be include in the current analysis.',
 
-    'station_record': 'Number of records founded per station in the integrated bestfit table.',
+    'station_record': 'Number of records (yearly values) founded per station in the best fit integrated table.',
 
     'disclaimer': '**APP DISCLAIMER**: NO WARRANTY - This software is provided by [github.com/rcfdtools](https://github.com/rcfdtools) "as is", without any express or implied warranty, including warranties of merchantability, fitness for a particular purpose, or non-infringement. There is no guarantee that the software will be error-free or operate without interruption. LIMITATION OF LIABILITY - Neither the authors nor copyright holders will be liable for claims or damages arising from the software or its use. You are responsible for determining if the software is appropriate for your use and assume all associated risks, including errors, legal compliance, and data loss. NO PROFESSIONAL ADVICE - The software provides general information and does not offer professional advice. It should not replace consultation with professional advisors.',
 }
