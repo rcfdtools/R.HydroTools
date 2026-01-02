@@ -128,7 +128,7 @@ plt.close()
 if show_plot: location_map_plot.show()
 
 
-# Station bestfit records analysis
+# Station bestfit records analysis & Histogram of n
 #general_stat_vars = ['label_category', 'label_technology', 'label_status', 'label_state', 'label_ah', 'label_zh'] # As text for the dictionary definitions call
 #df_station_record = df_bestfit.groupby(label_station)['n'].mean().reset_index()
 df_station_record = df_bestfit[df_bestfit['best_fit_sort'] == 1].sort_values(by=['n', label_station], ascending=False)
@@ -225,8 +225,16 @@ for emp in edf_dist:
     num_inc += 1
 
 # Best fit analysis
-funcs.print_log(file_log, f'\n## C. Best Fit analysis\n\n{dictionary.dicts['bestfit']}\n', center_div=False, on_screen = print_on_screen)
-
+funcs.print_log(file_log, f'\n## C. Best Fit analysis\n\n{dictionary.dicts['bestfit']}', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n\nFor each ranking position, results values are order by: empirical distribution (empirical_dist), probability distribution (p_dist) and Δ value (delta).', center_div=False, on_screen = print_on_screen)
+for i in range(len(edf_dist)+1):
+    df_station_record = df_bestfit[df_bestfit['best_fit_sort'] == i+1].sort_values(by=['n', label_station], ascending=False)
+    df_station_record = df_station_record.reset_index(drop=True)
+    df_station_record.index.name = 'id'
+    if minimum_sample > 0:
+        df_station_record = df_station_record[df_station_record['n'] >= minimum_sample]
+    df_station_record = df_station_record.sort_values(by=['empirical_dist', 'p_dist', 'delta'], ascending=[True, True, True])
+    funcs.print_log(file_log, f'\n\n\n### Best fit in sort position # {i+1}\n\n{df_station_record.to_markdown()}', center_div=False, on_screen = print_on_screen)
 
 # Footer
 funcs.print_log(file_log, f'\n\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
