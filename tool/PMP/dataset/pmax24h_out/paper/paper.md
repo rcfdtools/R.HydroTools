@@ -1064,7 +1064,7 @@ $P=(m-0.25)/(n+0.5)$
 
 Best fit in probability distribution analysis means finding the theoretical distribution (like Normal, Poisson, Exponential) that most accurately mirrors your real-world data´s patterns (shape, center, spread) for better predictions, using methods like visual checks (Q-Q plots), goodness-of-fit tests (Kolmogorov-Smirnov, Chi-Squared), and information criteria (AIC) to score and select the simplest, most representative model.
 
-For each ranking position, results values are order by: empirical distribution (empirical_dist), probability distribution (p_dist) and Δ value (delta).
+The follow tables and graph shows the evaluation of the 3 best fit order ranking positions for each station. Results values are order by: empirical distribution (empirical_dist), probability distribution (p_dist) and Δ value (delta).
 
 
 ### Best fit in sort position # 1
