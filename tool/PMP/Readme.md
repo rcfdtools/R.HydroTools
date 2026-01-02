@@ -9,9 +9,8 @@ Probable Maximum Precipitation (PMP) is the greatest amount of rainfall for a sp
 
 ### Station catalog requirements
 
-* Stations not into the CNE has to be added and mark as (No Data)
+* Not existing stations fron Socrata as 14015020 and 21202200 has to be added at the end of the CNE records and mark as (No Data) and with latitude 4.0 and longitude -72.
 * National and local catalogs has to be integrated as CNE.xls with two new columns called _Catalogo_ and _Version_
-* Not existing stations fron Socrata as 14015020 and 21202200 has to be added at the end of the CNE records.
 
 
 ## PMP - Probable maximum precipitation with SciPy stat library

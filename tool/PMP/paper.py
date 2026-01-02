@@ -40,11 +40,12 @@ color_plot = '#3b3b3b' # Global plot color
 minimum_sample = 8 # Exclude a station when doesn't have the minimum data sample (0 means any) ●
 dpi = 96 # Graph plot resolution
 create_geojson_map = True
-only_automatic_stations = True  # Evaluated only stations with automatic technology avoiding only conventional ones
+only_automatic_stations = True  # Evaluated only stations with automatic technology avoiding stations tag define in automatic_tag_not_in
 automatic_tag_not_in = ['(No data)'] # Tag to exclude. Keep in mind some conventional stations are now automatic
 #automatic_tag_not_in = ['Convencional', '(No data)'] # Tag to exclude. Keep in mind some conventional stations are now automatic
-exclude_stations = False
+exclude_stations = True
 stations_to_exclude = ['25020230', '25020240', '25020250', '25020260', '25020280', '25020690', '25020920', '25021240', '25021650', '25025250', '28010070', '28020080', '28020150', '28020230', '28020310', '28020420', '28020440', '28020460', '28020600', '28025070', '28025080', '28025090', '28035010', '28035040', '28040310', '28040350']
+histogram_custom_bins_n = [5, 6, 7, 8, 9, 10, 15, 20, 25, 65] # Bins for n years values histogram per station evaluated
 
 
 # Header & join best fit .csv results files and read and filter the CNE catalog
@@ -122,24 +123,24 @@ for index, row in df_catalog_filter_selected_columns.iterrows():
 location_map_plot = funcs.location_map_multiple(df_catalog_filter_selected_columns, label_latitude, label_longitude)
 location_map_plot.savefig(output_path + fig_file0a, dpi=dpi)
 plt.close()
-#location_map_plot.show()
+if show_plot: location_map_plot.show()
 
 
 # Station bestfit records analysis
 #general_stat_vars = ['label_category', 'label_technology', 'label_status', 'label_state', 'label_ah', 'label_zh'] # As text for the dictionary definitions call
 #df_station_record = df_bestfit.groupby(label_station)['n'].mean().reset_index()
-df_station_record = df_bestfit[df_bestfit['best_fit_sort'] == 1]
-df_station_record = df_station_record.sort_values(by=['n', label_station], ascending=False)
+df_station_record = df_bestfit[df_bestfit['best_fit_sort'] == 1].sort_values(by=['n', label_station], ascending=False)
+#df_station_record = df_station_record.sort_values(by=['n', label_station], ascending=False)
 df_station_record = df_station_record.reset_index(drop=True)
 df_station_record.index.name = 'id'
 funcs.print_log(file_log, f'\n\n\n### 1. Records per Station (histogram)\n\n{dictionary.dicts['station_record']}\n', center_div=False, on_screen = print_on_screen)
 #funcs.print_log(file_log, f'{df_station_record.to_markdown()}', center_div=True, on_screen = print_on_screen)
 if create_plot: # Histogram plot
     funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/stations_histogram_count.png" width="800"></img>', center_div=True, on_screen=print_on_screen)
-    custom_bins = [5, 6, 7, 8, 9, 10, 15, 20, 25]
     fig, ax = plt.subplots(figsize=(10, 6))
-    N, bins, patches = ax.hist(df_station_record['n'], bins=custom_bins, color=color_plot, edgecolor='white', rwidth=1) # edgecolor='black'
-    ax.bar_label(patches, labels=[f'{int(c)}' for c in N], label_type='edge', padding=5)
+    N, bins, patches = ax.hist(df_station_record['n'], bins=histogram_custom_bins_n, color=color_plot, edgecolor='white', rwidth=1) # edgecolor='black'
+    #N, bins, patches = ax.hist(df_station_record['n'], bins=10, color=color_plot, edgecolor='white', rwidth=1) # edgecolor='black'
+    ax.bar_label(patches, labels=[f'{int(c)}' for c in N], label_type='edge', padding=3, rotation=90)
     ax.set_title('Histogram of n')
     ax.set_xlabel('Value Bins')
     ax.set_ylabel('Frequency')
@@ -154,7 +155,7 @@ if minimum_sample > 0:
     funcs.print_log(file_log, f'\nWith a minimum length of records established in {minimum_sample} years, we are processing and analysing the best fit results for {len(df_station_record)} stations (minus those stations without no data information or not available in the CNE catalog).', on_screen = print_on_screen)
 
 
-# Stations catalog general statistics
+# CNE catalog general statistics
 df_catalog_filter = df_catalog_filter[df_catalog_filter[label_station_catalog].isin(df_station_record[label_station])] # <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 general_stat_vars = ['label_category', 'label_technology', 'label_status', 'label_state', 'label_ah', 'label_zh'] # As text for the dictionary definitions call
 funcs.print_log(file_log, f'\n\n', center_div=False, on_screen=print_on_screen)
