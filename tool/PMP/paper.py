@@ -46,7 +46,7 @@ automatic_tag_not_in = ['(No data)'] # Tag to exclude. Keep in mind some convent
 exclude_stations = True
 stations_to_exclude = ['25020230', '25020240', '25020250', '25020260', '25020280', '25020690', '25020920', '25021240', '25021650', '25025250', '28010070', '28020080', '28020150', '28020230', '28020310', '28020420', '28020440', '28020460', '28020600', '28025070', '28025080', '28025090', '28035010', '28035040', '28040310', '28040350']
 histogram_custom_bins_n = [5, 6, 7, 8, 9, 10, 15, 20, 25] # Bins for n years values histogram per station evaluated
-#histogram_custom_bins_n = [5, 6, 7, 8, 9, 10, 15, 20, 25, 65] # Bins for n years values histogram per station evaluated
+#histogram_custom_bins_n = [5, 6, 7, 8, 9, 10, 15, 20, 25, 65] # Bins for n years values histogram per station evaluated, include 65 for conventional stations
 
 
 # Header & join best fit .csv results files and read and filter the CNE catalog
@@ -187,9 +187,23 @@ for general in general_stat_vars:
         plt.close()
 
 
-
-
-
+# Probability distributions - Best Fit
+df_l_pdist_scipy = pd.DataFrame(funcs.l_pdist_scipy, columns=['p_dist', 'n_parameter', 'fit_method', 'label', 'active'])
+df_l_pdist_scipy['ref'] = '[:mortar_board:](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.'+df_l_pdist_scipy.p_dist+'.html)'
+df_l_pdist_scipy_inactive = df_l_pdist_scipy.query('active == False')
+df_l_pdist_scipy = df_l_pdist_scipy.query('active == True')
+df_l_pdist_scipy = df_l_pdist_scipy.sort_values(by=['p_dist'], ascending=True)
+df_l_pdist_scipy = df_l_pdist_scipy.reset_index(drop=True)
+df_l_pdist_scipy.index.name = 'id'
+df_l_pdist_scipy_inactive = df_l_pdist_scipy.query('active == False')
+funcs.print_log(file_log, f'\n\n## B. Probability distributions & Best fit analysis\n\n{dictionary.dicts['pdf']}\n', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log,f'\n\n### 1. Active continuous probability distributions from SciPy ({len(df_l_pdist_scipy.query('active == True'))} of {len(funcs.l_pdist_scipy)} available)', on_screen=print_on_screen)
+funcs.print_log(file_log, f'\n\n{dictionary.dicts['scipy_stats']}\n', on_screen=print_on_screen)
+funcs.print_log(file_log, f'{df_l_pdist_scipy.query('active == True').to_markdown()}', center_div=True, on_screen=print_on_screen)
+funcs.print_log(file_log,'> **n_parameter:** # arguments & localization & scale.\n>\n> **Fit methods:** (MLE) maximum likelihood, (MM) L-moments.', on_screen=print_on_screen)
+funcs.print_log(file_log, (f'\n>\n>**Inactive:** '), on_screen=print_on_screen)
+for inactives in df_l_pdist_scipy_inactive['p_dist'].values:
+    funcs.print_log(file_log, (f'{inactives}, '), on_screen=print_on_screen)
 
 # Footer
-funcs.print_log(file_log, f'\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
