@@ -48,6 +48,7 @@ exclude_stations = True
 stations_to_exclude = ['25020230', '25020240', '25020250', '25020260', '25020280', '25020690', '25020920', '25021240', '25021650', '25025250', '28010070', '28020080', '28020150', '28020230', '28020310', '28020420', '28020440', '28020460', '28020600', '28025070', '28025080', '28025090', '28035010', '28035040', '28040310', '28040350']
 histogram_custom_bins_n = [5, 6, 7, 8, 9, 10, 15, 20, 25] # Bins for n years values histogram per station evaluated
 #histogram_custom_bins_n = [5, 6, 7, 8, 9, 10, 15, 20, 25, 65] # Bins for n years values histogram per station evaluated, include 65 for conventional stations
+best_fit_sort_eval = 3 # Best fit sort positions to eval. 1 means we only evaluate the first best fit position.
 
 
 # Header & join best fit .csv results files and read and filter the CNE catalog
@@ -227,8 +228,8 @@ for emp in edf_dist:
 # Best fit analysis
 funcs.print_log(file_log, f'\n## C. Best Fit analysis\n\n{dictionary.dicts['bestfit']}', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\nFor each ranking position, results values are order by: empirical distribution (empirical_dist), probability distribution (p_dist) and Δ value (delta).', center_div=False, on_screen = print_on_screen)
-#for i in range(len(edf_dist)+1):
-for i in range(df_bestfit['best_fit_sort'].max()):
+
+for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i in range(df_bestfit['best_fit_sort'].max()):
     df_station_record = df_bestfit[df_bestfit['best_fit_sort'] == i+1].sort_values(by=['n', label_station], ascending=False)
     #df_station_record = df_station_record.reset_index(drop=True)
     #df_station_record.index.name = 'id'
