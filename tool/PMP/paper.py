@@ -238,7 +238,7 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
     df_station_record = df_station_record.sort_values(by=['empirical_dist', 'p_dist', 'delta'], ascending=[True, True, True])
     df_station_record = df_station_record.reset_index(drop=True)
     df_station_record.index.name = 'id'
-    funcs.print_log(file_log, f'\n\n\n### Best fit in sort position # {i+1}\n\n{df_station_record.to_markdown()}', center_div=False, on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n\n\n### Best fit in sort position # {i+1}\n\n{df_station_record[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'n']].to_markdown()}', center_div=False, on_screen = print_on_screen)
 
 # Footer
 funcs.print_log(file_log, f'\n\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
