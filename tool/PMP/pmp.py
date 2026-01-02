@@ -192,7 +192,7 @@ for station in stations:
     funcs.print_log(file_log, f'\n\n{dictionary.dicts['scipy_stats']}\n', on_screen = print_on_screen)
     funcs.print_log(file_log, f'{df_l_pdist_scipy.query('active == True').to_markdown()}', center_div=True, on_screen = print_on_screen)
     funcs.print_log(file_log, '> **n_parameter:** # arguments & localization & scale.\n>\n> **Fit methods:** (MLE) maximum likelihood, (MM) L-moments.', on_screen = print_on_screen)
-    funcs.print_log(file_log, (f'\n>\n>**Inactive:** '), on_screen = print_on_screen)
+    funcs.print_log(file_log, (f'\n>\n>**Inactive** ({dictionary.dicts['disable_pdf']})**:** '), on_screen = print_on_screen)
     for inactives in df_l_pdist_scipy_inactive['p_dist'].values:
         funcs.print_log(file_log, (f'{inactives}, '), on_screen = print_on_screen)
     funcs.print_log(file_log, '\n\n\n## B. Probability distributions vs. Empirical distributions', on_screen = print_on_screen)
