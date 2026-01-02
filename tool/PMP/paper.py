@@ -45,7 +45,8 @@ automatic_tag_not_in = ['(No data)'] # Tag to exclude. Keep in mind some convent
 #automatic_tag_not_in = ['Convencional', '(No data)'] # Tag to exclude. Keep in mind some conventional stations are now automatic
 exclude_stations = True
 stations_to_exclude = ['25020230', '25020240', '25020250', '25020260', '25020280', '25020690', '25020920', '25021240', '25021650', '25025250', '28010070', '28020080', '28020150', '28020230', '28020310', '28020420', '28020440', '28020460', '28020600', '28025070', '28025080', '28025090', '28035010', '28035040', '28040310', '28040350']
-histogram_custom_bins_n = [5, 6, 7, 8, 9, 10, 15, 20, 25, 65] # Bins for n years values histogram per station evaluated
+histogram_custom_bins_n = [5, 6, 7, 8, 9, 10, 15, 20, 25] # Bins for n years values histogram per station evaluated
+#histogram_custom_bins_n = [5, 6, 7, 8, 9, 10, 15, 20, 25, 65] # Bins for n years values histogram per station evaluated
 
 
 # Header & join best fit .csv results files and read and filter the CNE catalog
