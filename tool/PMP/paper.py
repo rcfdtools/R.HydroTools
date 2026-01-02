@@ -1,4 +1,4 @@
-import pandas as pd
+import pandas as pd7
 import pandas as pd
 import glob
 import os
@@ -43,6 +43,7 @@ create_geojson_map = True
 only_automatic_stations = True  # Evaluated only stations with automatic technology avoiding only conventional ones
 automatic_tag_not_in = ['(No data)'] # Tag to exclude. Keep in mind some conventional stations are now automatic
 #automatic_tag_not_in = ['Convencional', '(No data)'] # Tag to exclude. Keep in mind some conventional stations are now automatic
+exclude_stations = False
 stations_to_exclude = ['25020230', '25020240', '25020250', '25020260', '25020280', '25020690', '25020920', '25021240', '25021650', '25025250', '28010070', '28020080', '28020150', '28020230', '28020310', '28020420', '28020440', '28020460', '28020600', '28025070', '28025080', '28025090', '28035010', '28035040', '28040310', '28040350']
 
 
@@ -54,7 +55,8 @@ extension = 'csv'
 all_filenames = [i for i in glob.glob(os.path.join(input_path, 'bestfit_*.{}'.format(extension)))]
 df_bestfit = pd.concat([pd.read_csv(f) for f in all_filenames], ignore_index=True)
 df_bestfit[label_station] = df_bestfit[label_station].astype(str)
-df_bestfit = df_bestfit[~df_bestfit[label_station].isin(stations_to_exclude)] # Excluding stations using isin() with Boolean Negation (~)
+if exclude_stations:
+    df_bestfit = df_bestfit[~df_bestfit[label_station].isin(stations_to_exclude)] # Excluding stations using isin() with Boolean Negation (~)
 #print(f'\ndf_bestfit types: \n{df_bestfit.dtypes}')
 df_bestfit.to_csv(f'{output_path}bestfit.csv', index=False, encoding='utf-8')
 print(f'\nSuccessfully combined {len(all_filenames)} files into bestfit.csv')
@@ -71,7 +73,8 @@ df_catalog = df_catalog.drop(columns=station_catalog_columns_drop)
 if only_automatic_stations:
     #df_catalog = df_catalog[df_catalog[label_technology] != automatic_tag_not_in]
     df_catalog = df_catalog[~df_catalog[label_technology].isin(automatic_tag_not_in)] # Excluding stations using isin() with Boolean Negation (~)
-df_catalog = df_catalog[~df_catalog[label_station_catalog].isin(stations_to_exclude)] # Excluding stations using isin() with Boolean Negation (~)
+if exclude_stations:
+    df_catalog = df_catalog[~df_catalog[label_station_catalog].isin(stations_to_exclude)] # Excluding stations using isin() with Boolean Negation (~)
 df_catalog_filter = df_catalog[df_catalog[label_station_catalog].isin(df_stations[label_station])]
 df_catalog_filter = df_catalog_filter.sort_values(by=[label_station_catalog], ascending=True)
 df_catalog_filter = df_catalog_filter.reset_index(drop=True)
@@ -148,8 +151,7 @@ if create_plot: # Histogram plot
     plt.close()
 if minimum_sample > 0:
     df_station_record = df_station_record[df_station_record['n'] >= minimum_sample]
-    funcs.print_log(file_log, f'\nWith a minimum length of records established in {minimum_sample} years, we are processing an analysing the best fit results for {len(df_station_record)} stations (minus those stations without no data information or not available in the CNE catalog).', on_screen = print_on_screen)
-
+    funcs.print_log(file_log, f'\nWith a minimum length of records established in {minimum_sample} years, we are processing and analysing the best fit results for {len(df_station_record)} stations (minus those stations without no data information or not available in the CNE catalog).', on_screen = print_on_screen)
 
 
 # Stations catalog general statistics
