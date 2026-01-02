@@ -1,5 +1,6 @@
 import pandas as pd7
 import pandas as pd
+pd.set_option('display.max_colwidth', None)
 import glob
 import os
 import tabulate # required for print tables in Markdown using pandas
@@ -204,6 +205,24 @@ funcs.print_log(file_log,'> **n_parameter:** # arguments & localization & scale.
 funcs.print_log(file_log, (f'\n>\n>**Inactive** ({dictionary.dicts['disable_pdf']})**:** '), on_screen=print_on_screen)
 for inactives in df_l_pdist_scipy_inactive['p_dist'].values:
     funcs.print_log(file_log, (f'{inactives}, '), on_screen=print_on_screen)
+funcs.print_log(file_log, f'\n\n\n### 1. Cumulative distribution values - CDF\n\n', on_screen = print_on_screen)
+funcs.print_log(file_log, f'{dictionary.dicts['cdf']}\n', on_screen = print_on_screen)
+funcs.print_log(file_log, '\n\n## 2. Probability distributions vs. Empirical distributions', on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n\n{dictionary.dicts['cpd']}\n\n', on_screen = print_on_screen)
+df_edf_dist_dict = pd.DataFrame(dictionary.edf_dist_dict, columns=['edf_dist', 'edf_name', 'edf_expression', 'edf_year', 'edf_desc'])
+edf_dist = df_edf_dist_dict['edf_dist'].unique()
+num_inc = 1
+for emp in edf_dist:
+    df_edf_dist_dict_filter = df_edf_dist_dict[df_edf_dist_dict['edf_dist'] == emp]
+    funcs.print_log(file_log,
+                    f'\n### 2.{num_inc}. Empirical - {df_edf_dist_dict_filter['edf_name'].to_string(index=False, header=False)} ({df_edf_dist_dict_filter['edf_year'].to_string(index=False, header=False)})\n',
+                    on_screen=print_on_screen)
+    funcs.print_log(file_log, f'\n{df_edf_dist_dict_filter['edf_desc'].to_string(index=False, header=False)}\n',
+                    on_screen=print_on_screen)
+    funcs.print_log(file_log, f'\n${df_edf_dist_dict_filter['edf_expression'].to_string(index=False, header=False)}$\n',
+                    center_div=True, on_screen=print_on_screen)
+    num_inc += 1
+
 
 # Footer
 funcs.print_log(file_log, f'\n\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
