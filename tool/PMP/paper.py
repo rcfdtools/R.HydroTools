@@ -148,10 +148,12 @@ if create_plot: # Histogram plot
     plt.close()
 if minimum_sample > 0:
     df_station_record = df_station_record[df_station_record['n'] >= minimum_sample]
-    funcs.print_log(file_log, f'\nWith a mínimum length of records established in {minimum_sample} years, we are processing an analysing the best fit results for {len(df_station_record)} stations (minus those stations without no data information or not available in the CNE catalog).', on_screen = print_on_screen)
-##########################
+    funcs.print_log(file_log, f'\nWith a minimum length of records established in {minimum_sample} years, we are processing an analysing the best fit results for {len(df_station_record)} stations (minus those stations without no data information or not available in the CNE catalog).', on_screen = print_on_screen)
+
+
 
 # Stations catalog general statistics
+df_catalog_filter = df_catalog_filter[df_catalog_filter[label_station_catalog].isin(df_station_record[label_station])] # <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 general_stat_vars = ['label_category', 'label_technology', 'label_status', 'label_state', 'label_ah', 'label_zh'] # As text for the dictionary definitions call
 funcs.print_log(file_log, f'\n\n', center_div=False, on_screen=print_on_screen)
 general_index = 2
