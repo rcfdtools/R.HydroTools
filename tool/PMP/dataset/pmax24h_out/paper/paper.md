@@ -1069,6 +1069,8 @@ For each ranking position, results values are order by: empirical distribution (
 
 ### Best fit in sort position # 1
 
+<div align="center">
+
 |   id |   station | empirical_dist   | p_dist                |      delta |   deltao |   n |
 |-----:|----------:|:-----------------|:----------------------|-----------:|---------:|----:|
 |    0 |  25025360 | edf_adamowski    | exponnorm             | 0.0585884  | 0.447261 |   8 |
@@ -1298,8 +1300,12 @@ For each ranking position, results values are order by: empirical distribution (
 |  224 |  35035110 | edf_weibull      | t                     | 0.0914588  | 0.447261 |   8 |
 |  225 |  24035370 | edf_weibull      | weibull_min           | 0.0710531  | 0.315645 |  19 |
 
+</div>
+
 
 ### Best fit in sort position # 2
+
+<div align="center">
 
 |   id |   station | empirical_dist   | p_dist                |      delta |   deltao |   n |
 |-----:|----------:|:-----------------|:----------------------|-----------:|---------:|----:|
@@ -1530,8 +1536,12 @@ For each ranking position, results values are order by: empirical distribution (
 |  224 |  21137050 | edf_weibull      | nakagami              | 0.0923694  | 0.35149  |  13 |
 |  225 |  17017001 | edf_weibull      | weibull_min           | 0.120386   | 0.417613 |   9 |
 
+</div>
+
 
 ### Best fit in sort position # 3
+
+<div align="center">
 
 |   id |   station | empirical_dist   | p_dist                |      delta |   deltao |   n |
 |-----:|----------:|:-----------------|:----------------------|-----------:|---------:|----:|
@@ -1761,5 +1771,9 @@ For each ranking position, results values are order by: empirical distribution (
 |  223 |  35035100 | edf_weibull      | logfisk               | 0.0923215  | 0.447261 |   8 |
 |  224 |  24010390 | edf_weibull      | logmielke             | 0.0733925  | 0.394275 |  10 |
 |  225 |  21206600 | edf_weibull      | logweibull_min        | 0.0778447  | 0.331107 |  16 |
+
+</div>
+
+
 
 <sub>**APP DISCLAIMER**: NO WARRANTY - This software is provided by [github.com/rcfdtools](https://github.com/rcfdtools) "as is", without any express or implied warranty, including warranties of merchantability, fitness for a particular purpose, or non-infringement. There is no guarantee that the software will be error-free or operate without interruption. LIMITATION OF LIABILITY - Neither the authors nor copyright holders will be liable for claims or damages arising from the software or its use. You are responsible for determining if the software is appropriate for your use and assume all associated risks, including errors, legal compliance, and data loss. NO PROFESSIONAL ADVICE - The software provides general information and does not offer professional advice. It should not replace consultation with professional advisors.</sub>
