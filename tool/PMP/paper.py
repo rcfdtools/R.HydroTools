@@ -159,7 +159,7 @@ funcs.print_log(file_log, f'\n\n', center_div=False, on_screen=print_on_screen)
 general_index = 2
 for general in general_stat_vars:
     #catalog_count=df_catalog_filter[eval(general)].value_counts().reset_index(name='Count').sort_values(by=eval(general)) # sort by var
-    catalog_count=df_catalog_filter[eval(general)].value_counts().reset_index(name='Count').sort_values(by='Count', ascending=True) # sort by count
+    catalog_count=df_catalog_filter[eval(general)].value_counts().reset_index(name='Count').sort_values(by='Count', ascending=False) # sort by count
     catalog_count = catalog_count.reset_index(drop=True)
     catalog_count.index.name = 'id'
     catalog_count['plot_label']= catalog_count[eval(general)].str[:40] # short labels
