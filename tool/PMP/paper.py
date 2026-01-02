@@ -121,10 +121,35 @@ plt.close()
 #location_map_plot.show()
 
 
+# Station bestfit records analysis
+#general_stat_vars = ['label_category', 'label_technology', 'label_status', 'label_state', 'label_ah', 'label_zh'] # As text for the dictionary definitions call
+df_station_record = df_bestfit.groupby(label_station)['n'].mean().reset_index()
+df_station_record = df_station_record.sort_values(by=['n', label_station], ascending=False)
+df_station_record = df_station_record.reset_index(drop=True)
+df_station_record.index.name = 'id'
+funcs.print_log(file_log, f'\n### 1. Records per Station (histogram)\n\n{dictionary.dicts['station_record']}\n', center_div=False, on_screen = print_on_screen)
+#funcs.print_log(file_log, f'{df_station_record.to_markdown()}', center_div=True, on_screen = print_on_screen)
+if create_plot: # Histogram plot
+    funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/stations_histogram_count.png" width="800"></img>', center_div=True, on_screen=print_on_screen)
+    custom_bins = [5, 6, 7, 8, 9, 10, 15, 20, 25]
+    fig, ax = plt.subplots(figsize=(10, 6))
+    N, bins, patches = ax.hist(df_station_record['n'], bins=custom_bins, color=color_plot, edgecolor='white', rwidth=1) # edgecolor='black'
+    ax.bar_label(patches, labels=[f'{int(c)}' for c in N], label_type='edge', padding=5)
+    ax.set_title('Histogram of n')
+    ax.set_xlabel('Value Bins')
+    ax.set_ylabel('Frequency')
+    ax.set_xticks(bins[:-1] + np.diff(bins) / 2)  # Centers the x-tick labels within the bars
+    ax.set_xticklabels([f'{bins[i].astype(int)}-{bins[i + 1].astype(int)}' for i in range(len(bins) - 1)], rotation=90, ha='center')
+    plt.tight_layout()  # Adjust layout to prevent labels from being cut off
+    plt.savefig(f'{output_path}graph/stations_histogram_count.png', dpi=dpi)
+    if show_plot: plt.show()
+    plt.close()
+
+
 # Stations catalog general statistics
 general_stat_vars = ['label_category', 'label_technology', 'label_status', 'label_state', 'label_ah', 'label_zh'] # As text for the dictionary definitions call
 funcs.print_log(file_log, f'\n\n', center_div=False, on_screen=print_on_screen)
-general_index = 1
+general_index = 2
 for general in general_stat_vars:
     #catalog_count=df_catalog_filter[eval(general)].value_counts().reset_index(name='Count').sort_values(by=eval(general)) # sort by var
     catalog_count=df_catalog_filter[eval(general)].value_counts().reset_index(name='Count').sort_values(by='Count', ascending=True) # sort by count
@@ -150,29 +175,7 @@ for general in general_stat_vars:
         plt.close()
 
 
-# Station bestfit records analysis
-#general_stat_vars = ['label_category', 'label_technology', 'label_status', 'label_state', 'label_ah', 'label_zh'] # As text for the dictionary definitions call
-df_station_record = df_bestfit.groupby(label_station)['n'].mean().reset_index()
-df_station_record = df_station_record.sort_values(by=['n', label_station], ascending=False)
-df_station_record = df_station_record.reset_index(drop=True)
-df_station_record.index.name = 'id'
-funcs.print_log(file_log, f'\n### {general_index+1}. Records per Station (histogram)\n\n{dictionary.dicts['station_record']}\n', center_div=False, on_screen = print_on_screen)
-#funcs.print_log(file_log, f'{df_station_record.to_markdown()}', center_div=True, on_screen = print_on_screen)
-if create_plot: # Histogram plot
-    funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/stations_histogram_count.png" width="800"></img>', center_div=True, on_screen=print_on_screen)
-    custom_bins = [5, 6, 7, 8, 9, 10, 15, 20, 25]
-    fig, ax = plt.subplots(figsize=(10, 6))
-    N, bins, patches = ax.hist(df_station_record['n'], bins=custom_bins, color=color_plot, edgecolor='white', rwidth=1) # edgecolor='black'
-    ax.bar_label(patches, labels=[f'{int(c)}' for c in N], label_type='edge', padding=5)
-    ax.set_title('Histogram of n')
-    ax.set_xlabel('Value Bins')
-    ax.set_ylabel('Frequency')
-    ax.set_xticks(bins[:-1] + np.diff(bins) / 2)  # Centers the x-tick labels within the bars
-    ax.set_xticklabels([f'{bins[i].astype(int)}-{bins[i + 1].astype(int)}' for i in range(len(bins) - 1)], rotation=90, ha='center')
-    plt.tight_layout()  # Adjust layout to prevent labels from being cut off
-    plt.savefig(f'{output_path}graph/stations_histogram_count.png', dpi=dpi)
-    if show_plot: plt.show()
-    plt.close()
+
 
 
 
