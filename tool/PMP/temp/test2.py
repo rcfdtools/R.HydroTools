@@ -7,6 +7,7 @@ import os
 from scipy.stats import gumbel_l, gumbel_r
 import numpy as np
 from scipy.stats import pearson3
+import math as math
 
 
 # Join multiple .csv files
@@ -109,6 +110,7 @@ print(f"Estimated 100-year flood (original units): {flood_100yr}")
 
 # Simple rotated bar plot with python matplotlib sample fit labels
 # Data for the plot
+'''
 categories = ['Category One With A Long Name',
               'Category Two Name',
               'Category Three Is Even Longer',
@@ -130,3 +132,7 @@ ax.set_ylabel("Values")
 plt.subplots_adjust(bottom=0.15) # Increase bottom margin as needed
 # Display the plot
 plt.show()
+'''
+
+
+print(f'log(0.0000001) = {math.log(0.0000001)}')
