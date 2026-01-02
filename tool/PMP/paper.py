@@ -196,7 +196,7 @@ df_l_pdist_scipy = df_l_pdist_scipy.query('active == True')
 df_l_pdist_scipy = df_l_pdist_scipy.sort_values(by=['p_dist'], ascending=True)
 df_l_pdist_scipy = df_l_pdist_scipy.reset_index(drop=True)
 df_l_pdist_scipy.index.name = 'id'
-funcs.print_log(file_log, f'\n\n## B. Probability distributions & Best fit analysis\n\n{dictionary.dicts['pdf']}\n', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n\n## B. Probability and Empirical distributions\n\n{dictionary.dicts['pdf']}\n', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n{dictionary.dicts['log_pdf']}\n', on_screen=print_on_screen)
 funcs.print_log(file_log,f'\n\n### 0. Active continuous probability distributions from SciPy ({len(df_l_pdist_scipy.query('active == True'))} of {len(funcs.l_pdist_scipy)} available)', on_screen=print_on_screen)
 funcs.print_log(file_log, f'\n\n{dictionary.dicts['scipy_stats']}\n', on_screen=print_on_screen)
@@ -207,7 +207,7 @@ for inactives in df_l_pdist_scipy_inactive['p_dist'].values:
     funcs.print_log(file_log, (f'{inactives}, '), on_screen=print_on_screen)
 funcs.print_log(file_log, f'\n\n\n### 1. Cumulative distribution values - CDF\n\n', on_screen = print_on_screen)
 funcs.print_log(file_log, f'{dictionary.dicts['cdf']}\n', on_screen = print_on_screen)
-funcs.print_log(file_log, '\n\n## 2. Probability distributions vs. Empirical distributions', on_screen = print_on_screen)
+funcs.print_log(file_log, '\n\n### 2. Probability distributions vs. Empirical distributions', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\n{dictionary.dicts['cpd']}\n\n', on_screen = print_on_screen)
 df_edf_dist_dict = pd.DataFrame(dictionary.edf_dist_dict, columns=['edf_dist', 'edf_name', 'edf_expression', 'edf_year', 'edf_desc'])
 edf_dist = df_edf_dist_dict['edf_dist'].unique()
@@ -215,13 +215,16 @@ num_inc = 1
 for emp in edf_dist:
     df_edf_dist_dict_filter = df_edf_dist_dict[df_edf_dist_dict['edf_dist'] == emp]
     funcs.print_log(file_log,
-                    f'\n### 2.{num_inc}. Empirical - {df_edf_dist_dict_filter['edf_name'].to_string(index=False, header=False)} ({df_edf_dist_dict_filter['edf_year'].to_string(index=False, header=False)})\n',
+                    f'\n#### 2.{num_inc}. Empirical - {df_edf_dist_dict_filter['edf_name'].to_string(index=False, header=False)} ({df_edf_dist_dict_filter['edf_year'].to_string(index=False, header=False)})\n',
                     on_screen=print_on_screen)
     funcs.print_log(file_log, f'\n{df_edf_dist_dict_filter['edf_desc'].to_string(index=False, header=False)}\n',
                     on_screen=print_on_screen)
     funcs.print_log(file_log, f'\n${df_edf_dist_dict_filter['edf_expression'].to_string(index=False, header=False)}$\n',
                     center_div=True, on_screen=print_on_screen)
     num_inc += 1
+
+# Best fit analysis
+funcs.print_log(file_log, f'\n\n## C. Best fit analysis\n\n{dictionary.dicts['pdf']}\n', center_div=False, on_screen = print_on_screen)
 
 
 # Footer
