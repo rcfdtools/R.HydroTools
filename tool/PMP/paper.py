@@ -198,6 +198,7 @@ df_l_pdist_scipy.index.name = 'id'
 funcs.print_log(file_log, f'\n\n## B. Probability distributions & Best fit analysis\n\n{dictionary.dicts['pdf']}\n', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log,f'\n\n### 0. Active continuous probability distributions from SciPy ({len(df_l_pdist_scipy.query('active == True'))} of {len(funcs.l_pdist_scipy)} available)', on_screen=print_on_screen)
 funcs.print_log(file_log, f'\n\n{dictionary.dicts['scipy_stats']}\n', on_screen=print_on_screen)
+funcs.print_log(file_log, f'\n{dictionary.dicts['log_pdf']}\n', on_screen=print_on_screen)
 funcs.print_log(file_log, f'{df_l_pdist_scipy.query('active == True').to_markdown()}', center_div=True, on_screen=print_on_screen)
 funcs.print_log(file_log,'> **n_parameter:** # arguments & localization & scale.\n>\n> **Fit methods:** (MLE) maximum likelihood, (MM) L-moments.', on_screen=print_on_screen)
 funcs.print_log(file_log, (f'\n>\n>**Inactive:** '), on_screen=print_on_screen)
