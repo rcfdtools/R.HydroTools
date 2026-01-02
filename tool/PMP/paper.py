@@ -37,6 +37,7 @@ file_log = open(file_log_name, 'w+', encoding='utf-8')   # w+ create the file if
 create_plot = True # Creates, save and include plots into reports ●
 show_plot = False # Show plot on Python screen console
 color_plot = '#3b3b3b' # Global plot color
+minimum_sample = 8 # Exclude a station when doesn't have the minimum data sample (0 means any) ●
 dpi = 96 # Graph plot resolution
 create_geojson_map = True
 only_automatic_stations = True  # Evaluated only stations with automatic technology avoiding only conventional ones
@@ -123,11 +124,12 @@ plt.close()
 
 # Station bestfit records analysis
 #general_stat_vars = ['label_category', 'label_technology', 'label_status', 'label_state', 'label_ah', 'label_zh'] # As text for the dictionary definitions call
-df_station_record = df_bestfit.groupby(label_station)['n'].mean().reset_index()
+#df_station_record = df_bestfit.groupby(label_station)['n'].mean().reset_index()
+df_station_record = df_bestfit[df_bestfit['best_fit_sort'] == 1]
 df_station_record = df_station_record.sort_values(by=['n', label_station], ascending=False)
 df_station_record = df_station_record.reset_index(drop=True)
 df_station_record.index.name = 'id'
-funcs.print_log(file_log, f'\n### 1. Records per Station (histogram)\n\n{dictionary.dicts['station_record']}\n', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n\n\n### 1. Records per Station (histogram)\n\n{dictionary.dicts['station_record']}\n', center_div=False, on_screen = print_on_screen)
 #funcs.print_log(file_log, f'{df_station_record.to_markdown()}', center_div=True, on_screen = print_on_screen)
 if create_plot: # Histogram plot
     funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/stations_histogram_count.png" width="800"></img>', center_div=True, on_screen=print_on_screen)
@@ -144,7 +146,10 @@ if create_plot: # Histogram plot
     plt.savefig(f'{output_path}graph/stations_histogram_count.png', dpi=dpi)
     if show_plot: plt.show()
     plt.close()
-
+if minimum_sample > 0:
+    df_station_record = df_station_record[df_station_record['n'] >= minimum_sample]
+    funcs.print_log(file_log, f'\nWith a mínimum length of records established in {minimum_sample} years, we are processing an analysing the best fit results for {len(df_station_record)} stations (minus those stations without no data information or not available in the CNE catalog).', on_screen = print_on_screen)
+##########################
 
 # Stations catalog general statistics
 general_stat_vars = ['label_category', 'label_technology', 'label_status', 'label_state', 'label_ah', 'label_zh'] # As text for the dictionary definitions call
