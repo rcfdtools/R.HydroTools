@@ -399,7 +399,7 @@ for station in stations:
         plt.close()
 
     # Best CDF fit & Estimate extreme values for specific return periods - Tr
-    funcs.print_log(file_log, '\n## C. Best fit & Estimate extreme values for specific return periods - Tr\n\n', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n## C. Best fit & Estimate extreme values for specific return periods - Tr\n\n{dictionary.dicts['bestfit']}\n\n', on_screen = print_on_screen)
     #print(df_tr.columns)
     df_tr.drop('empirical_dist', axis=1, inplace=True)
     df_tr.index.name = 'id'

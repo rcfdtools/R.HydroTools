@@ -212,6 +212,7 @@ funcs.print_log(file_log, f'\n\n{dictionary.dicts['cpd']}\n\n', on_screen = prin
 df_edf_dist_dict = pd.DataFrame(dictionary.edf_dist_dict, columns=['edf_dist', 'edf_name', 'edf_expression', 'edf_year', 'edf_desc'])
 edf_dist = df_edf_dist_dict['edf_dist'].unique()
 num_inc = 1
+funcs.print_log(file_log, f'{dictionary.dicts['edf']}\n\n', on_screen = print_on_screen)
 for emp in edf_dist:
     df_edf_dist_dict_filter = df_edf_dist_dict[df_edf_dist_dict['edf_dist'] == emp]
     funcs.print_log(file_log,
@@ -224,7 +225,7 @@ for emp in edf_dist:
     num_inc += 1
 
 # Best fit analysis
-funcs.print_log(file_log, f'\n\n## C. Best fit analysis\n\n{dictionary.dicts['pdf']}\n', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n## C. Best Fit analysis\n\n{dictionary.dicts['bestfit']}\n', center_div=False, on_screen = print_on_screen)
 
 
 # Footer
