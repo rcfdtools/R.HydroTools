@@ -27,7 +27,7 @@ pd.set_option('display.width', None)
 app_version = 'v20251228'
 input_path = 'dataset/pmax24h_in/' # Your local input file folder
 output_path = 'dataset/pmax24h_out/' # Your local output file folder
-station_dataset_file = input_path + 'XXXconventional_test.csv' # Stations dataset ●
+station_dataset_file = input_path + 'conventional_test.csv' # Stations dataset ●
 station_catalog_file = 'dataset/CNE.xls' # CNE catalog for stations info
 station_catalog_columns_drop = ['OBSERVACION', 'SUBRED'] # Dropped columns from CNE
 parameter_name = 'Rain, Pmax24h' # rain, flow
@@ -189,7 +189,9 @@ for station in stations:
     x = 'x'  # New value column name
     date = 'date'  # New date column name
     funcs.print_log(file_log, f'\n\n### 4. Active continuous probability distributions from SciPy ({len(df_l_pdist_scipy.query('active == True'))} of {len(funcs.l_pdist_scipy)} available)', on_screen = print_on_screen)
-    funcs.print_log(file_log, f'\n\n{dictionary.dicts['scipy_stats']}\n', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n\n{dictionary.dicts['pdf']}\n', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n{dictionary.dicts['log_pdf']}\n', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n{dictionary.dicts['scipy_stats']}\n', on_screen = print_on_screen)
     funcs.print_log(file_log, f'{df_l_pdist_scipy.query('active == True').to_markdown()}', center_div=True, on_screen = print_on_screen)
     funcs.print_log(file_log, '> **n_parameter:** # arguments & localization & scale.\n>\n> **Fit methods:** (MLE) maximum likelihood, (MM) L-moments.', on_screen = print_on_screen)
     funcs.print_log(file_log, (f'\n>\n>**Inactive** ({dictionary.dicts['disable_pdf']})**:** '), on_screen = print_on_screen)

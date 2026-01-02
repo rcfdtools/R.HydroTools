@@ -135,4 +135,4 @@ plt.show()
 '''
 
 
-print(f'log(0.0000001) = {math.log(0.0000001)}')
+print(f'log(0.00001) = {math.log(0.00001)}')
