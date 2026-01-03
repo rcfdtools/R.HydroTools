@@ -260,7 +260,7 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
         plt.close()
     probability_dist_count = df_station_record['p_dist'].value_counts().reset_index(name='Count').sort_values(by='Count', ascending=False)
     probability_dist_count.index.name = 'id'
-    funcs.print_log(file_log,f'PDF - Probability distribution function (stations count)\n{probability_dist_count.to_markdown()}', center_div=True, on_screen=print_on_screen)
+    funcs.print_log(file_log,f'PDF - Probability distribution function (stations count)\n{probability_dist_count.transpose().to_markdown()}', center_div=True, on_screen=print_on_screen)
     if create_plot: # Probability distribution count - Bar plot
         #probability_dist_count = probability_dist_count.sort_values(by='Count', ascending=True)
         funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/pdf_bestfit_{i+1}.png" width="1000"></img>', center_div=True, on_screen=print_on_screen)
