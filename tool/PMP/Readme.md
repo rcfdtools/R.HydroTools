@@ -237,6 +237,10 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 * Then check "Override console cycle buffer size (1024 KB)"
 * Change that values to whatever you need, e.g. 4096
 
+** Change Visual guide or right margin position**
+
+* File --> Settings --> Editor --> Code Style --> Hard wrap at
+
 
 ### Licencia, cláusulas y condiciones de uso
 

@@ -240,7 +240,27 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
     df_station_record = df_station_record.reset_index(drop=True)
     df_station_record.index.name = 'id'
     funcs.print_log(file_log, f'\n### Best fit in sort position # {i+1}\n', center_div=False, on_screen = print_on_screen)
-    funcs.print_log(file_log, f'{df_station_record[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'n']].to_markdown()}', center_div=True, on_screen = print_on_screen)
+    funcs.print_log(file_log, f'{df_station_record[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'n']].transpose().to_markdown()}', center_div=True, on_screen = print_on_screen)
+    empirical_dist_count = df_station_record['empirical_dist'].value_counts().reset_index(name='Count').sort_values(by='Count', ascending=False)
+    empirical_dist_count.index.name = 'id'
+    funcs.print_log(file_log, f'\n**Empirical distribution count**\n', center_div=False, on_screen=print_on_screen)
+    funcs.print_log(file_log,f'{empirical_dist_count.to_markdown()}', center_div=True, on_screen=print_on_screen)
+    if create_plot: # Empirical distribution count
+        empirical_dist_count = empirical_dist_count.sort_values(by='Count', ascending=True)
+        funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/empirical_bestfit_{i}_count.png" width="800"></img>', center_div=True, on_screen=print_on_screen)
+        # Bar plot
+        fig, ax = plt.subplots(figsize=(10, 6))
+        bars = ax.barh(empirical_dist_count['empirical_dist'], empirical_dist_count['Count'], color=color_plot)
+        plt.yticks(rotation=0, ha='right')
+        ax.bar_label(bars, padding=3)
+        ax.set_title(f'Empirical distribution (count for best fit # {i})')
+        ax.set_xlabel('Count')
+        plt.tight_layout() # Important >>> prevents cutting labels
+        plt.subplots_adjust(bottom=0.075)
+        plt.savefig(f'{output_path}graph/empirical_bestfit_{i}_count.png', dpi=dpi)
+        if show_plot: plt.show()
+        plt.close()
+
 
 # Footer
 funcs.print_log(file_log, f'\n\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
