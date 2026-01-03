@@ -1067,7 +1067,7 @@ Best fit in probability distribution analysis means finding the theoretical dist
 The follow tables and graph shows the evaluation of the 3 best fit order ranking positions for each station. Results tables are ordered by station code.
 
 
-### Best fit in sort position # 1
+### Best fit by station in sort position # 1
 
 <div align="center">
 
@@ -1083,10 +1083,9 @@ The follow tables and graph shows the evaluation of the 3 best fit order ranking
 </div>
 
 
-**Empirical distribution count**
-
 <div align="center">
 
+Empirical distribution count
 |   id | empirical_dist   |   Count |
 |-----:|:-----------------|--------:|
 |    0 | edf_hazen        |      79 |
@@ -1111,7 +1110,7 @@ The follow tables and graph shows the evaluation of the 3 best fit order ranking
 </div>
 
 
-### Best fit in sort position # 2
+### Best fit by station in sort position # 2
 
 <div align="center">
 
@@ -1127,10 +1126,9 @@ The follow tables and graph shows the evaluation of the 3 best fit order ranking
 </div>
 
 
-**Empirical distribution count**
-
 <div align="center">
 
+Empirical distribution count
 |   id | empirical_dist   |   Count |
 |-----:|:-----------------|--------:|
 |    0 | edf_gringorten   |      79 |
@@ -1156,7 +1154,7 @@ The follow tables and graph shows the evaluation of the 3 best fit order ranking
 </div>
 
 
-### Best fit in sort position # 3
+### Best fit by station in sort position # 3
 
 <div align="center">
 
@@ -1172,10 +1170,9 @@ The follow tables and graph shows the evaluation of the 3 best fit order ranking
 </div>
 
 
-**Empirical distribution count**
-
 <div align="center">
 
+Empirical distribution count
 |   id | empirical_dist   |   Count |
 |-----:|:-----------------|--------:|
 |    0 | edf_cunnane      |      82 |

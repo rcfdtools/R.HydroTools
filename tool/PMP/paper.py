@@ -239,12 +239,11 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
     df_station_record = df_station_record.sort_values(by=[label_station], ascending=True)
     df_station_record = df_station_record.reset_index(drop=True)
     df_station_record.index.name = 'id'
-    funcs.print_log(file_log, f'\n### Best fit in sort position # {i+1}\n', center_div=False, on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n### Best fit by station in sort position # {i+1}\n', center_div=False, on_screen = print_on_screen)
     funcs.print_log(file_log, f'{df_station_record[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'n']].transpose().to_markdown()}', center_div=True, on_screen = print_on_screen)
     empirical_dist_count = df_station_record['empirical_dist'].value_counts().reset_index(name='Count').sort_values(by='Count', ascending=False)
     empirical_dist_count.index.name = 'id'
-    funcs.print_log(file_log, f'\n**Empirical distribution count**\n', center_div=False, on_screen=print_on_screen)
-    funcs.print_log(file_log,f'{empirical_dist_count.to_markdown()}', center_div=True, on_screen=print_on_screen)
+    funcs.print_log(file_log,f'Empirical distribution count\n{empirical_dist_count.to_markdown()}', center_div=True, on_screen=print_on_screen)
     if create_plot: # Empirical distribution count
         empirical_dist_count = empirical_dist_count.sort_values(by='Count', ascending=True)
         funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/empirical_bestfit_{i}_count.png" width="800"></img>', center_div=True, on_screen=print_on_screen)
