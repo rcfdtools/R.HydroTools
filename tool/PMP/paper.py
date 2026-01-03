@@ -174,7 +174,7 @@ for general in general_stat_vars:
     general_index += 1
     if create_plot:
         catalog_count = catalog_count.sort_values(by='Count', ascending=True)
-        funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/stations_by_{eval(general)}.png" width="800"></img>',center_div=True, on_screen=print_on_screen)
+        funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/stations_by_{eval(general).lower()}.png" width="800"></img>',center_div=True, on_screen=print_on_screen)
         # Bar plot
         fig, ax = plt.subplots(figsize=(10, 6))
         bars = ax.barh(catalog_count['plot_label'], catalog_count['Count'], color=color_plot)
@@ -229,7 +229,7 @@ for emp in edf_dist:
 if minimum_sample > 0: df_bestfit = df_bestfit[df_bestfit['n'] >= minimum_sample]
 funcs.print_log(file_log, f'\n## C. Best Fit analysis ({len(df_bestfit[df_bestfit['best_fit_sort']==1])} stations)\n\n{dictionary.dicts['bestfit']}', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\nThe follow tables and graph shows the evaluation of the {best_fit_sort_eval} best fit order ranking positions for each station. Results tables are ordered by station code.\n', center_div=False, on_screen = print_on_screen)
-funcs.print_log(file_log, f'\n:file_folder:Filtered table: [bestfit.csv](bestfit.csv).\n\n', on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n:file_folder:Filtered table: [bestfit.csv](bestfit.csv)\n\n', on_screen = print_on_screen)
 #funcs.print_log(file_log, f'\n\nThe follow tables and graph shows the evaluation of the {best_fit_sort_eval} best fit order ranking positions for each station. Results tables are ordered by: empirical distribution (empirical_dist), probability distribution (p_dist) and Δ value (delta).\n\n', center_div=False, on_screen = print_on_screen)
 for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i in range(df_bestfit['best_fit_sort'].max()):
     df_station_record = df_bestfit[df_bestfit['best_fit_sort'] == i+1].sort_values(by=['n', label_station], ascending=False)

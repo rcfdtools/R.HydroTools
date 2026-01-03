@@ -658,7 +658,7 @@ Hydrometeorological stations are categorized by their function and automation, i
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/stations_by_CATEGORIA.png" width="800"></img>
+<img alt="R.HydroTools" src="graph/stations_by_categoria.png" width="800"></img>
 
 </div>
 
@@ -682,7 +682,7 @@ Hydrometeorological stations use both conventional (manual) and modern (automate
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/stations_by_TECNOLOGIA.png" width="800"></img>
+<img alt="R.HydroTools" src="graph/stations_by_tecnologia.png" width="800"></img>
 
 </div>
 
@@ -704,7 +704,7 @@ The status of hydrometeorological stations (active or inactive) is generally mai
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/stations_by_ESTADO.png" width="800"></img>
+<img alt="R.HydroTools" src="graph/stations_by_estado.png" width="800"></img>
 
 </div>
 
@@ -752,7 +752,7 @@ A geographic state refers to a defined territory with a sovereign government, ch
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/stations_by_DEPARTAMENTO.png" width="800"></img>
+<img alt="R.HydroTools" src="graph/stations_by_departamento.png" width="800"></img>
 
 </div>
 
@@ -776,7 +776,7 @@ A hydrographic area, often called a river basin, watershed, or drainage basin, i
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/stations_by_AREA_HIDROGRAFICA.png" width="800"></img>
+<img alt="R.HydroTools" src="graph/stations_by_area_hidrografica.png" width="800"></img>
 
 </div>
 
@@ -819,7 +819,7 @@ A hydrographic zone is essentially a river basin or watershed: a geographic area
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/stations_by_ZONA_HIDROGRAFICA.png" width="800"></img>
+<img alt="R.HydroTools" src="graph/stations_by_zona_hidrografica.png" width="800"></img>
 
 </div>
 
@@ -1068,7 +1068,7 @@ Best fit in probability distribution analysis means finding the theoretical dist
 
 The follow tables and graph shows the evaluation of the 3 best fit order ranking positions for each station. Results tables are ordered by station code.
 
-:file_folder:Filtered table: [bestfit.csv](bestfit.csv).
+:file_folder:Filtered table: [bestfit.csv](bestfit.csv)
 
 
 ### Best fit by station in sort position # 1
