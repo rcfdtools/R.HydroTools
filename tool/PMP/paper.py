@@ -139,7 +139,7 @@ df_station_record.index.name = 'id'
 funcs.print_log(file_log, f'\n\n\n### 1. Records per Station (histogram)\n\n{dictionary.dicts['station_record']}\n', center_div=False, on_screen = print_on_screen)
 #funcs.print_log(file_log, f'{df_station_record.to_markdown()}', center_div=True, on_screen = print_on_screen)
 if create_plot: # Histogram plot
-    funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/stations_histogram_count.png" width="800"></img>', center_div=True, on_screen=print_on_screen)
+    funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/stations_histogram.png" width="800"></img>', center_div=True, on_screen=print_on_screen)
     fig, ax = plt.subplots(figsize=(10, 6))
     N, bins, patches = ax.hist(df_station_record['n'], bins=histogram_custom_bins_n, color=color_plot, edgecolor='white', rwidth=1) # edgecolor='black'
     #N, bins, patches = ax.hist(df_station_record['n'], bins=10, color=color_plot, edgecolor='white', rwidth=1) # edgecolor='black'
@@ -150,7 +150,7 @@ if create_plot: # Histogram plot
     ax.set_xticks(bins[:-1] + np.diff(bins) / 2)  # Centers the x-tick labels within the bars
     ax.set_xticklabels([f'{bins[i].astype(int)}-{bins[i + 1].astype(int)}' for i in range(len(bins) - 1)], rotation=90, ha='center')
     plt.tight_layout()  # Adjust layout to prevent labels from being cut off
-    plt.savefig(f'{output_path}graph/stations_histogram_count.png', dpi=dpi)
+    plt.savefig(f'{output_path}graph/stations_histogram.png', dpi=dpi)
     if show_plot: plt.show()
     plt.close()
 if minimum_sample > 0:
@@ -169,8 +169,8 @@ for general in general_stat_vars:
     catalog_count = catalog_count.reset_index(drop=True)
     catalog_count.index.name = 'id'
     catalog_count['plot_label']= catalog_count[eval(general)].str[:40] # short labels
-    funcs.print_log(file_log, f'\n### {general_index}. Stations by {eval(general)}\n\n{dictionary.dicts[general]}\n', center_div=False, on_screen = print_on_screen)
-    funcs.print_log(file_log, f'{catalog_count.to_markdown()}', center_div=True, on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n### {general_index}. Stations by {eval(general).capitalize()}\n\n{dictionary.dicts[general]}\n', center_div=False, on_screen = print_on_screen)
+    funcs.print_log(file_log, f'{catalog_count[[eval(general), 'Count']].to_markdown()}', center_div=True, on_screen = print_on_screen)
     general_index += 1
     if create_plot:
         catalog_count = catalog_count.sort_values(by='Count', ascending=True)
@@ -180,11 +180,11 @@ for general in general_stat_vars:
         bars = ax.barh(catalog_count['plot_label'], catalog_count['Count'], color=color_plot)
         plt.yticks(rotation=0, ha='right')
         ax.bar_label(bars, padding=3)
-        ax.set_title(f'Stations by {eval(general)}')
+        ax.set_title(f'Stations by {eval(general).capitalize()}')
         ax.set_xlabel('Count')
         plt.tight_layout() # Important >>> prevents cutting labels
         plt.subplots_adjust(bottom=0.075)
-        plt.savefig(f'{output_path}graph/stations_by_{eval(general)}.png', dpi=dpi)
+        plt.savefig(f'{output_path}graph/stations_by_{eval(general).lower()}.png', dpi=dpi) # .capitalize()
         if show_plot: plt.show()
         plt.close()
 
@@ -244,7 +244,7 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
     funcs.print_log(file_log, f'{df_station_record[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'n']].transpose().to_markdown()}', center_div=True, on_screen = print_on_screen)
     empirical_dist_count = df_station_record['empirical_dist'].value_counts().reset_index(name='Count').sort_values(by='Count', ascending=False)
     empirical_dist_count.index.name = 'id'
-    funcs.print_log(file_log,f'EDF - Empirical distribution function (stations count)\n{empirical_dist_count.to_markdown()}', center_div=True, on_screen=print_on_screen)
+    funcs.print_log(file_log,f'EDF - Empirical distribution function (stations count best fit)\n{empirical_dist_count.to_markdown()}', center_div=True, on_screen=print_on_screen)
     if create_plot: # Empirical distribution count - Bar plot
         empirical_dist_count = empirical_dist_count.sort_values(by='Count', ascending=True)
         funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/edf_bestfit_{i+1}.png" width="800"></img>', center_div=True, on_screen=print_on_screen)
@@ -261,7 +261,7 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
         plt.close()
     probability_dist_count = df_station_record['p_dist'].value_counts().reset_index(name='Count').sort_values(by='Count', ascending=False)
     probability_dist_count.index.name = 'id'
-    funcs.print_log(file_log,f'PDF - Probability distribution function (stations count)\n{probability_dist_count.transpose().to_markdown()}', center_div=True, on_screen=print_on_screen)
+    funcs.print_log(file_log,f'PDF - Probability distribution function (stations count best fit)\n{probability_dist_count.transpose().to_markdown()}', center_div=True, on_screen=print_on_screen)
     if create_plot: # Probability distribution count - Bar plot
         #probability_dist_count = probability_dist_count.sort_values(by='Count', ascending=True)
         funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/pdf_bestfit_{i+1}.png" width="800"></img>', center_div=True, on_screen=print_on_screen)

@@ -57,7 +57,7 @@ edf_dist_dict = ([
 
 # General definitions
 dicts = {
-    'study_name': 'Study and analysis of the Probable Maximum Precipitation (PMP) in the network of automatic stations in Colombia - South America and estimation of extreme values for different return periods from multiple probability distributions.',
+    'study_name': 'Study and analysis of the Probable Maximum Precipitation (PMP) in the network of automatic climatological stations of Colombia - South America and estimation of extreme values for different return periods from multiple probability distributions.',
 
     'pmp': 'Probable Maximum Precipitation (PMP) is the greatest amount of rainfall for a specific duration that is meteorologically possible for a given location, acting as a "worst-case" scenario for extreme storms, crucial for designing safety-critical infrastructure like bridges, river deviations, dams, spillways, and nuclear plants to prevent catastrophic failure. PMP is calculated by hydrologists using meteorological data to determine the upper limit of extreme rainfall, often leading to the Probable Maximum Flood (PMF) for flood control design, and is increasingly being studied for climate change impacts.',
 
@@ -107,7 +107,7 @@ dicts = {
 
     'hydrometeorological_station': 'A hydrometeorological station is a facility with instruments to measure both weather (meteorological) (temperature, wind, humidity, pressure) and water (hydrological) (river levels, flow, rainfall, soil moisture, water quality) data, providing a comprehensive view of the water cycle for forecasting floods, droughts, managing resources, and supporting agriculture and ecosystems. These stations are crucial for understanding the interaction between water and atmosphere, enabling better decision-making for disaster preparedness and sustainable water management.',
 
-    'station_list': 'The following list contains the stations used in the current study, each one contains an specific detailed report with the probability distributions analysis and the extreme values for different recurrence intervals. Note: some conventional stations may be include in the current analysis.',
+    'station_list': 'The following list contains the stations used in the current study, each one contains an specific detailed report with the probability distributions analysis and the extreme values for different recurrence intervals.\n\n> Note: some conventional stations may be included in the current analysis.',
 
     'station_record': 'Number of records (yearly values) founded per station for the probability distributions analysis. The current study, consider as valid any station with at least 8 years of records to include a wide geographic range (keep in mind for specific hydrologic studies, the minimal recommended length has to be at least 10 years, which are necessary to obtain stable storm or flow properties).',
 
