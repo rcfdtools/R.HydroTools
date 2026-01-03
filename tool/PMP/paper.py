@@ -109,7 +109,7 @@ if create_geojson_map:
 fig_file0a = 'graph/locationmap.png'
 df_catalog_filter.to_csv(f'{output_path}stations.csv', index=False)
 funcs.print_log(file_log, f'\n\n## A. Stations evaluated\n\n{dictionary.dicts['hydrometeorological_station']}\n', center_div=False, on_screen = print_on_screen)
-funcs.print_log(file_log, f'\n:file_folder:Filtered table: [Stations dataset](stations.csv)\n\n', on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n:file_folder:Filtered table: [stations.csv](stations.csv)\n\n', on_screen = print_on_screen)
 funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="500"></img>', center_div=True, on_screen = print_on_screen)
 #funcs.print_log(file_log, f'\n\n{df_catalog_filter.to_markdown()}', center_div=False, on_screen = print_on_screen) # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 #print(f'\nFiltered stations catalog:\n{df_catalog_filter.to_markdown()}') # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -229,7 +229,7 @@ for emp in edf_dist:
 if minimum_sample > 0: df_bestfit = df_bestfit[df_bestfit['n'] >= minimum_sample]
 funcs.print_log(file_log, f'\n## C. Best Fit analysis ({len(df_bestfit[df_bestfit['best_fit_sort']==1])} stations)\n\n{dictionary.dicts['bestfit']}', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\nThe follow tables and graph shows the evaluation of the {best_fit_sort_eval} best fit order ranking positions for each station. Results tables are ordered by station code.\n', center_div=False, on_screen = print_on_screen)
-funcs.print_log(file_log, f'\n:file_folder:Filtered table: [Bestfit probability distributions](bestfit.csv).\n\n', on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n:file_folder:Filtered table: [bestfit.csv](bestfit.csv).\n\n', on_screen = print_on_screen)
 #funcs.print_log(file_log, f'\n\nThe follow tables and graph shows the evaluation of the {best_fit_sort_eval} best fit order ranking positions for each station. Results tables are ordered by: empirical distribution (empirical_dist), probability distribution (p_dist) and Δ value (delta).\n\n', center_div=False, on_screen = print_on_screen)
 for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i in range(df_bestfit['best_fit_sort'].max()):
     df_station_record = df_bestfit[df_bestfit['best_fit_sort'] == i+1].sort_values(by=['n', label_station], ascending=False)
