@@ -226,7 +226,8 @@ for emp in edf_dist:
     num_inc += 1
 
 # Best fit analysis
-funcs.print_log(file_log, f'\n## C. Best Fit analysis\n\n{dictionary.dicts['bestfit']}', center_div=False, on_screen = print_on_screen)
+if minimum_sample > 0: df_bestfit = df_bestfit[df_bestfit['n'] >= minimum_sample]
+funcs.print_log(file_log, f'\n## C. Best Fit analysis ({len(df_bestfit[df_bestfit['best_fit_sort']==1])} stations)\n\n{dictionary.dicts['bestfit']}', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\nThe follow tables and graph shows the evaluation of the {best_fit_sort_eval} best fit order ranking positions for each station. Results tables are ordered by station code.\n', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n:file_folder:Filtered table: [Bestfit probability distributions](bestfit.csv).\n\n', on_screen = print_on_screen)
 #funcs.print_log(file_log, f'\n\nThe follow tables and graph shows the evaluation of the {best_fit_sort_eval} best fit order ranking positions for each station. Results tables are ordered by: empirical distribution (empirical_dist), probability distribution (p_dist) and Δ value (delta).\n\n', center_div=False, on_screen = print_on_screen)
@@ -234,8 +235,8 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
     df_station_record = df_bestfit[df_bestfit['best_fit_sort'] == i+1].sort_values(by=['n', label_station], ascending=False)
     #df_station_record = df_station_record.reset_index(drop=True)
     #df_station_record.index.name = 'id'
-    if minimum_sample > 0:
-        df_station_record = df_station_record[df_station_record['n'] >= minimum_sample]
+    #if minimum_sample > 0:
+    #    df_station_record = df_station_record[df_station_record['n'] >= minimum_sample]
     #df_station_record = df_station_record.sort_values(by=['empirical_dist', 'p_dist', 'delta'], ascending=[True, True, True])
     df_station_record = df_station_record.sort_values(by=[label_station], ascending=True)
     df_station_record = df_station_record.reset_index(drop=True)

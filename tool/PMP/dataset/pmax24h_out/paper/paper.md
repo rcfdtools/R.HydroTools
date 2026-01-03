@@ -1062,7 +1062,7 @@ $P=(m-0.25)/(n+0.5)$
 </div>
 
 
-## C. Best Fit analysis
+## C. Best Fit analysis (226 stations)
 
 Best fit in probability distribution analysis means finding the theoretical distribution (like Normal, Poisson, Exponential) that most accurately mirrors your real-world data´s patterns (shape, center, spread) for better predictions, using methods like visual checks (Q-Q plots), goodness-of-fit tests (Kolmogorov-Smirnov, Chi-Squared), and information criteria (AIC) to score and select the simplest, most representative model.
 
