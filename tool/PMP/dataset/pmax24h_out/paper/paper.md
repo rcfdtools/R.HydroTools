@@ -1177,7 +1177,7 @@ PDF - Probability distribution function count
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/pdf_bestfit_1.png" width="800"></img>
+<img alt="R.HydroTools" src="graph/pdf_bestfit_1.png" width="1000"></img>
 
 </div>
 
@@ -1292,7 +1292,7 @@ PDF - Probability distribution function count
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/pdf_bestfit_2.png" width="800"></img>
+<img alt="R.HydroTools" src="graph/pdf_bestfit_2.png" width="1000"></img>
 
 </div>
 
@@ -1405,7 +1405,7 @@ PDF - Probability distribution function count
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/pdf_bestfit_3.png" width="800"></img>
+<img alt="R.HydroTools" src="graph/pdf_bestfit_3.png" width="1000"></img>
 
 </div>
 
