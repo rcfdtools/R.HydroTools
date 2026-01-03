@@ -607,7 +607,7 @@ A hydrometeorological station is a facility with instruments to measure both wea
 </div>
 
 
-### 0. Stations list (571 used)
+### 0. Stations list (571 processed)
 
 The following list contains the stations used in the current study, each one contains an specific detailed report with the probability distributions analysis and the extreme values for different recurrence intervals.
 
