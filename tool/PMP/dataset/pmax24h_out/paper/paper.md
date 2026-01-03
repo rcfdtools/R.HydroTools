@@ -1085,7 +1085,7 @@ The follow tables and graph shows the evaluation of the 3 best fit order ranking
 
 <div align="center">
 
-EDF - Empirical distribution function count
+EDF - Empirical distribution function (stations count)
 |   id | empirical_dist   |   Count |
 |-----:|:-----------------|--------:|
 |    0 | edf_hazen        |      79 |
@@ -1112,7 +1112,7 @@ EDF - Empirical distribution function count
 
 <div align="center">
 
-PDF - Probability distribution function count
+PDF - Probability distribution function (stations count)
 |   id | p_dist                |   Count |
 |-----:|:----------------------|--------:|
 |    0 | logjohnsonsu          |      38 |
@@ -1200,7 +1200,7 @@ PDF - Probability distribution function count
 
 <div align="center">
 
-EDF - Empirical distribution function count
+EDF - Empirical distribution function (stations count)
 |   id | empirical_dist   |   Count |
 |-----:|:-----------------|--------:|
 |    0 | edf_gringorten   |      79 |
@@ -1228,7 +1228,7 @@ EDF - Empirical distribution function count
 
 <div align="center">
 
-PDF - Probability distribution function count
+PDF - Probability distribution function (stations count)
 |   id | p_dist                |   Count |
 |-----:|:----------------------|--------:|
 |    0 | logjohnsonsu          |      38 |
@@ -1315,7 +1315,7 @@ PDF - Probability distribution function count
 
 <div align="center">
 
-EDF - Empirical distribution function count
+EDF - Empirical distribution function (stations count)
 |   id | empirical_dist   |   Count |
 |-----:|:-----------------|--------:|
 |    0 | edf_cunnane      |      82 |
@@ -1343,7 +1343,7 @@ EDF - Empirical distribution function count
 
 <div align="center">
 
-PDF - Probability distribution function count
+PDF - Probability distribution function (stations count)
 |   id | p_dist                |   Count |
 |-----:|:----------------------|--------:|
 |    0 | logjohnsonsu          |      34 |
