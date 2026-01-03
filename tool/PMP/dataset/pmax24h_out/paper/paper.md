@@ -597,7 +597,7 @@ Dynamic map
 
 A hydrometeorological station is a facility with instruments to measure both weather (meteorological) (temperature, wind, humidity, pressure) and water (hydrological) (river levels, flow, rainfall, soil moisture, water quality) data, providing a comprehensive view of the water cycle for forecasting floods, droughts, managing resources, and supporting agriculture and ecosystems. These stations are crucial for understanding the interaction between water and atmosphere, enabling better decision-making for disaster preparedness and sustainable water management.
 
-:file_folder:Filtered tables: [Stations dataset](stations.csv) | [Bestfit probability distributions](bestfit.csv).
+:file_folder:Filtered table: [Stations dataset](stations.csv)
 
 
 <div align="center">
@@ -1066,6 +1066,8 @@ Best fit in probability distribution analysis means finding the theoretical dist
 
 The follow tables and graph shows the evaluation of the 3 best fit order ranking positions for each station. Results tables are ordered by station code.
 
+:file_folder:Filtered table: [Bestfit probability distributions](bestfit.csv).
+
 
 ### Best fit by station in sort position # 1
 
@@ -1123,7 +1125,7 @@ PDF - Probability distribution function (stations count)
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/pdf_bestfit_1.png" width="1000"></img>
+<img alt="R.HydroTools" src="graph/pdf_bestfit_1.png" width="800"></img>
 
 </div>
 
@@ -1185,7 +1187,7 @@ PDF - Probability distribution function (stations count)
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/pdf_bestfit_2.png" width="1000"></img>
+<img alt="R.HydroTools" src="graph/pdf_bestfit_2.png" width="800"></img>
 
 </div>
 
@@ -1247,7 +1249,7 @@ PDF - Probability distribution function (stations count)
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/pdf_bestfit_3.png" width="1000"></img>
+<img alt="R.HydroTools" src="graph/pdf_bestfit_3.png" width="800"></img>
 
 </div>
 
