@@ -226,10 +226,11 @@ for emp in edf_dist:
                     center_div=True, on_screen=print_on_screen)
     num_inc += 1
 
+
 # Best fit analysis
 if minimum_sample > 0: df_bestfit = df_bestfit[df_bestfit['n'] >= minimum_sample]
 funcs.print_log(file_log, f'\n## C. Best Fit analysis ({len(df_bestfit[df_bestfit['best_fit_sort']==1])} stations)\n\n{dictionary.dicts['bestfit']}', center_div=False, on_screen = print_on_screen)
-funcs.print_log(file_log, f'\n\nThe following tables and graph shows the evaluation of the {best_fit_sort_eval} best fit order ranking positions for each station (considering the best fit in each empirical distribution and the first position in the probability distribution). Results tables are ordered by station code.\n', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n\nThe following tables and graph shows the evaluation of the {best_fit_sort_eval} best fit order ranking positions for each station (considering the best fit in each empirical distribution and the first probability distribution position). Results tables are ordered by station code.\n', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n:file_folder:Filtered table: [bestfit.csv](bestfit.csv)\n\n', on_screen = print_on_screen)
 #funcs.print_log(file_log, f'\n\nThe follow tables and graph shows the evaluation of the {best_fit_sort_eval} best fit order ranking positions for each station. Results tables are ordered by: empirical distribution (empirical_dist), probability distribution (p_dist) and Δ value (delta).\n\n', center_div=False, on_screen = print_on_screen)
 for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i in range(df_bestfit['best_fit_sort'].max()):
@@ -245,11 +246,12 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
     df_station_record.index.name = 'id'
     funcs.print_log(file_log, f'\n### Best fit by station in sort position # {i+1}\n', center_div=False, on_screen = print_on_screen)
     funcs.print_log(file_log, f'{df_station_record[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'n', label_ah, label_zh, label_szh]].transpose().to_markdown()}', center_div=True, on_screen = print_on_screen)
+    # Empirical distribution count
     empirical_dist_count = df_station_record['empirical_dist'].value_counts().reset_index(name='Count').sort_values(by='Count', ascending=False)
     empirical_dist_count.index.name = 'id'
     empirical_dist_count['Percentage'] = round((empirical_dist_count['Count']/empirical_dist_count['Count'].sum())*100, 2)
     funcs.print_log(file_log,f'EDF - Empirical distribution function (stations count best fit)\n{empirical_dist_count.to_markdown()}', center_div=True, on_screen=print_on_screen)
-    if create_plot: # Empirical distribution count - Bar plot
+    if create_plot:
         empirical_dist_count = empirical_dist_count.sort_values(by='Count', ascending=True)
         funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/edf_bestfit_{i+1}.png" width="800"></img>', center_div=True, on_screen=print_on_screen)
         fig, ax = plt.subplots(figsize=(10, 6))
@@ -263,11 +265,12 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
         plt.savefig(f'{output_path}graph/edf_bestfit_{i+1}.png', dpi=dpi)
         if show_plot: plt.show()
         plt.close()
+    # General probability distribution count
     probability_dist_count = df_station_record['p_dist'].value_counts().reset_index(name='Count').sort_values(by='Count', ascending=False)
     probability_dist_count.index.name = 'id'
     probability_dist_count['Percentage'] = round((probability_dist_count['Count'] / probability_dist_count['Count'].sum()) * 100, 2)
-    funcs.print_log(file_log,f'PDF - Probability distribution function (stations count best fit)\n{probability_dist_count.transpose().to_markdown()}', center_div=True, on_screen=print_on_screen)
-    if create_plot: # Probability distribution count - Bar plot
+    funcs.print_log(file_log,f'Global analysis for PDF - Probability distribution function (stations count best fit)\n{probability_dist_count.transpose().to_markdown()}', center_div=True, on_screen=print_on_screen)
+    if create_plot:
         #probability_dist_count = probability_dist_count.sort_values(by='Count', ascending=True)
         funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/pdf_bestfit_{i+1}.png" width="800"></img>', center_div=True, on_screen=print_on_screen)
         fig, ax = plt.subplots(figsize=(10, 6))
@@ -281,6 +284,15 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
         plt.savefig(f'{output_path}graph/pdf_bestfit_{i+1}.png', dpi=dpi)
         if show_plot: plt.show()
         plt.close()
+    # Probability distribution count by Hydrographic area
+    hydrographic_area_list = df_station_record[label_ah].unique()
+    #funcs.print_log(file_log,f'\nZonal analysis by hydrographic area', on_screen=print_on_screen)
+    for ah in hydrographic_area_list:
+        probability_dist_count_ah = df_station_record[df_station_record[label_ah] == ah]
+        probability_dist_count_ah = probability_dist_count_ah['p_dist'].value_counts().reset_index(name='Count').sort_values(by='Count', ascending=False)
+        probability_dist_count_ah.index.name = 'id'
+        probability_dist_count_ah['Percentage'] = round((probability_dist_count_ah['Count'] / probability_dist_count_ah['Count'].sum()) * 100, 2)
+        funcs.print_log(file_log, f'Zonal analysis for hydrographic area: {ah} (stations count best fit)\n{probability_dist_count_ah.transpose().to_markdown()}', center_div=True, on_screen=print_on_screen)
 
 # Footer
 funcs.print_log(file_log, f'\n\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
