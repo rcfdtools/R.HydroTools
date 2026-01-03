@@ -27,7 +27,7 @@ pd.set_option('display.width', None)
 app_version = 'v20260103'
 input_path = 'dataset/pmax24h_in/' # Your local input file folder
 output_path = 'dataset/pmax24h_out/' # Your local output file folder
-station_dataset_file = input_path + 'xxxxautomatic_test.csv' # Stations dataset ●
+station_dataset_file = input_path + 'automatic_test.csv' # Stations dataset ●
 station_catalog_file = 'dataset/CNE.xls' # CNE catalog for stations info
 station_catalog_columns_drop = ['OBSERVACION', 'SUBRED'] # Dropped columns from CNE
 parameter_name = 'Rain, Pmax24h' # rain, flow
@@ -197,7 +197,7 @@ for station in stations:
     funcs.print_log(file_log, (f'\n>\n>**Inactive** ({dictionary.dicts['disable_pdf']})**:** '), on_screen = print_on_screen)
     for inactives in df_l_pdist_scipy_inactive['p_dist'].values:
         funcs.print_log(file_log, (f'{inactives}, '), on_screen = print_on_screen)
-    funcs.print_log(file_log, '\n\n\n## B. Probability distributions vs. Empirical distributions', on_screen = print_on_screen)
+    funcs.print_log(file_log, '\n\n\n## B. Probability (PDF) vs. Empirical (EDF) distributions functions', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n\n{dictionary.dicts['cpd']}\n', on_screen = print_on_screen)
     vDeltaKolmogorov = pd.DataFrame(columns=['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'loc', 'scale', 'shape', 'shape1', 'shape2', 'shape3'])
     #vDeltaKolmogorov = pd.DataFrame(columns=['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n'])
@@ -236,7 +236,7 @@ for station in stations:
         fig_file5 = 'graph/' + station_code + '_extremevalues_bestfit.png'
         fig_file6 = 'graph/' + station_code + '_extremevalues_riskrate.png'
         df_edf_dist_dict_filter = df_edf_dist_dict[df_edf_dist_dict['edf_dist'] == emp]
-        funcs.print_log(file_log, f'\n### {num_inc}. Empirical - {df_edf_dist_dict_filter['edf_name'].to_string(index=False, header=False)} ({df_edf_dist_dict_filter['edf_year'].to_string(index=False, header=False)})\n', on_screen = print_on_screen)
+        funcs.print_log(file_log, f'\n### {num_inc}. {df_edf_dist_dict_filter['edf_name'].to_string(index=False, header=False)} ({df_edf_dist_dict_filter['edf_year'].to_string(index=False, header=False)})\n', on_screen = print_on_screen)
         funcs.print_log(file_log, f'\n{df_edf_dist_dict_filter['edf_desc'].to_string(index=False, header=False)}\n', on_screen = print_on_screen)
         funcs.print_log(file_log, f'\n${df_edf_dist_dict_filter['edf_expression'].to_string(index=False, header=False)}$\n', center_div=True, on_screen = print_on_screen)
 

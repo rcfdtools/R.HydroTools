@@ -899,14 +899,14 @@ A log of a probability density function (log-PDF) is simply the logarithm of the
 Cumulative Distribution Function (CDF), denoted as $F$<sub>$X$</sub>$(x)$, is a function that gives the probability that a random variable $X$ will take a value less than or equal to a specific value, $x$ (i.e., $(P(X≥x)$. It essentially "accumulates" probabilities from a given point up to the far right (positive infinity), providing a complete picture of the distribution´s probabilities for both discrete (like rain) and continuous (like temperature) variables, helping to find probabilities over ranges or above certain values. Each station is evaluated separately ordering the $x$ values ascending, calculating the CDF and PDF values for the activated distributions and their logarithmic forms.
 
 
-### 2. Probability distributions vs. Empirical distributions
+### 2. Probability (PDF) vs. Empirical (EDF) distributions functions
 
 A continuous probability distribution (CPD) describes probabilities for variables that can take any value within a range (like rain any time), unlike discrete variables with specific outcomes (like temperature). It uses a Probability Density Function (PDF), a curve where the total area under it equals 1, and the probability of the variable falling within an interval (a to b) is found by calculating the area under the curve between those points. A key feature is that the probability of hitting any single exact value is zero, so probabilities are always expressed for ranges, e.g., $P(a ≤ X ≤ b)$.
 
 An Empirical Distribution Function (EDF) is a step-function estimate of a true cumulative distribution function (CDF) based on observed sample data, representing the proportion of data points less than or equal to a given value. It is calculated by ordering your data and jumping up by $1/n$ (where $n$ is sample size) at each unique data point, allowing analysis without assuming an underlying population distribution, and it gets closer to the true CDF as the sample size grows. For the empirical probability calculations, the parameter $m$ correspond to the order number which means the position of the $x$ values in an ascending order list.
 
 
-#### 2.1. Empirical - EDF California (1923)
+#### 2.1. EDF California (1923)
 
 California´s estimates the true probability distribution of water-related data (like rainfall, streamflow) using observed samples, crucial for risk assessment.
 
@@ -919,7 +919,7 @@ $P=m/n$
 </div>
 
 
-#### 2.2. Empirical - EDF Hazen (1930)
+#### 2.2. EDF Hazen (1930)
 
 Hazen method for plotting positions is a formula used to estimate the empirical cumulative probability distribution of flood events or other hydrological data. This formula often results in biased estimations, particularly when extrapolating to extreme events (high return periods).
 
@@ -932,7 +932,7 @@ $P=(m-0.5)/n$
 </div>
 
 
-#### 2.3. Empirical - EDF Weibull (1939)
+#### 2.3. EDF Weibull (1939)
 
 Weibull plotting position formula is an empirical method used to estimate the non-exceedance probability or plotting position for a set of observed data, is often recommended or widely used in practice, particularly in flood frequency analysis.
 
@@ -945,7 +945,7 @@ $P=m/(n+1)$
 </div>
 
 
-#### 2.4. Empirical - EDF Beard (1943)
+#### 2.4. EDF Beard (1943)
 
 The Beard formula (or Beard´s plotting position formula) in hydrology is used to estimate the empirical non-exceedance probability _(P)_ of a flood event (or other extreme hydrological data point) within a given dataset.
 
@@ -958,7 +958,7 @@ $P=(m-0.31)/(n+0.38)$
 </div>
 
 
-#### 2.5. Empirical - EDF Chegodayev (1955)
+#### 2.5. EDF Chegodayev (1955)
 
 The Chegodayev formula is an empirical plotting position formula used in hydrological frequency analysis to estimate the exceedance probability or return period of a specific event from a set of observed data. It is primarily used for plotting observed data points on probability paper to fit a theoretical distribution, particularly for analyzing extreme events like maximum flood flows or rainfall intensities. The constant _b_ value in the generalized plotting position formula is 0.3.
 
@@ -971,7 +971,7 @@ $P=(m-b)/(n+1-2b)$
 </div>
 
 
-#### 2.6. Empirical - EDF Blom (1958)
+#### 2.6. EDF Blom (1958)
 
 The Blom formula is a specific "plotting position" formula used in hydrology and statistical analysis to estimate the empirical cumulative probability (or non-exceedance probability) of a data series. It is particularly recommended for data that are approximately normally distributed. The constant _a_ is set to 0.375 (or 3/8).
 
@@ -984,7 +984,7 @@ $P=(m-a)/(n+1-2a)$
 </div>
 
 
-#### 2.7. Empirical - EDF Tukey (1962)
+#### 2.7. EDF Tukey (1962)
 
 In hydrology, the Tukey formula is used as a plotting position formula to estimate the empirical probability or frequency of a flood event (or other hydrological data). The formula parameter is given as _c=0.333_ (or 1/3).
 
@@ -997,7 +997,7 @@ $P=(m-c)/(n+1-2c)$
 </div>
 
 
-#### 2.8. Empirical - EDF Gringorten (1963)
+#### 2.8. EDF Gringorten (1963)
 
 Gringorten plotting position formula is essential for estimating the probability and return periods of extreme events like floods and heavy rainfall. The constant _a=0.44_.
 
@@ -1010,7 +1010,7 @@ $P=(m-a)/(n+1-2a)$
 </div>
 
 
-#### 2.9. Empirical - EDF Filliben (1975)
+#### 2.9. EDF Filliben (1975)
 
 The specific values of the constants (0.3175) (often denoted as $alpha$) and (0.365) are derived from a method proposed by James J. Filliben in a 1975 paper. This particular formula is the mean value of the $i$-th order statistic of the normal distribution and is considered a robust and effective plotting position formula for the normal probability plot correlation coefficient test for normality.
 
@@ -1023,7 +1023,7 @@ $P=(m-0.3175)/(n+0.365)$
 </div>
 
 
-#### 2.10. Empirical - EDF Jenkinson (1977)
+#### 2.10. EDF Jenkinson (1977)
 
 The Jenkinson formula in hydrology is an empirical plotting position formula used to estimate the non-exceedance probability _(P)_ or return period _(T)_ of a given ordered observation within a sample. It is a widely used method in the frequency analysis of extreme events such as floods and rainfall, as it provides a distribution-free way to plot data. _a≈0.31_ and _b≈0.38_ are constants derived to approximate the median of the probability distribution for the given rank.
 
@@ -1036,7 +1036,7 @@ $P=(m-a)/(n+b)$
 </div>
 
 
-#### 2.11. Empirical - EDF Cunnane (1978)
+#### 2.11. EDF Cunnane (1978)
 
 Cunnane´s work in statistical hydrology has focused on the performance and evaluation of different probability distributions (such as GEV, Gumbel, Lognormal) for flood frequency estimation. _b_ is a constant, typically set to 0.4.
 
@@ -1049,7 +1049,7 @@ $P=(m-b)/(n+1-2b)$
 </div>
 
 
-#### 2.12. Empirical - EDF Adamowski (1981)
+#### 2.12. EDF Adamowski (1981)
 
 The Adamowski formula in hydrology refers to a specific plotting position formula used for estimating the non-parametric empirical distribution of hydrological events (like flood peaks) to calculate their return periods. This formula provides an alternative to traditional parametric methods (like the Gumbel or Log Pearson Type III distributions). 
 

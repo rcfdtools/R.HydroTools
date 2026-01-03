@@ -208,7 +208,7 @@ for inactives in df_l_pdist_scipy_inactive['p_dist'].values:
     funcs.print_log(file_log, (f'{inactives}, '), on_screen=print_on_screen)
 funcs.print_log(file_log, f'\n\n\n### 1. Cumulative distribution values - CDF\n\n', on_screen = print_on_screen)
 funcs.print_log(file_log, f'{dictionary.dicts['cdf']}\n', on_screen = print_on_screen)
-funcs.print_log(file_log, '\n\n### 2. Probability distributions vs. Empirical distributions', on_screen = print_on_screen)
+funcs.print_log(file_log, '\n\n### 2. Probability (PDF) vs. Empirical (EDF) distributions functions', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\n{dictionary.dicts['cpd']}\n\n', on_screen = print_on_screen)
 df_edf_dist_dict = pd.DataFrame(dictionary.edf_dist_dict, columns=['edf_dist', 'edf_name', 'edf_expression', 'edf_year', 'edf_desc'])
 edf_dist = df_edf_dist_dict['edf_dist'].unique()
@@ -217,7 +217,7 @@ funcs.print_log(file_log, f'{dictionary.dicts['edf']}\n\n', on_screen = print_on
 for emp in edf_dist:
     df_edf_dist_dict_filter = df_edf_dist_dict[df_edf_dist_dict['edf_dist'] == emp]
     funcs.print_log(file_log,
-                    f'\n#### 2.{num_inc}. Empirical - {df_edf_dist_dict_filter['edf_name'].to_string(index=False, header=False)} ({df_edf_dist_dict_filter['edf_year'].to_string(index=False, header=False)})\n',
+                    f'\n#### 2.{num_inc}. {df_edf_dist_dict_filter['edf_name'].to_string(index=False, header=False)} ({df_edf_dist_dict_filter['edf_year'].to_string(index=False, header=False)})\n',
                     on_screen=print_on_screen)
     funcs.print_log(file_log, f'\n{df_edf_dist_dict_filter['edf_desc'].to_string(index=False, header=False)}\n',
                     on_screen=print_on_screen)
