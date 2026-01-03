@@ -1085,7 +1085,7 @@ The follow tables and graph shows the evaluation of the 3 best fit order ranking
 
 <div align="center">
 
-Empirical distribution count
+EDF - Empirical distribution function count
 |   id | empirical_dist   |   Count |
 |-----:|:-----------------|--------:|
 |    0 | edf_hazen        |      79 |
@@ -1105,7 +1105,79 @@ Empirical distribution count
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/empirical_bestfit_0_count.png" width="800"></img>
+<img alt="R.HydroTools" src="graph/edf_bestfit_1.png" width="800"></img>
+
+</div>
+
+
+<div align="center">
+
+PDF - Probability distribution function count
+|   id | p_dist                |   Count |
+|-----:|:----------------------|--------:|
+|    0 | logjohnsonsu          |      38 |
+|    1 | johnsonsu             |      25 |
+|    2 | laplace_asymmetric    |      14 |
+|    3 | t                     |      11 |
+|    4 | logt                  |      11 |
+|    5 | loglaplace_asymmetric |      10 |
+|    6 | fisk                  |       9 |
+|    7 | mielke                |       8 |
+|    8 | weibull_min           |       6 |
+|    9 | logpearson3           |       6 |
+|   10 | logfisk               |       5 |
+|   11 | lognct                |       5 |
+|   12 | maxwell               |       4 |
+|   13 | nakagami              |       4 |
+|   14 | fatiguelife           |       4 |
+|   15 | logmielke             |       3 |
+|   16 | logcrystalball        |       3 |
+|   17 | loghalfnorm           |       3 |
+|   18 | logloggamma           |       3 |
+|   19 | ncf                   |       3 |
+|   20 | nct                   |       3 |
+|   21 | gompertz              |       3 |
+|   22 | logncf                |       2 |
+|   23 | loggenlogistic        |       2 |
+|   24 | invgamma              |       2 |
+|   25 | loggenexpon           |       2 |
+|   26 | f                     |       2 |
+|   27 | loghalflogistic       |       2 |
+|   28 | loginvweibull         |       2 |
+|   29 | exponnorm             |       2 |
+|   30 | invgauss              |       2 |
+|   31 | halfnorm              |       2 |
+|   32 | pearson3              |       2 |
+|   33 | hypsecant             |       1 |
+|   34 | expon                 |       1 |
+|   35 | wald                  |       1 |
+|   36 | logerlang             |       1 |
+|   37 | invweibull            |       1 |
+|   38 | halflogistic          |       1 |
+|   39 | loghypsecant          |       1 |
+|   40 | loggumbel_l           |       1 |
+|   41 | gumbel_l              |       1 |
+|   42 | kstwobign             |       1 |
+|   43 | genexpon              |       1 |
+|   44 | loggamma              |       1 |
+|   45 | loglaplace            |       1 |
+|   46 | gumbel_r              |       1 |
+|   47 | loginvgauss           |       1 |
+|   48 | logkstwobign          |       1 |
+|   49 | logrice               |       1 |
+|   50 | logweibull_min        |       1 |
+|   51 | loggumbel_r           |       1 |
+|   52 | genlogistic           |       1 |
+|   53 | logfatiguelife        |       1 |
+|   54 | logexponnorm          |       1 |
+|   55 | rayleigh              |       1 |
+
+</div>
+
+
+<div align="center">
+
+<img alt="R.HydroTools" src="graph/pdf_bestfit_1.png" width="800"></img>
 
 </div>
 
@@ -1128,7 +1200,7 @@ Empirical distribution count
 
 <div align="center">
 
-Empirical distribution count
+EDF - Empirical distribution function count
 |   id | empirical_dist   |   Count |
 |-----:|:-----------------|--------:|
 |    0 | edf_gringorten   |      79 |
@@ -1149,7 +1221,78 @@ Empirical distribution count
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/empirical_bestfit_1_count.png" width="800"></img>
+<img alt="R.HydroTools" src="graph/edf_bestfit_2.png" width="800"></img>
+
+</div>
+
+
+<div align="center">
+
+PDF - Probability distribution function count
+|   id | p_dist                |   Count |
+|-----:|:----------------------|--------:|
+|    0 | logjohnsonsu          |      38 |
+|    1 | johnsonsu             |      30 |
+|    2 | logt                  |      11 |
+|    3 | laplace_asymmetric    |      10 |
+|    4 | t                     |       8 |
+|    5 | loglaplace_asymmetric |       8 |
+|    6 | fisk                  |       8 |
+|    7 | nakagami              |       6 |
+|    8 | weibull_min           |       6 |
+|    9 | mielke                |       5 |
+|   10 | lognct                |       5 |
+|   11 | logpearson3           |       4 |
+|   12 | loghalfnorm           |       4 |
+|   13 | logncf                |       4 |
+|   14 | ncf                   |       4 |
+|   15 | logmielke             |       4 |
+|   16 | halfnorm              |       4 |
+|   17 | logfisk               |       4 |
+|   18 | pearson3              |       3 |
+|   19 | loggenlogistic        |       3 |
+|   20 | logloggamma           |       3 |
+|   21 | logcrystalball        |       3 |
+|   22 | gumbel_l              |       3 |
+|   23 | logweibull_min        |       3 |
+|   24 | loginvweibull         |       3 |
+|   25 | gompertz              |       3 |
+|   26 | invgamma              |       2 |
+|   27 | logbetaprime          |       2 |
+|   28 | loggumbel_l           |       2 |
+|   29 | genlogistic           |       2 |
+|   30 | loghalflogistic       |       2 |
+|   31 | gumbel_r              |       2 |
+|   32 | loglaplace            |       2 |
+|   33 | fatiguelife           |       2 |
+|   34 | nct                   |       2 |
+|   35 | maxwell               |       2 |
+|   36 | loghypsecant          |       1 |
+|   37 | exponnorm             |       1 |
+|   38 | invweibull            |       1 |
+|   39 | lognakagami           |       1 |
+|   40 | halflogistic          |       1 |
+|   41 | loggompertz           |       1 |
+|   42 | loggamma              |       1 |
+|   43 | chi2                  |       1 |
+|   44 | loggenexpon           |       1 |
+|   45 | loglogistic           |       1 |
+|   46 | logalpha              |       1 |
+|   47 | loggumbel_r           |       1 |
+|   48 | erlang                |       1 |
+|   49 | logfatiguelife        |       1 |
+|   50 | lograyleigh           |       1 |
+|   51 | logexponnorm          |       1 |
+|   52 | rayleigh              |       1 |
+|   53 | logf                  |       1 |
+|   54 | logistic              |       1 |
+
+</div>
+
+
+<div align="center">
+
+<img alt="R.HydroTools" src="graph/pdf_bestfit_2.png" width="800"></img>
 
 </div>
 
@@ -1172,7 +1315,7 @@ Empirical distribution count
 
 <div align="center">
 
-Empirical distribution count
+EDF - Empirical distribution function count
 |   id | empirical_dist   |   Count |
 |-----:|:-----------------|--------:|
 |    0 | edf_cunnane      |      82 |
@@ -1193,7 +1336,76 @@ Empirical distribution count
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/empirical_bestfit_2_count.png" width="800"></img>
+<img alt="R.HydroTools" src="graph/edf_bestfit_3.png" width="800"></img>
+
+</div>
+
+
+<div align="center">
+
+PDF - Probability distribution function count
+|   id | p_dist                |   Count |
+|-----:|:----------------------|--------:|
+|    0 | logjohnsonsu          |      34 |
+|    1 | johnsonsu             |      30 |
+|    2 | logt                  |      15 |
+|    3 | loglaplace_asymmetric |      10 |
+|    4 | t                     |       8 |
+|    5 | fisk                  |       7 |
+|    6 | laplace_asymmetric    |       7 |
+|    7 | logmielke             |       6 |
+|    8 | logfisk               |       6 |
+|    9 | mielke                |       6 |
+|   10 | logpearson3           |       5 |
+|   11 | nakagami              |       5 |
+|   12 | loghalfnorm           |       4 |
+|   13 | ncf                   |       4 |
+|   14 | halfnorm              |       4 |
+|   15 | weibull_min           |       4 |
+|   16 | lognct                |       4 |
+|   17 | logloggamma           |       4 |
+|   18 | loggenlogistic        |       3 |
+|   19 | logncf                |       3 |
+|   20 | gumbel_l              |       3 |
+|   21 | logweibull_min        |       3 |
+|   22 | gompertz              |       3 |
+|   23 | loginvweibull         |       3 |
+|   24 | logcrystalball        |       3 |
+|   25 | fatiguelife           |       3 |
+|   26 | pearson3              |       3 |
+|   27 | genlogistic           |       3 |
+|   28 | logbetaprime          |       2 |
+|   29 | loghalflogistic       |       2 |
+|   30 | loglaplace            |       2 |
+|   31 | exponnorm             |       2 |
+|   32 | invweibull            |       2 |
+|   33 | gumbel_r              |       2 |
+|   34 | maxwell               |       2 |
+|   35 | nct                   |       2 |
+|   36 | genexpon              |       1 |
+|   37 | invgauss              |       1 |
+|   38 | halflogistic          |       1 |
+|   39 | loghypsecant          |       1 |
+|   40 | lognakagami           |       1 |
+|   41 | loggumbel_l           |       1 |
+|   42 | chi2                  |       1 |
+|   43 | loggenexpon           |       1 |
+|   44 | loglogistic           |       1 |
+|   45 | logalpha              |       1 |
+|   46 | loggumbel_r           |       1 |
+|   47 | erlang                |       1 |
+|   48 | lograyleigh           |       1 |
+|   49 | invgamma              |       1 |
+|   50 | rayleigh              |       1 |
+|   51 | logf                  |       1 |
+|   52 | logistic              |       1 |
+
+</div>
+
+
+<div align="center">
+
+<img alt="R.HydroTools" src="graph/pdf_bestfit_3.png" width="800"></img>
 
 </div>
 

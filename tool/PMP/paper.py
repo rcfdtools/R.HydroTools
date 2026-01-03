@@ -243,23 +243,40 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
     funcs.print_log(file_log, f'{df_station_record[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'n']].transpose().to_markdown()}', center_div=True, on_screen = print_on_screen)
     empirical_dist_count = df_station_record['empirical_dist'].value_counts().reset_index(name='Count').sort_values(by='Count', ascending=False)
     empirical_dist_count.index.name = 'id'
-    funcs.print_log(file_log,f'Empirical distribution count\n{empirical_dist_count.to_markdown()}', center_div=True, on_screen=print_on_screen)
+    funcs.print_log(file_log,f'EDF - Empirical distribution function count\n{empirical_dist_count.to_markdown()}', center_div=True, on_screen=print_on_screen)
     if create_plot: # Empirical distribution count
         empirical_dist_count = empirical_dist_count.sort_values(by='Count', ascending=True)
-        funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/empirical_bestfit_{i}_count.png" width="800"></img>', center_div=True, on_screen=print_on_screen)
+        funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/edf_bestfit_{i+1}.png" width="800"></img>', center_div=True, on_screen=print_on_screen)
         # Bar plot
         fig, ax = plt.subplots(figsize=(10, 6))
         bars = ax.barh(empirical_dist_count['empirical_dist'], empirical_dist_count['Count'], color=color_plot)
         plt.yticks(rotation=0, ha='right')
         ax.bar_label(bars, padding=3)
-        ax.set_title(f'Empirical distribution (count for best fit # {i})')
+        ax.set_title(f'EDF - Empirical distribution (count for best fit # {i+1})')
         ax.set_xlabel('Count')
         plt.tight_layout() # Important >>> prevents cutting labels
         plt.subplots_adjust(bottom=0.075)
-        plt.savefig(f'{output_path}graph/empirical_bestfit_{i}_count.png', dpi=dpi)
+        plt.savefig(f'{output_path}graph/edf_bestfit_{i+1}.png', dpi=dpi)
         if show_plot: plt.show()
         plt.close()
-
+    probability_dist_count = df_station_record['p_dist'].value_counts().reset_index(name='Count').sort_values(by='Count', ascending=False)
+    probability_dist_count.index.name = 'id'
+    funcs.print_log(file_log,f'PDF - Probability distribution function count\n{probability_dist_count.to_markdown()}', center_div=True, on_screen=print_on_screen)
+    if create_plot: # Probability distribution count
+        probability_dist_count = probability_dist_count.sort_values(by='Count', ascending=True)
+        funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/pdf_bestfit_{i+1}.png" width="800"></img>', center_div=True, on_screen=print_on_screen)
+        # Bar plot
+        fig, ax = plt.subplots(figsize=(10, 8))
+        bars = ax.barh(probability_dist_count['p_dist'], probability_dist_count['Count'], color=color_plot)
+        plt.yticks(rotation=0, ha='right')
+        ax.bar_label(bars, padding=3)
+        ax.set_title(f'PDF - Probability distribution function (count for best fit # {i+1})')
+        ax.set_xlabel('Count')
+        plt.tight_layout() # Important >>> prevents cutting labels
+        plt.subplots_adjust(bottom=0.075)
+        plt.savefig(f'{output_path}graph/pdf_bestfit_{i+1}.png', dpi=dpi)
+        if show_plot: plt.show()
+        plt.close()
 
 # Footer
 funcs.print_log(file_log, f'\n\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
