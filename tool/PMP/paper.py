@@ -118,7 +118,7 @@ funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="50
 #print(f'\nFiltered stations catalog:\n{df_catalog_filter.to_markdown()}') # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 funcs.print_log(file_log, f'\n### 0. Stations list ({len(df_catalog_filter_selected_columns)} processed)\n\n{dictionary.dicts['station_list']}\n\n', center_div=False, on_screen = print_on_screen)
 for index, row in df_catalog_filter_selected_columns.iterrows():
-    station_url = (f'<sub>•[{row[label_station_catalog]}](../{row[label_station_catalog]}.md)({row['n']})</sub>')
+    station_url = (f'<sub>•[{row[label_station_catalog]}](../{row[label_station_catalog]}.md) ({row['n']})</sub>')
     funcs.print_log(file_log, f'{station_url} ', on_screen=print_on_screen)
     '''
     if index <= len(df_catalog_filter) - 2:
