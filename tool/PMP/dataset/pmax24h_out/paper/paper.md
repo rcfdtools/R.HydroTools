@@ -1137,7 +1137,7 @@ Global analysis for PDF - Probability distribution function (stations count best
 
 <div align="center">
 
-Zonal analysis for hydrographic area: Caribe (stations count best fit)
+Zonal analysis for hydrographic area: **Caribe** (stations count best fit)
 |            | 0            | 1                  | 2      | 3              | 4    | 5         | 6           | 7     | 8    | 9         | 10     | 11      | 12          | 13   | 14             | 15     | 16              | 17   | 18   | 19          | 20        | 21       |
 |:-----------|:-------------|:-------------------|:-------|:---------------|:-----|:----------|:------------|:------|:-----|:----------|:-------|:--------|:------------|:-----|:---------------|:-------|:----------------|:-----|:-----|:------------|:----------|:---------|
 | p_dist     | logjohnsonsu | laplace_asymmetric | mielke | logcrystalball | t    | johnsonsu | logpearson3 | expon | fisk | logmielke | lognct | logfisk | loghalfnorm | wald | loggenlogistic | logncf | loghalflogistic | logt | ncf  | weibull_min | hypsecant | nakagami |
@@ -1149,7 +1149,7 @@ Zonal analysis for hydrographic area: Caribe (stations count best fit)
 
 <div align="center">
 
-Zonal analysis for hydrographic area: Magdalena Cauca (stations count best fit)
+Zonal analysis for hydrographic area: **Magdalena Cauca** (stations count best fit)
 |            | 0            | 1         | 2                     | 3                  | 4    | 5    | 6           | 7    | 8       | 9      | 10          | 11     | 12          | 13      | 14   | 15       | 16        | 17          | 18       | 19   | 20   | 21       | 22            | 23       | 24           | 25        | 26          | 27         | 28          | 29          | 30       | 31        | 32           | 33       | 34       | 35       | 36        | 37         | 38       | 39           | 40          | 41             | 42      | 43             | 44          | 45          | 46     | 47             | 48           |
 |:-----------|:-------------|:----------|:----------------------|:-------------------|:-----|:-----|:------------|:-----|:--------|:-------|:------------|:-------|:------------|:--------|:-----|:---------|:----------|:------------|:---------|:-----|:-----|:---------|:--------------|:---------|:-------------|:----------|:------------|:-----------|:------------|:------------|:---------|:----------|:-------------|:---------|:---------|:---------|:----------|:-----------|:---------|:-------------|:------------|:---------------|:--------|:---------------|:------------|:------------|:-------|:---------------|:-------------|
 | p_dist     | logjohnsonsu | johnsonsu | loglaplace_asymmetric | laplace_asymmetric | logt | t    | weibull_min | fisk | maxwell | lognct | fatiguelife | mielke | logpearson3 | logfisk | nct  | nakagami | exponnorm | loggenexpon | gompertz | ncf  | f    | halfnorm | loginvweibull | invgauss | loghypsecant | logerlang | logloggamma | invweibull | loghalfnorm | loggumbel_l | invgamma | logmielke | halflogistic | genexpon | gumbel_l | loggamma | kstwobign | loglaplace | gumbel_r | logkstwobign | loginvgauss | loggenlogistic | logrice | logweibull_min | loggumbel_r | genlogistic | logncf | logfatiguelife | logexponnorm |
@@ -1161,7 +1161,7 @@ Zonal analysis for hydrographic area: Magdalena Cauca (stations count best fit)
 
 <div align="center">
 
-Zonal analysis for hydrographic area: Pacifico (stations count best fit)
+Zonal analysis for hydrographic area: **Pacifico** (stations count best fit)
 |            | 0            | 1    | 2           | 3              | 4                  | 5           | 6         | 7         |
 |:-----------|:-------------|:-----|:------------|:---------------|:-------------------|:------------|:----------|:----------|
 | p_dist     | logjohnsonsu | fisk | weibull_min | logcrystalball | laplace_asymmetric | logpearson3 | johnsonsu | logmielke |
@@ -1173,7 +1173,7 @@ Zonal analysis for hydrographic area: Pacifico (stations count best fit)
 
 <div align="center">
 
-Zonal analysis for hydrographic area: Orinoco (stations count best fit)
+Zonal analysis for hydrographic area: **Orinoco** (stations count best fit)
 |            | 0            | 1         | 2     | 3    | 4           | 5        | 6    | 7      | 8       | 9        | 10       | 11          | 12                    | 13              | 14       |
 |:-----------|:-------------|:----------|:------|:-----|:------------|:---------|:-----|:-------|:--------|:---------|:---------|:------------|:----------------------|:----------------|:---------|
 | p_dist     | logjohnsonsu | johnsonsu | logt  | t    | logloggamma | pearson3 | fisk | mielke | logfisk | rayleigh | invgamma | loghalfnorm | loglaplace_asymmetric | loghalflogistic | gompertz |
@@ -1185,7 +1185,7 @@ Zonal analysis for hydrographic area: Orinoco (stations count best fit)
 
 <div align="center">
 
-Zonal analysis for hydrographic area: Amazonas (stations count best fit)
+Zonal analysis for hydrographic area: **Amazonas** (stations count best fit)
 |            | 0                  |
 |:-----------|:-------------------|
 | p_dist     | laplace_asymmetric |
@@ -1263,7 +1263,7 @@ Global analysis for PDF - Probability distribution function (stations count best
 
 <div align="center">
 
-Zonal analysis for hydrographic area: Caribe (stations count best fit)
+Zonal analysis for hydrographic area: **Caribe** (stations count best fit)
 |            | 0            | 1                  | 2      | 3        | 4    | 5         | 6              | 7    | 8              | 9           | 10           | 11      | 12     | 13          | 14     | 15              | 16          | 17   | 18          | 19          |
 |:-----------|:-------------|:-------------------|:-------|:---------|:-----|:----------|:---------------|:-----|:---------------|:------------|:-------------|:--------|:-------|:------------|:-------|:----------------|:------------|:-----|:------------|:------------|
 | p_dist     | logjohnsonsu | laplace_asymmetric | logncf | gumbel_l | ncf  | johnsonsu | loggenlogistic | logt | logcrystalball | weibull_min | logbetaprime | logfisk | mielke | loghalfnorm | lognct | loghalflogistic | logpearson3 | t    | genlogistic | loggumbel_l |
@@ -1275,7 +1275,7 @@ Zonal analysis for hydrographic area: Caribe (stations count best fit)
 
 <div align="center">
 
-Zonal analysis for hydrographic area: Magdalena Cauca (stations count best fit)
+Zonal analysis for hydrographic area: **Magdalena Cauca** (stations count best fit)
 |            | 0            | 1         | 2        | 3                     | 4    | 5    | 6    | 7                  | 8        | 9      | 10        | 11      | 12            | 13     | 14          | 15       | 16          | 17             | 18         | 19   | 20       | 21       | 22   | 23     | 24      | 25          | 26           | 27       | 28         | 29           | 30        | 31          | 32          | 33             | 34          | 35       | 36          | 37          | 38   | 39          | 40          | 41       | 42       | 43          | 44          | 45     | 46             | 47          | 48           | 49           |
 |:-----------|:-------------|:----------|:---------|:----------------------|:-----|:-----|:-----|:-------------------|:---------|:-------|:----------|:--------|:--------------|:-------|:------------|:---------|:------------|:---------------|:-----------|:-----|:---------|:---------|:-----|:-------|:--------|:------------|:-------------|:---------|:-----------|:-------------|:----------|:------------|:------------|:---------------|:------------|:---------|:------------|:------------|:-----|:------------|:------------|:---------|:---------|:------------|:------------|:-------|:---------------|:------------|:-------------|:-------------|
 | p_dist     | logjohnsonsu | johnsonsu | nakagami | loglaplace_asymmetric | fisk | logt | t    | laplace_asymmetric | halfnorm | lognct | logmielke | logfisk | loginvweibull | mielke | weibull_min | gompertz | fatiguelife | logweibull_min | loglaplace | nct  | invgamma | gumbel_r | ncf  | logncf | maxwell | logpearson3 | halflogistic | pearson3 | invweibull | loghypsecant | exponnorm | logloggamma | loghalfnorm | loggenlogistic | loggompertz | gumbel_l | loggumbel_l | lognakagami | chi2 | loggenexpon | loglogistic | loggamma | logalpha | loggumbel_r | genlogistic | erlang | logfatiguelife | lograyleigh | logbetaprime | logexponnorm |
@@ -1287,7 +1287,7 @@ Zonal analysis for hydrographic area: Magdalena Cauca (stations count best fit)
 
 <div align="center">
 
-Zonal analysis for hydrographic area: Pacifico (stations count best fit)
+Zonal analysis for hydrographic area: **Pacifico** (stations count best fit)
 |            | 0            | 1           | 2    | 3              | 4                  | 5           | 6         | 7         |
 |:-----------|:-------------|:------------|:-----|:---------------|:-------------------|:------------|:----------|:----------|
 | p_dist     | logjohnsonsu | weibull_min | fisk | logcrystalball | laplace_asymmetric | logpearson3 | johnsonsu | logmielke |
@@ -1299,7 +1299,7 @@ Zonal analysis for hydrographic area: Pacifico (stations count best fit)
 
 <div align="center">
 
-Zonal analysis for hydrographic area: Orinoco (stations count best fit)
+Zonal analysis for hydrographic area: **Orinoco** (stations count best fit)
 |            | 0         | 1     | 2        | 3           | 4            | 5           | 6        | 7    | 8              | 9    | 10     | 11                    | 12   | 13              | 14       |
 |:-----------|:----------|:------|:---------|:------------|:-------------|:------------|:---------|:-----|:---------------|:-----|:-------|:----------------------|:-----|:----------------|:---------|
 | p_dist     | johnsonsu | logt  | pearson3 | loghalfnorm | logjohnsonsu | logloggamma | rayleigh | t    | logweibull_min | fisk | mielke | loglaplace_asymmetric | logf | loghalflogistic | gompertz |
@@ -1311,7 +1311,7 @@ Zonal analysis for hydrographic area: Orinoco (stations count best fit)
 
 <div align="center">
 
-Zonal analysis for hydrographic area: Amazonas (stations count best fit)
+Zonal analysis for hydrographic area: **Amazonas** (stations count best fit)
 |            | 0        | 1                  |
 |:-----------|:---------|:-------------------|
 | p_dist     | logistic | laplace_asymmetric |
@@ -1389,7 +1389,7 @@ Global analysis for PDF - Probability distribution function (stations count best
 
 <div align="center">
 
-Zonal analysis for hydrographic area: Caribe (stations count best fit)
+Zonal analysis for hydrographic area: **Caribe** (stations count best fit)
 |            | 0            | 1         | 2              | 3              | 4    | 5           | 6    | 7           | 8      | 9                     | 10   | 11           | 12                 | 13         | 14     | 15          | 16       | 17      | 18              | 19     | 20   | 21          |
 |:-----------|:-------------|:----------|:---------------|:---------------|:-----|:------------|:-----|:------------|:-------|:----------------------|:-----|:-------------|:-------------------|:-----------|:-------|:------------|:---------|:--------|:----------------|:-------|:-----|:------------|
 | p_dist     | logjohnsonsu | johnsonsu | logcrystalball | loggenlogistic | logt | logpearson3 | ncf  | weibull_min | lognct | loglaplace_asymmetric | fisk | logbetaprime | laplace_asymmetric | loglaplace | mielke | loghalfnorm | gumbel_l | logfisk | loghalflogistic | logncf | t    | genlogistic |
@@ -1401,7 +1401,7 @@ Zonal analysis for hydrographic area: Caribe (stations count best fit)
 
 <div align="center">
 
-Zonal analysis for hydrographic area: Magdalena Cauca (stations count best fit)
+Zonal analysis for hydrographic area: **Magdalena Cauca** (stations count best fit)
 |            | 0         | 1            | 2    | 3                     | 4    | 5        | 6         | 7    | 8        | 9                  | 10     | 11          | 12            | 13     | 14      | 15         | 16       | 17   | 18             | 19   | 20          | 21        | 22          | 23       | 24     | 25          | 26      | 27          | 28       | 29          | 30             | 31           | 32          | 33          | 34           | 35       | 36       | 37   | 38          | 39         | 40          | 41       | 42     | 43          | 44       | 45          | 46       | 47           |
 |:-----------|:----------|:-------------|:-----|:----------------------|:-----|:---------|:----------|:-----|:---------|:-------------------|:-------|:------------|:--------------|:-------|:--------|:-----------|:---------|:-----|:---------------|:-----|:------------|:----------|:------------|:---------|:-------|:------------|:--------|:------------|:---------|:------------|:---------------|:-------------|:------------|:------------|:-------------|:---------|:---------|:-----|:------------|:-----------|:------------|:---------|:-------|:------------|:---------|:------------|:---------|:-------------|
 | p_dist     | johnsonsu | logjohnsonsu | logt | loglaplace_asymmetric | t    | nakagami | logmielke | fisk | halfnorm | laplace_asymmetric | mielke | fatiguelife | loginvweibull | lognct | logfisk | invweibull | gumbel_r | nct  | logweibull_min | ncf  | logloggamma | exponnorm | logpearson3 | gompertz | logncf | genlogistic | maxwell | weibull_min | genexpon | loghalfnorm | loggenlogistic | loghypsecant | loggumbel_l | lognakagami | halflogistic | invgauss | pearson3 | chi2 | loggenexpon | loglaplace | loglogistic | logalpha | erlang | loggumbel_r | gumbel_l | lograyleigh | invgamma | logbetaprime |
@@ -1413,7 +1413,7 @@ Zonal analysis for hydrographic area: Magdalena Cauca (stations count best fit)
 
 <div align="center">
 
-Zonal analysis for hydrographic area: Pacifico (stations count best fit)
+Zonal analysis for hydrographic area: **Pacifico** (stations count best fit)
 |            | 0            | 1        | 2    | 3       | 4              | 5                  | 6           | 7         | 8         |
 |:-----------|:-------------|:---------|:-----|:--------|:---------------|:-------------------|:------------|:----------|:----------|
 | p_dist     | logjohnsonsu | gumbel_l | fisk | logfisk | logcrystalball | laplace_asymmetric | logpearson3 | johnsonsu | logmielke |
@@ -1425,7 +1425,7 @@ Zonal analysis for hydrographic area: Pacifico (stations count best fit)
 
 <div align="center">
 
-Zonal analysis for hydrographic area: Orinoco (stations count best fit)
+Zonal analysis for hydrographic area: **Orinoco** (stations count best fit)
 |            | 0         | 1     | 2           | 3        | 4           | 5            | 6              | 7        | 8    | 9    | 10      | 11     | 12                    | 13   | 14              | 15       |
 |:-----------|:----------|:------|:------------|:---------|:------------|:-------------|:---------------|:---------|:-----|:-----|:--------|:-------|:----------------------|:-----|:----------------|:---------|
 | p_dist     | johnsonsu | logt  | loghalfnorm | pearson3 | logloggamma | logjohnsonsu | logweibull_min | rayleigh | fisk | t    | logfisk | mielke | loglaplace_asymmetric | logf | loghalflogistic | gompertz |
@@ -1437,7 +1437,7 @@ Zonal analysis for hydrographic area: Orinoco (stations count best fit)
 
 <div align="center">
 
-Zonal analysis for hydrographic area: Amazonas (stations count best fit)
+Zonal analysis for hydrographic area: **Amazonas** (stations count best fit)
 |            | 0        | 1                  |
 |:-----------|:---------|:-------------------|
 | p_dist     | logistic | laplace_asymmetric |

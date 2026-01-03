@@ -292,7 +292,7 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
         probability_dist_count_ah = probability_dist_count_ah['p_dist'].value_counts().reset_index(name='Count').sort_values(by='Count', ascending=False)
         probability_dist_count_ah.index.name = 'id'
         probability_dist_count_ah['Percentage'] = round((probability_dist_count_ah['Count'] / probability_dist_count_ah['Count'].sum()) * 100, 2)
-        funcs.print_log(file_log, f'Zonal analysis for hydrographic area: {ah} (stations count best fit)\n{probability_dist_count_ah.transpose().to_markdown()}', center_div=True, on_screen=print_on_screen)
+        funcs.print_log(file_log, f'Zonal analysis for hydrographic area: **{ah}** (stations count best fit)\n{probability_dist_count_ah.transpose().to_markdown()}', center_div=True, on_screen=print_on_screen)
 
 # Footer
 funcs.print_log(file_log, f'\n\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
