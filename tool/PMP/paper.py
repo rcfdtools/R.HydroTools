@@ -234,6 +234,7 @@ funcs.print_log(file_log, f'\n:file_folder:Filtered table: [bestfit.csv](bestfit
 #funcs.print_log(file_log, f'\n\nThe follow tables and graph shows the evaluation of the {best_fit_sort_eval} best fit order ranking positions for each station. Results tables are ordered by: empirical distribution (empirical_dist), probability distribution (p_dist) and Δ value (delta).\n\n', center_div=False, on_screen = print_on_screen)
 for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i in range(df_bestfit['best_fit_sort'].max()):
     df_station_record = df_bestfit[df_bestfit['best_fit_sort'] == i+1].sort_values(by=['n', label_station], ascending=False)
+    df_station_record = pd.merge(df_station_record, df_catalog_filter[[label_station_catalog, label_ah, label_zh, label_szh]], left_on=label_station, right_on=label_station_catalog, how='left')
     #df_station_record = df_station_record.reset_index(drop=True)
     #df_station_record.index.name = 'id'
     #if minimum_sample > 0:
@@ -243,7 +244,7 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
     df_station_record = df_station_record.reset_index(drop=True)
     df_station_record.index.name = 'id'
     funcs.print_log(file_log, f'\n### Best fit by station in sort position # {i+1}\n', center_div=False, on_screen = print_on_screen)
-    funcs.print_log(file_log, f'{df_station_record[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'n']].transpose().to_markdown()}', center_div=True, on_screen = print_on_screen)
+    funcs.print_log(file_log, f'{df_station_record[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'n', label_ah, label_zh, label_szh]].transpose().to_markdown()}', center_div=True, on_screen = print_on_screen)
     empirical_dist_count = df_station_record['empirical_dist'].value_counts().reset_index(name='Count').sort_values(by='Count', ascending=False)
     empirical_dist_count.index.name = 'id'
     empirical_dist_count['Percentage'] = round((empirical_dist_count['Count']/empirical_dist_count['Count'].sum())*100, 2)
