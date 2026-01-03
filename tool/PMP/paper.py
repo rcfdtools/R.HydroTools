@@ -83,9 +83,12 @@ df_catalog_filter = df_catalog[df_catalog[label_station_catalog].isin(df_station
 df_catalog_filter = df_catalog_filter.sort_values(by=[label_station_catalog], ascending=True)
 df_catalog_filter = df_catalog_filter.reset_index(drop=True)
 df_catalog_filter.index.name = 'id'
+df_station_record = df_bestfit[df_bestfit['best_fit_sort'] == 1].sort_values(by=['n', label_station], ascending=False)
+#print(f'\n{df_station_record.head().to_markdown()}')
 #print(f'\nfiltered_df types: \n{filtered_df.dtypes}')
+df_catalog_filter = pd.merge(df_catalog_filter, df_station_record[[label_station, 'n']], left_on=label_station_catalog, right_on=label_station, how='left')
 #print(f'\n{df_catalog_filter.head().to_markdown()}')
-df_catalog_filter_selected_columns = df_catalog_filter[[label_station_catalog, label_name, label_category, label_technology, label_status, label_install_date, label_latitude, label_longitude, label_state, label_county, label_ah, label_zh, label_szh]]
+df_catalog_filter_selected_columns = df_catalog_filter[[label_station_catalog, label_name, label_category, label_technology, label_status, label_install_date, label_latitude, label_longitude, label_state, label_county, label_ah, label_zh, label_szh, 'n']]
 
 
 # Create GeoJSON map
@@ -115,7 +118,7 @@ funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="50
 #print(f'\nFiltered stations catalog:\n{df_catalog_filter.to_markdown()}') # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 funcs.print_log(file_log, f'\n### 0. Stations list ({len(df_catalog_filter_selected_columns)} processed)\n\n{dictionary.dicts['station_list']}\n\n', center_div=False, on_screen = print_on_screen)
 for index, row in df_catalog_filter_selected_columns.iterrows():
-    station_url = (f'<sub>•[{row[label_station_catalog]}](../{row[label_station_catalog]}.md)</sub>')
+    station_url = (f'<sub>•[{row[label_station_catalog]}](../{row[label_station_catalog]}.md)({row['n']})</sub>')
     funcs.print_log(file_log, f'{station_url} ', on_screen=print_on_screen)
     '''
     if index <= len(df_catalog_filter) - 2:
@@ -132,7 +135,7 @@ if show_plot: location_map_plot.show()
 # Station bestfit records analysis & Histogram of n
 #general_stat_vars = ['label_category', 'label_technology', 'label_status', 'label_state', 'label_ah', 'label_zh'] # As text for the dictionary definitions call
 #df_station_record = df_bestfit.groupby(label_station)['n'].mean().reset_index()
-df_station_record = df_bestfit[df_bestfit['best_fit_sort'] == 1].sort_values(by=['n', label_station], ascending=False)
+#df_station_record = df_bestfit[df_bestfit['best_fit_sort'] == 1].sort_values(by=['n', label_station], ascending=False)
 #df_station_record = df_station_record.sort_values(by=['n', label_station], ascending=False)
 df_station_record = df_station_record.reset_index(drop=True)
 df_station_record.index.name = 'id'
@@ -226,7 +229,7 @@ for emp in edf_dist:
 # Best fit analysis
 if minimum_sample > 0: df_bestfit = df_bestfit[df_bestfit['n'] >= minimum_sample]
 funcs.print_log(file_log, f'\n## C. Best Fit analysis ({len(df_bestfit[df_bestfit['best_fit_sort']==1])} stations)\n\n{dictionary.dicts['bestfit']}', center_div=False, on_screen = print_on_screen)
-funcs.print_log(file_log, f'\n\nThe follow tables and graph shows the evaluation of the {best_fit_sort_eval} best fit order ranking positions for each station. Results tables are ordered by station code.\n', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n\nThe following tables and graph shows the evaluation of the {best_fit_sort_eval} best fit order ranking positions for each station (considering the best fit in each empirical distribution and the first position in the probability distribution). Results tables are ordered by station code.\n', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n:file_folder:Filtered table: [bestfit.csv](bestfit.csv)\n\n', on_screen = print_on_screen)
 #funcs.print_log(file_log, f'\n\nThe follow tables and graph shows the evaluation of the {best_fit_sort_eval} best fit order ranking positions for each station. Results tables are ordered by: empirical distribution (empirical_dist), probability distribution (p_dist) and Δ value (delta).\n\n', center_div=False, on_screen = print_on_screen)
 for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i in range(df_bestfit['best_fit_sort'].max()):

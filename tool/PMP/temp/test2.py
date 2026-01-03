@@ -134,5 +134,17 @@ plt.subplots_adjust(bottom=0.15) # Increase bottom margin as needed
 plt.show()
 '''
 
+#print(f'log(0.00001) = {math.log(0.00001)}')
 
-print(f'log(0.00001) = {math.log(0.00001)}')
+# Python Pandas merge only certain columns
+# Sample DataFrames
+df1 = pd.DataFrame({'key': ['K0', 'K1', 'K2', 'K3'],
+                    'Name': ['Jai', 'Princi', 'Gaurav', 'Anuj'],
+                    'Age': [27, 24, 22, 32]})
+
+df2 = pd.DataFrame({'key': ['K0', 'K1', 'K2', 'K3'],
+                    'Address': ['Nagpur', 'Kanpur', 'Allahabad', 'Kannuaj'],
+                    'Qualification': ['Btech', 'B.A', 'Bcom', 'B.hons']})
+# Merge DataFrames on the common column 'key'
+merged_df = pd.merge(df1, df2[['key', 'Address']], on='key', how='left')
+print(merged_df)
