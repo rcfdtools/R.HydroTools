@@ -244,6 +244,7 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
     funcs.print_log(file_log, f'{df_station_record[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'n']].transpose().to_markdown()}', center_div=True, on_screen = print_on_screen)
     empirical_dist_count = df_station_record['empirical_dist'].value_counts().reset_index(name='Count').sort_values(by='Count', ascending=False)
     empirical_dist_count.index.name = 'id'
+    empirical_dist_count['Percentage'] = round((empirical_dist_count['Count']/empirical_dist_count['Count'].sum())*100, 2)
     funcs.print_log(file_log,f'EDF - Empirical distribution function (stations count best fit)\n{empirical_dist_count.to_markdown()}', center_div=True, on_screen=print_on_screen)
     if create_plot: # Empirical distribution count - Bar plot
         empirical_dist_count = empirical_dist_count.sort_values(by='Count', ascending=True)
@@ -261,6 +262,7 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
         plt.close()
     probability_dist_count = df_station_record['p_dist'].value_counts().reset_index(name='Count').sort_values(by='Count', ascending=False)
     probability_dist_count.index.name = 'id'
+    probability_dist_count['Percentage'] = round((probability_dist_count['Count'] / probability_dist_count['Count'].sum()) * 100, 2)
     funcs.print_log(file_log,f'PDF - Probability distribution function (stations count best fit)\n{probability_dist_count.transpose().to_markdown()}', center_div=True, on_screen=print_on_screen)
     if create_plot: # Probability distribution count - Bar plot
         #probability_dist_count = probability_dist_count.sort_values(by='Count', ascending=True)
@@ -268,7 +270,7 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
         fig, ax = plt.subplots(figsize=(10, 6))
         bars = ax.bar(probability_dist_count['p_dist'], probability_dist_count['Count'], color=color_plot)
         plt.xticks(rotation=90, ha='right')
-        ax.bar_label(bars, padding=3)
+        ax.bar_label(bars, padding=3, rotation=90)
         ax.set_title(f'PDF - Probability distribution function (stations count for best fit # {i+1})')
         ax.set_ylabel('Count')
         plt.tight_layout() # Important >>> prevents cutting labels

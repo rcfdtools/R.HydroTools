@@ -5,7 +5,7 @@
 
 </div>
 
-# Study and analysis of the Probable Maximum Precipitation (PMP) in the network of automatic stations in Colombia - South America and estimation of extreme values for different return periods from multiple probability distributions.
+# Study and analysis of the Probable Maximum Precipitation (PMP) in the network of automatic climatological stations of Colombia - South America and estimation of extreme values for different return periods from multiple probability distributions.
 
 
 Probable Maximum Precipitation (PMP) is the greatest amount of rainfall for a specific duration that is meteorologically possible for a given location, acting as a "worst-case" scenario for extreme storms, crucial for designing safety-critical infrastructure like bridges, river deviations, dams, spillways, and nuclear plants to prevent catastrophic failure. PMP is calculated by hydrologists using meteorological data to determine the upper limit of extreme rainfall, often leading to the Probable Maximum Flood (PMF) for flood control design, and is increasingly being studied for climate change impacts.
@@ -1090,19 +1090,19 @@ The follow tables and graph shows the evaluation of the 3 best fit order ranking
 <div align="center">
 
 EDF - Empirical distribution function (stations count best fit)
-|   id | empirical_dist   |   Count |
-|-----:|:-----------------|--------:|
-|    0 | edf_hazen        |      79 |
-|    1 | edf_adamowski    |      32 |
-|    2 | edf_weibull      |      31 |
-|    3 | edf_california   |      24 |
-|    4 | edf_cunnane      |      14 |
-|    5 | edf_chegodayev   |      14 |
-|    6 | edf_gringorten   |      11 |
-|    7 | edf_tukey        |       9 |
-|    8 | edf_blom         |       5 |
-|    9 | edf_filliben     |       4 |
-|   10 | edf_jenkinson    |       3 |
+|   id | empirical_dist   |   Count |   Percentage |
+|-----:|:-----------------|--------:|-------------:|
+|    0 | edf_hazen        |      79 |        34.96 |
+|    1 | edf_adamowski    |      32 |        14.16 |
+|    2 | edf_weibull      |      31 |        13.72 |
+|    3 | edf_california   |      24 |        10.62 |
+|    4 | edf_cunnane      |      14 |         6.19 |
+|    5 | edf_chegodayev   |      14 |         6.19 |
+|    6 | edf_gringorten   |      11 |         4.87 |
+|    7 | edf_tukey        |       9 |         3.98 |
+|    8 | edf_blom         |       5 |         2.21 |
+|    9 | edf_filliben     |       4 |         1.77 |
+|   10 | edf_jenkinson    |       3 |         1.33 |
 
 </div>
 
@@ -1117,10 +1117,11 @@ EDF - Empirical distribution function (stations count best fit)
 <div align="center">
 
 PDF - Probability distribution function (stations count best fit)
-|        | 0            | 1         | 2                  | 3   | 4    | 5                     | 6    | 7      | 8           | 9           | 10      | 11     | 12      | 13       | 14          | 15        | 16             | 17          | 18          | 19   | 20   | 21       | 22     | 23             | 24       | 25          | 26   | 27              | 28            | 29        | 30       | 31       | 32       | 33        | 34    | 35   | 36        | 37         | 38           | 39           | 40          | 41       | 42        | 43       | 44       | 45         | 46       | 47          | 48           | 49      | 50             | 51          | 52          | 53             | 54           | 55       |
-|:-------|:-------------|:----------|:-------------------|:----|:-----|:----------------------|:-----|:-------|:------------|:------------|:--------|:-------|:--------|:---------|:------------|:----------|:---------------|:------------|:------------|:-----|:-----|:---------|:-------|:---------------|:---------|:------------|:-----|:----------------|:--------------|:----------|:---------|:---------|:---------|:----------|:------|:-----|:----------|:-----------|:-------------|:-------------|:------------|:---------|:----------|:---------|:---------|:-----------|:---------|:------------|:-------------|:--------|:---------------|:------------|:------------|:---------------|:-------------|:---------|
-| p_dist | logjohnsonsu | johnsonsu | laplace_asymmetric | t   | logt | loglaplace_asymmetric | fisk | mielke | weibull_min | logpearson3 | logfisk | lognct | maxwell | nakagami | fatiguelife | logmielke | logcrystalball | loghalfnorm | logloggamma | ncf  | nct  | gompertz | logncf | loggenlogistic | invgamma | loggenexpon | f    | loghalflogistic | loginvweibull | exponnorm | invgauss | halfnorm | pearson3 | hypsecant | expon | wald | logerlang | invweibull | halflogistic | loghypsecant | loggumbel_l | gumbel_l | kstwobign | genexpon | loggamma | loglaplace | gumbel_r | loginvgauss | logkstwobign | logrice | logweibull_min | loggumbel_r | genlogistic | logfatiguelife | logexponnorm | rayleigh |
-| Count  | 38           | 25        | 14                 | 11  | 11   | 10                    | 9    | 8      | 6           | 6           | 5       | 5      | 4       | 4        | 4           | 3         | 3              | 3           | 3           | 3    | 3    | 3        | 2      | 2              | 2        | 2           | 2    | 2               | 2             | 2         | 2        | 2        | 2        | 1         | 1     | 1    | 1         | 1          | 1            | 1            | 1           | 1        | 1         | 1        | 1        | 1          | 1        | 1           | 1            | 1       | 1              | 1           | 1           | 1              | 1            | 1        |
+|            | 0            | 1         | 2                  | 3    | 4    | 5                     | 6    | 7      | 8           | 9           | 10      | 11     | 12      | 13       | 14          | 15        | 16             | 17          | 18          | 19   | 20   | 21       | 22     | 23             | 24       | 25          | 26   | 27              | 28            | 29        | 30       | 31       | 32       | 33        | 34    | 35   | 36        | 37         | 38           | 39           | 40          | 41       | 42        | 43       | 44       | 45         | 46       | 47          | 48           | 49      | 50             | 51          | 52          | 53             | 54           | 55       |
+|:-----------|:-------------|:----------|:-------------------|:-----|:-----|:----------------------|:-----|:-------|:------------|:------------|:--------|:-------|:--------|:---------|:------------|:----------|:---------------|:------------|:------------|:-----|:-----|:---------|:-------|:---------------|:---------|:------------|:-----|:----------------|:--------------|:----------|:---------|:---------|:---------|:----------|:------|:-----|:----------|:-----------|:-------------|:-------------|:------------|:---------|:----------|:---------|:---------|:-----------|:---------|:------------|:-------------|:--------|:---------------|:------------|:------------|:---------------|:-------------|:---------|
+| p_dist     | logjohnsonsu | johnsonsu | laplace_asymmetric | t    | logt | loglaplace_asymmetric | fisk | mielke | weibull_min | logpearson3 | logfisk | lognct | maxwell | nakagami | fatiguelife | logmielke | logcrystalball | loghalfnorm | logloggamma | ncf  | nct  | gompertz | logncf | loggenlogistic | invgamma | loggenexpon | f    | loghalflogistic | loginvweibull | exponnorm | invgauss | halfnorm | pearson3 | hypsecant | expon | wald | logerlang | invweibull | halflogistic | loghypsecant | loggumbel_l | gumbel_l | kstwobign | genexpon | loggamma | loglaplace | gumbel_r | loginvgauss | logkstwobign | logrice | logweibull_min | loggumbel_r | genlogistic | logfatiguelife | logexponnorm | rayleigh |
+| Count      | 38           | 25        | 14                 | 11   | 11   | 10                    | 9    | 8      | 6           | 6           | 5       | 5      | 4       | 4        | 4           | 3         | 3              | 3           | 3           | 3    | 3    | 3        | 2      | 2              | 2        | 2           | 2    | 2               | 2             | 2         | 2        | 2        | 2        | 1         | 1     | 1    | 1         | 1          | 1            | 1            | 1           | 1        | 1         | 1        | 1        | 1          | 1        | 1           | 1            | 1       | 1              | 1           | 1           | 1              | 1            | 1        |
+| Percentage | 16.81        | 11.06     | 6.19               | 4.87 | 4.87 | 4.42                  | 3.98 | 3.54   | 2.65        | 2.65        | 2.21    | 2.21   | 1.77    | 1.77     | 1.77        | 1.33      | 1.33           | 1.33        | 1.33        | 1.33 | 1.33 | 1.33     | 0.88   | 0.88           | 0.88     | 0.88        | 0.88 | 0.88            | 0.88          | 0.88      | 0.88     | 0.88     | 0.88     | 0.44      | 0.44  | 0.44 | 0.44      | 0.44       | 0.44         | 0.44         | 0.44        | 0.44     | 0.44      | 0.44     | 0.44     | 0.44       | 0.44     | 0.44        | 0.44         | 0.44    | 0.44           | 0.44        | 0.44        | 0.44           | 0.44         | 0.44     |
 
 </div>
 
@@ -1151,20 +1152,20 @@ PDF - Probability distribution function (stations count best fit)
 <div align="center">
 
 EDF - Empirical distribution function (stations count best fit)
-|   id | empirical_dist   |   Count |
-|-----:|:-----------------|--------:|
-|    0 | edf_gringorten   |      79 |
-|    1 | edf_adamowski    |      33 |
-|    2 | edf_chegodayev   |      21 |
-|    3 | edf_hazen        |      20 |
-|    4 | edf_jenkinson    |      18 |
-|    5 | edf_cunnane      |      16 |
-|    6 | edf_blom         |      12 |
-|    7 | edf_weibull      |      11 |
-|    8 | edf_filliben     |       9 |
-|    9 | edf_beard        |       3 |
-|   10 | edf_tukey        |       2 |
-|   11 | edf_california   |       2 |
+|   id | empirical_dist   |   Count |   Percentage |
+|-----:|:-----------------|--------:|-------------:|
+|    0 | edf_gringorten   |      79 |        34.96 |
+|    1 | edf_adamowski    |      33 |        14.6  |
+|    2 | edf_chegodayev   |      21 |         9.29 |
+|    3 | edf_hazen        |      20 |         8.85 |
+|    4 | edf_jenkinson    |      18 |         7.96 |
+|    5 | edf_cunnane      |      16 |         7.08 |
+|    6 | edf_blom         |      12 |         5.31 |
+|    7 | edf_weibull      |      11 |         4.87 |
+|    8 | edf_filliben     |       9 |         3.98 |
+|    9 | edf_beard        |       3 |         1.33 |
+|   10 | edf_tukey        |       2 |         0.88 |
+|   11 | edf_california   |       2 |         0.88 |
 
 </div>
 
@@ -1179,10 +1180,11 @@ EDF - Empirical distribution function (stations count best fit)
 <div align="center">
 
 PDF - Probability distribution function (stations count best fit)
-|        | 0            | 1         | 2    | 3                  | 4   | 5                     | 6    | 7        | 8           | 9      | 10     | 11          | 12          | 13     | 14   | 15        | 16       | 17      | 18       | 19             | 20          | 21             | 22       | 23             | 24            | 25       | 26       | 27           | 28          | 29          | 30              | 31       | 32         | 33          | 34   | 35      | 36           | 37        | 38         | 39          | 40           | 41          | 42       | 43   | 44          | 45          | 46       | 47          | 48     | 49             | 50          | 51           | 52       | 53   | 54       |
-|:-------|:-------------|:----------|:-----|:-------------------|:----|:----------------------|:-----|:---------|:------------|:-------|:-------|:------------|:------------|:-------|:-----|:----------|:---------|:--------|:---------|:---------------|:------------|:---------------|:---------|:---------------|:--------------|:---------|:---------|:-------------|:------------|:------------|:----------------|:---------|:-----------|:------------|:-----|:--------|:-------------|:----------|:-----------|:------------|:-------------|:------------|:---------|:-----|:------------|:------------|:---------|:------------|:-------|:---------------|:------------|:-------------|:---------|:-----|:---------|
-| p_dist | logjohnsonsu | johnsonsu | logt | laplace_asymmetric | t   | loglaplace_asymmetric | fisk | nakagami | weibull_min | mielke | lognct | logpearson3 | loghalfnorm | logncf | ncf  | logmielke | halfnorm | logfisk | pearson3 | loggenlogistic | logloggamma | logcrystalball | gumbel_l | logweibull_min | loginvweibull | gompertz | invgamma | logbetaprime | loggumbel_l | genlogistic | loghalflogistic | gumbel_r | loglaplace | fatiguelife | nct  | maxwell | loghypsecant | exponnorm | invweibull | lognakagami | halflogistic | loggompertz | loggamma | chi2 | loggenexpon | loglogistic | logalpha | loggumbel_r | erlang | logfatiguelife | lograyleigh | logexponnorm | rayleigh | logf | logistic |
-| Count  | 38           | 30        | 11   | 10                 | 8   | 8                     | 8    | 6        | 6           | 5      | 5      | 4           | 4           | 4      | 4    | 4         | 4        | 4       | 3        | 3              | 3           | 3              | 3        | 3              | 3             | 3        | 2        | 2            | 2           | 2           | 2               | 2        | 2          | 2           | 2    | 2       | 1            | 1         | 1          | 1           | 1            | 1           | 1        | 1    | 1           | 1           | 1        | 1           | 1      | 1              | 1           | 1            | 1        | 1    | 1        |
+|            | 0            | 1         | 2    | 3                  | 4    | 5                     | 6    | 7        | 8           | 9      | 10     | 11          | 12          | 13     | 14   | 15        | 16       | 17      | 18       | 19             | 20          | 21             | 22       | 23             | 24            | 25       | 26       | 27           | 28          | 29          | 30              | 31       | 32         | 33          | 34   | 35      | 36           | 37        | 38         | 39          | 40           | 41          | 42       | 43   | 44          | 45          | 46       | 47          | 48     | 49             | 50          | 51           | 52       | 53   | 54       |
+|:-----------|:-------------|:----------|:-----|:-------------------|:-----|:----------------------|:-----|:---------|:------------|:-------|:-------|:------------|:------------|:-------|:-----|:----------|:---------|:--------|:---------|:---------------|:------------|:---------------|:---------|:---------------|:--------------|:---------|:---------|:-------------|:------------|:------------|:----------------|:---------|:-----------|:------------|:-----|:--------|:-------------|:----------|:-----------|:------------|:-------------|:------------|:---------|:-----|:------------|:------------|:---------|:------------|:-------|:---------------|:------------|:-------------|:---------|:-----|:---------|
+| p_dist     | logjohnsonsu | johnsonsu | logt | laplace_asymmetric | t    | loglaplace_asymmetric | fisk | nakagami | weibull_min | mielke | lognct | logpearson3 | loghalfnorm | logncf | ncf  | logmielke | halfnorm | logfisk | pearson3 | loggenlogistic | logloggamma | logcrystalball | gumbel_l | logweibull_min | loginvweibull | gompertz | invgamma | logbetaprime | loggumbel_l | genlogistic | loghalflogistic | gumbel_r | loglaplace | fatiguelife | nct  | maxwell | loghypsecant | exponnorm | invweibull | lognakagami | halflogistic | loggompertz | loggamma | chi2 | loggenexpon | loglogistic | logalpha | loggumbel_r | erlang | logfatiguelife | lograyleigh | logexponnorm | rayleigh | logf | logistic |
+| Count      | 38           | 30        | 11   | 10                 | 8    | 8                     | 8    | 6        | 6           | 5      | 5      | 4           | 4           | 4      | 4    | 4         | 4        | 4       | 3        | 3              | 3           | 3              | 3        | 3              | 3             | 3        | 2        | 2            | 2           | 2           | 2               | 2        | 2          | 2           | 2    | 2       | 1            | 1         | 1          | 1           | 1            | 1           | 1        | 1    | 1           | 1           | 1        | 1           | 1      | 1              | 1           | 1            | 1        | 1    | 1        |
+| Percentage | 16.81        | 13.27     | 4.87 | 4.42               | 3.54 | 3.54                  | 3.54 | 2.65     | 2.65        | 2.21   | 2.21   | 1.77        | 1.77        | 1.77   | 1.77 | 1.77      | 1.77     | 1.77    | 1.33     | 1.33           | 1.33        | 1.33           | 1.33     | 1.33           | 1.33          | 1.33     | 0.88     | 0.88         | 0.88        | 0.88        | 0.88            | 0.88     | 0.88       | 0.88        | 0.88 | 0.88    | 0.44         | 0.44      | 0.44       | 0.44        | 0.44         | 0.44        | 0.44     | 0.44 | 0.44        | 0.44        | 0.44     | 0.44        | 0.44   | 0.44           | 0.44        | 0.44         | 0.44     | 0.44 | 0.44     |
 
 </div>
 
@@ -1213,20 +1215,20 @@ PDF - Probability distribution function (stations count best fit)
 <div align="center">
 
 EDF - Empirical distribution function (stations count best fit)
-|   id | empirical_dist   |   Count |
-|-----:|:-----------------|--------:|
-|    0 | edf_cunnane      |      82 |
-|    1 | edf_jenkinson    |      35 |
-|    2 | edf_chegodayev   |      24 |
-|    3 | edf_gringorten   |      21 |
-|    4 | edf_beard        |      17 |
-|    5 | edf_hazen        |      11 |
-|    6 | edf_blom         |       9 |
-|    7 | edf_adamowski    |       8 |
-|    8 | edf_filliben     |       7 |
-|    9 | edf_tukey        |       6 |
-|   10 | edf_weibull      |       4 |
-|   11 | edf_california   |       2 |
+|   id | empirical_dist   |   Count |   Percentage |
+|-----:|:-----------------|--------:|-------------:|
+|    0 | edf_cunnane      |      82 |        36.28 |
+|    1 | edf_jenkinson    |      35 |        15.49 |
+|    2 | edf_chegodayev   |      24 |        10.62 |
+|    3 | edf_gringorten   |      21 |         9.29 |
+|    4 | edf_beard        |      17 |         7.52 |
+|    5 | edf_hazen        |      11 |         4.87 |
+|    6 | edf_blom         |       9 |         3.98 |
+|    7 | edf_adamowski    |       8 |         3.54 |
+|    8 | edf_filliben     |       7 |         3.1  |
+|    9 | edf_tukey        |       6 |         2.65 |
+|   10 | edf_weibull      |       4 |         1.77 |
+|   11 | edf_california   |       2 |         0.88 |
 
 </div>
 
@@ -1241,10 +1243,11 @@ EDF - Empirical distribution function (stations count best fit)
 <div align="center">
 
 PDF - Probability distribution function (stations count best fit)
-|        | 0            | 1         | 2    | 3                     | 4   | 5    | 6                  | 7         | 8       | 9      | 10          | 11       | 12          | 13   | 14       | 15          | 16     | 17          | 18             | 19     | 20       | 21             | 22       | 23            | 24             | 25          | 26       | 27          | 28           | 29              | 30         | 31        | 32         | 33       | 34      | 35   | 36       | 37       | 38           | 39           | 40          | 41          | 42   | 43          | 44          | 45       | 46          | 47     | 48          | 49       | 50       | 51   | 52       |
-|:-------|:-------------|:----------|:-----|:----------------------|:----|:-----|:-------------------|:----------|:--------|:-------|:------------|:---------|:------------|:-----|:---------|:------------|:-------|:------------|:---------------|:-------|:---------|:---------------|:---------|:--------------|:---------------|:------------|:---------|:------------|:-------------|:----------------|:-----------|:----------|:-----------|:---------|:--------|:-----|:---------|:---------|:-------------|:-------------|:------------|:------------|:-----|:------------|:------------|:---------|:------------|:-------|:------------|:---------|:---------|:-----|:---------|
-| p_dist | logjohnsonsu | johnsonsu | logt | loglaplace_asymmetric | t   | fisk | laplace_asymmetric | logmielke | logfisk | mielke | logpearson3 | nakagami | loghalfnorm | ncf  | halfnorm | weibull_min | lognct | logloggamma | loggenlogistic | logncf | gumbel_l | logweibull_min | gompertz | loginvweibull | logcrystalball | fatiguelife | pearson3 | genlogistic | logbetaprime | loghalflogistic | loglaplace | exponnorm | invweibull | gumbel_r | maxwell | nct  | genexpon | invgauss | halflogistic | loghypsecant | lognakagami | loggumbel_l | chi2 | loggenexpon | loglogistic | logalpha | loggumbel_r | erlang | lograyleigh | invgamma | rayleigh | logf | logistic |
-| Count  | 34           | 30        | 15   | 10                    | 8   | 7    | 7                  | 6         | 6       | 6      | 5           | 5        | 4           | 4    | 4        | 4           | 4      | 4           | 3              | 3      | 3        | 3              | 3        | 3             | 3              | 3           | 3        | 3           | 2            | 2               | 2          | 2         | 2          | 2        | 2       | 2    | 1        | 1        | 1            | 1            | 1           | 1           | 1    | 1           | 1           | 1        | 1           | 1      | 1           | 1        | 1        | 1    | 1        |
+|            | 0            | 1         | 2    | 3                     | 4    | 5    | 6                  | 7         | 8       | 9      | 10          | 11       | 12          | 13   | 14       | 15          | 16     | 17          | 18             | 19     | 20       | 21             | 22       | 23            | 24             | 25          | 26       | 27          | 28           | 29              | 30         | 31        | 32         | 33       | 34      | 35   | 36       | 37       | 38           | 39           | 40          | 41          | 42   | 43          | 44          | 45       | 46          | 47     | 48          | 49       | 50       | 51   | 52       |
+|:-----------|:-------------|:----------|:-----|:----------------------|:-----|:-----|:-------------------|:----------|:--------|:-------|:------------|:---------|:------------|:-----|:---------|:------------|:-------|:------------|:---------------|:-------|:---------|:---------------|:---------|:--------------|:---------------|:------------|:---------|:------------|:-------------|:----------------|:-----------|:----------|:-----------|:---------|:--------|:-----|:---------|:---------|:-------------|:-------------|:------------|:------------|:-----|:------------|:------------|:---------|:------------|:-------|:------------|:---------|:---------|:-----|:---------|
+| p_dist     | logjohnsonsu | johnsonsu | logt | loglaplace_asymmetric | t    | fisk | laplace_asymmetric | logmielke | logfisk | mielke | logpearson3 | nakagami | loghalfnorm | ncf  | halfnorm | weibull_min | lognct | logloggamma | loggenlogistic | logncf | gumbel_l | logweibull_min | gompertz | loginvweibull | logcrystalball | fatiguelife | pearson3 | genlogistic | logbetaprime | loghalflogistic | loglaplace | exponnorm | invweibull | gumbel_r | maxwell | nct  | genexpon | invgauss | halflogistic | loghypsecant | lognakagami | loggumbel_l | chi2 | loggenexpon | loglogistic | logalpha | loggumbel_r | erlang | lograyleigh | invgamma | rayleigh | logf | logistic |
+| Count      | 34           | 30        | 15   | 10                    | 8    | 7    | 7                  | 6         | 6       | 6      | 5           | 5        | 4           | 4    | 4        | 4           | 4      | 4           | 3              | 3      | 3        | 3              | 3        | 3             | 3              | 3           | 3        | 3           | 2            | 2               | 2          | 2         | 2          | 2        | 2       | 2    | 1        | 1        | 1            | 1            | 1           | 1           | 1    | 1           | 1           | 1        | 1           | 1      | 1           | 1        | 1        | 1    | 1        |
+| Percentage | 15.04        | 13.27     | 6.64 | 4.42                  | 3.54 | 3.1  | 3.1                | 2.65      | 2.65    | 2.65   | 2.21        | 2.21     | 1.77        | 1.77 | 1.77     | 1.77        | 1.77   | 1.77        | 1.33           | 1.33   | 1.33     | 1.33           | 1.33     | 1.33          | 1.33           | 1.33        | 1.33     | 1.33        | 0.88         | 0.88            | 0.88       | 0.88      | 0.88       | 0.88     | 0.88    | 0.88 | 0.44     | 0.44     | 0.44         | 0.44         | 0.44        | 0.44        | 0.44 | 0.44        | 0.44        | 0.44     | 0.44        | 0.44   | 0.44        | 0.44     | 0.44     | 0.44 | 0.44     |
 
 </div>
 
