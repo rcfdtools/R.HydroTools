@@ -602,7 +602,7 @@ A hydrometeorological station is a facility with instruments to measure both wea
 
 <div align="center">
 
-<img alt="R.HydroTools" src="graph/locationmap.png" width="700"></img>
+<img alt="R.HydroTools" src="graph/locationmap.png" width="600"></img>
 
 </div>
 
@@ -1101,12 +1101,26 @@ Zonal analysis for hydrographic area: **Caribe** (39 stations)
 
 <div align="center">
 
+<img alt="R.HydroTools" src="graph/pdf_bestfit_1_Caribe.png" width="800"></img>
+
+</div>
+
+
+<div align="center">
+
 Zonal analysis for hydrographic area: **Magdalena Cauca** (148 stations)
 |            | 0            | 1         | 2                     | 3                  | 4    | 5    | 6           | 7    | 8       | 9      | 10          | 11     | 12          | 13      | 14   | 15       | 16        | 17          | 18       | 19   | 20   | 21       | 22            | 23       | 24           | 25        | 26          | 27         | 28          | 29          | 30       | 31        | 32           | 33       | 34       | 35       | 36        | 37         | 38       | 39           | 40          | 41             | 42      | 43             | 44          | 45          | 46     | 47             | 48           |
 |:-----------|:-------------|:----------|:----------------------|:-------------------|:-----|:-----|:------------|:-----|:--------|:-------|:------------|:-------|:------------|:--------|:-----|:---------|:----------|:------------|:---------|:-----|:-----|:---------|:--------------|:---------|:-------------|:----------|:------------|:-----------|:------------|:------------|:---------|:----------|:-------------|:---------|:---------|:---------|:----------|:-----------|:---------|:-------------|:------------|:---------------|:--------|:---------------|:------------|:------------|:-------|:---------------|:-------------|
 | p_dist     | logjohnsonsu | johnsonsu | loglaplace_asymmetric | laplace_asymmetric | logt | t    | weibull_min | fisk | maxwell | lognct | fatiguelife | mielke | logpearson3 | logfisk | nct  | nakagami | exponnorm | loggenexpon | gompertz | ncf  | f    | halfnorm | loginvweibull | invgauss | loghypsecant | logerlang | logloggamma | invweibull | loghalfnorm | loggumbel_l | invgamma | logmielke | halflogistic | genexpon | gumbel_l | loggamma | kstwobign | loglaplace | gumbel_r | logkstwobign | loginvgauss | loggenlogistic | logrice | logweibull_min | loggumbel_r | genlogistic | logncf | logfatiguelife | logexponnorm |
 | Count      | 22           | 19        | 8                     | 8                  | 7    | 7    | 4           | 4    | 4       | 4      | 4           | 4      | 3           | 3       | 3    | 3        | 2         | 2           | 2        | 2    | 2    | 2        | 2             | 2        | 1            | 1         | 1           | 1          | 1           | 1           | 1        | 1         | 1            | 1        | 1        | 1        | 1         | 1          | 1        | 1            | 1           | 1              | 1       | 1              | 1           | 1           | 1      | 1              | 1            |
 | Percentage | 14.86        | 12.84     | 5.41                  | 5.41               | 4.73 | 4.73 | 2.7         | 2.7  | 2.7     | 2.7    | 2.7         | 2.7    | 2.03        | 2.03    | 2.03 | 2.03     | 1.35      | 1.35        | 1.35     | 1.35 | 1.35 | 1.35     | 1.35          | 1.35     | 0.68         | 0.68      | 0.68        | 0.68       | 0.68        | 0.68        | 0.68     | 0.68      | 0.68         | 0.68     | 0.68     | 0.68     | 0.68      | 0.68       | 0.68     | 0.68         | 0.68        | 0.68           | 0.68    | 0.68           | 0.68        | 0.68        | 0.68   | 0.68           | 0.68         |
+
+</div>
+
+
+<div align="center">
+
+<img alt="R.HydroTools" src="graph/pdf_bestfit_1_Magdalena Cauca.png" width="800"></img>
 
 </div>
 
@@ -1125,6 +1139,13 @@ Zonal analysis for hydrographic area: **Pacifico** (10 stations)
 
 <div align="center">
 
+<img alt="R.HydroTools" src="graph/pdf_bestfit_1_Pacifico.png" width="800"></img>
+
+</div>
+
+
+<div align="center">
+
 Zonal analysis for hydrographic area: **Orinoco** (26 stations)
 |            | 0            | 1         | 2     | 3    | 4           | 5        | 6    | 7      | 8       | 9        | 10       | 11          | 12                    | 13              | 14       |
 |:-----------|:-------------|:----------|:------|:-----|:------------|:---------|:-----|:-------|:--------|:---------|:---------|:------------|:----------------------|:----------------|:---------|
@@ -1137,12 +1158,26 @@ Zonal analysis for hydrographic area: **Orinoco** (26 stations)
 
 <div align="center">
 
+<img alt="R.HydroTools" src="graph/pdf_bestfit_1_Orinoco.png" width="800"></img>
+
+</div>
+
+
+<div align="center">
+
 Zonal analysis for hydrographic area: **Amazonas** (2 stations)
 |            | 0                  |
 |:-----------|:-------------------|
 | p_dist     | laplace_asymmetric |
 | Count      | 2                  |
 | Percentage | 100.0              |
+
+</div>
+
+
+<div align="center">
+
+<img alt="R.HydroTools" src="graph/pdf_bestfit_1_Amazonas.png" width="800"></img>
 
 </div>
 
@@ -1227,12 +1262,26 @@ Zonal analysis for hydrographic area: **Caribe** (39 stations)
 
 <div align="center">
 
+<img alt="R.HydroTools" src="graph/pdf_bestfit_2_Caribe.png" width="800"></img>
+
+</div>
+
+
+<div align="center">
+
 Zonal analysis for hydrographic area: **Magdalena Cauca** (148 stations)
 |            | 0            | 1         | 2        | 3                     | 4    | 5    | 6    | 7                  | 8        | 9      | 10        | 11      | 12            | 13     | 14          | 15       | 16          | 17             | 18         | 19   | 20       | 21       | 22   | 23     | 24      | 25          | 26           | 27       | 28         | 29           | 30        | 31          | 32          | 33             | 34          | 35       | 36          | 37          | 38   | 39          | 40          | 41       | 42       | 43          | 44          | 45     | 46             | 47          | 48           | 49           |
 |:-----------|:-------------|:----------|:---------|:----------------------|:-----|:-----|:-----|:-------------------|:---------|:-------|:----------|:--------|:--------------|:-------|:------------|:---------|:------------|:---------------|:-----------|:-----|:---------|:---------|:-----|:-------|:--------|:------------|:-------------|:---------|:-----------|:-------------|:----------|:------------|:------------|:---------------|:------------|:---------|:------------|:------------|:-----|:------------|:------------|:---------|:---------|:------------|:------------|:-------|:---------------|:------------|:-------------|:-------------|
 | p_dist     | logjohnsonsu | johnsonsu | nakagami | loglaplace_asymmetric | fisk | logt | t    | laplace_asymmetric | halfnorm | lognct | logmielke | logfisk | loginvweibull | mielke | weibull_min | gompertz | fatiguelife | logweibull_min | loglaplace | nct  | invgamma | gumbel_r | ncf  | logncf | maxwell | logpearson3 | halflogistic | pearson3 | invweibull | loghypsecant | exponnorm | logloggamma | loghalfnorm | loggenlogistic | loggompertz | gumbel_l | loggumbel_l | lognakagami | chi2 | loggenexpon | loglogistic | loggamma | logalpha | loggumbel_r | genlogistic | erlang | logfatiguelife | lograyleigh | logbetaprime | logexponnorm |
 | Count      | 23           | 21        | 6        | 6                     | 6    | 6    | 6    | 5                  | 4        | 4      | 3         | 3       | 3             | 3      | 3           | 2        | 2           | 2              | 2          | 2    | 2        | 2        | 2    | 2      | 2       | 2           | 1            | 1        | 1          | 1            | 1         | 1           | 1           | 1              | 1           | 1        | 1           | 1           | 1    | 1           | 1           | 1        | 1        | 1           | 1           | 1      | 1              | 1           | 1            | 1            |
 | Percentage | 15.54        | 14.19     | 4.05     | 4.05                  | 4.05 | 4.05 | 4.05 | 3.38               | 2.7      | 2.7    | 2.03      | 2.03    | 2.03          | 2.03   | 2.03        | 1.35     | 1.35        | 1.35           | 1.35       | 1.35 | 1.35     | 1.35     | 1.35 | 1.35   | 1.35    | 1.35        | 0.68         | 0.68     | 0.68       | 0.68         | 0.68      | 0.68        | 0.68        | 0.68           | 0.68        | 0.68     | 0.68        | 0.68        | 0.68 | 0.68        | 0.68        | 0.68     | 0.68     | 0.68        | 0.68        | 0.68   | 0.68           | 0.68        | 0.68         | 0.68         |
+
+</div>
+
+
+<div align="center">
+
+<img alt="R.HydroTools" src="graph/pdf_bestfit_2_Magdalena Cauca.png" width="800"></img>
 
 </div>
 
@@ -1251,6 +1300,13 @@ Zonal analysis for hydrographic area: **Pacifico** (10 stations)
 
 <div align="center">
 
+<img alt="R.HydroTools" src="graph/pdf_bestfit_2_Pacifico.png" width="800"></img>
+
+</div>
+
+
+<div align="center">
+
 Zonal analysis for hydrographic area: **Orinoco** (26 stations)
 |            | 0         | 1     | 2        | 3           | 4            | 5           | 6        | 7    | 8              | 9    | 10     | 11                    | 12   | 13              | 14       |
 |:-----------|:----------|:------|:---------|:------------|:-------------|:------------|:---------|:-----|:---------------|:-----|:-------|:----------------------|:-----|:----------------|:---------|
@@ -1263,12 +1319,26 @@ Zonal analysis for hydrographic area: **Orinoco** (26 stations)
 
 <div align="center">
 
+<img alt="R.HydroTools" src="graph/pdf_bestfit_2_Orinoco.png" width="800"></img>
+
+</div>
+
+
+<div align="center">
+
 Zonal analysis for hydrographic area: **Amazonas** (2 stations)
 |            | 0        | 1                  |
 |:-----------|:---------|:-------------------|
 | p_dist     | logistic | laplace_asymmetric |
 | Count      | 1        | 1                  |
 | Percentage | 50.0     | 50.0               |
+
+</div>
+
+
+<div align="center">
+
+<img alt="R.HydroTools" src="graph/pdf_bestfit_2_Amazonas.png" width="800"></img>
 
 </div>
 
@@ -1353,12 +1423,26 @@ Zonal analysis for hydrographic area: **Caribe** (39 stations)
 
 <div align="center">
 
+<img alt="R.HydroTools" src="graph/pdf_bestfit_3_Caribe.png" width="800"></img>
+
+</div>
+
+
+<div align="center">
+
 Zonal analysis for hydrographic area: **Magdalena Cauca** (148 stations)
 |            | 0         | 1            | 2    | 3                     | 4    | 5        | 6         | 7    | 8        | 9                  | 10     | 11          | 12            | 13     | 14      | 15         | 16       | 17   | 18             | 19   | 20          | 21        | 22          | 23       | 24     | 25          | 26      | 27          | 28       | 29          | 30             | 31           | 32          | 33          | 34           | 35       | 36       | 37   | 38          | 39         | 40          | 41       | 42     | 43          | 44       | 45          | 46       | 47           |
 |:-----------|:----------|:-------------|:-----|:----------------------|:-----|:---------|:----------|:-----|:---------|:-------------------|:-------|:------------|:--------------|:-------|:--------|:-----------|:---------|:-----|:---------------|:-----|:------------|:----------|:------------|:---------|:-------|:------------|:--------|:------------|:---------|:------------|:---------------|:-------------|:------------|:------------|:-------------|:---------|:---------|:-----|:------------|:-----------|:------------|:---------|:-------|:------------|:---------|:------------|:---------|:-------------|
 | p_dist     | johnsonsu | logjohnsonsu | logt | loglaplace_asymmetric | t    | nakagami | logmielke | fisk | halfnorm | laplace_asymmetric | mielke | fatiguelife | loginvweibull | lognct | logfisk | invweibull | gumbel_r | nct  | logweibull_min | ncf  | logloggamma | exponnorm | logpearson3 | gompertz | logncf | genlogistic | maxwell | weibull_min | genexpon | loghalfnorm | loggenlogistic | loghypsecant | loggumbel_l | lognakagami | halflogistic | invgauss | pearson3 | chi2 | loggenexpon | loglaplace | loglogistic | logalpha | erlang | loggumbel_r | gumbel_l | lograyleigh | invgamma | logbetaprime |
 | Count      | 21        | 20           | 10   | 7                     | 6    | 5        | 5         | 4    | 4        | 4                  | 4      | 3           | 3             | 3      | 3       | 2          | 2        | 2    | 2              | 2    | 2           | 2         | 2           | 2        | 2      | 2           | 2       | 2           | 1        | 1           | 1              | 1            | 1           | 1           | 1            | 1        | 1        | 1    | 1           | 1          | 1           | 1        | 1      | 1           | 1        | 1           | 1        | 1            |
 | Percentage | 14.19     | 13.51        | 6.76 | 4.73                  | 4.05 | 3.38     | 3.38      | 2.7  | 2.7      | 2.7                | 2.7    | 2.03        | 2.03          | 2.03   | 2.03    | 1.35       | 1.35     | 1.35 | 1.35           | 1.35 | 1.35        | 1.35      | 1.35        | 1.35     | 1.35   | 1.35        | 1.35    | 1.35        | 0.68     | 0.68        | 0.68           | 0.68         | 0.68        | 0.68        | 0.68         | 0.68     | 0.68     | 0.68 | 0.68        | 0.68       | 0.68        | 0.68     | 0.68   | 0.68        | 0.68     | 0.68        | 0.68     | 0.68         |
+
+</div>
+
+
+<div align="center">
+
+<img alt="R.HydroTools" src="graph/pdf_bestfit_3_Magdalena Cauca.png" width="800"></img>
 
 </div>
 
@@ -1377,6 +1461,13 @@ Zonal analysis for hydrographic area: **Pacifico** (10 stations)
 
 <div align="center">
 
+<img alt="R.HydroTools" src="graph/pdf_bestfit_3_Pacifico.png" width="800"></img>
+
+</div>
+
+
+<div align="center">
+
 Zonal analysis for hydrographic area: **Orinoco** (26 stations)
 |            | 0         | 1     | 2           | 3        | 4           | 5            | 6              | 7        | 8    | 9    | 10      | 11     | 12                    | 13   | 14              | 15       |
 |:-----------|:----------|:------|:------------|:---------|:------------|:-------------|:---------------|:---------|:-----|:-----|:--------|:-------|:----------------------|:-----|:----------------|:---------|
@@ -1389,12 +1480,26 @@ Zonal analysis for hydrographic area: **Orinoco** (26 stations)
 
 <div align="center">
 
+<img alt="R.HydroTools" src="graph/pdf_bestfit_3_Orinoco.png" width="800"></img>
+
+</div>
+
+
+<div align="center">
+
 Zonal analysis for hydrographic area: **Amazonas** (2 stations)
 |            | 0        | 1                  |
 |:-----------|:---------|:-------------------|
 | p_dist     | logistic | laplace_asymmetric |
 | Count      | 1        | 1                  |
 | Percentage | 50.0     | 50.0               |
+
+</div>
+
+
+<div align="center">
+
+<img alt="R.HydroTools" src="graph/pdf_bestfit_3_Amazonas.png" width="800"></img>
 
 </div>
 

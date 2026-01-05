@@ -114,7 +114,7 @@ fig_file0a = 'graph/locationmap.png'
 df_catalog_filter.to_csv(f'{output_path}stations.csv', index=False)
 funcs.print_log(file_log, f'\n\n## A. Stations evaluated\n\n{dictionary.dicts['hydrometeorological_station']}\n', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n:file_folder:Filtered table: [stations.csv](stations.csv)\n\n', on_screen = print_on_screen)
-funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="700"></img>', center_div=True, on_screen = print_on_screen)
+funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="600"></img>', center_div=True, on_screen = print_on_screen)
 #funcs.print_log(file_log, f'\n\n{df_catalog_filter.to_markdown()}', center_div=False, on_screen = print_on_screen) # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 #print(f'\nFiltered stations catalog:\n{df_catalog_filter.to_markdown()}') # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 funcs.print_log(file_log, f'\n### 0. Stations list ({len(df_catalog_filter_selected_columns)} processed)\n\n{dictionary.dicts['station_list']}\n\n', center_div=False, on_screen = print_on_screen)
@@ -295,6 +295,21 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
         probability_dist_count_ah.index.name = 'id'
         probability_dist_count_ah['Percentage'] = round((probability_dist_count_ah['Count'] / probability_dist_count_ah['Count'].sum()) * 100, 2)
         funcs.print_log(file_log, f'Zonal analysis for hydrographic area: **{ah}** ({probability_dist_count_ah['Count'].sum()} stations)\n{probability_dist_count_ah.transpose().to_markdown()}', center_div=True, on_screen=print_on_screen)
+        if create_plot:
+            #probability_dist_count = probability_dist_count.sort_values(by='Count', ascending=True)
+            funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/pdf_bestfit_{i+1}_{ah}.png" width="800"></img>', center_div=True, on_screen=print_on_screen)
+            fig, ax = plt.subplots(figsize=(10, 6))
+            bars = ax.bar(probability_dist_count_ah['p_dist'], probability_dist_count_ah['Count'], color=color_plot)
+            plt.xticks(rotation=90, ha='right')
+            ax.bar_label(bars, padding=3, rotation=90)
+            ax.set_title(f'Hydrographic Area (AH): {ah}\nPDF - Probability distribution function (stations count for best fit # {i+1})')
+            ax.set_ylabel('Count')
+            plt.tight_layout() # Important >>> prevents cutting labels
+            plt.subplots_adjust(bottom=0.30)
+            plt.savefig(f'{output_path}graph/pdf_bestfit_{i+1}_{ah}.png', dpi=dpi)
+            if show_plot: plt.show()
+            plt.close()
+
 
 # Footer
 funcs.print_log(file_log, f'\n\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
