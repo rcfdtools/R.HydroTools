@@ -628,6 +628,8 @@ The following list contains the stations used in the current study and their rel
 
 Number of records (yearly values) founded per station for the probability distributions analysis. The current study, consider as valid any station with at least 8 years of records to include a wide geographic range (keep in mind for specific hydrologic studies, the minimal recommended length has to be at least 10 years, which are necessary to obtain stable storm or flow properties).
 
+> In this sections, some of the labels displayed in the chapters titles as shown in the original spanish typing contain in the National Stations Catalog (CNE).
+
 <div align="center">
 
 <img alt="R.HydroTools" src="graph/stations_histogram.png" width="800"></img>
