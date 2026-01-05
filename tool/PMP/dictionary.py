@@ -14,7 +14,7 @@ general_vars = ([['app_version', 'app_version'], # App control version
           ['date_max', 'Maximum year to eval since year_min (date_max)'],
           ['create_plot', 'Creates, save and include plots into reports (create_plot)'],
           ['plot_only_fit', 'Plot only fit distributions with Δo > Δ (plot_only_fit)'],
-          ['plot_only_simple', 'Plot only simple graphs avoiding multiple CDF and Extreme values plots (plot_only_simple)'],
+          ['plot_only_simple', 'Plot only simple graphs avoiding multiple CDFs and multiple Extreme values plots (plot_only_simple)'],
           ['low_extreme', 'Eval low extreme values, if False, evaluates high extreme values (low_extreme)'],
           ['pdist_logarithmic_on', 'Eval every SciPy distribution as logarithmic (pdist_logarithmic_on)'],
           ['ddof', 'Standard deviation normalized (ddof)'],
