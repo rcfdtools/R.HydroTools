@@ -151,6 +151,7 @@ for station in stations:
     funcs.print_log(file_log, f'{df[[label_date, label_x, f'{label_x}_initial', 'count', 'mean', 'std', 'zscore']].transpose().to_markdown()}\n', center_div=True, on_screen = print_on_screen)
     if create_plot: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0}" width="600"></img>', center_div=True, on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n> {dictionary.dicts['value_initial']}\n', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n>\n> {dictionary.dicts['why_not_complete_or_extend_data']}\n', on_screen = print_on_screen)
 
     # Plot location map & Plot x values
     # Location map always (graph 0a)
