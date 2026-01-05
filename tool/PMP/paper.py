@@ -50,6 +50,7 @@ stations_to_exclude = ['25020230', '25020240', '25020250', '25020260', '25020280
 histogram_custom_bins_n = [5, 6, 7, 8, 9, 10, 15, 20, 25] # Bins for n years values histogram per station evaluated
 #histogram_custom_bins_n = [5, 6, 7, 8, 9, 10, 15, 20, 25, 65] # Bins for n years values histogram per station evaluated, include 65 for conventional stations
 best_fit_sort_eval = 3 # Best fit sort positions to eval. 1 means we only evaluate the first best fit position.
+pdist_logarithmic_on = True # Eval every SciPy distribution were evaluated as logarithmic with pmp.py
 
 
 # Header & join best fit .csv results files and read and filter the CNE catalog
@@ -212,10 +213,10 @@ for inactives in df_l_pdist_scipy_inactive['p_dist'].values:
     funcs.print_log(file_log, (f'{inactives}, '), on_screen=print_on_screen)
 funcs.print_log(file_log, f'\n\n\n### 1. Cumulative distribution values (CDF)\n\n', on_screen = print_on_screen)
 funcs.print_log(file_log, f'{dictionary.dicts['cdf']}\n', on_screen = print_on_screen)
-funcs.print_log(file_log, '\n\n### 2. Empirical distributions functions\n\n', on_screen = print_on_screen)
-funcs.print_log(file_log, f'{dictionary.dicts['edf']}\n\n', on_screen = print_on_screen)
 df_edf_dist_dict = pd.DataFrame(dictionary.edf_dist_dict, columns=['edf_dist', 'edf_name', 'edf_expression', 'edf_year', 'edf_desc'])
 edf_dist = df_edf_dist_dict['edf_dist'].unique()
+funcs.print_log(file_log, f'\n\n### 2. Empirical distributions functions ({len(edf_dist)} available)\n\n', on_screen = print_on_screen)
+funcs.print_log(file_log, f'{dictionary.dicts['edf']}\n\n', on_screen = print_on_screen)
 num_inc = 1
 for emp in edf_dist:
     df_edf_dist_dict_filter = df_edf_dist_dict[df_edf_dist_dict['edf_dist'] == emp]
@@ -232,7 +233,12 @@ for emp in edf_dist:
 # Best fit analysis
 if minimum_sample > 0: df_bestfit = df_bestfit[df_bestfit['n'] >= minimum_sample]
 funcs.print_log(file_log, f'\n## C. Best Fit analysis ({len(df_bestfit[df_bestfit['best_fit_sort']==1])} stations)\n\n{dictionary.dicts['bestfit']}', center_div=False, on_screen = print_on_screen)
-funcs.print_log(file_log, f'\n\nThe following tables and graph shows the evaluation of the {best_fit_sort_eval} best fit order ranking positions for each station (considering the best fit in each empirical distribution and the first probability distribution position). Results tables are ordered by station code.\n', center_div=False, on_screen = print_on_screen)
+if pdist_logarithmic_on:
+    best_fit_text = f'\n\nFor this analysis, we use {len(df_catalog_filter_selected_columns)} stations, {len(edf_dist)} empirical distributions, {len(df_l_pdist_scipy.query('active == True'))} probability distributions and {len(df_l_pdist_scipy.query('active == True'))} logarithmic probability distributions, corresponding to {len(df_catalog_filter_selected_columns) * len(edf_dist) * (len(df_l_pdist_scipy.query('active == True')) * 2)} fit test evaluations.'
+else:
+    best_fit_text = f'\n\nFor this analysis, we use {len(df_catalog_filter_selected_columns)} stations, {len(edf_dist)} empirical distributions and {len(df_l_pdist_scipy.query('active == True'))} probability distributions, corresponding to {len(df_catalog_filter_selected_columns) * len(edf_dist) * len(df_l_pdist_scipy.query('active == True'))} fit test evaluations.'
+funcs.print_log(file_log, best_fit_text, center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n\nThe following tables and graph shows the evaluation of the {best_fit_sort_eval} best fit order ranking positions for each station (considering the best fit in each empirical distribution and the first probability distribution position with the Kolmogorov-Smirnov test). Results tables are ordered by station code.\n', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n:file_folder:Filtered table: [bestfit.csv](bestfit.csv)\n\n', on_screen = print_on_screen)
 #funcs.print_log(file_log, f'\n\nThe follow tables and graph shows the evaluation of the {best_fit_sort_eval} best fit order ranking positions for each station. Results tables are ordered by: empirical distribution (empirical_dist), probability distribution (p_dist) and Δ value (delta).\n\n', center_div=False, on_screen = print_on_screen)
 for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i in range(df_bestfit['best_fit_sort'].max()):

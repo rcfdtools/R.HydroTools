@@ -852,7 +852,7 @@ A log of a probability density function (log-PDF) is simply the logarithm of the
 Cumulative Distribution Function (CDF), denoted as $F$<sub>$X$</sub>$(x)$, is a function that gives the probability that a random variable $X$ will take a value less than or equal to a specific value, $x$ (i.e., $(P(X≥x)$. It essentially "accumulates" probabilities from a given point up to the far right (positive infinity), providing a complete picture of the distribution´s probabilities for both discrete (like rain) and continuous (like temperature) variables, helping to find probabilities over ranges or above certain values. Each station is evaluated separately ordering the $x$ values ascending, calculating the CDF and PDF values for the activated distributions and their logarithmic forms.
 
 
-### 2. Empirical distributions functions
+### 2. Empirical distributions functions (12 available)
 
 An Empirical Distribution Function (EDF) is a step-function estimate of a true cumulative distribution function (CDF) based on observed sample data, representing the proportion of data points less than or equal to a given value. It is calculated by ordering your data and jumping up by $1/n$ (where $n$ is sample size) at each unique data point, allowing analysis without assuming an underlying population distribution, and it gets closer to the true CDF as the sample size grows. For the empirical probability calculations, the parameter $m$ correspond to the order number which means the position of the $x$ values in an ascending order list.
 
@@ -1017,7 +1017,9 @@ $P=(m-0.25)/(n+0.5)$
 
 Best fit in probability distribution analysis means finding the theoretical distribution (like Normal, Poisson, Exponential) that most accurately mirrors your real-world data´s patterns (shape, center, spread) for better predictions, using methods like visual checks (Q-Q plots), goodness-of-fit tests (Kolmogorov-Smirnov, Chi-Squared), and information criteria (AIC) to score and select the simplest, most representative model.
 
-The following tables and graph shows the evaluation of the 3 best fit order ranking positions for each station (considering the best fit in each empirical distribution and the first probability distribution position). Results tables are ordered by station code.
+For this analysis, we use 571 stations, 12 empirical distributions, 44 probability distributions and 44 logarithmic probability distributions, corresponding to 602976 fit test evaluations.
+
+The following tables and graph shows the evaluation of the 3 best fit order ranking positions for each station (considering the best fit in each empirical distribution and the first probability distribution position with the Kolmogorov-Smirnov test). Results tables are ordered by station code.
 
 :file_folder:Filtered table: [bestfit.csv](bestfit.csv)
 
