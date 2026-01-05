@@ -7,6 +7,7 @@ import tabulate # required for print tables in Markdown using pandas
 import functions as funcs
 import dictionary as dictionary
 import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
 import numpy as np
 
 
@@ -163,7 +164,8 @@ if minimum_sample > 0:
 
 # CNE catalog general statistics
 df_catalog_filter = df_catalog_filter[df_catalog_filter[label_station_catalog].isin(df_station_record[label_station])] # <<<<<<<<<<<<<<<<<<<<<<<<<<<<
-general_stat_vars = ['label_category', 'label_technology', 'label_status', 'label_state', 'label_ah', 'label_zh'] # As text for the dictionary definitions call
+#general_stat_vars = ['label_category', 'label_technology', 'label_status', 'label_state', 'label_ah', 'label_zh'] # As text for the dictionary definitions call
+general_stat_vars = ['label_category', 'label_technology', 'label_status', 'label_ah', 'label_zh'] # As text for the dictionary definitions call
 funcs.print_log(file_log, f'\n\n', center_div=False, on_screen=print_on_screen)
 general_index = 2
 for general in general_stat_vars:

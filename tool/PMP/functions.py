@@ -9,6 +9,7 @@ import pandas as pd
 import geopandas as gpd
 import matplotlib.pyplot as plt
 from shapely.geometry import Point
+from matplotlib.patches import Patch
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)
@@ -330,15 +331,19 @@ def print_log(file_log, txt_print, on_screen=True, center_div=False):
 
 # Location map with GeoPandas (single)
 def location_map(point_latitude, point_longitude, station):
-    shapefile_location = gpd.read_file('dataset/ColombiaState.shp')
+    ah_shapefile = gpd.read_file('dataset/AH2022.shp')
+    zh_shapefile = gpd.read_file('dataset/ZH2022.shp')
     point_location = Point(point_longitude, point_latitude)
-    point_gdf = gpd.GeoDataFrame(geometry=[point_location], crs=shapefile_location.crs)
+    point_gdf = gpd.GeoDataFrame(geometry=[point_location], crs=ah_shapefile.crs)
     fig, ax = plt.subplots(figsize=(6, 7))  # Adjust figure size as needed
-    shapefile_location.plot(ax=ax, color='lightgrey', edgecolor='black', linewidth=0.75)
-    point_gdf.plot(ax=ax, marker='o', color='black', markersize=40)  # color='black', 'marker' and 'markersize' customize the point
+    ah_shapefile.plot(ax=ax, column='AH', cmap='Greens', edgecolor='black', linewidth=0.75, legend=True, legend_kwds={'fontsize': 'small'}) # , label='AH'
+    zh_shapefile.boundary.plot(ax=ax, edgecolor='black', linewidth=0.25) # , label='AH'
+    point_gdf.plot(ax=ax, marker='o', color='black', markersize=40, legend=False)  # color='black', 'marker' and 'markersize' customize the point
+    #ax.legend(loc='lower left')
     ax.set_title("Station location")
     plt.xlabel("Longitude°")
     plt.ylabel("Latitude°")
+    ax.tick_params(axis='both', labelsize=9)
     ax.annotate(
         text= station,
         xy=(point_longitude, point_latitude),
@@ -353,16 +358,16 @@ def location_map(point_latitude, point_longitude, station):
 
 # Location map with GeoPandas (multiple)
 def location_map_multiple(df, label_latitude, label_longitude):
-    shapefile_location = gpd.read_file('dataset/ColombiaState.shp')
-    point_gdf = gpd.GeoDataFrame(
-        df,
-        geometry=gpd.points_from_xy(eval(f'df.{label_longitude}'), eval(f'df.{label_latitude}')),
-        crs=shapefile_location.crs
-    )
+    ah_shapefile = gpd.read_file('dataset/AH2022.shp')
+    zh_shapefile = gpd.read_file('dataset/ZH2022.shp')
+    point_gdf = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(eval(f'df.{label_longitude}'), eval(f'df.{label_latitude}')), crs=ah_shapefile.crs)
     fig, ax = plt.subplots(figsize=(6, 7))  # Adjust figure size as needed
-    shapefile_location.plot(ax=ax, color='lightgrey', edgecolor='black', linewidth=0.75, legend=True)
-    point_gdf.plot(ax=ax, marker='o', color='black', markersize=10, legend=True)  # color='black', 'marker' and 'markersize' customize the point
-    ax.set_title("Stations location")
-    plt.xlabel("Longitude°")
-    plt.ylabel("Latitude°")
+    ah_shapefile.plot(ax=ax, column='AH', cmap='Greens', edgecolor='black', linewidth=0.75, legend=True, legend_kwds={'fontsize': 'small'}) # , label='AH'
+    zh_shapefile.boundary.plot(ax=ax, edgecolor='black', linewidth=0.25) # , label='AH'
+    point_gdf.plot(ax=ax, marker='o', color='black', markersize=10, label='Station')  # color='black', 'marker' and 'markersize' customize the point
+    #ax.legend(loc='lower left')
+    ax.tick_params(axis='both', labelsize=9)
+    ax.set_title('Stations in hydrographic areas')
+    plt.xlabel('Longitude°')
+    plt.ylabel('Latitude°')
     return plt

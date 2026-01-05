@@ -709,55 +709,7 @@ The status of hydrometeorological stations (active or inactive) is generally mai
 </div>
 
 
-### 5. Stations by Departamento
-
-A geographic state refers to a defined territory with a sovereign government, characterized by its physical location, boundaries, shape, size, and relative position, distinguishing it from other political entities like regions or nations. It´s a fundamental unit in political geography, possessing recognized borders, a populace, and governing authority that controls its territory and resources.
-
-<div align="center">
-
-|   id | DEPARTAMENTO                                             |   Count |
-|-----:|:---------------------------------------------------------|--------:|
-|    0 | Cundinamarca                                             |      26 |
-|    1 | Tolima                                                   |      21 |
-|    2 | Boyacá                                                   |      17 |
-|    3 | Bogotá                                                   |      16 |
-|    4 | Antioquia                                                |      16 |
-|    5 | Santander                                                |      16 |
-|    6 | Huila                                                    |      15 |
-|    7 | Norte De Santander                                       |      12 |
-|    8 | Cordoba                                                  |       9 |
-|    9 | Nariño                                                   |       8 |
-|   10 | La Guajira                                               |       8 |
-|   11 | Choco                                                    |       7 |
-|   12 | Valle Del Cauca                                          |       7 |
-|   13 | Cauca                                                    |       6 |
-|   14 | Atlantico                                                |       5 |
-|   15 | Caldas                                                   |       4 |
-|   16 | Bolivar                                                  |       4 |
-|   17 | Casanare                                                 |       4 |
-|   18 | Meta                                                     |       4 |
-|   19 | Cesar                                                    |       4 |
-|   20 | Sucre                                                    |       3 |
-|   21 | Magdalena                                                |       3 |
-|   22 | Archipielago De San Andres, Providencia Y Santa Catalina |       2 |
-|   23 | Risaralda                                                |       2 |
-|   24 | Quindío                                                  |       2 |
-|   25 | Arauca                                                   |       1 |
-|   26 | Guainía                                                  |       1 |
-|   27 | Putumayo                                                 |       1 |
-|   28 | Caqueta                                                  |       1 |
-
-</div>
-
-
-<div align="center">
-
-<img alt="R.HydroTools" src="graph/stations_by_departamento.png" width="800"></img>
-
-</div>
-
-
-### 6. Stations by Area_hidrografica
+### 5. Stations by Area_hidrografica
 
 A hydrographic area, often called a river basin, watershed, or drainage basin, is a geographic region where all water (from rain, streams, rivers) drains into a common outlet, like a single river, lake, or ocean, defined by its natural boundaries. It encompasses land and water, studying water flow, quality, and distribution for management, navigation, and environmental analysis, covering features from rivers and lakes to surrounding land and seafloor.
 
@@ -781,7 +733,7 @@ A hydrographic area, often called a river basin, watershed, or drainage basin, i
 </div>
 
 
-### 7. Stations by Zona_hidrografica
+### 6. Stations by Zona_hidrografica
 
 A hydrographic zone is essentially a river basin or watershed: a geographic area where all water (rain, runoff) drains to a common point, like a river, lake, or ocean, defined by its topography and water flow. It´s used in water management and science to study water quantity, quality, and movement, encompassing features like rivers, streams, coastlines, and even the seafloor, crucial for safe navigation and resource planning. Dividing a hydrographic area (drainage basin or watershed) into smaller hydrographic zones is essential for effective water resource management, planning, and analysis. This subdivision allows managers to analyze the behavior of different parts of the water cycle and address specific local issues within a larger system.
 
