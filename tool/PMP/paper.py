@@ -298,3 +298,5 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
 
 # Footer
 funcs.print_log(file_log, f'\n\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
+
+
