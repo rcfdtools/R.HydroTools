@@ -12,7 +12,7 @@ import numpy as np
 
 
 # General setup
-app_version = 'v20251229'
+app_version = 'v20260105'
 input_path = 'dataset/pmax24h_out/table/' # Your local input file folder
 output_path = 'dataset/pmax24h_out/paper/' # Your local output file folder
 station_catalog_file = 'dataset/CNE.xls' # CNE catalog for stations info
@@ -36,11 +36,11 @@ label_szh = 'SUBZONA_HIDROGRAFICA' # Station column hydrographic subzone in CNE_
 print_on_screen = False # Global print control in screen
 file_log_name = f'{output_path}{'paper'}.md'  # Markdown file log
 file_log = open(file_log_name, 'w+', encoding='utf-8')   # w+ create the file if it doesn't exist
-create_plot = True # Creates, save and include plots into reports ●
+create_plot = True # Creates, save and include plots into reports
 show_plot = False # Show plot on Python screen console
 color_plot = '#3b3b3b' # Global plot color
 minimum_sample = 8 # Exclude a station when doesn't have the minimum data sample (0 means any) ●
-dpi = 96 # Graph plot resolution
+dpi = 128 # Graph plot resolution
 create_geojson_map = True
 only_automatic_stations = False  # Evaluated only stations with automatic technology avoiding stations tag define in automatic_tag_not_in
 automatic_tag_not_in = ['Convencional', '(No data)'] # Tag to exclude. Keep in mind some conventional stations are now automatic
@@ -50,7 +50,7 @@ stations_to_exclude = ['25020230', '25020240', '25020250', '25020260', '25020280
 histogram_custom_bins_n = [5, 6, 7, 8, 9, 10, 15, 20, 25] # Bins for n years values histogram per station evaluated
 #histogram_custom_bins_n = [5, 6, 7, 8, 9, 10, 15, 20, 25, 65] # Bins for n years values histogram per station evaluated, include 65 for conventional stations
 best_fit_sort_eval = 3 # Best fit sort positions to eval. 1 means we only evaluate the first best fit position.
-pdist_logarithmic_on = True # Eval every SciPy distribution were evaluated as logarithmic with pmp.py
+pdist_logarithmic_on = True # Eval every SciPy distribution were evaluated as logarithmic with pmp.py  ●
 
 
 # Header & join best fit .csv results files and read and filter the CNE catalog
@@ -234,9 +234,9 @@ for emp in edf_dist:
 if minimum_sample > 0: df_bestfit = df_bestfit[df_bestfit['n'] >= minimum_sample]
 funcs.print_log(file_log, f'\n## C. Best Fit analysis ({len(df_bestfit[df_bestfit['best_fit_sort']==1])} stations)\n\n{dictionary.dicts['bestfit']}', center_div=False, on_screen = print_on_screen)
 if pdist_logarithmic_on:
-    best_fit_text = f'\n\nFor this analysis, we use {len(df_catalog_filter_selected_columns)} stations, {len(edf_dist)} empirical distributions, {len(df_l_pdist_scipy.query('active == True'))} probability distributions and {len(df_l_pdist_scipy.query('active == True'))} logarithmic probability distributions, corresponding to {len(df_catalog_filter_selected_columns) * len(edf_dist) * (len(df_l_pdist_scipy.query('active == True')) * 2)} fit test evaluations.'
+    best_fit_text = f'\n\nFor this analysis, from the initial dataset with {len(df_catalog_filter_selected_columns)} stations we use {len(df_bestfit[df_bestfit['best_fit_sort']==1])} stations (filtering only those with n ≥ {minimum_sample} records or yearly values), {len(edf_dist)} empirical distributions, {len(df_l_pdist_scipy.query('active == True'))} probability distributions and {len(df_l_pdist_scipy.query('active == True'))} logarithmic probability distributions, corresponding to {len(df_bestfit[df_bestfit['best_fit_sort']==1]) * len(edf_dist) * (len(df_l_pdist_scipy.query('active == True')) * 2)} fit test evaluations.'
 else:
-    best_fit_text = f'\n\nFor this analysis, we use {len(df_catalog_filter_selected_columns)} stations, {len(edf_dist)} empirical distributions and {len(df_l_pdist_scipy.query('active == True'))} probability distributions, corresponding to {len(df_catalog_filter_selected_columns) * len(edf_dist) * len(df_l_pdist_scipy.query('active == True'))} fit test evaluations.'
+    best_fit_text = f'\n\nFor this analysis, from the initial dataset with {len(df_catalog_filter_selected_columns)} stations we use {len(df_bestfit[df_bestfit['best_fit_sort']==1])} stations (filtering only those with n ≥ {minimum_sample} records or yearly values), {len(edf_dist)} empirical distributions and {len(df_l_pdist_scipy.query('active == True'))} probability distributions, corresponding to {len(df_bestfit[df_bestfit['best_fit_sort']==1]) * len(edf_dist) * len(df_l_pdist_scipy.query('active == True'))} fit test evaluations.'
 funcs.print_log(file_log, best_fit_text, center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\nThe following tables and graphs shows the evaluation of the {best_fit_sort_eval} best fit order ranking positions for each station (considering the best fit in each empirical distribution and the first probability distribution position with the Kolmogorov-Smirnov test). Results tables are ordered by station code.\n', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n:file_folder:Filtered table: [bestfit.csv](bestfit.csv)\n\n', on_screen = print_on_screen)
