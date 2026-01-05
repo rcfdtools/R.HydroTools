@@ -34,7 +34,7 @@ label_ah = 'AREA_HIDROGRAFICA' # Station column hydrographic area in CNE_IDEAM.x
 label_zh = 'ZONA_HIDROGRAFICA' # Station column hydrographic zone in CNE_IDEAM.xls
 label_szh = 'SUBZONA_HIDROGRAFICA' # Station column hydrographic subzone in CNE_IDEAM.xls
 print_on_screen = False # Global print control in screen
-file_log_name = f'{output_path}{'paper'}.md'  # Markdown file log
+file_log_name = f'{output_path}Readme.md'  # Markdown file log
 file_log = open(file_log_name, 'w+', encoding='utf-8')   # w+ create the file if it doesn't exist
 create_plot = True # Creates, save and include plots into reports
 show_plot = False # Show plot on Python screen console
@@ -208,6 +208,9 @@ funcs.print_log(file_log,f'\n\n### 0. Active continuous probability distribution
 funcs.print_log(file_log, f'\n\n{dictionary.dicts['scipy_stats']}\n', on_screen=print_on_screen)
 funcs.print_log(file_log, f'{df_l_pdist_scipy.query('active == True').to_markdown()}', center_div=True, on_screen=print_on_screen)
 funcs.print_log(file_log,'> **n_parameter:** # arguments & localization & scale.\n>\n> **Fit methods:** (MLE) maximum likelihood, (MM) L-moments.', on_screen=print_on_screen)
+funcs.print_log(file_log, f'\n>\n> {dictionary.dicts['loc']}', on_screen=print_on_screen)
+funcs.print_log(file_log, f'\n>\n> {dictionary.dicts['scale']}', on_screen=print_on_screen)
+funcs.print_log(file_log, f'\n>\n> {dictionary.dicts['shape']}', on_screen=print_on_screen)
 funcs.print_log(file_log, (f'\n>\n>**Inactive** ({dictionary.dicts['disable_pdf']})**:** '), on_screen=print_on_screen)
 for inactives in df_l_pdist_scipy_inactive['p_dist'].values:
     funcs.print_log(file_log, (f'{inactives}, '), on_screen=print_on_screen)
@@ -238,7 +241,7 @@ if pdist_logarithmic_on:
 else:
     best_fit_text = f'\n\nFor this analysis, from the initial dataset with {len(df_catalog_filter_selected_columns)} stations we use {len(df_bestfit[df_bestfit['best_fit_sort']==1])} stations (filtering only those with n ≥ {minimum_sample} records or yearly values), {len(edf_dist)} empirical distributions and {len(df_l_pdist_scipy.query('active == True'))} probability distributions, corresponding to {len(df_bestfit[df_bestfit['best_fit_sort']==1]) * len(edf_dist) * len(df_l_pdist_scipy.query('active == True'))} fit test evaluations.'
 funcs.print_log(file_log, best_fit_text, center_div=False, on_screen = print_on_screen)
-funcs.print_log(file_log, f'\n\nThe following tables and graphs shows the evaluation of the {best_fit_sort_eval} best fit order ranking positions for each station (considering the best fit in each empirical distribution and the first probability distribution position with the Kolmogorov-Smirnov test). Results tables are ordered by station code.\n', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n\nThe following tables and graphs shows the evaluation of the {best_fit_sort_eval} best fit order ranking positions for each station, considering the best fit in each empirical distribution and the first probability distribution position with the Kolmogorov-Smirnov test. Results tables are ordered by station code.\n', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n:file_folder:Filtered table: [bestfit.csv](bestfit.csv)\n\n', on_screen = print_on_screen)
 #funcs.print_log(file_log, f'\n\nThe follow tables and graph shows the evaluation of the {best_fit_sort_eval} best fit order ranking positions for each station. Results tables are ordered by: empirical distribution (empirical_dist), probability distribution (p_dist) and Δ value (delta).\n\n', center_div=False, on_screen = print_on_screen)
 for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i in range(df_bestfit['best_fit_sort'].max()):

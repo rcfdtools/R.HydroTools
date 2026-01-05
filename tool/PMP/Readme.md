@@ -230,6 +230,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 * https://library.wmo.int/records/item/35708-manual-on-estimation-of-probable-maximum-precipitation-pmp
 * https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/climate-services/wmo-climatological-normals
 * https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Zonificaci-n-Hidrogr-fica-Colombia/5kjg-nuda/about_data
+* [Singh, Abhishek & Singh, Vijay & Byrd, Aaron. (2018). Computation of probable maximum precipitation and its uncertainty. International Journal of Hydrology. 2. 10.15406/ijh.2018.02.00118.](https://www.researchgate.net/publication/327888063_Computation_of_probable_maximum_precipitation_and_its_uncertainty) 
 
 
 **How to show more lines in the PyCharm RUN console**
