@@ -42,9 +42,9 @@ label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
 create_plot = True # Creates, save and include plots into reports ●
-plot_only_simple = True # Plot only simple graphs avoiding multiple CDF and Extreme values plots  ●
 show_plot = False # Show plot on Python screen console
 plot_only_fit = True # Plot only fit distributions with Δo > Δ
+plot_only_simple = True # Plot only simple graphs avoiding multiple CDF and Extreme values plots  ●
 plot_rounding_val = 6 # Rounding values in plots to # decimal positions ●
 print_on_screen = False # Global print control in screen
 color_plot = 'black' # Global plot color
@@ -275,7 +275,7 @@ for station in stations:
         dp_best = dp_best.reset_index(drop=True)
         dp_best.index.name = 'id'
         dp_best_of_best = pd.concat([dp_best, dp_best_of_best])
-        if create_plot & plot_only_simple == False: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file1}" width="1200"></img>', center_div=True, on_screen = print_on_screen)
+        if create_plot: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file1}" width="1200"></img>', center_div=True, on_screen = print_on_screen)
         funcs.print_log(file_log, f'\n**{num_inc}.3. Best fit**\n', on_screen = print_on_screen)
         funcs.print_log(file_log, f'{dp_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown()}', center_div=True, on_screen = print_on_screen)
         if create_plot: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file2}" width="500"></img><img alt="R.HydroTools" src="{fig_file3}" width="500"></img>', center_div=True, on_screen = print_on_screen)
@@ -285,29 +285,28 @@ for station in stations:
         if create_plot:
 
             # Plot empirical vs. all pdf (graph 1)
-            if plot_only_simple == False:
-                figure(figsize=(15, 12))
-                for i in range(0, len(vDeltaKolmogorov)):
-                    dp = vDeltaKolmogorov['p_dist'][i]
-                    delta = vDeltaKolmogorov['delta'][i]
-                    if plot_only_fit:
-                        only_fit_txt = ' (only Δo > Δ)'
-                        if vDeltaKolmogorov['fit'][i] == 1:
-                            plt.plot(df[x], df[dp], lw=1, marker='o', markersize=0, alpha=0.75, label=f'{dp} (Δ: {round(delta,plot_rounding_val)})')
-                    else:
+            figure(figsize=(15, 12))
+            for i in range(0, len(vDeltaKolmogorov)):
+                dp = vDeltaKolmogorov['p_dist'][i]
+                delta = vDeltaKolmogorov['delta'][i]
+                if plot_only_fit:
+                    only_fit_txt = ' (only Δo > Δ)'
+                    if vDeltaKolmogorov['fit'][i] == 1:
                         plt.plot(df[x], df[dp], lw=1, marker='o', markersize=0, alpha=0.75, label=f'{dp} (Δ: {round(delta,plot_rounding_val)})')
-                        only_fit_txt = ''
-                plt.scatter(df[x], df['empirical'], color='black', facecolors='darkgray', s=24, label=f'{emp} (Δo: {round(vDeltaKolmogorov['deltao'][0], plot_rounding_val)})')
-                plt.title(f'Cumulative distribution function CDF{only_fit_txt}')
-                plt.xlabel(parameter_name + ' ' + parameter_units)
-                plt.ylabel('CDF')
-                plt.legend(loc='best', frameon=True, edgecolor='white', framealpha=0.9, ncol=plot_legend_ncol, facecolor='white')
-                plt.grid(color = 'gray', linestyle = '--', linewidth = 0.1)
-                plt.annotate(f'Station: {station_code}', xy=(0.99, 0.98), xycoords='axes fraction', ha='right', fontsize=9)
-                plt.annotate('github.com/rcfdtools', xy=(1.0275, 0.01), xycoords='axes fraction', ha='right', va='bottom', rotation='vertical', fontsize=7.5)
-                if show_plot: plt.show()
-                plt.savefig(output_path + fig_file1, dpi=dpi)
-                plt.close()
+                else:
+                    plt.plot(df[x], df[dp], lw=1, marker='o', markersize=0, alpha=0.75, label=f'{dp} (Δ: {round(delta,plot_rounding_val)})')
+                    only_fit_txt = ''
+            plt.scatter(df[x], df['empirical'], color='black', facecolors='darkgray', s=24, label=f'{emp} (Δo: {round(vDeltaKolmogorov['deltao'][0], plot_rounding_val)})')
+            plt.title(f'Cumulative distribution function CDF{only_fit_txt}')
+            plt.xlabel(parameter_name + ' ' + parameter_units)
+            plt.ylabel('CDF')
+            plt.legend(loc='best', frameon=True, edgecolor='white', framealpha=0.9, ncol=plot_legend_ncol, facecolor='white')
+            plt.grid(color = 'gray', linestyle = '--', linewidth = 0.1)
+            plt.annotate(f'Station: {station_code}', xy=(0.99, 0.98), xycoords='axes fraction', ha='right', fontsize=9)
+            plt.annotate('github.com/rcfdtools', xy=(1.0275, 0.01), xycoords='axes fraction', ha='right', va='bottom', rotation='vertical', fontsize=7.5)
+            if show_plot: plt.show()
+            plt.savefig(output_path + fig_file1, dpi=dpi)
+            plt.close()
 
             # Plot empirical vs. best fit (graph 2)
             plt.plot(df[x], df[dp_best['p_dist'][0]], color=color_plot, lw=1.5, marker='o', markersize=0, label=f'{dp_best['p_dist'][0]} (Δ: {round(dp_best['delta'][0], plot_rounding_val)})')
@@ -351,31 +350,29 @@ for station in stations:
 
     # Plot multiple extreme values over return periods Tr (graph 4)
     if create_plot:
-        # Plot multiple extreme values for different pdf
-        if plot_only_simple == False:
-            figure(figsize=(15, 12))
-            for i in range(0, len(vDeltaKolmogorov)):
-                dp = vDeltaKolmogorov['p_dist'][i]
-                delta = vDeltaKolmogorov['delta'][i]
-                if plot_only_fit:
-                    only_fit_txt = ' (only Δo > Δ)'
-                    if vDeltaKolmogorov['fit'][i] == 1:
-                        plt.plot(df_tr.tr, df_tr[dp], lw=1, marker='o', markersize=0, alpha=0.75,
-                                 label=f'{dp} (Δ: {round(delta,plot_rounding_val)})')
-                else:
-                    only_fit_txt = ''
+        figure(figsize=(15, 12))
+        for i in range(0, len(vDeltaKolmogorov)):
+            dp = vDeltaKolmogorov['p_dist'][i]
+            delta = vDeltaKolmogorov['delta'][i]
+            if plot_only_fit:
+                only_fit_txt = ' (only Δo > Δ)'
+                if vDeltaKolmogorov['fit'][i] == 1:
                     plt.plot(df_tr.tr, df_tr[dp], lw=1, marker='o', markersize=0, alpha=0.75,
                              label=f'{dp} (Δ: {round(delta,plot_rounding_val)})')
-            plt.title(f'Extreme values for specific return periods{only_fit_txt}')
-            plt.xlabel('Tr ($years$)')
-            plt.ylabel(parameter_name + ' ' + parameter_units)
-            plt.legend(loc='best', frameon=True, edgecolor='white', framealpha=0.9, ncol=4, facecolor='white')
-            plt.grid(color='gray', linestyle='--', linewidth=0.1)
-            plt.annotate(f'Station: {station_code}', xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
-            plt.annotate('github.com/rcfdtools', xy=(1.0275, 0.01), xycoords='axes fraction', ha='right', va='bottom', rotation='vertical', fontsize=7.5)
-            if show_plot: plt.show()
-            plt.savefig(output_path + fig_file4, dpi=dpi)
-            plt.close()
+            else:
+                only_fit_txt = ''
+                plt.plot(df_tr.tr, df_tr[dp], lw=1, marker='o', markersize=0, alpha=0.75,
+                         label=f'{dp} (Δ: {round(delta,plot_rounding_val)})')
+        plt.title(f'Extreme values for specific return periods{only_fit_txt}')
+        plt.xlabel('Tr ($years$)')
+        plt.ylabel(parameter_name + ' ' + parameter_units)
+        plt.legend(loc='best', frameon=True, edgecolor='white', framealpha=0.9, ncol=4, facecolor='white')
+        plt.grid(color='gray', linestyle='--', linewidth=0.1)
+        plt.annotate(f'Station: {station_code}', xy=(0.99, 0.01), xycoords='axes fraction', ha='right', fontsize=9)
+        plt.annotate('github.com/rcfdtools', xy=(1.0275, 0.01), xycoords='axes fraction', ha='right', va='bottom', rotation='vertical', fontsize=7.5)
+        if show_plot: plt.show()
+        plt.savefig(output_path + fig_file4, dpi=dpi)
+        plt.close()
 
         # Plot extreme values for specific return periods (Best fit) (graph 5)
         plt.plot(df_tr['tr'], df_tr[best_of_best_p_dist], color=color_plot, lw=1.5, marker='o', markersize=3, label=best_of_best_p_dist)
@@ -417,7 +414,7 @@ for station in stations:
     funcs.print_log(file_log,f'{dictionary.dicts['tr']}', on_screen = print_on_screen)
     funcs.print_log(file_log,'\n\n> risk_rate: assuming the return period as the project useful life.', on_screen = print_on_screen)
     funcs.print_log(file_log,f'\n\n{df_tr.to_markdown()}\n', on_screen = print_on_screen)
-    if create_plot & plot_only_simple == False: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file4}" width="1200"></img>', center_div=True, on_screen = print_on_screen)
+    if create_plot: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file4}" width="1200"></img>', center_div=True, on_screen = print_on_screen)
     if create_plot: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file5}" width="500"></img><img alt="R.HydroTools" src="{fig_file6}" width="500"></img>', center_div=True, on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
     #print(df.to_csv(index=False))
