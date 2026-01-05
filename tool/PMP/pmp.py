@@ -228,6 +228,7 @@ for station in stations:
     dp_best_of_best = pd.DataFrame()
     num_inc = 1
     funcs.print_log(file_log, f'{dictionary.dicts['edf']}\n\n', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'{dictionary.dicts['kolmogorov_smirnov_test']}\n\n', on_screen = print_on_screen)
     # idk = 0 ################ <<<<<<<<<<<<<<<<<<<<<<<< Check
     for emp in edf_dist:
         fig_file1 = 'graph/' + station_code + '_' + emp + '_all.png'

@@ -1033,6 +1033,8 @@ $P=(m-0.25)/(n+0.5)$
 
 Best fit in probability distribution analysis means finding the theoretical distribution (like Normal, Poisson, Exponential) that most accurately mirrors your real-world data´s patterns (shape, center, spread) for better predictions, using methods like visual checks (Q-Q plots), goodness-of-fit tests (Kolmogorov-Smirnov, Chi-Squared), and information criteria (AIC) to score and select the simplest, most representative model.
 
+The Kolmogorov-Smirnov (K-S) test is a non-parametric statistical test used to determine if a sample data set comes from a specific theoretical distribution (one-sample) or if two different samples come from the same underlying distribution (two-sample), by comparing their cumulative distribution functions (CDFs). It calculates the maximum vertical difference (D statistic) between these functions, with a small p-value indicating a significant difference and rejection of the null hypothesis (that the data/samples match).
+
 For this analysis, from the initial dataset with 571 stations we use 225 stations (filtering only those with n ≥ 8 records or yearly values), 12 empirical distributions, 44 probability distributions and 44 logarithmic probability distributions, corresponding to 237600 fit test evaluations.
 
 The following tables and graphs shows the evaluation of the 3 best fit order ranking positions for each station, considering the best fit in each empirical distribution and the first probability distribution position with the Kolmogorov-Smirnov test. Results tables are ordered by station code.
