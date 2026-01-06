@@ -17,7 +17,7 @@ The most common probability distributions in hydrology, used for analyzing flood
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../../../temp/pmp.svg" width="800px">
+<img alt="R.HydroTools" src="../../../temp/pmp.svg" width="1000px">
 
 </div>
 
@@ -652,20 +652,20 @@ Hydrometeorological stations are categorized by their function and automation, i
 
 <div align="center">
 
-|   id | CATEGORIA               |   Count |
-|-----:|:------------------------|--------:|
-|    0 | Climatológica Principal |      97 |
-|    1 | Limnigráfica            |      44 |
-|    2 | Agrometeorológica       |      29 |
-|    3 | Climatológica Ordinaria |      19 |
-|    4 | Sinóptica Principal     |      10 |
-|    5 | Pluviométrica           |       8 |
-|    6 | Limnimétrica            |       6 |
-|    7 | Pluviográfica           |       5 |
-|    8 | Meteorologica Marina    |       3 |
-|    9 | Meteorológica Especial  |       2 |
-|   10 | Sinóptica Secundaria    |       1 |
-|   11 | HidroMeteorologica      |       1 |
+|   id | CATEGORIA               |   Count |   Percentage |
+|-----:|:------------------------|--------:|-------------:|
+|    0 | Climatológica Principal |      97 |        43.11 |
+|    1 | Limnigráfica            |      44 |        19.56 |
+|    2 | Agrometeorológica       |      29 |        12.89 |
+|    3 | Climatológica Ordinaria |      19 |         8.44 |
+|    4 | Sinóptica Principal     |      10 |         4.44 |
+|    5 | Pluviométrica           |       8 |         3.56 |
+|    6 | Limnimétrica            |       6 |         2.67 |
+|    7 | Pluviográfica           |       5 |         2.22 |
+|    8 | Meteorologica Marina    |       3 |         1.33 |
+|    9 | Meteorológica Especial  |       2 |         0.89 |
+|   10 | Sinóptica Secundaria    |       1 |         0.44 |
+|   11 | HidroMeteorologica      |       1 |         0.44 |
 
 </div>
 
@@ -685,11 +685,11 @@ Hydrometeorological stations use both conventional (manual) and modern (automate
 
 <div align="center">
 
-|   id | TECNOLOGIA                              |   Count |
-|-----:|:----------------------------------------|--------:|
-|    0 | Automática con Telemetría               |     131 |
-|    1 | Automática con Telemetría, Convencional |      92 |
-|    2 | Convencional                            |       2 |
+|   id | TECNOLOGIA                              |   Count |   Percentage |
+|-----:|:----------------------------------------|--------:|-------------:|
+|    0 | Automática con Telemetría               |     131 |        58.22 |
+|    1 | Automática con Telemetría, Convencional |      92 |        40.89 |
+|    2 | Convencional                            |       2 |         0.89 |
 
 </div>
 
@@ -707,11 +707,11 @@ The status of hydrometeorological stations (active or inactive) is generally mai
 
 <div align="center">
 
-|   id | ESTADO           |   Count |
-|-----:|:-----------------|--------:|
-|    0 | Activa           |     154 |
-|    1 | En Mantenimiento |      54 |
-|    2 | Suspendida       |      17 |
+|   id | ESTADO           |   Count |   Percentage |
+|-----:|:-----------------|--------:|-------------:|
+|    0 | Activa           |     154 |        68.44 |
+|    1 | En Mantenimiento |      54 |        24    |
+|    2 | Suspendida       |      17 |         7.56 |
 
 </div>
 
@@ -729,13 +729,13 @@ A hydrographic area, often called a river basin, watershed, or drainage basin, i
 
 <div align="center">
 
-|   id | AREA_HIDROGRAFICA   |   Count |
-|-----:|:--------------------|--------:|
-|    0 | Magdalena Cauca     |     148 |
-|    1 | Caribe              |      39 |
-|    2 | Orinoco             |      26 |
-|    3 | Pacifico            |      10 |
-|    4 | Amazonas            |       2 |
+|   id | AREA_HIDROGRAFICA   |   Count |   Percentage |
+|-----:|:--------------------|--------:|-------------:|
+|    0 | Magdalena Cauca     |     148 |        65.78 |
+|    1 | Caribe              |      39 |        17.33 |
+|    2 | Orinoco             |      26 |        11.56 |
+|    3 | Pacifico            |      10 |         4.44 |
+|    4 | Amazonas            |       2 |         0.89 |
 
 </div>
 
@@ -753,32 +753,32 @@ A hydrographic zone is essentially a river basin or watershed: a geographic area
 
 <div align="center">
 
-|   id | ZONA_HIDROGRAFICA                |   Count |
-|-----:|:---------------------------------|--------:|
-|    0 | Alto Magdalena                   |      62 |
-|    1 | Medio Magdalena                  |      32 |
-|    2 | Meta                             |      22 |
-|    3 | Cauca                            |      17 |
-|    4 | Sogamoso                         |      12 |
-|    5 | Catatumbo                        |      12 |
-|    6 | Bajo Magdalena                   |      10 |
-|    7 | Caribe - Guajira                 |       9 |
-|    8 | Patía                            |       7 |
-|    9 | Atrato - Darién                  |       7 |
-|   10 | Bajo Magdalena- Cauca -San Jorge |       6 |
-|   11 | Sinú                             |       5 |
-|   12 | Saldaña                          |       4 |
-|   13 | Caribe - Litoral                 |       4 |
-|   14 | Nechí                            |       3 |
-|   15 | Islas Caribe                     |       2 |
-|   16 | Caquetá                          |       2 |
-|   17 | Cesar                            |       2 |
-|   18 | Mira                             |       2 |
-|   19 | San Juán                         |       1 |
-|   20 | Arauca                           |       1 |
-|   21 | Casanare                         |       1 |
-|   22 | Inírida                          |       1 |
-|   23 | Guaviare                         |       1 |
+|   id | ZONA_HIDROGRAFICA                |   Count |   Percentage |
+|-----:|:---------------------------------|--------:|-------------:|
+|    0 | Alto Magdalena                   |      62 |        27.56 |
+|    1 | Medio Magdalena                  |      32 |        14.22 |
+|    2 | Meta                             |      22 |         9.78 |
+|    3 | Cauca                            |      17 |         7.56 |
+|    4 | Sogamoso                         |      12 |         5.33 |
+|    5 | Catatumbo                        |      12 |         5.33 |
+|    6 | Bajo Magdalena                   |      10 |         4.44 |
+|    7 | Caribe - Guajira                 |       9 |         4    |
+|    8 | Patía                            |       7 |         3.11 |
+|    9 | Atrato - Darién                  |       7 |         3.11 |
+|   10 | Bajo Magdalena- Cauca -San Jorge |       6 |         2.67 |
+|   11 | Sinú                             |       5 |         2.22 |
+|   12 | Saldaña                          |       4 |         1.78 |
+|   13 | Caribe - Litoral                 |       4 |         1.78 |
+|   14 | Nechí                            |       3 |         1.33 |
+|   15 | Islas Caribe                     |       2 |         0.89 |
+|   16 | Caquetá                          |       2 |         0.89 |
+|   17 | Cesar                            |       2 |         0.89 |
+|   18 | Mira                             |       2 |         0.89 |
+|   19 | San Juán                         |       1 |         0.44 |
+|   20 | Arauca                           |       1 |         0.44 |
+|   21 | Casanare                         |       1 |         0.44 |
+|   22 | Inírida                          |       1 |         0.44 |
+|   23 | Guaviare                         |       1 |         0.44 |
 
 </div>
 
