@@ -27,7 +27,7 @@ pd.set_option('display.width', None)
 app_version = 'v20260103'
 input_path = 'dataset/pmax24h_in/' # Your local input file folder
 output_path = 'dataset/pmax24h_out/' # Your local output file folder
-station_dataset_file = input_path + 'automatic_colombia_2003_2024.csv' # Stations dataset ●
+station_dataset_file = input_path + 'conventional_test.csv' # Stations dataset ●
 station_catalog_file = 'dataset/CNE.xls' # CNE catalog for stations info
 station_catalog_columns_drop = ['OBSERVACION', 'SUBRED'] # Dropped columns from CNE
 parameter_name = 'Rain, Pmax24h' # rain, flow
@@ -42,7 +42,7 @@ label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
 create_plot = True # Creates, save and include plots into reports ●
-plot_only_simple = True # Plot only simple graphs avoiding multiple CDF and multiple Extreme values plots  ●
+plot_only_simple = False # Plot only simple graphs avoiding multiple CDF and multiple Extreme values plots  ●
 show_plot = False # Show plot on Python screen console
 plot_only_fit = True # Plot only fit distributions with Δo > Δ
 plot_rounding_val = 6 # Rounding values in plots to # decimal positions ●
@@ -142,7 +142,7 @@ for station in stations:
     funcs.print_log(file_log, f'\n## A. General information\n\n\n### 1. General running parameters\n\n', on_screen = print_on_screen)
     for dict_var in dictionary.general_vars:
         funcs.print_log(file_log, f'• {dict_var[1]}: _{eval(dict_var[0])}_. ', on_screen = print_on_screen)
-    funcs.print_log(file_log, f'\n\n[:file_folder:Dataset file](../../{station_dataset_file})', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n\n:file_folder:File: [Dataset values](../../{station_dataset_file})', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n\n> {dictionary.dicts['ddof']}', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n\n\n### 2. Station info and location\n\n{df_station_info.to_markdown()}\n', on_screen = print_on_screen)
     funcs.print_log(file_log, f'Dynamic map: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url})', center_div=True, on_screen = print_on_screen)
@@ -410,11 +410,12 @@ for station in stations:
     df_tr.index.name = 'id'
     dp_best_of_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_csv(f'{output_path}table/bestfit_{station_code}.csv', index=False)
     ##################df_tr.to_csv(f'{output_path}table/extreme_{station_code}.csv', index=False) ##############################
-    funcs.print_log(file_log,f'\n### 1. Best fit (ordered by delta Δ)\n', on_screen = print_on_screen)
+    funcs.print_log(file_log,f'\n### 1. Best fit (ordered by delta Δ)', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n\n:file_folder:Table: [bestfit_{station_code}.csv](table/bestfit_{station_code}.csv)\n', on_screen = print_on_screen)
     funcs.print_log(file_log,f'{dp_best_of_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown()}', center_div=True, on_screen = print_on_screen)
-    funcs.print_log(file_log, f':file_folder:Tables: [bestfit_{station_code}.csv](table/bestfit_{station_code}.csv) | [extreme_{station_code}.csv](table/extreme_{station_code}.csv)', on_screen = print_on_screen)
-    funcs.print_log(file_log,f'\n\n\n### 2. Extreme values\n\n', on_screen = print_on_screen)
+    funcs.print_log(file_log,f'\n### 2. Extreme values\n\n', on_screen = print_on_screen)
     funcs.print_log(file_log,f'{dictionary.dicts['tr']}', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n\n:file_folder:Table: [extreme_{station_code}.csv](table/extreme_{station_code}.csv)', on_screen = print_on_screen)
     funcs.print_log(file_log,'\n\n> risk_rate: assuming the return period as the project useful life.', on_screen = print_on_screen)
     funcs.print_log(file_log,f'\n\n{df_tr.to_markdown()}\n', on_screen = print_on_screen)
     if create_plot & plot_only_simple == False: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file4}" width="1200"></img>', center_div=True, on_screen = print_on_screen)
