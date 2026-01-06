@@ -409,7 +409,7 @@ for station in stations:
     df_tr.drop('empirical_dist', axis=1, inplace=True)
     df_tr.index.name = 'id'
     dp_best_of_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_csv(f'{output_path}table/bestfit_{station_code}.csv', index=False)
-    df_tr.to_csv(f'{output_path}table/extreme_{station_code}.csv', index=False)
+    ##################df_tr.to_csv(f'{output_path}table/extreme_{station_code}.csv', index=False) ##############################
     funcs.print_log(file_log,f'\n### 1. Best fit (ordered by delta Δ)\n', on_screen = print_on_screen)
     funcs.print_log(file_log,f'{dp_best_of_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown()}', center_div=True, on_screen = print_on_screen)
     funcs.print_log(file_log, f':file_folder:Tables: [bestfit_{station_code}.csv](table/bestfit_{station_code}.csv) | [extreme_{station_code}.csv](table/extreme_{station_code}.csv)', on_screen = print_on_screen)
