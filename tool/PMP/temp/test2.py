@@ -151,23 +151,3 @@ merged_df = pd.merge(df1, df2[['key', 'Address']], on='key', how='left')
 print(merged_df)
 '''
 
-
-# Print a shapefile with legend
-# 1. Read the shapefile (replace 'your_shapefile.shp' with your file path)
-gdf = gpd.read_file('../dataset/AH2022.shp')
-# Ensure matplotlib is used as the backend for plotting if not default
-# gpd.options.plotting.backend = "matplotlib"
-# 2. Plot the GeoDataFrame, coloring by a specific column and showing a legend
-# Replace 'your_data_column' with the actual column name in your shapefile's attribute table
-ax = gdf.plot(
-    column='AH',
-    cmap='viridis',      # Optional: specify a colormap
-    legend=True,         # This enables the legend/colorbar
-    edgecolor='black',   # Optional: adds an outline to polygons
-    linewidth=0.5        # Optional: adjusts outline width
-)
-# Optional: Add titles and customize the plot
-ax.set_title('Your Map Title')
-#ax.set_axis_off() # Optional: turn off axes
-# Display the plot
-plt.show()
