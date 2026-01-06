@@ -15,7 +15,7 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)
 
 
-# Probability density function - PDF (from SciPy) for best fit analysis
+# Probability density function - PDF (from SciPy) for best fit analysis and paper
 # l_pdist_scipy requires: ([Distribution function, # parameters, fit method, label, active)]
 l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['gumbel_r', 2, 'MM', 'Gumbel Right Skew', True],
@@ -132,7 +132,7 @@ l_pdist_scipy_extreme = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['foldnorm', 3, 'MM', 'Fold Normal', True],  # Check: not for rain data
                   ['halfnorm', 2, 'MM', 'Half Normal', True],
                   ['gennorm', 3, 'MLE', 'Generalized Normal', True],
-                  ['norminvgauss', 4, 'MLE', 'Normal Inverse Gaussian', False],
+                  ['norminvgauss', 4, 'MLE', 'Normal Inverse Gaussian', True],
                   ['powernorm', 3, 'MLE', 'Power normal', True],
                   ['powerlognorm', 4, 'MLE', 'Power log-normal', True],
                   ['skewnorm', 3, 'MLE', 'Skew normal', True],
@@ -172,10 +172,10 @@ l_pdist_scipy_extreme = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['f', 4, 'MLE', 'F', True],
                   ['fisk', 3, 'MLE', 'Fisk', True],
                   ['genlogistic', 3, 'MLE', 'Generalized logistic', True],
-                  ['gausshyper', 6, 'MLE', 'Gauss hypergeometric', False],
+                  ['gausshyper', 6, 'MLE', 'Gauss hypergeometric', True],
                   ['genhalflogistic', 3, 'MLE', 'Generalized half-logistic', True],
-                  ['genhyperbolic', 5, 'MLE', 'Generalized hyperbolic', False],
-                  ['geninvgauss', 4, 'MLE', 'Generalized Inverse Gaussian', False],
+                  ['genhyperbolic', 5, 'MLE', 'Generalized hyperbolic', True],
+                  ['geninvgauss', 4, 'MLE', 'Generalized Inverse Gaussian', True],
                   ['gibrat', 2, 'MM', 'Gibrat', True],
                   ['gompertz', 3, 'MLE', 'Gompertz (or truncated Gumbel)', True],
                   ['halflogistic', 2, 'MM', 'Half-logistic', True],
@@ -213,7 +213,7 @@ l_pdist_scipy_extreme = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['rayleigh', 2, 'MM', 'Rayleigh', True],
                   ['rel_breitwigner', 3, 'MLE', 'Relativistic Breit-Wigner', True],
                   ['rice', 3, 'MLE', 'Rice', True],
-                  ['recipinvgauss', 3, 'MLE', 'Reciprocal inverse Gaussian', False],
+                  ['recipinvgauss', 3, 'MLE', 'Reciprocal inverse Gaussian', True],
                   ['semicircular', 2, 'MM', 'Semicircular', True],
                   ['studentized_range', 4, 'MLE', 'Studentized range', False],  # Check: don't converge
                   ['t', 3, 'MLE', 'Student’s t', True],
@@ -222,7 +222,7 @@ l_pdist_scipy_extreme = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['truncweibull_min', 5, 'MLE', 'Doubly truncated Weibull minimum', True],
                   ['tukeylambda', 3, 'MLE', 'Tukey-Lamdba', True],
                   ['uniform', 2, 'MLE', 'Uniform', True],
-                  ['loguniform', 4, 'MLE', 'Log-Uniform or reciprocal', False],
+                  ['loguniform', 4, 'MLE', 'Log-Uniform or reciprocal', True],
                   ['vonmises', 3, 'MLE', 'Von Mises', True],  # Check: values out of range
                   ['vonmises_line', 3, 'MLE', 'Von Mises line', True],
                   ['wald', 2, 'MM', 'Wald', True],

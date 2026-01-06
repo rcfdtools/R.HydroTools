@@ -22,7 +22,7 @@ pd.set_option('display.width', None)
 app_version = 'v20260106'
 input_path = 'dataset/pmax24h_in/' # Your local input file folder
 output_path = 'dataset/pmax24h_out/' # Your local output file folder
-station_dataset_file = input_path + 'automatic_colombia_2003_2024.csv' # Stations dataset ●
+station_dataset_file = input_path + 'XXXXXXautomatic_colombia_2003_2024.csv' # Stations dataset ●
 date_min = 1900 # Minimum year to eval til year_max ●
 date_max = 2024 # Maximum year to eval since year_min ●
 label_station = 'Station' # Station column name to eval from .csv station dataset file
@@ -42,6 +42,7 @@ avoid_nans = True # Exclude null values
 
 # Return periods and probabilities
 tr = [2, 2.33, 5, 10, 15, 20, 25, 50, 75, 100, 200, 250, 500, 750, 1000]  # Tr, return period in years
+#tr = [100]  # Tr, return period in years
 df_tr = pd.DataFrame(tr, columns=['tr'])
 df_tr['prob_l'] = 1-1/df_tr.tr  # P≤, Probability less than, for high extreme values
 df_tr['prob_g'] = 1/df_tr.tr  # P≥, Probability greater than, for low extreme values
@@ -103,12 +104,38 @@ for station in stations:
     for i in range(0, len(df_l_pdist_scipy)):
         print(f'Processing CDF: {df_l_pdist_scipy['p_dist'][i]}')  # Only for console
         dp_evaluated += 1
-        funcs.pdist_scipy(df, df_l_pdist_scipy['p_dist'][i], df_l_pdist_scipy['n_parameter'][i], df_l_pdist_scipy['fit_method'][i], df_l_pdist_scipy['label'][i], x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
+        try:
+            funcs.pdist_scipy(df, df_l_pdist_scipy['p_dist'][i], df_l_pdist_scipy['n_parameter'][i], df_l_pdist_scipy['fit_method'][i], df_l_pdist_scipy['label'][i], x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
+        except ZeroDivisionError:
+            # Handle a specific error and skip to the next iteration
+            print(f"Processing CDF: Cannot divide by zero. Skipping.")
+            continue
+        except TypeError:
+            # Handle another specific error and do nothing (pass)
+            print(f"Processing CDF: Cannot perform operation on non-number. Continuing.")
+            pass
+        except Exception as e:
+            # Catch any other general exception, print it, and continue
+            print(f"Processing CDF: An unexpected error occurred:. Continuing.")
+            continue
     if pdist_logarithmic_on: ########### logarithmic #############
         for i in range(0, len(df_l_pdist_scipy)):
             print(f'Processing LogCDF: {df_l_pdist_scipy['p_dist'][i]}')  # Only for console
             dp_evaluated += 1
-            funcs.pdist_scipy_log(df, df_l_pdist_scipy['p_dist'][i], df_l_pdist_scipy['n_parameter'][i], df_l_pdist_scipy['fit_method'][i], df_l_pdist_scipy['label'][i], x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
+            try:
+                funcs.pdist_scipy_log(df, df_l_pdist_scipy['p_dist'][i], df_l_pdist_scipy['n_parameter'][i], df_l_pdist_scipy['fit_method'][i], df_l_pdist_scipy['label'][i], x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
+            except ZeroDivisionError:
+                # Handle a specific error and skip to the next iteration
+                print(f"\nProcessing LogCDF: Cannot divide by zero. Skipping.")
+                continue
+            except TypeError:
+                # Handle another specific error and do nothing (pass)
+                print(f"Processing LogCDF: Cannot perform operation on non-number. Continuing.")
+                pass
+            except Exception as e:
+                # Catch any other general exception, print it, and continue
+                print(f"Processing LogCDF: An unexpected error occurred:. Continuing.")
+                continue
     #print(f'\n{vDeltaKolmogorov.to_markdown()}')
     df_tr['station'] = station_code
     df_tr['n'] = len(df)
