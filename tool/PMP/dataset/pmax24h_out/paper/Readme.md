@@ -14,9 +14,10 @@ The most common probability distributions in hydrology, used for analyzing flood
 
 > Hydrological data often isn´t perfectly normal (it´s skewed), so different distributions are needed for different applications, such as: **Flood Frequency Analysis**: Using Gumbel, GEV, or Log-Pearson Type III for predicting extreme flood magnitudes and their return periods, **Rainfall Analysis**: Normal for annual totals, but Log-Normal, Weibull, or GEV for intensity or extreme daily rainfall, **Streamflow Modeling**: Gamma and Log-Normal for maximum flows, GEV for minimum flows, and Kappa for daily flows.
 
+
 <div align="center">
 
-<img alt="R.HydroTools" src="temp/pmp.svg" width="800px">
+<img alt="R.HydroTools" src="../../../temp/pmp.svg" width="800px">
 
 </div>
 
