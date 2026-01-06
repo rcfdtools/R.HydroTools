@@ -17,7 +17,7 @@ The most common probability distributions in hydrology, used for analyzing flood
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../../../temp/pmp.svg" width="1000px">
+<img alt="R.HydroTools" src="../../../temp/pmp.svg" width="900px">
 
 </div>
 
