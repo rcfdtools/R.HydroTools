@@ -416,7 +416,7 @@ for station in stations:
     funcs.print_log(file_log,f'\n### 2. Extreme values and % difference analysis\n\n', on_screen = print_on_screen)
     funcs.print_log(file_log,f'{dictionary.dicts['tr']}', on_screen = print_on_screen)
     funcs.print_log(file_log,f'\n\n> {dictionary.dicts['risk_rate']}', on_screen = print_on_screen)
-    funcs.print_log(file_log, f'\n\n:file_folder:Table: [extreme_{station_code}.csv](table/extreme_{station_code}.csv) (all PDFs)  \n:file_folder:Table: [extremediff_{station_code}.csv](table/extremediff_{station_code}.csv) (% difference between bestfit and most used PDFs in Hydrology)\n', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n\n:file_folder:File: [extreme_{station_code}.csv](table/extreme_{station_code}.csv), all PDFs.  \n:file_folder:File: [extremediff_{station_code}.csv](table/extremediff_{station_code}.csv), % difference between bestfit and most used PDFs in Hydrology.\n', on_screen = print_on_screen)
     funcs.print_log(file_log,f'Extreme values table for only best fit PDFs\n{df_tr.to_markdown()}\n', center_div=True, on_screen = print_on_screen)
     if create_plot & plot_only_simple == False: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file4}" width="1200"></img>', center_div=True, on_screen = print_on_screen)
     if create_plot: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file5}" width="500"></img><img alt="R.HydroTools" src="{fig_file6}" width="500"></img>', center_div=True, on_screen = print_on_screen)
