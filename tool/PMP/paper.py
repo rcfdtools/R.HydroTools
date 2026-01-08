@@ -1,4 +1,3 @@
-import pandas as pd7
 import pandas as pd
 pd.set_option('display.max_colwidth', None)
 import glob
@@ -54,7 +53,7 @@ pdist_logarithmic_on = True # Eval every SciPy distribution were evaluated as lo
 regular_hydrology_pdf = ['norm', 'lognorm', 'gumbel_l', 'gumbel_r', 'gamma', 'pearson3', 'logpearson3', 'dweibull', 'kappa4'] # Most used PDFs in hydrology (bestfit difference analysis) ●
 
 
-# Header & join best fit .csv results files and read and filter the CNE catalog
+# Header & join bestfit and extreme .csv results files and read and filter the CNE catalog
 funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen = print_on_screen)
 funcs.print_log(file_log, f'# {dictionary.dicts['study_name']}\n', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\n{dictionary.dicts['pmp']}\n\n', on_screen = print_on_screen)
@@ -81,6 +80,14 @@ if exclude_stations:
     df_extreme = df_extreme[~df_extreme[label_station].isin(stations_to_exclude)] # Excluding stations using isin() with Boolean Negation (~)
 df_extreme.to_csv(f'{output_path}extreme.csv', index=False, encoding='utf-8')
 print(f'Successfully combined {len(all_filenames)} files into extreme.csv')
+# Extreme percentage difference values files join
+all_filenames = [i for i in glob.glob(os.path.join(input_path, 'extremepdiff_*.{}'.format(extension)))]
+df_extremepdiff = pd.concat([pd.read_csv(f) for f in all_filenames], ignore_index=True)
+df_extremepdiff[label_station] = df_extremepdiff[label_station].astype(str)
+if exclude_stations:
+    df_extremepdiff = df_extremepdiff[~df_extremepdiff[label_station].isin(stations_to_exclude)] # Excluding stations using isin() with Boolean Negation (~)
+df_extremepdiff.to_csv(f'{output_path}extremepdiff.csv', index=False, encoding='utf-8')
+print(f'Successfully combined {len(all_filenames)} files into extremepdiff.csv')
 # Read and filter CNE catalog
 data_types = {label_station_catalog: 'str', label_latitude: 'float64', label_longitude: 'float64'}
 df_catalog = pd.read_excel(station_catalog_file, sheet_name='CNE', parse_dates=True, dtype=data_types) # , dtype=data_types
@@ -103,7 +110,6 @@ df_catalog_filter = pd.merge(df_catalog_filter, df_station_record[[label_station
 #print(f'\n{df_catalog_filter.head().to_markdown()}')
 df_catalog_filter_selected_columns = df_catalog_filter[[label_station_catalog, label_name, label_category, label_technology, label_status, label_install_date, label_latitude, label_longitude, label_state, label_county, label_ah, label_zh, label_szh, 'n']]
 
-'''
 
 # Create GeoJSON map
 if create_geojson_map:
@@ -327,9 +333,9 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
             if show_plot: plt.show()
             plt.close()
 
-'''
 
 # Compare extreme values difference between bestfit PDF vs. most used PDF's in hydrology
+'''
 df_bestfit_1 = df_bestfit[df_bestfit['best_fit_sort'] == 1].sort_values(by=[label_station], ascending=True)
 #df_bestfit_1 = df_bestfit_1[df_bestfit_1['n'] >= minimum_sample]
 stations = df_bestfit_1[label_station].unique()
@@ -351,7 +357,7 @@ for station in stations:
         general_fields = general_fields + [f'{regular}_pdiff']
     df_extreme_station[general_fields].to_csv(f'{input_path}extremepdiff_{station}.csv', index=False)
     #print(f'\n{df_extreme_station[general_fields].to_markdown()}')
-
+'''
 
 # Footer
 funcs.print_log(file_log, f'\n\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
