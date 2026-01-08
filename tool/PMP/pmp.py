@@ -110,7 +110,7 @@ if minimum_sample > 0:
 
 # Execution
 stations = df_all[label_station].unique()
-print(f'Stations in dataset: {stations}\n')
+print(f'Stations in dataset ({len(stations)})\n{stations}\n')
 data_types = {label_station_catalog: 'str', label_latitude: 'float64', label_longitude: 'float64'}
 df_catalog = pd.read_excel(station_catalog_file, sheet_name='CNE', parse_dates=True, dtype=data_types) # , dtype=data_types
 df_catalog = df_catalog.drop(columns=station_catalog_columns_drop)
@@ -423,4 +423,4 @@ for station in stations:
     funcs.print_log(file_log, f'\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
     #print(df.to_csv(index=False))
 
-print(f'\nStations in dataset: {stations}\n')
+print(f'\nStations in dataset ({len(stations)})\n{stations}')
