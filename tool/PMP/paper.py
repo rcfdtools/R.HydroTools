@@ -93,7 +93,7 @@ if exclude_stations:
 df_extremepdiff.to_csv(f'{output_path}extremepdiff.csv', index=False, encoding='utf-8')
 print(f'Successfully combined {len(all_filenames)} files into extremepdiff.csv')
 
-'''
+#'''
 
 ########### Read and filter CNE catalog ###########
 data_types = {label_station_catalog: 'str', label_latitude: 'float64', label_longitude: 'float64'}
@@ -340,7 +340,7 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
             if show_plot: plt.show()
             plt.close()
 
-'''
+#'''
 
 # Compare extreme values difference between bestfit PDF vs. most used PDF's in hydrology
 funcs.print_log(file_log, f'\n### Extreme values difference - Bestfit PDF vs. most used PDFs in Hydrology\n', center_div=False, on_screen = print_on_screen)
