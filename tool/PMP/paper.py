@@ -126,7 +126,7 @@ if create_geojson_map:
 fig_file0a = 'graph/locationmap.png'
 df_catalog_filter.to_csv(f'{output_path}stations.csv', index=False)
 funcs.print_log(file_log, f'\n\n## A. Stations evaluated\n\n{dictionary.dicts['hydrometeorological_station']}\n', center_div=False, on_screen = print_on_screen)
-funcs.print_log(file_log, f'\n:file_folder:Filtered table: [stations.csv](stations.csv)\n\n', on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n:file_folder:Table: [stations.csv](stations.csv)\n\n', on_screen = print_on_screen)
 funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="600"></img>', center_div=True, on_screen = print_on_screen)
 #funcs.print_log(file_log, f'\n\n{df_catalog_filter.to_markdown()}', center_div=False, on_screen = print_on_screen) # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 #print(f'\nFiltered stations catalog:\n{df_catalog_filter.to_markdown()}') # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -250,7 +250,7 @@ else:
     best_fit_text = f'\n\nFor this analysis, from the initial dataset with {len(df_catalog_filter_selected_columns)} stations we use {len(df_bestfit[df_bestfit['best_fit_sort']==1])} stations (filtering only those with n ≥ {minimum_sample} records or yearly values), {len(edf_dist)} empirical distributions and {len(df_l_pdist_scipy.query('active == True'))} probability distributions, corresponding to {len(df_bestfit[df_bestfit['best_fit_sort']==1]) * len(edf_dist) * len(df_l_pdist_scipy.query('active == True'))} fit test evaluations.'
 funcs.print_log(file_log, best_fit_text, center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\nThe following tables and graphs shows the evaluation of the {best_fit_sort_eval} best fit order ranking positions for each station, considering the best fit in each empirical distribution and the first probability distribution position with the Kolmogorov-Smirnov test. Results tables are ordered by station code.\n', center_div=False, on_screen = print_on_screen)
-funcs.print_log(file_log, f'\n:file_folder:Filtered table: [bestfit.csv](bestfit.csv)\n\n', on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n:file_folder:Table: [bestfit.csv](bestfit.csv)\n\n', on_screen = print_on_screen)
 #funcs.print_log(file_log, f'\n\nThe follow tables and graph shows the evaluation of the {best_fit_sort_eval} best fit order ranking positions for each station. Results tables are ordered by: empirical distribution (empirical_dist), probability distribution (p_dist) and Δ value (delta).\n\n', center_div=False, on_screen = print_on_screen)
 for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i in range(df_bestfit['best_fit_sort'].max()):
     df_station_record = df_bestfit[df_bestfit['best_fit_sort'] == i+1].sort_values(by=['n', label_station], ascending=False)
