@@ -24,7 +24,7 @@ pd.set_option('display.width', None)
 
 
 # General setup
-app_version = 'v20260103'
+app_version = 'v20260108'
 input_path = 'dataset/pmax24h_in/' # Your local input file folder
 output_path = 'dataset/pmax24h_out/' # Your local output file folder
 station_dataset_file = input_path + 'automatic_test.csv' # Stations dataset ●
@@ -142,7 +142,7 @@ for station in stations:
     funcs.print_log(file_log, f'\n## A. General information\n\n\n### 1. General running parameters\n\n', on_screen = print_on_screen)
     for dict_var in dictionary.general_vars:
         funcs.print_log(file_log, f'• {dict_var[1]}: _{eval(dict_var[0])}_. ', on_screen = print_on_screen)
-    funcs.print_log(file_log, f'\n\n:file_folder:File: [Dataset values](../../{station_dataset_file})', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n\n:file_folder:File: [dataset.csv](../../{station_dataset_file})', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n\n> {dictionary.dicts['ddof']}', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n\n\n### 2. Station info and location\n\n{df_station_info.to_markdown()}\n', on_screen = print_on_screen)
     funcs.print_log(file_log, f'Dynamic map: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url})', center_div=True, on_screen = print_on_screen)
@@ -413,11 +413,11 @@ for station in stations:
     funcs.print_log(file_log,f'\n### 1. Best fit (ordered by delta Δ)', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n\n:file_folder:Table: [bestfit_{station_code}.csv](table/bestfit_{station_code}.csv)\n', on_screen = print_on_screen)
     funcs.print_log(file_log,f'{dp_best_of_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown()}', center_div=True, on_screen = print_on_screen)
-    funcs.print_log(file_log,f'\n### 2. Extreme values\n\n', on_screen = print_on_screen)
+    funcs.print_log(file_log,f'\n### 2. Extreme values and % difference analysis\n\n', on_screen = print_on_screen)
     funcs.print_log(file_log,f'{dictionary.dicts['tr']}', on_screen = print_on_screen)
-    funcs.print_log(file_log, f'\n\n:file_folder:Tables: [extreme_{station_code}.csv](table/extreme_{station_code}.csv) (all PDFs) | [extremediff_{station_code}.csv](table/extremediff_{station_code}.csv) (% difference between bestfit and most used PDFs in Hydrology)', on_screen = print_on_screen)
-    funcs.print_log(file_log,f'\n\n{dictionary.dicts['risk_rate']}', on_screen = print_on_screen)
-    funcs.print_log(file_log,f'\n\nExtreme values table for only best fit PDFs\n{df_tr.to_markdown()}\n', center_div=True, on_screen = print_on_screen)
+    funcs.print_log(file_log,f'\n\n> {dictionary.dicts['risk_rate']}', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n\n:file_folder:Tables:\n* [extreme_{station_code}.csv](table/extreme_{station_code}.csv) (all PDFs)\n* [extremediff_{station_code}.csv](table/extremediff_{station_code}.csv) (% difference between bestfit and most used PDFs in Hydrology)\n', on_screen = print_on_screen)
+    funcs.print_log(file_log,f'Extreme values table for only best fit PDFs\n{df_tr.to_markdown()}\n', center_div=True, on_screen = print_on_screen)
     if create_plot & plot_only_simple == False: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file4}" width="1200"></img>', center_div=True, on_screen = print_on_screen)
     if create_plot: funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file5}" width="500"></img><img alt="R.HydroTools" src="{fig_file6}" width="500"></img>', center_div=True, on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
