@@ -60,6 +60,7 @@ High over extreme values
 * powerlognorm: trend to infinite
 * powernorm: trend to infinite
 * pareto: trend to infinite for datasets with lower standard deviation
+* johnsonsu: trend to infinite for datasets with higher standard deviation <<<<<<<<<<<<<<<<<<<<
 
 Horizontal trending for high return periods Tr > = 100
 

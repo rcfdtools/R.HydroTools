@@ -27,7 +27,7 @@ pd.set_option('display.width', None)
 app_version = 'v20260103'
 input_path = 'dataset/pmax24h_in/' # Your local input file folder
 output_path = 'dataset/pmax24h_out/' # Your local output file folder
-station_dataset_file = input_path + 'XXXXconventional_cesarcolombia_1959_2022.csv' # Stations dataset ●
+station_dataset_file = input_path + 'automatic_test.csv' # Stations dataset ●
 station_catalog_file = 'dataset/CNE.xls' # CNE catalog for stations info
 station_catalog_columns_drop = ['OBSERVACION', 'SUBRED'] # Dropped columns from CNE
 parameter_name = 'Rain, Pmax24h' # rain, flow
@@ -42,7 +42,7 @@ label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
 create_plot = True # Creates, save and include plots into reports ●
-plot_only_simple = False # Plot only simple graphs avoiding multiple CDF and multiple Extreme values plots  ●
+plot_only_simple = True # Plot only simple graphs avoiding multiple CDF and multiple Extreme values plots  ●
 show_plot = False # Show plot on Python screen console
 plot_only_fit = True # Plot only fit distributions with Δo > Δ
 plot_rounding_val = 6 # Rounding values in plots to # decimal positions ●
