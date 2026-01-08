@@ -8,9 +8,9 @@ Probable Maximum Precipitation (PMP) is the greatest amount of rainfall for a sp
 
 ## Running sequence
 
-1. [pmp.py](pmp.py): detailed analysis for station, creates station.md and bestfit_station.csv files. (this script also evaluate the best fit recurrence times tables but only for the activated SciPy distributions)
-2. [extreme_tr.py](extreme_tr.py): create the detailed tables extreme_station.csv for all the continuous SciPy probability distributions and multiple recurrence times or Tr.
-3. [paper.py](paper.py): generates the paper analysis.
+1. [pmp.py](pmp.py): detailed analysis for station, creates _station.md_ and _bestfit_station.csv_ files. (this script also evaluate the best fit recurrence times tables but only for the activated SciPy distributions)
+2. [extreme_tr.py](extreme_tr.py): create the detailed tables _extreme_station.csv_ for all the continuous SciPy probability distributions and multiple recurrence times or Tr.
+3. [paper.py](paper.py): create the integrated _bestfit.csv_, _stations.csv_ and _extreme.csv_ files, process the _extremediff_station.csv_ files and generate the paper analysis.
 
 
 ## Station catalog requirements
