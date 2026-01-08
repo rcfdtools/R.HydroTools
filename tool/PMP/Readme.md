@@ -8,8 +8,8 @@ Probable Maximum Precipitation (PMP) is the greatest amount of rainfall for a sp
 
 ## Running sequence
 
-1. [pmp.py](pmp.py): detailed analysis for station, creates _station.md_ and _bestfit_station.csv_ files. (this script also evaluate the best fit recurrence times tables but only for the activated SciPy distributions)
-2. [extreme_tr.py](extreme_tr.py): create the detailed tables _extreme_station.csv_ for all the continuous SciPy probability distributions and multiple recurrence times or Tr.
+1. [pmp.py](pmp.py): detailed analysis for station, creates _station.md_ and _bestfit_station.csv_ files. (this script also evaluate the best fit recurrence times tables but only for the activated SciPy distributions in funcs.l_pdist_scipy).
+2. [extreme_tr.py](extreme_tr.py): create the detailed tables _extreme_station.csv_ for almost all the continuous SciPy probability distributions (in funcs.l_pdist_scipy_extreme) and multiple recurrence times or Tr.
 2. [extreme_tr_pdiff.py](extreme_tr_pdiff.py): process the _extremediff_station.csv_ obtaining the extreme differences between bestfit PDF and the regular PDFs used in Hydrology.
 3. [paper.py](paper.py): create the integrated tables _bestfit.csv_, _stations.csv_, _extreme.csv_ and _extremepdiff.csv_ files and generate the paper analysis.
 
@@ -17,7 +17,7 @@ Probable Maximum Precipitation (PMP) is the greatest amount of rainfall for a sp
 ## Station catalog requirements
 
 * Not existing stations fron Socrata as 14015020 and 21202200 has to be added at the end of the CNE records and mark as (No Data) and with latitude 4.0 and longitude -72.
-* National and local catalogs has to be integrated as CNE.xls with two new columns called _Catalogo_ and _Version_
+* National and local catalogs has to be integrated as CNE.xls with two new columns at the end called _Catalogo_ and _Version_.
 
 
 ## PMP - Probable maximum precipitation with SciPy stat library
@@ -30,7 +30,7 @@ PMP analysis using multiple probability distributions available in SciPy with pr
 
 ## Probability distributions excluded for rain analysis in pmp.py
 
-When the annual values contain zeros o few records, the following distributions has to be avoided.
+When the annual values contain zeros o few records, the following distributions has to be avoided:
 
 * powerlognorm
 * powernorm
@@ -38,8 +38,7 @@ When the annual values contain zeros o few records, the following distributions 
 * recipinvgauss: doesn't converge with low values or at least 10 records
 * dgamma: over PDF estimation
 
-
-High over extreme values
+High over extreme values:
 
 * cauchy
 * foldcauchy
@@ -63,7 +62,7 @@ High over extreme values
 * pareto: trend to infinite for datasets with lower standard deviation
 * johnsonsu: trend to infinite for datasets with higher standard deviation <<<<<<<<<<<<<<<<<<<<
 
-Horizontal trending for high return periods Tr > = 100
+Horizontal trending for high return periods Tr > = 100:
 
 * beta
 * anglit

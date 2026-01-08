@@ -9,5 +9,5 @@ station,empirical_dist,p_dist,delta,deltao,eval,fit,n,best_fit,best_fit_sort
 21202200,edf_blom,loglaplace_asymmetric,0.14065331464214692,0.41761268023100007,Δo > Δ,1,9,1,8
 21202200,edf_cunnane,loglaplace_asymmetric,0.1424159468395617,0.41761268023100007,Δo > Δ,1,9,1,9
 21202200,edf_gringorten,loglaplace_asymmetric,0.14527635873887523,0.41761268023100007,Δo > Δ,1,9,1,10
-21202200,edf_hazen,logjohnsonsu,0.14679401235841888,0.41761268023100007,Δo > Δ,1,9,1,11
+21202200,edf_hazen,loglaplace_asymmetric,0.14966232365115595,0.41761268023100007,Δo > Δ,1,9,1,11
 21202200,edf_california,loglaplace,0.1534237906438588,0.41761268023100007,Δo > Δ,1,9,1,12

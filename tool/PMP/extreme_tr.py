@@ -21,7 +21,7 @@ pd.set_option('display.width', None)
 app_version = 'v20260106'
 input_path = 'dataset/pmax24h_in/' # Your local input file folder
 output_path = 'dataset/pmax24h_out/' # Your local output file folder
-station_dataset_file = input_path + 'XXXXXconventional_cesarcolombia_1959_2022.csv' # Stations dataset ●
+station_dataset_file = input_path + 'XXXXautomatic_colombia_2003_2024.csv' # Stations dataset ●
 date_min = 1900 # Minimum year to eval til year_max ●
 date_max = 2024 # Maximum year to eval since year_min ●
 label_station = 'Station' # Station column name to eval from .csv station dataset file
@@ -77,7 +77,7 @@ if minimum_sample > 0:
 
 # Execution
 stations = df_all[label_station].unique()
-print(f'Stations in dataset: {stations}')
+print(f'Stations in dataset ({len(stations)})\n{stations}')
 for station in stations:
     print(f'\n>>>>>>>>>>>>>>>>>>>> Station: {station} <<<<<<<<<<<<<<<<<<<<<<<<<\n')
     station_code = str(station)
@@ -144,4 +144,4 @@ for station in stations:
     # print(f'\n{df_tr.to_markdown()}')
     df_tr.to_csv(f'{output_path}table/extreme_{station_code}.csv', index=False)
 
-print(f'\nStations in dataset: {stations}\n')
+print(f'Stations in dataset ({len(stations)})\n{stations}\n\nProcess completed.')

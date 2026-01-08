@@ -45,12 +45,14 @@ only_automatic_stations = False  # Evaluated only stations with automatic techno
 automatic_tag_not_in = ['Convencional', '(No data)'] # Tag to exclude. Keep in mind some conventional stations are now automatic
 #automatic_tag_not_in = ['(No data)'] # Tag to exclude. Keep in mind some conventional stations are now automatic
 exclude_stations = True
+extension = 'csv'
 stations_to_exclude = ['25020230', '25020240', '25020250', '25020260', '25020280', '25020690', '25020920', '25021240', '25021650', '25025250', '28010070', '28020080', '28020150', '28020230', '28020310', '28020420', '28020440', '28020460', '28020600', '28025070', '28025080', '28025090', '28035010', '28035040', '28040310', '28040350', '14015020', '21202200']
 histogram_custom_bins_n = [5, 6, 7, 8, 9, 10, 15, 20, 25] # Bins for n years values histogram per station evaluated
 #histogram_custom_bins_n = [5, 6, 7, 8, 9, 10, 15, 20, 25, 65] # Bins for n years values histogram per station evaluated, include 65 for conventional stations
 best_fit_sort_eval = 3 # Best fit sort positions to eval. 1 means we only evaluate the first best fit position.
 pdist_logarithmic_on = True # Eval every SciPy distribution were evaluated as logarithmic with pmp.py ●
 regular_hydrology_pdf = ['norm', 'lognorm', 'gumbel_l', 'gumbel_r', 'gamma', 'pearson3', 'logpearson3', 'dweibull', 'kappa4'] # Most used PDFs in hydrology (bestfit difference analysis) ●
+pdiff_suffix = 'pdiff'
 
 
 # Header & join bestfit and extreme .csv results files and read and filter the CNE catalog
@@ -58,8 +60,8 @@ funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../../file/grap
 funcs.print_log(file_log, f'# {dictionary.dicts['study_name']}\n', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\n{dictionary.dicts['pmp']}\n\n', on_screen = print_on_screen)
 funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../temp/pmp.svg" width="850px">', center_div=True, on_screen = print_on_screen)
-extension = 'csv'
-# Best fit files join
+
+########### Best fit files join ###########
 all_filenames = [i for i in glob.glob(os.path.join(input_path, 'bestfit_*.{}'.format(extension)))]
 df_bestfit = pd.concat([pd.read_csv(f) for f in all_filenames], ignore_index=True)
 df_bestfit[label_station] = df_bestfit[label_station].astype(str)
@@ -72,7 +74,8 @@ stations = df_bestfit[label_station].unique()
 df_stations = pd.DataFrame(stations, columns=[label_station])
 #print(f'\ndf_stations types:\n{df_stations.dtypes}')
 #print(f'Stations in dataset:\n{stations}\n')
-# Extreme values files join
+
+########### Extreme values files join ###########
 all_filenames = [i for i in glob.glob(os.path.join(input_path, 'extreme_*.{}'.format(extension)))]
 df_extreme = pd.concat([pd.read_csv(f) for f in all_filenames], ignore_index=True)
 df_extreme[label_station] = df_extreme[label_station].astype(str)
@@ -80,7 +83,8 @@ if exclude_stations:
     df_extreme = df_extreme[~df_extreme[label_station].isin(stations_to_exclude)] # Excluding stations using isin() with Boolean Negation (~)
 df_extreme.to_csv(f'{output_path}extreme.csv', index=False, encoding='utf-8')
 print(f'Successfully combined {len(all_filenames)} files into extreme.csv')
-# Extreme percentage difference values files join
+
+########### Extreme percentage difference values files join ###########
 all_filenames = [i for i in glob.glob(os.path.join(input_path, 'extremepdiff_*.{}'.format(extension)))]
 df_extremepdiff = pd.concat([pd.read_csv(f) for f in all_filenames], ignore_index=True)
 df_extremepdiff[label_station] = df_extremepdiff[label_station].astype(str)
@@ -88,7 +92,10 @@ if exclude_stations:
     df_extremepdiff = df_extremepdiff[~df_extremepdiff[label_station].isin(stations_to_exclude)] # Excluding stations using isin() with Boolean Negation (~)
 df_extremepdiff.to_csv(f'{output_path}extremepdiff.csv', index=False, encoding='utf-8')
 print(f'Successfully combined {len(all_filenames)} files into extremepdiff.csv')
-# Read and filter CNE catalog
+
+'''
+
+########### Read and filter CNE catalog ###########
 data_types = {label_station_catalog: 'str', label_latitude: 'float64', label_longitude: 'float64'}
 df_catalog = pd.read_excel(station_catalog_file, sheet_name='CNE', parse_dates=True, dtype=data_types) # , dtype=data_types
 df_catalog = df_catalog.drop(columns=station_catalog_columns_drop)
@@ -333,31 +340,28 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
             if show_plot: plt.show()
             plt.close()
 
+'''
 
 # Compare extreme values difference between bestfit PDF vs. most used PDF's in hydrology
-'''
-df_bestfit_1 = df_bestfit[df_bestfit['best_fit_sort'] == 1].sort_values(by=[label_station], ascending=True)
-#df_bestfit_1 = df_bestfit_1[df_bestfit_1['n'] >= minimum_sample]
-stations = df_bestfit_1[label_station].unique()
-print(f'Processing {len(stations)} stations')
-for station in stations:
-    bestfit_station_pdf = df_bestfit_1[df_bestfit_1[label_station] == station]
-    bestfit_station_pdf = bestfit_station_pdf['p_dist'].item()
-    print(f'Processing extreme diff for station: {station}, bestfit PDF: {bestfit_station_pdf}')
-    general_fields = [label_station, 'tr', 'n', 'bestfit_pdf', 'bestfit_val']
-    general_fields = general_fields + regular_hydrology_pdf # Join field list
-    df_extreme_station = df_extreme[df_extreme[label_station] == station].sort_values(by=[label_station, 'tr'], ascending=True)
-    df_extreme_station = df_extreme_station.reset_index(drop=True)
-    df_extreme_station.index.name = 'id'
-    df_extreme_station['bestfit_pdf'] = bestfit_station_pdf
-    df_extreme_station['bestfit_val'] = df_extreme_station[bestfit_station_pdf]
-    # Porcentual difference (diff)
-    for regular in regular_hydrology_pdf:
-        df_extreme_station[f'{regular}_pdiff'] = (1-(df_extreme_station['bestfit_val']/df_extreme_station[regular]))*100
-        general_fields = general_fields + [f'{regular}_pdiff']
-    df_extreme_station[general_fields].to_csv(f'{input_path}extremepdiff_{station}.csv', index=False)
-    #print(f'\n{df_extreme_station[general_fields].to_markdown()}')
-'''
+funcs.print_log(file_log, f'\n### Extreme values difference - Bestfit PDF vs. most used PDFs in Hydrology\n', center_div=False, on_screen = print_on_screen)
+if minimum_sample > 0: df_extremepdiff = df_extremepdiff[df_extremepdiff['n'] >= 15]
+#if minimum_sample > 0: df_extremepdiff = df_extremepdiff[df_extremepdiff['n'] >= minimum_sample]
+df_extremepdiff = df_extremepdiff.reset_index(drop=True)
+df_extremepdiff.index.name = 'id'
+df_extremepdiff = df_extremepdiff.replace([np.inf, -np.inf], np.nan)
+#print(f'\n{(df_extremepdiff)}')
+pdiff_suffix = 'pdiff'
+regular_hydrology_pdf_pdiff = [item + '_' + pdiff_suffix for item in regular_hydrology_pdf]
+funcs.print_log(file_log, f'\nRegular hydrology PDFs: {regular_hydrology_pdf}', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\nRegular hydrology PDFs % difference: {regular_hydrology_pdf_pdiff}', center_div=False, on_screen = print_on_screen)
+regular_hydrology_pdf_pdiff = ['n'] + regular_hydrology_pdf_pdiff
+extremepdiff_analysis = df_extremepdiff.groupby('tr')[regular_hydrology_pdf_pdiff].mean()
+extremepdiff_analysis['n'] = round(extremepdiff_analysis['n'], 0)
+print(f'\nAnalysis 1 (mean)\n{extremepdiff_analysis.to_markdown()}')
+extremepdiff_analysis = df_extremepdiff.groupby(label_station)[regular_hydrology_pdf_pdiff].mean()
+extremepdiff_analysis['n'] = round(extremepdiff_analysis['n'], 0)
+print(f'\n\nAnalysis 2 (mean)\n{extremepdiff_analysis.to_markdown()}')
+
 
 # Footer
 funcs.print_log(file_log, f'\n\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)

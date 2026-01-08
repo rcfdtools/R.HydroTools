@@ -10,4 +10,4 @@ station,empirical_dist,p_dist,delta,deltao,eval,fit,n,best_fit,best_fit_sort
 26145090,edf_chegodayev,genlogistic,0.11269965794604767,0.4472608134160001,Δo > Δ,1,8,1,9
 26145090,edf_adamowski,genlogistic,0.11480049828218211,0.4472608134160001,Δo > Δ,1,8,1,10
 26145090,edf_weibull,genlogistic,0.12460441985080953,0.4472608134160001,Δo > Δ,1,8,1,11
-26145090,edf_california,johnsonsu,0.15782555964253808,0.4472608134160001,Δo > Δ,1,8,1,12
+26145090,edf_california,genlogistic,0.1662710865174762,0.4472608134160001,Δo > Δ,1,8,1,12
