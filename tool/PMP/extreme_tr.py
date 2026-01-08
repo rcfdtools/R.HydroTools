@@ -21,7 +21,7 @@ pd.set_option('display.width', None)
 app_version = 'v20260106'
 input_path = 'dataset/pmax24h_in/' # Your local input file folder
 output_path = 'dataset/pmax24h_out/' # Your local output file folder
-station_dataset_file = input_path + 'conventional_cesarcolombia_1959_2022.csv' # Stations dataset ●
+station_dataset_file = input_path + 'XXXXXconventional_cesarcolombia_1959_2022.csv' # Stations dataset ●
 date_min = 1900 # Minimum year to eval til year_max ●
 date_max = 2024 # Maximum year to eval since year_min ●
 label_station = 'Station' # Station column name to eval from .csv station dataset file
