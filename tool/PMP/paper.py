@@ -383,7 +383,7 @@ if create_plot:
     for i in regular_hydrology_pdf_pdiff:
         random_marker = random.choice(markers)
         plt.plot(extremepdiff_analysis.tr, extremepdiff_analysis[i], lw=1, marker=random_marker, markersize=2, alpha=0.75, label=f'{i}')
-    plt.title(f'Tr extreme % difference mean ({len(extremepdiff_analysis)} Tr´s and {total_station} stations with {minimum_sample_pdiff}+ yearly records)')
+    plt.title(f'Bestfit PDF vs. Most Used PDFs in Hydrology\nTr extreme % difference mean ({len(extremepdiff_analysis)} Tr´s and {total_station} stations with {minimum_sample_pdiff}+ yearly records)')
     plt.xlabel('Tr ($years$)')
     plt.ylabel('pdiff (%)')
     plt.legend(loc='best', frameon=True, edgecolor='white', framealpha=0.9, ncol=4, facecolor='white')
