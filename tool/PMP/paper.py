@@ -259,7 +259,7 @@ for emp in edf_dist:
 # Best fit analysis
 if minimum_sample > 0: df_bestfit = df_bestfit[df_bestfit['n'] >= minimum_sample]
 funcs.print_log(file_log, f'\n## C. Best Fit analysis ({len(df_bestfit[df_bestfit['best_fit_sort']==1])} stations)\n\n{dictionary.dicts['bestfit']}', center_div=False, on_screen = print_on_screen)
-funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../temp/diagram_bestfit.svg" width="850px">', center_div=True, on_screen = print_on_screen)
+funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../temp/diagram_bestfit.svg" width="750px">', center_div=True, on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\n{dictionary.dicts['kolmogorov_smirnov_test']}', on_screen = print_on_screen)
 if pdist_logarithmic_on:
     best_fit_text = f'\n\nFor this analysis, from the initial dataset with {len(df_catalog_filter_selected_columns)} stations we use {len(df_bestfit[df_bestfit['best_fit_sort']==1])} stations (filtering only those with n ≥ {minimum_sample} records or yearly values), {len(edf_dist)} empirical distributions, {len(df_l_pdist_scipy.query('active == True'))} probability distributions and {len(df_l_pdist_scipy.query('active == True'))} logarithmic probability distributions, corresponding to {len(df_bestfit[df_bestfit['best_fit_sort']==1]) * len(edf_dist) * (len(df_l_pdist_scipy.query('active == True')) * 2)} fit test evaluations.'

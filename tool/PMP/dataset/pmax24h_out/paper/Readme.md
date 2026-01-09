@@ -1008,7 +1008,7 @@ $P=(m-0.25)/(n+0.5)$
 Best fit in probability distribution analysis means finding the theoretical distribution (like Normal, Poisson, Exponential) that most accurately mirrors your real-world data´s patterns (shape, center, spread) for better predictions, using methods like visual checks (Q-Q plots), goodness-of-fit tests (Kolmogorov-Smirnov, Chi-Squared), and information criteria (AIC) to score and select the simplest, most representative model.
 <div align="center">
 
-<img alt="R.HydroTools" src="../../../temp/diagram_bestfit.svg" width="850px">
+<img alt="R.HydroTools" src="../../../temp/diagram_bestfit.svg" width="750px">
 
 </div>
 
