@@ -38,7 +38,8 @@ file_log = open(file_log_name, 'w+', encoding='utf-8')   # w+ create the file if
 create_plot = True # Creates, save and include plots into reports
 show_plot = False # Show plot on Python screen console
 color_plot = '#3b3b3b' # Global plot color
-minimum_sample = 8 # Exclude a station when doesn't have the minimum data sample (0 means any) ●
+minimum_sample = 8 # Exclude a station when doesn't have the minimum data sample (0 means any), used in Stations and Bestfit positions analysis. ●
+minimum_sample_pdiff = 20 # Exclude a station when doesn't have the minimum data sample (0 means any), used in Percentage difference analysis. ●
 dpi = 128 # Graph plot resolution
 create_geojson_map = True
 only_automatic_stations = False  # Evaluated only stations with automatic technology avoiding stations tag define in automatic_tag_not_in
@@ -343,24 +344,26 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
 #'''
 
 # Compare extreme values difference between bestfit PDF vs. most used PDF's in hydrology
-funcs.print_log(file_log, f'\n### Extreme values difference - Bestfit PDF vs. most used PDFs in Hydrology\n', center_div=False, on_screen = print_on_screen)
-if minimum_sample > 0: df_extremepdiff = df_extremepdiff[df_extremepdiff['n'] >= 15]
-#if minimum_sample > 0: df_extremepdiff = df_extremepdiff[df_extremepdiff['n'] >= minimum_sample]
+funcs.print_log(file_log, f'\n### Extreme values % difference - Bestfit PDF vs. Most Used PDFs in Hydrology\n', center_div=False, on_screen = print_on_screen)
+if minimum_sample > 0:
+    df_extremepdiff = df_extremepdiff[df_extremepdiff['n'] >= minimum_sample_pdiff]
 df_extremepdiff = df_extremepdiff.reset_index(drop=True)
 df_extremepdiff.index.name = 'id'
 df_extremepdiff = df_extremepdiff.replace([np.inf, -np.inf], np.nan)
 #print(f'\n{(df_extremepdiff)}')
 pdiff_suffix = 'pdiff'
 regular_hydrology_pdf_pdiff = [item + '_' + pdiff_suffix for item in regular_hydrology_pdf]
-funcs.print_log(file_log, f'\nRegular hydrology PDFs: {regular_hydrology_pdf}', center_div=False, on_screen = print_on_screen)
-funcs.print_log(file_log, f'\nRegular hydrology PDFs % difference: {regular_hydrology_pdf_pdiff}', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n* Regular hydrology PDFs: {', '.join(regular_hydrology_pdf)}', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n* Regular hydrology PDFs % difference: {', '.join(regular_hydrology_pdf_pdiff)}', center_div=False, on_screen = print_on_screen)
 regular_hydrology_pdf_pdiff = ['n'] + regular_hydrology_pdf_pdiff
 extremepdiff_analysis = df_extremepdiff.groupby('tr')[regular_hydrology_pdf_pdiff].mean()
 extremepdiff_analysis['n'] = round(extremepdiff_analysis['n'], 0)
-print(f'\nAnalysis 1 (mean)\n{extremepdiff_analysis.to_markdown()}')
-extremepdiff_analysis = df_extremepdiff.groupby(label_station)[regular_hydrology_pdf_pdiff].mean()
+funcs.print_log(file_log, f'\n\n#### Analysis 1 - Tr % difference mean ({len(extremepdiff_analysis)} stations with {minimum_sample_pdiff} yearly records)\n{extremepdiff_analysis.to_markdown()}', center_div=False, on_screen = print_on_screen)
+extremepdiff_analysis = df_extremepdiff.groupby([label_station, 'bestfit_pdf'])[regular_hydrology_pdf_pdiff].mean()
+extremepdiff_analysis = extremepdiff_analysis.reset_index()
+df_extremepdiff.index.name = 'id'
 extremepdiff_analysis['n'] = round(extremepdiff_analysis['n'], 0)
-print(f'\n\nAnalysis 2 (mean)\n{extremepdiff_analysis.to_markdown()}')
+funcs.print_log(file_log, f'\n\n#### Analysis 2 - Stations % difference mean ({len(extremepdiff_analysis)} stations with {minimum_sample_pdiff} yearly records)\n{extremepdiff_analysis.to_markdown()}', center_div=False, on_screen = print_on_screen)
 
 
 # Footer
