@@ -366,4 +366,3 @@ print(f'\n\nAnalysis 2 (mean)\n{extremepdiff_analysis.to_markdown()}')
 # Footer
 funcs.print_log(file_log, f'\n\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
 
-
