@@ -415,6 +415,7 @@ for station in stations:
     funcs.print_log(file_log,f'{dp_best_of_best[['station', 'empirical_dist', 'p_dist', 'delta', 'deltao', 'eval', 'fit', 'n', 'best_fit', 'best_fit_sort']].to_markdown()}', center_div=True, on_screen = print_on_screen)
     funcs.print_log(file_log,f'\n### 2. Extreme values and % difference analysis\n\n', on_screen = print_on_screen)
     funcs.print_log(file_log,f'{dictionary.dicts['tr']}', on_screen = print_on_screen)
+    funcs.print_log(file_log,f'\n\n{dictionary.dicts['pdiff']}', on_screen = print_on_screen)
     funcs.print_log(file_log,f'\n\n> {dictionary.dicts['risk_rate']}', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n\n:file_folder:Table: [extreme_{station_code}.csv](table/extreme_{station_code}.csv), all PDFs.  \n:file_folder:Table: [extremepdiff_{station_code}.csv](table/extremepdiff_{station_code}.csv), % difference between bestfit and most used PDFs in Hydrology.\n', on_screen = print_on_screen)
     funcs.print_log(file_log,f'Extreme values table for only best fit PDFs\n{df_tr.to_markdown()}\n', center_div=True, on_screen = print_on_screen)
