@@ -370,15 +370,15 @@ extremepdiff_analysis = extremepdiff_analysis.reset_index()
 extremepdiff_analysis.index.name = 'id'
 extremepdiff_analysis = extremepdiff_analysis.round(2)
 extremepdiff_analysis['n'] = round(extremepdiff_analysis['n'], 0)
-funcs.print_log(file_log, f'\n\n\n#### Analysis 2 - Tr % difference mean ({len(extremepdiff_analysis)} Tr with {minimum_sample_pdiff} yearly records)\n\n{extremepdiff_analysis.to_markdown()}\n', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n\n\n#### Analysis 2 - Tr % difference mean ({len(extremepdiff_analysis)} Tr with {minimum_sample_pdiff}+ yearly records)\n\n{extremepdiff_analysis.to_markdown()}\n', center_div=False, on_screen = print_on_screen)
 extremepdiff_analysis = extremepdiff_analysis.drop(columns=['n'])
 regular_hydrology_pdf_pdiff.remove('n')
 if create_plot:
-    funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/pdiff_tr.png" width="800"></img>', center_div=True, on_screen=print_on_screen)
+    funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/pdiff_tr.png" width="1000"></img>', center_div=True, on_screen=print_on_screen)
     figure(figsize=(15, 12))
     for i in regular_hydrology_pdf_pdiff:
         plt.plot(extremepdiff_analysis.tr, extremepdiff_analysis[i], lw=1, marker='o', markersize=0, alpha=0.75, label=f'{i}')
-    plt.title(f'Analysis 2 - Tr % difference mean ({len(extremepdiff_analysis)} Tr with {minimum_sample_pdiff} yearly records)')
+    plt.title(f'Analysis 2 - Tr % difference mean ({len(extremepdiff_analysis)} Tr with {minimum_sample_pdiff}+ yearly records)')
     plt.xlabel('Tr ($years$)')
     plt.ylabel('pdiff (%)')
     plt.legend(loc='best', frameon=True, edgecolor='white', framealpha=0.9, ncol=4, facecolor='white')
