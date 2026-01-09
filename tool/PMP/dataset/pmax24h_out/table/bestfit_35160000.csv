@@ -10,4 +10,4 @@ station,empirical_dist,p_dist,delta,deltao,eval,fit,n,best_fit,best_fit_sort
 35160000,edf_gringorten,loghalflogistic,0.07093174401704738,0.4472608134160001,Δo > Δ,1,8,1,9
 35160000,edf_cunnane,loghalfnorm,0.07172812541814255,0.4472608134160001,Δo > Δ,1,8,1,10
 35160000,edf_weibull,loghalfnorm,0.07797332356671494,0.4472608134160001,Δo > Δ,1,8,1,11
-35160000,edf_california,logfatiguelife,0.09124758284905822,0.4472608134160001,Δo > Δ,1,8,1,12
+35160000,edf_california,logdweibull,0.08774637086568793,0.4472608134160001,Δo > Δ,1,8,1,12

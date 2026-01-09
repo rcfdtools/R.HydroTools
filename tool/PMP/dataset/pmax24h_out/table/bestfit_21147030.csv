@@ -10,4 +10,4 @@ station,empirical_dist,p_dist,delta,deltao,eval,fit,n,best_fit,best_fit_sort
 21147030,edf_tukey,logncf,0.04490535509414484,0.5865427407550001,Δo > Δ,1,5,1,9
 21147030,edf_blom,loglaplace_asymmetric,0.04526400957403677,0.5865427407550001,Δo > Δ,1,5,1,10
 21147030,edf_weibull,logncf,0.06164073409415996,0.5865427407550001,Δo > Δ,1,5,1,11
-21147030,edf_california,loglaplace_asymmetric,0.12898795921254946,0.5865427407550001,Δo > Δ,1,5,1,12
+21147030,edf_california,dweibull,0.08108037884739683,0.5865427407550001,Δo > Δ,1,5,1,12

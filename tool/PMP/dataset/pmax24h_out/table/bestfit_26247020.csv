@@ -10,4 +10,4 @@ station,empirical_dist,p_dist,delta,deltao,eval,fit,n,best_fit,best_fit_sort
 26247020,edf_gringorten,halflogistic,0.09227187394373348,0.530385761606,Δo > Δ,1,6,1,9
 26247020,edf_weibull,halfnorm,0.09392716771648535,0.530385761606,Δo > Δ,1,6,1,10
 26247020,edf_hazen,halflogistic,0.10044180858425637,0.530385761606,Δo > Δ,1,6,1,11
-26247020,edf_california,halfnorm,0.16293064167046234,0.530385761606,Δo > Δ,1,6,1,12
+26247020,edf_california,dweibull,0.11842170787087652,0.530385761606,Δo > Δ,1,6,1,12

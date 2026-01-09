@@ -10,4 +10,4 @@ station,empirical_dist,p_dist,delta,deltao,eval,fit,n,best_fit,best_fit_sort
 29004520,edf_chegodayev,exponnorm,0.043464550748083516,0.4472608134160001,Δo > Δ,1,8,1,9
 29004520,edf_adamowski,exponnorm,0.04836651153239725,0.4472608134160001,Δo > Δ,1,8,1,10
 29004520,edf_weibull,laplace_asymmetric,0.06826971093811318,0.4472608134160001,Δo > Δ,1,8,1,11
-29004520,edf_california,laplace_asymmetric,0.08215859982700208,0.4472608134160001,Δo > Δ,1,8,1,12
+29004520,edf_california,dweibull,0.08060572589041598,0.4472608134160001,Δo > Δ,1,8,1,12

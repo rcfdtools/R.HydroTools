@@ -10,4 +10,4 @@ station,empirical_dist,p_dist,delta,deltao,eval,fit,n,best_fit,best_fit_sort
 35167000,edf_beard,logexponnorm,0.0924030395885645,0.4472608134160001,Δo > Δ,1,8,1,9
 35167000,edf_jenkinson,logexponnorm,0.0924030395885645,0.4472608134160001,Δo > Δ,1,8,1,10
 35167000,edf_filliben,logexponnorm,0.09293799958068985,0.4472608134160001,Δo > Δ,1,8,1,11
-35167000,edf_california,logwald,0.125,0.4472608134160001,Δo > Δ,1,8,1,12
+35167000,edf_california,logdweibull,0.1181897027323685,0.4472608134160001,Δo > Δ,1,8,1,12

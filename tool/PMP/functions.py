@@ -77,7 +77,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['invweibull', 3, 'MLE', 'Inverted Weibull', True],
                   ['johnsonsb', 4, 'MLE', 'Johnson SB', False],
                   ['johnsonsu', 4, 'MLE', 'Johnson Su', False],
-                  ['kappa4', 4, 'MLE', 'Kappa 4', False],
+                  ['kappa4', 4, 'MLE', 'Kappa 4', True],
                   ['kappa3', 3, 'MLE', 'Kappa 3', False],
                   ['ksone', 3, 'MLE', 'Kolmogorov-Smirnov one-sided test statistic distribution', False],
                   ['kstwo', 3, 'MLE', 'Kolmogorov-Smirnov two-sided test statistic distribution', False],  # Check: zero division, don't use
@@ -120,7 +120,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['wald', 2, 'MM', 'Wald', True],
                   ['weibull_min', 3, 'MLE', 'Weibull minimum', True],
                   ['weibull_max', 3, 'MLE', 'Weibull maximum', False],  # Check: not for rain data
-                  ['dweibull', 3, 'MLE', 'Double Weibull', False]
+                  ['dweibull', 3, 'MLE', 'Double Weibull', True]
                  ])
 
 # Probability density function - PDF (from SciPy) for detailed extreme values

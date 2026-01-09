@@ -10,4 +10,4 @@ station,empirical_dist,p_dist,delta,deltao,eval,fit,n,best_fit,best_fit_sort
 11027030,edf_chegodayev,betaprime,0.1294321676534279,0.530385761606,Δo > Δ,1,6,1,9
 11027030,edf_adamowski,betaprime,0.13063409073035104,0.530385761606,Δo > Δ,1,6,1,10
 11027030,edf_weibull,logpearson3,0.14017195606923005,0.530385761606,Δo > Δ,1,6,1,11
-11027030,edf_california,kstwobign,0.17000471099897296,0.530385761606,Δo > Δ,1,6,1,12
+11027030,edf_california,kappa4,0.16308471103791278,0.530385761606,Δo > Δ,1,6,1,12
