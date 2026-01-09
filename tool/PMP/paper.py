@@ -375,7 +375,7 @@ extremepdiff_analysis = extremepdiff_analysis.drop(columns=['n'])
 regular_hydrology_pdf_pdiff.remove('n')
 if create_plot:
     funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/pdiff_tr.png" width="1000"></img>', center_div=True, on_screen=print_on_screen)
-    figure(figsize=(15, 12))
+    figure(figsize=(10, 6))
     for i in regular_hydrology_pdf_pdiff:
         plt.plot(extremepdiff_analysis.tr, extremepdiff_analysis[i], lw=1, marker='o', markersize=0, alpha=0.75, label=f'{i}')
     plt.title(f'Analysis 2 - Tr % difference mean ({len(extremepdiff_analysis)} Tr with {minimum_sample_pdiff}+ yearly records)')
