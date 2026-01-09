@@ -41,7 +41,8 @@ create_plot = True # Creates, save and include plots into reports
 show_plot = False # Show plot on Python screen console
 color_plot = '#3b3b3b' # Global plot color
 minimum_sample = 8 # Exclude a station when doesn't have the minimum data sample (0 means any), used in Stations and Bestfit positions analysis. ●
-minimum_sample_pdiff = 20 # Exclude a station when doesn't have the minimum data sample (0 means any), used in Percentage difference analysis. ●
+minimum_sample_pdiff = 20 # Exclude a station when doesn't have the minimum records data sample (0 means any), used in Percentage difference analysis. ●
+pdiff_max_tr = 1000 # Maximum return period to eval, used in percentage difference analysis (0 means any) ●
 dpi = 128 # Graph plot resolution
 create_geojson_map = True
 only_automatic_stations = False  # Evaluated only stations with automatic technology avoiding stations tag define in automatic_tag_not_in
@@ -356,6 +357,8 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
 funcs.print_log(file_log, f'\n## D. Extreme % difference - Bestfit PDF vs. Most Used PDFs in Hydrology\n', center_div=False, on_screen = print_on_screen)
 if minimum_sample > 0:
     df_extremepdiff = df_extremepdiff[df_extremepdiff['n'] >= minimum_sample_pdiff]
+if pdiff_max_tr > 0:
+    df_extremepdiff = df_extremepdiff[df_extremepdiff['tr'] <= pdiff_max_tr]
 df_extremepdiff = df_extremepdiff.reset_index(drop=True)
 df_extremepdiff.index.name = 'id'
 df_extremepdiff = df_extremepdiff.replace([np.inf, -np.inf], np.nan)
