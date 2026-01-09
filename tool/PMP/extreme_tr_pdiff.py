@@ -46,7 +46,7 @@ for station in stations:
     df_extreme_station['bestfit_val'] = df_extreme_station[bestfit_station_pdf]
     # Porcentual difference (diff)
     for regular in regular_hydrology_pdf:
-        df_extreme_station[f'{regular}_{pdiff_suffix}'] = (1-(df_extreme_station['bestfit_val']/df_extreme_station[regular]))*100
+        df_extreme_station[f'{regular}_{pdiff_suffix}'] = round((1-(df_extreme_station['bestfit_val']/df_extreme_station[regular]))*100, 2)
         general_fields = general_fields + [f'{regular}_pdiff']
     df_extreme_station[general_fields].to_csv(f'{input_path}extreme{pdiff_suffix}_{station}.csv', index=False)
     #print(f'\n{df_extreme_station[general_fields].to_markdown()}')

@@ -1500,8 +1500,8 @@ Zonal analysis for hydrographic area: **Amazonas** (2 stations)
 
 ### Extreme values % difference - Bestfit PDF vs. Most Used PDFs in Hydrology
 
-* Regular hydrology PDFs: norm, lognorm, gumbel_l, gumbel_r, gamma, pearson3, logpearson3, dweibull, kappa4
-* Regular hydrology PDFs % difference: norm_pdiff, lognorm_pdiff, gumbel_l_pdiff, gumbel_r_pdiff, gamma_pdiff, pearson3_pdiff, logpearson3_pdiff, dweibull_pdiff, kappa4_pdiff
+
+The extreme value porcentage difference is evaluated as $pdiff = 1 - (ETrBf / ETr) * 100$, where _ETrBf_ correspond to the bestfit extreme value for a specific recurrence interval and _ETr_ correspond to the extreme value for one of the most used PDFsused in hydrology.The most regular PDFs used in hydrology are : norm, lognorm, gumbel_l, gumbel_r, gamma, pearson3, logpearson3, dweibull, kappa4
 
 
 #### Analysis 1 - Tr % difference mean (15 Tr with 20 yearly records)

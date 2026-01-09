@@ -353,8 +353,8 @@ df_extremepdiff = df_extremepdiff.replace([np.inf, -np.inf], np.nan)
 #print(f'\n{(df_extremepdiff)}')
 pdiff_suffix = 'pdiff'
 regular_hydrology_pdf_pdiff = [item + '_' + pdiff_suffix for item in regular_hydrology_pdf]
-funcs.print_log(file_log, f'\n* Regular hydrology PDFs: {', '.join(regular_hydrology_pdf)}', center_div=False, on_screen = print_on_screen)
-funcs.print_log(file_log, f'\n* Regular hydrology PDFs % difference: {', '.join(regular_hydrology_pdf_pdiff)}', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n{dictionary.dicts['pdiff']}', on_screen = print_on_screen)
+funcs.print_log(file_log, f'The most regular PDFs used in hydrology are : {', '.join(regular_hydrology_pdf)}', center_div=False, on_screen = print_on_screen)
 regular_hydrology_pdf_pdiff = ['n'] + regular_hydrology_pdf_pdiff
 extremepdiff_analysis = df_extremepdiff.groupby('tr')[regular_hydrology_pdf_pdiff].mean()
 extremepdiff_analysis['n'] = round(extremepdiff_analysis['n'], 0)

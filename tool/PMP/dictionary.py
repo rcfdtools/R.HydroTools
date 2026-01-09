@@ -1,7 +1,7 @@
 # Dictionary definitions
 # Author https://github.com/rcfdtools
 
-# General vars description
+# General vars description in pmp.py
 general_vars = ([['app_version', 'app_version'], # App control version
           ['runtime', 'runtime'],
           ['python_version', 'Python version'],
@@ -117,6 +117,8 @@ dicts = {
     'station_record': 'Number of records (yearly values) founded per station for the probability distributions analysis. The current study, consider as valid any station with at least 8 years of records to include a wide geographic range (keep in mind for specific hydrologic studies, the minimal recommended length has to be at least 10 years, which are necessary to obtain stable storm or flow properties).\n\n> In this sections, some of the labels displayed in the chapters titles as shown in the original spanish typing contain in the National Stations Catalog (CNE).',
 
     'risk_rate': 'risk_rate: assuming the return period as the project useful life.',
+
+    'pdiff': 'The extreme value porcentage difference is evaluated as $pdiff = 1 - (ETrBf / ETr) * 100$, where _ETrBf_ correspond to the bestfit extreme value for a specific recurrence interval and _ETr_ correspond to the extreme value for one of the most used PDFsused in hydrology.',
 
     'disclaimer': '**APP DISCLAIMER**: NO WARRANTY - This software is provided by [github.com/rcfdtools](https://github.com/rcfdtools) "as is", without any express or implied warranty, including warranties of merchantability, fitness for a particular purpose, or non-infringement. There is no guarantee that the software will be error-free or operate without interruption. LIMITATION OF LIABILITY - Neither the authors nor copyright holders will be liable for claims or damages arising from the software or its use. You are responsible for determining if the software is appropriate for your use and assume all associated risks, including errors, legal compliance, and data loss. NO PROFESSIONAL ADVICE - The software provides general information and does not offer professional advice. It should not replace consultation with professional advisors.',
 }
