@@ -848,8 +848,8 @@ Cumulative Distribution Function (CDF), denoted as $F$<sub>$X$</sub>$(x)$, is a 
 
 An Empirical Distribution Function (EDF) is a step-function estimate of a true cumulative distribution function (CDF) based on observed sample data, representing the proportion of data points less than or equal to a given value. It is calculated by ordering your data and jumping up by $1/n$ (where $n$ is sample size) at each unique data point, allowing analysis without assuming an underlying population distribution, and it gets closer to the true CDF as the sample size grows. For the empirical probability calculations, the parameter $m$ correspond to the order number which means the position of the $x$ values in an ascending order list.
 
-| # | "EDF" | "Year" | "Description" | "Equation" |
-|---|---|---|---|---|
+| id | EDF | Year | Description | Equation |
+|:---:|---|:---:|:---|:---|
 | 1 | EDF California | 1923 | California´s estimates the true probability distribution of water-related data (like rainfall, streamflow) using observed samples, crucial for risk assessment. | $P=m/n$ |
 | 2 | EDF Hazen | 1930 | Hazen method for plotting positions is a formula used to estimate the empirical cumulative probability distribution of flood events or other hydrological data. This formula often results in biased estimations, particularly when extrapolating to extreme events (high return periods). | $P=(m-0.5)/n$ |
 | 3 | EDF Weibull | 1939 | Weibull plotting position formula is an empirical method used to estimate the non-exceedance probability or plotting position for a set of observed data, is often recommended or widely used in practice, particularly in flood frequency analysis. | $P=m/(n+1)$ |

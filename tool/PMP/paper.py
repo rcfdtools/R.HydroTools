@@ -244,7 +244,7 @@ edf_dist = df_edf_dist_dict['edf_dist'].unique()
 funcs.print_log(file_log, f'\n\n### 2. Empirical distributions functions ({len(edf_dist)} available)\n\n', on_screen = print_on_screen)
 funcs.print_log(file_log, f'{dictionary.dicts['edf']}\n\n', on_screen = print_on_screen)
 num_inc = 1
-funcs.print_log(file_log, f'| # | "EDF" | "Year" | "Description" | "Equation" |\n|---|---|---|---|---|\n', on_screen = print_on_screen)
+funcs.print_log(file_log, f'| id | EDF | Year | Description | Equation |\n|:---:|---|:---:|:---|:---|\n', on_screen = print_on_screen)
 for emp in edf_dist:
     df_edf_dist_dict_filter = df_edf_dist_dict[df_edf_dist_dict['edf_dist'] == emp]
     funcs.print_log(file_log,f'| {num_inc} | {df_edf_dist_dict_filter['edf_name'].to_string(index=False, header=False)} | {df_edf_dist_dict_filter['edf_year'].to_string(index=False, header=False)} | {df_edf_dist_dict_filter['edf_desc'].to_string(index=False, header=False)} | ${df_edf_dist_dict_filter['edf_expression'].to_string(index=False, header=False)}$ |\n',center_div=False, on_screen=print_on_screen)
