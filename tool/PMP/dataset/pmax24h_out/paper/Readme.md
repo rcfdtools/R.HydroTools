@@ -1500,42 +1500,41 @@ Zonal analysis for hydrographic area: **Amazonas** (2 stations)
 
 ### Extreme values % difference - Bestfit PDF vs. Most Used PDFs in Hydrology
 
-
-The extreme value porcentage difference is evaluated as $pdiff = 1 - (ETrBf / ETr) * 100$, where _ETrBf_ correspond to the bestfit extreme value for a specific recurrence interval and _ETr_ correspond to the extreme value for one of the most used PDFsused in hydrology.The most regular PDFs used in hydrology are : norm, lognorm, gumbel_l, gumbel_r, gamma, pearson3, logpearson3, dweibull, kappa4
+The extreme value porcentage difference is evaluated as $pdiff = 1 - (ETrBf / ETr) * 100$, where _ETrBf_ correspond to the bestfit extreme value for a specific recurrence interval and _ETr_ correspond to the extreme value for one of the most used PDFsused in hydrology. The most regular PDFs used in hydrology are : norm, lognorm, gumbel_l, gumbel_r, gamma, pearson3, logpearson3, dweibull, kappa4.
 
 
 #### Analysis 1 - Tr % difference mean (15 Tr with 20 yearly records)
 
 |      tr |   n |   norm_pdiff |   lognorm_pdiff |   gumbel_l_pdiff |   gumbel_r_pdiff |   gamma_pdiff |   pearson3_pdiff |   logpearson3_pdiff |   dweibull_pdiff |   kappa4_pdiff |
 |--------:|----:|-------------:|----------------:|-----------------:|-----------------:|--------------:|-----------------:|--------------------:|-----------------:|---------------:|
-|    2    |  20 |    6.99482   |       -22.8657  |         14.0542  |        -1.53609  |     -1.49637  |       -0.0640279 |            -6.04636 |        -1.55274  |       15.8133  |
-|    2.33 |  20 |    8.02783   |       -13.9704  |         13.5799  |        -0.209736 |      0.107523 |        1.47462   |            -1.37908 |         0.756614 |       19.4507  |
-|    5    |  20 |    5.88361   |         8.72648 |          5.21313 |         1.73384  |      2.45626  |        3.10633   |             5.83422 |        -3.37842  |       22.8804  |
-|   10    |  20 |    0.0345299 |        15.6038  |         -5.65928 |         0.711051 |      1.16834  |        1.09448   |             4.42456 |        -7.58597  |       17.1967  |
-|   15    |  20 |   -4.24988   |        17.0671  |        -12.8644  |        -0.536478 |     -0.355532 |       -0.857991  |             2.35746 |       -10.2063   |       11.9591  |
-|   20    |  20 |   -7.62118   |        17.3937  |        -18.3437  |        -1.66984  |     -1.72016  |       -2.53264   |             0.52954 |       -12.1797   |        7.58063 |
-|   25    |  20 |  -10.4251    |        17.3279  |        -22.8163  |        -2.68858  |     -2.93493  |       -3.99312   |            -1.06845 |       -13.7918   |        3.83445 |
-|   50    |  20 |  -20.2547    |        15.72    |        -38.107   |        -6.65941  |     -7.59634  |       -9.46149   |            -6.98616 |       -19.3692   |       -9.70972 |
-|   75    |  20 |  -26.8761    |        13.9636  |        -48.1888  |        -9.58959  |    -10.9862   |      -13.3659    |           -11.137   |       -23.12     |      -19.0227  |
-|  100    |  20 |  -32.0176    |        12.3955  |        -55.9399  |       -11.9671   |    -13.7162   |      -16.4858    |           -14.417   |       -26.0419   |      -26.3081  |
-|  200    |  20 |  -46.1527    |         7.56836 |        -77.0276  |       -18.8312   |    -21.5309   |      -25.3472    |           -23.6023  |       -34.1232   |      -46.4771  |
-|  250    |  20 |  -51.3017    |         5.69842 |        -84.6555  |       -21.4194   |    -24.4595   |      -28.6513    |           -26.9903  |       -37.0813   |      -53.8592  |
-|  500    |  20 |  -69.5237    |        -1.14168 |       -111.527   |       -30.8209   |    -35.0461   |      -40.5544    |           -39.0836  |       -47.5815   |      -80.0995  |
-|  750    |  20 |  -82.0053    |        -5.91903 |       -129.874   |       -37.407    |    -42.4301   |      -48.8339    |           -47.4198  |       -54.7811   |      -98.1696  |
-| 1000    |  20 |  -91.8201    |        -9.68865 |       -144.289   |       -42.6387   |    -48.2829   |      -55.3891    |           -53.9878  |       -60.4363   |     -112.433   |
+|    2    |  20 |         6.99 |          -22.86 |            14.06 |            -1.54 |         -1.5  |            -0.06 |               -6.05 |            -1.55 |          15.81 |
+|    2.33 |  20 |         8.03 |          -13.97 |            13.58 |            -0.21 |          0.11 |             1.47 |               -1.38 |             0.76 |          19.45 |
+|    5    |  20 |         5.88 |            8.73 |             5.22 |             1.74 |          2.46 |             3.1  |                5.84 |            -3.38 |          22.88 |
+|   10    |  20 |         0.04 |           15.6  |            -5.66 |             0.71 |          1.17 |             1.09 |                4.42 |            -7.58 |          17.2  |
+|   15    |  20 |        -4.25 |           17.07 |           -12.87 |            -0.54 |         -0.35 |            -0.86 |                2.36 |           -10.21 |          11.96 |
+|   20    |  20 |        -7.62 |           17.4  |           -18.34 |            -1.67 |         -1.72 |            -2.53 |                0.53 |           -12.18 |           7.58 |
+|   25    |  20 |       -10.42 |           17.33 |           -22.82 |            -2.69 |         -2.93 |            -3.99 |               -1.07 |           -13.79 |           3.83 |
+|   50    |  20 |       -20.26 |           15.72 |           -38.11 |            -6.66 |         -7.6  |            -9.46 |               -6.99 |           -19.37 |          -9.71 |
+|   75    |  20 |       -26.88 |           13.97 |           -48.19 |            -9.59 |        -10.99 |           -13.37 |              -11.14 |           -23.12 |         -19.02 |
+|  100    |  20 |       -32.02 |           12.4  |           -55.94 |           -11.97 |        -13.72 |           -16.48 |              -14.42 |           -26.04 |         -26.31 |
+|  200    |  20 |       -46.15 |            7.57 |           -77.03 |           -18.83 |        -21.53 |           -25.35 |              -23.6  |           -34.12 |         -46.48 |
+|  250    |  20 |       -51.3  |            5.7  |           -84.66 |           -21.42 |        -24.46 |           -28.65 |              -26.99 |           -37.08 |         -53.86 |
+|  500    |  20 |       -69.53 |           -1.14 |          -111.53 |           -30.82 |        -35.05 |           -40.56 |              -39.08 |           -47.58 |         -80.1  |
+|  750    |  20 |       -82.01 |           -5.92 |          -129.88 |           -37.41 |        -42.43 |           -48.83 |              -47.42 |           -54.78 |         -98.17 |
+| 1000    |  20 |       -91.82 |           -9.69 |          -144.29 |           -42.64 |        -48.28 |           -55.39 |              -53.99 |           -60.44 |        -112.43 |
 
 
 #### Analysis 2 - Stations % difference mean (8 stations with 20+ yearly records)
 
 |   id |   station | bestfit_pdf           |   n |   norm_pdiff |   lognorm_pdiff |   gumbel_l_pdiff |   gumbel_r_pdiff |   gamma_pdiff |   pearson3_pdiff |   logpearson3_pdiff |   dweibull_pdiff |   kappa4_pdiff |
 |-----:|----------:|:----------------------|----:|-------------:|----------------:|-----------------:|-----------------:|--------------:|-----------------:|--------------------:|-----------------:|---------------:|
-|    0 |  21185090 | truncnorm             |  20 |     12.3963  |        53.8218  |        -0.012587 |         20.2651  |      12.7325  |        12.7273   |            42.0753  |          1.77835 |        1.43811 |
-|    1 |  21195170 | loginvweibull         |  20 |    -43.237   |       -32.8204  |       -58.715    |        -28.6239  |     -25.1591  |       -36.4516   |           -29.5561  |        -39.6079  |      -53.115   |
-|    2 |  21206990 | t                     |  20 |     -1.18698 |        57.551   |       -15.7532   |          9.59367 |       5.61473 |         5.58375  |           -32.4451  |         -1.62477 |        5.25902 |
-|    3 |  21209920 | fatiguelife           |  20 |    -34.2333  |       -14.0138  |       -61.9867   |        -13.6686  |      -6.47941 |        -7.19266  |             8.69065 |        -40.8813  |       -3.63784 |
-|    4 |  21235030 | loglaplace_asymmetric |  20 |   -106.344   |       -43.9378  |      -147.888    |        -71.4774  |     -71.7681  |       -78.0161   |           -72.7869  |        -78.8414  |     -113.252   |
-|    5 |  23065180 | laplace               |  20 |     -7.81646 |        43.6501  |       -25.0546   |          4.97034 |       1.44787 |         0.440588 |            -5.71643 |          5.04482 |       -2.58008 |
-|    6 |  24025090 | loglaplace_asymmetric |  20 |    -35.0685  |       -19.3438  |       -50.789    |        -20.6197  |     -29.241   |       -29.497    |           -30.9747  |        -27.6429  |      -35.1831  |
-|    7 |  24035360 | laplace_asymmetric    |  20 |     -9.20703 |        -3.37158 |       -21.9058   |          1.67826 |       2.54681 |         4.47962  |             3.92815 |         -5.14367 |       15.8106  |
+|    0 |  21185090 | truncnorm             |  20 |        12.4  |           53.82 |            -0.01 |            20.26 |         12.73 |            12.73 |               42.08 |             1.78 |           1.44 |
+|    1 |  21195170 | loginvweibull         |  20 |       -43.24 |          -32.82 |           -58.71 |           -28.62 |        -25.16 |           -36.45 |              -29.56 |           -39.61 |         -53.11 |
+|    2 |  21206990 | t                     |  20 |        -1.19 |           57.55 |           -15.75 |             9.59 |          5.61 |             5.58 |              -32.44 |            -1.62 |           5.26 |
+|    3 |  21209920 | fatiguelife           |  20 |       -34.23 |          -14.01 |           -61.99 |           -13.67 |         -6.48 |            -7.19 |                8.69 |           -40.88 |          -3.64 |
+|    4 |  21235030 | loglaplace_asymmetric |  20 |      -106.34 |          -43.94 |          -147.89 |           -71.48 |        -71.77 |           -78.02 |              -72.79 |           -78.84 |        -113.25 |
+|    5 |  23065180 | laplace               |  20 |        -7.82 |           43.65 |           -25.05 |             4.97 |          1.45 |             0.44 |               -5.72 |             5.04 |          -2.58 |
+|    6 |  24025090 | loglaplace_asymmetric |  20 |       -35.07 |          -19.34 |           -50.79 |           -20.62 |        -29.24 |           -29.5  |              -30.98 |           -27.64 |         -35.18 |
+|    7 |  24035360 | laplace_asymmetric    |  20 |        -9.21 |           -3.37 |           -21.91 |             1.68 |          2.55 |             4.48 |                3.93 |            -5.14 |          15.81 |
 
 <sub>**APP DISCLAIMER**: NO WARRANTY - This software is provided by [github.com/rcfdtools](https://github.com/rcfdtools) "as is", without any express or implied warranty, including warranties of merchantability, fitness for a particular purpose, or non-infringement. There is no guarantee that the software will be error-free or operate without interruption. LIMITATION OF LIABILITY - Neither the authors nor copyright holders will be liable for claims or damages arising from the software or its use. You are responsible for determining if the software is appropriate for your use and assume all associated risks, including errors, legal compliance, and data loss. NO PROFESSIONAL ADVICE - The software provides general information and does not offer professional advice. It should not replace consultation with professional advisors.</sub>

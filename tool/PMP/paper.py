@@ -354,14 +354,16 @@ df_extremepdiff = df_extremepdiff.replace([np.inf, -np.inf], np.nan)
 pdiff_suffix = 'pdiff'
 regular_hydrology_pdf_pdiff = [item + '_' + pdiff_suffix for item in regular_hydrology_pdf]
 funcs.print_log(file_log, f'\n{dictionary.dicts['pdiff']}', on_screen = print_on_screen)
-funcs.print_log(file_log, f'The most regular PDFs used in hydrology are : {', '.join(regular_hydrology_pdf)}', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f' The most regular PDFs used in hydrology are : {', '.join(regular_hydrology_pdf)}.', center_div=False, on_screen = print_on_screen)
 regular_hydrology_pdf_pdiff = ['n'] + regular_hydrology_pdf_pdiff
 extremepdiff_analysis = df_extremepdiff.groupby('tr')[regular_hydrology_pdf_pdiff].mean()
+extremepdiff_analysis = extremepdiff_analysis.round(2)
 extremepdiff_analysis['n'] = round(extremepdiff_analysis['n'], 0)
 funcs.print_log(file_log, f'\n\n\n#### Analysis 1 - Tr % difference mean ({len(extremepdiff_analysis)} Tr with {minimum_sample_pdiff} yearly records)\n\n{extremepdiff_analysis.to_markdown()}', center_div=False, on_screen = print_on_screen)
 extremepdiff_analysis = df_extremepdiff.groupby([label_station, 'bestfit_pdf'])[regular_hydrology_pdf_pdiff].mean()
 extremepdiff_analysis = extremepdiff_analysis.reset_index()
 extremepdiff_analysis.index.name = 'id'
+extremepdiff_analysis = extremepdiff_analysis.round(2)
 extremepdiff_analysis['n'] = round(extremepdiff_analysis['n'], 0)
 funcs.print_log(file_log, f'\n\n\n#### Analysis 2 - Stations % difference mean ({len(extremepdiff_analysis)} stations with {minimum_sample_pdiff}+ yearly records)\n\n{extremepdiff_analysis.to_markdown()}', center_div=False, on_screen = print_on_screen)
 
