@@ -1517,7 +1517,7 @@ The extreme value porcentage difference is evaluated as $pdiff = 1 - (ETrBf / ET
 |    7 |  24035360 | laplace_asymmetric    |  20 |        -9.21 |           -3.37 |           -21.91 |             1.68 |          2.55 |             4.48 |                3.93 |            -5.14 |          15.81 |
 
 
-#### Analysis 2 - Tr % difference mean (15 Tr with 20+ yearly records)
+#### Analysis 2 - Tr % difference mean (15 Tr´s with 20+ yearly records)
 
 |   id |      tr |   n |   norm_pdiff |   lognorm_pdiff |   gumbel_l_pdiff |   gumbel_r_pdiff |   gamma_pdiff |   pearson3_pdiff |   logpearson3_pdiff |   dweibull_pdiff |   kappa4_pdiff |
 |-----:|--------:|----:|-------------:|----------------:|-----------------:|-----------------:|--------------:|-----------------:|--------------------:|-----------------:|---------------:|
