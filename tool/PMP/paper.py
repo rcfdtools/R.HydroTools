@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from matplotlib.pyplot import figure
 import numpy as np
+import random
 
 
 # General setup
@@ -345,7 +346,7 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
 #'''
 
 # Compare extreme values difference between bestfit PDF vs. most used PDF's in hydrology
-funcs.print_log(file_log, f'\n### Extreme values % difference - Bestfit PDF vs. Most Used PDFs in Hydrology\n', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n### Extreme % difference - Bestfit PDF vs. Most Used PDFs in Hydrology\n', center_div=False, on_screen = print_on_screen)
 if minimum_sample > 0:
     df_extremepdiff = df_extremepdiff[df_extremepdiff['n'] >= minimum_sample_pdiff]
 df_extremepdiff = df_extremepdiff.reset_index(drop=True)
@@ -356,6 +357,7 @@ pdiff_suffix = 'pdiff'
 regular_hydrology_pdf_pdiff = [item + '_' + pdiff_suffix for item in regular_hydrology_pdf]
 funcs.print_log(file_log, f'\n{dictionary.dicts['pdiff']}', on_screen = print_on_screen)
 funcs.print_log(file_log, f' The most regular PDFs used in hydrology are : {', '.join(regular_hydrology_pdf)}.', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n This analysis include only stations with {minimum_sample_pdiff}+ yearly records.', on_screen = print_on_screen)
 regular_hydrology_pdf_pdiff = ['n'] + regular_hydrology_pdf_pdiff
 # Analysis 1 - Stations % difference mean
 extremepdiff_analysis = df_extremepdiff.groupby([label_station, 'bestfit_pdf'])[regular_hydrology_pdf_pdiff].mean()
@@ -363,22 +365,25 @@ extremepdiff_analysis = extremepdiff_analysis.reset_index()
 extremepdiff_analysis.index.name = 'id'
 extremepdiff_analysis = extremepdiff_analysis.round(2)
 extremepdiff_analysis['n'] = round(extremepdiff_analysis['n'], 0)
-funcs.print_log(file_log, f'\n\n\n#### Analysis 1 - Stations % difference mean ({len(extremepdiff_analysis)} stations with {minimum_sample_pdiff}+ yearly records)\n\n{extremepdiff_analysis.to_markdown()}', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n\n\n#### Analysis 1 - Stations extreme % difference mean ({len(extremepdiff_analysis)} stations)\n\n{extremepdiff_analysis.to_markdown()}', center_div=False, on_screen = print_on_screen)
+total_station = len(extremepdiff_analysis)
 # Analysis 2 - Tr % difference mean
 extremepdiff_analysis = df_extremepdiff.groupby('tr')[regular_hydrology_pdf_pdiff].mean()
 extremepdiff_analysis = extremepdiff_analysis.reset_index()
 extremepdiff_analysis.index.name = 'id'
 extremepdiff_analysis = extremepdiff_analysis.round(2)
 extremepdiff_analysis['n'] = round(extremepdiff_analysis['n'], 0)
-funcs.print_log(file_log, f'\n\n\n#### Analysis 2 - Tr % difference mean ({len(extremepdiff_analysis)} Tr´s with {minimum_sample_pdiff}+ yearly records)\n\n{extremepdiff_analysis.to_markdown()}\n', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n\n\n#### Analysis 2 - Tr extreme % difference mean ({len(extremepdiff_analysis)} Tr´s)\n\n{extremepdiff_analysis.to_markdown()}\n', center_div=False, on_screen = print_on_screen)
 extremepdiff_analysis = extremepdiff_analysis.drop(columns=['n'])
 regular_hydrology_pdf_pdiff.remove('n')
 if create_plot:
     funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/pdiff_tr.png" width="1000"></img>', center_div=True, on_screen=print_on_screen)
+    markers = ['o', 'x', '+', 'D', 's', '^', 'v', '<', '>', 'p', 'h', '*', 'P', 'X']
     figure(figsize=(10, 6))
     for i in regular_hydrology_pdf_pdiff:
-        plt.plot(extremepdiff_analysis.tr, extremepdiff_analysis[i], lw=1, marker='o', markersize=0, alpha=0.75, label=f'{i}')
-    plt.title(f'Analysis 2 - Tr % difference mean ({len(extremepdiff_analysis)} Tr´s with {minimum_sample_pdiff}+ yearly records)')
+        random_marker = random.choice(markers)
+        plt.plot(extremepdiff_analysis.tr, extremepdiff_analysis[i], lw=1, marker=random_marker, markersize=2, alpha=0.75, label=f'{i}')
+    plt.title(f'Tr extreme % difference mean ({len(extremepdiff_analysis)} Tr´s and {total_station} stations with {minimum_sample_pdiff}+ yearly records)')
     plt.xlabel('Tr ($years$)')
     plt.ylabel('pdiff (%)')
     plt.legend(loc='best', frameon=True, edgecolor='white', framealpha=0.9, ncol=4, facecolor='white')
@@ -386,7 +391,6 @@ if create_plot:
     if show_plot: plt.show()
     plt.savefig(f'{output_path}graph/pdiff_tr.png', dpi=dpi)
     plt.close()
-
 
 
 # Footer
