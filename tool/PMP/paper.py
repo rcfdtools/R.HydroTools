@@ -48,13 +48,13 @@ only_automatic_stations = False  # Evaluated only stations with automatic techno
 automatic_tag_not_in = ['Convencional', '(No data)'] # Tag to exclude. Keep in mind some conventional stations are now automatic
 #automatic_tag_not_in = ['(No data)'] # Tag to exclude. Keep in mind some conventional stations are now automatic
 exclude_stations = True
-extension = 'csv'
 stations_to_exclude = ['25020230', '25020240', '25020250', '25020260', '25020280', '25020690', '25020920', '25021240', '25021650', '25025250', '28010070', '28020080', '28020150', '28020230', '28020310', '28020420', '28020440', '28020460', '28020600', '28025070', '28025080', '28025090', '28035010', '28035040', '28040310', '28040350', '14015020', '21202200']
 histogram_custom_bins_n = [5, 6, 7, 8, 9, 10, 15, 20, 25] # Bins for n years values histogram per station evaluated
 #histogram_custom_bins_n = [5, 6, 7, 8, 9, 10, 15, 20, 25, 65] # Bins for n years values histogram per station evaluated, include 65 for conventional stations
-best_fit_sort_eval = 3 # Best fit sort positions to eval. 1 means we only evaluate the first best fit position.
+best_fit_sort_eval = 1 # Best fit sort positions to eval. 1 means we only evaluate the first best fit position ●
 pdist_logarithmic_on = True # Eval every SciPy distribution were evaluated as logarithmic with pmp.py ●
 regular_hydrology_pdf = ['norm', 'lognorm', 'gumbel_l', 'gumbel_r', 'gamma', 'pearson3', 'logpearson3', 'dweibull', 'kappa4'] # Most used PDFs in hydrology (bestfit difference analysis) ●
+extension = 'csv'
 pdiff_suffix = 'pdiff'
 
 
@@ -62,7 +62,7 @@ pdiff_suffix = 'pdiff'
 funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen = print_on_screen)
 funcs.print_log(file_log, f'# {dictionary.dicts['study_name']}\n', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\n{dictionary.dicts['pmp']}\n\n', on_screen = print_on_screen)
-funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../temp/diagram_pmp.svg" width="850px">', center_div=True, on_screen = print_on_screen)
+funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../temp/diagram_pmp.svg" width="800px">', center_div=True, on_screen = print_on_screen)
 
 ########### Best fit files join ###########
 all_filenames = [i for i in glob.glob(os.path.join(input_path, 'bestfit_*.{}'.format(extension)))]
@@ -244,6 +244,12 @@ edf_dist = df_edf_dist_dict['edf_dist'].unique()
 funcs.print_log(file_log, f'\n\n### 2. Empirical distributions functions ({len(edf_dist)} available)\n\n', on_screen = print_on_screen)
 funcs.print_log(file_log, f'{dictionary.dicts['edf']}\n\n', on_screen = print_on_screen)
 num_inc = 1
+funcs.print_log(file_log, f'| # | "EDF" | "Year" | "Description" | "Equation" |\n|---|---|---|---|---|\n', on_screen = print_on_screen)
+for emp in edf_dist:
+    df_edf_dist_dict_filter = df_edf_dist_dict[df_edf_dist_dict['edf_dist'] == emp]
+    funcs.print_log(file_log,f'| {num_inc} | {df_edf_dist_dict_filter['edf_name'].to_string(index=False, header=False)} | {df_edf_dist_dict_filter['edf_year'].to_string(index=False, header=False)} | {df_edf_dist_dict_filter['edf_desc'].to_string(index=False, header=False)} | ${df_edf_dist_dict_filter['edf_expression'].to_string(index=False, header=False)}$ |\n',center_div=False, on_screen=print_on_screen)
+    num_inc += 1
+'''
 for emp in edf_dist:
     df_edf_dist_dict_filter = df_edf_dist_dict[df_edf_dist_dict['edf_dist'] == emp]
     funcs.print_log(file_log,
@@ -254,12 +260,13 @@ for emp in edf_dist:
     funcs.print_log(file_log, f'\n${df_edf_dist_dict_filter['edf_expression'].to_string(index=False, header=False)}$\n',
                     center_div=True, on_screen=print_on_screen)
     num_inc += 1
+'''
 
 
 # Best fit analysis
 if minimum_sample > 0: df_bestfit = df_bestfit[df_bestfit['n'] >= minimum_sample]
-funcs.print_log(file_log, f'\n## C. Best Fit analysis ({len(df_bestfit[df_bestfit['best_fit_sort']==1])} stations)\n\n{dictionary.dicts['bestfit']}', center_div=False, on_screen = print_on_screen)
-funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../temp/diagram_bestfit.svg" width="700px">', center_div=True, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n\n## C. Best Fit analysis ({len(df_bestfit[df_bestfit['best_fit_sort']==1])} stations)\n\n{dictionary.dicts['bestfit']}', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../temp/diagram_bestfit.svg" width="600px">', center_div=True, on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\n{dictionary.dicts['kolmogorov_smirnov_test']}', on_screen = print_on_screen)
 if pdist_logarithmic_on:
     best_fit_text = f'\n\nFor this analysis, from the initial dataset with {len(df_catalog_filter_selected_columns)} stations we use {len(df_bestfit[df_bestfit['best_fit_sort']==1])} stations (filtering only those with n ≥ {minimum_sample} records or yearly values), {len(edf_dist)} empirical distributions, {len(df_l_pdist_scipy.query('active == True'))} probability distributions and {len(df_l_pdist_scipy.query('active == True'))} logarithmic probability distributions, corresponding to {len(df_bestfit[df_bestfit['best_fit_sort']==1]) * len(edf_dist) * (len(df_l_pdist_scipy.query('active == True')) * 2)} fit test evaluations.'
