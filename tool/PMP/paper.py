@@ -7,6 +7,7 @@ import functions as funcs
 import dictionary as dictionary
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
+from matplotlib.pyplot import figure
 import numpy as np
 
 
@@ -356,16 +357,36 @@ regular_hydrology_pdf_pdiff = [item + '_' + pdiff_suffix for item in regular_hyd
 funcs.print_log(file_log, f'\n{dictionary.dicts['pdiff']}', on_screen = print_on_screen)
 funcs.print_log(file_log, f' The most regular PDFs used in hydrology are : {', '.join(regular_hydrology_pdf)}.', center_div=False, on_screen = print_on_screen)
 regular_hydrology_pdf_pdiff = ['n'] + regular_hydrology_pdf_pdiff
-extremepdiff_analysis = df_extremepdiff.groupby('tr')[regular_hydrology_pdf_pdiff].mean()
-extremepdiff_analysis = extremepdiff_analysis.round(2)
-extremepdiff_analysis['n'] = round(extremepdiff_analysis['n'], 0)
-funcs.print_log(file_log, f'\n\n\n#### Analysis 1 - Tr % difference mean ({len(extremepdiff_analysis)} Tr with {minimum_sample_pdiff} yearly records)\n\n{extremepdiff_analysis.to_markdown()}', center_div=False, on_screen = print_on_screen)
+# Analysis 1 - Stations % difference mean
 extremepdiff_analysis = df_extremepdiff.groupby([label_station, 'bestfit_pdf'])[regular_hydrology_pdf_pdiff].mean()
 extremepdiff_analysis = extremepdiff_analysis.reset_index()
 extremepdiff_analysis.index.name = 'id'
 extremepdiff_analysis = extremepdiff_analysis.round(2)
 extremepdiff_analysis['n'] = round(extremepdiff_analysis['n'], 0)
-funcs.print_log(file_log, f'\n\n\n#### Analysis 2 - Stations % difference mean ({len(extremepdiff_analysis)} stations with {minimum_sample_pdiff}+ yearly records)\n\n{extremepdiff_analysis.to_markdown()}', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n\n\n#### Analysis 1 - Stations % difference mean ({len(extremepdiff_analysis)} stations with {minimum_sample_pdiff}+ yearly records)\n\n{extremepdiff_analysis.to_markdown()}', center_div=False, on_screen = print_on_screen)
+# Analysis 2 - Tr % difference mean
+extremepdiff_analysis = df_extremepdiff.groupby('tr')[regular_hydrology_pdf_pdiff].mean()
+extremepdiff_analysis = extremepdiff_analysis.reset_index()
+extremepdiff_analysis.index.name = 'id'
+extremepdiff_analysis = extremepdiff_analysis.round(2)
+extremepdiff_analysis['n'] = round(extremepdiff_analysis['n'], 0)
+funcs.print_log(file_log, f'\n\n\n#### Analysis 2 - Tr % difference mean ({len(extremepdiff_analysis)} Tr with {minimum_sample_pdiff} yearly records)\n\n{extremepdiff_analysis.to_markdown()}\n', center_div=False, on_screen = print_on_screen)
+extremepdiff_analysis = extremepdiff_analysis.drop(columns=['n'])
+regular_hydrology_pdf_pdiff.remove('n')
+if create_plot:
+    funcs.print_log(file_log, f'<img alt="R.HydroTools" src="graph/pdiff_tr.png" width="800"></img>', center_div=True, on_screen=print_on_screen)
+    figure(figsize=(15, 12))
+    for i in regular_hydrology_pdf_pdiff:
+        plt.plot(extremepdiff_analysis.tr, extremepdiff_analysis[i], lw=1, marker='o', markersize=0, alpha=0.75, label=f'{i}')
+    plt.title(f'Analysis 2 - Tr % difference mean ({len(extremepdiff_analysis)} Tr with {minimum_sample_pdiff} yearly records)')
+    plt.xlabel('Tr ($years$)')
+    plt.ylabel('pdiff (%)')
+    plt.legend(loc='best', frameon=True, edgecolor='white', framealpha=0.9, ncol=4, facecolor='white')
+    plt.grid(color='gray', linestyle='--', linewidth=0.1)
+    if show_plot: plt.show()
+    plt.savefig(f'{output_path}graph/pdiff_tr.png', dpi=dpi)
+    plt.close()
+
 
 
 # Footer

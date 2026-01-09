@@ -1503,28 +1503,7 @@ Zonal analysis for hydrographic area: **Amazonas** (2 stations)
 The extreme value porcentage difference is evaluated as $pdiff = 1 - (ETrBf / ETr) * 100$, where _ETrBf_ correspond to the bestfit extreme value for a specific recurrence interval and _ETr_ correspond to the extreme value for one of the most used PDFsused in hydrology. The most regular PDFs used in hydrology are : norm, lognorm, gumbel_l, gumbel_r, gamma, pearson3, logpearson3, dweibull, kappa4.
 
 
-#### Analysis 1 - Tr % difference mean (15 Tr with 20 yearly records)
-
-|      tr |   n |   norm_pdiff |   lognorm_pdiff |   gumbel_l_pdiff |   gumbel_r_pdiff |   gamma_pdiff |   pearson3_pdiff |   logpearson3_pdiff |   dweibull_pdiff |   kappa4_pdiff |
-|--------:|----:|-------------:|----------------:|-----------------:|-----------------:|--------------:|-----------------:|--------------------:|-----------------:|---------------:|
-|    2    |  20 |         6.99 |          -22.86 |            14.06 |            -1.54 |         -1.5  |            -0.06 |               -6.05 |            -1.55 |          15.81 |
-|    2.33 |  20 |         8.03 |          -13.97 |            13.58 |            -0.21 |          0.11 |             1.47 |               -1.38 |             0.76 |          19.45 |
-|    5    |  20 |         5.88 |            8.73 |             5.22 |             1.74 |          2.46 |             3.1  |                5.84 |            -3.38 |          22.88 |
-|   10    |  20 |         0.04 |           15.6  |            -5.66 |             0.71 |          1.17 |             1.09 |                4.42 |            -7.58 |          17.2  |
-|   15    |  20 |        -4.25 |           17.07 |           -12.87 |            -0.54 |         -0.35 |            -0.86 |                2.36 |           -10.21 |          11.96 |
-|   20    |  20 |        -7.62 |           17.4  |           -18.34 |            -1.67 |         -1.72 |            -2.53 |                0.53 |           -12.18 |           7.58 |
-|   25    |  20 |       -10.42 |           17.33 |           -22.82 |            -2.69 |         -2.93 |            -3.99 |               -1.07 |           -13.79 |           3.83 |
-|   50    |  20 |       -20.26 |           15.72 |           -38.11 |            -6.66 |         -7.6  |            -9.46 |               -6.99 |           -19.37 |          -9.71 |
-|   75    |  20 |       -26.88 |           13.97 |           -48.19 |            -9.59 |        -10.99 |           -13.37 |              -11.14 |           -23.12 |         -19.02 |
-|  100    |  20 |       -32.02 |           12.4  |           -55.94 |           -11.97 |        -13.72 |           -16.48 |              -14.42 |           -26.04 |         -26.31 |
-|  200    |  20 |       -46.15 |            7.57 |           -77.03 |           -18.83 |        -21.53 |           -25.35 |              -23.6  |           -34.12 |         -46.48 |
-|  250    |  20 |       -51.3  |            5.7  |           -84.66 |           -21.42 |        -24.46 |           -28.65 |              -26.99 |           -37.08 |         -53.86 |
-|  500    |  20 |       -69.53 |           -1.14 |          -111.53 |           -30.82 |        -35.05 |           -40.56 |              -39.08 |           -47.58 |         -80.1  |
-|  750    |  20 |       -82.01 |           -5.92 |          -129.88 |           -37.41 |        -42.43 |           -48.83 |              -47.42 |           -54.78 |         -98.17 |
-| 1000    |  20 |       -91.82 |           -9.69 |          -144.29 |           -42.64 |        -48.28 |           -55.39 |              -53.99 |           -60.44 |        -112.43 |
-
-
-#### Analysis 2 - Stations % difference mean (8 stations with 20+ yearly records)
+#### Analysis 1 - Stations % difference mean (8 stations with 20+ yearly records)
 
 |   id |   station | bestfit_pdf           |   n |   norm_pdiff |   lognorm_pdiff |   gumbel_l_pdiff |   gumbel_r_pdiff |   gamma_pdiff |   pearson3_pdiff |   logpearson3_pdiff |   dweibull_pdiff |   kappa4_pdiff |
 |-----:|----------:|:----------------------|----:|-------------:|----------------:|-----------------:|-----------------:|--------------:|-----------------:|--------------------:|-----------------:|---------------:|
@@ -1536,5 +1515,34 @@ The extreme value porcentage difference is evaluated as $pdiff = 1 - (ETrBf / ET
 |    5 |  23065180 | laplace               |  20 |        -7.82 |           43.65 |           -25.05 |             4.97 |          1.45 |             0.44 |               -5.72 |             5.04 |          -2.58 |
 |    6 |  24025090 | loglaplace_asymmetric |  20 |       -35.07 |          -19.34 |           -50.79 |           -20.62 |        -29.24 |           -29.5  |              -30.98 |           -27.64 |         -35.18 |
 |    7 |  24035360 | laplace_asymmetric    |  20 |        -9.21 |           -3.37 |           -21.91 |             1.68 |          2.55 |             4.48 |                3.93 |            -5.14 |          15.81 |
+
+
+#### Analysis 2 - Tr % difference mean (15 Tr with 20 yearly records)
+
+|   id |      tr |   n |   norm_pdiff |   lognorm_pdiff |   gumbel_l_pdiff |   gumbel_r_pdiff |   gamma_pdiff |   pearson3_pdiff |   logpearson3_pdiff |   dweibull_pdiff |   kappa4_pdiff |
+|-----:|--------:|----:|-------------:|----------------:|-----------------:|-----------------:|--------------:|-----------------:|--------------------:|-----------------:|---------------:|
+|    0 |    2    |  20 |         6.99 |          -22.86 |            14.06 |            -1.54 |         -1.5  |            -0.06 |               -6.05 |            -1.55 |          15.81 |
+|    1 |    2.33 |  20 |         8.03 |          -13.97 |            13.58 |            -0.21 |          0.11 |             1.47 |               -1.38 |             0.76 |          19.45 |
+|    2 |    5    |  20 |         5.88 |            8.73 |             5.22 |             1.74 |          2.46 |             3.1  |                5.84 |            -3.38 |          22.88 |
+|    3 |   10    |  20 |         0.04 |           15.6  |            -5.66 |             0.71 |          1.17 |             1.09 |                4.42 |            -7.58 |          17.2  |
+|    4 |   15    |  20 |        -4.25 |           17.07 |           -12.87 |            -0.54 |         -0.35 |            -0.86 |                2.36 |           -10.21 |          11.96 |
+|    5 |   20    |  20 |        -7.62 |           17.4  |           -18.34 |            -1.67 |         -1.72 |            -2.53 |                0.53 |           -12.18 |           7.58 |
+|    6 |   25    |  20 |       -10.42 |           17.33 |           -22.82 |            -2.69 |         -2.93 |            -3.99 |               -1.07 |           -13.79 |           3.83 |
+|    7 |   50    |  20 |       -20.26 |           15.72 |           -38.11 |            -6.66 |         -7.6  |            -9.46 |               -6.99 |           -19.37 |          -9.71 |
+|    8 |   75    |  20 |       -26.88 |           13.97 |           -48.19 |            -9.59 |        -10.99 |           -13.37 |              -11.14 |           -23.12 |         -19.02 |
+|    9 |  100    |  20 |       -32.02 |           12.4  |           -55.94 |           -11.97 |        -13.72 |           -16.48 |              -14.42 |           -26.04 |         -26.31 |
+|   10 |  200    |  20 |       -46.15 |            7.57 |           -77.03 |           -18.83 |        -21.53 |           -25.35 |              -23.6  |           -34.12 |         -46.48 |
+|   11 |  250    |  20 |       -51.3  |            5.7  |           -84.66 |           -21.42 |        -24.46 |           -28.65 |              -26.99 |           -37.08 |         -53.86 |
+|   12 |  500    |  20 |       -69.53 |           -1.14 |          -111.53 |           -30.82 |        -35.05 |           -40.56 |              -39.08 |           -47.58 |         -80.1  |
+|   13 |  750    |  20 |       -82.01 |           -5.92 |          -129.88 |           -37.41 |        -42.43 |           -48.83 |              -47.42 |           -54.78 |         -98.17 |
+|   14 | 1000    |  20 |       -91.82 |           -9.69 |          -144.29 |           -42.64 |        -48.28 |           -55.39 |              -53.99 |           -60.44 |        -112.43 |
+
+<div align="center">
+
+<img alt="R.HydroTools" src="graph/pdiff_tr.png" width="800"></img>
+
+</div>
+
+
 
 <sub>**APP DISCLAIMER**: NO WARRANTY - This software is provided by [github.com/rcfdtools](https://github.com/rcfdtools) "as is", without any express or implied warranty, including warranties of merchantability, fitness for a particular purpose, or non-infringement. There is no guarantee that the software will be error-free or operate without interruption. LIMITATION OF LIABILITY - Neither the authors nor copyright holders will be liable for claims or damages arising from the software or its use. You are responsible for determining if the software is appropriate for your use and assume all associated risks, including errors, legal compliance, and data loss. NO PROFESSIONAL ADVICE - The software provides general information and does not offer professional advice. It should not replace consultation with professional advisors.</sub>
