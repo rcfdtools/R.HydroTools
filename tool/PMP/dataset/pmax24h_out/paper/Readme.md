@@ -17,7 +17,7 @@ The most common probability distributions in hydrology, used for analyzing flood
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../../../temp/pmp.svg" width="850px">
+<img alt="R.HydroTools" src="../../../temp/diagram_pmp.svg" width="850px">
 
 </div>
 
@@ -1006,6 +1006,13 @@ $P=(m-0.25)/(n+0.5)$
 ## C. Best Fit analysis (225 stations)
 
 Best fit in probability distribution analysis means finding the theoretical distribution (like Normal, Poisson, Exponential) that most accurately mirrors your real-world data´s patterns (shape, center, spread) for better predictions, using methods like visual checks (Q-Q plots), goodness-of-fit tests (Kolmogorov-Smirnov, Chi-Squared), and information criteria (AIC) to score and select the simplest, most representative model.
+<div align="center">
+
+<img alt="R.HydroTools" src="../../../temp/diagram_bestfit.svg" width="850px">
+
+</div>
+
+
 
 The Kolmogorov-Smirnov (K-S) test is a non-parametric statistical test used to determine if a sample data set comes from a specific theoretical distribution (one-sample) or if two different samples come from the same underlying distribution (two-sample), by comparing their cumulative distribution functions (CDFs). It calculates the maximum vertical difference (D statistic) between these functions, with a small p-value indicating a significant difference and rejection of the null hypothesis (that the data/samples match).
 
