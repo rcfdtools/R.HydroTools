@@ -346,7 +346,7 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
 #'''
 
 # Compare extreme values difference between bestfit PDF vs. most used PDF's in hydrology
-funcs.print_log(file_log, f'\n### Extreme % difference - Bestfit PDF vs. Most Used PDFs in Hydrology\n', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n## D. Extreme % difference - Bestfit PDF vs. Most Used PDFs in Hydrology\n', center_div=False, on_screen = print_on_screen)
 if minimum_sample > 0:
     df_extremepdiff = df_extremepdiff[df_extremepdiff['n'] >= minimum_sample_pdiff]
 df_extremepdiff = df_extremepdiff.reset_index(drop=True)
@@ -365,7 +365,7 @@ extremepdiff_analysis = extremepdiff_analysis.reset_index()
 extremepdiff_analysis.index.name = 'id'
 extremepdiff_analysis = extremepdiff_analysis.round(2)
 extremepdiff_analysis['n'] = round(extremepdiff_analysis['n'], 0)
-funcs.print_log(file_log, f'\n\n\n#### Analysis 1 - Stations extreme % difference mean ({len(extremepdiff_analysis)} stations)\n\n{extremepdiff_analysis.to_markdown()}', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n\n\n### Analysis 1 - Stations extreme % difference mean ({len(extremepdiff_analysis)} stations)\n\n{extremepdiff_analysis.to_markdown()}', center_div=False, on_screen = print_on_screen)
 total_station = len(extremepdiff_analysis)
 # Analysis 2 - Tr % difference mean
 extremepdiff_analysis = df_extremepdiff.groupby('tr')[regular_hydrology_pdf_pdiff].mean()
@@ -373,7 +373,7 @@ extremepdiff_analysis = extremepdiff_analysis.reset_index()
 extremepdiff_analysis.index.name = 'id'
 extremepdiff_analysis = extremepdiff_analysis.round(2)
 extremepdiff_analysis['n'] = round(extremepdiff_analysis['n'], 0)
-funcs.print_log(file_log, f'\n\n\n#### Analysis 2 - Tr extreme % difference mean ({len(extremepdiff_analysis)} Tr´s)\n\n{extremepdiff_analysis.to_markdown()}\n', center_div=False, on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n\n\n### Analysis 2 - Tr extreme % difference mean ({len(extremepdiff_analysis)} Tr´s)\n\n{extremepdiff_analysis.to_markdown()}\n', center_div=False, on_screen = print_on_screen)
 extremepdiff_analysis = extremepdiff_analysis.drop(columns=['n'])
 regular_hydrology_pdf_pdiff.remove('n')
 if create_plot:
