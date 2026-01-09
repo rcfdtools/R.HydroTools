@@ -262,7 +262,6 @@ for emp in edf_dist:
     num_inc += 1
 '''
 
-
 # Best fit analysis
 if minimum_sample > 0: df_bestfit = df_bestfit[df_bestfit['n'] >= minimum_sample]
 funcs.print_log(file_log, f'\n\n## C. Best Fit analysis ({len(df_bestfit[df_bestfit['best_fit_sort']==1])} stations)\n\n{dictionary.dicts['bestfit']}', center_div=False, on_screen = print_on_screen)
@@ -366,6 +365,8 @@ regular_hydrology_pdf_pdiff = [item + '_' + pdiff_suffix for item in regular_hyd
 funcs.print_log(file_log, f'\n{dictionary.dicts['pdiff']}', on_screen = print_on_screen)
 funcs.print_log(file_log, f' The most regular PDFs used in hydrology are : {', '.join(regular_hydrology_pdf)}.', center_div=False, on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n This analysis include only stations with {minimum_sample_pdiff}+ yearly records.', on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n\n:file_folder:Table: [extreme.csv](extreme.csv)', on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n:file_folder:Table: [extremepdiff.csv](extremepdiff.csv)', on_screen = print_on_screen)
 regular_hydrology_pdf_pdiff = ['n'] + regular_hydrology_pdf_pdiff
 # Analysis 1 - Stations % difference mean
 extremepdiff_analysis = df_extremepdiff.groupby([label_station, 'bestfit_pdf'])[regular_hydrology_pdf_pdiff].mean()
