@@ -209,7 +209,7 @@ for general in general_stat_vars:
         bars = ax.barh(catalog_count['plot_label'], catalog_count['Count'], color=color_plot)
         plt.yticks(rotation=0, ha='right')
         ax.bar_label(bars, padding=3)
-        ax.set_title(f'Stations by {eval(general).capitalize()}')
+        ax.set_title(f'Stations by {eval(general).capitalize()} ({catalog_count['Count'].sum()} stations)')
         ax.set_xlabel('Count')
         plt.tight_layout() # Important >>> prevents cutting labels
         plt.subplots_adjust(bottom=0.075)
@@ -289,7 +289,7 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
         bars = ax.barh(empirical_dist_count['empirical_dist'], empirical_dist_count['Count'], color=color_plot)
         plt.yticks(rotation=0, ha='right')
         ax.bar_label(bars, padding=3)
-        ax.set_title(f'EDF - Empirical distribution (stations best fit # {i+1} for {empirical_dist_count['Count'].sum()} stations)')
+        ax.set_title(f'EDF - Empirical distribution (bestfit # {i+1} for {empirical_dist_count['Count'].sum()} stations)')
         ax.set_xlabel('Count')
         plt.tight_layout() # Important >>> prevents cutting labels
         plt.subplots_adjust(bottom=0.075)
@@ -331,7 +331,7 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
             bars = ax.bar(probability_dist_count_ah['p_dist'], probability_dist_count_ah['Count'], color=color_plot)
             plt.xticks(rotation=90, ha='right')
             ax.bar_label(bars, padding=3, rotation=90)
-            ax.set_title(f'Hydrographic Area (AH): {ah} ({probability_dist_count_ah['Count'].sum()} stations)\nPDF - Probability distribution function (stations best fit # {i+1})')
+            ax.set_title(f'Hydrographic Area (AH): {ah} ({probability_dist_count_ah['Count'].sum()} stations)\nPDF - Probability distribution function (bestfit # {i+1})')
             ax.set_ylabel('Count')
             plt.tight_layout() # Important >>> prevents cutting labels
             plt.subplots_adjust(bottom=0.30)
