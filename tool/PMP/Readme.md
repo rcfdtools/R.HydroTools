@@ -216,8 +216,6 @@ Division by zero, loop calculations or values outside the allowed distribution r
 * studentized_range
 * kstwo
 * levy_stable
-* genhyperbolic ??
-* recipinvgauss ??
 
 
 ## References
