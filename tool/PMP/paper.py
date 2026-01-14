@@ -308,7 +308,7 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
         bars = ax.bar(probability_dist_count['p_dist'], probability_dist_count['Count'], color=color_plot)
         plt.xticks(rotation=90, ha='right')
         ax.bar_label(bars, padding=3, rotation=90)
-        ax.set_title(f'PDF - Probability distribution function (stations best fit # {i+1} for {probability_dist_count['Count'].sum()} stations)')
+        ax.set_title(f'PDF - Probability distribution function (best fit # {i+1} for {probability_dist_count['Count'].sum()} stations)')
         ax.set_ylabel('Count')
         plt.tight_layout() # Important >>> prevents cutting labels
         plt.subplots_adjust(bottom=0.30)
