@@ -24,17 +24,17 @@ pd.set_option('display.width', None)
 
 
 # General setup
-app_version = 'v20260108'
+app_version = 'v20260113'
 input_path = 'dataset/pmax24h_in/' # Your local input file folder
 output_path = 'dataset/pmax24h_out/' # Your local output file folder
-station_dataset_file = input_path + 'XXXautomatic_colombia_2003_2024.csv' # Stations dataset ●
+station_dataset_file = input_path + 'XXXXautomatic_colombia_2003_2025.csv' # Stations dataset ●
 station_catalog_file = 'dataset/CNE.xls' # CNE catalog for stations info
 station_catalog_columns_drop = ['OBSERVACION', 'SUBRED'] # Dropped columns from CNE
 parameter_name = 'Rain, Pmax24h' # rain, flow
 parameter_units = '($mm/d$)' # ($mm/d$), ($m^3/s$)
 parameter_title = 'PMP' # Probable Maximum Precipitation (PMP) or Probable Maximum Flood (PMF)
 date_min = 1900 # Minimum year to eval til year_max ●
-date_max = 2024 # Maximum year to eval since year_min ●
+date_max = 2025 # Maximum year to eval since year_min ●
 label_station = 'Station' # Station column name to eval from .csv station dataset file
 label_x = 'Value' # Value column name to eval from .csv station file
 label_date = 'Date' # Date column name from .csv station file
