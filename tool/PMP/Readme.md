@@ -17,7 +17,7 @@ Probable Maximum Precipitation (PMP) is the greatest amount of rainfall for a sp
 
 ## Station catalog requirements
 
-* Not existing stations fron Socrata as 14015020 and 21202200 has to be added at the end of the CNE records and mark as (No Data) and with latitude 4.0 and longitude -72.
+* Not existing stations from www.datos.gov.co as 14015020 and 21202200 has to be added at the end of the CNE records and mark as (No Data) and with latitude 4.0 and longitude -72.
 * National and local catalogs has to be integrated as CNE.xls with two new columns at the end called _Catalogo_ and _Version_.
 
 
@@ -61,7 +61,7 @@ High over extreme values:
 * powerlognorm: trend to infinite
 * powernorm: trend to infinite
 * pareto: trend to infinite for datasets with lower standard deviation
-* johnsonsu: trend to infinite for datasets with higher standard deviation <<<<<<<<<<<<<<<<<<<<
+* johnsonsu: trend to infinite for datasets with higher standard deviation
 
 Horizontal trending for high return periods Tr > = 100:
 
