@@ -97,7 +97,6 @@ if exclude_stations:
 df_extremepdiff.to_csv(f'{output_path}extremepdiff.csv', index=False, encoding='utf-8')
 print(f'Successfully combined {len(all_filenames)} files into extremepdiff.csv')
 
-#'''
 
 ########### Read and filter CNE catalog ###########
 data_types = {label_station_catalog: 'str', label_latitude: 'float64', label_longitude: 'float64'}
@@ -250,18 +249,7 @@ for emp in edf_dist:
     df_edf_dist_dict_filter = df_edf_dist_dict[df_edf_dist_dict['edf_dist'] == emp]
     funcs.print_log(file_log,f'| {num_inc} | {df_edf_dist_dict_filter['edf_name'].to_string(index=False, header=False)} | {df_edf_dist_dict_filter['edf_year'].to_string(index=False, header=False)} | {df_edf_dist_dict_filter['edf_desc'].to_string(index=False, header=False)} | ${df_edf_dist_dict_filter['edf_expression'].to_string(index=False, header=False)}$ |\n',center_div=False, on_screen=print_on_screen)
     num_inc += 1
-'''
-for emp in edf_dist:
-    df_edf_dist_dict_filter = df_edf_dist_dict[df_edf_dist_dict['edf_dist'] == emp]
-    funcs.print_log(file_log,
-                    f'\n**2.{num_inc}. {df_edf_dist_dict_filter['edf_name'].to_string(index=False, header=False)} ({df_edf_dist_dict_filter['edf_year'].to_string(index=False, header=False)})**\n',
-                    on_screen=print_on_screen)
-    funcs.print_log(file_log, f'\n{df_edf_dist_dict_filter['edf_desc'].to_string(index=False, header=False)}\n',
-                    on_screen=print_on_screen)
-    funcs.print_log(file_log, f'\n${df_edf_dist_dict_filter['edf_expression'].to_string(index=False, header=False)}$\n',
-                    center_div=True, on_screen=print_on_screen)
-    num_inc += 1
-'''
+
 
 # Best fit analysis
 if minimum_sample > 0: df_bestfit = df_bestfit[df_bestfit['n'] >= minimum_sample]
@@ -343,7 +331,7 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
             bars = ax.bar(probability_dist_count_ah['p_dist'], probability_dist_count_ah['Count'], color=color_plot)
             plt.xticks(rotation=90, ha='right')
             ax.bar_label(bars, padding=3, rotation=90)
-            ax.set_title(f'Hydrographic Area (AH): {ah}\nPDF - Probability distribution function (stations best fit # {i+1})')
+            ax.set_title(f'Hydrographic Area (AH): {ah} ({probability_dist_count_ah['Count'].sum()} stations)\nPDF - Probability distribution function (stations best fit # {i+1})')
             ax.set_ylabel('Count')
             plt.tight_layout() # Important >>> prevents cutting labels
             plt.subplots_adjust(bottom=0.30)
@@ -351,7 +339,6 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
             if show_plot: plt.show()
             plt.close()
 
-#'''
 
 # Compare extreme values difference between bestfit PDF vs. most used PDF's in hydrology
 funcs.print_log(file_log, f'\n## D. Extreme % difference - Bestfit PDF vs. Most Used PDFs in Hydrology\n', center_div=False, on_screen = print_on_screen)
