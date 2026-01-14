@@ -262,11 +262,11 @@ Division by zero, loop calculations or values outside the allowed distribution r
 * File --> Settings --> Editor --> Code Style --> Hard wrap at
 
 
-## Licencia, cláusulas y condiciones de uso
+## License, Terms and Conditions of Use
 
-_R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](../../LICENSE.md) y como referenciar los contenidos publicados en este repositorio._
+_R.HydroTools is free to use for academic purposes. Learn about our [License, terms and conditions of use](../../LICENSE.md), and how to cite the content published in this repository._
 
-_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [r.cfdtools](https://github.com/rcfdtools) en GitHub._
+_¡Did you find this repository useful¡ Support its distribution by marking it with a ⭐ or follow us by clicking the Follow button on [r.cfdtools](https://github.com/rcfdtools) on GitHub._
 
-| [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.HydroTools/discussions/xxx) |
-|-----------------------------------|------------------------------|
+| [:house: Start](../../README.md)  | [:beginner: Help / Collaborate](https://github.com/rcfdtools/R.HydroTools/discussions) |
+|-----------------------------------|----------------------------------------------------------------------------------------|
