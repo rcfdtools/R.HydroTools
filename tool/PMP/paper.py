@@ -289,7 +289,7 @@ for i in range(best_fit_sort_eval): # for i in range(len(edf_dist)+1): or for i 
         bars = ax.barh(empirical_dist_count['empirical_dist'], empirical_dist_count['Count'], color=color_plot)
         plt.yticks(rotation=0, ha='right')
         ax.bar_label(bars, padding=3)
-        ax.set_title(f'EDF - Empirical distribution (stations best fit # {i+1})')
+        ax.set_title(f'EDF - Empirical distribution (stations best fit # {i+1}, {empirical_dist_count['Count'].sum()} stations)')
         ax.set_xlabel('Count')
         plt.tight_layout() # Important >>> prevents cutting labels
         plt.subplots_adjust(bottom=0.075)
