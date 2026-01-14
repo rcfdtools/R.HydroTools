@@ -40,7 +40,7 @@ file_log = open(file_log_name, 'w+', encoding='utf-8')   # w+ create the file if
 create_plot = True # Creates, save and include plots into reports
 show_plot = False # Show plot on Python screen console
 color_plot = '#3b3b3b' # Global plot color
-minimum_sample = 10 # Exclude a station when doesn't have the minimum data sample (0 means any), used in Stations and Bestfit positions analysis. ●
+minimum_sample = 8 # Exclude a station when doesn't have the minimum data sample (0 means any), used in Stations and Bestfit positions analysis. ●
 minimum_sample_pdiff = 15 # Exclude a station when doesn't have the minimum records data sample (0 means any), used in Percentage difference analysis. ●
 pdiff_max_tr = 1000 # Maximum return period to eval, used in percentage difference analysis (0 means any) ●
 dpi = 128 # Graph plot resolution
