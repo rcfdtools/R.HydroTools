@@ -27,7 +27,7 @@ pd.set_option('display.width', None)
 app_version = 'v20260113'
 input_path = 'dataset/pmax24h_in/' # Your local input file folder
 output_path = 'dataset/pmax24h_out/' # Your local output file folder
-station_dataset_file = input_path + 'automatic_test.csv' # Stations dataset ●
+station_dataset_file = input_path + 'XXXXautomatic_colombia_2003_2025.csv' # Stations dataset ●
 station_catalog_file = 'dataset/CNE.xls' # CNE catalog for stations info
 station_catalog_columns_drop = ['OBSERVACION', 'SUBRED'] # Dropped columns from CNE
 parameter_name = 'Rain, Pmax24h' # rain, flow
@@ -41,8 +41,8 @@ label_date = 'Date' # Date column name from .csv station file
 label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
 label_latitude = 'LATITUD' # Station column latitude in CNE_IDEAM.xls
 label_longitude = 'LONGITUD' # Station column longitude in CNE_IDEAM.xls
-create_plot = True # Creates, save and include plots into reports ●
-plot_only_simple = False # Plot only simple graphs avoiding multiple CDF and multiple Extreme values plots  ●
+create_plot = False # Creates, save and include plots into reports ●
+plot_only_simple = True # Plot only simple graphs avoiding multiple CDF and multiple Extreme values plots  ●
 show_plot = False # Show plot on Python screen console
 plot_only_fit = True # Plot only fit distributions with Δo > Δ
 plot_rounding_val = 6 # Rounding values in plots to # decimal positions
@@ -75,8 +75,7 @@ df_tr = pd.DataFrame(tr, columns=['tr'])
 n_tr = len(df_tr)
 df_tr['prob_l'] = 1-1/df_tr.tr  # P≤, Probability less than, for high extreme values
 df_tr['prob_g'] = 1/df_tr.tr  # P≥, Probability greater than, for low extreme values
-##########df_l_pdist_scipy = pd.DataFrame(funcs.l_pdist_scipy, columns=['p_dist', 'n_parameter', 'fit_method', 'label', 'active'])
-df_l_pdist_scipy = pd.DataFrame(funcs.l_pdist_scipy_extreme, columns=['p_dist', 'n_parameter', 'fit_method', 'label', 'active'])
+df_l_pdist_scipy = pd.DataFrame(funcs.l_pdist_scipy, columns=['p_dist', 'n_parameter', 'fit_method', 'label', 'active'])
 df_l_pdist_scipy['ref'] = '[:mortar_board:](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.'+df_l_pdist_scipy.p_dist+'.html)'
 df_l_pdist_scipy_inactive = df_l_pdist_scipy.query('active == False')
 df_l_pdist_scipy = df_l_pdist_scipy.query('active == True')
@@ -209,20 +208,7 @@ for station in stations:
     for i in range(0, len(df_l_pdist_scipy)):
         print(f'Processing CDF: {df_l_pdist_scipy['p_dist'][i]}')  # Only for console
         dp_evaluated += 1
-        try:
-            funcs.pdist_scipy(df, df_l_pdist_scipy['p_dist'][i], df_l_pdist_scipy['n_parameter'][i], df_l_pdist_scipy['fit_method'][i], df_l_pdist_scipy['label'][i], x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
-        except ZeroDivisionError:
-            # Handle a specific error and skip to the next iteration
-            print(f"Processing CDF: Cannot divide by zero. Skipping.")
-            continue
-        except TypeError:
-            # Handle another specific error and do nothing (pass)
-            print(f"Processing CDF: Cannot perform operation on non-number. Continuing.")
-            pass
-        except Exception as e:
-            # Catch any other general exception, print it, and continue
-            print(f"Processing CDF: An unexpected error occurred:. Continuing.")
-            continue
+        funcs.pdist_scipy(df, df_l_pdist_scipy['p_dist'][i], df_l_pdist_scipy['n_parameter'][i], df_l_pdist_scipy['fit_method'][i], df_l_pdist_scipy['label'][i], x, low_extreme, df_tr, station_code, vDeltaKolmogorov)
     if pdist_logarithmic_on: ########### logarithmic #############
         for i in range(0, len(df_l_pdist_scipy)):
             print(f'Processing LogCDF: {df_l_pdist_scipy['p_dist'][i]}')  # Only for console
