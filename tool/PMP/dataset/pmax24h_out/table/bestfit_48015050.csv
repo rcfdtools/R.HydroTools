@@ -10,4 +10,4 @@ station,empirical_dist,p_dist,delta,deltao,eval,fit,n,best_fit,best_fit_sort
 48015050,edf_adamowski,logweibull_min,0.09384264883943315,0.4472608134160001,Δo > Δ,1,8,1,9
 48015050,edf_hazen,logweibull_min,0.0997715436881269,0.4472608134160001,Δo > Δ,1,8,1,10
 48015050,edf_weibull,nakagami,0.1111073857911218,0.4472608134160001,Δo > Δ,1,8,1,11
-48015050,edf_california,logdweibull,0.1452991143278064,0.4472608134160001,Δo > Δ,1,8,1,12
+48015050,edf_california,logtruncweibull_min,0.12436490891662311,0.4472608134160001,Δo > Δ,1,8,1,12

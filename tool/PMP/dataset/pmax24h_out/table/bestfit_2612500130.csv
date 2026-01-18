@@ -10,4 +10,4 @@ station,empirical_dist,p_dist,delta,deltao,eval,fit,n,best_fit,best_fit_sort
 2612500130,edf_chegodayev,logcrystalball,0.0749044771872851,0.530385761606,Δo > Δ,1,6,1,9
 2612500130,edf_adamowski,logcrystalball,0.07851024641805437,0.530385761606,Δo > Δ,1,6,1,10
 2612500130,edf_weibull,logcrystalball,0.0949937629015708,0.530385761606,Δo > Δ,1,6,1,11
-2612500130,edf_california,mielke,0.13248771100798595,0.530385761606,Δo > Δ,1,6,1,12
+2612500130,edf_california,loggenextreme,0.1324193359435501,0.530385761606,Δo > Δ,1,6,1,12

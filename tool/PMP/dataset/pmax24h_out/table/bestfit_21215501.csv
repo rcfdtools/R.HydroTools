@@ -10,4 +10,4 @@ station,empirical_dist,p_dist,delta,deltao,eval,fit,n,best_fit,best_fit_sort
 21215501,edf_gringorten,logdweibull,0.07330299933716111,0.4472608134160001,Δo > Δ,1,8,1,9
 21215501,edf_hazen,logdweibull,0.0760739352977522,0.4472608134160001,Δo > Δ,1,8,1,10
 21215501,edf_weibull,logdweibull,0.07963830492177332,0.4472608134160001,Δo > Δ,1,8,1,11
-21215501,edf_california,logdweibull,0.1385739352977522,0.4472608134160001,Δo > Δ,1,8,1,12
+21215501,edf_california,logarcsine,0.12304881227385811,0.4472608134160001,Δo > Δ,1,8,1,12

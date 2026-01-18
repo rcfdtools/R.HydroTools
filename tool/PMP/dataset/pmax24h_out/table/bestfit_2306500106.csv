@@ -1,5 +1,5 @@
 station,empirical_dist,p_dist,delta,deltao,eval,fit,n,best_fit,best_fit_sort
-2306500106,edf_hazen,dweibull,0.04463507492443808,0.530385761606,Δo > Δ,1,6,1,1
+2306500106,edf_hazen,dgamma,0.039900223429976345,0.530385761606,Δo > Δ,1,6,1,1
 2306500106,edf_gringorten,dweibull,0.04778276991349384,0.530385761606,Δo > Δ,1,6,1,2
 2306500106,edf_cunnane,dweibull,0.053053695488024744,0.530385761606,Δo > Δ,1,6,1,3
 2306500106,edf_blom,dweibull,0.05627950193963749,0.530385761606,Δo > Δ,1,6,1,4
@@ -10,4 +10,4 @@ station,empirical_dist,p_dist,delta,deltao,eval,fit,n,best_fit,best_fit_sort
 2306500106,edf_chegodayev,dweibull,0.06565450193963751,0.530385761606,Δo > Δ,1,6,1,9
 2306500106,edf_adamowski,dweibull,0.07166411732425293,0.530385761606,Δo > Δ,1,6,1,10
 2306500106,edf_weibull,dweibull,0.09913664479678042,0.530385761606,Δo > Δ,1,6,1,11
-2306500106,edf_california,laplace_asymmetric,0.12422129088764655,0.530385761606,Δo > Δ,1,6,1,12
+2306500106,edf_california,dgamma,0.10924660666406028,0.530385761606,Δo > Δ,1,6,1,12

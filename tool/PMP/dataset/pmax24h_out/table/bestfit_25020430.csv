@@ -10,4 +10,4 @@ station,empirical_dist,p_dist,delta,deltao,eval,fit,n,best_fit,best_fit_sort
 25020430,edf_cunnane,logdweibull,0.07510308161849533,0.41761268023100007,Δo > Δ,1,9,1,9
 25020430,edf_gringorten,logdweibull,0.07891696415091343,0.41761268023100007,Δo > Δ,1,9,1,10
 25020430,edf_hazen,dweibull,0.0811058241709301,0.41761268023100007,Δo > Δ,1,9,1,11
-25020430,edf_california,loglaplace_asymmetric,0.09717136311357477,0.41761268023100007,Δo > Δ,1,9,1,12
+25020430,edf_california,logtriang,0.10553815408694178,0.41761268023100007,Δo > Δ,1,9,1,12

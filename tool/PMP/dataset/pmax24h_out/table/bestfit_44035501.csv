@@ -10,4 +10,4 @@ station,empirical_dist,p_dist,delta,deltao,eval,fit,n,best_fit,best_fit_sort
 44035501,edf_beard,loginvweibull,0.1005992503802432,0.530385761606,Δo > Δ,1,6,1,9
 44035501,edf_filliben,loginvweibull,0.10078393986796386,0.530385761606,Δo > Δ,1,6,1,10
 44035501,edf_tukey,loginvweibull,0.10117671284518304,0.530385761606,Δo > Δ,1,6,1,11
-44035501,edf_california,invgauss,0.13231031770462753,0.530385761606,Δo > Δ,1,6,1,12
+44035501,edf_california,logbeta,0.10959282576809559,0.530385761606,Δo > Δ,1,6,1,12

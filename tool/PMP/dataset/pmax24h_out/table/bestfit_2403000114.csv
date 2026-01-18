@@ -10,4 +10,4 @@ station,empirical_dist,p_dist,delta,deltao,eval,fit,n,best_fit,best_fit_sort
 2403000114,edf_chegodayev,logalpha,0.057609913179288284,0.530385761606,Δo > Δ,1,6,1,9
 2403000114,edf_adamowski,logalpha,0.06361952856390368,0.530385761606,Δo > Δ,1,6,1,10
 2403000114,edf_weibull,logalpha,0.09109205603643114,0.530385761606,Δo > Δ,1,6,1,11
-2403000114,edf_california,logt,0.10157367471212098,0.530385761606,Δo > Δ,1,6,1,12
+2403000114,edf_california,logvonmises,0.0935866658855754,0.530385761606,Δo > Δ,1,6,1,12

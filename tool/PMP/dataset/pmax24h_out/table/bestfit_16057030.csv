@@ -9,5 +9,5 @@ station,empirical_dist,p_dist,delta,deltao,eval,fit,n,best_fit,best_fit_sort
 16057030,edf_blom,genlogistic,0.08415289437173168,0.331107277296,Δo > Δ,1,16,1,8
 16057030,edf_cunnane,genlogistic,0.08424786113336513,0.331107277296,Δo > Δ,1,16,1,9
 16057030,edf_gringorten,genlogistic,0.08440103332954813,0.331107277296,Δo > Δ,1,16,1,10
-16057030,edf_hazen,laplace_asymmetric,0.08491227016455033,0.331107277296,Δo > Δ,1,16,1,11
-16057030,edf_california,loglaplace_asymmetric,0.08508525136831524,0.331107277296,Δo > Δ,1,16,1,12
+16057030,edf_hazen,genlogistic,0.08662758431905604,0.331107277296,Δo > Δ,1,16,1,11
+16057030,edf_california,logburr,0.09363353054430723,0.331107277296,Δo > Δ,1,16,1,12
