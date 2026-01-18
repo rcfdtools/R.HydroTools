@@ -6,7 +6,7 @@ import tabulate # required for print tables in Markdown using pandas
 
 
 # General setup
-app_version = 'v20260114'
+app_version = 'v20260118'
 input_path = 'dataset/pmax24h_out/table/' # Your local input file folder
 label_station = 'station' # Station column name to eval from .csv station dataset file
 regular_hydrology_pdf = ['norm', 'lognorm', 'gumbel_l', 'gumbel_r', 'gamma', 'pearson3', 'logpearson3', 'dweibull', 'kappa4'] # Most used PDFs in hydrology (bestfit difference analysis) ●
