@@ -308,6 +308,10 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 
 * File --> Settings --> Editor --> Code Style --> Hard wrap at
 
+**Show complete links in editor for markdown files**
+
+* File --> Settings --> Editor --> General --> Code folding --> Markdown --> Collapse links  
+
 
 ## License, Terms and Conditions of Use
 
