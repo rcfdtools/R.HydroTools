@@ -1,6 +1,4 @@
-<div align="center"><a href="https://github.com/rcfdtools" target="_blank"><img src="https://github.com/rcfdtools/rcfdtools/blob/main/graph/rcfdtools_banner.png" alt="R.LTWB" width="100%" border="0" /></a></div>
-
-<div align="center"><img alt="R.HydroTools" src="file/graph/R.HydroTools.svg" width="300px"><br>Tools for GIS, hydrological and hydraulics computational analysis</div>
+<div align="center"><img alt="R.HydroTools" src="file/graph/R.HydroTools.svg" width="300px"><br>Tools for GIS, hydrological and hydraulics computational analysis. By: rcfdtools</div>
 
 ## ¿Qué es R.HydroTools?
 
