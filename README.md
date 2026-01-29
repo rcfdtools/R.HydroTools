@@ -1,4 +1,6 @@
-<div align="center"><img alt="R.HydroTools" src="file/graph/R.HydroTools.svg" width="300px"><br>Tools for GIS, hydrological,  hydraulics and computational analysis</div>
+
+
+<div align="center"><img alt="R.HydroTools" src="file/graph/R.HydroTools.svg" width="300px"><br>TOOL: Computational tools for GIS, hydrological and hydraulics computational design, modeling and analysis - R.HydroTools</div>
 
 ## ¿Qué es R.HydroTools?
 
