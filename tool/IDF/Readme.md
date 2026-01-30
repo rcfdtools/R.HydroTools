@@ -1,6 +1,7 @@
 <div align="center"><img alt="R.HydroTools" src="file/graph/R.HydroStormMarkerIDF_v1.png" width="800px"></div>
 
 # Herramienta para marcación, análisis de tormentas y construcción de curvas IDF a partir de eventos de precipitación obtenidos de pluviografos.
+Keywords: `storm` `rainfall` `hydrology` `idf` `rain` `precipitation` `precipitation-measurement` `hec-hms` `gumbel` `intensity-duration-frequency` `precipitation-processing` `storm-marker` `rain-marker` `curvas-idf` `idf-curves` `hidrologia` `hydrostormmarkeridf`
 
 En hidrología, el estudio de la precipitación a partir de datos de tormentas registrados en estaciones de precipitación, permite analizar su comportamiento, duración, intensidad y patrón temporal.
 
