@@ -115,7 +115,7 @@ Los pulsos de precipitación pueden contener ceros intermedios en los cuales el 
 * Tormentas: Tabla Dinámica con tormentas identificadas y valores por pulso. (Editable)
 
 
-## 3. Pruebas de Ejecución y Rendimiento
+## 3. Pruebas de ejecución y rendimiento
 
 **_1. Resultados de ejecución limpiando registros con datos en cero (registros sin lluvia consecutiva) y procesando la serie sin análisis de clústers para construcción de curvas IDF_**
 
