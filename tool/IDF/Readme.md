@@ -1,4 +1,4 @@
-<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroStormMarkerIDF_v1" width="300px"></div>
+<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroStormMarkerIDF_v1.png" width="300px"></div>
 
 # R.HydroStormMarkerIDF
 
