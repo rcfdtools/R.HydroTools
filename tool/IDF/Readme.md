@@ -9,19 +9,10 @@ R.HydroStormMarker, es una herramienta computacional que permite identificar y m
 Los pulsos de precipitación pueden contener ceros intermedios en los cuales el sensor de captura no registra los cambios en la precipitación, razón por la cual la App permite incluir hasta 3 ceros consecutivos por cada evento.
 
 
-## Notas
-
-* Nota 1: para el correcto funcionamiento de la aplicación, antes de pegar los datos en la App, asegúrese de indexar previamente los registros de 1 a n (Columna H de la hoja de Datos) ordenando los datos por fecha y hora. Desactive todos los filtros de datos antes de dar clic en *Ejecutar*.
-* Nota 2: no se recomienda definir el número de ceros intermedios mayor a 1 si ejecutó previamente la función de eliminación de registros con ceros sucesivos, debido a que no se mantiene la continuidad de fechas y horas en los registros.
-* Nota 3: para registros con frecuencia >= 30 minutos se recomienda utilizar solo 1 cero consecutivo.
-* Nota 4: En la hoja "Datos", los valores ingresados en las columnas Año, Mes, Día, Dato e Índice, corresponden a valores numéricos. Para asegurarse de que copia y pega valores numéricos, puede utilizar en Microsoft Excel la opción de pegado especial solo de valores dando clic derecho en la celda B9. Opcionalmente, podrá pegar todos los datos en un editor de texto (p.e. Notepad++) y luego copiar desde el editor de texto todos los valores a partir de la misma celda B9.
-* Nota 5: Para actualizar la ilustración de la Ecuación Característica obtenida de las curvas IDF, en algunos casos es necesario guardar, cerrar el archivo y volverlo abrir. Pruebe también oprimiendo Alt - F5.
+## 1. Conceptos
 
 
-## Conceptos
-
-
-### Obtención de curvas Intensidad, Duración, Período de retorno - IDF en estaciones pluviográficas
+### 1.1. Obtención de curvas Intensidad, Duración, Período de retorno - IDF en estaciones pluviográficas
 (Tomado del curso de Hidrología - GEAR)
 
 ![R.HydroStormMarker Screen9](file/graph/R.HydroStormMarkerIDF_Screen12.PNG)
@@ -33,7 +24,7 @@ Los pulsos de precipitación pueden contener ceros intermedios en los cuales el 
 * Su construcción solo puede realizarse con base en registros de estaciones pluviográficas, sin embargo, es posible obtener curvas IDF en estaciones pluviométricas utilizando algunos métodos indirectos o que involucran información de estaciones pluviográficas vecinas o regionales.
 
 
-### Consideraciones generales
+### 1.2. Consideraciones generales
 
 * Si el pluviógrafo es diario, en general se pueden realizar lecturas para una duración mínima de 10 min, (lecturas hasta de 5 minutos pueden ser tomadas visualmente).
 * Si el pluviógrafo es semanal, la lectura mínima corresponde a 1 hora, (lecturas de hasta 30 minutos pueden ser tomadas visualmente)
@@ -52,7 +43,10 @@ Los pulsos de precipitación pueden contener ceros intermedios en los cuales el 
 ![Correlacion Lineal Multiple](file/graph/R.CorrelacionLinealMultiple.png)
 
 
-## Convenciones
+## 2. Procedimientos
+
+
+### 2.0. Convenciones
 
 | Convención  | Descripción                                                                                                                              |
 |-------------|------------------------------------------------------------------------------------------------------------------------------------------|
@@ -70,7 +64,76 @@ Los pulsos de precipitación pueden contener ceros intermedios en los cuales el 
 | DVE         | Distribución de Valores Extremos.                                                                                                        |
 
 
-## Funcionalidades agregadas por fecha de actualización
+### 2.1. Notas funcionales
+
+* Nota 1: para el correcto funcionamiento de la aplicación, antes de pegar los datos en la App, asegúrese de indexar previamente los registros de 1 a n (Columna H de la hoja de Datos) ordenando los datos por fecha y hora. Desactive todos los filtros de datos antes de dar clic en *Ejecutar*.
+* Nota 2: no se recomienda definir el número de ceros intermedios mayor a 1 si ejecutó previamente la función de eliminación de registros con ceros sucesivos, debido a que no se mantiene la continuidad de fechas y horas en los registros.
+* Nota 3: para registros con frecuencia >= 30 minutos se recomienda utilizar solo 1 cero consecutivo.
+* Nota 4: En la hoja "Datos", los valores ingresados en las columnas Año, Mes, Día, Dato e Índice, corresponden a valores numéricos. Para asegurarse de que copia y pega valores numéricos, puede utilizar en Microsoft Excel la opción de pegado especial solo de valores dando clic derecho en la celda B9. Opcionalmente, podrá pegar todos los datos en un editor de texto (p.e. Notepad++) y luego copiar desde el editor de texto todos los valores a partir de la misma celda B9.
+* Nota 5: Para actualizar la ilustración de la Ecuación Característica obtenida de las curvas IDF, en algunos casos es necesario guardar, cerrar el archivo y volverlo abrir. Pruebe también oprimiendo Alt - F5.
+
+
+### 2.2. Procedimientos externos preliminares
+
+**1. Descarga de datos públicos (Proceso externo)**
+
+* Identificar la Estación y descargar los datos pluviométricos o pluviográficos ya leídos
+* Colombia: http://dhime.ideam.gov.co/atencionciudadano/
+* Colombia: http://institucional.ideam.gov.co/jsp/loader.jsf?lServicio=Usuarios&lTipo=usuarios&lFuncion=login&
+* USA: https://data.nodc.noaa.gov/cgi-bin/iso?id=gov.noaa.ncdc:C00313
+* USA: https://www.ncdc.noaa.gov/cdo-web/search?datasetid=PRECIP_HLY#
+
+**2. Preprocesamiento externo**
+
+* Ordenar los datos por fecha y hora, agregar índice consecutivo de 1 a n. 
+* Segmentar los datos en las siguientes columnas de atributos: Año, Mes, Día, Hora (texto 4 dígitos), Dato, Marca, Índice.
+
+
+### 2.3. Procedimientos en R.HydroStormMarker.IDF
+
+**1. Procesamiento - Main**
+
+* En la hoja _"Main"_ ingrese la información general de la estación. (Obligatorios: Código de la Estación, Latitud y Longitud)
+
+
+**2. Procesamiento - Datos**
+
+* Copiar y pegar los datos preprocesados en la hoja _"Datos"_ a partir de la celda B9. Los datos Año, Mes, Día, Dato, e Índice deben ser numéricos.
+
+**3. Procesamiento - Calcular**
+
+* En la hoja _"Datos"_, indique la Frecuencia en minutos, las Unidades (mm, ft), el número de Ceros intermedios y opcionalmente si requiere eliminar los ceros intermedios. De clic en el botón _"Calcular"_
+
+**4. Análisis a partir de hojas disponibles:**
+
+* Datos: Presenta el año de inicio y fin de la serie analizada, el # de registros procesados, el # de tormentas encontradas, la marcación de cada tormenta y sus valores acumulados.
+* TormentaResumen: Presenta los pulsos por tormenta, duración, precipitación total e intensidad. (Permite filtar datos)
+* TormentaResumenGrafico: Para cada tormenta, muestra el total de precipitación y su intensidad. Permite filtrar en las abscisas por rango de # de tormenta. (Editable)
+* TormentaDuracionAnalisis, TormentaDuracionGrafico: Tabla y gráfica dinámica para análisis de duraciones por tormenta.  (Editable)
+* Tormentas: Tabla Dinámica con tormentas identificadas y valores por pulso. (Editable)
+
+
+## 3. Pruebas de Ejecución y Rendimiento
+
+**_1. Resultados de ejecución limpiando registros con datos en cero (registros sin lluvia consecutiva) y procesando la serie sin análisis de clústers para construcción de curvas IDF_**
+
+* Intel Core I5-8300H, 4 Cores, RAM 16gb: 100K registros en 9 minutos.
+* AMD Ryzen 7 2700, 8 Cores 3.2GHz, RAM 32gb: 100K registros en 9 minutos.
+* AMD Ryzen 7 2700, 8 Cores 3.2GHz, RAM 32gb: 500K registros en 84 minutos (12MB).
+
+**_2. Resultados procesando la serie sin limpieza de registros en cero y sin análisis de clústers para construcción de curvas IDF_**
+
+* AMD Ryzen 7 2700, 8 Cores 3.2GHz, RAM 32gb: 100K registros en 0.42 minutos, 406K registros en 1.47 minutos.
+
+
+**_3. Resultados procesando la serie sin ceros intermedios y con análisis de clústers para construcción de curvas IDF_**
+
+Este procedimiento es especialmente complejo debido a que es necesario procesar cada tormenta hasta la duración máxima encontrada para generar la matriz de máximos pulsos o valores por cada delta de frecuencia acumulada. Por ejemplo si la serie de datos es de 500k registros y la duración máxima encontrada en una de las tormentas es de 9.5 horas con pulsos cada 5 minutos, será necesario procesar 58 millones de clústers. Nota: Para simplificar este proceso puede optar primero por limpiar la serie de datos eliminando todos los ceros intermedios (registros sin lluvia consecutiva), sin embargo, _debe tener en cuenta que la linea de tiempo no se mantendrá consecutiva_ y deberá optar por no incluir ceros intermedios o utilizar máximo 1 en el procesamiento y análisis posterior de la serie. También puede optar por realizar el análisis año por año, ingresando en R.HydroStormMarker solo los registros del año a estudiar.
+
+* AMD Ryzen 7 2700, 8 Cores 3.2GHz, RAM 32gb: 23K registros en 6.2 minutos (Archivo de 16MB con 3894 tormentas).
+
+
+## 4. Funcionalidades agregadas por fecha de actualización
 
 Código fuente: Microsoft Visual Basic para Aplicaciones VBA.
 Probado en: **Microsoft Excel 2019**. Microsoft Windows 10 Pro 1903 (18362.449).
@@ -143,77 +206,14 @@ __**v.20191030**__
 * Resúmen de tormentas encontradas y tiempo empleado en el procesamiento.
 
 
-## Procedimientos
-
-### Procedimientos externos preliminares
-
-**1. Descarga de datos públicos (Proceso externo)**
-
-* Identificar la Estación y descargar los datos pluviométricos o pluviográficos ya leídos
-* Colombia: http://dhime.ideam.gov.co/atencionciudadano/
-* Colombia: http://institucional.ideam.gov.co/jsp/loader.jsf?lServicio=Usuarios&lTipo=usuarios&lFuncion=login&
-* USA: https://data.nodc.noaa.gov/cgi-bin/iso?id=gov.noaa.ncdc:C00313
-* USA: https://www.ncdc.noaa.gov/cdo-web/search?datasetid=PRECIP_HLY#
-
-**2. Preprocesamiento externo**
-
-* Ordenar los datos por fecha y hora, agregar índice consecutivo de 1 a n. 
-* Segmentar los datos en las siguientes columnas de atributos: Año, Mes, Día, Hora (texto 4 dígitos), Dato, Marca, Índice.
-
-
-### Procedimientos en R.HydroStormMarker.IDF
------
-
-**3. Procesamiento - Main**
-
-* En la hoja _"Main"_ ingrese la información general de la estación. (Obligatorios: Código de la Estación, Latitud y Longitud)
-
-
-**4. Procesamiento - Datos**
-
-* Copiar y pegar los datos preprocesados en la hoja _"Datos"_ a partir de la celda B9. Los datos Año, Mes, Día, Dato, e Índice deben ser numéricos.
-
-**5. Procesamiento - Calcular**
-
-* En la hoja _"Datos"_, indique la Frecuencia en minutos, las Unidades (mm, ft), el número de Ceros intermedios y opcionalmente si requiere eliminar los ceros intermedios. De clic en el botón _"Calcular"_
-
-**6. Análisis a partir de hojas disponibles:**
-
-* Datos: Presenta el año de inicio y fin de la serie analizada, el # de registros procesados, el # de tormentas encontradas, la marcación de cada tormenta y sus valores acumulados.
-* TormentaResumen: Presenta los pulsos por tormenta, duración, precipitación total e intensidad. (Permite filtar datos)
-* TormentaResumenGrafico: Para cada tormenta, muestra el total de precipitación y su intensidad. Permite filtrar en las abscisas por rango de # de tormenta. (Editable)
-* TormentaDuracionAnalisis, TormentaDuracionGrafico: Tabla y gráfica dinámica para análisis de duraciones por tormenta.  (Editable)
-* Tormentas: Tabla Dinámica con tormentas identificadas y valores por pulso. (Editable)
-
-
-## Pruebas de Ejecución y Rendimiento
-
-**_1. Resultados de ejecución limpiando registros con datos en cero (registros sin lluvia consecutiva) y procesando la serie sin análisis de clústers para construcción de curvas IDF_**
-
-* Intel Core I5-8300H, 4 Cores, RAM 16gb: 100K registros en 9 minutos.
-* AMD Ryzen 7 2700, 8 Cores 3.2GHz, RAM 32gb: 100K registros en 9 minutos.
-* AMD Ryzen 7 2700, 8 Cores 3.2GHz, RAM 32gb: 500K registros en 84 minutos (12MB).
-
-**_2. Resultados procesando la serie sin limpieza de registros en cero y sin análisis de clústers para construcción de curvas IDF_**
-
-* AMD Ryzen 7 2700, 8 Cores 3.2GHz, RAM 32gb: 100K registros en 0.42 minutos, 406K registros en 1.47 minutos.
-
-
-**_3. Resultados procesando la serie sin ceros intermedios y con análisis de clústers para construcción de curvas IDF_**
-
-Este procedimiento es especialmente complejo debido a que es necesario procesar cada tormenta hasta la duración máxima encontrada para generar la matriz de máximos pulsos o valores por cada delta de frecuencia acumulada. Por ejemplo si la serie de datos es de 500k registros y la duración máxima encontrada en una de las tormentas es de 9.5 horas con pulsos cada 5 minutos, será necesario procesar 58 millones de clústers. Nota: Para simplificar este proceso puede optar primero por limpiar la serie de datos eliminando todos los ceros intermedios (registros sin lluvia consecutiva), sin embargo, _debe tener en cuenta que la linea de tiempo no se mantendrá consecutiva_ y deberá optar por no incluir ceros intermedios o utilizar máximo 1 en el procesamiento y análisis posterior de la serie. También puede optar por realizar el análisis año por año, ingresando en R.HydroStormMarker solo los registros del año a estudiar.
-
-* AMD Ryzen 7 2700, 8 Cores 3.2GHz, RAM 32gb: 23K registros en 6.2 minutos (Archivo de 16MB con 3894 tormentas).
-
-
-## Solución de errores
+## 5. Solución de errores
 
 **IDFClusterIntensidad no calculados completa o correctamente**
 
 Este error se presenta cuando el usuario en la hoja "Datos" en la celda "DMáx User" (I5), define una duración en la que no existen al menos dos valores anuales en algún Delta de tiempo para estimar la precipitación utilizando la distribución de Gumbel. Para solucionar este error, disminuya el valor de la duración máxima a analizar. 
 
 
-## Ilustraciones
+## 6. Ilustraciones
 
 ![R.HydroStormMarker Screen1](file/graph/R.HydroStormMarkerIDF_Screen1.PNG)
 ![R.HydroStormMarker Screen2](file/graph/R.HydroStormMarkerIDF_Screen2.PNG)
@@ -227,9 +227,10 @@ Este error se presenta cuando el usuario en la hoja "Datos" en la celda "DMáx U
 ![R.HydroStormMarkerIDF_IDFEcuacionGrafica](file/graph/R.HydroStormMarkerIDF_IDFEcuacionGrafica.PNG)
 
 
-## Documentación
+## Referencias
+
 * GEAR - Curso de Hidrología
-* r.cfdtoos@gmail.com
+
 
 
 
