@@ -1,8 +1,6 @@
-<div align="center"><img alt="R.HydroTools" src="file/graph/R.HydroStormMarkerIDF_v1.png" width="300px"></div>
+<div align="center"><img alt="R.HydroTools" src="file/graph/R.HydroStormMarkerIDF_v1.png" width="600px"></div>
 
-# R.HydroStormMarkerIDF
-
-Herramienta para marcación, análisis de tormentas y construcción de curvas IDF a partir de eventos de precipitación obtenidos de pluviografos.
+# Herramienta para marcación, análisis de tormentas y construcción de curvas IDF a partir de eventos de precipitación obtenidos de pluviografos.
 
 En hidrología, el estudio de la precipitación a partir de datos de tormentas registrados en estaciones de precipitación, permite analizar su comportamiento, duración, intensidad y patrón temporal.
 
