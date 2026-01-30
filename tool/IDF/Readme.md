@@ -1,4 +1,4 @@
-<div align="center"><img alt="R.HydroTools" src="file/graph/R.HydroStormMarkerIDF_v1.png" width="600px"></div>
+<div align="center"><img alt="R.HydroTools" src="file/graph/R.HydroStormMarkerIDF_v1.png" width="800px"></div>
 
 # Herramienta para marcación, análisis de tormentas y construcción de curvas IDF a partir de eventos de precipitación obtenidos de pluviografos.
 
@@ -50,6 +50,167 @@ Los pulsos de precipitación pueden contener ceros intermedios en los cuales el 
 ![Ecuacion Tipo IDF](file/graph/R.EcuacionTipoIDF.png)
 * Cuyos coeficientes se pueden estimar por correlación lineal múltiple si se transforma de la siguiente manera:
 ![Correlacion Lineal Multiple](file/graph/R.CorrelacionLinealMultiple.png)
+
+
+## Convenciones
+
+| Convención  | Descripción                                                                                                                              |
+|-------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| [r]         | Hoja no editable.                                                                                                                        |
+| [w]         | Hoja editable.                                                                                                                           |
+| [rw]        | Hoja parcialmente editable.                                                                                                              |
+| * *         | Asterisco en hoja MAIN indica que el dato es requerido. Estos datos son usados principalemente en los títulos dinámicos de las gráficas. |
+| IDF         | Intensidad - Duración - Frecuencia.                                                                                                      |
+| DMax        | Duración máxima encontrada en todas las tormentas analizadas.                                                                            |
+| Índice      | Número entero consecutivo de 1 a n en función del pulso registrado y ordenado por año, mes, día y hora.                                  |
+| min         | minuto.                                                                                                                                  |
+| Mín         | Mínimo.                                                                                                                                  |
+| Máx         | Máximo.                                                                                                                                  |
+| Marca       | Marca de datos.                                                                                                                          |
+| DVE         | Distribución de Valores Extremos.                                                                                                        |
+
+
+## Funcionalidades agregadas por fecha de actualización
+
+Código fuente: Microsoft Visual Basic para Aplicaciones VBA.
+Probado en: **Microsoft Excel 2019**. Microsoft Windows 10 Pro 1903 (18362.449).
+
+__**v.20191109**__
+
+* Incluida correlación lineal múltiple y obtención de la ecuación IDF característica para la estación en estudio.
+* Incluida tabla y gráfica IDF con valores calculados para diferentes periodos de retorno a partir de la ecuación característica.
+* Optimización de algoritmo de cálculo hasta la duración máxima encontrada.
+
+__**v.20191107**__
+
+* Se incluyó nueva gráfica "DatoGraficoAcumulado" que muestra cada pulso por índice y los valores acumulados para cada tormenta identificada para cada duración acumulada.
+* Se incluyó nueva hoja de datos "IDFValores" que contiene solo los datos de la IDF estimados para cada periodo de retorno. Esta hoja es requerida para la graficación de la IDF.
+* Se incluyó nueva gráfica "IDFValoresGrafica" que muestra simultáneamente las curvas IDF para los 10 primeros periodos de retorno definidos en la hoja "Setup"
+* Se incluyo nueva hoja de datos "IDFSerie" con las series de valores obtenidos para la construcción de la ecuación característica a partir de correlación múltiple
+
+__**v.20191105**__
+
+* Análisis de intensidades a partir de los Clústers de precipitación máxima para cada delta de tiempo.
+* Definición de periodos de retorno en la hoja Setup.
+* IDF - Estimación de precipitación para múltiples periodos de retorno y duraciones definidas por el usuario.
+
+__**v.20191104**__
+
+* El usuario puede definir ahora el tiempo en minutos para el análisis de IDF Clústers. En la versión anterior el análisis de clústers se realizaba de forma automática hasta la duración máxima encontrada. Ahora el analista puede decidir entre utilizar el valor de la máxima duración o realizar el análisis hasta una duración determinada (Generalmente a nivel de Colombia puede utilizar un valor entre 360 min a 540 min, dependiendo de la zona geográfica).
+
+__**v.20191103**__
+
+* Se incluyó hoja "IDFClusters" que resume los valores máximos por año encontrados para cada delta de duración. La opción IDF CLUSTER, realiza el análisis de los valores máximos por pulsos sucesivos de diferentes duraciones para encontrar los pulsos más intensos en cada evento de lluvia a utilizar en la construcción de curvas IDF. Atención: Para utilizar correctamente esta función es necesario eliminar primero los ceros intermedios de la serie. Una vez eliminados los ceros intermedios se recomienda establecer los Ceros Intermedios en cero para realizar el análisis de clústers de forma correcta, debido a que luego del proceso de eliminación de registros sucesivos en cero no se mantiene la continuidad de los eventos.
+* Se identifican los registros de ceros consecutivos en la columna I de la hoja Datos. Estos registros pueden ser filtrados y eliminados de forma manual. El borrado manual es un procedimiento alterno más eficiente que el proceso interno automático de limpiado de registro y reordenamiento. Desde la hoja Datos, filtre los registros <> 1 identificados en la columna Cero Interm. (I)m copie y pegue los registros en Notepad++, desactive el filtro y elimine todos los registros de la hoja Datos, copie y pegue los registros desde el Notepad++.
+
+__**v.20191102**__
+
+* Se incluyó campo que índica la duración máxima encontrada. Este valor se calcula automáticamente y es requerido para el análisis de clusters para la construcción de curvas IDF.
+* Se incluyó opción para procesamiento de clusters para la construcción de curvas IDF.
+* Se optimizó el proceso de cálculo de la hoja "TormentaResumen"
+
+__**v.20191101**__
+
+* Se incluyó en la hoja de datos el secuenciamiento de frecuencias acumuladas por tormenta.
+* Tabla dinámica "Tormentas" actualizada a partir de frecuencias acumuladas por tormenta.
+
+__**v.20191031**__
+
+* Mejoras de rendimiento.
+* Menú con enlace a hojas de procesamiento y análisis.
+* Datos DEMO de estación Colombiana con pulsos cada 10 minutos.
+
+__**v.20191030**__
+
+* Se incorporó nueva gráfica de todos los datos ingresados a partir del Índice consecutivo y el valor o dato registrado. 
+* En la hoja de Setup se incorporó un campo para rótulo personalizado a mostrar en gráficas.
+* Gráficas generales son solo de lectura y dinámicas permiten realizar filtros o modificación de parámetros. Se pueden filtrar los datos a visualizar desde la hoja Datos y TormentaResumen.
+
+**v.20191029**
+
+* Hoja de Conceptos Generales y Diagrama de Flujo General.
+* Mejoras de rendimiento.
+* Se ha incluido en la hoja "DatosEjemplo" datos que pueden ser utilizados para realizar pruebas de funcionamiento.
+* En la hoja "DatosEjemplo" se ha incluido un ejemplo de la formulación requerida para segmentar el campo de la fecha del registro de datos (Formato AAAA/mm/dd HH:MM:SS) a columnas independientes de año, mes, día y hora en formato de texto con relleno de ceros en 4 caracteres.
+
+**v.20191028**
+
+* Títulos principales y secundarios en gráficas son aignados automáticamente a partir de los datos generales registrados para la estación.
+* Optimizado el algoritmo de eliminación de registros con ceros consecutivos, reduciendo el tamaño del archivo y simplificando el análisis posterior de los datos. Ejecutar este procedimiento no es obligatorio; sin embargo, se recomienda su utilización para reducir el tamaño del archivo y los tiempos de análisis.
+* Tabla y gráfica dinámica para análisis de duraciones.
+* Gráfica general con # de tormenta asignada, Precipitación Total e Intensidad.
+* Link R (Celda A1) en las hojas del libro para volver a la hoja MAIN.
+* Resúmen de tormentas encontradas y tiempo empleado en el procesamiento.
+
+
+## Procedimientos
+
+### Procedimientos externos preliminares
+
+**1. Descarga de datos públicos (Proceso externo)**
+
+* Identificar la Estación y descargar los datos pluviométricos o pluviográficos ya leídos
+* Colombia: http://dhime.ideam.gov.co/atencionciudadano/
+* Colombia: http://institucional.ideam.gov.co/jsp/loader.jsf?lServicio=Usuarios&lTipo=usuarios&lFuncion=login&
+* USA: https://data.nodc.noaa.gov/cgi-bin/iso?id=gov.noaa.ncdc:C00313
+* USA: https://www.ncdc.noaa.gov/cdo-web/search?datasetid=PRECIP_HLY#
+
+**2. Preprocesamiento externo**
+
+* Ordenar los datos por fecha y hora, agregar índice consecutivo de 1 a n. 
+* Segmentar los datos en las siguientes columnas de atributos: Año, Mes, Día, Hora (texto 4 dígitos), Dato, Marca, Índice.
+
+
+### Procedimientos en R.HydroStormMarker.IDF
+-----
+
+**3. Procesamiento - Main**
+
+* En la hoja _"Main"_ ingrese la información general de la estación. (Obligatorios: Código de la Estación, Latitud y Longitud)
+
+
+**4. Procesamiento - Datos**
+
+* Copiar y pegar los datos preprocesados en la hoja _"Datos"_ a partir de la celda B9. Los datos Año, Mes, Día, Dato, e Índice deben ser numéricos.
+
+**5. Procesamiento - Calcular**
+
+* En la hoja _"Datos"_, indique la Frecuencia en minutos, las Unidades (mm, ft), el número de Ceros intermedios y opcionalmente si requiere eliminar los ceros intermedios. De clic en el botón _"Calcular"_
+
+**6. Análisis a partir de hojas disponibles:**
+
+* Datos: Presenta el año de inicio y fin de la serie analizada, el # de registros procesados, el # de tormentas encontradas, la marcación de cada tormenta y sus valores acumulados.
+* TormentaResumen: Presenta los pulsos por tormenta, duración, precipitación total e intensidad. (Permite filtar datos)
+* TormentaResumenGrafico: Para cada tormenta, muestra el total de precipitación y su intensidad. Permite filtrar en las abscisas por rango de # de tormenta. (Editable)
+* TormentaDuracionAnalisis, TormentaDuracionGrafico: Tabla y gráfica dinámica para análisis de duraciones por tormenta.  (Editable)
+* Tormentas: Tabla Dinámica con tormentas identificadas y valores por pulso. (Editable)
+
+
+## Pruebas de Ejecución y Rendimiento
+
+**_1. Resultados de ejecución limpiando registros con datos en cero (registros sin lluvia consecutiva) y procesando la serie sin análisis de clústers para construcción de curvas IDF_**
+
+* Intel Core I5-8300H, 4 Cores, RAM 16gb: 100K registros en 9 minutos.
+* AMD Ryzen 7 2700, 8 Cores 3.2GHz, RAM 32gb: 100K registros en 9 minutos.
+* AMD Ryzen 7 2700, 8 Cores 3.2GHz, RAM 32gb: 500K registros en 84 minutos (12MB).
+
+**_2. Resultados procesando la serie sin limpieza de registros en cero y sin análisis de clústers para construcción de curvas IDF_**
+
+* AMD Ryzen 7 2700, 8 Cores 3.2GHz, RAM 32gb: 100K registros en 0.42 minutos, 406K registros en 1.47 minutos.
+
+
+**_3. Resultados procesando la serie sin ceros intermedios y con análisis de clústers para construcción de curvas IDF_**
+
+Este procedimiento es especialmente complejo debido a que es necesario procesar cada tormenta hasta la duración máxima encontrada para generar la matriz de máximos pulsos o valores por cada delta de frecuencia acumulada. Por ejemplo si la serie de datos es de 500k registros y la duración máxima encontrada en una de las tormentas es de 9.5 horas con pulsos cada 5 minutos, será necesario procesar 58 millones de clústers. Nota: Para simplificar este proceso puede optar primero por limpiar la serie de datos eliminando todos los ceros intermedios (registros sin lluvia consecutiva), sin embargo, _debe tener en cuenta que la linea de tiempo no se mantendrá consecutiva_ y deberá optar por no incluir ceros intermedios o utilizar máximo 1 en el procesamiento y análisis posterior de la serie. También puede optar por realizar el análisis año por año, ingresando en R.HydroStormMarker solo los registros del año a estudiar.
+
+* AMD Ryzen 7 2700, 8 Cores 3.2GHz, RAM 32gb: 23K registros en 6.2 minutos (Archivo de 16MB con 3894 tormentas).
+
+
+## Solución de errores
+
+**IDFClusterIntensidad no calculados completa o correctamente**
+
+Este error se presenta cuando el usuario en la hoja "Datos" en la celda "DMáx User" (I5), define una duración en la que no existen al menos dos valores anuales en algún Delta de tiempo para estimar la precipitación utilizando la distribución de Gumbel. Para solucionar este error, disminuya el valor de la duración máxima a analizar. 
 
 
 ## Ilustraciones
