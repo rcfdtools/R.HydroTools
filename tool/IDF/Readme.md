@@ -9,7 +9,7 @@ R.HydroStormMarker, es una herramienta computacional que permite identificar y m
 
 Los pulsos de precipitación pueden contener ceros intermedios en los cuales el sensor de captura no registra los cambios en la precipitación, razón por la cual la App permite incluir hasta 3 ceros consecutivos por cada evento.
 
-* [:toolbox:R.HydroStormMarkerIDF.xlsm](file/table/R.HydroStormMarkerIDF.xlsm)
+[:toolbox:R.HydroStormMarkerIDF.xlsm](file/table/R.HydroStormMarkerIDF.xlsm)
 
 
 ## 1. Conceptos
