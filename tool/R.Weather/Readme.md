@@ -46,7 +46,7 @@ R.Weather CDMS, es un sistema computacional que integra colecciones de datos y s
 
 ## Citación
 
-Se permite la reproducción parcial o total de este documento, el modelo de datos y las herramientas de este sistema, siempre que se haga referencia como: "R.Weather CDMS – Sistema de Administración y Análisis de Datos Climatológicos, Software y Manual de Usuario, Bogotá - Colombia - Suramérica. 2017".
+Se permite la reproducción parcial o total de este documento, el modelo de datos y las herramientas de este sistema, siempre que se haga referencia como: **_"R.Weather CDMS – Sistema de Administración y Análisis de Datos Climatológicos, Software y Manual de Usuario, Bogotá - Colombia - Suramérica. 2017"_**.
 
 
 ## Referencias
