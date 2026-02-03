@@ -1,0 +1,2 @@
+R.Weather CDMS por r.cfdtools@gmail.com
+Al utilizar este software acepta las cláusulas establecidas en https://github.com/rcfdtools/R.Weather y en D:\R.Weather\R.Weather.Clausulas.txt
