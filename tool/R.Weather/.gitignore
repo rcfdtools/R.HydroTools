@@ -1,0 +1,121 @@
+# Ignore files for push...
+# General advice from https://github.com/rcfdtools
+# Before put large files over 100MB, you have to include the path and name here on .gitignore.
+# Alert: when you create large files them can appear into the Commit main panel for push and the GitHub server can get back an error and stop the file loading and the pushing process. You can drop the commit, renaming the files after the inclusion here on .gitignore or move the large files to another external directory (like Downloads) and then make a Push. After the Push be done, you can move back the large files to the original folder. Before made Commit drops, is recommended get a full copy of your local repository for prevent data lost.
+# Large files over 100MB have be compress in 95MB file parts.
+
+
+# General exclusions
+.idea/
+.git/
+.venv/
+.github/
+.venvPython312/
+Lib/
+#.refs/GitHubRefs/
+# Grid pyramid
+*.ovr
+*.lock
+*__pycache__*
+# Compiled Python Files
+*.pyc
+# Grid temporal metadata
+*.tif
+*.tif.*
+*.tfw
+*.aux.xml
+*.tif.xml
+*.tif.aux.xml
+*.tif.vat.cpg
+*.tif.vat.dbf
+*.tif.ovr
+*Copia_de_seguridad_de*
+# Shapefiles and GIS uncompressed
+*.shp
+*.shx
+*.dbf
+*.prj
+*.CPG
+*.sbn
+*.sbx
+*.shp.*
+*.xml
+*.qix
+*.qmd
+*.2dm
+*.gdr
+# Geodatabases
+*.gdb
+*.mdb*
+# Audio y video
+*.avi
+*.mp4
+*.mp3
+*.mkv
+# HEC
+*.dss
+*.results
+*.bak
+# CAD ralated
+#*.dwg
+#*.dxf
+*.dwl
+*.dwl2
+*.cdc
+*.nc
+
+
+# Video exclusions
+#Section02/FdrDEM/FdrDEM.mp4
+
+
+# Large files exclusions
+#.dem/ASTER/ASTGTMV003Mosaic.tif
+#.dem/ASTER/ASTGTMV003Mosaic.tif.*
+#HECHMS/terrain/
+#HECHMS/gis/
+file/dem/ALOSPalsarFBS/*.zip
+file/dem/*.tif
+file/dem/*.tif.*
+file/dem/*.zip
+file/grid/LE07_L2SP/*.*
+file/grid/LC09_L2SP/*.*
+#.dem/*.rar
+#.dem/*.7z
+file/ref/Ley388de1997.pdf
+HECHMS_v0/
+HECHMS_v1/
+HECRAS_v0/
+HECRAS_v0_HD/
+HECRAS_v0_PrototipoCanal/
+HECRAS_v1/
+HECRAS_v2/
+HECRAS_v3/
+HECRAS_v4/
+HECRAS/
+file/temp/stat/
+
+
+# Tools
+HEC-DSSVue3.2.3/
+HEC-DSSVue 3.2.3/
+HEC-HMS-4.13-beta.6/
+
+
+# Some samples
+# http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files
+
+# ignore all .a files
+# *.a
+
+# but do track lib.a, even though you're ignoring .a files above
+# !lib.a
+
+# ignore all files in any directory named build
+# build/
+
+# ignore doc/notes.txt, but not doc/server/arch.txt
+# doc/*.txt
+
+# ignore all .pdf files in the doc/ directory and any of its subdirectories
+# doc/**/*.pdf
