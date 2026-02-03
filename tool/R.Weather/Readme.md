@@ -12,6 +12,8 @@ R.Weather CDMS, es un sistema computacional que integra colecciones de datos y s
 
 * [Manual de usuario](file/report/R.Weather.ManualUsuarioMetadatos.pdf)
 * [Tool](file/tools)
+
+> Al utilizar este software acepta las cláusulas establecidas en este repositorio y las indicadas en: D:\R.Weather\R.Weather.Clausulas.txt
  
 **General**
 
