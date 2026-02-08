@@ -1,0 +1,2 @@
+Alt + shift + F11 VBA Window
+Alt + F8 View Macros
