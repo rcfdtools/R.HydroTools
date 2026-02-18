@@ -7,12 +7,12 @@ Spanish title: Estudio y análisis de la Precipitación Máxima Probable (PMP) e
 Probable Maximum Precipitation (PMP) is the greatest amount of rainfall for a specific duration that is meteorologically possible for a given location, acting as a "worst-case" scenario for extreme storms, crucial for designing safety-critical infrastructure like bridges, river deviations, dams, spillways, and nuclear plants to prevent catastrophic failure. PMP is calculated by hydrologists using meteorological data to determine the upper limit of extreme rainfall, often leading to the Probable Maximum Flood (PMF) for flood control design, and is increasingly being studied for climate change impacts. 
 
 
-## Running sequence
+## Scripts running sequence
 
 1. [**pmp.py**](pmp.py): detailed analysis for station, creates _[station.md](dataset/pmax24h_out)_ and _[bestfit_station.csv](dataset/pmax24h_out/table)_ files. (this script also evaluate the best fit recurrence times tables but only for the activated SciPy distributions in funcs.l_pdist_scipy).
 2. [**extreme_tr.py**](extreme_tr.py): create the detailed tables _[extreme_station.csv](dataset/pmax24h_out/table)_ for almost all the continuous SciPy probability distributions (in funcs.l_pdist_scipy_extreme) and multiple recurrence times or Tr.
 2. [**extreme_tr_pdiff.py**](extreme_tr_pdiff.py): process the _[extremediff_station.csv](dataset/pmax24h_out/table)_ obtaining the extreme differences between bestfit PDF and the regular PDFs used in Hydrology.
-3. [paper.py](paper.py): create the integrated tables _[bestfit.csv](dataset/pmax24h_out/paper/bestfit.csv)_, _[stations.csv](dataset/pmax24h_out/paper/stations.csv)_, _[**extreme.csv**](dataset/pmax24h_out/paper/extreme.csv)_ and _[extremepdiff.csv](dataset/pmax24h_out/paper/extremepdiff.csv)_ files and generate the paper analysis.
+3. [**paper.py**](paper.py): create the integrated tables _[bestfit.csv](dataset/pmax24h_out/paper/bestfit.csv)_, _[stations.csv](dataset/pmax24h_out/paper/stations.csv)_, _[extreme.csv](dataset/pmax24h_out/paper/extreme.csv)_ and _[extremepdiff.csv](dataset/pmax24h_out/paper/extremepdiff.csv)_ files and generate the paper analysis.
 
 
 ## Station catalog requirements
