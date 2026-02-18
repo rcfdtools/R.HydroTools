@@ -16,17 +16,11 @@ Probable Maximum Precipitation (PMP) is the greatest amount of rainfall for a sp
 3. [**paper.py**](paper.py): create the integrated tables _[bestfit.csv](dataset/pmax24h_out/paper/bestfit.csv)_, _[stations.csv](dataset/pmax24h_out/paper/stations.csv)_, _[extreme.csv](dataset/pmax24h_out/paper/extreme.csv)_ and _[extremepdiff.csv](dataset/pmax24h_out/paper/extremepdiff.csv)_ files and generate the paper analysis.
 
 
-## Station catalog requirements
+## Integrated stations catalog requirements
 
-* Not existing stations from www.datos.gov.co as 14015020 and 21202200 has to be added at the end of the CNE records and mark as (No Data) and with latitude 4.0 and longitude -72.
-* National and local catalogs has to be integrated as CNE.xls with two new columns at the end called _Catalogo_ and _Version_.
-
-
-## PMP - Probable maximum precipitation with SciPy stat library
-
-PMP analysis using multiple probability distributions available in SciPy with precipitation estimation for different return periods - Tr.
-
-> Latitude and longitude columns in CNE_IDEAM.xls has to be converted to numeric values replacing comma separator by point separator.
+* Not existing stations from www.datos.gov.co, e.g., as 14015020 and 21202200, has to be added at the end of the CNE records and mark as (No Data) and with latitude 4.0 and longitude -72.
+* National and local catalogs has to be integrated as [CNE.xls](dataset/CNE.xls) with two new columns at the end called _Catalogo_ and _Version_.
+* Latitude and longitude columns in original [CNE_IDEAM.xls](https://dhime.ideam.gov.co/) has to be converted to numeric values replacing comma separator by point separator.
 
 
 ## Version 0 - Probability distributions excluded for rain analysis in pmp.py (function.py/l_pdist_scipy)
@@ -257,7 +251,6 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
                   ['dweibull', 3, 'MLE', 'Double Weibull', True]
                  ])
 ```
-
 
 
 ## Probability distributions excluded for rain analysis in extreme_tr.py
