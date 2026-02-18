@@ -127,11 +127,9 @@ En el desarrollo de proyectos con componente geográfico, es necesario conocer l
 | [Convertir una tabla o dataset dinámico en una tabla de registros apilados](tool/UnpivotTable)                                           | Este script permite crear una tabla de registros apilados de series de tiempo para cargue masivo y visualización en GIS.                                                                                                                                                                                                                                                                                                                                                                                                           | Python   |
 ##
 
-**Licencia, cláusulas y condiciones de uso:** R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](License.md) y como referenciar los contenidos publicados en este repositorio.
+**Licencia, cláusulas y condiciones de uso:** R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](LICENSE.md) y como referenciar los contenidos publicados en este repositorio.
 
 **Ayuda y soporte:** a través de la pestaña _[Discussions](https://github.com/rcfdtools/R.HydroTools/discussions)_ localizada en la parte superior de esta ventana, podrás encontrar y participar en los [_anuncios o noticias_](https://github.com/rcfdtools/R.HydroTools/discussions/categories/announcements) publicados, enviarnos tus [_ideas_](https://github.com/rcfdtools/R.HydroTools/discussions/categories/ideas) para herramientas complementarias, participar en preguntas, respuestas y consultas específicas [_Q&A_](https://github.com/rcfdtools/R.HydroTools/discussions/categories/q-a) y realizar [_publicaciones o consultas generales_](https://github.com/rcfdtools/R.HydroTools/discussions/categories/general).
-
-**Clonación:** para compatibilidad completa de las rutas utilizadas en los scripts y herramientas de R.HydroTools, en Microsoft Windows clonar y/o descomprimir en _D:\R.HydroTools_. Enlace para clonación https://github.com/rcfdtools/R.HydroTools.git.
 
 _¡Encontraste útil este proyecto!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 

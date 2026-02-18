@@ -323,7 +323,8 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 * [Singh, Abhishek & Singh, Vijay & Byrd, Aaron. (2018). Computation of probable maximum precipitation and its uncertainty. International Journal of Hydrology. 2. 10.15406/ijh.2018.02.00118.](https://www.researchgate.net/publication/327888063_Computation_of_probable_maximum_precipitation_and_its_uncertainty) 
 
 
-## License, Terms and Conditions of Use
+##
+
 
 _R.HydroTools is free to use for academic purposes. Learn about our [License, terms and conditions of use](../../LICENSE.md), and how to cite the content published in this repository._
 
@@ -331,3 +332,5 @@ _¡Did you find this repository useful¡ Support its distribution by marking it 
 
 | [:house: Start](../../README.md)  | [:beginner: Help / Collaborate](https://github.com/rcfdtools/R.HydroTools/discussions) |
 |-----------------------------------|----------------------------------------------------------------------------------------|
+
+<sub>**APPS & TOOLS DISCLAIMER**: • NO WARRANTY - This software is provided by <a href="https://github.com/rcfdtools" target="_blank">github.com/rcfdtools</a> "as is", without any express or implied warranty, including warranties of merchantability, fitness for a particular purpose, or non-infringement. There is no guarantee that the software will be error-free or operate without interruption. • LIMITATION OF LIABILITY - Neither the authors nor copyright holders will be liable for claims or damages arising from the software or its use. You are responsible for determining if the software is appropriate for your use and assume all associated risks, including errors, legal compliance, and data loss. • NO PROFESSIONAL ADVICE - The software provides general information and does not offer professional advice. It should not replace consultation with professional advisors.</sub>
