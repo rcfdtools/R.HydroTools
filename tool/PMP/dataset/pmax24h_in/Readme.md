@@ -9,14 +9,14 @@
 
 ### conventional_test.csv
 
-Report with all the available tables and plot analysis.
+Report sample with all the available tables and plot analysis.
 
 * Stations: 25020230, 25020260, 25020280.
 
 
 ### automatic_test.csv
 
-Report with all the available tables and plot analysis.
+Report sample with all the available tables and plot analysis.
 
 * Stations: [21209920](../pmax24h_out/21209920.md), [21206930](../pmax24h_out/21206930.md), [21195170](../pmax24h_out/21195170.md).
 
