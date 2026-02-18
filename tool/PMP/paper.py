@@ -62,6 +62,7 @@ pdiff_suffix = 'pdiff'
 # Header & join bestfit and extreme .csv results files and read and filter the CNE catalog
 funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen = print_on_screen)
 funcs.print_log(file_log, f'# {dictionary.dicts['study_name']}\n', on_screen = print_on_screen)
+funcs.print_log(file_log, f'# {dictionary.dicts['keywords']}\n', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\n{dictionary.dicts['pmp']}\n\n', on_screen = print_on_screen)
 funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../temp/diagram_pmp.svg" width="900px">', center_div=True, on_screen = print_on_screen)
 
