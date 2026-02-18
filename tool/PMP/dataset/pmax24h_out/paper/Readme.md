@@ -6,8 +6,7 @@
 </div>
 
 # RESEARCH: Study and analysis of the Probable Maximum Precipitation (PMP) in the network of automatic climatological stations of Colombia - South America and estimation of extreme values for different return periods from multiple probability distributions.
-
-# Keywords: `pmp` `probability-distribution` `empirical-distribution` `return-period` `scipy` `national-stations-catalog` `cne` `best-fit` `extreme-value` `difference-analysis` `kolmogorov-smirnov`
+Keywords: `pmp` `probability-distribution` `empirical-distribution` `return-period` `scipy` `national-stations-catalog` `cne` `best-fit` `extreme-value` `difference-analysis` `kolmogorov-smirnov`
 
 
 Probable Maximum Precipitation (PMP) is the greatest amount of rainfall for a specific duration that is meteorologically possible for a given location, acting as a "worst-case" scenario for extreme storms, crucial for designing safety-critical infrastructure like bridges, river deviations, dams, spillways, and nuclear plants to prevent catastrophic failure. PMP is calculated by hydrologists using meteorological data to determine the upper limit of extreme rainfall, often leading to the Probable Maximum Flood (PMF) for flood control design, and is increasingly being studied for climate change impacts. Probable Maximum Precipitation (PMP) is the theoretical upper limit of rainfall, a deterministic estimate for extreme events, while probability distributions (like GEV, Gumbel) describe the likelihood and frequency of various precipitation amounts, including rare ones, showing how often events occur, with PMP representing the extreme end of these distributions, used for critical infrastructure design to ensure safety against the worst conceivable weather, unlike standard statistical forecasts which cover typical probabilities.
