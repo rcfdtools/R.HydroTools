@@ -273,6 +273,23 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 * Division by zero, loop calculations or values outside the allowed distribution range: studentized_range, kstwo, levy_stable.
 
 
+## Markdown setup
+
+**How to show more lines in the PyCharm RUN console**
+
+* File --> Settings --> Editor --> General --> Console -->
+* Then check "Override console cycle buffer size (1024 KB)"
+* Change that values to whatever you need, e.g. 4096
+
+** Change Visual guide or right margin position**
+
+* File --> Settings --> Editor --> Code Style --> Hard wrap at
+
+**Show complete links in editor for markdown files**
+
+* File --> Settings --> Editor --> General --> Code folding --> Markdown --> Collapse links  
+
+
 ## References
 
 * CNE: https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Cat-logo-Nacional-de-Estaciones-del-IDEAM/hp9r-jxuu
@@ -304,23 +321,6 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 * https://library.wmo.int/records/item/35708-manual-on-estimation-of-probable-maximum-precipitation-pmp
 * https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/climate-services/wmo-climatological-normals
 * [Singh, Abhishek & Singh, Vijay & Byrd, Aaron. (2018). Computation of probable maximum precipitation and its uncertainty. International Journal of Hydrology. 2. 10.15406/ijh.2018.02.00118.](https://www.researchgate.net/publication/327888063_Computation_of_probable_maximum_precipitation_and_its_uncertainty) 
-
-
-## Markdown setup
-
-**How to show more lines in the PyCharm RUN console**
-
-* File --> Settings --> Editor --> General --> Console -->
-* Then check "Override console cycle buffer size (1024 KB)"
-* Change that values to whatever you need, e.g. 4096
-
-** Change Visual guide or right margin position**
-
-* File --> Settings --> Editor --> Code Style --> Hard wrap at
-
-**Show complete links in editor for markdown files**
-
-* File --> Settings --> Editor --> General --> Code folding --> Markdown --> Collapse links  
 
 
 ## License, Terms and Conditions of Use
