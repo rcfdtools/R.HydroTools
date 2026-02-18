@@ -12,7 +12,7 @@
 
 ## automatic_test.csv
 
-* Stations: 21209920, 21206930, 21195170.
+* Stations: [21209920](../dataset/pmax24h_out/21209920.md), [21206930](../dataset/pmax24h_out/21206930.md), [21195170](../dataset/pmax24h_out/21195170.md).
 
 
 ## automatic_colombia_2003_2025.csv
