@@ -326,8 +326,6 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 ##
 
 
-_R.HydroTools is free to use for academic purposes. Learn about our [License, terms and conditions of use](../../LICENSE.md), and how to cite the content published in this repository._
-
 _¡Did you find this repository useful¡ Support its distribution by marking it with a ⭐ or follow us by clicking the Follow button on [r.cfdtools](https://github.com/rcfdtools) on GitHub._
 
 | [:house: Start](../../README.md)  | [:beginner: Help / Collaborate](https://github.com/rcfdtools/R.HydroTools/discussions) |
