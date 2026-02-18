@@ -23,7 +23,9 @@ Probable Maximum Precipitation (PMP) is the greatest amount of rainfall for a sp
 * Not existing stations from www.datos.gov.co, e.g., as 14015020 and 21202200, has to be added at the end of the CNE records and mark as (No Data) and with latitude 4.0 and longitude -72.
 
 
-## Version 0 - Probability distributions excluded for rain analysis in pmp.py (function.py/l_pdist_scipy)
+## Version 0 - Probability distributions excluded for rain analysis in pmp.py
+
+[function.py](function.py)/l_pdist_scipy
 
 * When the annual values contain zeros o few records, the following distributions has to be avoided: powerlognorm, powernorm, geninvgauss (doesn't converge with low values or at least 10 records), recipinvgauss ( doesn't converge with low values or at least 10 records), dgamma (over PDF estimation).
 * High over extreme values: cauchy, foldcauchy, halfcauchy, skewcauchy, exponpow, exponweib, gengamma, halfgennorm, lomax, ncx2, kstwo, studentized_range, norminvgauss, rel_breitwigner, loglaplace, levy (trend to infinite), burr12 (trend to infinite), powerlognorm (trend to infinite), powernorm (trend to infinite), pareto (trend to infinite for datasets with lower standard deviation), johnsonsu (trend to infinite for datasets with higher standard deviation).
@@ -139,7 +141,9 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 ```
 
 
-## Version 1 - Probability distributions excluded for rain analysis in pmp.py (function.py/l_pdist_scipy)
+## Version 1 - Probability distributions excluded for rain analysis in pmp.py
+
+[function.py](function.py)/l_pdist_scipy
 
 * High over range or infinite values: studentized_range, kstwo, levy_stable, genhyperbolic, foldcauchy, halfcauchy, laplace_asymmetric, levy, pareto, powerlognorm, powernorm, cauchy, chi2, expon, skewcauchy, ncx2, fisk, gibrat, lognorm, rel_breitwigner.
 * Running error: loguniform (out of valid range), recipinvgauss (NaN), geninvgauss (NaN), norminvgauss (NaN).
