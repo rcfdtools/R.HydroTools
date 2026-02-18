@@ -41,7 +41,7 @@ create_plot = True # Creates, save and include plots into reports
 show_plot = False # Show plot on Python screen console
 color_plot = '#3b3b3b' # Global plot color
 minimum_sample = 8 # Exclude a station when doesn't have the minimum data sample (0 means any), used in Stations and Bestfit positions analysis. ●
-minimum_sample_pdiff = 15 # Exclude a station when doesn't have the minimum records data sample (0 means any), used in Percentage difference analysis. ●
+minimum_sample_pdiff = 15 # Exclude a station when doesn't have the minimum yearly records data sample (0 means any), used in Percentage difference analysis. ●
 pdiff_max_tr = 100 # Maximum return period to eval, used in percentage difference analysis (0 means any) ●
 dpi = 128 # Graph plot resolution
 create_geojson_map = True
@@ -63,7 +63,7 @@ pdiff_suffix = 'pdiff'
 funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen = print_on_screen)
 funcs.print_log(file_log, f'# {dictionary.dicts['study_name']}\n', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\n{dictionary.dicts['pmp']}\n\n', on_screen = print_on_screen)
-funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../temp/diagram_pmp.svg" width="800px">', center_div=True, on_screen = print_on_screen)
+funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../temp/diagram_pmp.svg" width="900px">', center_div=True, on_screen = print_on_screen)
 
 ########### Best fit files join ###########
 all_filenames = [i for i in glob.glob(os.path.join(input_path, 'bestfit_*.{}'.format(extension)))]
@@ -254,7 +254,7 @@ for emp in edf_dist:
 # Best fit analysis
 if minimum_sample > 0: df_bestfit = df_bestfit[df_bestfit['n'] >= minimum_sample]
 funcs.print_log(file_log, f'\n\n## C. Best Fit analysis ({len(df_bestfit[df_bestfit['best_fit_sort']==1])} stations)\n\n{dictionary.dicts['bestfit']}', center_div=False, on_screen = print_on_screen)
-funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../temp/diagram_bestfit.svg" width="600px">', center_div=True, on_screen = print_on_screen)
+funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../temp/diagram_bestfit.svg" width="700px">', center_div=True, on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\n{dictionary.dicts['kolmogorov_smirnov_test']}', on_screen = print_on_screen)
 if pdist_logarithmic_on:
     best_fit_text = f'\n\nFor this analysis, from the initial dataset with {len(df_catalog_filter_selected_columns)} stations we use {len(df_bestfit[df_bestfit['best_fit_sort']==1])} stations (filtering only those with n ≥ {minimum_sample} records or yearly values), {len(edf_dist)} empirical distributions, {len(df_l_pdist_scipy.query('active == True'))} probability distributions and {len(df_l_pdist_scipy.query('active == True'))} logarithmic probability distributions, corresponding to {len(df_bestfit[df_bestfit['best_fit_sort']==1]) * len(edf_dist) * (len(df_l_pdist_scipy.query('active == True')) * 2)} fit test evaluations.'

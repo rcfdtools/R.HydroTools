@@ -5,7 +5,7 @@
 
 </div>
 
-# Study and analysis of the Probable Maximum Precipitation (PMP) in the network of automatic climatological stations of Colombia - South America and estimation of extreme values for different return periods from multiple probability distributions.
+# RESEARCH: Study and analysis of the Probable Maximum Precipitation (PMP) in the network of automatic climatological stations of Colombia - South America and estimation of extreme values for different return periods from multiple probability distributions.
 
 
 Probable Maximum Precipitation (PMP) is the greatest amount of rainfall for a specific duration that is meteorologically possible for a given location, acting as a "worst-case" scenario for extreme storms, crucial for designing safety-critical infrastructure like bridges, river deviations, dams, spillways, and nuclear plants to prevent catastrophic failure. PMP is calculated by hydrologists using meteorological data to determine the upper limit of extreme rainfall, often leading to the Probable Maximum Flood (PMF) for flood control design, and is increasingly being studied for climate change impacts. Probable Maximum Precipitation (PMP) is the theoretical upper limit of rainfall, a deterministic estimate for extreme events, while probability distributions (like GEV, Gumbel) describe the likelihood and frequency of various precipitation amounts, including rare ones, showing how often events occur, with PMP representing the extreme end of these distributions, used for critical infrastructure design to ensure safety against the worst conceivable weather, unlike standard statistical forecasts which cover typical probabilities.
@@ -17,7 +17,7 @@ The most common probability distributions in hydrology, used for analyzing flood
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../../../temp/diagram_pmp.svg" width="800px">
+<img alt="R.HydroTools" src="../../../temp/diagram_pmp.svg" width="900px">
 
 </div>
 
@@ -959,7 +959,7 @@ An Empirical Distribution Function (EDF) is a step-function estimate of a true c
 Best fit in probability distribution analysis means finding the theoretical distribution (like Normal, Poisson, Exponential) that most accurately mirrors your real-world data´s patterns (shape, center, spread) for better predictions, using methods like visual checks (Q-Q plots), goodness-of-fit tests (Kolmogorov-Smirnov, Chi-Squared), and information criteria (AIC) to score and select the simplest, most representative model.
 <div align="center">
 
-<img alt="R.HydroTools" src="../../../temp/diagram_bestfit.svg" width="600px">
+<img alt="R.HydroTools" src="../../../temp/diagram_bestfit.svg" width="700px">
 
 </div>
 
