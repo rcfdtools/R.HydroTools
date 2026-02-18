@@ -23,7 +23,15 @@ Probable Maximum Precipitation (PMP) is the greatest amount of rainfall for a sp
 * Not existing stations from www.datos.gov.co, e.g., as 14015020 and 21202200, has to be added at the end of the CNE records and mark as (No Data) and with latitude 4.0 and longitude -72.
 
 
-## Version 0 - Probability distributions excluded for rain analysis in pmp.py
+## Rain datasets
+
+A dataset is a structured collection of related data, typically organized in rows and columns (tabular format) or as files (JSON, CSV, images), designed for analysis, visualization, or training machine learning models. Each row represents an observation, while columns represent variables or features.
+
+* [Rain datasets - Input](dataset/pmax24h_in)
+* [Rain datasets - Output](dataset/pmax24h_out)
+
+
+## Probability distributions excluded for rain analysis in pmp.py - Version 0
 
 [functions.py](functions.py)/l_pdist_scipy
 
@@ -141,7 +149,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 ```
 
 
-## Version 1 - Probability distributions excluded for rain analysis in pmp.py
+## Probability distributions excluded for rain analysis in pmp.py - Version 1
 
 [functions.py](functions.py)/l_pdist_scipy
 
