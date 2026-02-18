@@ -275,11 +275,15 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 
 ## Researchers activities
 
+<div align="center">
+
 | Researcher | Activities                                                                                                                                                                                                                      |
 |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [rcfdtools](https://github.com/rcfdtools)  | • General research.<br/>• Script and code programming.<br/>• Dataset aggregations.<br/>• Running and publishing the general and particular digital online reports.                                                                    |
 | JDRA       | • Main abstract.<br/>• General conclusions.<br/>• Detailed resoults validation.<br/>• Spanish paper translation.<br/>• Paper file document (.docx, pdf).<br/>• Global references (Mendeley).<br/>• Publishing in a indexed engineer magazine. |
 | HARD       | • General technical scope evaluation.<br/>• Global results validation.<br/>• Publishing resorces.<br/>• General difussion.                                                                                                              |
+
+</div>
 
 
 ## Markdown setup
