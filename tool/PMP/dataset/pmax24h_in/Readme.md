@@ -16,7 +16,7 @@ Report with all the available tables and plot analysis.
 
 Report with all the available tables and plot analysis.
 
-* Stations: [21209920](../dataset/pmax24h_out/21209920.md), [21206930](../dataset/pmax24h_out/21206930.md), [21195170](../dataset/pmax24h_out/21195170.md).
+* Stations: [21209920](../pmax24h_out/21209920.md), [21206930](../pmax24h_out/21206930.md), [21195170](../pmax24h_out/21195170.md).
 
 
 ## automatic_colombia_2003_2025.csv
