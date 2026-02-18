@@ -8,7 +8,7 @@ Spanish title: Estudio y análisis de la Precipitación Máxima Probable (PMP) e
 Probable Maximum Precipitation (PMP) is the greatest amount of rainfall for a specific duration that is meteorologically possible for a given location, acting as a "worst-case" scenario for extreme storms, crucial for designing safety-critical infrastructure like bridges, river deviations, dams, spillways, and nuclear plants to prevent catastrophic failure. PMP is calculated by hydrologists using meteorological data to determine the upper limit of extreme rainfall, often leading to the Probable Maximum Flood (PMF) for flood control design, and is increasingly being studied for climate change impacts. 
 
 
-## Scripts running sequence
+## A. Scripts running sequence
 
 1. [**pmp.py**](pmp.py): detailed analysis for station, creates _[station.md](dataset/pmax24h_out)_ and _[bestfit_station.csv](dataset/pmax24h_out/table)_ files. (this script also evaluate the best fit recurrence times tables but only for the activated SciPy distributions in funcs.l_pdist_scipy).
 2. [**extreme_tr.py**](extreme_tr.py): create the detailed tables _[extreme_station.csv](dataset/pmax24h_out/table)_ for almost all the continuous SciPy probability distributions (in funcs.l_pdist_scipy_extreme) and multiple recurrence times or Tr.
@@ -16,14 +16,14 @@ Probable Maximum Precipitation (PMP) is the greatest amount of rainfall for a sp
 3. [**paper.py**](paper.py): create the integrated tables _[bestfit.csv](dataset/pmax24h_out/paper/bestfit.csv)_, _[stations.csv](dataset/pmax24h_out/paper/stations.csv)_, _[extreme.csv](dataset/pmax24h_out/paper/extreme.csv)_ and _[extremepdiff.csv](dataset/pmax24h_out/paper/extremepdiff.csv)_ files and generate the paper analysis.
 
 
-## Integrated stations catalog requirements
+## B. Integrated stations catalog requirements
 
 * Latitude and longitude columns in the original [CNE_IDEAM.xls](https://dhime.ideam.gov.co/) has to be converted to numeric values replacing comma separator by point separator.
 * National and local catalogs has to be integrated as [CNE.xls](dataset/CNE.xls) with two new columns at the end called _Catalogo_ and _Version_.
 * Not existing stations from www.datos.gov.co, e.g., as 14015020 and 21202200, has to be added at the end of the CNE records and mark as (No Data) and with latitude 4.0 and longitude -72.
 
 
-## Rain datasets
+## C. Datasets
 
 A dataset is a structured collection of related data, typically organized in rows and columns (tabular format) or as files (JSON, CSV, images), designed for analysis, visualization, or training machine learning models. Each row represents an observation, while columns represent variables or features.
 
@@ -31,7 +31,10 @@ A dataset is a structured collection of related data, typically organized in row
 * [Rain datasets - Output](dataset/pmax24h_out)
 
 
-## Probability distributions excluded for rain analysis in pmp.py - Version 0
+## D. Probability distributions excluded for rain analysis in pmp.py
+
+
+### Version 0
 
 [functions.py](functions.py)/l_pdist_scipy
 
@@ -149,7 +152,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 ```
 
 
-## Probability distributions excluded for rain analysis in pmp.py - Version 1
+### Version 1
 
 [functions.py](functions.py)/l_pdist_scipy
 
@@ -265,7 +268,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 ```
 
 
-## Probability distributions excluded for rain analysis in extreme_tr.py
+## E. Probability distributions excluded for rain analysis in extreme_tr.py
 
 * Division by zero, loop calculations or values outside the allowed distribution range: studentized_range, kstwo, levy_stable.
 
@@ -302,6 +305,8 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 * https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/climate-services/wmo-climatological-normals
 * [Singh, Abhishek & Singh, Vijay & Byrd, Aaron. (2018). Computation of probable maximum precipitation and its uncertainty. International Journal of Hydrology. 2. 10.15406/ijh.2018.02.00118.](https://www.researchgate.net/publication/327888063_Computation_of_probable_maximum_precipitation_and_its_uncertainty) 
 
+
+## Markdown setup
 
 **How to show more lines in the PyCharm RUN console**
 
