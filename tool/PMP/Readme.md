@@ -277,9 +277,9 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 
 | Researcher | Activities                                                                                                                                                                                       |
 |------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [rcfdtools](https://github.com/rcfdtools)  | General research, script programming, dataset aggregations, running and publishing general and particular reports.                                                                               |
+| [rcfdtools](https://github.com/rcfdtools)  | General research.<br/>Script and code programming.<br/>Dataset aggregations.<br/>Running and publishing general and particular digital online reports. |
 | JDRA       | Main abstract, general conclusions, detailed resoults validation, spanish paper translation, paper file document (.docx, pdf), references (Mendeley), publishing in a indexed engineer magazine. |
-| HARD       | General technical scope evaluation, global results validation, publishing resorces, general difussion.                                                                                            |
+| HARD       | General technical scope evaluation, global results validation, publishing resorces, general difussion.                                                                                           |
 
 
 ## Markdown setup
@@ -331,11 +331,6 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 * https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/climate-services/wmo-climatological-normals
 * [Singh, Abhishek & Singh, Vijay & Byrd, Aaron. (2018). Computation of probable maximum precipitation and its uncertainty. International Journal of Hydrology. 2. 10.15406/ijh.2018.02.00118.](https://www.researchgate.net/publication/327888063_Computation_of_probable_maximum_precipitation_and_its_uncertainty) 
 
-
-##
-
-
-_¡Did you find this repository useful¡ Support its distribution by marking it with a ⭐ or follow us by clicking the Follow button on [r.cfdtools](https://github.com/rcfdtools) on GitHub._
 
 | [:house: Start](../../README.md)  | [:beginner: Help / Collaborate](https://github.com/rcfdtools/R.HydroTools/discussions) |
 |-----------------------------------|----------------------------------------------------------------------------------------|
