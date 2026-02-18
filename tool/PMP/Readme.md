@@ -18,9 +18,9 @@ Probable Maximum Precipitation (PMP) is the greatest amount of rainfall for a sp
 
 ## Integrated stations catalog requirements
 
-* Not existing stations from www.datos.gov.co, e.g., as 14015020 and 21202200, has to be added at the end of the CNE records and mark as (No Data) and with latitude 4.0 and longitude -72.
+* Latitude and longitude columns in the original [CNE_IDEAM.xls](https://dhime.ideam.gov.co/) has to be converted to numeric values replacing comma separator by point separator.
 * National and local catalogs has to be integrated as [CNE.xls](dataset/CNE.xls) with two new columns at the end called _Catalogo_ and _Version_.
-* Latitude and longitude columns in original [CNE_IDEAM.xls](https://dhime.ideam.gov.co/) has to be converted to numeric values replacing comma separator by point separator.
+* Not existing stations from www.datos.gov.co, e.g., as 14015020 and 21202200, has to be added at the end of the CNE records and mark as (No Data) and with latitude 4.0 and longitude -72.
 
 
 ## Version 0 - Probability distributions excluded for rain analysis in pmp.py (function.py/l_pdist_scipy)
