@@ -273,6 +273,15 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 * Division by zero, loop calculations or values outside the allowed distribution range: studentized_range, kstwo, levy_stable.
 
 
+## Researchers activities
+
+| Researcher | Activities                                                                                                                                                                                       |
+|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [rcfdtools](https://github.com/rcfdtools)  | General research, script programming, dataset aggregations, running and publishing general and particular reports.                                                                               |
+| JDRA       | Main abstract, general conclusions, detailed resoults validation, spanish paper translation, paper file document (.docx, pdf), references (Mendeley), publishing in a indexed engineer magazine. |
+| HARD       | General technical scope evaluation, global results validation, publishing resorces, general difussion.                                                                                            |
+
+
 ## Markdown setup
 
 **How to show more lines in the PyCharm RUN console**
