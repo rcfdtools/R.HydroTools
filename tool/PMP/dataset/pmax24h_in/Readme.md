@@ -18,7 +18,7 @@ Report sample with all the available tables and plot analysis.
 
 Report sample with all the available tables and plot analysis.
 
-* Stations (3): [21209920](../pmax24h_out/21209920.md), [21206930](../pmax24h_out/21206930.md), [21195170](../pmax24h_out/21195170.md).
+* Stations (3): [21209920 SANTA ROSITA  Cundinamarca Suesca](../pmax24h_out/21209920.md), [21206930 PARAMO GUERRERO Cundinamarca Zipaquirá](../pmax24h_out/21206930.md), [21195170 PAQUILO Cundinamarca Cabrera](../pmax24h_out/21195170.md).
 
 
 ### automatic_colombia_2003_2025.csv
