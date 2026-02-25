@@ -14,7 +14,7 @@ Graph
 - Ok. (like Normal, Poisson, Exponential, etc.)
 - Ok. Title: Empirical & PDF
 - Ok. Label: PDF anglit
-- Test station with K-S Test
+- Ok. Test station with K-S Test
 
 
 Meeting 20260304 9:00am 30min remote(ARD, JDRA, WRAP)
