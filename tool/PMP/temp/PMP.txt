@@ -1,8 +1,22 @@
 Meeting 20260223 (ARD, JDRA, WRAP)
 **********************************
-- Title adjusting
+- Ok. Task: Title adjusting
 
 
 Old title: Study and analysis of the Probable Maximum Precipitation (PMP) in the network of automatic climatological stations of Colombia - South America and estimation of extreme values for different return periods from multiple probability distributions.
 
 New title: Study and analysis of the 24 hours Maximum Precipitation (PMax24h) in the network of automatic climatological stations of Colombia - South America and estimation of extreme values for different return periods using various probability distributions.
+
+
+Meeting 20260225 (ARD, JDRA, WRAP)
+**********************************
+Graph
+- Ok. (like Normal, Poisson, Exponential, etc.)
+- Ok. Title: Empirical & PDF
+- Ok. Label: PDF anglit
+- Test station with K-S Test
+
+
+Meeting 20260304 9:00am 30min remote(ARD, JDRA, WRAP)
+*****************************************************
+- General conclusions

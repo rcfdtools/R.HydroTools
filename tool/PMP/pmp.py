@@ -340,9 +340,9 @@ for station in stations:
 
             # Plot Empirical & Estimated PDF - Best Fit (graph 3)
             plt.hist(df.x, density=True, histtype='stepfilled', alpha=0.4, color='gray', label=f'Empirical {emp}')
-            plt.plot(df.x, df[dp_best['p_dist'][0]+'_pdf'], 'r-', lw=1.5, color=color_plot, label=f'Estimated {dp_best['p_dist'][0]}')
+            plt.plot(df.x, df[dp_best['p_dist'][0]+'_pdf'], 'r-', lw=1.5, color=color_plot, label=f'PDF {dp_best['p_dist'][0]}')
             plt.legend(loc='best', frameon=False)
-            plt.title('Empirical & Estimated PDF (Best fit)')
+            plt.title('Empirical & PDF (Best fit)')
             plt.xlabel(parameter_name + ' ' + parameter_units)
             plt.ylabel('PDF')
             plt.grid(color='gray', linestyle='--', linewidth=0.1)
