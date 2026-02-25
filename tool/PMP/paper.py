@@ -13,7 +13,7 @@ import random
 
 
 # General setup
-app_version = 'v20260118'
+app_version = 'v20260225'
 input_path = 'dataset/pmax24h_out/table/' # Your local input file folder
 output_path = 'dataset/pmax24h_out/paper/' # Your local output file folder
 station_catalog_file = 'dataset/CNE.xls' # CNE catalog for stations info

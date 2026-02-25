@@ -24,10 +24,10 @@ pd.set_option('display.width', None)
 
 
 # General setup
-app_version = 'v20260113'
+app_version = 'v20260225'
 input_path = 'dataset/pmax24h_in/' # Your local input file folder
 output_path = 'dataset/pmax24h_out/' # Your local output file folder
-station_dataset_file = input_path + 'XXXXautomatic_test.csv' # Stations dataset ●
+station_dataset_file = input_path + 'automatic_test.csv' # Stations dataset ●
 station_catalog_file = 'dataset/CNE.xls' # CNE catalog for stations info
 station_catalog_columns_drop = ['OBSERVACION', 'SUBRED'] # Dropped columns from CNE
 parameter_name = 'Rain, Pmax24h' # rain, flow
