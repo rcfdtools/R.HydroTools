@@ -19,7 +19,6 @@ output_path = 'dataset/pmax24h_out/paper/' # Your local output file folder
 station_catalog_file = 'dataset/CNE.xls' # CNE catalog for stations info
 station_catalog_columns_drop = ['OBSERVACION', 'SUBRED'] # Dropped columns from CNE
 parameter_name = 'Rain, Pmax24h' # rain, flow
-parameter_title = 'PMP' # Probable Maximum Precipitation (PMP) or Probable Maximum Flood (PMF)
 label_station = 'station' # Station column name to eval from .csv station dataset file
 label_station_catalog = 'CODIGO' # Station column code in CNE_IDEAM.xls
 label_name = 'NOMBRE' # Station column nome in CNE_IDEAM.xls
