@@ -344,6 +344,28 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 * [Singh, Abhishek & Singh, Vijay & Byrd, Aaron. (2018). Computation of probable maximum precipitation and its uncertainty. International Journal of Hydrology. 2. 10.15406/ijh.2018.02.00118.](https://www.researchgate.net/publication/327888063_Computation_of_probable_maximum_precipitation_and_its_uncertainty) 
 * https://real-statistics.com/tests-normality-and-symmetry/statistical-tests-normality-symmetry/kolmogorov-smirnov-test/
 
+
+## Paper references
+
+* Gründemann, G.J., et al. (2023). Extreme precipitation return levels for multiple durations on a global scale. Journal of Hydrology, 621, 129558. https://www.sciencedirect.com/science/article/pii/S0022169423005000 
+* Karami, H., Ghazvinian, H., & Dadrasajirlou, Y. (2023). Application of statistical and geostatistical approaches in temporal and spatial estimations of rainfall. Journal of Water and Climate Change, 14(5), 1696–1722. https://doi.org/10.2166/wcc.2023.034 
+* Singh, A., Singh, V., & Byrd, A. (2018). Computation of probable maximum precipitation and its uncertainty. International Journal of Hydrology, 2. https://doi.org/10.15406/ijh.2018.02.00118
+* Fowler, H.J., Blenkinsop, S., Green, A., & Davies, P.A. (2024). Precipitation extremes in 2023 (Year in Review). Nature Reviews Earth & Environment. https://www.nature.com/articles/s43017-024-00547-9.pdf
+* IDEAM. (s.f.). Catálogo Nacional de Estaciones del IDEAM (Conjunto de datos hp9r‑jxuu). Datos Abiertos Colombia. https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Cat-logo-Nacional-de-Estaciones-del-IDEAM/hp9r-jxuu [datos.gov.co]
+* IDEAM. (s.f.). Precipitación (Conjunto de datos s54a‑sgyg). Datos Abiertos Colombia. https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Precipitaci-n/s54a-sgyg [datos.gov.co]
+* IDEAM. (s.f.). Zonificación Hidrográfica Colombia (Conjunto de datos 5kjg‑nuda). Datos Abiertos Colombia. https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Zonificaci-n-Hidrogr-fica-Colombia/5kjg-nuda [datos.gov.co]
+* IDEAM. (2024). Bienvenidos al Sistema de Información para la gestión de datos Hidrológicos y Meteorológicos (DHIME). https://ideam.gov.co/dhime [ideam.gov.co]
+OMM (World Meteorological Organization). (2009). Manual on estimation of Probable Maximum Precipitation (PMP) 
+* (OMM‑No.1045). https://library.wmo.int/records/item/35708-manual-on-estimation-of-probable-maximum-precipitation-pmp [library.wmo.int]
+* OMM. (s.f.). WMO Climatological Normals (Knowledge Hub). https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/climate-services/wmo-climatological-normals [community.wmo.int]
+* NOAA – National Weather Service (HDSC). (s.f.). HDSC PMP Documents. https://www.weather.gov/owp/hdsc_pmp [stackoverflow.com]
+* NOAA – Physical Sciences Laboratory. (2025). Probable Maximum Precipitation Modernization. https://psl.noaa.gov/precip/pmp/
+* SciPy Developers. (2026). Statistical functions (scipy.stats) (v1.17). https://docs.scipy.org/doc/scipy/reference/stats.htm
+* Openmeteo. (2016). Hydrognomon — Hydrological time series analysis (releases). https://github.com/openmeteo/hydrognomon/releases [github.com]
+* Statgraphics. (s.f.). Statistical Probability Distributions — Examples in Statgraphics. https://www.statgraphics.com/probability-distributions [statgraphics.com]
+* He, X. (2025). SciPy (básico) — Python Climate Visuals. https://xiaoganghe.github.io/python-climate-visuals/chapters/data-analytics/scipy-basic.html [xiaoganghe.github.io]
+
+
 | [:house: Start](../../README.md)  | [:beginner: Help / Collaborate](https://github.com/rcfdtools/R.HydroTools/discussions) |
 |-----------------------------------|----------------------------------------------------------------------------------------|
 
