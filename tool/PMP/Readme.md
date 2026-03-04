@@ -296,7 +296,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 
 ## G. References
 
-### On-Line refs
+### On-Line
 
 * CNE: https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Cat-logo-Nacional-de-Estaciones-del-IDEAM/hp9r-jxuu
 * SZH: https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Zonificaci-n-Hidrogr-fica-Colombia/5kjg-nuda
@@ -330,7 +330,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 * https://real-statistics.com/tests-normality-and-symmetry/statistical-tests-normality-symmetry/kolmogorov-smirnov-test/
 
 
-###  Paper refs
+###  Paper
 
 * Gründemann, G.J., et al. (2023). Extreme precipitation return levels for multiple durations on a global scale. Journal of Hydrology, 621, 129558. https://www.sciencedirect.com/science/article/pii/S0022169423005000 
 * Karami, H., Ghazvinian, H., & Dadrasajirlou, Y. (2023). Application of statistical and geostatistical approaches in temporal and spatial estimations of rainfall. Journal of Water and Climate Change, 14(5), 1696–1722. https://doi.org/10.2166/wcc.2023.034 
