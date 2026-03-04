@@ -281,7 +281,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 * Division by zero, loop calculations or values outside the allowed distribution range: studentized_range, kstwo, levy_stable.
 
 
-## Researchers activities
+## F. Researchers activities
 
 <div align="center">
 
@@ -294,24 +294,9 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 </div>
 
 
-## Markdown setup
+## G. References
 
-**How to show more lines in the PyCharm RUN console**
-
-* File --> Settings --> Editor --> General --> Console -->
-* Then check "Override console cycle buffer size (1024 KB)"
-* Change that values to whatever you need, e.g. 4096
-
-** Change Visual guide or right margin position**
-
-* File --> Settings --> Editor --> Code Style --> Hard wrap at
-
-**Show complete links in editor for markdown files**
-
-* File --> Settings --> Editor --> General --> Code folding --> Markdown --> Collapse links  
-
-
-## References
+### On-Line refs
 
 * CNE: https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Cat-logo-Nacional-de-Estaciones-del-IDEAM/hp9r-jxuu
 * SZH: https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Zonificaci-n-Hidrogr-fica-Colombia/5kjg-nuda
@@ -345,7 +330,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 * https://real-statistics.com/tests-normality-and-symmetry/statistical-tests-normality-symmetry/kolmogorov-smirnov-test/
 
 
-## Paper references
+###  Paper refs
 
 * Gründemann, G.J., et al. (2023). Extreme precipitation return levels for multiple durations on a global scale. Journal of Hydrology, 621, 129558. https://www.sciencedirect.com/science/article/pii/S0022169423005000 
 * Karami, H., Ghazvinian, H., & Dadrasajirlou, Y. (2023). Application of statistical and geostatistical approaches in temporal and spatial estimations of rainfall. Journal of Water and Climate Change, 14(5), 1696–1722. https://doi.org/10.2166/wcc.2023.034 
@@ -364,6 +349,25 @@ OMM (World Meteorological Organization). (2009). Manual on estimation of Probabl
 * Openmeteo. (2016). Hydrognomon — Hydrological time series analysis (releases). https://github.com/openmeteo/hydrognomon/releases [github.com]
 * Statgraphics. (s.f.). Statistical Probability Distributions — Examples in Statgraphics. https://www.statgraphics.com/probability-distributions [statgraphics.com]
 * He, X. (2025). SciPy (básico) — Python Climate Visuals. https://xiaoganghe.github.io/python-climate-visuals/chapters/data-analytics/scipy-basic.html [xiaoganghe.github.io]
+
+
+## Markdown setup
+
+**How to show more lines in the PyCharm RUN console**
+
+* File --> Settings --> Editor --> General --> Console -->
+* Then check "Override console cycle buffer size (1024 KB)"
+* Change that values to whatever you need, e.g. 4096
+
+** Change Visual guide or right margin position**
+
+* File --> Settings --> Editor --> Code Style --> Hard wrap at
+
+**Show complete links in editor for markdown files**
+
+* File --> Settings --> Editor --> General --> Code folding --> Markdown --> Collapse links  
+
+
 
 
 | [:house: Start](../../README.md)  | [:beginner: Help / Collaborate](https://github.com/rcfdtools/R.HydroTools/discussions) |
