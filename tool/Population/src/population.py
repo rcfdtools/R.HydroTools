@@ -7,11 +7,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # General vars
-file_path = '../data/PopulationTest.xlsx'
+file_path = '../data/Population.xlsx'
 county_id = '25899' # ● County code to be processed, 25899 - Zipaquirá, 15667 - San Luis de Gaceno
 population_col = 'PTotal' # ● PTotal, PUrban, PRural
-projection_year_max = 2051 # ● Projection year
-process_polynomial_d2_up = False # ● Doesn't recommend for population projections
+projection_year_max = 2100 # ● Projection year
+process_polynomial_d2_up = True # ● Projection not recommend for population projections because it over fit correlation values
+process_wappaus = False # ● Projection only recommend for short term periods and condition_value < 200
 set_negative_to_zero = True
 show_plot = True # Show plot on Python screen console
 
@@ -109,6 +110,17 @@ geometric_projection = np.round(p_end*(1+annual_growth)**(x_future-t_end), decim
 df_projected[f'{population_col}Geo'] =  geometric_projection
 if set_negative_to_zero: geometric_projection[geometric_projection < 0] = 0
 
+# Wappaus projection (Attention: always locate this method as the last one in the calculation because it shows the detailed Condition values)
+if process_wappaus:
+    numerator = 200 * (p_end - p_0)
+    denominator = (t_end - t_0) * (p_0 + p_end)
+    i = numerator / denominator
+    condition_value = i * (x_future - t_0)
+    print(f'* (Wap) Wappaus: i = {i}')
+    print(f'\n(Wap) Wappaus - Condition values (Method only applicable for < 200)\n{condition_value}')
+    wappaus_projection = np.round(p_0 * ((200 + condition_value) / (200 - condition_value)), decimals=0)
+    df_projected[f'{population_col}Wap'] =  wappaus_projection
+    if set_negative_to_zero: wappaus_projection[wappaus_projection < 0] = 0
 
 # Print and plot results
 print(f'\n\n# Dataset\n\n{df_projected.to_markdown(index=False)}')
@@ -116,16 +128,18 @@ if show_plot:
     p = np.poly1d(coefficients_deg1) # Create a 1D polynomial object
     #plt.scatter(filtered_df['Year'], filtered_df[population_col], color='black', label='Censal Data')
     plt.scatter(filtered_df.index, filtered_df[population_col], color='black', label='Censal Data')
-    plt.plot(x_future, deg1_projection, color='black', linestyle='--', lw=1, label=f'Polynomial D1 ({int(deg1_projection[-1])})')
+    plt.plot(x_future, deg1_projection, color='black', linestyle='--', lw=1, label=f'(PD1) Polynomial D1 ({int(deg1_projection[-1])})')
     if process_polynomial_d2_up:
-        plt.plot(x_future, deg2_projection, color='black', linestyle='-.', lw=1, label=f'Polynomial D2 ({int(deg2_projection[-1])})')
-        plt.plot(x_future, deg3_projection, color='black', linestyle=':', lw=1, label=f'Polynomial D3 ({int(deg3_projection[-1])})')
-        plt.plot(x_future, deg4_projection, color='green', linestyle='--', lw=1, label=f'Polynomial D4 ({int(deg4_projection[-1])})')
-    plt.plot(x_future, logarithmic_projection, color='green', linestyle='-.', lw=1, label=f'Logarithmic ({int(logarithmic_projection[-1])})')
-    plt.plot(x_future, potential_projection, color='green', linestyle=':', lw=1, label=f'Potential ({int(potential_projection[-1])})')
-    plt.plot(x_future, exponential_projection, color='orange', linestyle='--', lw=1, label=f'Exponential ({int(exponential_projection[-1])})')
-    plt.plot(x_future, arithmetic_projection, color='orange', linestyle='-.', lw=1, label=f'Arithmetic ({int(arithmetic_projection[-1])})')
-    plt.plot(x_future, geometric_projection, color='orange', linestyle=':', lw=1, label=f'Geometric ({int(geometric_projection[-1])})')
+        plt.plot(x_future, deg2_projection, color='black', linestyle='-.', lw=1, label=f'(PD2) Polynomial D2 ({int(deg2_projection[-1])})')
+        plt.plot(x_future, deg3_projection, color='black', linestyle=':', lw=1, label=f'(PD3) Polynomial D3 ({int(deg3_projection[-1])})')
+        plt.plot(x_future, deg4_projection, color='green', linestyle='--', lw=1, label=f'(PD4) Polynomial D4 ({int(deg4_projection[-1])})')
+    plt.plot(x_future, logarithmic_projection, color='green', linestyle='-.', lw=1, label=f'(Log) Logarithmic ({int(logarithmic_projection[-1])})')
+    plt.plot(x_future, potential_projection, color='green', linestyle=':', lw=1, label=f'(Pow) Potential ({int(potential_projection[-1])})')
+    plt.plot(x_future, exponential_projection, color='orange', linestyle='--', lw=1, label=f'(Exp) Exponential ({int(exponential_projection[-1])})')
+    plt.plot(x_future, arithmetic_projection, color='orange', linestyle='-.', lw=1, label=f'(Art) Arithmetic ({int(arithmetic_projection[-1])})')
+    plt.plot(x_future, geometric_projection, color='orange', linestyle=':', lw=1, label=f'(Geo) Geometric ({int(geometric_projection[-1])})')
+    if process_wappaus:
+        plt.plot(x_future, wappaus_projection, color='pink', linestyle='--', lw=1, label=f'(Wap) Wappaus ({int(wappaus_projection[-1])})')
     #plt.plot(filtered_df['Year'], p(filtered_df['Year']), color='red', lw=1, label='Fitted Line')
     plt.xlabel('Year')
     plt.ylabel('Population')
