@@ -8,18 +8,18 @@ import matplotlib.pyplot as plt
 
 # General vars
 file_path = '../data/Population.xlsx'
-county_id = '25899' # ● County code to be processed, 25899 - Zipaquirá, 15667 - San Luis de Gaceno
+county_id = '25899' # ● County code to be processed, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C.
 population_col = 'PTotal' # ● PTotal, PUrban, PRural
-projection_year_max = 2100 # ● Projection year
-process_polynomial_d2_up = True # ● Projection not recommend for population projections because it over fit correlation values
+projection_year_max = 2050 # ● Projection year
+process_polynomial_d2_up = False # ● Projection not recommend for population projections because it over fit correlation values
 process_wappaus = False # ● Projection only recommend for short term periods and condition_value < 200
 set_negative_to_zero = True
+set_infinite_to_zero = True
 show_plot = True # Show plot on Python screen console
 
 # Processing
 dtype={'Year': int, 'CountyID': str, 'StateID': str, 'PTotal': int, 'PUrban': int, 'PRural': int}
 df = pd.read_excel(file_path, sheet_name='Population', dtype=dtype)
-print(f'\n\n## Dataset Types\n\n{df.dtypes.to_markdown()}')
 #print(f'\n>>>> Head ({len(df)} records) <<<<\n{df.head().to_markdown(index=False)}')
 df_projected = pd.DataFrame()
 filtered_df = df[df['CountyID'] == county_id]
@@ -28,8 +28,10 @@ min_year = filtered_df['Year'].min()
 county_name = filtered_df[filtered_df['CountyID'] == county_id]['CountyName'].values[0]
 state_name = filtered_df[filtered_df['CountyID'] == county_id]['StateName'].values[0]
 x_future = np.arange(min_year, projection_year_max+1)
-df_projected['YearPrj'] =  x_future
-print(f'\n\n## Censal Filter ({len(filtered_df)} records)\n\n{filtered_df.to_markdown(index=False)}')
+df_projected['Year'] =  x_future
+print(f'# Population Projections Until Year {projection_year_max} for {population_col} in {state_name} - {county_name} (County Id: {county_id})')
+print(f'\n## Dataset Types\n\n{df.dtypes.to_markdown()}')
+print(f'\n\n## Filtered dataset  ({len(filtered_df)} records)\n\n{filtered_df.to_markdown(index=False)}')
 
 # Polynomial projection Deg 1
 print(f'\n\n## Coefficients and Parameters\n')
@@ -78,6 +80,7 @@ coefficients_potential = np.polyfit(np.log10(filtered_df['Year']), np.log10(filt
 c1, c2 = coefficients_potential[0], coefficients_potential[1]
 potential_projection = np.round(10**c2 * x_future**c1, decimals=0)
 if set_negative_to_zero: potential_projection[potential_projection < 0] = 0
+if set_infinite_to_zero: potential_projection[np.isinf(potential_projection)] = 0 # = np.nan
 df_projected[f'{population_col}Pow'] =  potential_projection
 print(f'* (Pow) Potential: {coefficients_potential[0]}, {coefficients_potential[1]}')
 
@@ -123,9 +126,9 @@ if process_wappaus:
     if set_negative_to_zero: wappaus_projection[wappaus_projection < 0] = 0
 
 # Print and plot results
-print(f'\n\n# Dataset\n\n{df_projected.to_markdown(index=False)}')
+print(f'\n\n## Projected dataset\n\n{df_projected.to_markdown(index=False)}')
 if show_plot:
-    p = np.poly1d(coefficients_deg1) # Create a 1D polynomial object
+    #p = np.poly1d(coefficients_deg1) # Create a 1D polynomial object
     #plt.scatter(filtered_df['Year'], filtered_df[population_col], color='black', label='Censal Data')
     plt.scatter(filtered_df.index, filtered_df[population_col], color='black', label='Censal Data')
     plt.plot(x_future, deg1_projection, color='black', linestyle='--', lw=1, label=f'(PD1) Polynomial D1 ({int(deg1_projection[-1])})')
@@ -144,7 +147,51 @@ if show_plot:
     plt.xlabel('Year')
     plt.ylabel('Population')
     plt.title(f'Population Projections Until Year {projection_year_max} for {population_col}\nState: {state_name}, County: {county_name} (County Id: {county_id})')
-    plt.legend(facecolor='red', frameon=False, framealpha=1)
+    plt.legend(facecolor='black', frameon=False, framealpha=1)
     plt.grid(visible=True, color='black', linewidth=0.5, linestyle='--', alpha=0.1)
     plt.show()
+    plt.close()
 
+# Absolute and relative error
+filtered_df = pd.merge(filtered_df, df_projected, left_on='Year', right_on='Year', how='left')
+#print(f'\n\n# Filtered dataset with projected values\n\n{filtered_df.to_markdown(index=False)}')
+methods = ['PD1', 'Log', 'Pow', 'Exp', 'Art', 'Geo']
+if process_polynomial_d2_up:
+    methods.insert(1, 'PD2')
+    methods.insert(2, 'PD3')
+    methods.insert(3, 'PD4')
+if process_wappaus: methods.append('Wap')
+methods = [population_col + item for item in methods]
+#print(f'\nMethods: {methods}')
+# Absolute error
+for i in methods:
+    filtered_df[f'{i}AbsError'] = abs(filtered_df[i] - filtered_df[population_col])
+# Relative error as percentage
+for i in methods:
+    filtered_df[f'{i}RelError'] = 100 * filtered_df[f'{i}AbsError'] / filtered_df[population_col]
+print(f'\n\n## Filtered dataset with projected values, absolute error, relative error as percentage\n\n{filtered_df.to_markdown(index=False)}')
+# Mean relative error
+print('\nRelative error mean')
+relative_error = []
+for i in methods:
+    relative_error.append(np.mean(filtered_df[f'{i}RelError']))
+    #print(f'{i}: {np.mean(filtered_df[f'{i}RelError'])}')
+df_relative_error = pd.DataFrame({'Method': methods, 'RelError': relative_error})
+min_rel_error = min(df_relative_error['RelError'])
+df_relative_error['Best'] = np.where(df_relative_error['RelError'] == min_rel_error, 'True', '')
+print(f'\n{df_relative_error.to_markdown(index=False)}')
+#print(f'\n{min_rel_error:.4f} %')
+best_method = df_relative_error[df_relative_error['Best'] == 'True']['Method'].values[0]
+print(f'\nProjected values for best method: {best_method}\n\n{df_projected[['Year', best_method]].to_markdown(index=False)}')
+# Plot best method
+if show_plot:
+    plt.scatter(filtered_df['Year'], filtered_df[population_col], color='black', label='Censal Data')
+    plt.plot(x_future, df_projected[best_method], color='green', linestyle='-', lw=1, label=f'{best_method}')
+    #plt.plot(x_future, df_projected[best_method], color='green', marker='o', markersize=3, markerfacecolor='green', markeredgecolor='black', markeredgewidth=0, linestyle='-', lw=1, label=f'{best_method}')
+    plt.xlabel('Year')
+    plt.ylabel('Population')
+    plt.title(f'Population Projections Until Year {projection_year_max} for {population_col}\nState: {state_name}, County: {county_name} (County Id: {county_id})')
+    plt.legend(facecolor='black', frameon=False, framealpha=1)
+    plt.grid(visible=True, color='black', linewidth=0.5, linestyle='--', alpha=0.1)
+    plt.show()
+    plt.close()
