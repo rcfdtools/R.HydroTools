@@ -16,7 +16,7 @@ process_wappaus = False # ● Projection only recommend for short term periods a
 set_negative_to_zero = True
 set_infinite_to_zero = True
 show_plot = False # Show plot on Python screen console
-water_supply = pd.DataFrame({'Level': [1000, 2000, 99999], 'WaterSupply': [120, 130, 140]}) # Water sypply in liters per capita per day - lpcd: Level or elevation, Water Supply
+water_supply = pd.DataFrame({'CZ': [1000, 2000, 99999], 'WaterSupply': [120, 130, 140]}) # Water supply in liters per capita per day - lpcd: Level or elevation, Water Supply
 
 # Processing
 dtype={'Year': int, 'CountyID': str, 'StateID': str, 'PTotal': int, 'PUrban': int, 'PRural': int}
@@ -198,4 +198,4 @@ if show_plot:
     plt.close()
 
 # Water supply in liters per capita per day - lpcd
-print(f'\n\n## Water supply in Liters per capita per day - lpcd\n\nReference values\n\n{water_supply.to_markdown(index=False)}\n\n> Level in meters above the sea level (masl).\n> WaterSupply in liters per capita per day (lpcd).')
+print(f'\n\n## Water supply in Liters per capita per day - lpcd\n\nReference values\n\n{water_supply.to_markdown(index=False)}\n\n> CZ correspond to level in meters above the sea level (masl).\n> WaterSupply in liters per capita per day (lpcd).')

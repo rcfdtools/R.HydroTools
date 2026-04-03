@@ -16,7 +16,11 @@ DANE Census
 
 * ATotal: Total planar area in square meters with CRS 9377.
 * AUrban: Urban planar area in square meters with CRS 9377.
-* ARural: Rural planar area in square meters with CRS 9377.  ("ATotal" - "AUrban") 
+* ARural: Rural planar area in square meters with CRS 9377, ("ATotal" - "AUrban").
+* CZTotal: Correspond to mean level in meters above the sea level (masl) for all the county area.
+* CZUrban: Correspond to mean level in meters above the sea level (masl) for the urban area.
+* CZRural: Correspond to mean level in meters above the sea level (masl) for the rural area which for this study correspond with CZTotal considering the mean elevation of the urban areas.
+* WaterSupply: Water supply in liters per capita per day (lpcd).
 
 > QGIS: area(transform($geometry, layer_property(@layer, 'crs'),'EPSG:9377'))
 
