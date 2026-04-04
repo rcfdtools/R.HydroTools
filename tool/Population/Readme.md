@@ -13,16 +13,44 @@ DANE Census
 * 2018:
 
 
-## Fields
+## Fields and variables
 
-* ATotal: Total planar area in square meters with CRS 9377.
-* AUrban: Urban planar area in square meters with CRS 9377.
-* ARural: Rural planar area in square meters with CRS 9377, ("ATotal" - "AUrban").
-* CZTotal: Correspond to mean level in meters above the sea level (masl) for all the county area.
-* CZUrban: Correspond to mean level in meters above the sea level (masl) for the urban area.
-* CZRural: Correspond to mean level in meters above the sea level (masl) for the rural area which for this study correspond with CZTotal considering the mean elevation of the urban areas.
-* WaterSupply: Water supply in liters per capita per day (lpcd).
+| Field / Var | Type         | Description                                         | Units                            |
+|:------------|:-------------|:----------------------------------------------------|:---------------------------------|
+| Source      | String (100) | Sorce data: DANE Colombia, DNP, rcfdtools           | n/a                              |
+| Year        | Integer (32) | Data year record                                    | Year                             |
+| CountryID   | String (5)   | International country code, https://countrycode.org | n/a                              |
+| CountryName | String (100) | Country name                                        | n/a                              |
+| StateID     | String (5)   | State code                                          | n/a                              |
+| StateName   | String (100) | State name                                          | n/a                              |
+| CountyID    | String (5)   | County code                                         | n/a                              |
+| CountyName  | String (100) | County name                                         | n/a                              |
+| PTotal      | Real (10)    | County total population = PUrban + PRural           | Habitant, hab                    |
+| PUrban      | Real (10)    | County urban population                             | Habitant, hab                    |
+| PRural      | Real (10)    | County rural population                             | Habitant, hab                    |
+| ATotal      | Real (10)    | County total planar area with CRS 9377              | Square meters, m²                |
+| AUrban      | Real (10)    | County urban planar area with CRS 9377              | Square meters, m²                |
+| ARural      | Real (10)    | County rural planar area with CRS 9377              | Square meters, m²                |
+| CZTotal     | Real (10)    | County mean level for the complete area             | Meters above the sea level, masl |
+| CZUrban     | Real (10)    | County mean level for the urban area                | Meters above the sea level, masl |
+| CZRural     | Real (10)    | County mean level for the rural area                | Meters above the sea level, masl |
+| Notes       | String (255) | General notes                                       | n/a                              |
+| Method      | n/a          | Regression or projection method                     | n/a                              |
+| PD1         | n/a          | Polynomial Degree 1 (lineal)                        | n/a                              |
+| PD2         | n/a          | Polynomial Degree 2                                 | n/a                              |
+| PD3         | n/a          | Polynomial Degree 3                                 | n/a                              |
+| PD4         | n/a          | Polynomial Degree 4                                 | n/a                              |
+| Log         | n/a          | Logarithmic                                         | n/a                              |
+| Pow         | n/a          | Potential                                           | n/a                              |
+| Exp         | n/a          | Exponential                                         | n/a                              |
+| Geo         | n/a          | Geometric                                           | n/a                              |
+| Wap         | n/a          | Wappaus                                             | n/a                              |
+| AbsError    | n/a          | Absolute error                                      | n/a                              |
+| RelError    | n/a          | Relative error                                      | n/a                              |
+| WS          | Real (10)    | Fresh water supply                                  | Liters per capita per day, lpcd  |
+| WSAll       | Real (10)    | Zonal fresh water supply = WS * population / 86400  | Liters per second, l/s           |
 
+> n/a: doesn't apply
 > QGIS: area(transform($geometry, layer_property(@layer, 'crs'),'EPSG:9377'))
 
 

@@ -112,14 +112,14 @@ for zone in zone_vars:
     total_growth = p_end - p_0
     elapsed_time = t_end - t_0
     annual_growth = total_growth / elapsed_time
-    print(f'* (Art) Arithmetic: Year diff. {t_end} - {t_0} = {t_end-t_0}, Population diff. {p_end} - {p_0} = {p_end-p_0}, Annual growth {annual_growth}')
+    print(f'* (Art) Arithmetic: Year diff. {t_end} - {t_0} = {t_end-t_0}, Population diff. {p_end} - {p_0} = {p_end-p_0}, Annual growth = {annual_growth}')
     arithmetic_projection = np.round(p_0+((x_future-t_0)*annual_growth), decimals=0)
     df_projected[f'P{zone}Art'] =  arithmetic_projection
     if set_negative_to_zero: arithmetic_projection[arithmetic_projection < 0] = 0
 
     # Geometric projection
     annual_growth = (p_end/p_0) ** (1 / elapsed_time) - 1
-    print(f'* (Geo) Geometric: Year diff. {t_end} - {t_0} = {t_end-t_0}, Population diff. {p_end} - {p_0} = {p_end-p_0}, Annual growth % {annual_growth}')
+    print(f'* (Geo) Geometric: Year diff. {t_end} - {t_0} = {t_end-t_0}, Population diff. {p_end} - {p_0} = {p_end-p_0}, Annual growth % = {annual_growth}')
     geometric_projection = np.round(p_end*(1+annual_growth)**(x_future-t_end), decimals=0)
     df_projected[f'P{zone}Geo'] =  geometric_projection
     if set_negative_to_zero: geometric_projection[geometric_projection < 0] = 0
@@ -213,7 +213,7 @@ for zone in zone_vars:
         plt.close()
 
     # Water supply in liters per capita per day - lpcd
-    print(f'\n\n### Water supply in Liters per capita per day - lpcd\n\nReference values (RAS Colombia)\n\n{water_supply.to_markdown(index=False)}\n\n> CZ: Level in meters above the sea level (masl).\n> WS: WaterSupply in liters per capita per day (lpcd or l/h/d).\n> WSAll: WaterSupply in liters per second (l/s).\n> A: Zonal area in square meters.')
+    print(f'\n\n### Water supply in Liters per capita per day - lpcd\n\nReference values (RAS Colombia)\n\n{water_supply.to_markdown(index=False)}\n\n> CZ: Level in meters above the sea level (masl).\n> WS: Fresh water supply in liters per capita per day (lpcd or l/h/d).\n> WSAll: WaterSupply in liters per second (l/s).\n> A: Zonal area in square meters.')
     dbf = Dbf5('../shp/ColombiaCounty.dbf')
     df_county = pd.DataFrame(dbf.to_dataframe())
     df_county = df_county[df_county['CountyID'] == county_id]
@@ -226,6 +226,6 @@ for zone in zone_vars:
     df_county[f'WS{zone}'] = np.select(water_supply_conditions, water_supply_values, default=0)
     print(f'\nCounty shapefile geometry properties and water supply values\n\n{df_county.to_markdown(index=False)}')
     df_projected = pd.merge(df_projected, df_county, left_on='CountyID', right_on='CountyID', how='left')
-    df_projected[f'WS{zone}All'] = (df_projected[best_method] * df_projected[f'WS{zone}'])/86400 # In liters per second (cms)
+    df_projected[f'WS{zone}All'] = (df_projected[best_method] * df_projected[f'WS{zone}'])/86400 # In liters per second (l/s)
     print(f'\nProjected values for best method: {best_method}\n\n{df_projected[['CountyID', 'Year', best_method, f'WS{zone}', f'WS{zone}All']].to_markdown(index=False)}')
 
