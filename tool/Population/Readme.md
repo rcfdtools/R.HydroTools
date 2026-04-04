@@ -50,7 +50,7 @@ DANE Census
 | WS          | Real (10)    | Fresh water supply                                  | Liters per capita per day, lpcd  |
 | WSAll       | Real (10)    | Zonal fresh water supply = WS * population / 86400  | Liters per second, l/s           |
 
-> n/a: doesn't apply
+> n/a: doesn't apply. 
 > QGIS: area(transform($geometry, layer_property(@layer, 'crs'),'EPSG:9377'))
 
 
