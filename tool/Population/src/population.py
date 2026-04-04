@@ -5,10 +5,11 @@ import pandas as pd
 import tabulate
 import numpy as np
 import matplotlib.pyplot as plt
+from simpledbf import Dbf5
 
 # General vars
 file_path = '../data/Population.xlsx'
-county_id = '25899' # ● County code to be processed, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C.
+county_id = '50689' # ● County code to be processed, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
 population_col = 'PTotal' # ● PTotal, PUrban, PRural
 projection_year_max = 2050 # ● Projection year
 process_polynomial_d2_up = False # ● Projection not recommend for population projections because it over fit correlation values
@@ -16,7 +17,8 @@ process_wappaus = False # ● Projection only recommend for short term periods a
 set_negative_to_zero = True
 set_infinite_to_zero = True
 show_plot = False # Show plot on Python screen console
-water_supply = pd.DataFrame({'CZ': [1000, 2000, 99999], 'WaterSupply': [120, 130, 140]}) # Water supply in liters per capita per day - lpcd: Level or elevation, Water Supply
+zone_vars = ['Total', 'Urban', 'Rural']
+water_supply = pd.DataFrame({'CZ': [1000, 2000, 99999], 'WS': [120, 130, 140]}) # Water supply in liters per capita per day - lpcd: Level or elevation, Water Supply
 
 # Processing
 dtype={'Year': int, 'CountyID': str, 'StateID': str, 'PTotal': int, 'PUrban': int, 'PRural': int}
@@ -198,4 +200,16 @@ if show_plot:
     plt.close()
 
 # Water supply in liters per capita per day - lpcd
-print(f'\n\n## Water supply in Liters per capita per day - lpcd\n\nReference values\n\n{water_supply.to_markdown(index=False)}\n\n> CZ correspond to level in meters above the sea level (masl).\n> WaterSupply in liters per capita per day (lpcd).')
+print(f'\n\n## Water supply in Liters per capita per day - lpcd\n\nReference values (RAS Colombia)\n\n{water_supply.to_markdown(index=False)}\n\n> CZ: Level in meters above the sea level (masl).\n> WS: WaterSupply in liters per capita per day (lpcd).')
+dbf = Dbf5('../shp/ColombiaCounty.dbf')
+df_county = pd.DataFrame(dbf.to_dataframe())
+df_county = df_county[df_county['CountyID'] == county_id]
+df_county = df_county[['CountyID', 'ATotal', 'AUrban', 'ARural', 'CZTotal', 'CZUrban', 'CZRural']]
+for i in zone_vars:
+    water_supply_conditions = [
+        (df_county[f'CZ{i}'] <= 1000),
+        (df_county[f'CZ{i}'] <= 2000),
+        (df_county[f'CZ{i}'] <= 99999)]
+    water_supply_values = [120, 130, 140]
+    df_county[f'WS{i}'] = np.select(water_supply_conditions, water_supply_values, default=0)
+print(f'\nCounty shapefile geometry properties and water supply values\n\n{df_county.to_markdown(index=False)}')
