@@ -1,6 +1,5 @@
 # Population and public services demand projections (PPSD)
 
-To convert a value from liters per capita per day (LPCD) to cubic meters per second (m³/s), multiply the LPCD value by the total population and then divide by (86400*1000).
 
 ## Colombia
 
@@ -53,7 +52,10 @@ The follow list contains the fields and variables used across the tables, shapef
 | WSAll       | Real (10)    | Zonal fresh water supply demand = WS * population / 86400 | Liters per second, l/s           |
 
 > n/a: doesn't apply. 
+> 
 > QGIS: area(transform($geometry, layer_property(@layer, 'crs'),'EPSG:9377'))
+> 
+> To convert a value from liters per capita per day (LPCD) to cubic meters per second (m³/s), multiply the LPCD value by the total population and then divide by (86400*1000).
 
 
 ## Digital elevation model - DEM
