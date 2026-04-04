@@ -34,6 +34,7 @@ tool/UnpivotTable/*.csv
 tool/MultipleTableJoin/*.csv
 tool/MultipleTableJoin/EAAB_CO/eaab_sih_monthly_records.csv
 tool/Population/dem/*.tif
+tool/Population/shp/ColombiaCountyRural.*
 
 
 # Some samples
