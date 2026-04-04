@@ -13,7 +13,9 @@ DANE Census
 * 2018:
 
 
-## Fields and variables
+## Data dictionary: Fields and variables
+
+The follow list contains the fields and variables used across the tables, shapefiles and processing results.
 
 | Field / Var | Type         | Description                                         | Units                            |
 |:------------|:-------------|:----------------------------------------------------|:---------------------------------|
