@@ -41,6 +41,7 @@ for zone in zone_vars:
     df_projected = pd.DataFrame()
     df_relative_error = pd.DataFrame()
     df_projected['Year'] = x_future
+    df_projected['CountyID'] = county_id
     print(f'\n\n## {zone} county population projections')
 
     # Polynomial projection Deg 1
@@ -138,7 +139,7 @@ for zone in zone_vars:
     # Print and plot results
     print(f'\n\n### Projected dataset\n\n{df_projected.to_markdown(index=False)}')
     #print(f'\n\n### Projected dataset\n\n{df_projected.transpose().to_markdown(index=True)}')
-    print(f'\nPlot must be here.....')
+    print(f'\nPlot must be here...')
     if show_plot:
         #p = np.poly1d(coefficients_deg1) # Create a 1D polynomial object
         #plt.scatter(filtered_df['Year'], filtered_df[f'P{zone}'], color='black', label='Censal Data')
@@ -195,9 +196,10 @@ for zone in zone_vars:
     #print(f'\n{min_rel_error:.4f} %')
     best_method = df_relative_error[df_relative_error['Best'] == 'True']['Method'].values[0]
     #print(f'\nProjected values for best method: {best_method}\n\n{df_projected[['Year', best_method]].transpose().to_markdown(index=True)}')
-    print(f'\nProjected values for best method: {best_method}\n\n{df_projected[['Year', best_method]].to_markdown(index=False)}')
+    #print(f'\nProjected values for best method: {best_method}\n\n{df_projected[['CountyID', 'Year', best_method]].to_markdown(index=False)}')
+    print(f'\nBest method: {best_method}')
     # Plot best method
-    print(f'\nPlot must be here.....')
+    print(f'\nPlot must be here...')
     if show_plot:
         plt.scatter(filtered_df['Year'], filtered_df[f'P{zone}'], color='black', label='Censal Data')
         plt.plot(x_future, df_projected[best_method], color='green', linestyle='-', lw=1, label=f'{best_method}')
@@ -211,7 +213,7 @@ for zone in zone_vars:
         plt.close()
 
     # Water supply in liters per capita per day - lpcd
-    print(f'\n\n### Water supply in Liters per capita per day - lpcd\n\nReference values (RAS Colombia)\n\n{water_supply.to_markdown(index=False)}\n\n> CZ: Level in meters above the sea level (masl).\n> WS: WaterSupply in liters per capita per day (lpcd).\n>A: Zonal area in square meters.\n')
+    print(f'\n\n### Water supply in Liters per capita per day - lpcd\n\nReference values (RAS Colombia)\n\n{water_supply.to_markdown(index=False)}\n\n> CZ: Level in meters above the sea level (masl).\n> WS: WaterSupply in liters per capita per day (lpcd or l/h/d).\n> WSAll: WaterSupply in liters per second (l/s).\n> A: Zonal area in square meters.')
     dbf = Dbf5('../shp/ColombiaCounty.dbf')
     df_county = pd.DataFrame(dbf.to_dataframe())
     df_county = df_county[df_county['CountyID'] == county_id]
@@ -223,3 +225,7 @@ for zone in zone_vars:
     water_supply_values = [120, 130, 140]
     df_county[f'WS{zone}'] = np.select(water_supply_conditions, water_supply_values, default=0)
     print(f'\nCounty shapefile geometry properties and water supply values\n\n{df_county.to_markdown(index=False)}')
+    df_projected = pd.merge(df_projected, df_county, left_on='CountyID', right_on='CountyID', how='left')
+    df_projected[f'WS{zone}All'] = (df_projected[best_method] * df_projected[f'WS{zone}'])/86400 # In liters per second (cms)
+    print(f'\nProjected values for best method: {best_method}\n\n{df_projected[['CountyID', 'Year', best_method, f'WS{zone}', f'WS{zone}All']].to_markdown(index=False)}')
+
