@@ -213,7 +213,7 @@ for zone in zone_vars:
         plt.close()
 
     # Water supply in liters per capita per day - lpcd
-    print(f'\n\n### Water supply in Liters per capita per day - lpcd\n\nReference values (RAS Colombia)\n\n{water_supply.to_markdown(index=False)}\n\n> CZ: Level in meters above the sea level (masl).\n> WS: Fresh water supply in liters per capita per day (lpcd or l/h/d).\n> WSAll: WaterSupply in liters per second (l/s).\n> A: Zonal area in square meters.')
+    print(f'\n\n### Water supply in Liters per capita per day - lpcd\n\nReference values (RAS Colombia)\n\n{water_supply.to_markdown(index=False)}\n\n> CZ: Level in meters above the sea level (masl).\n> WS: Fresh water supply demand in liters per capita per day (lpcd or l/h/d).\n> WSAll: Zonal fresh water supply demand in liters per second (l/s).\n> A: Zonal area in square meters.')
     dbf = Dbf5('../shp/ColombiaCounty.dbf')
     df_county = pd.DataFrame(dbf.to_dataframe())
     df_county = df_county[df_county['CountyID'] == county_id]
