@@ -60,6 +60,8 @@ The follow list contains the fields and variables used across the tables, shapef
 
 ## Digital elevation model - DEM
 
+To estimate the mean elevations over the total, urban and rural county areas, the current research uses Copernicus 90 meters as digital elevation model.
+
 * Copernicus 90m.
 
 
