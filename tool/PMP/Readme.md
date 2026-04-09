@@ -10,7 +10,6 @@ Paper: [rcfdtools digital](https://github.com/rcfdtools/R.HydroTools/blob/main/t
 
 </div>
 
-
 Spanish title: Estudio y análisis de la Precipitación Máxima Probable (PMP) en la red de estaciones climatológicas automáticas de Colombia - Suramérica y estimación de valores extremos para diferentes periodos de retorno a partir de múltiples distribuciones de probabilidad.
 
 Probable Maximum Precipitation (PMP) is the greatest amount of rainfall for a specific duration that is meteorologically possible for a given location, acting as a "worst-case" scenario for extreme storms, crucial for designing safety-critical infrastructure like bridges, river deviations, dams, spillways, and nuclear plants to prevent catastrophic failure. PMP is calculated by hydrologists using meteorological data to determine the upper limit of extreme rainfall, often leading to the Probable Maximum Flood (PMF) for flood control design, and is increasingly being studied for climate change impacts. 
