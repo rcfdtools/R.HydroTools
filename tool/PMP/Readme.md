@@ -332,23 +332,30 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 
 ###  Paper
 
-* Gründemann, G.J., et al. (2023). Extreme precipitation return levels for multiple durations on a global scale. Journal of Hydrology, 621, 129558. https://www.sciencedirect.com/science/article/pii/S0022169423005000 
-* Karami, H., Ghazvinian, H., & Dadrasajirlou, Y. (2023). Application of statistical and geostatistical approaches in temporal and spatial estimations of rainfall. Journal of Water and Climate Change, 14(5), 1696–1722. https://doi.org/10.2166/wcc.2023.034 
-* Singh, A., Singh, V., & Byrd, A. (2018). Computation of probable maximum precipitation and its uncertainty. International Journal of Hydrology, 2. https://doi.org/10.15406/ijh.2018.02.00118
+* Chen, X., Zhu, D., Wang, M., & Liao, Y. (2023). Regional precipitation frequency analysis for 24 h duration using GPM and L moments approach in South China. Theoretical and Applied Climatology, 152, 709–722. https://doi.org/10.1007/s00704-023-04405-4
 * Fowler, H.J., Blenkinsop, S., Green, A., & Davies, P.A. (2024). Precipitation extremes in 2023 (Year in Review). Nature Reviews Earth & Environment. https://www.nature.com/articles/s43017-024-00547-9.pdf
+* Green, A. C., Guerreiro, S. B., & Fowler, H. J. (2026). Global Intensity Duration Frequency curves based on observed sub daily rainfall (GSDR IDF). Scientific Data, 13, 455. https://doi.org/10.1038/s41597-026-06858-4
+* Gründemann, G.J., etal. (2023). Extreme precipitation return levels for multiple durations on a global scale. Journal of Hydrology, 621, 129558. https://www.sciencedirect.com/science/article/pii/S0022169423005000
+* Gründemann, G. J., Zorzetto, E., Beck, H. E., Schleiss, M., van de Giesen, N., Marani, M., & van der Ent, R. J. (2023). Extreme precipitation return levels for multiple durations on a global scale. Journal of Hydrology, 621, 129558. https://doi.org/10.1016/j.jhydrol.2023.129558
+* He, X. (2025). SciPy (básico) — Python Climate Visuals. https://xiaoganghe.github.io/python-climate-visuals/chapters/data-analytics/scipy-basic.html [xiaoganghe.github.io]
 * IDEAM. (s.f.). Catálogo Nacional de Estaciones del IDEAM (Conjunto de datos hp9r‑jxuu). Datos Abiertos Colombia. https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Cat-logo-Nacional-de-Estaciones-del-IDEAM/hp9r-jxuu [datos.gov.co]
 * IDEAM. (s.f.). Precipitación (Conjunto de datos s54a‑sgyg). Datos Abiertos Colombia. https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Precipitaci-n/s54a-sgyg [datos.gov.co]
 * IDEAM. (s.f.). Zonificación Hidrográfica Colombia (Conjunto de datos 5kjg‑nuda). Datos Abiertos Colombia. https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Zonificaci-n-Hidrogr-fica-Colombia/5kjg-nuda [datos.gov.co]
-* IDEAM. (2024). Bienvenidos al Sistema de Información para la gestión de datos Hidrológicos y Meteorológicos (DHIME). https://ideam.gov.co/dhime [ideam.gov.co]
-OMM (World Meteorological Organization). (2009). Manual on estimation of Probable Maximum Precipitation (PMP) 
-* (OMM‑No.1045). https://library.wmo.int/records/item/35708-manual-on-estimation-of-probable-maximum-precipitation-pmp [library.wmo.int]
-* OMM. (s.f.). WMO Climatological Normals (Knowledge Hub). https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/climate-services/wmo-climatological-normals [community.wmo.int]
+* IDEAM. (2024). Sistema de Información para la gestión de datos Hidrológicos y Meteorológicos (DHIME). https://ideam.gov.co/dhime [ideam.gov.co]
+* Karami, H., Ghazvinian, H., & Dadrasajirlou, Y. (2023). Application of statistical and geostatistical approaches in temporal and spatial estimations of rainfall. Journal of Water and Climate Change, 14(5), 1696–1722. https://doi.org/10.2166/wcc.2023.034
+* Milojevic, T., Blanchet, J., & Lehning, M. (2023). Determining return levels of extreme daily precipitation, reservoir inflow, and dry spells. Frontiers in Water, 5, 1141786. https://doi.org/10.3389/frwa.2023.1141786
+* Montes Pajuelo, R., Rodríguez Pérez, Á. M., López, R., & Rodríguez, C. A. (2024). Analysis of probability distributions for modelling extreme rainfall events and detecting climate change: Insights from mathematical and statistical methods. Mathematics, 12(7), 1093. https://doi.org/10.3390/math12071093
 * NOAA – National Weather Service (HDSC). (s.f.). HDSC PMP Documents. https://www.weather.gov/owp/hdsc_pmp [stackoverflow.com]
 * NOAA – Physical Sciences Laboratory. (2025). Probable Maximum Precipitation Modernization. https://psl.noaa.gov/precip/pmp/
-* SciPy Developers. (2026). Statistical functions (scipy.stats) (v1.17). https://docs.scipy.org/doc/scipy/reference/stats.htm
+* OMM (World Meteorological Organization). (2009). Manual on estimation of Probable Maximum  Precipitation (PMP). (OMM‑No.1045). https://library.wmo.int/records/item/35708-manual-on-estimation-of-probable-maximum-precipitation-pmp [library.wmo.int]
+* OMM. (s.f.). WMO Climatological Normals (Knowledge Hub). https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/climate-services/wmo-climatological-normals [community.wmo.int]
 * Openmeteo. (2016). Hydrognomon — Hydrological time series analysis (releases). https://github.com/openmeteo/hydrognomon/releases [github.com]
+* Rodríguez, E., García Echeverri, C., González, A., Sandoval, J., Patarroyo González, M., & Agudelo Duque, D. E. (2024). Evaluating the IMERG precipitation satellite product to derive intensity duration frequency curves in Colombia. Revista Facultad de Ingeniería Universidad de Antioquia, (110), 31–47. https://doi.org/10.17533/udea.redin.20230212
+* Sasanya, B. F., & Adesogan, S. O. (2022). Development of rainfall and runoff equations for a suburban area of Ibadan, Southwestern Nigeria: A case study. International Journal of Environmental Research, 16, 45. https://doi.org/10.1007/s41742-022-00417-6
+* SciPy Developers. (2026). Statistical functions (scipy.stats) (v1.17). https://docs.scipy.org/doc/scipy/reference/stats.htm
+* SciPy Developers. (2026). scipy.stats.kstest: Kolmogorov–Smirnov test (SciPy v1.17 manual). https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kstest.html
+* Singh, A., Singh, V., & Byrd, A. (2018). Computation of probable maximum precipitation and its uncertainty. International Journal of Hydrology, 2. https://doi.org/10.15406/ijh.2018.02.00118
 * Statgraphics. (s.f.). Statistical Probability Distributions — Examples in Statgraphics. https://www.statgraphics.com/probability-distributions [statgraphics.com]
-* He, X. (2025). SciPy (básico) — Python Climate Visuals. https://xiaoganghe.github.io/python-climate-visuals/chapters/data-analytics/scipy-basic.html [xiaoganghe.github.io]
 
 
 ## Markdown setup
