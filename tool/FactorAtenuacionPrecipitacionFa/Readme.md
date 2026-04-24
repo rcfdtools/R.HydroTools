@@ -1,6 +1,6 @@
 <div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
 
-## Fa - Factor de atenuación de la precipitación máxima por área simultánea en una cuenca
+## Factor de atenuación de la precipitación máxima por área simultánea en una cuenca (Fa) ó Areal Reduction Factor (ARF)
 Keywords: `hydrology` `area-reduction-curves` 
 
 
