@@ -1,4 +1,4 @@
-<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
+<div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="250px"></div>
 
 # RESEARCH info: _“Study and analysis of the Probable Maximum Precipitation (PMP) in the network of automatic climatological stations of Colombia - South America and estimation of extreme values for different return periods from multiple probability distributions”_  
 
