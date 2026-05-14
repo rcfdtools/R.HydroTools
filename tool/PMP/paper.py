@@ -396,5 +396,7 @@ if create_plot:
 
 
 # Footer
+
+funcs.print_log(file_log, f'\n\n<div align="center"><img alt="R.HydroTools" src="file/graph/qr-code.png" width="250px"><br><sub>Share this research</sub></div><br>', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
 

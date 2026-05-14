@@ -1549,4 +1549,6 @@ The extreme value porcentage difference is evaluated as $pdiff = 1 - (ETrBf / ET
 
 
 
+<div align="center"><img alt="R.HydroTools" src="file/graph/qr-code.png" width="250px"><br><sub>Share this research</sub></div><br>
+
 <sub>**APP DISCLAIMER**: NO WARRANTY - This software is provided by [github.com/rcfdtools](https://github.com/rcfdtools) "as is", without any express or implied warranty, including warranties of merchantability, fitness for a particular purpose, or non-infringement. There is no guarantee that the software will be error-free or operate without interruption. LIMITATION OF LIABILITY - Neither the authors nor copyright holders will be liable for claims or damages arising from the software or its use. You are responsible for determining if the software is appropriate for your use and assume all associated risks, including errors, legal compliance, and data loss. NO PROFESSIONAL ADVICE - The software provides general information and does not offer professional advice. It should not replace consultation with professional advisors.</sub>
