@@ -376,6 +376,7 @@ l_pdist_scipy = ([['gumbel_l', 2, 'MM', 'Gumbel Left Skew', True],
 * File --> Settings --> Editor --> General --> Code folding --> Markdown --> Collapse links  
 
 
+<div align="center"><img alt="R.HydroTools" src="file/graph/qr-code.png" width="250px"><br>Share this research.</div><br>
 
 
 | [:house: Start](../../README.md)  | [:beginner: Help / Collaborate](https://github.com/rcfdtools/R.HydroTools/discussions) |
