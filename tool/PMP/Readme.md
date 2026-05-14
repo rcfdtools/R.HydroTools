@@ -1,13 +1,13 @@
 <div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
 
-# RESEARCH INFO: _“Study and analysis of the Probable Maximum Precipitation (PMP) in the network of automatic climatological stations of Colombia - South America and estimation of extreme values for different return periods from multiple probability distributions.”_  
+# RESEARCH info: _“Study and analysis of the Probable Maximum Precipitation (PMP) in the network of automatic climatological stations of Colombia - South America and estimation of extreme values for different return periods from multiple probability distributions”_  
 
 Keywords: `pmp` `probability-distribution` `empirical-distribution` `return-period` `scipy` `national-stations-catalog` `cne` `best-fit` `extreme-value` `difference-analysis` `kolmogorov-smirnov`
 
 :scroll: Paper: [rcfdtools digital](file/dataset/pmax24h_out/paper/Readme.md)<br>
 :books: Slides: [rcfdtools](file/report/), [SCI-Colombia](file/report/SCI_XXVI_SNHH26_Presentacion_PMax24HAutomColombia_v1.pdf) 
 
-Spanish title: _“Estudio y análisis de la Precipitación Máxima Probable (PMP) en la red de estaciones climatológicas automáticas de Colombia - Suramérica y estimación de valores extremos para diferentes periodos de retorno a partir de múltiples distribuciones de probabilidad.”_
+Spanish title: _“Estudio y análisis de la Precipitación Máxima Probable (PMP) en la red de estaciones climatológicas automáticas de Colombia - Suramérica y estimación de valores extremos para diferentes periodos de retorno a partir de múltiples distribuciones de probabilidad”_
 
 <div align="center"><img alt="R.HydroTools" src="file/graph/pmax24h_gis.jpg" width="550px"><br><sub>Figure. Automatic stations with n ≥ 8 years.</sub></div><br>
 
