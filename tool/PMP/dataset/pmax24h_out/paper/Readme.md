@@ -5,7 +5,7 @@
 
 </div>
 
-# RESEARCH: Study and analysis of the 24 hours Maximum Precipitation (PMax24h) in the network of automatic climatological stations of Colombia - South America and estimation of extreme values for different return periods using various probability distributions.
+# RESEARCH: _“Study and analysis of the 24 hours Maximum Precipitation (PMax24h) in the network of automatic climatological stations of Colombia - South America and estimation of extreme values for different return periods using various probability distributions”_
 Keywords: `pmax24h` `pmp` `probability-distribution` `empirical-distribution` `return-period` `scipy` `national-stations-catalog` `cne` `best-fit` `extreme-value` `difference-analysis` `kolmogorov-smirnov` `k-s-test`
 
 
@@ -18,7 +18,7 @@ The most common probability distributions in hydrology, used for analyzing flood
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../../../temp/diagram_pmp.svg" width="900px">
+<img alt="R.HydroTools" src="../../../file/graph/diagram_pmp.svg" width="900px">
 
 </div>
 
@@ -960,7 +960,7 @@ An Empirical Distribution Function (EDF) is a step-function estimate of a true c
 Best fit in probability distribution analysis means finding the theoretical distribution (like Normal, Poisson, Exponential, etc.) that most accurately mirrors your real-world data´s patterns (shape, center, spread) for better predictions, using methods like visual checks (Q-Q plots), goodness-of-fit tests (Kolmogorov-Smirnov, Chi-Squared), and information criteria (AIC) to score and select the simplest, most representative model.
 <div align="center">
 
-<img alt="R.HydroTools" src="../../../temp/diagram_bestfit.svg" width="700px">
+<img alt="R.HydroTools" src="../../../file/graph/diagram_bestfit.svg" width="700px">
 
 </div>
 

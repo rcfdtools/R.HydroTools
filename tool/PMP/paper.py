@@ -63,7 +63,8 @@ funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../../file/grap
 funcs.print_log(file_log, f'# {dictionary.dicts['study_name']}\n', on_screen = print_on_screen)
 funcs.print_log(file_log, f'{dictionary.dicts['keywords']}\n', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\n{dictionary.dicts['pmp']}\n\n', on_screen = print_on_screen)
-funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../temp/diagram_pmp.svg" width="900px">', center_div=True, on_screen = print_on_screen)
+funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../file/graph/diagram_pmp.svg" width="900px">', center_div=True, on_screen = print_on_screen)
+
 
 ########### Best fit files join ###########
 all_filenames = [i for i in glob.glob(os.path.join(input_path, 'bestfit_*.{}'.format(extension)))]
@@ -79,6 +80,7 @@ df_stations = pd.DataFrame(stations, columns=[label_station])
 #print(f'\ndf_stations types:\n{df_stations.dtypes}')
 #print(f'Stations in dataset:\n{stations}\n')
 
+
 ########### Extreme values files join ###########
 all_filenames = [i for i in glob.glob(os.path.join(input_path, 'extreme_*.{}'.format(extension)))]
 df_extreme = pd.concat([pd.read_csv(f) for f in all_filenames], ignore_index=True)
@@ -87,6 +89,7 @@ if exclude_stations:
     df_extreme = df_extreme[~df_extreme[label_station].isin(stations_to_exclude)] # Excluding stations using isin() with Boolean Negation (~)
 df_extreme.to_csv(f'{output_path}extreme.csv', index=False, encoding='utf-8')
 print(f'Successfully combined {len(all_filenames)} files into extreme.csv')
+
 
 ########### Extreme percentage difference values files join ###########
 all_filenames = [i for i in glob.glob(os.path.join(input_path, 'extremepdiff_*.{}'.format(extension)))]
@@ -254,7 +257,7 @@ for emp in edf_dist:
 # Best fit analysis
 if minimum_sample > 0: df_bestfit = df_bestfit[df_bestfit['n'] >= minimum_sample]
 funcs.print_log(file_log, f'\n\n## C. Best Fit analysis ({len(df_bestfit[df_bestfit['best_fit_sort']==1])} stations)\n\n{dictionary.dicts['bestfit']}', center_div=False, on_screen = print_on_screen)
-funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../temp/diagram_bestfit.svg" width="700px">', center_div=True, on_screen = print_on_screen)
+funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../file/graph/diagram_bestfit.svg" width="700px">', center_div=True, on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\n{dictionary.dicts['kolmogorov_smirnov_test']}', on_screen = print_on_screen)
 if pdist_logarithmic_on:
     best_fit_text = f'\n\nFor this analysis, from the initial dataset with {len(df_catalog_filter_selected_columns)} stations we use {len(df_bestfit[df_bestfit['best_fit_sort']==1])} stations (filtering only those with n ≥ {minimum_sample} records or yearly values), {len(edf_dist)} empirical distributions, {len(df_l_pdist_scipy.query('active == True'))} probability distributions and {len(df_l_pdist_scipy.query('active == True'))} logarithmic probability distributions, corresponding to {len(df_bestfit[df_bestfit['best_fit_sort']==1]) * len(edf_dist) * (len(df_l_pdist_scipy.query('active == True')) * 2)} fit test evaluations.'
