@@ -6,7 +6,8 @@ Keywords: `pmp` `probability-distribution` `empirical-distribution` `return-peri
 
 <div align="center">
 
-**Paper**: [rcfdtools digital](https://github.com/rcfdtools/R.HydroTools/blob/main/tool/PMP/dataset/pmax24h_out/paper/Readme.md), Rearchgate, DOI, Dialnet
+**:scroll: Paper**: [rcfdtools digital](file/dataset/pmax24h_out/paper/Readme.md)
+**:books: Slides**: [rcfdtools](file/report/), [Sociedad Colombiana de Ingenieros - SCI](file/report/SCI_XXVI_SNHH26_Presentacion_PMax24HAutomColombia_v1.pdf) 
 
 </div>
 
