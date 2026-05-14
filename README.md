@@ -3,8 +3,6 @@
 
 # TOOL: _“Herramientas de ingeniería computacional para SIG, hidrología y análisis hidráulico - HydroTools”_
 
-## ¿Qué es R.HydroTools?
-
 _R.HydroTools_ es un proyecto de desarrollo colaborativo para crear y compartir herramientas computacionales relacionadas con modelación hidrológica, modelación hidráulica, análisis estadístico, analítica de datos espaciales y sistemas de información geográfica.
 
 
