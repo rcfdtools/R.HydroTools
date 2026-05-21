@@ -2,5 +2,8 @@
 ## Mapas de suelos
 
 
-Suelos servicio 382 a 413 con algunos consecutivos sin información
+Suelos servicio 382 a 413 con algunos consecutivos sin información (402, 409), 1613 Nariño, 
 https://staigacmpcolv2.z20.web.core.windows.net/?b=igac&u=0&t=43&servicio=382
+
+Sucre no encontrado
+https://metadatos.icde.gov.co/geonetwork/srv/api/records/69cf5eac-a191-4162-8f79-9190b5a7f3c3

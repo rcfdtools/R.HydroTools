@@ -36,6 +36,8 @@ tool/MultipleTableJoin/EAAB_CO/eaab_sih_monthly_records.csv
 tool/Population/dem/*.tif
 tool/Population/shp/ColombiaCountyRural.*
 tool/CN/file/data/IGAC/*MemoriaTecnica*
+tool/CN/file/data/IGAC/*.gdb
+tool/CN/file/gdb/*.gpkg
 
 
 # Some samples
