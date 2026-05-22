@@ -1,9 +1,52 @@
+# CN 
 
-## Mapas de suelos
+
+## Source layers
 
 
-Suelos servicio 382 a 413 con algunos consecutivos sin información (402, 409), 1613 Nariño, 
-https://staigacmpcolv2.z20.web.core.windows.net/?b=igac&u=0&t=43&servicio=382
+### States 202604
 
-Sucre no encontrado
-https://metadatos.icde.gov.co/geonetwork/srv/api/records/69cf5eac-a191-4162-8f79-9190b5a7f3c3
+https://staigacmpcolv2.z20.web.core.windows.net/?b=igac&u=0&t=43&servicio=23
+
+
+### Colombia Soil Maps
+
+* https://www.colombiaenmapas.gov.co/
+* Service 382 to 413 (402 and 409 doesn't exist), 1613 Nariño, Sucre state service not available. 
+* Sucre state old metadata https://metadatos.icde.gov.co/geonetwork/srv/api/records/69cf5eac-a191-4162-8f79-9190b5a7f3c3
+* Sample https://staigacmpcolv2.z20.web.core.windows.net/?b=igac&u=0&t=43&servicio=382
+
+Required displacement for old 
+DX = -370.54982010833919048309
+DY = 309.88952068053185939789
+
+
+
+## Data Dictionary
+
+
+### CN.gpkg/ColombiaSoil
+
+UCS text 255
+UCSf text 255 *
+Paisaje text 255 *
+Clima text 255 *
+TipoRelieve text 255 * 
+CaracteristicaRelieve text 255
+LitologiaSedimento text 255
+CaracteristicaSuelo text 1000
+ComponenteTaxonomico text 255
+Perfil text 255 
+Porcentaje text 255
+Fase text 255
+ProcesoGeomorfologico text 255
+Conjunto text 255
+DeNombre String 100
+
+
+
+## QGIS tools
+
+* Vector Table / Refactor Fields
+* Vector Geometry / Translate
+* Field Calculator: substr("path", 57, 255)
