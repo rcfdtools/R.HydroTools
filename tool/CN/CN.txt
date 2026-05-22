@@ -6,7 +6,8 @@
 
 ### States 202604
 
-https://staigacmpcolv2.z20.web.core.windows.net/?b=igac&u=0&t=43&servicio=23
+* https://www.colombiaenmapas.gov.co/
+* https://staigacmpcolv2.z20.web.core.windows.net/?b=igac&u=0&t=43&servicio=23
 
 
 ### Colombia Soil Maps
@@ -16,9 +17,17 @@ https://staigacmpcolv2.z20.web.core.windows.net/?b=igac&u=0&t=43&servicio=23
 * Sucre state old metadata https://metadatos.icde.gov.co/geonetwork/srv/api/records/69cf5eac-a191-4162-8f79-9190b5a7f3c3
 * Sample https://staigacmpcolv2.z20.web.core.windows.net/?b=igac&u=0&t=43&servicio=382
 
-Required displacement for old 
-DX = -370.54982010833919048309
-DY = 309.88952068053185939789
+Required displacement for v0
+
+* DX = -370.54982010833919048309
+* DY = 309.88952068053185939789
+
+
+### Land use
+
+* es: Vocación de Uso 100k, Territorio Nacional 2013.
+* https://www.colombiaenmapas.gov.co/
+* https://staigacmpcolv2.z20.web.core.windows.net/?b=igac&u=0&t=43&servicio=7301
 
 
 
@@ -44,9 +53,13 @@ Conjunto text 255
 DeNombre String 100
 
 
-
 ## QGIS tools
 
 * Vector Table / Refactor Fields
 * Vector Geometry / Translate
 * Field Calculator: substr("path", 57, 255)
+
+
+## References
+
+* https://www.hec.usace.army.mil/confluence/hmsdocs/hmstrm/cn-tables
