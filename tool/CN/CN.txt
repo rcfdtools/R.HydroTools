@@ -12,6 +12,7 @@
 
 ### Colombia Soil Maps
 
+* es: Suelos por Departamento 100k, 2000.
 * https://www.colombiaenmapas.gov.co/
 * Service 382 to 413 (402 and 409 doesn't exist), 1613 Nariño, Sucre state service not available. 
 * Sucre state old metadata https://metadatos.icde.gov.co/geonetwork/srv/api/records/69cf5eac-a191-4162-8f79-9190b5a7f3c3
