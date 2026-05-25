@@ -31,7 +31,6 @@ Required displacement for v0
 * https://staigacmpcolv2.z20.web.core.windows.net/?b=igac&u=0&t=43&servicio=7301
 
 
-
 ## Data Dictionary
 
 
