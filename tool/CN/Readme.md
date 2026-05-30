@@ -54,7 +54,7 @@ Data dictionary
 * https://staigacmpcolv2.z20.web.core.windows.net/?b=igac&u=0&t=43&servicio=7301
 
 
-## C. QGIS Tools
+## B. QGIS Tools
 
 * Vector Table / Refactor Fields
 * Vector Geometry / Translate
@@ -84,7 +84,7 @@ Query Filters:
 "CaracteristicaSuelo" = 'Suelos de textura muy fina' AND "LitologiaSedimento" LIKE 'Depósito%'
 
 
-## D. QGIS Procedure
+## C. QGIS Procedure
 
 1. 
 
