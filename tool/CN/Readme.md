@@ -4,19 +4,20 @@
 
 The SCS Curve Number (CN) is an empirical parameter used in hydrology by the USDA Natural Resources Conservation Service (formerly the Soil Conservation Service) to estimate direct surface runoff and infiltration from rainfall. Ranging from \(0\) to \(100\), higher values indicate greater runoff and less soil retention.[^1]
 
-The current CN analysis correspond to an Alpha version
-
-## A. Source layers
+:blue_heart:**Attention**: the current CN analysis correspond to an Alpha version, and it will be used for academic purposes. For professional use you must validate the CN values assigned by Land Use and the percentages for each Land Soil cartographic unit for your specific project area.
 
 
-### Colombia States
+## A. Layers and tables
+
+
+### Layer: Depto (Colombia States)
 
 * Version: 202604
 * https://www.colombiaenmapas.gov.co/
 * https://staigacmpcolv2.z20.web.core.windows.net/?b=igac&u=0&t=43&servicio=23
 
 
-### Colombia Soil Maps
+### Layer: SueloColombia100k (Colombia Soil Maps)
 
 * es: Suelos por Departamento 100k, 2000.
 * https://www.colombiaenmapas.gov.co/
@@ -49,7 +50,7 @@ The current CN analysis correspond to an Alpha version
 > A UCS represents an area of terrain where a specific grouping of soils with similar physical, chemical, taxonomic, and geomorphological characteristics has been identified.
 
 
-### Land use
+### Layer: VocacionUsoColombia100k (Land use)
 
 * es: Vocación de Uso 100k, Territorio Nacional 2013.
 * https://www.colombiaenmapas.gov.co/
@@ -73,7 +74,11 @@ The current CN analysis correspond to an Alpha version
 
 2. Join the _CN_LandSoil_v0_ table to the _SueloColombia100k_v0_ layer using the `UCSf` field and check if all the record has associated CN percentage values for the different hydrologic groups (PctA, PctB, PctC, PctD).
 
-3. With Processing _Toolbox / Vector Geometry / Union_,  
+3. With Processing _Toolbox / Vector Geometry / Union_, create a spatial between _VocacionUsoColombia100k_v0_ and _SueloColombia100k_v0_ and name the resulting layer as _gdb/CN.gpkg/VocacionUsoSueloColombia100kUnion_v0_ 
+
+> If one of the layer has geometry error it could be fixed first with the tool _Vector Geometry / Fix geometries_ (Repair method: Structure)
+
+4. 
 
 
 ## C. QGIS Tools
