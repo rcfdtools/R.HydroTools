@@ -82,6 +82,7 @@ The current CN analysis correspond to an Alpha version
 * Vector Geometry / Translate
 * Field Calculator: substr("path", 57, 255)
 * Select by Expression: "LitologiaSedimento"  LIKE '%Arcilla%'
+* Vector Geometry / Fix geometries (Repair method: Structure)
 
 Query Filters: 
 
