@@ -1,4 +1,6 @@
-# CN 
+# SCS Curve Number (CN) 
+
+The SCS Curve Number (CN) is an empirical parameter used in hydrology by the USDA Natural Resources Conservation Service (formerly the Soil Conservation Service) to estimate direct surface runoff and infiltration from rainfall. Ranging from \(0\) to \(100\), higher values indicate greater runoff and less soil retention.[^1]
 
 
 ## Source layers
@@ -59,8 +61,8 @@ DeNombre String 100
 * Vector Geometry / Translate
 * Field Calculator: substr("path", 57, 255)
 * Select by Expression: "LitologiaSedimento"  LIKE '%Arcilla%'
-* Query Filter: "CaracteristicaSuelo" = 'Suelos de textura muy fina' AND "LitologiaSedimento" LIKE '%Arcilla%'
 
+* Query Filter: 
 
 "CaracteristicaSuelo" = 'Suelos de textura gruesa' AND "LitologiaSedimento" LIKE 'Arcilla%'
 "CaracteristicaSuelo" = 'Suelos de textura media' AND "LitologiaSedimento" LIKE 'Arcilla%'
@@ -82,6 +84,15 @@ DeNombre String 100
 "CaracteristicaSuelo" = 'Suelos de textura fina' AND "LitologiaSedimento" LIKE 'Depósito%'
 "CaracteristicaSuelo" = 'Suelos de textura muy fina' AND "LitologiaSedimento" LIKE 'Depósito%'
 
+
+## QGIS Procedure
+
+1. 
+
+
+
 ## References
 
 * https://www.hec.usace.army.mil/confluence/hmsdocs/hmstrm/cn-tables
+
+[^1]: https://en.wikipedia.org/wiki/Runoff_curve_number
