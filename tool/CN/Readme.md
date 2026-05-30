@@ -24,6 +24,8 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 |   D   | Very slow infiltration, high runoff potential. Usually heavy clay soils, soils with high shrink-swell potential, soils with a permanent high water table, or soils shallow over an impervious layer. | Very Slow<br/>Muy Lenta |        < 13 mm/h        | Clayey<br/>Arcillosa                                                                                 |
 
 > Infiltration when soils are completely wet and averge infiltration capacity.
+> 
+> If a soil is assigned to a dual hydrologic group (A/D, B/D, or C/D), the first letter is for drained areas and the second is for undrained areas. Only the soils that in their natural condition are in group D are assigned to dual classes.
 
 
 ## A. Layers and tables
