@@ -8,8 +8,9 @@ The SCS Curve Number (CN) is an empirical parameter used in hydrology by the USD
 ## Source layers
 
 
-### States 202604
+### Colombia States
 
+* Version: 202604
 * https://www.colombiaenmapas.gov.co/
 * https://staigacmpcolv2.z20.web.core.windows.net/?b=igac&u=0&t=43&servicio=23
 
@@ -64,7 +65,7 @@ DeNombre String 100
 * Field Calculator: substr("path", 57, 255)
 * Select by Expression: "LitologiaSedimento"  LIKE '%Arcilla%'
 
-* Query Filter: 
+Query Filters: 
 
 "CaracteristicaSuelo" = 'Suelos de textura gruesa' AND "LitologiaSedimento" LIKE 'Arcilla%'
 "CaracteristicaSuelo" = 'Suelos de textura media' AND "LitologiaSedimento" LIKE 'Arcilla%'
