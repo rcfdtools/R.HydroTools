@@ -28,7 +28,7 @@ The SCS Curve Number (CN) is an empirical parameter used in hydrology by the USD
 
 Data dictionary (es)
 
-<div justify-content="center">
+<div align="center">
 
 | Field                 |    Type     | Description                                                      |
 |:----------------------|:-----------:|:-----------------------------------------------------------------|
