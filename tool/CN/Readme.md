@@ -4,7 +4,26 @@
 
 The SCS Curve Number (CN) is an empirical parameter used in hydrology by the USDA Natural Resources Conservation Service (formerly the Soil Conservation Service) to estimate direct surface runoff and infiltration from rainfall. Ranging from \(0\) to \(100\), higher values indicate greater runoff and less soil retention.[^1]
 
-:blue_heart:**Attention**: the current CN analysis correspond to an Alpha version, and it will be used for academic purposes. For professional use you must validate the CN values assigned by Land Use and the percentages for each Land Soil cartographic unit for your specific project area.
+:blue_heart:**Attention**: _The current CN analysis correspond to an Alpha version, and it will be used for academic purposes. For professional use you must validate the CN values assigned by Land Use and the percentages for each Land Soil cartographic unit for your specific project area._
+
+
+## General concepts
+
+
+### USDA Hydrologic groups
+
+The USDA's Natural Resources Conservation Service (NRCS) classifies soils into four primary Hydrologic Soil Groups (A, B, C, and D) based on their infiltration rates and runoff potential when thoroughly wet.
+
+Hydrologic soil groups are based on estimates of runoff potential. Soils are assigned to one of four groups according to the rate of water infiltration when the soils are not protected by vegetation, are thoroughly wet, and receive precipitation from long-duration storms. The soils in the United States are assigned to four groups (A, B, C, and D) and three dual classes (A/D, B/D, and C/D). The groups are defined as follows[^2]:
+
+| Group | Description                                                                                                                                                                                          |      Infiltration       |          Rate           | Texture                                                                                              |
+|:-----:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------:|:-----------------------:|:-----------------------------------------------------------------------------------------------------|
+|   A   | High infiltration, low runoff potential. Typically deep, well-drained sands or gravels that transmit water rapidly.                                                                                  |     Fast<br/>Rápida     |        > 76 mm/h        | Sandy, Sandy-silty<br/>Arenosa, Arenosa - limosa                                                     |
+|   B   | Moderate infiltration, moderately low runoff. Usually moderately deep to deep, well-drained soils with moderately fine to moderately coarse textures (e.g., sandy loams or silt loams).              |  Moderate<br/>Moderada  | between 76 and 38 mm/h  | Loamy, Clay-loamy, Sandy-loamy, Silt-loamy<br/>Franca, Franco - arcillosa - arenosa, Franco - limosa |
+|   C   | Slow infiltration, moderately high runoff. Typically have fine textures or a sub-layer that impedes downward water movement (e.g., clay loams).                                                      |     Slow<br/>Lenta      | between 38 and 13 mm/h  | Loam, Clay Loam, Sandy Clay<br/>Franco - arcillosa, Franco - arcillo - limosa, Arcillo - arenosa     |
+|   D   | Very slow infiltration, high runoff potential. Usually heavy clay soils, soils with high shrink-swell potential, soils with a permanent high water table, or soils shallow over an impervious layer. | Very Slow<br/>Muy Lenta |        < 13 mm/h        | Clayey<br/>Arcillosa                                                                                 |
+
+> Infiltration when soils are completely wet and averge infiltration capacity.
 
 
 ## A. Layers and tables
@@ -112,12 +131,11 @@ Query Filters:
 "CaracteristicaSuelo" = 'Suelos de textura muy fina' AND "LitologiaSedimento" LIKE 'Depósito%'
 
 
-
-
-
-
 ## References
 
 * https://www.hec.usace.army.mil/confluence/hmsdocs/hmstrm/cn-tables
 
+
+
 [^1]: https://en.wikipedia.org/wiki/Runoff_curve_number
+[^2]: https://www.hec.usace.army.mil/confluence/hmsdocs/hmsguides/files/118099517/118099546/1/1665679165857/HydrologicSoilGroup_DominantCondition.pdf
