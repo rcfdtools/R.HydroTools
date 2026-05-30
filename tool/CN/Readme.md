@@ -26,9 +26,7 @@ The SCS Curve Number (CN) is an empirical parameter used in hydrology by the USD
 * CN.gpkg/SueloColombia100k_v1: integrated Colombia version from states.
 * Required displacement for v0: DX = -370.54982010833919048309, DY = 309.88952068053185939789
 
-Data dictionary (es)
-
-<div align="center">
+<div align="center"> Data dictionary (es)
 
 | Field                 |    Type     | Description                                                      |
 |:----------------------|:-----------:|:-----------------------------------------------------------------|
