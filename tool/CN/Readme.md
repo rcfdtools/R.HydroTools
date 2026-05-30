@@ -28,6 +28,8 @@ The SCS Curve Number (CN) is an empirical parameter used in hydrology by the USD
 
 Data dictionary (es)
 
+<div justify-content="center">
+
 | Field                 |    Type     | Description                                                      |
 |:----------------------|:-----------:|:-----------------------------------------------------------------|
 | UCS                   | Text (255)  | Unidad cartográfica del suelo                                    |
@@ -45,6 +47,8 @@ Data dictionary (es)
 | ProcesoGeomorfologico | Text (255)  |                                                                  |
 | Conjunto              | Text (255)  |                                                                  |
 | DeNombre              | Text (100)  | Departamento                                                     |
+
+</div>
 
 > La UCS representa una zona del terreno donde se ha identificado una agrupación específica de suelos con características físicas, químicas, taxonómicas y geomorfológicas similares.
 
