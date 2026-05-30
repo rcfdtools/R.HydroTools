@@ -23,7 +23,7 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 |   C   | Slow infiltration, moderately high runoff. Typically have fine textures or a sub-layer that impedes downward water movement (e.g., clay loams).                                                      |     Slow<br/><sub>Lenta</sub>      | between 38 and 13 mm/h  | Loam, Clay Loam, Sandy Clay<br/><sub>Franco - arcillosa, Franco - arcillo - limosa, Arcillo - arenosa</sub>      |
 |   D   | Very slow infiltration, high runoff potential. Usually heavy clay soils, soils with high shrink-swell potential, soils with a permanent high water table, or soils shallow over an impervious layer. | Very Slow<br/><sub>Muy Lenta</sub> |        < 13 mm/h        | Clayey<br/><sub>Arcillosa</sub>                                                                                  |
 
-> Infiltration when soils are completely wet and averge infiltration capacity.
+> Infiltration when soils are completely wet and average infiltration capacity.
 > 
 > If a soil is assigned to a dual hydrologic group (A/D, B/D, or C/D), the first letter is for drained areas and the second is for undrained areas. Only the soils that in their natural condition are in group D are assigned to dual classes.
 
