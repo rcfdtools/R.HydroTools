@@ -26,25 +26,27 @@ The SCS Curve Number (CN) is an empirical parameter used in hydrology by the USD
 * CN.gpkg/SueloColombia100k_v1: integrated Colombia version from states.
 * Required displacement for v0: DX = -370.54982010833919048309, DY = 309.88952068053185939789
 
-Data dictionary
+Data dictionary (es)
 
-| Field                 |    Type     | Description (es)                                                                                                                                                                                            |
-|:----------------------|:-----------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| UCS                   | Text (255)  | Unidad cartográfica del suelo. Representa una zona del terreno donde se ha identificado una agrupación específica de suelos con características físicas, químicas, taxonómicas y geomorfológicas similares. |
-| UCSf                  | Text (255)  | Sub-unidad cartográfica del suelo                                                                                                                                                                           |
-| Paisaje               | Text (255)  | Paisaje local                                                                                                                                                                                               |
-| Clima                 | Text (255)  | Clima local                                                                                                                                                                                                 |
-| TipoRelieve           | Text (255)  | Tipo de relieve                                                                                                                                                                                             |
-| CaracteristicaRelieve | Text (255)  | Característica del relieve                                                                                                                                                                                  |
-| LitologiaSedimento    | Text (255)  | Litología de sedimentos                                                                                                                                                                                     |
-| CaracteristicaSuelo   | Text (1000) | Características del suelo                                                                                                                                                                                   |
-| ComponenteTaxonomico  | Text (255)  | Componentes taxonómicos                                                                                                                                                                                     |
-| Perfil                | Text (255)  | Códigos de perfiles estratigráficos de muestreo                                                                                                                                                             |
-| Porcentaje            | Text (255)  | Porcentajes de distribución de componentes taxonómicos en perfil                                                                                                                                            |
-| Fase                  | Text (255)  |                                                                                                                                                                                                             |
-| ProcesoGeomorfologico | Text (255)  |                                                                                                                                                                                                             |
-| Conjunto              | Text (255)  |                                                                                                                                                                                                             |
-| DeNombre              | Text (100)  | Departamento                                                                                                                                                                                                |
+| Field                 |    Type     | Description                                                      |
+|:----------------------|:-----------:|:-----------------------------------------------------------------|
+| UCS                   | Text (255)  | Unidad cartográfica del suelo                                    |
+| UCSf                  | Text (255)  | Sub-unidad cartográfica del suelo                                |
+| Paisaje               | Text (255)  | Paisaje local                                                    |
+| Clima                 | Text (255)  | Clima local                                                      |
+| TipoRelieve           | Text (255)  | Tipo de relieve                                                  |
+| CaracteristicaRelieve | Text (255)  | Característica del relieve                                       |
+| LitologiaSedimento    | Text (255)  | Litología de sedimentos                                          |
+| CaracteristicaSuelo   | Text (1000) | Características del suelo                                        |
+| ComponenteTaxonomico  | Text (255)  | Componentes taxonómicos                                          |
+| Perfil                | Text (255)  | Códigos de perfiles estratigráficos de muestreo                  |
+| Porcentaje            | Text (255)  | Porcentajes de distribución de componentes taxonómicos en perfil |
+| Fase                  | Text (255)  |                                                                  |
+| ProcesoGeomorfologico | Text (255)  |                                                                  |
+| Conjunto              | Text (255)  |                                                                  |
+| DeNombre              | Text (100)  | Departamento                                                     |
+
+> La UCS representa una zona del terreno donde se ha identificado una agrupación específica de suelos con características físicas, químicas, taxonómicas y geomorfológicas similares.
 
 
 ### Land use
