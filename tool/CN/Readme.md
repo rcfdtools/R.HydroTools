@@ -4,6 +4,8 @@
 
 The SCS Curve Number (CN) is an empirical parameter used in hydrology by the USDA Natural Resources Conservation Service (formerly the Soil Conservation Service) to estimate direct surface runoff and infiltration from rainfall. Ranging from \(0\) to \(100\), higher values indicate greater runoff and less soil retention.[^1]
 
+<div align="center"><img alt="R.HydroTools" src="file/graph/CNII_v0.jpg" width="550px"><br><sub>Figure. CNII Colombia v0.</sub></div><br>
+
 :blue_heart:**Attention**: _The current CN analysis correspond to an Alpha version, and it will be used for academic purposes. For professional use you must validate the CN values assigned by Land Use and the percentages for each Land Soil cartographic unit for your specific project area._
 
 
@@ -101,7 +103,7 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 
 4. Through the _Field Calculator_, calculate the pondered `CNII` value in a Decimal number (real) field.
 
-Expression: `("CN_LandUse_v0_CNA" * "CN_LandSoil_v0_PctA" / 100) + ("CN_LandUse_v0_CNB" * "CN_LandSoil_v0_PctB" / 100)  + ("CN_LandUse_v0_CNC" * "CN_LandSoil_v0_PctC" / 100)  + ("CN_LandUse_v0_CND" * "CN_LandSoil_v0_PctD" / 100) `
+Expression: `("CN_LandUse_v0_CNA" * "CN_LandSoil_v0_PctA" / 100) + ("CN_LandUse_v0_CNB" * "CN_LandSoil_v0_PctB" / 100)  + ("CN_LandUse_v0_CNC" * "CN_LandSoil_v0_PctC" / 100)  + ("CN_LandUse_v0_CND" * "CN_LandSoil_v0_PctD" / 100)`
 
 5. With _Processing Toolbox / GDAL / Vector Conversion / Rasterize (vector to raster)_ convert the _VocacionUsoSueloColombia100kIntersect_v0_ to a 90 meters raster image and save in the folder _/grid_, name as _CNII_Colombia_90m.tif_, set null cells as 9999.
 
