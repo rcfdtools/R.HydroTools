@@ -38,6 +38,11 @@ tool/Population/shp/ColombiaCountyRural.*
 tool/CN/file/data/IGAC/*MemoriaTecnica*
 tool/CN/file/data/IGAC/*.gdb
 tool/CN/file/gdb/*.gpkg
+tool/CN/file/grid/*.tif
+tool/CN/file/grid/*.tif*
+tool/CN/file/grid/*.ovr
+tool/CN/file/grid/*.xml
+
 
 
 # Some samples

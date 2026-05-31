@@ -91,7 +91,7 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 
 ## B. QGIS Procedure
 
-1. With Processing _Toolbox / Vector Geometry / Intersect_, create a spatial intersection between _VocacionUsoColombia100k_v0_ and _SueloColombia100k_v0_ and name the resulting layer as _gdb/CN.gpkg/VocacionUsoSueloColombia100kIntersect_v0_ 
+1. With _Processing Toolbox / Vector Geometry / Intersect_, create a spatial intersection between _VocacionUsoColombia100k_v0_ and _SueloColombia100k_v0_ and name the resulting layer as _gdb/CN.gpkg/VocacionUsoSueloColombia100kIntersect_v0_ 
 
 > If one of the layer has geometry error it could be fixed first with the tool _Vector Geometry / Fix geometries_ (Repair method: Structure)
 
@@ -99,7 +99,13 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 
 3. Join the _CN_LandSoil_v0_ table to the _VocacionUsoSueloColombia100kIntersect_v0_ layer using the `UCSf` field and check if all the record has associated CN percentage values for the different hydrologic groups (PctA, PctB, PctC, PctD).
 
-4. 
+4. Through the _Field Calculator_, calculate the pondered `CNII` value in a Decimal number (real) field.
+
+Expression: `("CN_LandUse_v0_CNA" * "CN_LandSoil_v0_PctA" / 100) + ("CN_LandUse_v0_CNB" * "CN_LandSoil_v0_PctB" / 100)  + ("CN_LandUse_v0_CNC" * "CN_LandSoil_v0_PctC" / 100)  + ("CN_LandUse_v0_CND" * "CN_LandSoil_v0_PctD" / 100) `
+
+5. With _Processing Toolbox / GDAL / Vector Conversion / Rasterize (vector to raster)_ convert the _VocacionUsoSueloColombia100kIntersect_v0_ to raster images and save in the folder _/grid_, name as _CNII_Colombia_90m.tif_, _CNII_Colombia_30m.tif_, _CNII_Colombia_10m.tif_. Set null cells as 9999.
+
+6. 
 
 
 ## C. QGIS Tools
@@ -136,6 +142,8 @@ Query Filters:
 ## References
 
 * https://www.hec.usace.army.mil/confluence/hmsdocs/hmstrm/cn-tables
+* https://docs.qgis.org/3.44/en/docs/user_manual/processing_algs/qgis/vectoroverlay.html
+* https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Zonificaci-n-Hidrogr-fica-Colombia/5kjg-nuda/about_data
 
 
 
