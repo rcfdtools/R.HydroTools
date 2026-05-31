@@ -103,9 +103,7 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 
 Expression: `("CN_LandUse_v0_CNA" * "CN_LandSoil_v0_PctA" / 100) + ("CN_LandUse_v0_CNB" * "CN_LandSoil_v0_PctB" / 100)  + ("CN_LandUse_v0_CNC" * "CN_LandSoil_v0_PctC" / 100)  + ("CN_LandUse_v0_CND" * "CN_LandSoil_v0_PctD" / 100) `
 
-5. With _Processing Toolbox / GDAL / Vector Conversion / Rasterize (vector to raster)_ convert the _VocacionUsoSueloColombia100kIntersect_v0_ to raster images and save in the folder _/grid_, name as _CNII_Colombia_90m.tif_, _CNII_Colombia_30m.tif_, _CNII_Colombia_10m.tif_. Set null cells as 9999.
-
-6. 
+5. With _Processing Toolbox / GDAL / Vector Conversion / Rasterize (vector to raster)_ convert the _VocacionUsoSueloColombia100kIntersect_v0_ to a 90 meters raster image and save in the folder _/grid_, name as _CNII_Colombia_90m.tif_, set null cells as 9999.
 
 
 ## C. QGIS Tools
