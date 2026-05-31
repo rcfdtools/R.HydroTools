@@ -91,13 +91,13 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 
 ## B. QGIS Procedure
 
-1. Join the _CN_LandUse_v0_ table to the _VocacionUsoColombia100k_v0_ layer using the `CNCode` field and check if all the record has associated CN values for the different hydrologic groups (CNA, CNB, CNC, CND).
-
-2. Join the _CN_LandSoil_v0_ table to the _SueloColombia100k_v0_ layer using the `UCSf` field and check if all the record has associated CN percentage values for the different hydrologic groups (PctA, PctB, PctC, PctD).
-
-3. With Processing _Toolbox / Vector Geometry / Union_, create a spatial between _VocacionUsoColombia100k_v0_ and _SueloColombia100k_v0_ and name the resulting layer as _gdb/CN.gpkg/VocacionUsoSueloColombia100kUnion_v0_ 
+1. With Processing _Toolbox / Vector Geometry / Intersect_, create a spatial intersection between _VocacionUsoColombia100k_v0_ and _SueloColombia100k_v0_ and name the resulting layer as _gdb/CN.gpkg/VocacionUsoSueloColombia100kIntersect_v0_ 
 
 > If one of the layer has geometry error it could be fixed first with the tool _Vector Geometry / Fix geometries_ (Repair method: Structure)
+
+2. Join the _CN_LandUse_v0_ table to the _VocacionUsoSueloColombia100kIntersect_v0_ layer using the `CNCode` field and check if all the record has associated CN values for the different hydrologic groups (CNA, CNB, CNC, CND).
+
+3. Join the _CN_LandSoil_v0_ table to the _VocacionUsoSueloColombia100kIntersect_v0_ layer using the `UCSf` field and check if all the record has associated CN percentage values for the different hydrologic groups (PctA, PctB, PctC, PctD).
 
 4. 
 
