@@ -11,8 +11,6 @@ Keywords: `curve-number` `scs` `usda` `nrcs` `land-use` `land-soil` `infiltratio
 
 The SCS Curve Number (CN) is an empirical parameter used in hydrology to estimate how much rainwater will infiltrate the soil and how much will become surface runoff. It was developed by the U.S. Soil Conservation Service (SCS, now [NRCS](https://www.nrcs.usda.gov/)). The CN is a dimensionless indicator ranging from 0 to 100. Values close to 100 indicate low infiltration and high runoff (e.g., paved areas or rooftops generate a CN close to 98); values close to 0 indicate a high soil absorption and retention capacity, resulting in almost no runoff (e.g., forests with deep sandy soils).[^1]
 
-
-
 <sub>es: El SCS Curve Number (CN) o Número de Curva es un parámetro empírico utilizado en hidrología para estimar cuánta agua de lluvia se infiltrará en el suelo y cuánta se convertirá en escorrentía superficial. Fue desarrollado por el Servicio de Conservación de Suelos de EE. UU. (SCS, ahora [NRCS](https://www.nrcs.usda.gov/)). CN es un indicador adimensional que oscila entre 0 y 100, Valores cercanos a 100: Indican baja infiltración y alta escorrentía (ej. zonas pavimentadas o techos generan un CN cercano a 98), Valores cercanos a 0: Indican alta capacidad de absorción y retención del suelo, por lo que casi no hay escorrentía (ej. bosques con suelos arenosos profundos).</sub>
 
 <div align="center"><img alt="R.HydroTools" src="file/graph/CNII_v0.jpg" width="550px"><br><sub>Figure. CNII Colombia v0.</sub></div><br>
@@ -263,6 +261,66 @@ e.g., the code _**PWFc2p**_ means: (P) Piedemonte, (W) Cálido, seco, (F) Ustoxi
 | <img alt="R.HydroTools" src="file/graph/CRE-1.jpg" width="400px">    | <img alt="R.HydroTools" src="file/graph/CRE-2.jpg" width="400px">          |
 | <img alt="R.HydroTools" src="file/graph/Lomerio.jpg" width="400px">  | <img alt="R.HydroTools" src="file/graph/Montana.jpg" width="400px">        |
 | <img alt="R.HydroTools" src="file/graph/Planicie.jpg" width="400px"> | <img alt="R.HydroTools" src="file/graph/Valle.jpg" width="400px">          |
+
+</div>
+
+
+### 3. Table: CN_LandSoil
+
+The Land Soil Table contents the UCSf codes for each Land Soil area, the related sediment lithology and the percentage CN values for each Hydrologic Group. 
+
+<div align="center"> Data dictionary (es)
+
+| Field                  |     Type     | Description                                       |
+|:-----------------------|:------------:|:--------------------------------------------------|
+| UCSf                   |  Text (255)  | Código de sub-unidad cartográfica del suelo       |
+| LitologiaSedimento     |  Text (255)  | Litología del sedimento                           |
+| PctA                   |     Real     | Porcentaje en Grupo Hidrológico A                 |
+| PctA                   |  Real (255)  | Porcentaje en Grupo Hidrológico B                 |
+| PctA                   |  Real (255)  | Porcentaje en Grupo Hidrológico C                 |
+| PctA                   |  Real (255)  | Porcentaje en Grupo Hidrológico D                 |
+| PctSum                 | Real (1000)  | Sumatoria "PctA" + "PctB" + "PctC" + "PctD" = 100 |
+
+</div>
+
+
+### 4. Table: CN_LandUse
+
+The Land Use Table contents the USDA CN classification values for each specific land coverage or use.
+
+<div align="center"> Data dictionary (es)
+
+| Field       |     Type     | Description                            |
+|:------------|:------------:|:---------------------------------------|
+| CNCode      |  Integer64   | Código rcfdtools para cada tipo de uso |
+| Zone        |  Text (255)  | Zona                                   |
+| CoverType   |  Text (255)  | Tipo de cobertura                      |
+| Treatment   |  Text (255)  | Tratamiento superficial                |
+| HydroCond   |  Text (255)  | Condición hidrológica                  |
+| HydroDesc   |  Text (255)  | Descripción                            |
+| CNA         |     Real     | Número de curva en Grupo Hidrológico A |
+| CNA         |  Real (255)  | Número de curva en Grupo Hidrológico B |
+| CNA         |  Real (255)  | Número de curva en Grupo Hidrológico C |
+| CNA         |  Real (255)  | Número de curva en Grupo Hidrológico D |
+
+</div>
+
+
+### 3. Table: CN_LandSoil_v0
+
+The Land Soil Table contents the UCSf codes, the related sediment lithology and the percentage CN values for each Hydrologic Group. 
+
+<div align="center"> Data dictionary (es)
+
+| Field                  |     Type     | Description                                       |
+|:-----------------------|:------------:|:--------------------------------------------------|
+| UCSf                   |  Text (255)  | Código de sub-unidad cartográfica del suelo       |
+| LitologiaSedimento     |  Text (255)  | Litología del sedimento                           |
+| PctA                   |     Real     | Porcentaje en Grupo Hidrológico A                 |
+| PctA                   |  Real (255)  | Porcentaje en Grupo Hidrológico B                 |
+| PctA                   |  Real (255)  | Porcentaje en Grupo Hidrológico C                 |
+| PctA                   |  Real (255)  | Porcentaje en Grupo Hidrológico D                 |
+| PctSum                 | Real (1000)  | Sumatoria "PctA" + "PctB" + "PctC" + "PctD" = 100 |
 
 </div>
 
