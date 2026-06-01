@@ -115,9 +115,9 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 
 > A UCS represents an area of terrain where a specific grouping of soils with similar physical, chemical, taxonomic, and geomorphological characteristics has been identified.
 
-**UCSf Coding description sample**
 
-<div align="center">Relief (First capital letter)
+
+<div align="center">**UCSf Coding description sample**<br>**Relief** (First capital letter)
 
 | Relieve  | Descripción   |
 |:--------:|:--------------|
@@ -132,7 +132,7 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 
 </div>
 
-<div align="center">Climate (Second capital letter)
+<div align="center">**Climate** (Second capital letter)
 
 |  Clima  | Descripción                              |
 |:-------:|:-----------------------------------------|
@@ -157,7 +157,7 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 
 </div>
 
-<div align="center">Pedological content (Third capital letter)
+<div align="center">**Pedological content** (Third capital letter)
 
 | Contenido pedológico  | Descripción                                                                                                                                                                                              |
 |:---------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -182,7 +182,7 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 > 
 > Basado en el estudio de suelos del Departamento de Santander y Bolivar en Colombia, depende del relieve, la litología y el clima. Es necesario verificar estos valores a partir del estudio de suelos del Departamento del Cesar - Colombia.
 
-<div align="center">Terrain attributes (First lower case letter)
+<div align="center">**Terrain attributes** (First lower case letter)
 
 |    Atributo de terreno     | Atributo                                                                       |
 |:--------------------------:|:-------------------------------------------------------------------------------|
