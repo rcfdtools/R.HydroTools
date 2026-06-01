@@ -117,7 +117,7 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 
 **UCSf Coding description sample**
 
-**Relief** (First capital letter)
+<div align="center">Relief (First capital letter)
 
 | Relieve  | Descripción   |
 |:--------:|:--------------|
@@ -129,6 +129,9 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 |    S     | Peniplanicie  |
 |    V     | Valle         |
 |    Z     | Macizo        |
+
+</div>
+
 
 
 
