@@ -306,25 +306,6 @@ The Land Use Table contents the USDA CN classification values for each specific 
 </div>
 
 
-### 3. Table: CN_LandSoil_v0
-
-The Land Soil Table contents the UCSf codes, the related sediment lithology and the percentage CN values for each Hydrologic Group. 
-
-<div align="center"> Data dictionary (es)
-
-| Field                  |     Type     | Description                                       |
-|:-----------------------|:------------:|:--------------------------------------------------|
-| UCSf                   |  Text (255)  | Código de sub-unidad cartográfica del suelo       |
-| LitologiaSedimento     |  Text (255)  | Litología del sedimento                           |
-| PctA                   |     Real     | Porcentaje en Grupo Hidrológico A                 |
-| PctA                   |  Real (255)  | Porcentaje en Grupo Hidrológico B                 |
-| PctA                   |  Real (255)  | Porcentaje en Grupo Hidrológico C                 |
-| PctA                   |  Real (255)  | Porcentaje en Grupo Hidrológico D                 |
-| PctSum                 | Real (1000)  | Sumatoria "PctA" + "PctB" + "PctC" + "PctD" = 100 |
-
-</div>
-
-
 ## C. QGIS Procedure
 
 1. With _Processing Toolbox / Vector Geometry / Intersect_, create a spatial intersection between _VocacionUsoColombia100k_v0_ and _SueloColombia100k_v0_ and name the resulting layer as _gdb/CN.gpkg/VocacionUsoSueloColombia100kIntersect_v0_ 
