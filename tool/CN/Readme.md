@@ -3,7 +3,11 @@
 # RESEARCH: _“NRCS or SCS Curve Number (CN) - Colombia v0”_  
 Keywords: `curve-number` `scs` `usda` `nrcs` `land-use` `land-soil` `infiltration` `runoff` `rain` `soils`
 
-<div align="center">:world_map:Release: [Grid & Geopackage Layers and Tables](https://github.com/rcfdtools/R.HydroTools/releases/tag/CN)</div>
+<div align="center">
+
+:world_map:Release: [Grid & Geopackage Layers and Tables](https://github.com/rcfdtools/R.HydroTools/releases/tag/CN)
+
+</div>
 
 The SCS Curve Number (CN) is an empirical parameter used in hydrology to estimate how much rainwater will infiltrate the soil and how much will become surface runoff. It was developed by the U.S. Soil Conservation Service (SCS, now [NRCS](https://www.nrcs.usda.gov/)). The CN is a dimensionless indicator ranging from 0 to 100. Values close to 100 indicate low infiltration and high runoff (e.g., paved areas or rooftops generate a CN close to 98); values close to 0 indicate a high soil absorption and retention capacity, resulting in almost no runoff (e.g., forests with deep sandy soils).[^1]
 
