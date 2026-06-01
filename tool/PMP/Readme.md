@@ -4,8 +4,10 @@
 
 Keywords: `pmp` `probability-distribution` `empirical-distribution` `return-period` `scipy` `national-stations-catalog` `cne` `best-fit` `extreme-value` `difference-analysis` `kolmogorov-smirnov`
 
+<div align="center">
 :scroll: Paper: [rcfdtools interactive (en)](dataset/pmax24h_out/paper/Readme.md), [SCI-Colombia (es)](file/report/SCI_XXVI_SNHH26_Articulo_PMax24HAutomColombia_v2.pdf)<br>
-:books: Slides: [rcfdtools (es)](file/report/rcfdtools_PMax24HAutomColombia_Slides_v1.pdf), [SCI-Colombia (es)](file/report/SCI_XXVI_SNHH26_Presentacion_PMax24HAutomColombia_v1.pdf) 
+:books: Slides: [rcfdtools (es)](file/report/rcfdtools_PMax24HAutomColombia_Slides_v1.pdf), [SCI-Colombia (es)](file/report/SCI_XXVI_SNHH26_Presentacion_PMax24HAutomColombia_v1.pdf)
+</div>
 
 Spanish title: _“Estudio y análisis de la Precipitación Máxima Probable (PMP) en la red de estaciones climatológicas automáticas de Colombia - Suramérica y estimación de valores extremos para diferentes periodos de retorno a partir de múltiples distribuciones de probabilidad”_
 
