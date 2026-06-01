@@ -40,35 +40,35 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 
 <div align="center">Table. General CN classification based in soils lithology
 
-| Descripción litológica                                                                                                     |  A   |  B   |  C   |  D   |
-|----------------------------------------------------------------------------------------------------------------------------|:----:|:----:|:----:|:----:|
-| Recent alluvium and colluvium<br/><sub>Aluviones y coluviones actuales</sub>                                               |  ✓   |      |      |      |
-| Sands and marls<br/><sub>Arenas y margas                                                                                   |      |  ✓   |      |      |
-| Red sandstones, phyllites, quartzites, and slates<br/><sub>Areniscas rojas, filitas, cuarcitas y pizarras                  |      |      |  ✓   |      |
-| Basalts<br/><sub>Basaltos                                                                                                  |      |      |      |  ✓   |
-| Cream-colored recrystallized limestones<br/><sub>Calizas recristalizadas cremas                                            |      |  ✓   |      |      |
-| Blue tabular limestones<br/><sub>Calizas tableadas azules                                                                  |      |  ✓   |      |      |
-| Colluvium<br/><sub>Coluvial                                                                                                |  ✓   |      |      |      |
-| Alluvial fans<br/><sub>Conos de deyección                                                                                  |  ✓   |      |      |      |
+| Descripción litológica                                                                                                               |  A   |  B   |  C   |  D   |
+|--------------------------------------------------------------------------------------------------------------------------------------|:----:|:----:|:----:|:----:|
+| Recent alluvium and colluvium<br/><sub>Aluviones y coluviones actuales</sub>                                                         |  ✓   |      |      |      |
+| Sands and marls<br/><sub>Arenas y margas                                                                                             |      |  ✓   |      |      |
+| Red sandstones, phyllites, quartzites, and slates<br/><sub>Areniscas rojas, filitas, cuarcitas y pizarras                            |      |      |  ✓   |      |
+| Basalts<br/><sub>Basaltos                                                                                                            |      |      |      |  ✓   |
+| Cream-colored recrystallized limestones<br/><sub>Calizas recristalizadas cremas                                                      |      |  ✓   |      |      |
+| Blue tabular limestones<br/><sub>Calizas tableadas azules                                                                            |      |  ✓   |      |      |
+| Colluvium<br/><sub>Coluvial                                                                                                          |  ✓   |      |      |      |
+| Alluvial fans<br/><sub>Conos de deyección                                                                                            |  ✓   |      |      |      |
 | White quartzites, silvery mica schists, and albitic gneisses<br/><sub>Cuarcitas blancas, micaesquistos plateados y gneises albíticos |      |  ✓   |      |      |
-| Micaceous quartzites<br/><sub>Cuarcitas micaceas                                                                           |      |      |      |  ✓   |
-| Diabases<br/><sub>Diabasas                                                                                                 |      |      |      |  ✓   |
-| Black dolomites and limestones<br/><sub>Dolomitas negras y calizas                                                         |      |  ✓   |      |      |
-| Phyllites, quartzites, and calc-schists<br/><sub>Filitas, cuarcitas y calcoesquistos                                       |      |      |      |  ✓   |
-| Glacis; black and red silts and encrusted pebbles<br/><sub>Glacis. Limos negros y rojos y cantos encostrados               |      |      |  ✓   |      |
-| Undifferentiated<br/><sub>Indiferenciado                                                                                   |      |      |  ✓   |      |
-| Silts and red clays with caliche horizons<br/><sub>Limos y arcillas rojas con episodios de caliche                         |      |      |  ✓   |      |
-| Sandy marls and marls<br/><sub>Margas arenosas y margas                                                                    |      |      |  ✓   |      |
-| White marls<br/><sub>Margas blancas                                                                                        |      |      |      |  ✓   |
-| Gray marls<br/><sub>Margas grises                                                                                          |      |      |      |  ✓   |
-| Marls and sandstones<br/><sub>Margas y areníscas                                                                           |      |  ✓   |      |      |
-| Calcareous and dolomitic marbles<br/><sub>Mármoles calizos y dolomíticos                                                   |      |      |  ✓   |      |
-| Banded marbles, white marbles, and cream-colored marbles<br/><sub>Mármoles fajeados y mármoles blancos y crema             |      |      |  ✓   |      |
-| Micacites with garnets<br/><sub>Micacitas con granates                                                                     |      |      |  ✓   |      |
-| Mica schists and quartzites<br/><sub>Micaesquistos y cuarcitas                                                             |      |      |  ✓   |      |
-| Micaceous slates and micacites<br/><sub>Pizarras micaceas y micacitas                                                      |      |      |      |  ✓   |
-| Terraces<br/><sub>Terrazas                                                                                                 |      |  ✓   |      |      |
-| Gypsum<br/><sub>Yesos                                                                                                      |      |      |  ✓   |      |
+| Micaceous quartzites<br/><sub>Cuarcitas micaceas                                                                                     |      |      |      |  ✓   |
+| Diabases<br/><sub>Diabasas                                                                                                           |      |      |      |  ✓   |
+| Black dolomites and limestones<br/><sub>Dolomitas negras y calizas                                                                   |      |  ✓   |      |      |
+| Phyllites, quartzites, and calc-schists<br/><sub>Filitas, cuarcitas y calcoesquistos                                                 |      |      |      |  ✓   |
+| Glacis; black and red silts and encrusted pebbles<br/><sub>Glacis. Limos negros y rojos y cantos encostrados                         |      |      |  ✓   |      |
+| Undifferentiated<br/><sub>Indiferenciado                                                                                             |      |      |  ✓   |      |
+| Silts and red clays with caliche horizons<br/><sub>Limos y arcillas rojas con episodios de caliche                                   |      |      |  ✓   |      |
+| Sandy marls and marls<br/><sub>Margas arenosas y margas                                                                              |      |      |  ✓   |      |
+| White marls<br/><sub>Margas blancas                                                                                                  |      |      |      |  ✓   |
+| Gray marls<br/><sub>Margas grises                                                                                                    |      |      |      |  ✓   |
+| Marls and sandstones<br/><sub>Margas y areníscas                                                                                     |      |  ✓   |      |      |
+| Calcareous and dolomitic marbles<br/><sub>Mármoles calizos y dolomíticos                                                             |      |      |  ✓   |      |
+| Banded marbles, white marbles, and cream-colored marbles<br/><sub>Mármoles fajeados y mármoles blancos y crema                       |      |      |  ✓   |      |
+| Micacites with garnets<br/><sub>Micacitas con granates                                                                               |      |      |  ✓   |      |
+| Mica schists and quartzites<br/><sub>Micaesquistos y cuarcitas                                                                       |      |      |  ✓   |      |
+| Micaceous slates and micacites<br/><sub>Pizarras micaceas y micacitas                                                                |      |      |      |  ✓   |
+| Terraces<br/><sub>Terrazas                                                                                                           |      |  ✓   |      |      |
+| Gypsum<br/><sub>Yesos                                                                                                                |      |      |  ✓   |      |
 
 </div>
 
@@ -115,7 +115,7 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 
 > A UCS represents an area of terrain where a specific grouping of soils with similar physical, chemical, taxonomic, and geomorphological characteristics has been identified.
 
-<div align="center">UCSf Coding description sample<br><br>Relief (First capital letter)
+<div align="center">UCSf Coding Description Sample<br><br>Relief (First capital letter)
 
 | Relieve  | Descripción   |
 |:--------:|:--------------|
@@ -182,22 +182,22 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 
 <div align="center">Terrain attributes (First lower case letter)
 
-| Atributo de terreno | Descripción                                                                   |
-|:-------------------:|:------------------------------------------------------------------------------|
-|                     | **Gradiente de pendiente**                                                    |
-|          a          | 0-3%, ligeramente plana                                                       |
-|          b          | 3-7%, ligeramente inclinada o ligeramente ondulada                            |
-|          c          | 7-12%, moderadamente inclinada o moderadamente ondulada                       |
-|          d          | 12-25%, fuertemente inclinada o fuertemente ondulada o moderadamente quebrada |
-|          e          | 25-50%, ligeramente escarpada o ligeramente empinada                          |
-|          f          | 50-75%, moderadamente escarpada o moderadamente empinada                      |
-|          g          | >75%, fuertemente escarpada o fuertemente empinada                            |
-|                     | **Salinidad**                                                                 |
-|          s          | Salino                                                                        |
-|                     | **Duración inundaciones**                                                     |
-|          x          | 2 - 4 meses/año                                                               |
-|          y          | < 4 meses/año                                                                 |
-|          z          | > 4 meses/año                                                                 |
+| Atributo<br/>de terreno | Descripción                                                                   |
+|:-----------------------:|:------------------------------------------------------------------------------|
+|                         | **Gradiente de pendiente**                                                    |
+|            a            | 0-3%, ligeramente plana                                                       |
+|            b            | 3-7%, ligeramente inclinada o ligeramente ondulada                            |
+|            c            | 7-12%, moderadamente inclinada o moderadamente ondulada                       |
+|            d            | 12-25%, fuertemente inclinada o fuertemente ondulada o moderadamente quebrada |
+|            e            | 25-50%, ligeramente escarpada o ligeramente empinada                          |
+|            f            | 50-75%, moderadamente escarpada o moderadamente empinada                      |
+|            g            | >75%, fuertemente escarpada o fuertemente empinada                            |
+|                         | **Salinidad**                                                                 |
+|            s            | Salino                                                                        |
+|                         | **Duración inundaciones**                                                     |
+|            x            | 2 - 4 meses/año                                                               |
+|            y            | < 4 meses/año                                                                 |
+|            z            | > 4 meses/año                                                                 |
 
 </div>
 
@@ -259,7 +259,7 @@ Expression: `("CN_LandUse_v0_CNA" * "CN_LandSoil_v0_PctA" / 100) + ("CN_LandUse_
 
 ### QGIS Tools & Filters
 
-Tools
+**Tools**
 
 * Vector Table / Refactor Fields
 * Vector Geometry / Translate
@@ -267,7 +267,7 @@ Tools
 * Select by Expression: "LitologiaSedimento"  LIKE '%Arcilla%'
 * Vector Geometry / Fix geometries (Repair method: Structure)
 
-Query Filters 
+**Query Filters** 
 
 "CaracteristicaSuelo" = 'Suelos de textura gruesa' AND "LitologiaSedimento" LIKE 'Arcilla%'
 "CaracteristicaSuelo" = 'Suelos de textura media' AND "LitologiaSedimento" LIKE 'Arcilla%'
@@ -292,6 +292,8 @@ Query Filters
 
 ## References
 
+General
+
 * https://www.hec.usace.army.mil/confluence/hmsdocs/hmstrm/cn-tables
 * https://docs.qgis.org/3.44/en/docs/user_manual/processing_algs/qgis/vectoroverlay.html
 * https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Zonificaci-n-Hidrogr-fica-Colombia/5kjg-nuda/about_data
@@ -300,7 +302,35 @@ Query Filters
 * https://geoportal.igac.gov.co/contenido/datos-abiertos-agrologia
 * http://www.erosion.com.co/presentaciones/category/14-libro-deslizamientos-y-estabilidad-de-taludes-en-zonas-tropicales-jaime-suarez.html?download=136:070-5-litologiayestructurageologica
 * http://hidrologia.usal.es/practicas/Pneta_SCS/Pneta_SCS_fundam.pdf
+* [Compute Curve Number (CN) in WMS using SSURGO soil type data and NLCD for Land Use](https://www.youtube.com/watch?v=aS-0zz9nBK8)
+* [CNgrid preparation From Landuse and Soil type ArcGIS files](https://www.youtube.com/watch?v=_ppBl0lTZLc)
+* [Guía metodológica para la elaboración de mapas geomorfológicos a escala 1:100.000](http://www.ideam.gov.co/documents/11769/152722/Guia_Enero_201401+%281%29.pdf/501aa421-a0e4-4a1d-a5c8-d6cb1b0de520)
+* [La clase agrológica en los temas ambientales](https://www.researchgate.net/publication/305487869_LA_CLASE_AGROLOGICA_EN_LOS_TEMAS_AMBIENTALES)
 
+Estudios de Suelos. Tomado del documento Descripción de Suelos en el Departamento del Bolivar, Cesar y Santander - Colombia, disponible en https://ciat.cgiar.org
+
+* ftp://ftp.ciat.cgiar.org/DAPA/users/apantoja/london/Colombia/Suelos/00_shape_suelos/PROYECTO_DNP/MEMORIAS_SUELOS_OFICIALES/SANTANDER/87412%20-%203.pdf
+* ftp://ftp.ciat.cgiar.org/DAPA/users/apantoja/london/Colombia/Suelos/00_shape_suelos/DEPARTAMENTALES_2011_Brayan_Silvia/BOLIVAR/MEMORIA%20TECNICA/Cap%203.pdf
+* ftp://ftp.ciat.cgiar.org/DAPA/users/apantoja/london/Colombia/Suelos/00_shape_suelos/PROYECTO_DNP/MEMORIAS_SUELOS_OFICIALES/CESAR/Estudio%20Cesar(protegido).pdf
+* ftp://ftp.ciat.cgiar.org/DAPA/users/apantoja/london/Colombia/Suelos/00_shape_suelos/PROYECTO_DNP/MEMORIAS_SUELOS_OFICIALES/BOYACA/94864-Suelos%20Tomo%20I.pdf
+
+Soil Survey Manual - Soil Science División Staff - Agriculture Handbook No. 18. Pag 580 contents ths Hydrologic Soil Group.
+* https://www.iec.cat/mapasols/DocuInteres/PDF/Llibre50.pdf
+* https://www.nrcs.usda.gov/wps/portal/nrcs/detail/soils/scientists/?cid=nrcs142p2_054262
+
+CN Calculation Method
+* http://www.ideam.gov.co/web/atencion-y-participacion-ciudadana/publicaciones-ideam
+* https://www.hec.usace.army.mil/software/hec-geohms/documentation/HEC-GeoHMS_Users_Manual_10.1.pdf
+* http://www.ideam.gov.co/web/ecosistemas/coberturas-nacionales
+* https://www.hec.usace.army.mil/software/hec-geohms/downloads.aspx
+
+
+<div align="center"><img alt="R.HydroTools" src="file/graph/qr-code.png" width="250px"><br><sub>Share this research</sub></div><br>
+
+| [:house: Start](../../README.md)  | [:beginner: Help / Collaborate](https://github.com/rcfdtools/R.HydroTools/discussions) |
+|-----------------------------------|----------------------------------------------------------------------------------------|
+
+<sub>**APPS & TOOLS & CONTENT DISCLAIMER**: • NO WARRANTY - This content and software is provided by <a href="https://github.com/rcfdtools" target="_blank">github.com/rcfdtools</a> "as is", without any express or implied warranty, including warranties of merchantability, fitness for a particular purpose, or non-infringement. There is no guarantee that the software will be error-free or operate without interruption. • LIMITATION OF LIABILITY - Neither the authors nor copyright holders will be liable for claims or damages arising from the software or its use. You are responsible for determining if the software is appropriate for your use and assume all associated risks, including errors, legal compliance, and data loss. • NO PROFESSIONAL ADVICE - The software provides general information and does not offer professional advice. It should not replace consultation with professional advisors. [Clauses and global license for rcfdtools use.](https://github.com/rcfdtools/rcfdtools/blob/main/LICENSE.md)</sub>
 
 [^1]: https://en.wikipedia.org/wiki/Runoff_curve_number
 [^2]: https://www.hec.usace.army.mil/confluence/hmsdocs/hmsguides/files/118099517/118099546/1/1665679165857/HydrologicSoilGroup_DominantCondition.pdf
