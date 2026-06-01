@@ -2,7 +2,7 @@
 
 # SCS Curve Number (CN) - Colombia v0
 
-The SCS Curve Number (CN) is an empirical parameter used in hydrology by the USDA Natural Resources Conservation Service (formerly the Soil Conservation Service) to estimate direct surface runoff and infiltration from rainfall. Ranging from \(0\) to \(100\), higher values indicate greater runoff and less soil retention.[^1]
+The SCS Curve Number (CN) is an empirical parameter used in hydrology by the [USDA](https://www.nrcs.usda.gov/) Natural Resources Conservation Service (formerly the Soil Conservation Service) to estimate direct surface runoff and infiltration from rainfall. Ranging from \(0\) to \(100\), higher values indicate greater runoff and less soil retention.[^1]
 
 <div align="center"><img alt="R.HydroTools" src="file/graph/CNII_v0.jpg" width="550px"><br><sub>Figure. CNII Colombia v0.</sub></div><br>
 
@@ -18,6 +18,8 @@ The USDA's Natural Resources Conservation Service (NRCS) classifies soils into f
 
 Hydrologic soil groups are based on estimates of runoff potential. Soils are assigned to one of four groups according to the rate of water infiltration when the soils are not protected by vegetation, are thoroughly wet, and receive precipitation from long-duration storms. The soils in the United States are assigned to four groups (A, B, C, and D) and three dual classes (A/D, B/D, and C/D). The groups are defined as follows[^2]:
 
+<div align="center">
+
 | Group | Description                                                                                                                                                                                          |            Infiltration            |          Rate           | Texture                                                                                                          |
 |:-----:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------:|:-----------------------:|:-----------------------------------------------------------------------------------------------------------------|
 |   A   | High infiltration, low runoff potential. Typically deep, well-drained sands or gravels that transmit water rapidly.                                                                                  |     Fast<br/><sub>Rápida</sub>     |        > 76 mm/h        | Sandy, Sandy-silty<br/><sub>Arenosa, Arenosa - limosa</sub>                                                      |
@@ -25,9 +27,49 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 |   C   | Slow infiltration, moderately high runoff. Typically have fine textures or a sub-layer that impedes downward water movement (e.g., clay loams).                                                      |     Slow<br/><sub>Lenta</sub>      | between 38 and 13 mm/h  | Loam, Clay Loam, Sandy Clay<br/><sub>Franco - arcillosa, Franco - arcillo - limosa, Arcillo - arenosa</sub>      |
 |   D   | Very slow infiltration, high runoff potential. Usually heavy clay soils, soils with high shrink-swell potential, soils with a permanent high water table, or soils shallow over an impervious layer. | Very Slow<br/><sub>Muy Lenta</sub> |        < 13 mm/h        | Clayey<br/><sub>Arcillosa</sub>                                                                                  |
 
+</div>
+
 > Infiltration when soils are completely wet and average infiltration capacity.
 > 
 > If a soil is assigned to a dual hydrologic group (A/D, B/D, or C/D), the first letter is for drained areas and the second is for undrained areas. Only the soils that in their natural condition are in group D are assigned to dual classes.
+
+
+### General classification groups based in Soils Lithology[^3] 
+
+<div align="center">
+
+| Descripción litológica                                         |  A   |  B   |  C   |  D   |
+|----------------------------------------------------------------|:----:|:----:|:----:|:----:|
+| Aluviones y coluviones actuales                                |  ✓   |      |      |      |
+| Arenas y margas                                                |      |  ✓   |      |      |
+| Areniscas rojas, filitas, cuarcitas y pizarras                 |      |      |  ✓   |      |
+| Basaltos                                                       |      |      |      |  ✓   |
+| Calizas recristalizadas cremas                                 |      |  ✓   |      |      |
+| Calizas tableadas azules                                       |      |  ✓   |      |      |
+| Coluvial                                                       |  ✓   |      |      |      |
+| Conos de deyección                                             |  ✓   |      |      |      |
+| Cuarcitas blancas, micaesquistos plateados y gneises albíticos |      |  ✓   |      |      |
+| Cuarcitas micaceas                                             |      |      |      |  ✓   |
+| Diabasas                                                       |      |      |      |  ✓   |
+| Dolomitas negras y calizas                                     |      |  ✓   |      |      |
+| Filitas, cuarcitas y calcoesquistos                            |      |      |      |  ✓   |
+| Glacis. Limos negros y rojos y cantos encostrados              |      |      |  ✓   |      |
+| Indiferenciado***                                              |      |      |  ✓   |      |
+| Limos y arcillas rojas con episodios de caliche                |      |      |  ✓   |      |
+| Margas arenosas y margas                                       |      |      |  ✓   |      |
+| Margas blancas                                                 |      |      |      |  ✓   |
+| Margas grises                                                  |      |      |      |  ✓   |
+| Margas y areníscas                                             |      |  ✓   |      |      |
+| Mármoles calizos y dolomíticos                                 |      |      |  ✓   |      |
+| Mármoles fajeados y mármoles blancos y crema                   |      |      |  ✓   |      |
+| Micacitas con granates                                         |      |      |  ✓   |      |
+| Micaesquistos y cuarcitas                                      |      |      |  ✓   |      |
+| Pizarras micaceas y micacitas                                  |      |      |      |  ✓   |
+| Terrazas                                                       |      |  ✓   |      |      |
+| Yesos                                                          |      |      |  ✓   |      |
+| Conteo                                                         |  3   |  7   |  10  |  7   |
+
+</div>
 
 
 ## A. Layers and tables
@@ -144,8 +186,13 @@ Query Filters:
 * https://www.hec.usace.army.mil/confluence/hmsdocs/hmstrm/cn-tables
 * https://docs.qgis.org/3.44/en/docs/user_manual/processing_algs/qgis/vectoroverlay.html
 * https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Zonificaci-n-Hidrogr-fica-Colombia/5kjg-nuda/about_data
-
+* https://mountainscholar.org/bitstream/handle/10217/69240/IS_86.pdf?sequence=1&isAllowed=y
+* https://en.wikipedia.org/wiki/Runoff_curve_number
+* https://geoportal.igac.gov.co/contenido/datos-abiertos-agrologia
+* http://www.erosion.com.co/presentaciones/category/14-libro-deslizamientos-y-estabilidad-de-taludes-en-zonas-tropicales-jaime-suarez.html?download=136:070-5-litologiayestructurageologica
+* http://hidrologia.usal.es/practicas/Pneta_SCS/Pneta_SCS_fundam.pdf
 
 
 [^1]: https://en.wikipedia.org/wiki/Runoff_curve_number
 [^2]: https://www.hec.usace.army.mil/confluence/hmsdocs/hmsguides/files/118099517/118099546/1/1665679165857/HydrologicSoilGroup_DominantCondition.pdf
+[^3]: https://www.aguaysig.com/2017/01/metodo-del-numero-de-curva-del-scs.html
