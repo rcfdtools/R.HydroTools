@@ -34,7 +34,9 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 > If a soil is assigned to a dual hydrologic group (A/D, B/D, or C/D), the first letter is for drained areas and the second is for undrained areas. Only the soils that in their natural condition are in group D are assigned to dual classes.
 
 
-### Hydrologic Groups Based in Soils Lithology[^3] 
+### Hydrologic Groups Based in Lithology[^3] 
+
+General classification based in soils lithology.
 
 <div align="center">
 
