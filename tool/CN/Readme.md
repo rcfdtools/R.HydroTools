@@ -42,36 +42,35 @@ General classification based in soils lithology.
 
 <div align="center">
 
-| Descripción litológica                                                                                                               |  A   |  B   |  C   |  D   |
-|--------------------------------------------------------------------------------------------------------------------------------------|:----:|:----:|:----:|:----:|
-| Recent alluvium and colluvium<br/><sub>Aluviones y coluviones actuales</sub>                                                         |  ✓   |      |      |      |
-| Sands and marls<br/><sub>Arenas y margas                                                                                             |      |  ✓   |      |      |
-| Red sandstones, phyllites, quartzites, and slates<br/><sub>Areniscas rojas, filitas, cuarcitas y pizarras                            |      |      |  ✓   |      |
-| Basalts<br/><sub>Basaltos                                                                                                            |      |      |      |  ✓   |
-| Cream-colored recrystallized limestones<br/><sub>Calizas recristalizadas cremas                                                      |      |  ✓   |      |      |
-| Blue tabular limestones<br/><sub>Calizas tableadas azules                                                                            |      |  ✓   |      |      |
-| Colluvium<br/><sub>Coluvial                                                                                                          |  ✓   |      |      |      |
-| Alluvial fans<br/><sub>Conos de deyección                                                                                            |  ✓   |      |      |      |
+| Descripción litológica                                                                                                     |  A   |  B   |  C   |  D   |
+|----------------------------------------------------------------------------------------------------------------------------|:----:|:----:|:----:|:----:|
+| Recent alluvium and colluvium<br/><sub>Aluviones y coluviones actuales</sub>                                               |  ✓   |      |      |      |
+| Sands and marls<br/><sub>Arenas y margas                                                                                   |      |  ✓   |      |      |
+| Red sandstones, phyllites, quartzites, and slates<br/><sub>Areniscas rojas, filitas, cuarcitas y pizarras                  |      |      |  ✓   |      |
+| Basalts<br/><sub>Basaltos                                                                                                  |      |      |      |  ✓   |
+| Cream-colored recrystallized limestones<br/><sub>Calizas recristalizadas cremas                                            |      |  ✓   |      |      |
+| Blue tabular limestones<br/><sub>Calizas tableadas azules                                                                  |      |  ✓   |      |      |
+| Colluvium<br/><sub>Coluvial                                                                                                |  ✓   |      |      |      |
+| Alluvial fans<br/><sub>Conos de deyección                                                                                  |  ✓   |      |      |      |
 | White quartzites, silvery mica schists, and albitic gneisses<br/><sub>Cuarcitas blancas, micaesquistos plateados y gneises albíticos |      |  ✓   |      |      |
-| Micaceous quartzites<br/><sub>Cuarcitas micaceas                                                                                     |      |      |      |  ✓   |
-| Diabases<br/><sub>Diabasas                                                                                                           |      |      |      |  ✓   |
-| Black dolomites and limestones<br/><sub>Dolomitas negras y calizas                                                                   |      |  ✓   |      |      |
-| Phyllites, quartzites, and calc-schists<br/><sub>Filitas, cuarcitas y calcoesquistos                                                 |      |      |      |  ✓   |
-| Glacis; black and red silts and encrusted pebbles<br/><sub>Glacis. Limos negros y rojos y cantos encostrados                         |      |      |  ✓   |      |
-| Undifferentiated<br/><sub>Indiferenciado                                                                                             |      |      |  ✓   |      |
-| Silts and red clays with caliche horizons<br/><sub>Limos y arcillas rojas con episodios de caliche                                   |      |      |  ✓   |      |
-| Sandy marls and marls<br/><sub>Margas arenosas y margas                                                                              |      |      |  ✓   |      |
-| White marls<br/><sub>Margas blancas                                                                                                  |      |      |      |  ✓   |
-| Gray marls<br/><sub>Margas grises                                                                                                    |      |      |      |  ✓   |
-| Marls and sandstones<br/><sub>Margas y areníscas                                                                                     |      |  ✓   |      |      |
-| Calcareous and dolomitic marbles<br/><sub>Mármoles calizos y dolomíticos                                                             |      |      |  ✓   |      |
-| Banded marbles, white marbles, and cream-colored marbles<br/><sub>Mármoles fajeados y mármoles blancos y crema                       |      |      |  ✓   |      |
-| Micacites with garnets<br/><sub>Micacitas con granates                                                                               |      |      |  ✓   |      |
-| Mica schists and quartzites<br/><sub>Micaesquistos y cuarcitas                                                                       |      |      |  ✓   |      |
-| Micaceous slates and micacites<br/><sub>Pizarras micaceas y micacitas                                                                |      |      |      |  ✓   |
-| Terraces<br/><sub>Terrazas                                                                                                           |      |  ✓   |      |      |
-| Gypsum<br/><sub>Yesos                                                                                                                |      |      |  ✓   |      |
-| <br/><sub>Count                                                                                                                      |  3   |  7   |  10  |  7   |
+| Micaceous quartzites<br/><sub>Cuarcitas micaceas                                                                           |      |      |      |  ✓   |
+| Diabases<br/><sub>Diabasas                                                                                                 |      |      |      |  ✓   |
+| Black dolomites and limestones<br/><sub>Dolomitas negras y calizas                                                         |      |  ✓   |      |      |
+| Phyllites, quartzites, and calc-schists<br/><sub>Filitas, cuarcitas y calcoesquistos                                       |      |      |      |  ✓   |
+| Glacis; black and red silts and encrusted pebbles<br/><sub>Glacis. Limos negros y rojos y cantos encostrados               |      |      |  ✓   |      |
+| Undifferentiated<br/><sub>Indiferenciado                                                                                   |      |      |  ✓   |      |
+| Silts and red clays with caliche horizons<br/><sub>Limos y arcillas rojas con episodios de caliche                         |      |      |  ✓   |      |
+| Sandy marls and marls<br/><sub>Margas arenosas y margas                                                                    |      |      |  ✓   |      |
+| White marls<br/><sub>Margas blancas                                                                                        |      |      |      |  ✓   |
+| Gray marls<br/><sub>Margas grises                                                                                          |      |      |      |  ✓   |
+| Marls and sandstones<br/><sub>Margas y areníscas                                                                           |      |  ✓   |      |      |
+| Calcareous and dolomitic marbles<br/><sub>Mármoles calizos y dolomíticos                                                   |      |      |  ✓   |      |
+| Banded marbles, white marbles, and cream-colored marbles<br/><sub>Mármoles fajeados y mármoles blancos y crema             |      |      |  ✓   |      |
+| Micacites with garnets<br/><sub>Micacitas con granates                                                                     |      |      |  ✓   |      |
+| Mica schists and quartzites<br/><sub>Micaesquistos y cuarcitas                                                             |      |      |  ✓   |      |
+| Micaceous slates and micacites<br/><sub>Pizarras micaceas y micacitas                                                      |      |      |      |  ✓   |
+| Terraces<br/><sub>Terrazas                                                                                                 |      |  ✓   |      |      |
+| Gypsum<br/><sub>Yesos                                                                                                      |      |      |  ✓   |      |
 
 </div>
 
