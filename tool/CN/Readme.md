@@ -90,7 +90,7 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 * https://staigacmpcolv2.z20.web.core.windows.net/?b=igac&u=0&t=43&servicio=23
 
 
-### 1. Layer: SueloColombia100k (Colombia Soil Maps)
+### 1. Layer: SueloColombia100k (Land Soil)
 
 * es: Suelos por Departamento 100k, 2000.
 * https://www.colombiaenmapas.gov.co/
