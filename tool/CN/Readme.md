@@ -257,9 +257,7 @@ Expression: `("CN_LandUse_v0_CNA" * "CN_LandSoil_v0_PctA" / 100) + ("CN_LandUse_
 5. With _Processing Toolbox / GDAL / Vector Conversion / Rasterize (vector to raster)_ convert the _VocacionUsoSueloColombia100kIntersect_v0_ to a 90 meters raster image and save in the folder _/grid_, name as _CNII_Colombia_90m.tif_, set null cells as 9999.
 
 
-### QGIS Tools & Filters
-
-**Tools**
+**QGIS Tools**
 
 * Vector Table / Refactor Fields
 * Vector Geometry / Translate
@@ -267,7 +265,7 @@ Expression: `("CN_LandUse_v0_CNA" * "CN_LandSoil_v0_PctA" / 100) + ("CN_LandUse_
 * Select by Expression: "LitologiaSedimento"  LIKE '%Arcilla%'
 * Vector Geometry / Fix geometries (Repair method: Structure)
 
-**Query Filters** 
+**QGIS Query Filters** 
 
 "CaracteristicaSuelo" = 'Suelos de textura gruesa' AND "LitologiaSedimento" LIKE 'Arcilla%'
 "CaracteristicaSuelo" = 'Suelos de textura media' AND "LitologiaSedimento" LIKE 'Arcilla%'
