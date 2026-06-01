@@ -1,6 +1,6 @@
 <div align="center"><img alt="R.HydroTools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
 
-# SCS Curve Number (CN) - Colombia v0
+# RESEARCH: _“SCS Curve Number (CN) - Colombia v0”_
 
 The SCS Curve Number (CN) is an empirical parameter used in hydrology by the [USDA](https://www.nrcs.usda.gov/) Natural Resources Conservation Service (formerly the Soil Conservation Service) to estimate direct surface runoff and infiltration from rainfall. Ranging from \(0\) to \(100\), higher values indicate greater runoff and less soil retention.[^1]
 
@@ -9,10 +9,10 @@ The SCS Curve Number (CN) is an empirical parameter used in hydrology by the [US
 :blue_heart:**Attention**: _The current CN analysis correspond to an Alpha version, and it will be used for academic purposes. For professional use you must validate the CN values assigned by Land Use and the percentages for each Land Soil cartographic unit for your specific project area._
 
 
-## General Concepts
+## A. General Concepts
 
 
-### Hydrologic Groups
+### 0. Hydrologic Groups
 
 The USDA's Natural Resources Conservation Service (NRCS) classifies soils into four primary Hydrologic Soil Groups (A, B, C, and D) based on their infiltration rates and runoff potential when thoroughly wet.
 
@@ -34,7 +34,7 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 > If a soil is assigned to a dual hydrologic group (A/D, B/D, or C/D), the first letter is for drained areas and the second is for undrained areas. Only the soils that in their natural condition are in group D are assigned to dual classes.
 
 
-### Hydrologic Groups Based in Lithology[^3] 
+### 1. Hydrologic Groups Based in Lithology[^3] 
 
 General classification based in soils lithology.
 
@@ -74,17 +74,17 @@ General classification based in soils lithology.
 </div>
 
 
-## A. Layers and tables
+## B. Layers and tables
 
 
-### Layer: Depto (Colombia States)
+### 0. Layer: Depto (Colombia States)
 
 * Version: 202604
 * https://www.colombiaenmapas.gov.co/
 * https://staigacmpcolv2.z20.web.core.windows.net/?b=igac&u=0&t=43&servicio=23
 
 
-### Layer: SueloColombia100k (Colombia Soil Maps)
+### 1. Layer: SueloColombia100k (Colombia Soil Maps)
 
 * es: Suelos por Departamento 100k, 2000.
 * https://www.colombiaenmapas.gov.co/
@@ -117,7 +117,7 @@ General classification based in soils lithology.
 > A UCS represents an area of terrain where a specific grouping of soils with similar physical, chemical, taxonomic, and geomorphological characteristics has been identified.
 
 
-### Layer: VocacionUsoColombia100k (Land use)
+### 2. Layer: VocacionUsoColombia100k (Land use)
 
 * es: Vocación de Uso 100k, Territorio Nacional 2013.
 * https://www.colombiaenmapas.gov.co/
@@ -135,7 +135,7 @@ General classification based in soils lithology.
 </div>
 
 
-## B. QGIS Procedure
+## C. QGIS Procedure
 
 1. With _Processing Toolbox / Vector Geometry / Intersect_, create a spatial intersection between _VocacionUsoColombia100k_v0_ and _SueloColombia100k_v0_ and name the resulting layer as _gdb/CN.gpkg/VocacionUsoSueloColombia100kIntersect_v0_ 
 
@@ -152,7 +152,9 @@ Expression: `("CN_LandUse_v0_CNA" * "CN_LandSoil_v0_PctA" / 100) + ("CN_LandUse_
 5. With _Processing Toolbox / GDAL / Vector Conversion / Rasterize (vector to raster)_ convert the _VocacionUsoSueloColombia100kIntersect_v0_ to a 90 meters raster image and save in the folder _/grid_, name as _CNII_Colombia_90m.tif_, set null cells as 9999.
 
 
-## C. QGIS Tools
+### QGIS Tools & Filters
+
+Tools
 
 * Vector Table / Refactor Fields
 * Vector Geometry / Translate
@@ -160,7 +162,7 @@ Expression: `("CN_LandUse_v0_CNA" * "CN_LandSoil_v0_PctA" / 100) + ("CN_LandUse_
 * Select by Expression: "LitologiaSedimento"  LIKE '%Arcilla%'
 * Vector Geometry / Fix geometries (Repair method: Structure)
 
-Query Filters: 
+Query Filters 
 
 "CaracteristicaSuelo" = 'Suelos de textura gruesa' AND "LitologiaSedimento" LIKE 'Arcilla%'
 "CaracteristicaSuelo" = 'Suelos de textura media' AND "LitologiaSedimento" LIKE 'Arcilla%'
