@@ -115,6 +115,22 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 
 > A UCS represents an area of terrain where a specific grouping of soils with similar physical, chemical, taxonomic, and geomorphological characteristics has been identified.
 
+### UCSf Coding description sample (es)
+
+Relief (First capital letter)
+
+| Relieve  | Descripción   |
+|:--------:|:--------------|
+|    A     | Altiplanicie  |
+|    L     | Lomerío       |
+|    M     | Montaña       |
+|    P     | Piedemonte    |
+|    R     | Planicie      |
+|    S     | Peniplanicie  |
+|    V     | Valle         |
+|    Z     | Macizo        |
+
+
 
 ### 2. Layer: VocacionUsoColombia100k (Land use)
 
