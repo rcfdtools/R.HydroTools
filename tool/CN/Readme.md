@@ -83,7 +83,7 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 ## B. Layers and tables
 
 
-### 0. Layer: Depto (Colombia States)
+### 0. Layer: Depto (States)
 
 * Version: 202604
 * https://www.colombiaenmapas.gov.co/
