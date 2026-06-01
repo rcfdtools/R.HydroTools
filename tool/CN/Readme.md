@@ -20,7 +20,7 @@ The USDA's Natural Resources Conservation Service (NRCS) classifies soils into f
 
 Hydrologic soil groups are based on estimates of runoff potential. Soils are assigned to one of four groups according to the rate of water infiltration when the soils are not protected by vegetation, are thoroughly wet, and receive precipitation from long-duration storms. The soils in the United States are assigned to four groups (A, B, C, and D) and three dual classes (A/D, B/D, and C/D). The groups are defined as follows[^2]:
 
-<div align="center">
+<div align="center">Table: Hydrologic Groups
 
 | Group | Description                                                                                                                                                                                          |            Infiltration            |          Rate           | Texture                                                                                                          |
 |:-----:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------:|:-----------------------:|:-----------------------------------------------------------------------------------------------------------------|
@@ -38,7 +38,7 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 
 ### 1. Hydrologic Groups Based in Lithology[^3] 
 
-<div align="center">General classification based in soils lithology
+<div align="center">Table - General classification based in soils lithology
 
 | Descripción litológica                                                                                                     |  A   |  B   |  C   |  D   |
 |----------------------------------------------------------------------------------------------------------------------------|:----:|:----:|:----:|:----:|
