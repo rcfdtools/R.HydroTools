@@ -239,13 +239,12 @@ e.g., the code _**PWFc2p**_ means: (P) Piedemonte, (W) Cálido, seco, (F) Ustoxi
 
 </div>
 
-<div align="center">Land Cover and Landscape (es)
+<div align="center">Land Cover and Landscape (es)<br>Referencia: estudio de los conflictos de uso del territorio colombiano, escala 1:100.000. Instituto Geográfico Agustín Codazzi, 2012.
 
 | Sample                                                          | Sample                                                          |
 |-----------------------------------------------------------------|-----------------------------------------------------------------|
 | <img alt="R.HydroTools" src="file/graph/CTI.jpg" width="300px"> | <img alt="R.HydroTools" src="file/graph/CPI.jpg" width="300px"> |
-|                                                                 |                                                                 |
-|                                                                 |                                                                 |
+| <img alt="R.HydroTools" src="file/graph/CTS.jpg" width="300px"> | <img alt="R.HydroTools" src="file/graph/CPS.jpg" width="300px"> |
 
 
 
