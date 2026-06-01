@@ -228,7 +228,7 @@ e.g., the code _**PWFc2p**_ means: (P) Piedemonte, (W) Cálido, seco, (F) Ustoxi
 * https://www.colombiaenmapas.gov.co/
 * https://staigacmpcolv2.z20.web.core.windows.net/?b=igac&u=0&t=43&servicio=7301
 
-<div align="center"> Data dictionary (es)
+<div align="center">Data dictionary (es)
 
 | Field      |    Type     | Description                                       |
 |:-----------|:-----------:|:--------------------------------------------------|
@@ -236,6 +236,18 @@ e.g., the code _**PWFc2p**_ means: (P) Piedemonte, (W) Cálido, seco, (F) Ustoxi
 | Vocacion   | Text (255)  | Vocación de uso                                   |
 | UsoPpal    | Text (255)  | Uso principal                                     |
 | CNCode     | Text (255)  | Código asociado de tabla CN_LandUse               |
+
+</div>
+
+<div align="center">Land Cover and Landscape (es)
+
+| Sample                                                          | Sample                                                          |
+|-----------------------------------------------------------------|-----------------------------------------------------------------|
+| <img alt="R.HydroTools" src="file/graph/CTI.jpg" width="300px"> | <img alt="R.HydroTools" src="file/graph/CPI.jpg" width="300px"> |
+|                                                                 |                                                                 |
+|                                                                 |                                                                 |
+
+
 
 </div>
 
