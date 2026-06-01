@@ -132,7 +132,55 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 
 </div>
 
+<div align="center">Climate (Second capital letter)
 
+|  Clima  | Descripción                              |
+|:-------:|:-----------------------------------------|
+|    E    | Extremadamente frío húmedo y muy húmedo  |
+|    G    | Muy frío, muy húmedo                     |
+|    H    | Muy frío, húmedo                         |
+|    J    | Frío pluvial                             |
+|    K    | Frío, muy húmedo                         |
+|    L    | Frío, húmedo                             |
+|    M    | Frío, seco                               |
+|    O    | Templado pluvial                         |
+|    P    | Templado, muy húmedo                     |
+|    Q    | Templado, húmedo                         |
+|    R    | Templado, seco                           |
+|    T    | Cálido, pluvial                          |
+|    U    | Cálido, muy húmedo                       |
+|    V    | Cálido, húmedo                           |
+|    W    | Cálido, seco                             |
+|    X    | Cálido, muy seco                         |
+|    Y    | Cálido, semiárido                        |
+|    Z    | Cálido, árido                            |
+
+</div>
+
+<div align="center">Pedological content (Third capital letter)
+
+| Contenido pedológico  | Descripción                                                                                                                                                                                              |
+|:---------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|          *CA          | Cuerpo de agua                                                                                                                                                                                           |
+|          *FM          | Fosa de mina de carbón                                                                                                                                                                                   |
+|          *ZU          | Zona urbana                                                                                                                                                                                              |
+|           A           | Afloramientos Rocosos, Lithic Cryorthents, Lithic Cryumbrepts, Lithic Troporthents, Typic Dystropepts, Typic Humitropepts, Andic Humitropepts, Inceptic Hapludox, Lithic Ustorthents, Typic Ustorthents  |
+|           B           | Lithic Humitropepts, Andic Humitropepts, Typic Melanudands, Typic Dystropepts, Typic Troporthents, Oxic Dystropepts, Lithic Troporthents, Typic Ustorthents                                              |
+|           C           | Afloramientos Rocosos, Typic Troporthents, Typic Humitropepts, Typic Dystropepts, Lithic Dystropepts                                                                                                     |
+|           D           | Lithic Troporthents, Lithic Ustorthents, Andic Humitropepts, Ustic Dystropepts, Typic Humitropepts, Typic Dystropepts                                                                                    |
+|           E           | Typic Dystropepts, Typic Ustorthents                                                                                                                                                                     |
+|           F           | Ustoxic Dystropepts, Typic Ustothents, Lithic Dystropepts, Typic Tropofluvents, Typic Dystropepts                                                                                                        |
+|           G           | Typic Ustropepts, Typic Ustorthents, Entic Haplustolls, Fluventic Dystropepts, Typic Dystropepts, Fluventic Humitropepts, Typic Troporthents, Typic Humitropepts, Fluventic Eutropepts                   |
+|           H           | Typic Dystropepts, Typic Humitropepts, Typic Troporthents, Typic Ustropepts, Ustic Dystropepts                                                                                                           |
+|           I           | Typic Dystropepts, Andic Humitropepts, Typic Humitropepts, Typic Eutropepts, Lithic Troporthents                                                                                                         |
+|           J           | Oxic Dystropepts                                                                                                                                                                                         |
+|           M           | Oxic Dystropepts                                                                                                                                                                                         |
+
+</div>
+
+> (*) Sin contenido pedológico especificado.
+> 
+> Basado en el estudio de suelos del Departamento de Santander y Bolivar en Colombia, depende del relieve, la litología y el clima. Es necesario verificar estos valores a partir del estudio de suelos del Departamento del Cesar - Colombia.
 
 
 ### 2. Layer: VocacionUsoColombia100k (Land use)
