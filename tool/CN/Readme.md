@@ -38,9 +38,7 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 
 ### 1. Hydrologic Groups Based in Lithology[^3] 
 
-General classification based in soils lithology.
-
-<div align="center">
+<div align="center">General classification based in soils lithology
 
 | Descripción litológica                                                                                                     |  A   |  B   |  C   |  D   |
 |----------------------------------------------------------------------------------------------------------------------------|:----:|:----:|:----:|:----:|
