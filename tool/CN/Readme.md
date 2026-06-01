@@ -241,13 +241,19 @@ e.g., the code _**PWFc2p**_ means: (P) Piedemonte, (W) Cálido, seco, (F) Ustoxi
 
 <div align="center">Land Cover and Landscape (es)<br><sub>Referencia: estudio de los conflictos de uso del territorio colombiano, escala 1:100.000. Instituto Geográfico Agustín Codazzi - IGAC, 2012.</sub>sub>
 
-| Sample                                                          | Sample                                                          |
-|-----------------------------------------------------------------|-----------------------------------------------------------------|
-| <img alt="R.HydroTools" src="file/graph/CTI.jpg" width="300px"> | <img alt="R.HydroTools" src="file/graph/CPI.jpg" width="300px"> |
-| <img alt="R.HydroTools" src="file/graph/CTS.jpg" width="300px"> | <img alt="R.HydroTools" src="file/graph/CPS.jpg" width="300px"> |
-| <img alt="R.HydroTools" src="file/graph/PIN.jpg" width="300px"> | <img alt="R.HydroTools" src="file/graph/PSI.jpg" width="300px"> |
-
-
+| Sample                                                               | Sample                                                                     |
+|----------------------------------------------------------------------|----------------------------------------------------------------------------|
+| <img alt="R.HydroTools" src="file/graph/CTI.jpg" width="400px">      | <img alt="R.HydroTools" src="file/graph/CPI.jpg" width="400px">            |
+| <img alt="R.HydroTools" src="file/graph/CTS.jpg" width="400px">      | <img alt="R.HydroTools" src="file/graph/CPS.jpg" width="400px">            |
+| <img alt="R.HydroTools" src="file/graph/PIN.jpg" width="400px">      | <img alt="R.HydroTools" src="file/graph/PSI.jpg" width="400px">            |
+| <img alt="R.HydroTools" src="file/graph/PEX.jpg" width="400px">      | <img alt="R.HydroTools" src="file/graph/AGS.jpg" width="400px">            |
+| <img alt="R.HydroTools" src="file/graph/ASP.jpg" width="400px">      | <img alt="R.HydroTools" src="file/graph/Silvopastoril.jpg" width="400px">  |
+| <img alt="R.HydroTools" src="file/graph/FPD.jpg" width="400px">      | <img alt="R.HydroTools" src="file/graph/FPP.jpg" width="400px">            |
+| <img alt="R.HydroTools" src="file/graph/FRP.jpg" width="400px">      |                                                                            |
+| <img alt="R.HydroTools" src="file/graph/CRH-1.jpg" width="400px">    | <img alt="R.HydroTools" src="file/graph/CRH-2.jpg" width="400px">          |
+| <img alt="R.HydroTools" src="file/graph/CRE-1.jpg" width="400px">    | <img alt="R.HydroTools" src="file/graph/CRE-2.jpg" width="400px">          |
+| <img alt="R.HydroTools" src="file/graph/Lomerio.jpg" width="400px">  | <img alt="R.HydroTools" src="file/graph/Montana.jpg" width="400px">        |
+| <img alt="R.HydroTools" src="file/graph/Planicie.jpg" width="400px"> | <img alt="R.HydroTools" src="file/graph/Valle.jpg" width="400px">          |
 
 </div>
 
