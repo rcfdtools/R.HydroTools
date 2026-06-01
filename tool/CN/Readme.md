@@ -115,7 +115,7 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 
 > A UCS represents an area of terrain where a specific grouping of soils with similar physical, chemical, taxonomic, and geomorphological characteristics has been identified.
 
-<div align="center">UCSf Coding description sample<br>Relief (First capital letter)
+<div align="center">UCSf Coding description sample<br><br>Relief (First capital letter)
 
 | Relieve  | Descripción   |
 |:--------:|:--------------|
@@ -182,22 +182,22 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 
 <div align="center">Terrain attributes (First lower case letter)
 
-| Atributo de terreno | Descripción                                                                   |
-|:-------------------:|:------------------------------------------------------------------------------|
-|                     | **Gradiente de pendiente**                                                    |
-|          a          | 0-3%, ligeramente plana                                                       |
-|          b          | 3-7%, ligeramente inclinada o ligeramente ondulada                            |
-|          c          | 7-12%, moderadamente inclinada o moderadamente ondulada                       |
-|          d          | 12-25%, fuertemente inclinada o fuertemente ondulada o moderadamente quebrada |
-|          e          | 25-50%, ligeramente escarpada o ligeramente empinada                          |
-|          f          | 50-75%, moderadamente escarpada o moderadamente empinada                      |
-|          g          | >75%, fuertemente escarpada o fuertemente empinada                            |
-|                     | **Salinidad**                                                                 |
-|          s          | Salino                                                                        |
-|          *          | **Duración inundaciones*                                                      |
-|          x          | 2 - 4 meses/año                                                               |
-|          y          | < 4 meses/año                                                                 |
-|          z          | > 4 meses/año                                                                 |
+| Atributo | Descripción                                                                   |
+|:--------:|:------------------------------------------------------------------------------|
+|          | **Gradiente de pendiente**                                                    |
+|    a     | 0-3%, ligeramente plana                                                       |
+|    b     | 3-7%, ligeramente inclinada o ligeramente ondulada                            |
+|    c     | 7-12%, moderadamente inclinada o moderadamente ondulada                       |
+|    d     | 12-25%, fuertemente inclinada o fuertemente ondulada o moderadamente quebrada |
+|    e     | 25-50%, ligeramente escarpada o ligeramente empinada                          |
+|    f     | 50-75%, moderadamente escarpada o moderadamente empinada                      |
+|    g     | >75%, fuertemente escarpada o fuertemente empinada                            |
+|          | **Salinidad**                                                                 |
+|    s     | Salino                                                                        |
+|          | **Duración inundaciones**                                                     |
+|    x     | 2 - 4 meses/año                                                               |
+|    y     | < 4 meses/año                                                                 |
+|    z     | > 4 meses/año                                                                 |
 
 </div>
 
