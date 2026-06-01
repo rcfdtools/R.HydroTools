@@ -9,10 +9,10 @@ The SCS Curve Number (CN) is an empirical parameter used in hydrology by the [US
 :blue_heart:**Attention**: _The current CN analysis correspond to an Alpha version, and it will be used for academic purposes. For professional use you must validate the CN values assigned by Land Use and the percentages for each Land Soil cartographic unit for your specific project area._
 
 
-## General concepts
+## General Concepts
 
 
-### USDA Hydrologic groups
+### USDA Hydrologic Groups
 
 The USDA's Natural Resources Conservation Service (NRCS) classifies soils into four primary Hydrologic Soil Groups (A, B, C, and D) based on their infiltration rates and runoff potential when thoroughly wet.
 
@@ -34,7 +34,7 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 > If a soil is assigned to a dual hydrologic group (A/D, B/D, or C/D), the first letter is for drained areas and the second is for undrained areas. Only the soils that in their natural condition are in group D are assigned to dual classes.
 
 
-### General classification groups based in Soils Lithology[^3] 
+### General Hydrologic Groups Based in Soils Lithology[^3] 
 
 <div align="center">
 
