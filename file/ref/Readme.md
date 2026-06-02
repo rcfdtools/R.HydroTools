@@ -98,14 +98,14 @@
 
 ## Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM 
 
-| Referencia                        | Alcance                                                                                        |  Versión  |                                  Archivo local                                   |
-|-----------------------------------|------------------------------------------------------------------------------------------------|:---------:|:--------------------------------------------------------------------------------:|
-| [IDEAM](http://www.ideam.gov.co/) | Guía para el monitoreo de vertimientos                                                         |           |              [:bookmark_tabs:](IDEAM.GuiaMonitoreoVertimiento.pdf)               |
-| [IDEAM](http://www.ideam.gov.co/) | Protocolo para el monitoreo y seguimiento del agua                                             |   2007    |       [:bookmark_tabs:](IDEAM.ProtocoloMonitoreoSeguimientoAgua.2007.pdf)        |
-| [IDEAM](http://www.ideam.gov.co/) | Normas, manuales, metodologías y procedimientos asociados a actividades hidrometeorológicas    |           |                                                                                  |
-| [IDEAM](http://www.ideam.gov.co/) | Manual del observador meteorológico                                                            |   1987    |      [:bookmark_tabs:](IDEAM.HIMAT.ManualObservadorMeteorologico.1987.pdf)       |
-| [IDEAM](http://www.ideam.gov.co/) | Manual de operaciones de la red hidrometeorológica                                             |           |                                                                                  |
-| [IDEAM](http://www.ideam.gov.co/) |                                                                                                |   2018    | [:bookmark_tabs:](IDEAM.DocumentoMetodologicoVariableMeteorologica.20180516.pdf) |
+| Referencia                        | Alcance                                                                                     |  Versión  |                                  Archivo local                                   |
+|-----------------------------------|---------------------------------------------------------------------------------------------|:---------:|:--------------------------------------------------------------------------------:|
+| [IDEAM](http://www.ideam.gov.co/) | Guía para el monitoreo de vertimientos                                                      |           |              [:bookmark_tabs:](IDEAM.GuiaMonitoreoVertimiento.pdf)               |
+| [IDEAM](http://www.ideam.gov.co/) | Protocolo para el monitoreo y seguimiento del agua                                          |   2007    |       [:bookmark_tabs:](IDEAM.ProtocoloMonitoreoSeguimientoAgua.2007.pdf)        |
+| [IDEAM](http://www.ideam.gov.co/) | Normas, manuales, metodologías y procedimientos asociados a actividades hidrometeorológicas |           |                                                                                  |
+| [IDEAM](http://www.ideam.gov.co/) | Manual del observador meteorológico                                                         |   1987    |      [:bookmark_tabs:](IDEAM.HIMAT.ManualObservadorMeteorologico.1987.pdf)       |
+| [IDEAM](http://www.ideam.gov.co/) | Manual de operaciones de la red hidrometeorológica                                          |           |                                                                                  |
+| [IDEAM](http://www.ideam.gov.co/) | Metodología de la operación estadística de variables meteorológicas                         |   2018    | [:bookmark_tabs:](IDEAM.DocumentoMetodologicoVariableMeteorologica.20180516.pdf) |
 
 
 ## Instituto Geográfico Agustín Codazzi - IGAC
