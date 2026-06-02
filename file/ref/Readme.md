@@ -47,7 +47,7 @@
 
 ## Enlaces generales
 
-:blue_hearth:Reporta referencias adicionales a través de este [hilo de discusión](https://github.com/rcfdtools/R.HydroTools/discussions/27).
+:blue_heart:Reporta referencias adicionales a través de este [hilo de discusión](https://github.com/rcfdtools/R.HydroTools/discussions/27).
 
 | Referencia APA / Archivo                                                                                                                                                                                                                                                                                                                                                                                                                                             | By                                         |
 |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------|
