@@ -94,8 +94,9 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 
 ### 1. Layer: SueloColombia100k (Land Soil)
 
-<div align="center"><img alt="rcfdtools" src="file/graph/SueloColombia100k_v0_UCS.jpg" width="500px"><br><sub>Figure. Colombia Soils v0.</sub><img alt="rcfdtools" src="file/graph/SueloColombia100k_v1_UCS.jpg" width="500px"><br><sub>Figure. Colombia Soils v1.</sub></div><br>
-
+|                                                            Sample                                                            |                                                            Sample                                                             |
+|:----------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------:|
+|  <img alt="rcfdtools" src="file/graph/SueloColombia100k_v0_UCS.jpg" width="500px"><br><sub>Figure. Colombia Soils v0.</sub>  |  <img alt="rcfdtools" src="file/graph/SueloColombia100k_v1_UCS.jpg" width="500px"><br><sub>Figure. Colombia Soils v1.</sub>   |
 
 * es: Suelos por Departamento 100k, 2000.
 * https://www.colombiaenmapas.gov.co/
