@@ -315,7 +315,11 @@ The Land Use Table contents the USDA CN classification values for each specific 
 
 </div>
 
-<div align="center">Table. CN Values by Land Use.</div>
+<div align="center">
+
+Table. CN Values by Land Use.[^4]
+
+</div>
 
 |  CNCode  | Zone                          | CoverType                                                                                                                       | Treatment                                                                                                                      | HydroCond | HydroDesc                                                                                                                                                                                                                                                                                                                                                                                                    |  CNA  |  CNB  |  CNC  |  CND  |
 |:--------:|-------------------------------|---------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----:|:-----:|:-----:|:-----:|
@@ -455,7 +459,6 @@ Expression: `("CN_LandUse_v0_CNA" * "CN_LandSoil_v0_PctA" / 100) + ("CN_LandUse_
 
 General
 
-* https://www.hec.usace.army.mil/confluence/hmsdocs/hmstrm/cn-tables
 * https://docs.qgis.org/3.44/en/docs/user_manual/processing_algs/qgis/vectoroverlay.html
 * https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Zonificaci-n-Hidrogr-fica-Colombia/5kjg-nuda/about_data
 * https://mountainscholar.org/bitstream/handle/10217/69240/IS_86.pdf?sequence=1&isAllowed=y
@@ -496,3 +499,4 @@ CN Calculation Method
 [^1]: https://en.wikipedia.org/wiki/Runoff_curve_number
 [^2]: https://www.hec.usace.army.mil/confluence/hmsdocs/hmsguides/files/118099517/118099546/1/1665679165857/HydrologicSoilGroup_DominantCondition.pdf
 [^3]: https://www.aguaysig.com/2017/01/metodo-del-numero-de-curva-del-scs.html
+[^4]: https://www.hec.usace.army.mil/confluence/hmsdocs/hmstrm/cn-tables
