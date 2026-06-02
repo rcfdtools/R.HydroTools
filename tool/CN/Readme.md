@@ -291,7 +291,7 @@ The Land Soil Table contents the UCSf codes for each Land Soil area, the related
 
 </div>
 
-<div align="center"><img alt="rcfdtools" src="file/graph/CN_LandSoil_v0.jpg" width="900px"><br><sub>Figure. CN Land Soil Table Sample.</sub></div><br>
+<div align="center"><img alt="rcfdtools" src="file/graph/CN_LandSoil_v0.jpg" width="100px"><br><sub>Figure. CN Land Soil Table Sample.</sub></div><br>
 
 
 ### 4. Table: CN_LandUse
