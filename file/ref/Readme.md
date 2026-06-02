@@ -4,6 +4,10 @@
 
 ## Python y Computer Science
 
+* [Sweigart, Al. Automate the Boring Stuff with Python, 2nd Edition: Practical Programming for Total Beginners 2nd Edition.](https://automatetheboringstuff.com/)
+* [Sweigart, Al. The Big Book of Small Python Projects: 81 Easy Practice Programs.](https://inventwithpython.com/bigbookpython/)
+* [Sweigart, Al. Beyond the Basic Stuff with Python: Best Practices for Writing Clean Code.](http://inventwithpython.com/beyond/)
+* [Sweigart, Al. Cracking Codes with Python: An Introduction to Building and Breaking Ciphers.](https://inventwithpython.com/cracking/)
 * [Python.org](https://www.python.org/)
 * [Pandas.pydata.org](https://pandas.pydata.org/)
 * [NumPy.org](https://pandas.pydata.org/)
@@ -21,10 +25,6 @@
 * [Interpreter (computing)](https://en.wikipedia.org/wiki/Interpreted_language)
 * [Beautiful - pulling data out of HTML and XML files](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 * [5 Data Science Libaries for Python Every Data Scientist Should Use.](https://www.makeuseof.com/data-science-libraries-for-python/)
-* [Sweigart, Al. Automate the Boring Stuff with Python, 2nd Edition: Practical Programming for Total Beginners 2nd Edition.](https://automatetheboringstuff.com/)
-* [Sweigart, Al. The Big Book of Small Python Projects: 81 Easy Practice Programs.](https://inventwithpython.com/bigbookpython/)
-* [Sweigart, Al. Beyond the Basic Stuff with Python: Best Practices for Writing Clean Code.](http://inventwithpython.com/beyond/)
-* [Sweigart, Al. Cracking Codes with Python: An Introduction to Building and Breaking Ciphers.](https://inventwithpython.com/cracking/)
 * [Data Analysis with Python for Excel Users Course.](https://www.freecodecamp.org/news/data-analysis-with-python-for-excel-users-course/) 
 * [Python for beginers](https://www.makeuseof.com/python-for-beginners/)
 * [Python 2.7 tutorial](http://docs.python.org/2.7/tutorial/)
