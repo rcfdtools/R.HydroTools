@@ -1,4 +1,4 @@
-<div align="center"><img alt="rcfdtools" src="../../file/graph/rcfdtools.svg" width="300px"></div>
+<div align="center"><img alt="rcfdtools" src="../../file/graph/R.HydroTools.png" width="300px"></div>
 
 # RESEARCH: _“NRCS or SCS Curve Number (CN) - Colombia v0”_  
 Keywords: `curve-number` `scs` `usda` `nrcs` `land-use` `land-soil` `infiltration` `runoff` `rain` `soils`
