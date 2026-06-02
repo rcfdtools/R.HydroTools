@@ -239,7 +239,6 @@ e.g., the code _**PWFc2p**_ means: (P) Piedemonte, (W) Cálido, seco, (F) Ustoxi
 
 <div align="center"><img alt="rcfdtools" src="file/graph/VocacionUsoColombia100k_v0.jpg" width="500px"><br><sub>Figure. Colombia Land Use.</sub></div><br>
 
-
 * es: Vocación de Uso 100k, Territorio Nacional 2013.
 * https://www.colombiaenmapas.gov.co/
 * https://staigacmpcolv2.z20.web.core.windows.net/?b=igac&u=0&t=43&servicio=7301
@@ -291,6 +290,8 @@ The Land Soil Table contents the UCSf codes for each Land Soil area, the related
 | PctSum                 | Real (1000)  | Sumatoria "PctA" + "PctB" + "PctC" + "PctD" = 100 |
 
 </div>
+
+<div align="center"><img alt="rcfdtools" src="file/graph/CN_LandSoil_v0.jpg" width="500px"><br><sub>Figure. CN Land Soil Table Sample.</sub></div><br>
 
 
 ### 4. Table: CN_LandUse
