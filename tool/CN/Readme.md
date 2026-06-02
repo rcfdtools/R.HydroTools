@@ -94,9 +94,9 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 
 ### 1. Layer: SueloColombia100k (Land Soil)
 
-|                                                            Sample                                                            |                                                            Sample                                                             |
-|:----------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------:|
-|  <img alt="rcfdtools" src="file/graph/SueloColombia100k_v0_UCS.jpg" width="500px"><br><sub>Figure. Colombia Soils v0.</sub>  |  <img alt="rcfdtools" src="file/graph/SueloColombia100k_v1_UCS.jpg" width="500px"><br><sub>Figure. Colombia Soils v1.</sub>   |
+|                                                             Sample                                                             |                                                             Sample                                                             |
+|:------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------:|
+| <img alt="rcfdtools" src="file/graph/SueloColombia100k_v0_UCS.jpg" width="500px"><br><sub>Figure. Colombia Land Soil v0.</sub> | <img alt="rcfdtools" src="file/graph/SueloColombia100k_v1_UCS.jpg" width="500px"><br><sub>Figure. Colombia Land Soil v1.</sub> |
 
 * es: Suelos por Departamento 100k, 2000.
 * https://www.colombiaenmapas.gov.co/
@@ -237,7 +237,7 @@ e.g., the code _**PWFc2p**_ means: (P) Piedemonte, (W) Cálido, seco, (F) Ustoxi
 
 ### 2. Layer: VocacionUsoColombia100k (Land use)
 
-<div align="center"><img alt="rcfdtools" src="file/graph/VocacionUsoColombia100k_v0.jpg" width="500px"><br><sub>Figure. Colombia States.</sub></div><br>
+<div align="center"><img alt="rcfdtools" src="file/graph/VocacionUsoColombia100k_v0.jpg" width="500px"><br><sub>Figure. Colombia Land Use.</sub></div><br>
 
 
 * es: Vocación de Uso 100k, Territorio Nacional 2013.
