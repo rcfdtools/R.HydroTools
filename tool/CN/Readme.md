@@ -94,13 +94,16 @@ Hydrologic soil groups are based on estimates of runoff potential. Soils are ass
 
 ### 1. Layer: SueloColombia100k (Land Soil)
 
+<div align="center"><img alt="rcfdtools" src="file/graph/SueloColombia100k_v0_UCS.jpg" width="500px"><br><sub>Figure. Colombia Soils v0.</sub><img alt="rcfdtools" src="file/graph/SueloColombia100k_v1_UCS.jpg" width="500px"><br><sub>Figure. Colombia Soils v1.</sub></div><br>
+
+
 * es: Suelos por Departamento 100k, 2000.
 * https://www.colombiaenmapas.gov.co/
 * Service 382 to 413 (402 and 409 doesn't exist), 1613 Nariño, Sucre state service not available. 
 * Sucre state old metadata https://metadatos.icde.gov.co/geonetwork/srv/api/records/69cf5eac-a191-4162-8f79-9190b5a7f3c3
 * Sample https://staigacmpcolv2.z20.web.core.windows.net/?b=igac&u=0&t=43&servicio=382
 * CN.gpkg/SueloColombia100k_v0: integrated Colombia version.
-* CN.gpkg/SueloColombia100k_v1: integrated Colombia version from states with overlapping error.
+* CN.gpkg/SueloColombia100k_v1: integrated Colombia version from states with overlapping errors.
 * Required displacement for v0: DX = -370.54982010833919048309, DY = 309.88952068053185939789
 
 <div align="center"> Data dictionary (es)
