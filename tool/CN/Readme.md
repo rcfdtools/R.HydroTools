@@ -237,6 +237,9 @@ e.g., the code _**PWFc2p**_ means: (P) Piedemonte, (W) Cálido, seco, (F) Ustoxi
 
 ### 2. Layer: VocacionUsoColombia100k (Land use)
 
+<div align="center"><img alt="rcfdtools" src="file/graph/VocacionUsoColombia100k_v0.jpg" width="500px"><br><sub>Figure. Colombia States.</sub></div><br>
+
+
 * es: Vocación de Uso 100k, Territorio Nacional 2013.
 * https://www.colombiaenmapas.gov.co/
 * https://staigacmpcolv2.z20.web.core.windows.net/?b=igac&u=0&t=43&servicio=7301
