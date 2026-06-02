@@ -476,13 +476,7 @@ General
 * https://www.hec.usace.army.mil/software/hec-geohms/downloads.aspx
 * [Soil Survey Manual - Soil Science División Staff - Agriculture Handbook No. 18. Pag 580 contents the Hydrologic Soil Group.](https://www.iec.cat/mapasols/DocuInteres/PDF/Llibre50.pdf) 
 * https://www.nrcs.usda.gov/wps/portal/nrcs/detail/soils/scientists/?cid=nrcs142p2_054262
-
-Estudios de Suelos. Tomado del documento Descripción de Suelos en el Departamento del Bolivar, Cesar y Santander - Colombia, disponible en https://ciat.cgiar.org
-
-* ftp://ftp.ciat.cgiar.org/DAPA/users/apantoja/london/Colombia/Suelos/00_shape_suelos/PROYECTO_DNP/MEMORIAS_SUELOS_OFICIALES/SANTANDER/87412%20-%203.pdf
-* ftp://ftp.ciat.cgiar.org/DAPA/users/apantoja/london/Colombia/Suelos/00_shape_suelos/DEPARTAMENTALES_2011_Brayan_Silvia/BOLIVAR/MEMORIA%20TECNICA/Cap%203.pdf
-* ftp://ftp.ciat.cgiar.org/DAPA/users/apantoja/london/Colombia/Suelos/00_shape_suelos/PROYECTO_DNP/MEMORIAS_SUELOS_OFICIALES/CESAR/Estudio%20Cesar(protegido).pdf
-* ftp://ftp.ciat.cgiar.org/DAPA/users/apantoja/london/Colombia/Suelos/00_shape_suelos/PROYECTO_DNP/MEMORIAS_SUELOS_OFICIALES/BOYACA/94864-Suelos%20Tomo%20I.pdf
+* [Estudios de Suelos. Tomado del documento Descripción de Suelos en el Departamento del Bolivar, Cesar y Santander - Colombia, disponible en https://ciat.cgiar.org](file/ref/)
 
 
 <div align="center"><img alt="rcfdtools" src="file/graph/qr-code.png" width="250px"><br><sub>Share this research</sub></div><br>
