@@ -472,6 +472,10 @@ General
 * [CNgrid preparation From Landuse and Soil type ArcGIS files](https://www.youtube.com/watch?v=_ppBl0lTZLc)
 * [Guía metodológica para la elaboración de mapas geomorfológicos a escala 1:100.000](http://www.ideam.gov.co/documents/11769/152722/Guia_Enero_201401+%281%29.pdf/501aa421-a0e4-4a1d-a5c8-d6cb1b0de520)
 * [La clase agrológica en los temas ambientales](https://www.researchgate.net/publication/305487869_LA_CLASE_AGROLOGICA_EN_LOS_TEMAS_AMBIENTALES)
+* https://www.hec.usace.army.mil/software/hec-geohms/documentation/HEC-GeoHMS_Users_Manual_10.1.pdf
+* https://www.hec.usace.army.mil/software/hec-geohms/downloads.aspx
+* [Soil Survey Manual - Soil Science División Staff - Agriculture Handbook No. 18. Pag 580 contents the Hydrologic Soil Group.](https://www.iec.cat/mapasols/DocuInteres/PDF/Llibre50.pdf) 
+* https://www.nrcs.usda.gov/wps/portal/nrcs/detail/soils/scientists/?cid=nrcs142p2_054262
 
 Estudios de Suelos. Tomado del documento Descripción de Suelos en el Departamento del Bolivar, Cesar y Santander - Colombia, disponible en https://ciat.cgiar.org
 
@@ -479,16 +483,6 @@ Estudios de Suelos. Tomado del documento Descripción de Suelos en el Departamen
 * ftp://ftp.ciat.cgiar.org/DAPA/users/apantoja/london/Colombia/Suelos/00_shape_suelos/DEPARTAMENTALES_2011_Brayan_Silvia/BOLIVAR/MEMORIA%20TECNICA/Cap%203.pdf
 * ftp://ftp.ciat.cgiar.org/DAPA/users/apantoja/london/Colombia/Suelos/00_shape_suelos/PROYECTO_DNP/MEMORIAS_SUELOS_OFICIALES/CESAR/Estudio%20Cesar(protegido).pdf
 * ftp://ftp.ciat.cgiar.org/DAPA/users/apantoja/london/Colombia/Suelos/00_shape_suelos/PROYECTO_DNP/MEMORIAS_SUELOS_OFICIALES/BOYACA/94864-Suelos%20Tomo%20I.pdf
-
-Soil Survey Manual - Soil Science División Staff - Agriculture Handbook No. 18. Pag 580 contents ths Hydrologic Soil Group.
-* https://www.iec.cat/mapasols/DocuInteres/PDF/Llibre50.pdf
-* https://www.nrcs.usda.gov/wps/portal/nrcs/detail/soils/scientists/?cid=nrcs142p2_054262
-
-CN Calculation Method
-* http://www.ideam.gov.co/web/atencion-y-participacion-ciudadana/publicaciones-ideam
-* https://www.hec.usace.army.mil/software/hec-geohms/documentation/HEC-GeoHMS_Users_Manual_10.1.pdf
-* http://www.ideam.gov.co/web/ecosistemas/coberturas-nacionales
-* https://www.hec.usace.army.mil/software/hec-geohms/downloads.aspx
 
 
 <div align="center"><img alt="rcfdtools" src="file/graph/qr-code.png" width="250px"><br><sub>Share this research</sub></div><br>
