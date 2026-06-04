@@ -1,3 +1,5 @@
+# https://github.com/rcfdtools/R.HydroTools/blob/main/tool/PMP/Readme.md
+# extreme_tr.py: create the detailed tables extreme_station.csv for almost all the continuous SciPy probability distributions (in funcs.l_pdist_scipy_extreme) and multiple recurrence times or Tr.
 # -*- coding: UTF-8 -*-
 
 # General libraries

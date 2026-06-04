@@ -1,5 +1,7 @@
-# Infinite values will be removed from extreme.csv dataset
 # https://github.com/rcfdtools/R.HydroTools/blob/main/tool/PMP/Readme.md
+# extreme_tr_gis.py: allow researches to download locally the stations.csv, the bestfit.csv and the extreme.csv files, with the post-processing GIS geotable required for the spatial interpolation of the PMax24hr for each return period (Tr), used for extreme rain hydrologic event simulations (e.g., for obtaining extreme peak flow discharges with HEC-HMS).
+# Infinite values will be removed from extreme.csv dataset
+
 
 # Import libraries
 import pandas as pd
@@ -17,11 +19,11 @@ extreme_file = 'extreme.csv'
 stations_file = 'stations.csv'
 files = [bestfit_file,extreme_file,stations_file]
 regular_hydrology_pdf = ['norm', 'lognorm', 'gumbel_l', 'gumbel_r', 'gamma', 'pearson3', 'logpearson3', 'dweibull', 'kappa4'] # Most used PDFs in hydrology (bestfit difference analysis) ●
-print_explicit = True # Print detailed stations records
+print_explicit = False # Print detailed stations records
 
 
 # Download required files
-print('------------------------------\nPmax24hr Post-Processing Tool\n------------------------------\n\n* Research: Study and analysis of the 24 hours Maximum Precipitation (PMax24h) in the network of automatic climatological stations of Colombia - South America and estimation of extreme values for different return periods using various probability distributions.\n')
+print('------------------------------\nPmax24hr Post-Processing Tool\n------------------------------\n\n* Research: Study and analysis of the 24 hours Maximum Precipitation (PMax24h) in the network of automatic climatological stations of Colombia - South America and estimation of extreme values for different return periods using various probability distributions.')
 if get_files:
     print('* Download files: activated')
     for i in files:
@@ -71,6 +73,7 @@ for station, p_dist in zip(df_bestfit.station, df_bestfit.p_dist):
 df_extreme_gis.to_csv(csv_file, index=False)
 del df_extreme_gis
 
+
 # Getting PMax24hr most common PDF per station for multiple Tr`s
 for regular_pdf in regular_hydrology_pdf:
     csv_file = f'{output_path}extreme_{regular_pdf}_gis.csv'
@@ -90,5 +93,3 @@ for regular_pdf in regular_hydrology_pdf:
         del filtered_df_extreme
     df_extreme_gis.to_csv(csv_file, index=False)
     del df_extreme_gis
-#print(df_extreme.head())
-#print(df_extreme_gis)

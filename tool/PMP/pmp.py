@@ -1,3 +1,6 @@
+# https://github.com/rcfdtools/R.HydroTools/blob/main/tool/PMP/Readme.md
+# pmp.py: detailed analysis for station, creates station.md reports and bestfit_station.csv files. (this script also evaluate the best fit recurrence times tables but only for the activated SciPy distributions in funcs.l_pdist_scipy).
+
 # -*- coding: UTF-8 -*-
 # Tested with: Python 3.10, SciPy 1.11.3, NumPy 1.26.1, Pandas 2.1.3, xlrd
 from numpy.ma.core import minimum

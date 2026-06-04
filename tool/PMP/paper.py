@@ -1,3 +1,6 @@
+# https://github.com/rcfdtools/R.HydroTools/blob/main/tool/PMP/Readme.md
+# paper.py: create the integrated tables bestfit.csv, stations.csv, extreme.csv and extremepdiff.csv files and generate the paper analysis.
+
 import pandas as pd
 pd.set_option('display.max_colwidth', None)
 import glob

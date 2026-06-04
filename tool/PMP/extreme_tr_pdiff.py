@@ -1,3 +1,6 @@
+# https://github.com/rcfdtools/R.HydroTools/blob/main/tool/PMP/Readme.md
+# extreme_tr_pdiff.py: process the extremediff_station.csv obtaining the extreme differences between bestfit PDF and the regular PDFs used in Hydrology (norm, lognorm, gumbel_l, gumbel_r, gamma, pearson3, logpearson3, dweibull, kappa4).
+
 import pandas as pd
 pd.set_option('display.max_colwidth', None)
 import glob
