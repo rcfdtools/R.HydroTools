@@ -22,8 +22,9 @@ Maximum Precipitation in 24 hours (PMax24h) is the greatest amount of rainfall f
 
 1. [**pmp.py**](pmp.py): detailed analysis for station, creates _[station.md](dataset/pmax24h_out)_ and _[bestfit_station.csv](dataset/pmax24h_out/table)_ files. (this script also evaluate the best fit recurrence times tables but only for the activated SciPy distributions in funcs.l_pdist_scipy).
 2. [**extreme_tr.py**](extreme_tr.py): create the detailed tables _[extreme_station.csv](dataset/pmax24h_out/table)_ for almost all the continuous SciPy probability distributions (in funcs.l_pdist_scipy_extreme) and multiple recurrence times or Tr.
-2. [**extreme_tr_pdiff.py**](extreme_tr_pdiff.py): process the _[extremediff_station.csv](dataset/pmax24h_out/table)_ obtaining the extreme differences between bestfit PDF and the regular PDFs used in Hydrology.
+2. [**extreme_tr_pdiff.py**](extreme_tr_pdiff.py): process the _[extremediff_station.csv](dataset/pmax24h_out/table)_ obtaining the extreme differences between bestfit PDF and the regular PDFs used in Hydrology (norm, lognorm, gumbel_l, gumbel_r, gamma, pearson3, logpearson3, dweibull, kappa4).
 3. [**paper.py**](paper.py): create the integrated tables _[bestfit.csv](dataset/pmax24h_out/paper/bestfit.csv)_, _[stations.csv](dataset/pmax24h_out/paper/stations.csv)_, _[extreme.csv](dataset/pmax24h_out/paper/extreme.csv)_ and _[extremepdiff.csv](dataset/pmax24h_out/paper/extremepdiff.csv)_ files and generate the paper analysis.
+4. [extreme_tr_gis.py](extreme_tr_gis.py): allow researches to download locally the [stations.csv](dataset/pmax24h_out/paper/stations.csv), the [bestfit.csv](dataset/pmax24h_out/paper/bestfit.csv) and the [extreme.csv](dataset/pmax24h_out/paper/extreme.csv) files, with the post-processing GIS geotable required for the spatial interpolation of the PMax24hr for each return period (Tr), required for the extreme hydrologic event simulation. 
 
 
 ## B. Integrated stations catalog requirements

@@ -1,5 +1,5 @@
-#  Infinite values will be removed from extreme.csv dataset
-
+# Infinite values will be removed from extreme.csv dataset
+# https://github.com/rcfdtools/R.HydroTools/blob/main/tool/PMP/Readme.md
 
 # Import libraries
 import pandas as pd
@@ -21,7 +21,7 @@ print_explicit = True # Print detailed stations records
 
 
 # Download required files
-print('------------------------------\nPmax24hr Post-Processing Tool\n------------------------------\n\n* Research: Study and analysis of the 24 hours Maximum Precipitation (PMax24h) in the network of automatic climatological stations of Colombia - South America and estimation of extreme values for different return periods using various probability distributions.\n* https://github.com/rcfdtools/R.HydroTools/blob/main/tool/PMP/Readme.md')
+print('------------------------------\nPmax24hr Post-Processing Tool\n------------------------------\n\n* Research: Study and analysis of the 24 hours Maximum Precipitation (PMax24h) in the network of automatic climatological stations of Colombia - South America and estimation of extreme values for different return periods using various probability distributions.\n')
 if get_files:
     print('* Download files: activated')
     for i in files:
