@@ -5,7 +5,7 @@ Keywords: `curve-number` `scs` `usda` `nrcs` `land-use` `land-soil` `infiltratio
 
 <div align="center">
 
-:world_map:Release: [Grid & Geopackage](https://github.com/rcfdtools/rcfdtools/releases/tag/CN)
+:world_map:Release: [Grid & Geopackage](https://github.com/rcfdtools/R.HydroTools/releases/tag/CN)
 
 </div>
 
@@ -481,10 +481,10 @@ General
 
 <div align="center"><img alt="rcfdtools" src="file/graph/qr-code.png" width="250px"><br><sub>Share this research</sub></div><br>
 
-| [:house: Start](../../README.md)  | [:beginner: Help / Collaborate](https://github.com/rcfdtools/rcfdtools/discussions) |
+| [:house: Start](../../README.md)  | [:beginner: Help / Collaborate](https://github.com/rcfdtools/R.HydroTools/discussions) |
 |-----------------------------------|----------------------------------------------------------------------------------------|
 
-<sub>**APPS & TOOLS & CONTENT DISCLAIMER**: • NO WARRANTY - This content and software is provided by <a href="https://github.com/rcfdtools" target="_blank">github.com/rcfdtools</a> "as is", without any express or implied warranty, including warranties of merchantability, fitness for a particular purpose, or non-infringement. There is no guarantee that the software will be error-free or operate without interruption. • LIMITATION OF LIABILITY - Neither the authors nor copyright holders will be liable for claims or damages arising from the software or its use. You are responsible for determining if the software is appropriate for your use and assume all associated risks, including errors, legal compliance, and data loss. • NO PROFESSIONAL ADVICE - The software provides general information and does not offer professional advice. It should not replace consultation with professional advisors. [Clauses and global license for rcfdtools use.](https://github.com/rcfdtools/rcfdtools/blob/main/LICENSE.md)</sub>
+<sub>**APPS & TOOLS & CONTENT DISCLAIMER**: • NO WARRANTY - This content and software is provided by <a href="https://github.com/rcfdtools" target="_blank">github.com/rcfdtools</a> "as is", without any express or implied warranty, including warranties of merchantability, fitness for a particular purpose, or non-infringement. There is no guarantee that the software will be error-free or operate without interruption. • LIMITATION OF LIABILITY - Neither the authors nor copyright holders will be liable for claims or damages arising from the software or its use. You are responsible for determining if the software is appropriate for your use and assume all associated risks, including errors, legal compliance, and data loss. • NO PROFESSIONAL ADVICE - The software provides general information and does not offer professional advice. It should not replace consultation with professional advisors. [Clauses and global license for rcfdtools use.](https://github.com/R.HydroTools/rcfdtools/blob/main/LICENSE.md)</sub>
 
 [^1]: https://en.wikipedia.org/wiki/Runoff_curve_number
 [^2]: https://www.hec.usace.army.mil/confluence/hmsdocs/hmsguides/files/118099517/118099546/1/1665679165857/HydrologicSoilGroup_DominantCondition.pdf
