@@ -256,7 +256,7 @@ e.g., the code _**PWFc2p**_ means: (P) Piedemonte, (W) Cálido, seco, (F) Ustoxi
 
 </div>
 
-<div align="center">Land Cover and Landscape (es)<br><sub>Referencia: estudio de los conflictos de uso del territorio colombiano,<br>escala 1:100.000. Instituto Geográfico Agustín Codazzi - IGAC, 2012.</sub>
+<div align="center">Land Cover and Landscape (es)<br><sub>Referencia: estudio de los conflictos de uso del territorio colombiano, escala 1:100.000. Instituto Geográfico Agustín Codazzi - IGAC, 2012.</sub>
 
 | Sample                                                               | Sample                                                                     |
 |----------------------------------------------------------------------|----------------------------------------------------------------------------|
