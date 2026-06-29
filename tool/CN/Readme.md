@@ -421,7 +421,7 @@ Table. CN Values by Land Use.[^4]
 
 4. Through the _Field Calculator_, calculate the pondered `CNII` value in a Decimal number (real) field.
 
-Expression: `("CN_LandUse_v0_CNA" * "CN_LandSoil_v0_PctA" / 100) + ("CN_LandUse_v0_CNB" * "CN_LandSoil_v0_PctB" / 100)  + ("CN_LandUse_v0_CNC" * "CN_LandSoil_v0_PctC" / 100)  + ("CN_LandUse_v0_CND" * "CN_LandSoil_v0_PctD" / 100)`
+Expression: `(("CN_LandUse_v0_CNA" * "CN_LandSoil_v0_PctA") + ("CN_LandUse_v0_CNB" * "CN_LandSoil_v0_PctB")  + ("CN_LandUse_v0_CNC" * "CN_LandSoil_v0_PctC")  + ("CN_LandUse_v0_CND" * "CN_LandSoil_v0_PctD")) / 100`
 
 5. With _Processing Toolbox / GDAL / Vector Conversion / Rasterize (vector to raster)_ convert the _VocacionUsoSueloColombia100kIntersect_v0_ to a 90 meters raster image and save in the folder _/grid_, name as _CNII_Colombia_90m.tif_, set null cells as 9999.
 
