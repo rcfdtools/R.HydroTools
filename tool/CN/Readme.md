@@ -130,7 +130,7 @@ Table. General CN classification based in soils lithology[^3]
 
 > A UCS represents an area of terrain where a specific grouping of soils with similar physical, chemical, taxonomic, and geomorphological characteristics has been identified.
 
-<div align="center">UCSf Coding Description Sample<br><br>Relief (First capital letter)
+<div align="center">UCSf Coding Description (**Sample**)<br><br>Relief (First capital letter)
 
 | Relieve  | Descripción   |
 |:--------:|:--------------|
@@ -145,7 +145,7 @@ Table. General CN classification based in soils lithology[^3]
 
 </div>
 
-<div align="center">Climate Sample (Second capital letter)
+<div align="center">Climate (Second capital letter)
 
 |  Clima  | Descripción                              |
 |:-------:|:-----------------------------------------|
@@ -170,7 +170,7 @@ Table. General CN classification based in soils lithology[^3]
 
 </div>
 
-<div align="center">Pedological content Sample (Third capital letter)
+<div align="center">Pedological content (Third capital letter)
 
 | Contenido pedológico  | Descripción                                                                                                                                                                                              |
 |:---------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -195,7 +195,7 @@ Table. General CN classification based in soils lithology[^3]
 > 
 > Basado en el estudio de suelos del Departamento de Santander y Bolivar en Colombia, depende del relieve, la litología y el clima. Es necesario verificar estos valores a partir del estudio de suelos del Departamento del Cesar - Colombia.
 
-<div align="center">Terrain attributes Sample (First lower case letter)
+<div align="center">Terrain attributes (First lower case letter)
 
 | Atributo<br/>de terreno | Descripción                                                                   |
 |:-----------------------:|:------------------------------------------------------------------------------|
@@ -216,7 +216,7 @@ Table. General CN classification based in soils lithology[^3]
 
 </div>
 
-<div align="center">Erosion grade Sample (Arabic number)
+<div align="center">Erosion grade (Arabic number)
 
 | Grado de erosión  | Descripción |
 |:-----------------:|:------------|
@@ -226,7 +226,7 @@ Table. General CN classification based in soils lithology[^3]
 
 </div>
 
-<div align="center">Surface stoniness Sample (Second lower case letter)
+<div align="center">Surface stoniness (Second lower case letter)
 
 | Pedegosidad superficial  | Descripción |
 |:------------------------:|:------------|
