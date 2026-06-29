@@ -130,7 +130,7 @@ Table. General CN classification based in soils lithology[^3]
 
 > A UCS represents an area of terrain where a specific grouping of soils with similar physical, chemical, taxonomic, and geomorphological characteristics has been identified.
 
-<div align="center">UCSf Coding Description (**Sample**)<br><br>Relief (First capital letter)
+<div align="center">UCSf Coding Description (<b>Sample</b>)<br><br>Relief (First capital letter)
 
 | Relieve  | Descripción   |
 |:--------:|:--------------|
