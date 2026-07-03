@@ -258,21 +258,25 @@ e.g., the code _**PWFc2p**_ means: (P) Piedemonte, (W) Cálido, seco, (F) Ustoxi
 
 <div align="center">Land Cover and Landscape (es)<br><sub>Referencia: estudio de los conflictos de uso del territorio colombiano, escala 1:100.000. Instituto Geográfico Agustín Codazzi - IGAC, 2012.</sub>
 
-| Sample                                                                                                         | Sample                                                                                                                                               |
-|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <img alt="rcfdtools" src="file/graph/CTI_ai.png" width="400px"><br/>CTI Cultivos Transitorios Intensivos       | <img alt="rcfdtools" src="file/graph/CPI_ai.png" width="400px"><br/>CPI Cultivos Permanentes Intensivos                                              |
-| <img alt="rcfdtools" src="file/graph/CTS_ai.png" width="400px"><br/>CTS Cultivos Transitorios Semi-intensivos  | <img alt="rcfdtools" src="file/graph/CPS_ai.png" width="400px"><br/>CPI Cultivos Permanentes Semi-intensivos                                         |
-| <img alt="rcfdtools" src="file/graph/PIN_ai.png" width="400px"><br/>PIN Pastoreo Intensivo                     | <img alt="rcfdtools" src="file/graph/PSI_ai.png" width="400px"><br/>PIN Pastoreo Semi-intensivo                                                      |
-| <img alt="rcfdtools" src="file/graph/PEX_ai.png" width="400px"><br/>PEX Pastoreo Extensivo                     | <img alt="rcfdtools" src="file/graph/AGS_ai.png" width="400px"><br/>AGS Agrosilvícola                                                                |
-| <img alt="rcfdtools" src="file/graph/ASP_ai.png" width="400px"><br/>ASP Agrosilvopastoril                      | <img alt="rcfdtools" src="file/graph/Silvopastoril_ai.png" width="400px"><br/>ASP Silvopastoril                                                      |
-| <img alt="rcfdtools" src="file/graph/FPD_ai.png" width="400px"><br/>FPD Forestal de Producción                 | <img alt="rcfdtools" src="file/graph/FPP_ai.png" width="400px"><br/>FPP Forestal de Protección - Producción                                          |
-| <img alt="rcfdtools" src="file/graph/FPR_ai.png" width="400px"><br/>FPR Forestal de Protección                 |                                                                                                                                                      |
+| Sample                                                                                                         | Sample                                                                                                                                                    |
+|----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <img alt="rcfdtools" src="file/graph/CTI_ai.png" width="400px"><br/>CTI Cultivos Transitorios Intensivos       | <img alt="rcfdtools" src="file/graph/CPI_ai.png" width="400px"><br/>CPI Cultivos Permanentes Intensivos                                                   |
+| <img alt="rcfdtools" src="file/graph/CTS_ai.png" width="400px"><br/>CTS Cultivos Transitorios Semi-intensivos  | <img alt="rcfdtools" src="file/graph/CPS_ai.png" width="400px"><br/>CPI Cultivos Permanentes Semi-intensivos                                              |
+| <img alt="rcfdtools" src="file/graph/PIN_ai.png" width="400px"><br/>PIN Pastoreo Intensivo                     | <img alt="rcfdtools" src="file/graph/PSI_ai.png" width="400px"><br/>PIN Pastoreo Semi-intensivo                                                           |
+| <img alt="rcfdtools" src="file/graph/PEX_ai.png" width="400px"><br/>PEX Pastoreo Extensivo                     | <img alt="rcfdtools" src="file/graph/AGS_ai.png" width="400px"><br/>AGS Agrosilvícola                                                                     |
+| <img alt="rcfdtools" src="file/graph/ASP_ai.png" width="400px"><br/>ASP Agrosilvopastoril                      | <img alt="rcfdtools" src="file/graph/Silvopastoril_ai.png" width="400px"><br/>ASP Silvopastoril                                                           |
+| <img alt="rcfdtools" src="file/graph/FPD_ai.png" width="400px"><br/>FPD Forestal de Producción                 | <img alt="rcfdtools" src="file/graph/FPP_ai.png" width="400px"><br/>FPP Forestal de Protección - Producción                                               |
+| <img alt="rcfdtools" src="file/graph/FPR_ai.png" width="400px"><br/>FPR Forestal de Protección                 |                                                                                                                                                           |
 | <img alt="rcfdtools" src="file/graph/CRH-1_ia.png" width="400px"><br/>CRH-1 Conservación de Recursos Hídricos  | <img alt="rcfdtools" src="file/graph/CRH-2_ai.png" width="400px"><br/>CRH-2 Conservación de Recursos Hídrio-biológicos<br/>(páramos - nieves permanentes) |
-| <img alt="rcfdtools" src="file/graph/CRE-1_ia.png" width="400px"><br/>CRE-1 Conservación de Suelos Erosionados | <img alt="rcfdtools" src="file/graph/CRE-2_ai.png" width="400px"><br/>CRE-2 Conservación de Salinos Sódicos                                          |
-| <img alt="rcfdtools" src="file/graph/Lomerio.jpg" width="400px">                                               | <img alt="rcfdtools" src="file/graph/Montana.jpg" width="400px">                                                                                     |
-| <img alt="rcfdtools" src="file/graph/Planicie.jpg" width="400px">                                              | <img alt="rcfdtools" src="file/graph/Valle.jpg" width="400px">                                                                                       |
+| <img alt="rcfdtools" src="file/graph/CRE-1_ia.png" width="400px"><br/>CRE-1 Conservación de Suelos Erosionados | <img alt="rcfdtools" src="file/graph/CRE-2_ai.png" width="400px"><br/>CRE-2 Conservación de Salinos Sódicos                                               |
+| <img alt="rcfdtools" src="file/graph/Lomerio_ai.png" width="400px"><br/>Lomerío                                | <img alt="rcfdtools" src="file/graph/Montana_ai.png" width="400px"><br/>Montaña                                                                           |
+| <img alt="rcfdtools" src="file/graph/Planicie_ai.jpg" width="400px"><br/>Planicie                              | <img alt="rcfdtools" src="file/graph/Valle_ai.png" width="400px"><br/>Valle                                                                               |
 
 </div>
+
+> Planicie (o llanura): Es amplia, abierta y no está encajonada entre montañas. Suelen formarse por sedimentación y son ideales para la agricultura y la ganadería.
+> 
+> Valle: Tiene forma de hondonada o "V" (o "U" si fue esculpido por glaciares) y sus límites están marcados por las laderas de las montañas vecinas.
 
 
 ### 3. Table: CN_LandSoil
