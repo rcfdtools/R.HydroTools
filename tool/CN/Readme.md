@@ -285,15 +285,15 @@ The Land Soil Table contents the UCSf codes for each Land Soil area, the related
 
 <div align="center"> Data dictionary (es)
 
-| Field                  |     Type     | Description                                       |
-|:-----------------------|:------------:|:--------------------------------------------------|
-| UCSf                   |  Text (255)  | Código de sub-unidad cartográfica del suelo       |
-| LitologiaSedimento     |  Text (255)  | Litología del sedimento                           |
-| PctA                   |     Real     | Porcentaje en Grupo Hidrológico A                 |
-| PctA                   |  Real (255)  | Porcentaje en Grupo Hidrológico B                 |
-| PctA                   |  Real (255)  | Porcentaje en Grupo Hidrológico C                 |
-| PctA                   |  Real (255)  | Porcentaje en Grupo Hidrológico D                 |
-| PctSum                 | Real (1000)  | Sumatoria "PctA" + "PctB" + "PctC" + "PctD" = 100 |
+| Field                  |     Type      | Description                                       |
+|:-----------------------|:-------------:|:--------------------------------------------------|
+| UCSf                   |  Text (255)   | Código de sub-unidad cartográfica del suelo       |
+| LitologiaSedimento     |  Text (255)   | Litología del sedimento                           |
+| PctA                   |     Real      | Porcentaje en Grupo Hidrológico A                 |
+| PctA                   |     Real      | Porcentaje en Grupo Hidrológico B                 |
+| PctA                   |     Real      | Porcentaje en Grupo Hidrológico C                 |
+| PctA                   |     Real      | Porcentaje en Grupo Hidrológico D                 |
+| PctSum                 |     Real      | Sumatoria "PctA" + "PctB" + "PctC" + "PctD" = 100 |
 
 </div>
 
@@ -306,18 +306,18 @@ The Land Use Table contents the USDA CN classification values for each specific 
 
 <div align="center"> Data dictionary (es)
 
-| Field       |     Type     | Description                            |
-|:------------|:------------:|:---------------------------------------|
-| CNCode      |  Integer64   | Código rcfdtools para cada tipo de uso |
-| Zone        |  Text (255)  | Zona                                   |
-| CoverType   |  Text (255)  | Tipo de cobertura                      |
-| Treatment   |  Text (255)  | Tratamiento superficial                |
-| HydroCond   |  Text (255)  | Condición hidrológica                  |
-| HydroDesc   |  Text (255)  | Descripción                            |
-| CNA         |     Real     | Número de curva en Grupo Hidrológico A |
-| CNA         |  Real (255)  | Número de curva en Grupo Hidrológico B |
-| CNA         |  Real (255)  | Número de curva en Grupo Hidrológico C |
-| CNA         |  Real (255)  | Número de curva en Grupo Hidrológico D |
+| Field       |     Type      | Description                            |
+|:------------|:-------------:|:---------------------------------------|
+| CNCode      |   Integer64   | Código rcfdtools para cada tipo de uso |
+| Zone        |  Text (255)   | Zona                                   |
+| CoverType   |  Text (255)   | Tipo de cobertura                      |
+| Treatment   |  Text (255)   | Tratamiento superficial                |
+| HydroCond   |  Text (255)   | Condición hidrológica                  |
+| HydroDesc   |  Text (255)   | Descripción                            |
+| CNA         |     Real      | Número de curva en Grupo Hidrológico A |
+| CNA         |     Real      | Número de curva en Grupo Hidrológico B |
+| CNA         |     Real      | Número de curva en Grupo Hidrológico C |
+| CNA         |     Real      | Número de curva en Grupo Hidrológico D |
 
 </div>
 
