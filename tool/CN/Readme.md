@@ -274,9 +274,9 @@ e.g., the code _**PWFc2p**_ means: (P) Piedemonte, (W) Cálido, seco, (F) Ustoxi
 
 </div>
 
-> Planicie (o llanura): Es amplia, abierta y no está encajonada entre montañas. Suelen formarse por sedimentación y son ideales para la agricultura y la ganadería.
+> **Planicie (o llanura)**: es amplia, abierta y no está encajonada entre montañas. Suelen formarse por sedimentación y son ideales para la agricultura y la ganadería.
 > 
-> Valle: Tiene forma de hondonada o "V" (o "U" si fue esculpido por glaciares) y sus límites están marcados por las laderas de las montañas vecinas.
+> **Valle**: tiene forma de hondonada o "V" (o "U" si fue esculpido por glaciares) y sus límites están marcados por las laderas de las montañas vecinas.
 
 
 ### 3. Table: CN_LandSoil
