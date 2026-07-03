@@ -258,19 +258,19 @@ e.g., the code _**PWFc2p**_ means: (P) Piedemonte, (W) Cálido, seco, (F) Ustoxi
 
 <div align="center">Land Cover and Landscape (es)<br><sub>Referencia: estudio de los conflictos de uso del territorio colombiano, escala 1:100.000. Instituto Geográfico Agustín Codazzi - IGAC, 2012.</sub>
 
-| Sample                                                                                                     | Sample                                                                                                 |
-|------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| <img alt="rcfdtools" src="file/graph/CTI_ai.png" width="400px"><br/>CTI - Cultivos Transitorios Intensivos | <img alt="rcfdtools" src="file/graph/CPI.jpg" width="400px"><br/>CPI - Cultivos Permanentes Intensivos |
-| <img alt="rcfdtools" src="file/graph/CTS.jpg" width="400px">                                               | <img alt="rcfdtools" src="file/graph/CPS.jpg" width="400px">                                           |
-| <img alt="rcfdtools" src="file/graph/PIN.jpg" width="400px">                                               | <img alt="rcfdtools" src="file/graph/PSI.jpg" width="400px">                                           |
-| <img alt="rcfdtools" src="file/graph/PEX.jpg" width="400px">                                               | <img alt="rcfdtools" src="file/graph/AGS.jpg" width="400px">                                           |
-| <img alt="rcfdtools" src="file/graph/ASP.jpg" width="400px">                                               | <img alt="rcfdtools" src="file/graph/Silvopastoril.jpg" width="400px">                                 |
-| <img alt="rcfdtools" src="file/graph/FPD.jpg" width="400px">                                               | <img alt="rcfdtools" src="file/graph/FPP.jpg" width="400px">                                           |
-| <img alt="rcfdtools" src="file/graph/FRP.jpg" width="400px">                                               |                                                                                                        |
-| <img alt="rcfdtools" src="file/graph/CRH-1.jpg" width="400px">                                             | <img alt="rcfdtools" src="file/graph/CRH-2.jpg" width="400px">                                         |
-| <img alt="rcfdtools" src="file/graph/CRE-1.jpg" width="400px">                                             | <img alt="rcfdtools" src="file/graph/CRE-2.jpg" width="400px">                                         |
-| <img alt="rcfdtools" src="file/graph/Lomerio.jpg" width="400px">                                           | <img alt="rcfdtools" src="file/graph/Montana.jpg" width="400px">                                       |
-| <img alt="rcfdtools" src="file/graph/Planicie.jpg" width="400px">                                          | <img alt="rcfdtools" src="file/graph/Valle.jpg" width="400px">                                         |
+| Sample                                                                                                     | Sample                                                                                                    |
+|------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| <img alt="rcfdtools" src="file/graph/CTI_ai.png" width="400px"><br/>CTI - Cultivos Transitorios Intensivos | <img alt="rcfdtools" src="file/graph/CPI_ai.png" width="400px"><br/>CPI - Cultivos Permanentes Intensivos |
+| <img alt="rcfdtools" src="file/graph/CTS.jpg" width="400px">                                               | <img alt="rcfdtools" src="file/graph/CPS.jpg" width="400px">                                              |
+| <img alt="rcfdtools" src="file/graph/PIN.jpg" width="400px">                                               | <img alt="rcfdtools" src="file/graph/PSI.jpg" width="400px">                                              |
+| <img alt="rcfdtools" src="file/graph/PEX.jpg" width="400px">                                               | <img alt="rcfdtools" src="file/graph/AGS.jpg" width="400px">                                              |
+| <img alt="rcfdtools" src="file/graph/ASP.jpg" width="400px">                                               | <img alt="rcfdtools" src="file/graph/Silvopastoril.jpg" width="400px">                                    |
+| <img alt="rcfdtools" src="file/graph/FPD.jpg" width="400px">                                               | <img alt="rcfdtools" src="file/graph/FPP.jpg" width="400px">                                              |
+| <img alt="rcfdtools" src="file/graph/FRP.jpg" width="400px">                                               |                                                                                                           |
+| <img alt="rcfdtools" src="file/graph/CRH-1.jpg" width="400px">                                             | <img alt="rcfdtools" src="file/graph/CRH-2.jpg" width="400px">                                            |
+| <img alt="rcfdtools" src="file/graph/CRE-1.jpg" width="400px">                                             | <img alt="rcfdtools" src="file/graph/CRE-2.jpg" width="400px">                                            |
+| <img alt="rcfdtools" src="file/graph/Lomerio.jpg" width="400px">                                           | <img alt="rcfdtools" src="file/graph/Montana.jpg" width="400px">                                          |
+| <img alt="rcfdtools" src="file/graph/Planicie.jpg" width="400px">                                          | <img alt="rcfdtools" src="file/graph/Valle.jpg" width="400px">                                            |
 
 </div>
 
