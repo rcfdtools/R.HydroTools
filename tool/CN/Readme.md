@@ -270,7 +270,7 @@ e.g., the code _**PWFc2p**_ means: (P) Piedemonte, (W) Cálido, seco, (F) Ustoxi
 | <img alt="rcfdtools" src="file/graph/CRH-1_ia.png" width="400px"><br/>CRH-1 Conservación de Recursos Hídricos  | <img alt="rcfdtools" src="file/graph/CRH-2_ai.png" width="400px"><br/>CRH-2 Conservación de Recursos Hídrio-biológicos<br/>(páramos - nieves permanentes) |
 | <img alt="rcfdtools" src="file/graph/CRE-1_ia.png" width="400px"><br/>CRE-1 Conservación de Suelos Erosionados | <img alt="rcfdtools" src="file/graph/CRE-2_ai.png" width="400px"><br/>CRE-2 Conservación de Salinos Sódicos                                               |
 | <img alt="rcfdtools" src="file/graph/Lomerio_ai.png" width="400px"><br/>Lomerío                                | <img alt="rcfdtools" src="file/graph/Montana_ai.png" width="400px"><br/>Montaña                                                                           |
-| <img alt="rcfdtools" src="file/graph/Planicie_ai.jpg" width="400px"><br/>Planicie                              | <img alt="rcfdtools" src="file/graph/Valle_ai.png" width="400px"><br/>Valle                                                                               |
+| <img alt="rcfdtools" src="file/graph/Planicie_ai.png" width="400px"><br/>Planicie                              | <img alt="rcfdtools" src="file/graph/Valle_ai.png" width="400px"><br/>Valle                                                                               |
 
 </div>
 
