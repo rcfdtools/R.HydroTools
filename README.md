@@ -132,8 +132,8 @@ En el desarrollo de proyectos con componente geográfico, es necesario conocer l
 _¡Encontraste útil este proyecto!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
 
- [:infinity: Otras herramientas y cursos](https://github.com/rcfdtools) | [:beginner: Ayuda / Colabora](CONTRIBUTING.md) | [:notebook: Referencias](file/ref/Readme.md) | [:label: Abreviaturas y definiciones](file/ref/Definitions.md) |
-|------------------------------------------------------------------------|------------------------------------------------|----------------------------------------------|-------------------------------------------------------------|
+ [:infinity: Otras herramientas y cursos](https://github.com/rcfdtools) | [:beginner: Ayuda / Colabora](CONTRIBUTING.md) | [:notebook: Referencias](file/ref/Readme.md) | [:label: Dictionary](https://github.com/rcfdtools/rcfdtools/blob/main/file/ref/Dictionary.md) |
+|------------------------------------------------------------------------|------------------------------------------------|----------------------------------------------|-----------------------------------------------|
 
 ##
 
