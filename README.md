@@ -1,7 +1,7 @@
 <div align="center"><a href="https://github.com/rcfdtools" target="_blank"><img src="https://github.com/rcfdtools/rcfdtools/blob/main/file/graph/rcfdtools_banner.png" alt="rcfdtools" width="100%" border="0" /></a></div>
 <div align="center"><sub><i>TOOL: Computational engineering tools for GIS, hydrology and  hydraulic analysis - HydroTools</i></sub></div>
 
-# 🛠️TOOL: _“Herramientas de ingeniería computacional para SIG, hidrología y análisis hidráulico - HydroTools”_
+# TOOL: _“Herramientas de ingeniería computacional para SIG, hidrología y análisis hidráulico - HydroTools”_
 
 _R.HydroTools_ es un proyecto de desarrollo colaborativo para crear y compartir herramientas computacionales relacionadas con modelación hidrológica, modelación hidráulica, análisis estadístico, analítica de datos espaciales y sistemas de información geográfica.
 
@@ -132,11 +132,10 @@ En el desarrollo de proyectos con componente geográfico, es necesario conocer l
 _¡Encontraste útil este proyecto!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
 
- [:infinity: Otras herramientas y cursos](https://github.com/rcfdtools) | [:beginner: Ayuda / Colabora](CONTRIBUTING.md) | [:notebook: Referencias](file/ref/Readme.md) | [:label: Dictionary](https://github.com/rcfdtools/rcfdtools/blob/main/file/ref/Dictionary.md) |
-|------------------------------------------------------------------------|------------------------------------------------|----------------------------------------------|-----------------------------------------------|
+ [:infinity: Otras herramientas y cursos](https://github.com/rcfdtools) | [:beginner: Ayuda / Colabora](CONTRIBUTING.md) | [:notebook: Referencias](file/ref/Readme.md) | [:label: Dictionary](https://github.com/rcfdtools/rcfdtools/blob/main/file/ref/Dictionary.md) | <div align="center"><img alt="rcfdtools" src="file/graph/R.HydroTools.svg" height="32px"></div> | 
+|------------------------------------------------------------------------|------------------------------------------------|----------------------------------------------|-----------------------------------------------|-------------------------------------------------------------------------------------------------|
 
 ##
 
 <sub>**APPS & TOOLS & CONTENT DISCLAIMER**: • NO WARRANTY - This content and software is provided by <a href="https://github.com/rcfdtools" target="_blank">github.com/rcfdtools</a> "as is", without any express or implied warranty, including warranties of merchantability, fitness for a particular purpose, or non-infringement. There is no guarantee that the software will be error-free or operate without interruption. • LIMITATION OF LIABILITY - Neither the authors nor copyright holders will be liable for claims or damages arising from the software or its use. You are responsible for determining if the software is appropriate for your use and assume all associated risks, including errors, legal compliance, and data loss. • NO PROFESSIONAL ADVICE - The software provides general information and does not offer professional advice. It should not replace consultation with professional advisors. [Clauses and global license for rcfdtools use.](https://github.com/rcfdtools/rcfdtools/blob/main/LICENSE.md)</sub>
 
-<div align="center"><img alt="rcfdtools" src="file/graph/R.HydroTools.svg" height="46px"></div>
