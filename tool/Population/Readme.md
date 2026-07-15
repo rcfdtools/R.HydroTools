@@ -86,3 +86,8 @@ To estimate the mean elevations over the total, urban and rural county areas, th
 * [Colombia - Resolución 330 DE 2017](https://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=71542)
 * [Colombia - Resolución 799 DE 2017](https://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=119747)
 
+
+##
+
+| [:house: Home](../../README.md) |
+|---------------------------------|
