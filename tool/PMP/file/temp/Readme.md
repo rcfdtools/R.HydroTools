@@ -22,7 +22,7 @@
 
 ## Meeting 20260225 (ARD, JDRA, WRAP)
 
-Graph
+Graph adjustments
 
 * Ok. (like Normal, Poisson, Exponential, etc.)
 * Ok. Title: Empirical & PDF
