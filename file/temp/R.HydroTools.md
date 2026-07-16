@@ -1,31 +1,29 @@
-R.HydroTools
+# R.HydroTools / Notes
+
 https://github.com/rcfdtools/R.HydroTools.git
-
-R.HydroTools.Wiki
-https://github.com/rcfdtools/R.HydroTools.wiki.git
-
-
-✓✕
 
 Python 2.7.14 QGIS 2.18.28 >>> C:\Program Files\QGIS 2.18\bin\python.exe (Do no setup over PyCharm because is not callable)
 
-Pending
-	Integrate R.HydroStormMarkerIDF into HydroTools.
+## Pending tasks
 
-	Tema 1
-		Crear video usando imagenes tif t matplotlib. Usar imagenes de https://github.com/rcfdtools/R.GISPython/tree/main/TableInterpolatedGrid
-	Tema 2 - Procesamiento de tablas geocodificadas
-		Actualización de elevaciones en el catálogo nacional de estaciones hidrometeorológicas del IDEAM - Colombia
-		Creación de capas geográficas en formato shapefile a partir de tablas geocodificadas
-		Creación de modelos de terreno a partir de tablas geocodificadas
-		Representación espacial de tablas geocodificadas con rasterio
-	Tema 3 - Fundamentos generales de SIG
-		Métodos de clasificación de capas geográficas en QGIS
-		Reproyección masiva de archivos de formas shapefile
-		NetCDF sample with ERA data https://xarray.pydata.org/en/stable/index.html
-		Seaborn, Plotly, Geoplotlib, Gleam, Ggplot, Bokeh and Missingo. 
+
+Tema 1
+	Crear video usando imágenes tif con matplotlib. Usar imagenes de https://github.com/rcfdtools/R.GISPython/tree/main/TableInterpolatedGrid
+
+Tema 2 - Procesamiento de tablas geo-codificadas
+	Actualización de elevaciones en el catálogo nacional de estaciones hidrometeorológicas del IDEAM - Colombia
+	Creación de capas geográficas en formato shapefile a partir de tablas geocodificadas
+	Creación de modelos de terreno a partir de tablas geocodificadas
+	Representación espacial de tablas geocodificadas con rasterio
+
+Tema 3 - Fundamentos generales de SIG
+	Métodos de clasificación de capas geográficas en QGIS
+	Reproyección masiva de archivos de formas shapefile
+	NetCDF sample with ERA data https://xarray.pydata.org/en/stable/index.html
+	Seaborn, Plotly, Geoplotlib, Gleam, Ggplot, Bokeh and Missingo. 
 
 Repair syncing problems with VCS - Version control system
+
 Sync issues can be
 	1. Close PyCharm
 	2. From the directory project delete .idea and .git folders.
@@ -44,7 +42,10 @@ How to return to push commits and files in the .main
 	7. Check and Commit.
 	Done
 
-# Función para impresión de títulos con líneas v20211227
+
+## Función para impresión de títulos con líneas v20211227
+
+```
 def printTitle(titleText,titleType='Both'):
     # titleType: Top, Bottom, Both
     nc='-'
@@ -59,6 +60,7 @@ def printTitle(titleText,titleType='Both'):
     else:
         print(titleText)
         print(nc*nVal)
+```
 
 Data sample with Pandas from https://www.codegrepper.com/
 df['date'] = pd.to_datetime(df['date'],format='%Y%m%d')
@@ -83,9 +85,9 @@ Solition 2 >>>
 Solition 3 >>> git config http.postBuffer 524288000
 
 
+## Install Rasterio over Python 3.10
 
-# Install Rasterio over Python 3.10
-# https://rasterio.readthedocs.io/en/latest/topics/plotting.html
+https://rasterio.readthedocs.io/en/latest/topics/plotting.html
 
 import rasterio
 from matplotlib import pyplot
@@ -93,7 +95,6 @@ src = rasterio.open("D:\R.GISPython\TableInterpolatedGrid\OutputGrid\GRDM039.tif
 pyplot.imshow(src.read(1), cmap='pink')
 #<matplotlib.image.AxesImage object at 0x...>
 pyplot.show()
-
 
 Imprimir con relleno de ceros como cadena de texto
 def printfloat(n, decimals=3):
