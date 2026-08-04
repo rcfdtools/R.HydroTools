@@ -72,7 +72,7 @@ To estimate the mean elevations over the total, urban and rural county areas, th
 
 Before run the script yoy must install or update from Bash the libraries
 
-*  python.exe -m pip install --upgrade pip
+* _python.exe -m pip install --upgrade pip_
 * _pip install pandas openpyxl xlrd_
 * _pip install simpledbf_ or _pip install git+https://github.com/rnelsonchem/simpledbf.git_
 
