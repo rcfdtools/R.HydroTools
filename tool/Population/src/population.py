@@ -15,7 +15,7 @@ process_polynomial_d2_up = False # ● Projection not recommend for population p
 process_wappaus = False # ● Projection only recommend for short term periods and condition_value < 200
 set_negative_to_zero = True
 set_infinite_to_zero = True
-show_plot = False # Show plot on Python screen console
+show_plot = True # Show plot on Python screen console
 zone_vars = ['Total', 'Urban', 'Rural']
 water_supply = pd.DataFrame({'CZ': [1000, 2000, 99999], 'WS': [120, 130, 140]}) # Water supply in liters per capita per day - lpcd: Level or elevation, Water Supply
 
