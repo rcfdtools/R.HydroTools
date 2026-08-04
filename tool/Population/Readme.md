@@ -68,6 +68,20 @@ To estimate the mean elevations over the total, urban and rural county areas, th
 * Copernicus 90m.
 
 
+## Run from Windows CMD
+
+Before run install from Bash the libraries
+
+* _pip install pandas openpyxl xlrd_
+* _pip install simpledbf_ or _pip install git+https://github.com/rnelsonchem/simpledbf.git_
+
+```
+CMD
+cd C:\R.HydroTools\tool\Population\src
+C:\Python314\Python.exe population.py
+```
+
+
 ## References
 
 
