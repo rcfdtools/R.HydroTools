@@ -61,6 +61,17 @@ The follow list contains the fields and variables used across the tables, shapef
 > To convert a value from liters per capita per day (LPCD) to cubic meters per second (m³/s), multiply the LPCD value by the total population and then divide by (86400*1000).
 
 
+## Projection Methods
+
+* (PD1) Polynomial Degree 1 or above
+* (Log) Logarithmic
+* (Pow) Potential
+* (Exp) Exponential
+* (Art) Arithmetic
+* (Geo) Geometric
+* (Wap) Wappaus
+
+
 ## Digital elevation model - DEM
 
 To estimate the mean elevations over the total, urban and rural county areas, the current research uses Copernicus 90 meters as digital elevation model.
@@ -72,9 +83,15 @@ To estimate the mean elevations over the total, urban and rural county areas, th
 
 Before run the script yoy must install or update from Bash the libraries
 
-* _python.exe -m pip install --upgrade pip_
-* _pip install pandas openpyxl xlrd_
-* _pip install simpledbf_ or _pip install git+https://github.com/rnelsonchem/simpledbf.git_
+* _python -m pip install --upgrade pip_
+* _python -m pip install pandas_
+* _python -m pip install numpy_
+* _python -m pip install tabulate_
+* _python -m pip install matplotlib_
+* _python -m pip install pandas openpyxl xlrd_
+* _python -m pip install simpledbf_
+
+> Simpledbf also can be installed with _python -m pip install git+https://github.com/rnelsonchem/simpledbf.git_
 
 ```
 CMD

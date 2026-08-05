@@ -5,7 +5,7 @@
       <excludeFolder url="file://$MODULE_DIR$/tool/TableInterpolatedGrid/OutputColorMap" />
       <excludeFolder url="file://$MODULE_DIR$/tool/TableInterpolatedGrid/OutputGrid" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.14 (rcfdtools)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.14 (R.TSIG)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

@@ -2,17 +2,17 @@
 
 # Libraries
 import pandas as pd
-import tabulate
 import numpy as np
+import tabulate
 import matplotlib.pyplot as plt
 from simpledbf import Dbf5
 
 # General vars
 file_path = '../data/Population.xlsx'
-county_id = '25899' # ● County code to be processed, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
+county_id = '15667' # ● County code to be processed, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
 projection_year_max = 2050 # ● Projection year
 process_polynomial_d2_up = False # ● Projection not recommend for population projections because it over fit correlation values
-process_wappaus = False # ● Projection only recommend for short term periods and condition_value < 200
+process_wappaus = True # ● Projection only recommend for short term periods and condition_value < 200
 set_negative_to_zero = True
 set_infinite_to_zero = True
 show_plot = True # Show plot on Python screen console
