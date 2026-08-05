@@ -15,6 +15,7 @@ DANE Census
 * 2018: https://microdatos.dane.gov.co/index.php/catalog/643
 
 
+
 ## Data dictionary: Fields and variables
 
 The follow list contains the fields and variables used across the tables, shapefiles and processing results.
