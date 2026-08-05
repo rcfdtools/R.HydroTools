@@ -15,7 +15,7 @@ The DANE stands for Departamento Administrativo Nacional de Estadística (Nation
 * DANE 2018: https://microdatos.dane.gov.co/index.php/catalog/643
 
 
-## Data dictionary: Fields and variables
+## Data Dictionary
 
 The follow list contains the fields and variables used across the tables, shapefiles and processing results.
 
@@ -61,7 +61,9 @@ The follow list contains the fields and variables used across the tables, shapef
 > To convert a value from liters per capita per day (LPCD) to cubic meters per second (m³/s), multiply the LPCD value by the total population and then divide by (86400*1000).
 
 
-## Projection Methods
+## Statistical Projection Methods
+
+Statistical projection methods use mathematical formulas and past data to estimate future outcomes. Core techniques include time series analysis (moving averages, exponential smoothing, and ARIMA) for patterns over time, and causal models (linear regression) for analyzing cause-and-effect relationships between variables.
 
 * (PD1) Polynomial Degree 1 or above
 * (Log) Logarithmic
