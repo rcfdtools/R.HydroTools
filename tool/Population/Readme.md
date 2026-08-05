@@ -4,7 +4,7 @@
 Keyword: `population` `public-service` `projection` `geometric` `lineal` `exponential` `potential` `arithmetic` `dane`
 
 
-## Colombia - South America / Data 
+## Censal data: Colombia - South America 
 
 The DANE stands for Departamento Administrativo Nacional de Estadística (National Administrative Department of Statistics). It is the official government agency in Colombia responsible for planning, collecting, processing, analyzing, and publishing official national statistics on population, economics, agriculture, and quality of life.
 
