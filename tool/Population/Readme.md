@@ -9,10 +9,10 @@ Keyword: `population` `public-service` `projection` `geometric` `lineal` `expone
 DANE Census
 
 * 1973: https://microdatos.dane.gov.co/index.php/catalog/117
-* 1985: 
-* 1993:
-* 2005:
-* 2018:
+* 1985: https://microdatos.dane.gov.co/catalog/115/related_materials
+* 1993: https://microdatos.dane.gov.co/index.php/catalog/113
+* 2005: https://microdatos.dane.gov.co/index.php/catalog/421
+* 2018: https://microdatos.dane.gov.co/index.php/catalog/643
 
 
 ## Data dictionary: Fields and variables
