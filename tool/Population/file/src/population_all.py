@@ -220,7 +220,7 @@ for zone in zone_vars:
     best_method = df_relative_error[df_relative_error['Best'] == 'True']['Method'].values[0]
     #funcs.print_log(file_log, f'\nProjected values for best method: {best_method}\n\n{df_projected[['Year', best_method]].transpose().to_markdown(index=True)}')
     #funcs.print_log(file_log, f'\nProjected values for best method: {best_method}\n\n{df_projected[['CountyID', 'Year', best_method]].to_markdown(index=False)}')
-    funcs.print_log(file_log, f'\n\nBest method: **{best_method}**')
+    funcs.print_log(file_log, f'\n\n💙Best method for {zone}: `**{best_method}**`')
     # Plot best method
     funcs.print_log(file_log, f'\n\nPlot must be here...')
     if show_plot:
