@@ -154,7 +154,7 @@ for zone in zone_vars:
         i = numerator / denominator
         condition_value = i * (x_future - t_0)
         funcs.print_log(file_log, f'* (Wap) Wappaus: i = {i}, Condition values only valid for < 200)\n\n')
-        funcs.print_log(file_log, f'<sub>\nWappaus condition values: {condition_value}\n</sub>\n')
+        funcs.print_log(file_log, f'<sub>\nWappaus condition values: {[f"{x:.2f}" for x in condition_value]}\n</sub>\n')
         wappaus_projection = np.round(p_0 * ((200 + condition_value) / (200 - condition_value)), decimals=0)
         df_projected[f'P{zone}Wap'] =  wappaus_projection
         if set_negative_to_zero: wappaus_projection[wappaus_projection < 0] = 0
