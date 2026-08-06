@@ -44,7 +44,7 @@ country_name = df[df['CountyID'] == county_id]['CountryName'].values[0]
 state_name = df[df['CountyID'] == county_id]['StateName'].values[0]
 county_name = df[df['CountyID'] == county_id]['CountyName'].values[0]
 subtitle = f'{country_name} - {state_name} - {county_name} (ID: {county_id})'
-funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen = print_on_screen)
+funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen = print_on_screen)
 funcs.print_log(file_log, f'# _“Population and Public Services Demand Projections (PPSD) until Year {projection_year_max} for {subtitle}”_', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n{dictionary.dicts['keywords']}', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\nPPSD are analytical estimates used by governments and planners to anticipate future changes in population size, age distribution, and the resulting community needs for utilities, healthcare, education, and infrastructure as sizing future water treatment facilities, electrical grids, and road networks based on spatial growth.')
