@@ -1,6 +1,8 @@
-# Requires the library openpyxl: pip install pandas openpyxl xlrd
+# https://github.com/rcfdtools/R.HydroTools/tree/main/tool/Population
+# population.py: basic script for individual population projections with report only by console
 
 # Libraries
+# Requires the library openpyxl: pip install pandas openpyxl xlrd
 import pandas as pd
 import numpy as np
 import tabulate
@@ -11,7 +13,7 @@ from simpledbf import Dbf5
 file_path = '../data/Population.xlsx'
 county_id = '15667' # ● County code to be processed, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
 projection_year_max = 2050 # ● Projection year
-process_polynomial_d2_up = False # ● Projection not recommend for population projections because it over fit correlation values
+process_polynomial_d2_up = False # ● Polynomial projection over grade 2 is not recommend because over fit the obtained values
 process_wappaus = True # ● Projection only recommend for short term periods and condition_value < 200
 set_negative_to_zero = True
 set_infinite_to_zero = True

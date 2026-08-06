@@ -10,7 +10,7 @@ The DANE stands for Departamento Administrativo Nacional de Estadística (Nation
 
 * DANE 1973: https://microdatos.dane.gov.co/index.php/catalog/117
 * DANE 1985: https://microdatos.dane.gov.co/catalog/115/related_materials
-* DANE 1993: https://microdatos.dane.gov.co/index.php/catalog/113
+* DANE 1993: https://microdatos.dane.gov.co/index.php/catalog/113, ([xlsx](https://www.dane.gov.co/files/investigaciones/poblacion/poblacion_vivienda/poblacion_colombia.XLS))
 * DANE 2005: https://microdatos.dane.gov.co/index.php/catalog/421
 * DANE 2018: https://microdatos.dane.gov.co/index.php/catalog/643
 
