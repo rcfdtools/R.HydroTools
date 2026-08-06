@@ -50,7 +50,7 @@ funcs.print_log(file_log, f'\n{dictionary.dicts['keywords']}', on_screen = print
 funcs.print_log(file_log, f'\n\nPPSD are analytical estimates used by governments and planners to anticipate future changes in population size, age distribution, and the resulting community needs for utilities, healthcare, education, and infrastructure as sizing future water treatment facilities, electrical grids, and road networks based on spatial growth.')
 #funcs.print_log(file_log, f'\n\nDataset Types\n\n{df.dtypes.to_markdown()}')
 funcs.print_log(file_log, f'\n\n## 0. Census Data ({len(filtered_df)} records)')
-funcs.print_log(file_log, f'\n\n{dictionary.dicts['census_data']}', on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n\n{dictionary.dicts['census_data']} Global census file: [📅Population.xlsx](../data/Population.xlsx)', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\n{filtered_df.sort_values(by='Year').to_markdown(index=False)}')
 funcs.print_log(file_log, f'\n\n> 💙Some records has specific notes about the registered values or the corresponding urban or rural distribution.')
 
