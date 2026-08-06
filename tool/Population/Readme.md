@@ -5,7 +5,7 @@ Keyword: `population` `public-service` `projection` `lineal` `polynomial` `logar
 
 <div align="center">
 
-📝Report: [County by ID](file/report/)
+📝Report: [Counties by ID](file/report/)
 
 </div>
 
