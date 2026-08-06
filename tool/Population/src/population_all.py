@@ -22,14 +22,16 @@ process_polynomial_d2_up = False # ● Polynomial projection over grade 2 is not
 process_wappaus = True # ● Projection only recommend for short term periods and condition_value < 200
 set_negative_to_zero = True
 set_infinite_to_zero = True
+drop_dataset_notes = True
 show_plot = False # Show plot on Python screen console
-print_on_screen = True # Global print control in screen
+print_on_screen = False # Global print control in screen
 zone_vars = ['Total', 'Urban', 'Rural']
 water_supply = pd.DataFrame({'CZ': [1000, 2000, 99999], 'WS': [120, 130, 140]}) # Water supply in liters per capita per day - lpcd: Level or elevation, Water Supply
 
 # Read general census file
 dtype={'Year': int, 'CountyID': str, 'StateID': str, 'PTotal': int, 'PUrban': int, 'PRural': int}
 df = pd.read_excel(file_path, sheet_name='Population', dtype=dtype)
+if drop_dataset_notes: df = df.drop(columns=['Notes'])
 
 # Pre-processing
 file_log_name = f'../report/{county_id}.md'  # Markdown file log
@@ -40,6 +42,7 @@ country_name = df[df['CountyID'] == county_id]['CountryName'].values[0]
 state_name = df[df['CountyID'] == county_id]['StateName'].values[0]
 county_name = df[df['CountyID'] == county_id]['CountyName'].values[0]
 subtitle = f'{country_name} - {state_name} - {county_name} (ID: {county_id})'
+funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen = print_on_screen)
 funcs.print_log(file_log, f'# Population and Public Services Demand Projections (PPSD) until Year {projection_year_max} for {subtitle}', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\nPPSD are analytical estimates used by governments and planners to anticipate future changes in population size, age distribution, and the resulting community needs for utilities, healthcare, education, and infrastructure as sizing future water treatment facilities, electrical grids, and road networks based on spatial growth.')
 #funcs.print_log(file_log, f'\n\nDataset Types\n\n{df.dtypes.to_markdown()}')
