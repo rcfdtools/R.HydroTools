@@ -11,7 +11,7 @@ from simpledbf import Dbf5
 
 # General vars
 file_path = '../data/Population.xlsx'
-county_id = '11001' # ● County code to be processed, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
+county_id = '25899' # ● County code to be processed, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
 projection_year_max = 2050 # ● Projection year
 process_polynomial_d2_up = False # ● Polynomial projection over grade 2 is not recommend because over fit the obtained values
 process_wappaus = True # ● Projection only recommend for short term periods and condition_value < 200
@@ -31,7 +31,7 @@ state_name = df[df['CountyID'] == county_id]['StateName'].values[0]
 county_name = df[df['CountyID'] == county_id]['CountyName'].values[0]
 subtitle = f'{country_name} - {state_name} - {county_name} (ID: {county_id})'
 print(f'\n# Population and Public Services Demand Projections (PPSD) until Year {projection_year_max} for {subtitle}')
-print(f'\n\n Population and public services demand projections (PPSD) are analytical estimates used by governments and planners to anticipate future changes in population size, age distribution, and the resulting community needs for utilities, healthcare, education, and infrastructure as sizing future water treatment facilities, electrical grids, and road networks based on spatial growth.')
+print(f'\nPPSD are analytical estimates used by governments and planners to anticipate future changes in population size, age distribution, and the resulting community needs for utilities, healthcare, education, and infrastructure as sizing future water treatment facilities, electrical grids, and road networks based on spatial growth.')
 #print(f'\n\nDataset Types\n\n{df.dtypes.to_markdown()}')
 print(f'\n\n## 0. Filtered Censal Dataset ({len(filtered_df)} records)\n\n{filtered_df.sort_values(by='Year').to_markdown(index=False)}')
 
