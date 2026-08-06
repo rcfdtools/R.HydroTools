@@ -250,7 +250,7 @@ for zone in zone_vars:
     funcs.print_log(file_log, f'\n\nCounty shapefile geometry properties and water supply values\n\n{df_county.to_markdown(index=False)}')
     df_projected = pd.merge(df_projected, df_county, left_on='CountyID', right_on='CountyID', how='left')
     df_projected[f'WS{zone}All'] = (df_projected[best_method] * df_projected[f'WS{zone}'])/86400 # In liters per second (l/s)
-    funcs.print_log(file_log, f'\n\nProjected values for best method: {best_method}\n\n{df_projected[['CountyID', 'Year', best_method, f'WS{zone}', f'WS{zone}All']].to_markdown(index=False)}')
+    funcs.print_log(file_log, f'\n\nProjected values for best method: *{best_method}*\n\n{df_projected[['CountyID', 'Year', best_method, f'WS{zone}', f'WS{zone}All']].to_markdown(index=False)}')
     num += 1
 
 funcs.print_log(file_log, f'\n\n<div align="center"><img alt="R.HydroTools" src="../graph/qr-code.png" width="250px"><br><sub>Share this research</sub></div><br>', on_screen = print_on_screen)
