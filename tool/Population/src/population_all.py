@@ -1,9 +1,10 @@
 # https://github.com/rcfdtools/R.HydroTools/tree/main/tool/Population
-# population.py: basic script for individual population projections with report only by console
+# population_all.py: script for complete population projections with reports by .md file
 
 # Libraries
 # Requires the library openpyxl: pip install pandas openpyxl xlrd
 import functions as funcs
+import dictionary as dictionary
 import pandas as pd
 import numpy as np
 import tabulate
@@ -44,11 +45,13 @@ state_name = df[df['CountyID'] == county_id]['StateName'].values[0]
 county_name = df[df['CountyID'] == county_id]['CountyName'].values[0]
 subtitle = f'{country_name} - {state_name} - {county_name} (ID: {county_id})'
 funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen = print_on_screen)
-funcs.print_log(file_log, f'# 📜Population and Public Services Demand Projections (PPSD) until Year {projection_year_max} for {subtitle}', on_screen = print_on_screen)
-funcs.print_log(file_log, f'\nKeywords: `population` `public-service` `projection` `lineal` `polynomial` `logarithmic` `potential` `exponential` `arithmetic` `geometric` `wappaus` `dane`')
+funcs.print_log(file_log, f'# _“Population and Public Services Demand Projections (PPSD) until Year {projection_year_max} for {subtitle}”_', on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n{dictionary.dicts['keywords']}', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\nPPSD are analytical estimates used by governments and planners to anticipate future changes in population size, age distribution, and the resulting community needs for utilities, healthcare, education, and infrastructure as sizing future water treatment facilities, electrical grids, and road networks based on spatial growth.')
 #funcs.print_log(file_log, f'\n\nDataset Types\n\n{df.dtypes.to_markdown()}')
-funcs.print_log(file_log, f'\n\n## 0. Censal Data ({len(filtered_df)} records)\n\n{filtered_df.sort_values(by='Year').to_markdown(index=False)}')
+funcs.print_log(file_log, f'\n\n## 0. Census Data ({len(filtered_df)} records)')
+funcs.print_log(file_log, f'\n\n{dictionary.dicts['census_data']}', on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n\n{filtered_df.sort_values(by='Year').to_markdown(index=False)}')
 funcs.print_log(file_log, f'\n\n> 💙Some records has specific notes about the registered values or the corresponding urban or rural distribution.')
 
 # Processing by zone
@@ -202,7 +205,7 @@ for zone in zone_vars:
     # Relative error as percentage
     for i in methods:
         filtered_df[f'{i}RelError'] = 100 * filtered_df[f'{i}AbsError'] / filtered_df[f'P{zone}']
-    funcs.print_log(file_log, f'\n\n### {num}.3. Filtered dataset with projected values, absolute error, relative error as percentage\n\nAbsolute and relative error\n\n{filtered_df.to_markdown(index=False)}')
+    funcs.print_log(file_log, f'\n\n### {num}.3. Filtered dataset with projected values, absolute error, relative error as percentage\n\n{dictionary.dicts['abosulute_relative_error']}\n\nAbsolute and relative error\n\n{filtered_df.to_markdown(index=False)}')
     # Mean relative error
     funcs.print_log(file_log, '\n\nRelative error mean\n')
     relative_error = []
@@ -233,7 +236,7 @@ for zone in zone_vars:
         plt.close()
 
     # Water supply in liters per capita per day (lpcd)
-    funcs.print_log(file_log, f'\n\n### {num}.4. Fresh water supply demand in liters per capita per day (lpcd)\n\nReference values (RAS Colombia)\n\n{water_supply.to_markdown(index=False)}\n\n> CZ: Level in meters above the sea level (masl).\n> WS: Fresh water supply demand in liters per capita per day (lpcd or l/h/d).\n> WSAll: Zonal fresh water supply demand in liters per second (l/s).\n> A: Zonal area in square meters.')
+    funcs.print_log(file_log, f'\n\n### {num}.4. Fresh water supply demand in liters per capita per day (lpcd)\n\n{dictionary.dicts['fresh_water_supply']}\n\nReference values (RAS Colombia)\n\n{water_supply.to_markdown(index=False)}\n\n> CZ: Level in meters above the sea level (masl).\n> WS: Fresh water supply demand in liters per capita per day (lpcd or l/h/d).\n> WSAll: Zonal fresh water supply demand in liters per second (l/s).\n> A: Zonal area in square meters.')
     dbf = Dbf5('../shp/ColombiaCounty.dbf')
     df_county = pd.DataFrame(dbf.to_dataframe())
     df_county = df_county[df_county['CountyID'] == county_id]
@@ -250,4 +253,4 @@ for zone in zone_vars:
     funcs.print_log(file_log, f'\n\nProjected values for best method: {best_method}\n\n{df_projected[['CountyID', 'Year', best_method, f'WS{zone}', f'WS{zone}All']].to_markdown(index=False)}')
     num += 1
 
-funcs.print_log(file_log, '\n\n**APP DISCLAIMER**: NO WARRANTY - This software is provided by [github.com/rcfdtools](https://github.com/rcfdtools) "as is", without any express or implied warranty, including warranties of merchantability, fitness for a particular purpose, or non-infringement. There is no guarantee that the software will be error-free or operate without interruption. LIMITATION OF LIABILITY - Neither the authors nor copyright holders will be liable for claims or damages arising from the software or its use. You are responsible for determining if the software is appropriate for your use and assume all associated risks, including errors, legal compliance, and data loss. NO PROFESSIONAL ADVICE - The software provides general information and does not offer professional advice. It should not replace consultation with professional advisors.\n')
+funcs.print_log(file_log, f'\n\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
