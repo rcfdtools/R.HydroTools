@@ -58,7 +58,7 @@ funcs.print_log(file_log, f'# _“Population and Public Services Demand Projecti
 funcs.print_log(file_log, f'\n{dictionary.dicts['keywords']}', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\nPPSD are analytical estimates used by governments and planners to anticipate future changes in population size, age distribution, and the resulting community needs for utilities, healthcare, education, and infrastructure as sizing future water treatment facilities, electrical grids, and road networks based on spatial growth.')
 #funcs.print_log(file_log, f'\n\nDataset Types\n\n{df.dtypes.to_markdown()}')
-funcs.print_log(file_log, f'\n\n> General running parameters: ', on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n\n> **General running parameters**: ', on_screen = print_on_screen)
 for dict_var in dictionary.general_vars:
     funcs.print_log(file_log, f'• {dict_var[1]}: _{eval(dict_var[0])}_. ', on_screen=print_on_screen)
 funcs.print_log(file_log, f'\n\n## 0. Census Data ({len(filtered_df)} records)')
