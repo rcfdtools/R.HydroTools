@@ -3,6 +3,7 @@
 
 # Libraries
 # Requires the library openpyxl: pip install pandas openpyxl xlrd
+import platform
 import functions as funcs
 import dictionary as dictionary
 import pandas as pd
@@ -10,12 +11,14 @@ import numpy as np
 import tabulate
 import matplotlib.pyplot as plt
 from simpledbf import Dbf5
+from datetime import datetime
 pd.set_option('display.max_colwidth', None)
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)
 
-# General vars
+# General Setup
+app_version = 'v20260312'
 file_path = '../data/Population.xlsx'
 county_id = '25899' # ● County code to be processed, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
 projection_year_max = 2050 # ● Projection year
@@ -24,10 +27,16 @@ process_wappaus = True # ● Projection only recommend for short term periods an
 set_negative_to_zero = True
 set_infinite_to_zero = True
 drop_dataset_notes = True
+create_plot = True # ● Creates, save and include plots into reports
 show_plot = False # Show plot on Python screen console
 print_on_screen = False # Global print control in screen
 zone_vars = ['Total', 'Urban', 'Rural']
 water_supply = pd.DataFrame({'CZ': [1000, 2000, 99999], 'WS': [120, 130, 140]}) # Water supply in liters per capita per day - lpcd: Level or elevation, Water Supply
+runtime = datetime.now()
+python_version = platform.python_version()
+pandas_version = pd.__version__
+numpy_version = np.__version__
+
 
 # Read general census file
 dtype={'Year': int, 'CountyID': str, 'StateID': str, 'PTotal': int, 'PUrban': int, 'PRural': int}
@@ -49,6 +58,10 @@ funcs.print_log(file_log, f'# _“Population and Public Services Demand Projecti
 funcs.print_log(file_log, f'\n{dictionary.dicts['keywords']}', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\nPPSD are analytical estimates used by governments and planners to anticipate future changes in population size, age distribution, and the resulting community needs for utilities, healthcare, education, and infrastructure as sizing future water treatment facilities, electrical grids, and road networks based on spatial growth.')
 #funcs.print_log(file_log, f'\n\nDataset Types\n\n{df.dtypes.to_markdown()}')
+funcs.print_log(file_log, f'\n\n> General running parameters: <sub> ', on_screen = print_on_screen)
+for dict_var in dictionary.general_vars:
+    funcs.print_log(file_log, f'• {dict_var[1]}: _{eval(dict_var[0])}_. ', on_screen=print_on_screen)
+funcs.print_log(file_log, f'\n</sub> ', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\n## 0. Census Data ({len(filtered_df)} records)')
 funcs.print_log(file_log, f'\n\n{dictionary.dicts['census_data']}\n\n📅Global census file: [Population.xlsx](../data/Population.xlsx)', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\n{filtered_df.sort_values(by='Year').to_markdown(index=False)}')

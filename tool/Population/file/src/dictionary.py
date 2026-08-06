@@ -6,16 +6,9 @@ general_vars = ([
                   ['app_version', 'app_version'], # App control version
                   ['runtime', 'runtime'],
                   ['python_version', 'Python version'],
-                  ['scipy_version', 'SciPy version'],
                   ['pandas_version', 'Pandas version'],
                   ['numpy_version', 'NumPy version'],
-                  ['station_dataset_file', 'Stations dataset (station_dataset_file)'],
-                  ['station_catalog_file', 'Stations catalog (station_catalog_file)'],
-                  ['date_min', 'Minimum year to eval til year_max (date_min)'],
-                  ['date_max', 'Maximum year to eval since year_min (date_max)'],
                   ['create_plot', 'Creates, save and include plots into reports (create_plot)'],
-                  ['plot_only_fit', 'Plot only fit distributions with Δo > Δ (plot_only_fit)'],
-                  ['plot_only_simple', 'Plot only simple graphs avoiding multiple CDFs and multiple Extreme values plots (plot_only_simple)']
                ])
 
 
