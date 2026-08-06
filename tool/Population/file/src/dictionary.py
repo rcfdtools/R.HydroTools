@@ -9,12 +9,12 @@ general_vars = ([
                   ['pandas_version', 'Pandas version'],
                   ['numpy_version', 'NumPy version'],
                   ['create_plot', 'Creates, save and include plots into reports (create_plot)'],
+                  ['projection_year_max', 'Projection until year'],
                   ['process_polynomial_d2_up', 'Process polynomial degree 2 and up'],
                   ['process_wappaus', 'Process Wappaus'],
                   ['process_wappaus', 'Process Wappaus'],
                   ['set_negative_to_zero', 'Set negative values to zero'],
                   ['set_infinite_to_zero', 'Set infinite values to zero'],
-                  ['drop_dataset_notes', 'Drop dataset notes'],
                   ['drop_dataset_notes', 'Drop dataset notes']
                ])
 

@@ -18,7 +18,7 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)
 
 # General Setup
-app_version = 'v20260312'
+app_version = 'v20260806'
 file_path = '../data/Population.xlsx'
 county_id = '25899' # ● County code to be processed, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
 projection_year_max = 2050 # ● Projection year
