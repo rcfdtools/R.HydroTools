@@ -45,9 +45,11 @@ county_name = df[df['CountyID'] == county_id]['CountyName'].values[0]
 subtitle = f'{country_name} - {state_name} - {county_name} (ID: {county_id})'
 funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen = print_on_screen)
 funcs.print_log(file_log, f'# 📜Population and Public Services Demand Projections (PPSD) until Year {projection_year_max} for {subtitle}', on_screen = print_on_screen)
+funcs.print_log(file_log, f'\nKeywords: `population` `public-service` `projection` `lineal` `polynomial` `logarithmic` `potential` `exponential` `arithmetic` `geometric` `wappaus` `dane`')
 funcs.print_log(file_log, f'\n\nPPSD are analytical estimates used by governments and planners to anticipate future changes in population size, age distribution, and the resulting community needs for utilities, healthcare, education, and infrastructure as sizing future water treatment facilities, electrical grids, and road networks based on spatial growth.')
 #funcs.print_log(file_log, f'\n\nDataset Types\n\n{df.dtypes.to_markdown()}')
 funcs.print_log(file_log, f'\n\n## 0. Censal Data ({len(filtered_df)} records)\n\n{filtered_df.sort_values(by='Year').to_markdown(index=False)}')
+funcs.print_log(file_log, f'\n\n> 💙Some records has specific notes about the registered values or the corresponding urban or rural distribution.')
 
 # Processing by zone
 num = 1
@@ -148,8 +150,8 @@ for zone in zone_vars:
         denominator = (t_end - t_0) * (p_0 + p_end)
         i = numerator / denominator
         condition_value = i * (x_future - t_0)
-        funcs.print_log(file_log, f'* (Wap) Wappaus: i = {i}, Condition values (Method only applicable for < 200)\n\n')
-        funcs.print_log(file_log, f'<sub>\nWappaus values: {condition_value}\n</sub>\n')
+        funcs.print_log(file_log, f'* (Wap) Wappaus: i = {i}, Condition values only valid for < 200)\n\n')
+        funcs.print_log(file_log, f'<sub>\nWappaus condition values: {condition_value}\n</sub>\n')
         wappaus_projection = np.round(p_0 * ((200 + condition_value) / (200 - condition_value)), decimals=0)
         df_projected[f'P{zone}Wap'] =  wappaus_projection
         if set_negative_to_zero: wappaus_projection[wappaus_projection < 0] = 0
