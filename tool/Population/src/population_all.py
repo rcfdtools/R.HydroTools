@@ -34,6 +34,7 @@ df = pd.read_excel(file_path, sheet_name='Population', dtype=dtype)
 if drop_dataset_notes: df = df.drop(columns=['Notes'])
 
 # Pre-processing
+print(f'Processing: {county_id}')
 file_log_name = f'../report/{county_id}.md'  # Markdown file log
 file_log = open(file_log_name, 'w+', encoding='utf-8')  # w+ create the file if it doesn't exist
 filtered_df = df[df['CountyID'] == county_id]
@@ -68,7 +69,7 @@ for zone in zone_vars:
     deg1_projection = np.round(c1 * x_future + c2, decimals=0)
     if set_negative_to_zero: deg1_projection[deg1_projection < 0] = 0
     df_projected[f'P{zone}PD1'] =  deg1_projection
-    funcs.print_log(file_log, f'* (PD1) Polynomial Deg 1: {coefficients_deg1[0]}, {coefficients_deg1[1]} (lineal)')
+    funcs.print_log(file_log, f'* (PD1) Polynomial Deg 1: {coefficients_deg1[0]}, {coefficients_deg1[1]} (lineal)\n')
 
     if process_polynomial_d2_up:
         # Polynomial projection Deg 2
@@ -148,7 +149,7 @@ for zone in zone_vars:
         i = numerator / denominator
         condition_value = i * (x_future - t_0)
         funcs.print_log(file_log, f'* (Wap) Wappaus: i = {i}\n\n')
-        funcs.print_log(file_log, f'> (Wap) Wappaus - Condition values (Method only applicable for < 200)\n\n{condition_value}\n')
+        funcs.print_log(file_log, f'> (Wap) Wappaus - Condition values (Method only applicable for < 200)\n\n<sub>\n{condition_value}\n</sub>\n')
         wappaus_projection = np.round(p_0 * ((200 + condition_value) / (200 - condition_value)), decimals=0)
         df_projected[f'P{zone}Wap'] =  wappaus_projection
         if set_negative_to_zero: wappaus_projection[wappaus_projection < 0] = 0
