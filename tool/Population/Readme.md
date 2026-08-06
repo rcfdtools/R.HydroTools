@@ -5,7 +5,7 @@ Keyword: `population` `public-service` `projection` `lineal` `polynomial` `logar
 
 <div align="center">
 
-📝Reports: [Any Colombia County ID](file/report/)
+📝Report: [County by ID](file/report/)
 
 </div>
 
