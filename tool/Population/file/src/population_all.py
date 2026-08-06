@@ -52,7 +52,7 @@ funcs.print_log(file_log, f'\n\nPPSD are analytical estimates used by government
 funcs.print_log(file_log, f'\n\n## 0. Census Data ({len(filtered_df)} records)')
 funcs.print_log(file_log, f'\n\n{dictionary.dicts['census_data']}\n\n📅Global census file: [Population.xlsx](../data/Population.xlsx)', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\n{filtered_df.sort_values(by='Year').to_markdown(index=False)}')
-funcs.print_log(file_log, f'\n\n> 💙Some records has specific notes about the registered values or the corresponding urban or rural distribution.')
+funcs.print_log(file_log, f'\n\n> 🔥Some records has specific notes about the registered values or the corresponding urban or rural distribution.')
 
 # Processing by zone
 num = 1
