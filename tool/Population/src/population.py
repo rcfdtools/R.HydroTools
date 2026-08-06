@@ -11,13 +11,13 @@ from simpledbf import Dbf5
 
 # General vars
 file_path = '../data/Population.xlsx'
-county_id = '15667' # ● County code to be processed, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
+county_id = '11001' # ● County code to be processed, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
 projection_year_max = 2050 # ● Projection year
 process_polynomial_d2_up = False # ● Polynomial projection over grade 2 is not recommend because over fit the obtained values
 process_wappaus = True # ● Projection only recommend for short term periods and condition_value < 200
 set_negative_to_zero = True
 set_infinite_to_zero = True
-show_plot = True # Show plot on Python screen console
+show_plot = False # Show plot on Python screen console
 zone_vars = ['Total', 'Urban', 'Rural']
 water_supply = pd.DataFrame({'CZ': [1000, 2000, 99999], 'WS': [120, 130, 140]}) # Water supply in liters per capita per day - lpcd: Level or elevation, Water Supply
 
@@ -30,11 +30,12 @@ country_name = df[df['CountyID'] == county_id]['CountryName'].values[0]
 state_name = df[df['CountyID'] == county_id]['StateName'].values[0]
 county_name = df[df['CountyID'] == county_id]['CountyName'].values[0]
 subtitle = f'{country_name} - {state_name} - {county_name} (ID: {county_id})'
-print(f'\n# Population and public services demand projections (PPSD) until Year {projection_year_max} for {subtitle}')
+print(f'\n# Population and Public Services Demand Projections (PPSD) until Year {projection_year_max} for {subtitle}')
 #print(f'\n\nDataset Types\n\n{df.dtypes.to_markdown()}')
-print(f'\n\n## Filtered censal dataset ({len(filtered_df)} records)\n\n{filtered_df.to_markdown(index=False)}')
+print(f'\n\n## 0. Filtered Censal Dataset ({len(filtered_df)} records)\n\n{filtered_df.sort_values(by='Year').to_markdown(index=False)}')
 
 # Processing by zone
+num = 1
 for zone in zone_vars:
     filtered_df = df[df['CountyID'] == county_id]
     max_year = filtered_df['Year'].max()
@@ -44,10 +45,10 @@ for zone in zone_vars:
     df_relative_error = pd.DataFrame()
     df_projected['Year'] = x_future
     df_projected['CountyID'] = county_id
-    print(f'\n\n## {zone} county population projections')
+    print(f'\n\n## {num}. {zone} County Population Projections')
 
     # Polynomial projection Deg 1
-    print(f'\n\n### Coefficients and Parameters\n')
+    print(f'\n\n### {num}.1. Coefficients and Parameters\n')
     coefficients_deg1 = np.polyfit(filtered_df['Year'], filtered_df[f'P{zone}'], deg=1)
     c1, c2 = coefficients_deg1[0], coefficients_deg1[1]
     deg1_projection = np.round(c1 * x_future + c2, decimals=0)
@@ -139,7 +140,7 @@ for zone in zone_vars:
         if set_negative_to_zero: wappaus_projection[wappaus_projection < 0] = 0
 
     # Print and plot results
-    print(f'\n\n### Projected dataset\n\n{df_projected.to_markdown(index=False)}')
+    print(f'\n\n### {num}.2. Projected dataset\n\n{df_projected.to_markdown(index=False)}')
     #print(f'\n\n### Projected dataset\n\n{df_projected.transpose().to_markdown(index=True)}')
     print(f'\nPlot must be here...')
     if show_plot:
@@ -184,7 +185,7 @@ for zone in zone_vars:
     # Relative error as percentage
     for i in methods:
         filtered_df[f'{i}RelError'] = 100 * filtered_df[f'{i}AbsError'] / filtered_df[f'P{zone}']
-    print(f'\n\n### Filtered dataset with projected values, absolute error, relative error as percentage\n\nAbsolute and relative error\n\n{filtered_df.to_markdown(index=False)}')
+    print(f'\n\n### {num}.3. Filtered dataset with projected values, absolute error, relative error as percentage\n\nAbsolute and relative error\n\n{filtered_df.to_markdown(index=False)}')
     # Mean relative error
     print('\nRelative error mean')
     relative_error = []
@@ -215,7 +216,7 @@ for zone in zone_vars:
         plt.close()
 
     # Water supply in liters per capita per day - lpcd
-    print(f'\n\n### Fresh water supply demand in liters per capita per day - lpcd\n\nReference values (RAS Colombia)\n\n{water_supply.to_markdown(index=False)}\n\n> CZ: Level in meters above the sea level (masl).\n> WS: Fresh water supply demand in liters per capita per day (lpcd or l/h/d).\n> WSAll: Zonal fresh water supply demand in liters per second (l/s).\n> A: Zonal area in square meters.')
+    print(f'\n\n### {num}.4. Fresh water supply demand in liters per capita per day - lpcd\n\nReference values (RAS Colombia)\n\n{water_supply.to_markdown(index=False)}\n\n> CZ: Level in meters above the sea level (masl).\n> WS: Fresh water supply demand in liters per capita per day (lpcd or l/h/d).\n> WSAll: Zonal fresh water supply demand in liters per second (l/s).\n> A: Zonal area in square meters.')
     dbf = Dbf5('../shp/ColombiaCounty.dbf')
     df_county = pd.DataFrame(dbf.to_dataframe())
     df_county = df_county[df_county['CountyID'] == county_id]
@@ -230,4 +231,4 @@ for zone in zone_vars:
     df_projected = pd.merge(df_projected, df_county, left_on='CountyID', right_on='CountyID', how='left')
     df_projected[f'WS{zone}All'] = (df_projected[best_method] * df_projected[f'WS{zone}'])/86400 # In liters per second (l/s)
     print(f'\nProjected values for best method: {best_method}\n\n{df_projected[['CountyID', 'Year', best_method, f'WS{zone}', f'WS{zone}All']].to_markdown(index=False)}')
-
+    num += 1
