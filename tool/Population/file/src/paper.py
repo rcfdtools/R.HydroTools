@@ -45,7 +45,7 @@ grouped = df.groupby('StateName')
 funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen=print_on_screen)
 funcs.print_log(file_log, f'# {dictionary.dicts['study_name']} \n{dictionary.dicts['keywords']}', on_screen=print_on_screen)
 for group_name, group_df in grouped:
-    funcs.print_log(file_log, f'\n\n## STATE: {group_name}\n\n')
+    funcs.print_log(file_log, f'\n\n## {group_name.upper()}\n\n')
     detailed_df = group_df.drop(columns=['CountyID', 'StateName', 'Source', 'Year', 'CountryID', 'CountryName', 'StateID', 'PTotal', 'PUrban', 'PRural'])
     detailed_df = detailed_df.rename(columns={'CountyIDmd': 'CountyID'})
     funcs.print_log(file_log, detailed_df[['CountyID', 'CountyName']].to_markdown(index=False))

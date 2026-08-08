@@ -8,7 +8,7 @@
 # RESEARCH: _“Population and Public Services Demand Projections (PPSD)”_ 
 Keywords: `population` `public-service` `projection` `lineal` `polynomial` `logarithmic` `potential` `exponential` `arithmetic` `geometric` `wappaus` `dane` `colombia` `south-america`
 
-## STATE: Amazonas
+## AMAZONAS
 
 | CountyID          | CountyName       |
 |:------------------|:-----------------|
@@ -24,7 +24,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [91669](91669.md) | Puerto Santander |
 | [91798](91798.md) | Tarapacá         |
 
-## STATE: Antioquia
+## ANTIOQUIA
 
 | CountyID          | CountyName             |
 |:------------------|:-----------------------|
@@ -154,7 +154,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [05893](05893.md) | Yondó                  |
 | [05895](05895.md) | Zaragoza               |
 
-## STATE: Arauca
+## ARAUCA
 
 | CountyID          | CountyName    |
 |:------------------|:--------------|
@@ -166,14 +166,14 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [81736](81736.md) | Saravena      |
 | [81794](81794.md) | Tame          |
 
-## STATE: Archipiélago De San Andrés
+## ARCHIPIÉLAGO DE SAN ANDRÉS
 
 | CountyID          | CountyName   |
 |:------------------|:-------------|
 | [88001](88001.md) | San Andrés   |
 | [88564](88564.md) | Providencia  |
 
-## STATE: Atlántico
+## ATLÁNTICO
 
 | CountyID          | CountyName       |
 |:------------------|:-----------------|
@@ -201,13 +201,13 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [08832](08832.md) | Tubará           |
 | [08849](08849.md) | Usiacurí         |
 
-## STATE: Bogotá, D.C.
+## BOGOTÁ, D.C.
 
 | CountyID          | CountyName   |
 |:------------------|:-------------|
 | [11001](11001.md) | Bogotá, D.C. |
 
-## STATE: Bolívar
+## BOLÍVAR
 
 | CountyID          | CountyName            |
 |:------------------|:----------------------|
@@ -258,7 +258,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [13873](13873.md) | Villanueva            |
 | [13894](13894.md) | Zambrano              |
 
-## STATE: Boyacá
+## BOYACÁ
 
 | CountyID          | CountyName            |
 |:------------------|:----------------------|
@@ -386,7 +386,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [15879](15879.md) | Viracachá             |
 | [15897](15897.md) | Zetaquira             |
 
-## STATE: Caldas
+## CALDAS
 
 | CountyID          | CountyName   |
 |:------------------|:-------------|
@@ -418,7 +418,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [17873](17873.md) | Villamaría   |
 | [17877](17877.md) | Viterbo      |
 
-## STATE: Caquetá
+## CAQUETÁ
 
 | CountyID          | CountyName             |
 |:------------------|:-----------------------|
@@ -439,7 +439,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [18785](18785.md) | Solita                 |
 | [18860](18860.md) | Valparaíso             |
 
-## STATE: Casanare
+## CASANARE
 
 | CountyID          | CountyName           |
 |:------------------|:---------------------|
@@ -463,7 +463,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [85430](85430.md) | Trinidad             |
 | [85440](85440.md) | Villanueva           |
 
-## STATE: Cauca
+## CAUCA
 
 | CountyID          | CountyName             |
 |:------------------|:-----------------------|
@@ -510,7 +510,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [19824](19824.md) | Totoró                 |
 | [19845](19845.md) | Villa Rica             |
 
-## STATE: Cesar
+## CESAR
 
 | CountyID          | CountyName          |
 |:------------------|:--------------------|
@@ -540,7 +540,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [20770](20770.md) | San Martín          |
 | [20787](20787.md) | Tamalameque         |
 
-## STATE: Chocó
+## CHOCÓ
 
 | CountyID          | CountyName              |
 |:------------------|:------------------------|
@@ -576,7 +576,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [27800](27800.md) | Unguía                  |
 | [27810](27810.md) | Unión Panamericana      |
 
-## STATE: Cundinamarca
+## CUNDINAMARCA
 
 | CountyID          | CountyName                  |
 |:------------------|:----------------------------|
@@ -697,7 +697,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [25898](25898.md) | Zipacón                     |
 | [25899](25899.md) | Zipaquirá                   |
 
-## STATE: Córdoba
+## CÓRDOBA
 
 | CountyID          | CountyName                   |
 |:------------------|:-----------------------------|
@@ -732,7 +732,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [23815](23815.md) | Tuchín (1)                   |
 | [23855](23855.md) | Valencia                     |
 
-## STATE: Guainía
+## GUAINÍA
 
 | CountyID          | CountyName            |
 |:------------------|:----------------------|
@@ -745,7 +745,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [94887](94887.md) | Pana Pana (ANM)       |
 | [94888](94888.md) | Morichal (ANM)        |
 
-## STATE: Guaviare
+## GUAVIARE
 
 | CountyID          | CountyName            |
 |:------------------|:----------------------|
@@ -754,7 +754,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [95025](95025.md) | El Retorno            |
 | [95200](95200.md) | Miraflores            |
 
-## STATE: Huila
+## HUILA
 
 | CountyID          | CountyName   |
 |:------------------|:-------------|
@@ -796,7 +796,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [41872](41872.md) | Villavieja   |
 | [41885](41885.md) | Yaguará      |
 
-## STATE: La Guajira
+## LA GUAJIRA
 
 | CountyID          | CountyName         |
 |:------------------|:-------------------|
@@ -816,7 +816,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [44855](44855.md) | Urumita            |
 | [44874](44874.md) | Villanueva         |
 
-## STATE: Magdalena
+## MAGDALENA
 
 | CountyID          | CountyName                  |
 |:------------------|:----------------------------|
@@ -851,7 +851,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [47960](47960.md) | Zapayán                     |
 | [47980](47980.md) | Zona Bananera               |
 
-## STATE: Meta
+## META
 
 | CountyID          | CountyName           |
 |:------------------|:---------------------|
@@ -885,7 +885,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [50689](50689.md) | San Martín           |
 | [50711](50711.md) | Vistahermosa         |
 
-## STATE: Nariño
+## NARIÑO
 
 | CountyID          | CountyName           |
 |:------------------|:---------------------|
@@ -954,7 +954,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [52838](52838.md) | Túquerres            |
 | [52885](52885.md) | Yacuanquer           |
 
-## STATE: Norte De Santander
+## NORTE DE SANTANDER
 
 | CountyID          | CountyName        |
 |:------------------|:------------------|
@@ -999,7 +999,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [54871](54871.md) | Villa Caro        |
 | [54874](54874.md) | Villa del Rosario |
 
-## STATE: Putumayo
+## PUTUMAYO
 
 | CountyID          | CountyName        |
 |:------------------|:------------------|
@@ -1017,7 +1017,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [86865](86865.md) | Valle del Guamuez |
 | [86885](86885.md) | Villagarzón       |
 
-## STATE: Quindio
+## QUINDIO
 
 | CountyID          | CountyName   |
 |:------------------|:-------------|
@@ -1034,7 +1034,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [63594](63594.md) | Quimbaya     |
 | [63690](63690.md) | Salento      |
 
-## STATE: Risaralda
+## RISARALDA
 
 | CountyID          | CountyName          |
 |:------------------|:--------------------|
@@ -1053,7 +1053,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [66682](66682.md) | Santa Rosa de Cabal |
 | [66687](66687.md) | Santuario           |
 
-## STATE: Santander
+## SANTANDER
 
 | CountyID          | CountyName             |
 |:------------------|:-----------------------|
@@ -1145,7 +1145,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [68872](68872.md) | Villanueva             |
 | [68895](68895.md) | Zapatoca               |
 
-## STATE: Sucre
+## SUCRE
 
 | CountyID          | CountyName          |
 |:------------------|:--------------------|
@@ -1176,7 +1176,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [70820](70820.md) | Santiago de Tolú    |
 | [70823](70823.md) | Tolú Viejo          |
 
-## STATE: Tolima
+## TOLIMA
 
 | CountyID          | CountyName        |
 |:------------------|:------------------|
@@ -1228,7 +1228,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [73870](73870.md) | Villahermosa      |
 | [73873](73873.md) | Villarrica        |
 
-## STATE: Valle Del Cauca
+## VALLE DEL CAUCA
 
 | CountyID          | CountyName          |
 |:------------------|:--------------------|
@@ -1275,7 +1275,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [76892](76892.md) | Yumbo               |
 | [76895](76895.md) | Zarzal              |
 
-## STATE: Vaupés
+## VAUPÉS
 
 | CountyID          | CountyName     |
 |:------------------|:---------------|
@@ -1286,7 +1286,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 | [97777](97777.md) | Papunaua (ANM) |
 | [97889](97889.md) | Yavaraté (ANM) |
 
-## STATE: Vichada
+## VICHADA
 
 | CountyID          | CountyName     |
 |:------------------|:---------------|
