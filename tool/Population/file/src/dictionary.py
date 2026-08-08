@@ -23,6 +23,8 @@ general_vars = ([
 dicts = {
     'study_name': 'RESEARCH: _“Population and Public Services Demand Projections (PPSD)”_',
 
+    'study_desc': 'PPSD are analytical estimates used by governments and planners to anticipate future changes in population size, age distribution, and the resulting community needs for utilities, healthcare, education, and infrastructure as sizing future water treatment facilities, electrical grids, and road networks based on spatial growth.',
+
     'keywords': 'Keywords: `population` `public-service` `projection` `lineal` `polynomial` `logarithmic` `potential` `exponential` `arithmetic` `geometric` `wappaus` `dane` `colombia` `south-america`',
 
     'census_data': 'Census data are official statistics collected by a government about the people and housing in a country. They usually include counts of total population, age, sex, race, income, education, and jobs.',
