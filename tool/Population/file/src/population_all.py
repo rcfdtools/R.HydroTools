@@ -74,7 +74,7 @@ for county_id in county_list:
     funcs.print_log(file_log, f'\n\n> **General running parameters**: ', on_screen = print_on_screen)
     for dict_var in dictionary.general_vars:
         funcs.print_log(file_log, f'• {dict_var[1]}: _{eval(dict_var[0])}_. ', on_screen=print_on_screen)
-    funcs.print_log(file_log, f'\nDynamic map: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url})', center_div=True, on_screen=print_on_screen)
+    funcs.print_log(file_log, f'Dynamic map: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url})', center_div=True, on_screen=print_on_screen)
     funcs.print_log(file_log, f'{geojson}', center_div=True, on_screen=print_on_screen)
     funcs.print_log(file_log, f'\n\n## 0. Census Data ({len(filtered_df)} records)')
     funcs.print_log(file_log, f'\n\n{dictionary.dicts['census_data']}\n\n📅Global census file: [Population.xlsx](../data/Population.xlsx)', on_screen = print_on_screen)
