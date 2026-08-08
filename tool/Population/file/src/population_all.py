@@ -79,7 +79,7 @@ for county_id in county_list:
         df_relative_error = pd.DataFrame()
         df_projected['Year'] = x_future
         df_projected['CountyID'] = county_id
-        funcs.print_log(file_log, f'\n\n## {num}. {zone} County Population Projections')
+        funcs.print_log(file_log, f'\n\n## {num}. {zone}')
 
         # Polynomial projection Deg 1
         funcs.print_log(file_log, f'\n\n### {num}.1. Coefficients and Parameters\n\n')
