@@ -20,7 +20,7 @@ pd.set_option('display.width', None)
 # General Setup
 app_version = 'v20260806'
 file_path = '../data/Population.xlsx'
-county_list = ['All'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
+county_list = ['25899'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
 projection_year_max = 2050 # ● Projection year
 process_polynomial_d2_up = False # ● Polynomial projection over grade 2 is not recommend because over fit the obtained values
 process_wappaus = True # ● Projection only recommend for short term periods and condition_value < 200
@@ -37,11 +37,14 @@ python_version = platform.python_version()
 pandas_version = pd.__version__
 numpy_version = np.__version__
 
-# Read general census file
+# Read general census file and shapefile database
 dtype={'Year': int, 'CountyID': str, 'StateID': str, 'PTotal': int, 'PUrban': int, 'PRural': int}
 df = pd.read_excel(file_path, sheet_name='Population', dtype=dtype)
 df = df.sort_values(by=['CountyID', 'Year'])
 if drop_dataset_notes: df = df.drop(columns=['Notes'])
+dbf = Dbf5('../shp/ColombiaCounty.dbf')
+df_shapefile = pd.DataFrame(dbf.to_dataframe())
+df_shapefile = df_shapefile[['CountyID', 'Latitude', 'Longitude']]
 
 # Pre-processing
 if county_list[0] == 'All':
@@ -56,6 +59,14 @@ for county_id in county_list:
     state_name = df[df['CountyID'] == county_id]['StateName'].values[0]
     county_name = df[df['CountyID'] == county_id]['CountyName'].values[0]
     subtitle = f'{country_name} - {state_name} - {county_name} (ID: {county_id})'
+    df_shapefile_info = df_shapefile[df_shapefile['CountyID'] == county_id]
+    county_latitude = df_shapefile_info['Latitude'].values[0]
+    county_longitude = df_shapefile_info['Longitude'].values[0]
+    google_maps_url = f'http://maps.google.com/maps?q={county_latitude},{county_longitude}'
+    openstreetmap_url = f'https://www.openstreetmap.org/#map=18/{county_latitude}/{county_longitude}&layers=P'
+    bing_map_url = f'https://www.bing.com/maps?cp={county_latitude}~{county_longitude}&lvl=18'
+    apple_map_url = f'https://maps.apple.com/frame?center={county_latitude}%2C{county_longitude}&span=0.003%2C0.006'
+    geojson = '```geojson\n{\n  "type": "Feature",\n  "geometry": {\n    "type": "Point", \n    "coordinates": [' + str(county_longitude) + ', ' + str(county_latitude) + ']\n  }, \n  "properties": {\n    "Name": "' + subtitle + '"\n  }\n}\n```'
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen = print_on_screen)
     funcs.print_log(file_log, f'# _“Population and Public Services Demand Projections (PPSD) until Year {projection_year_max} for {subtitle}”_', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n{dictionary.dicts['keywords']}\n\n{dictionary.dicts['study_desc']}', on_screen = print_on_screen)
@@ -63,6 +74,8 @@ for county_id in county_list:
     funcs.print_log(file_log, f'\n\n> **General running parameters**: ', on_screen = print_on_screen)
     for dict_var in dictionary.general_vars:
         funcs.print_log(file_log, f'• {dict_var[1]}: _{eval(dict_var[0])}_. ', on_screen=print_on_screen)
+    funcs.print_log(file_log, f'\nDynamic map: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url})', center_div=True, on_screen=print_on_screen)
+    funcs.print_log(file_log, f'{geojson}', center_div=True, on_screen=print_on_screen)
     funcs.print_log(file_log, f'\n\n## 0. Census Data ({len(filtered_df)} records)')
     funcs.print_log(file_log, f'\n\n{dictionary.dicts['census_data']}\n\n📅Global census file: [Population.xlsx](../data/Population.xlsx)', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n\n{filtered_df.sort_values(by='Year').to_markdown(index=False)}')

@@ -4,7 +4,7 @@
 # General vars description in pmp.py
 general_vars = ([
                   ['app_version', 'app_version'], # App control version
-                  ['runtime', 'runtime'],
+                  #['runtime', 'runtime'],
                   ['python_version', 'Python version'],
                   ['pandas_version', 'Pandas version'],
                   ['numpy_version', 'NumPy version'],
