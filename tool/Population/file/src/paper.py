@@ -52,3 +52,4 @@ for group_name, group_df in grouped:
 funcs.print_log(file_log, f'\n\n<div align="center"><img alt="R.HydroTools" src="../graph/qr-code.png" width="250px"><br><sub>Share this research</sub></div><br>', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
 
+
