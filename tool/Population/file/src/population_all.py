@@ -28,7 +28,7 @@ set_negative_to_zero = True
 set_infinite_to_zero = True
 drop_dataset_notes = True
 create_plot = True # ● Creates, save and include plots into reports
-show_plot = True # Show plot on Python screen console
+show_plot = False # Show plot on Python screen console
 dpi = 96 # Graph plot resolution
 print_on_screen = False # Global print control in screen
 zone_vars = ['Total', 'Urban', 'Rural']
@@ -86,6 +86,7 @@ for county_id in county_list:
     num = 1
     for zone in zone_vars:
         fig_file = '../graph/' + county_id + zone + '.png'  #######################
+        fig_file1 = '../graph/' + county_id + zone + 'Bestfit.png'  #######################
         filtered_df = df[df['CountyID'] == county_id]
         max_year = filtered_df['Year'].max()
         min_year = filtered_df['Year'].min()
@@ -253,8 +254,9 @@ for county_id in county_list:
         #funcs.print_log(file_log, f'\nProjected values for best method: {best_method}\n\n{df_projected[['CountyID', 'Year', best_method]].to_markdown(index=False)}')
         funcs.print_log(file_log, f'\n\n💙Best method: _**{best_method}**_')
         # Plot best method
-        funcs.print_log(file_log, f'\n\nPlot must be here...')
         if create_plot:
+            #funcs.print_log(file_log, f'\n\nPlot must be here...')
+            funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file1}" width="600"></img>', center_div=True, on_screen=print_on_screen)
             plt.scatter(filtered_df['Year'], filtered_df[f'P{zone}'], color='black', label='Censal Data')
             plt.plot(x_future, df_projected[best_method], color='green', linestyle='-', lw=1, label=f'{best_method}')
             #plt.plot(x_future, df_projected[best_method], color='green', marker='o', markersize=3, markerfacecolor='green', markeredgecolor='black', markeredgewidth=0, linestyle='-', lw=1, label=f'{best_method}')
@@ -263,6 +265,7 @@ for county_id in county_list:
             plt.title(f'{zone} county population projections until year {projection_year_max} (Best fit)\n{subtitle}')
             plt.legend(facecolor='black', frameon=False, framealpha=1)
             plt.grid(visible=True, color='black', linewidth=0.5, linestyle='--', alpha=0.1)
+            plt.savefig(fig_file1, dpi=dpi)  ####################
             if show_plot: plt.show()
             plt.close()
 
