@@ -103,6 +103,8 @@ for county_id in county_list:
         c1, c2 = coefficients_deg1[0], coefficients_deg1[1]
         deg1_projection = np.round(c1 * x_future + c2, decimals=0)
         if set_negative_to_zero: deg1_projection[deg1_projection < 0] = 0
+        if set_infinite_to_zero: deg1_projection[np.isinf(deg1_projection)] = 0
+        deg1_projection[np.isnan(deg1_projection)] = 0  # = np.nan
         df_projected[f'P{zone}PD1'] =  deg1_projection
         funcs.print_log(file_log, f'* (PD1) Polynomial Deg 1: {coefficients_deg1[0]}, {coefficients_deg1[1]} (lineal)\n')
 
@@ -112,6 +114,8 @@ for county_id in county_list:
             c1, c2, c3 = coefficients_deg2[0], coefficients_deg2[1], coefficients_deg2[2]
             deg2_projection = np.round(c1 * x_future**2 + c2 * x_future + c3, decimals=0)
             if set_negative_to_zero: deg2_projection[deg2_projection < 0] = 0
+            if set_infinite_to_zero: deg2_projection[np.isinf(deg2_projection)] = 0
+            deg2_projection[np.isnan(deg2_projection)] = 0  # = np.nan
             df_projected[f'P{zone}PD2'] =  deg2_projection
             funcs.print_log(file_log, f'* (PD2) Polynomial Deg 2: {coefficients_deg2[0]}, {coefficients_deg2[1]}, {coefficients_deg2[2]}\n')
 
@@ -120,6 +124,8 @@ for county_id in county_list:
             c1, c2, c3, c4 = coefficients_deg3[0], coefficients_deg3[1], coefficients_deg3[2], coefficients_deg3[3]
             deg3_projection = np.round(c1 * x_future**3 + c2 * x_future**2 + c3 * x_future + c4, decimals=0)
             if set_negative_to_zero: deg3_projection[deg3_projection < 0] = 0
+            if set_infinite_to_zero: deg3_projection[np.isinf(deg3_projection)] = 0
+            deg3_projection[np.isnan(deg3_projection)] = 0  # = np.nan
             df_projected[f'P{zone}PD3'] =  deg3_projection
             funcs.print_log(file_log, f'* (PD3) Polynomial Deg 3: {coefficients_deg3[0]}, {coefficients_deg3[1]}, {coefficients_deg3[2]}, {coefficients_deg3[3]}\n')
 
@@ -128,6 +134,8 @@ for county_id in county_list:
             c1, c2, c3, c4, c5 = coefficients_deg4[0], coefficients_deg4[1], coefficients_deg4[2], coefficients_deg4[3], coefficients_deg4[4]
             deg4_projection = np.round(c1 * x_future**4 + c2 * x_future**3 + c3 * x_future**2 + c4 * x_future + c5, decimals=0)
             if set_negative_to_zero: deg4_projection[deg4_projection < 0] = 0
+            if set_infinite_to_zero: deg4_projection[np.isinf(deg4_projection)] = 0
+            deg4_projection[np.isnan(deg4_projection)] = 0  # = np.nan
             df_projected[f'P{zone}PD4'] =  deg4_projection
             funcs.print_log(file_log, f'* (PD4) Polynomial Deg 4: {coefficients_deg4[0]}, {coefficients_deg4[1]}, {coefficients_deg4[2]}, {coefficients_deg4[3]}, {coefficients_deg4[4]}\n')
 
@@ -136,6 +144,8 @@ for county_id in county_list:
         c1, c2 = coefficients_logarithmic[0], coefficients_logarithmic[1]
         logarithmic_projection = np.round(c1 * np.log(x_future) + c2, decimals=0)
         if set_negative_to_zero: logarithmic_projection[logarithmic_projection < 0] = 0
+        if set_infinite_to_zero: logarithmic_projection[np.isinf(logarithmic_projection)] = 0
+        logarithmic_projection[np.isnan(logarithmic_projection)] = 0  # = np.nan
         df_projected[f'P{zone}Log'] =  logarithmic_projection
         funcs.print_log(file_log, f'* (Log) Logarithmic: {coefficients_logarithmic[0]}, {coefficients_logarithmic[1]}\n')
 
@@ -155,6 +165,8 @@ for county_id in county_list:
         c1, c2 = coefficients_exponential[0], np.exp(coefficients_exponential[1])
         exponential_projection = np.round(c2 * np.exp(c1 * x_future), decimals=0)
         if set_negative_to_zero: exponential_projection[exponential_projection < 0] = 0
+        if set_infinite_to_zero: exponential_projection[np.isinf(exponential_projection)] = 0
+        exponential_projection[np.isnan(exponential_projection)] = 0  # = np.nan
         df_projected[f'P{zone}Exp'] =  exponential_projection
         funcs.print_log(file_log, f'* (Exp) Exponential: {c1}, {c2}\n')
 
@@ -169,9 +181,10 @@ for county_id in county_list:
         annual_growth = total_growth / elapsed_time
         funcs.print_log(file_log, f'* (Art) Arithmetic: Year diff. {t_end} - {t_0} = {t_end-t_0}, Population diff. {p_end} - {p_0} = {p_end-p_0}, Annual growth = {annual_growth}\n')
         arithmetic_projection = np.round(p_0+((x_future-t_0)*annual_growth), decimals=0)
+        if set_negative_to_zero: arithmetic_projection[arithmetic_projection < 0] = 0
+        if set_infinite_to_zero: arithmetic_projection[np.isinf(arithmetic_projection)] = 0
         arithmetic_projection[np.isnan(arithmetic_projection)] = 0  # = np.nan
         df_projected[f'P{zone}Art'] =  arithmetic_projection
-        if set_negative_to_zero: arithmetic_projection[arithmetic_projection < 0] = 0
 
         # Geometric projection
         annual_growth = (p_end/p_0) ** (1 / elapsed_time) - 1
@@ -179,6 +192,8 @@ for county_id in county_list:
         geometric_projection = np.round(p_end*(1+annual_growth)**(x_future-t_end), decimals=0)
         df_projected[f'P{zone}Geo'] =  geometric_projection
         if set_negative_to_zero: geometric_projection[geometric_projection < 0] = 0
+        if set_infinite_to_zero: geometric_projection[np.isinf(geometric_projection)] = 0
+        geometric_projection[np.isnan(geometric_projection)] = 0  # = np.nan
 
         # Wappaus projection (Attention: always locate this method as the last one in the calculation because it shows the detailed Condition values)
         numerator = 200 * (p_end - p_0)
@@ -189,8 +204,10 @@ for county_id in county_list:
         funcs.print_log(file_log, f'<sub>\nWappaus condition values: {[f"{x:.2f}" for x in condition_value]}\n</sub>\n')
         if process_wappaus and np.max(condition_value) < 200:
             wappaus_projection = np.round(p_0 * ((200 + condition_value) / (200 - condition_value)), decimals=0)
-            df_projected[f'P{zone}Wap'] =  wappaus_projection
             if set_negative_to_zero: wappaus_projection[wappaus_projection < 0] = 0
+            if set_infinite_to_zero: wappaus_projection[np.isinf(wappaus_projection)] = 0
+            wappaus_projection[np.isnan(wappaus_projection)] = 0  # = np.nan
+            df_projected[f'P{zone}Wap'] =  wappaus_projection
 
         # Print and plot results
         funcs.print_log(file_log, f'\n\n### {num}.2. Projected Dataset\n\n{df_projected.to_markdown(index=False)}')
