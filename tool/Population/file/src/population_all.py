@@ -175,11 +175,11 @@ for county_id in county_list:
         if set_negative_to_zero: geometric_projection[geometric_projection < 0] = 0
 
         # Wappaus projection (Attention: always locate this method as the last one in the calculation because it shows the detailed Condition values)
-        if process_wappaus:
-            numerator = 200 * (p_end - p_0)
-            denominator = (t_end - t_0) * (p_0 + p_end)
-            i = numerator / denominator
-            condition_value = i * (x_future - t_0)
+        numerator = 200 * (p_end - p_0)
+        denominator = (t_end - t_0) * (p_0 + p_end)
+        i = numerator / denominator
+        condition_value = i * (x_future - t_0)
+        if process_wappaus and np.max(condition_value) < 200:
             funcs.print_log(file_log, f'* (Wap) Wappaus: i = {i}, Condition values only valid for < 200)\n\n')
             funcs.print_log(file_log, f'<sub>\nWappaus condition values: {[f"{x:.2f}" for x in condition_value]}\n</sub>\n')
             wappaus_projection = np.round(p_0 * ((200 + condition_value) / (200 - condition_value)), decimals=0)
@@ -204,7 +204,7 @@ for county_id in county_list:
             plt.plot(x_future, exponential_projection, color='orange', linestyle='--', lw=1, label=f'(Exp) Exponential ({int(exponential_projection[-1])})')
             plt.plot(x_future, arithmetic_projection, color='orange', linestyle='-.', lw=1, label=f'(Art) Arithmetic ({int(arithmetic_projection[-1])})')
             plt.plot(x_future, geometric_projection, color='orange', linestyle=':', lw=1, label=f'(Geo) Geometric ({int(geometric_projection[-1])})')
-            if process_wappaus:
+            if process_wappaus and np.max(condition_value) < 200:
                 plt.plot(x_future, wappaus_projection, color='pink', linestyle='--', lw=1, label=f'(Wap) Wappaus ({int(wappaus_projection[-1])})')
             #plt.plot(filtered_df['Year'], p(filtered_df['Year']), color='red', lw=1, label='Fitted Line')
             plt.xlabel('Year')
@@ -223,7 +223,7 @@ for county_id in county_list:
             methods.insert(1, 'PD2')
             methods.insert(2, 'PD3')
             methods.insert(3, 'PD4')
-        if process_wappaus: methods.append('Wap')
+        if process_wappaus and np.max(condition_value) < 200: methods.append('Wap')
         methods = [f'P{zone}' + item for item in methods]
         #funcs.print_log(file_log, f'\nMethods: {methods}')
         # Absolute error
