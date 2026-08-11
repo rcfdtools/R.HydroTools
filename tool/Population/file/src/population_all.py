@@ -179,9 +179,9 @@ for county_id in county_list:
         denominator = (t_end - t_0) * (p_0 + p_end)
         i = numerator / denominator
         condition_value = i * (x_future - t_0)
+        funcs.print_log(file_log, f'* (Wap) Wappaus: i = {i}, Condition values only valid for < 200)\n\n')
+        funcs.print_log(file_log, f'<sub>\nWappaus condition values: {[f"{x:.2f}" for x in condition_value]}\n</sub>\n')
         if process_wappaus and np.max(condition_value) < 200:
-            funcs.print_log(file_log, f'* (Wap) Wappaus: i = {i}, Condition values only valid for < 200)\n\n')
-            funcs.print_log(file_log, f'<sub>\nWappaus condition values: {[f"{x:.2f}" for x in condition_value]}\n</sub>\n')
             wappaus_projection = np.round(p_0 * ((200 + condition_value) / (200 - condition_value)), decimals=0)
             df_projected[f'P{zone}Wap'] =  wappaus_projection
             if set_negative_to_zero: wappaus_projection[wappaus_projection < 0] = 0
