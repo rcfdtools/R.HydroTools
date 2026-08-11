@@ -20,7 +20,7 @@ pd.set_option('display.width', None)
 # General Setup
 app_version = 'v20260806'
 file_path = '../data/Population.xlsx'
-county_list = ['All'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
+county_list = ['13042'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
 projection_year_max = 2050 # ● Projection year
 process_polynomial_d2_up = False # ● Polynomial projection over grade 2 is not recommend because over fit the obtained values
 process_wappaus = True # ● Projection only recommend for short term periods and condition_value < 200
@@ -145,6 +145,8 @@ for county_id in county_list:
         potential_projection = np.round(10**c2 * x_future**c1, decimals=0)
         if set_negative_to_zero: potential_projection[potential_projection < 0] = 0
         if set_infinite_to_zero: potential_projection[np.isinf(potential_projection)] = 0 # = np.nan
+        potential_projection[np.isnan(potential_projection)] = 0 # = np.nan
+        #if np.isnan(potential_projection).any() == False: ################
         df_projected[f'P{zone}Pow'] =  potential_projection
         funcs.print_log(file_log, f'* (Pow) Potential: {coefficients_potential[0]}, {coefficients_potential[1]}\n')
 
