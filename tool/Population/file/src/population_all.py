@@ -20,15 +20,16 @@ pd.set_option('display.width', None)
 # General Setup
 app_version = 'v20260806'
 file_path = '../data/Population.xlsx'
-county_list = ['All'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
+county_list = ['25899'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
 projection_year_max = 2050 # ● Projection year
 process_polynomial_d2_up = False # ● Polynomial projection over grade 2 is not recommend because over fit the obtained values
 process_wappaus = True # ● Projection only recommend for short term periods and condition_value < 200
 set_negative_to_zero = True
 set_infinite_to_zero = True
 drop_dataset_notes = True
-create_plot = False # ● Creates, save and include plots into reports
-show_plot = False # Show plot on Python screen console
+create_plot = True # ● Creates, save and include plots into reports
+show_plot = True # Show plot on Python screen console
+dpi = 96 # Graph plot resolution
 print_on_screen = False # Global print control in screen
 zone_vars = ['Total', 'Urban', 'Rural']
 water_supply = pd.DataFrame({'CZ': [1000, 2000, 99999], 'WS': [120, 130, 140]}) # Water supply in liters per capita per day - lpcd: Level or elevation, Water Supply
@@ -84,6 +85,7 @@ for county_id in county_list:
     # Processing by zone
     num = 1
     for zone in zone_vars:
+        fig_file = '../graph/' + county_id + zone + '.png'  #######################
         filtered_df = df[df['CountyID'] == county_id]
         max_year = filtered_df['Year'].max()
         min_year = filtered_df['Year'].min()
@@ -189,8 +191,9 @@ for county_id in county_list:
         # Print and plot results
         funcs.print_log(file_log, f'\n\n### {num}.2. Projected Dataset\n\n{df_projected.to_markdown(index=False)}')
         #funcs.print_log(file_log, f'\n\n### Projected dataset\n\n{df_projected.transpose().to_markdown(index=True)}')
-        funcs.print_log(file_log, f'\n\nPlot must be here...')
-        if show_plot:
+        if create_plot:
+            #funcs.print_log(file_log, f'\n\nPlot must be here...')
+            funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file}" width="600"></img>', center_div=True, on_screen=print_on_screen)
             #p = np.poly1d(coefficients_deg1) # Create a 1D polynomial object
             #plt.scatter(filtered_df['Year'], filtered_df[f'P{zone}'], color='black', label='Censal Data')
             plt.scatter(filtered_df.index, filtered_df[f'P{zone}'], color='black', label='Censal Data')
@@ -212,7 +215,8 @@ for county_id in county_list:
             plt.title(f'{zone} county population projections until year {projection_year_max}\n{subtitle}')
             plt.legend(facecolor='black', frameon=False, framealpha=1)
             plt.grid(visible=True, color='black', linewidth=0.5, linestyle='--', alpha=0.1)
-            plt.show()
+            plt.savefig(fig_file, dpi=dpi) ####################
+            if show_plot: plt.show()
             plt.close()
 
         # Absolute and relative error
@@ -250,7 +254,7 @@ for county_id in county_list:
         funcs.print_log(file_log, f'\n\n💙Best method: _**{best_method}**_')
         # Plot best method
         funcs.print_log(file_log, f'\n\nPlot must be here...')
-        if show_plot:
+        if create_plot:
             plt.scatter(filtered_df['Year'], filtered_df[f'P{zone}'], color='black', label='Censal Data')
             plt.plot(x_future, df_projected[best_method], color='green', linestyle='-', lw=1, label=f'{best_method}')
             #plt.plot(x_future, df_projected[best_method], color='green', marker='o', markersize=3, markerfacecolor='green', markeredgecolor='black', markeredgewidth=0, linestyle='-', lw=1, label=f'{best_method}')
@@ -259,7 +263,7 @@ for county_id in county_list:
             plt.title(f'{zone} county population projections until year {projection_year_max} (Best fit)\n{subtitle}')
             plt.legend(facecolor='black', frameon=False, framealpha=1)
             plt.grid(visible=True, color='black', linewidth=0.5, linestyle='--', alpha=0.1)
-            plt.show()
+            if show_plot: plt.show()
             plt.close()
 
         # Water supply in liters per capita per day (lpcd)
