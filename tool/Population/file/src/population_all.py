@@ -192,9 +192,9 @@ for county_id in county_list:
         # Print and plot results
         funcs.print_log(file_log, f'\n\n### {num}.2. Projected Dataset\n\n{df_projected.to_markdown(index=False)}')
         #funcs.print_log(file_log, f'\n\n### Projected dataset\n\n{df_projected.transpose().to_markdown(index=True)}')
+        # funcs.print_log(file_log, f'\n\nPlot must be here...')
+        funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file}" width="600"></img>', center_div=True, on_screen=print_on_screen)
         if create_plot:
-            #funcs.print_log(file_log, f'\n\nPlot must be here...')
-            funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file}" width="600"></img>', center_div=True, on_screen=print_on_screen)
             #p = np.poly1d(coefficients_deg1) # Create a 1D polynomial object
             #plt.scatter(filtered_df['Year'], filtered_df[f'P{zone}'], color='black', label='Censal Data')
             plt.scatter(filtered_df.index, filtered_df[f'P{zone}'], color='black', label='Censal Data')
@@ -237,7 +237,7 @@ for county_id in county_list:
         # Relative error as percentage
         for i in methods:
             filtered_df[f'{i}RelError'] = 100 * filtered_df[f'{i}AbsError'] / filtered_df[f'P{zone}']
-        funcs.print_log(file_log, f'\n\n### {num}.3. Filtered dataset with projected values, absolute error, relative error as percentage\n\n{dictionary.dicts['abosulute_relative_error']}\n\nAbsolute and relative error\n\n{filtered_df.to_markdown(index=False)}')
+        funcs.print_log(file_log, f'\n\n### {num}.3. Best fit with absolute error and relative error (%)\n\n{dictionary.dicts['abosulute_relative_error']}\n\nAbsolute and relative error\n\n{filtered_df.to_markdown(index=False)}')
         # Mean relative error
         funcs.print_log(file_log, '\n\nRelative error mean\n')
         relative_error = []
@@ -254,9 +254,9 @@ for county_id in county_list:
         #funcs.print_log(file_log, f'\nProjected values for best method: {best_method}\n\n{df_projected[['CountyID', 'Year', best_method]].to_markdown(index=False)}')
         funcs.print_log(file_log, f'\n\n💙Best method: _**{best_method}**_')
         # Plot best method
+        # funcs.print_log(file_log, f'\n\nPlot must be here...')
+        funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file1}" width="600"></img>', center_div=True, on_screen=print_on_screen)
         if create_plot:
-            #funcs.print_log(file_log, f'\n\nPlot must be here...')
-            funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file1}" width="600"></img>', center_div=True, on_screen=print_on_screen)
             plt.scatter(filtered_df['Year'], filtered_df[f'P{zone}'], color='black', label='Censal Data')
             plt.plot(x_future, df_projected[best_method], color='green', linestyle='-', lw=1, label=f'{best_method}')
             #plt.plot(x_future, df_projected[best_method], color='green', marker='o', markersize=3, markerfacecolor='green', markeredgecolor='black', markeredgewidth=0, linestyle='-', lw=1, label=f'{best_method}')
