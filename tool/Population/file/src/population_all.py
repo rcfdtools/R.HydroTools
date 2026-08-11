@@ -20,7 +20,7 @@ pd.set_option('display.width', None)
 # General Setup
 app_version = 'v20260806'
 file_path = '../data/Population.xlsx'
-county_list = ['13042'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
+county_list = ['All'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
 projection_year_max = 2050 # ● Projection year
 process_polynomial_d2_up = False # ● Polynomial projection over grade 2 is not recommend because over fit the obtained values
 process_wappaus = True # ● Projection only recommend for short term periods and condition_value < 200
@@ -169,6 +169,7 @@ for county_id in county_list:
         annual_growth = total_growth / elapsed_time
         funcs.print_log(file_log, f'* (Art) Arithmetic: Year diff. {t_end} - {t_0} = {t_end-t_0}, Population diff. {p_end} - {p_0} = {p_end-p_0}, Annual growth = {annual_growth}\n')
         arithmetic_projection = np.round(p_0+((x_future-t_0)*annual_growth), decimals=0)
+        arithmetic_projection[np.isnan(arithmetic_projection)] = 0  # = np.nan
         df_projected[f'P{zone}Art'] =  arithmetic_projection
         if set_negative_to_zero: arithmetic_projection[arithmetic_projection < 0] = 0
 
