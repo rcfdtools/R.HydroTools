@@ -41,11 +41,13 @@ numpy_version = np.__version__
 unicode_translation_table = str.maketrans("áéíóúüñÇÁÉÍÓÚÜÑ", "aeiouunCAEIOUUN")
 rups_state_name_var = 'DEPARTAMENTO_PRESTACION' # Column state name in RUPS.csv
 rups_county_name_var = 'MUNICIPIO_PRESTACION' # Column county name in RUPS.csv
-rups_county_phone_var = 'TELEFONO' # Column phone in RUPS.csv
+rups_phone_var = 'TELEFONO' # Column phone in RUPS.csv
+rups_service_var = 'SERVICIO' # Column phone in RUPS.csv
+rups_service_var_drop = 'ASEO' # Values to exclude
 
 # Read general census, RUPS and shapefile database
 dtype = {'Year': int, 'CountyID': str, 'StateID': str, 'PTotal': int, 'PUrban': int, 'PRural': int}
-dtype_rups = {rups_county_phone_var: str}
+dtype_rups = {rups_phone_var: str}
 df = pd.read_excel(file_path, sheet_name='Population', dtype=dtype)
 df = df.sort_values(by=['CountyID', 'Year'])
 if drop_dataset_notes: df = df.drop(columns=['Notes'])
@@ -97,8 +99,8 @@ for county_id in county_list:
     funcs.print_log(file_log, f'\n\n> 🔥Some records could had specific notes about the registered values or the corresponding urban or rural distribution.')
     if len(df_shapefile) > 0:
         df_rups_county = df_rups_county.drop(columns=[rups_state_name_var, rups_county_name_var])
-        funcs.print_log(file_log, f'\n\n**RUPS - Local public utility companies**\n\n {df_rups_county.to_markdown(index=False)}') # {state_name_unicode.upper()} - {county_name_unicode.upper()}
-        funcs.print_log(file_log, f'\n\n> [📅RUPS Database: Registro Único de Prestadores de Servicios Públicos de Colombia - Suramérica](https://www.datos.gov.co/Hacienda-y-Cr-dito-P-blico/Registro-nico-de-Prestadores-de-Servicios-P-blicos/4qkq-csdn/about_data)')
+        df_rups_county = df_rups_county[df_rups_county[rups_service_var] != rups_service_var_drop]
+        funcs.print_log(file_log, f'\n\n📅   [RUPS](https://www.datos.gov.co/Hacienda-y-Cr-dito-P-blico/Registro-nico-de-Prestadores-de-Servicios-P-blicos/4qkq-csdn/about_data) - Local public utility companies: [RUPS.csv](../data/RUPS.xlsx)\n\n {df_rups_county.to_markdown(index=False)}') # {state_name_unicode.upper()} - {county_name_unicode.upper()}
 
     # Processing by zone
     num = 1 # Counter required for contents table index
