@@ -9,6 +9,7 @@ import dictionary as dictionary
 import pandas as pd
 import numpy as np
 import tabulate
+from tabulate import tabulate
 import matplotlib.pyplot as plt
 from simpledbf import Dbf5
 from datetime import datetime
@@ -32,10 +33,17 @@ pandas_version = pd.__version__
 numpy_version = np.__version__
 file_log_name = f'../report/Readme.md'  # Markdown file log
 file_log = open(file_log_name, 'w+', encoding='utf-8')  # w+ create the file if it doesn't exist
-
-# Processing
 dtype={'Year': int, 'CountyID': str, 'StateID': str, 'PTotal': int, 'PUrban': int, 'PRural': int}
 df = pd.read_excel(file_path, sheet_name='Population', dtype=dtype)
+
+# Checking wrong Counties names (show only in console)
+print('\nChecking wrong Counties names (empty list means all is right)')
+df = df.sort_values(by=['CountyID', 'CountyName'])
+df_check = df[['CountyID','CountyName']].drop_duplicates()
+df_check = df_check[df_check.duplicated(subset=['CountyID'],keep=False)]
+print(df_check.to_markdown(index=False))
+
+# Processing
 df = df.sort_values(by=['StateName', 'CountyID', 'Year'])
 if drop_dataset_notes: df = df.drop(columns=['Notes'])
 #df['Report'] = f'[{df['CountyID'].astype(str)}.md](Link)'

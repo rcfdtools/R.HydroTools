@@ -20,7 +20,7 @@ pd.set_option('display.width', None)
 # General Setup
 app_version = 'v20260806'
 file_path = '../data/Population.xlsx'
-county_list = ['25899'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
+county_list = ['All'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
 projection_year_max = 2050 # ● Projection year
 process_polynomial_d2_up = False # ● Polynomial projection over grade 2 is not recommend because over fit the obtained values
 process_wappaus = True # Projection only recommend for short term periods and condition_value < 200, evaluated automatically
@@ -53,7 +53,7 @@ if county_list[0] == 'All':
 run_percentage = 1
 print(f'Counties to process: {len(county_list)}\n')
 for county_id in county_list:
-    print(f'Processing {run_percentage:04d} ({round((run_percentage/len(county_list))*100, 2):.2f}%): {county_id}')
+    print(f'Processing ({run_percentage:04d} → {round((run_percentage/len(county_list))*100, 2):.2f}%): {county_id}')
     file_log_name = f'../report/{county_id}.md'  # Markdown file log
     file_log = open(file_log_name, 'w+', encoding='utf-8')  # w+ create the file if it doesn't exist
     filtered_df = df[df['CountyID'] == county_id]
@@ -292,7 +292,7 @@ for county_id in county_list:
             plt.close()
 
         # Water supply in liters per capita per day (lpcd)
-        funcs.print_log(file_log, f'\n\n### {num}.4. Fresh water supply demand in liters per capita per day (lpcd)\n\n{dictionary.dicts['fresh_water_supply']}\n\n> `CZ`: Level in meters above the sea level (masl)<br> `WS`: Fresh water supply demand in liters per capita per day (lpcd or l/h/d)<br> `WSAll`: Zonal fresh water supply demand in liters per second (l/s)<br> `A`: Zonal area in square meters<br> `DP`: Population density (people/hectare).\n\nReference values (RAS Colombia)\n\n{water_supply.to_markdown(index=False)}')
+        funcs.print_log(file_log, f'\n\n### {num}.4. Fresh water supply demand in liters per capita per day (lpcd)\n\n{dictionary.dicts['fresh_water_supply']}\n\n> `CZ`: Level in meters above the sea level (masl)<br> `WS`: Fresh water supply demand in liters per capita per day (lpcd or l/h/d)<br> `WSAll`: Zonal fresh water supply demand in liters per second (l/s)<br> `A`: Zonal area in square meters<br> `DP`: Population density (people/hectare)\n\nReference values (RAS Colombia)\n\n{water_supply.to_markdown(index=False)}')
         dbf = Dbf5('../shp/ColombiaCounty.dbf')
         df_county = pd.DataFrame(dbf.to_dataframe())
         df_county = df_county[df_county['CountyID'] == county_id]

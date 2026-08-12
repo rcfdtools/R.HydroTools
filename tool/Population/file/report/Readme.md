@@ -19,7 +19,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [91405](91405.md) | La Chorrera      |
 | [91407](91407.md) | La Pedrera       |
 | [91430](91430.md) | La Victoria      |
-| [91460](91460.md) | Miriti - Paraná  |
+| [91460](91460.md) | Mirití - Paraná  |
 | [91530](91530.md) | Puerto Alegría   |
 | [91536](91536.md) | Puerto Arica     |
 | [91540](91540.md) | Puerto Nariño    |
@@ -28,133 +28,133 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 
 ## ANTIOQUIA
 
-| CountyID          | CountyName             |
-|:------------------|:-----------------------|
-| [05001](05001.md) | Medellín               |
-| [05002](05002.md) | Abejorral              |
-| [05004](05004.md) | Abriaquí               |
-| [05021](05021.md) | Alejandría             |
-| [05030](05030.md) | Amagá                  |
-| [05031](05031.md) | Amalfi                 |
-| [05034](05034.md) | Andes                  |
-| [05036](05036.md) | Angelópolis            |
-| [05038](05038.md) | Angostura              |
-| [05040](05040.md) | Anorí                  |
-| [05042](05042.md) | Santafé de Antioquia   |
-| [05044](05044.md) | Anza                   |
-| [05045](05045.md) | Apartadó               |
-| [05051](05051.md) | Arboletes              |
-| [05055](05055.md) | Argelia                |
-| [05059](05059.md) | Armenia                |
-| [05079](05079.md) | Barbosa                |
-| [05086](05086.md) | Belmira                |
-| [05088](05088.md) | Bello                  |
-| [05091](05091.md) | Betania                |
-| [05093](05093.md) | Betulia                |
-| [05101](05101.md) | Ciudad Bolívar         |
-| [05107](05107.md) | Briceño                |
-| [05113](05113.md) | Buriticá               |
-| [05120](05120.md) | Cáceres                |
-| [05125](05125.md) | Caicedo                |
-| [05129](05129.md) | Caldas                 |
-| [05134](05134.md) | Campamento             |
-| [05138](05138.md) | Cañasgordas            |
-| [05142](05142.md) | Caracolí               |
-| [05145](05145.md) | Caramanta              |
-| [05147](05147.md) | Carepa                 |
-| [05148](05148.md) | El Carmen de Viboral   |
-| [05150](05150.md) | Carolina               |
-| [05154](05154.md) | Caucasia               |
-| [05172](05172.md) | Chigorodó              |
-| [05190](05190.md) | Cisneros               |
-| [05197](05197.md) | Cocorná                |
-| [05206](05206.md) | Concepción             |
-| [05209](05209.md) | Concordia              |
-| [05212](05212.md) | Copacabana             |
-| [05234](05234.md) | Dabeiba                |
-| [05237](05237.md) | Don Matías             |
-| [05240](05240.md) | Ebéjico                |
-| [05250](05250.md) | El Bagre               |
-| [05264](05264.md) | Entrerrios             |
-| [05266](05266.md) | Envigado               |
-| [05282](05282.md) | Fredonia               |
-| [05284](05284.md) | Frontino               |
-| [05306](05306.md) | Giraldo                |
-| [05308](05308.md) | Girardota              |
-| [05310](05310.md) | Gómez Plata            |
-| [05313](05313.md) | Granada                |
-| [05315](05315.md) | Guadalupe              |
-| [05318](05318.md) | Guarne                 |
-| [05321](05321.md) | Guatapé                |
-| [05347](05347.md) | Heliconia              |
-| [05353](05353.md) | Hispania               |
-| [05360](05360.md) | Itagui                 |
-| [05361](05361.md) | Ituango                |
-| [05364](05364.md) | Jardín                 |
-| [05368](05368.md) | Jericó                 |
-| [05376](05376.md) | La Ceja                |
-| [05380](05380.md) | La Estrella            |
-| [05390](05390.md) | La Pintada             |
-| [05400](05400.md) | La Unión               |
-| [05411](05411.md) | Liborina               |
-| [05425](05425.md) | Maceo                  |
-| [05440](05440.md) | Marinilla              |
-| [05467](05467.md) | Montebello             |
-| [05475](05475.md) | Murindó                |
-| [05480](05480.md) | Mutatá                 |
-| [05483](05483.md) | Nariño                 |
-| [05490](05490.md) | Necoclí                |
-| [05495](05495.md) | Nechí                  |
-| [05501](05501.md) | Olaya                  |
-| [05541](05541.md) | Peñol                  |
-| [05543](05543.md) | Peque                  |
-| [05576](05576.md) | Pueblorrico            |
-| [05579](05579.md) | Puerto Berrío          |
-| [05585](05585.md) | Puerto Nare            |
-| [05591](05591.md) | Puerto Triunfo         |
-| [05604](05604.md) | Remedios               |
-| [05607](05607.md) | Retiro                 |
-| [05615](05615.md) | Rionegro               |
-| [05628](05628.md) | Sabanalarga            |
-| [05631](05631.md) | Sabaneta               |
-| [05642](05642.md) | Salgar                 |
-| [05647](05647.md) | San Andrés de Cuerquía |
-| [05649](05649.md) | San Carlos             |
-| [05652](05652.md) | San Francisco          |
-| [05656](05656.md) | San Jerónimo           |
-| [05658](05658.md) | San José de La Montaña |
-| [05659](05659.md) | San Juan de Urabá      |
-| [05660](05660.md) | San Luis               |
-| [05664](05664.md) | San Pedro              |
-| [05665](05665.md) | San Pedro de Uraba     |
-| [05667](05667.md) | San Rafael             |
-| [05670](05670.md) | San Roque              |
-| [05674](05674.md) | San Vicente            |
-| [05679](05679.md) | Santa Bárbara          |
-| [05686](05686.md) | Santa Rosa de Osos     |
-| [05690](05690.md) | Santo Domingo          |
-| [05697](05697.md) | El Santuario           |
-| [05736](05736.md) | Segovia                |
-| [05756](05756.md) | Sonson                 |
-| [05761](05761.md) | Sopetrán               |
-| [05789](05789.md) | Támesis                |
-| [05790](05790.md) | Tarazá                 |
-| [05792](05792.md) | Tarso                  |
-| [05809](05809.md) | Titiribí               |
-| [05819](05819.md) | Toledo                 |
-| [05837](05837.md) | Turbo                  |
-| [05842](05842.md) | Uramita                |
-| [05847](05847.md) | Urrao                  |
-| [05854](05854.md) | Valdivia               |
-| [05856](05856.md) | Valparaíso             |
-| [05858](05858.md) | Vegachí                |
-| [05861](05861.md) | Venecia                |
-| [05873](05873.md) | Vigía del Fuerte       |
-| [05885](05885.md) | Yalí                   |
-| [05887](05887.md) | Yarumal                |
-| [05890](05890.md) | Yolombó                |
-| [05893](05893.md) | Yondó                  |
-| [05895](05895.md) | Zaragoza               |
+| CountyID          | CountyName                |
+|:------------------|:--------------------------|
+| [05001](05001.md) | Medellín                  |
+| [05002](05002.md) | Abejorral                 |
+| [05004](05004.md) | Abriaquí                  |
+| [05021](05021.md) | Alejandría                |
+| [05030](05030.md) | Amagá                     |
+| [05031](05031.md) | Amalfi                    |
+| [05034](05034.md) | Andes                     |
+| [05036](05036.md) | Angelópolis               |
+| [05038](05038.md) | Angostura                 |
+| [05040](05040.md) | Anorí                     |
+| [05042](05042.md) | Santa Fe de Antioquia     |
+| [05044](05044.md) | Anzá                      |
+| [05045](05045.md) | Apartadó                  |
+| [05051](05051.md) | Arboletes                 |
+| [05055](05055.md) | Argelia                   |
+| [05059](05059.md) | Armenia                   |
+| [05079](05079.md) | Barbosa                   |
+| [05086](05086.md) | Belmira                   |
+| [05088](05088.md) | Bello                     |
+| [05091](05091.md) | Betania                   |
+| [05093](05093.md) | Betulia                   |
+| [05101](05101.md) | Ciudad Bolívar            |
+| [05107](05107.md) | Briceño                   |
+| [05113](05113.md) | Buriticá                  |
+| [05120](05120.md) | Cáceres                   |
+| [05125](05125.md) | Caicedo                   |
+| [05129](05129.md) | Caldas                    |
+| [05134](05134.md) | Campamento                |
+| [05138](05138.md) | Cañasgordas               |
+| [05142](05142.md) | Caracolí                  |
+| [05145](05145.md) | Caramanta                 |
+| [05147](05147.md) | Carepa                    |
+| [05148](05148.md) | Carmen de Viboral         |
+| [05150](05150.md) | Carolina                  |
+| [05154](05154.md) | Caucasia                  |
+| [05172](05172.md) | Chigorodó                 |
+| [05190](05190.md) | Cisneros                  |
+| [05197](05197.md) | Cocorná                   |
+| [05206](05206.md) | Concepción                |
+| [05209](05209.md) | Concordia                 |
+| [05212](05212.md) | Copacabana                |
+| [05234](05234.md) | Dabeiba                   |
+| [05237](05237.md) | Donmatías                 |
+| [05240](05240.md) | Ebéjico                   |
+| [05250](05250.md) | El Bagre                  |
+| [05264](05264.md) | Entrerrios                |
+| [05266](05266.md) | Envigado                  |
+| [05282](05282.md) | Fredonia                  |
+| [05284](05284.md) | Frontino                  |
+| [05306](05306.md) | Giraldo                   |
+| [05308](05308.md) | Girardota                 |
+| [05310](05310.md) | Gómez Plata               |
+| [05313](05313.md) | Granada                   |
+| [05315](05315.md) | Guadalupe                 |
+| [05318](05318.md) | Guarne                    |
+| [05321](05321.md) | Guatapé                   |
+| [05347](05347.md) | Heliconia                 |
+| [05353](05353.md) | Hispania                  |
+| [05360](05360.md) | Itagüí                    |
+| [05361](05361.md) | Ituango                   |
+| [05364](05364.md) | Jardín                    |
+| [05368](05368.md) | Jericó                    |
+| [05376](05376.md) | La Ceja                   |
+| [05380](05380.md) | La Estrella               |
+| [05390](05390.md) | La Pintada                |
+| [05400](05400.md) | La Unión                  |
+| [05411](05411.md) | Liborina                  |
+| [05425](05425.md) | Maceo                     |
+| [05440](05440.md) | Marinilla                 |
+| [05467](05467.md) | Montebello                |
+| [05475](05475.md) | Murindó                   |
+| [05480](05480.md) | Mutatá                    |
+| [05483](05483.md) | Nariño                    |
+| [05490](05490.md) | Necoclí                   |
+| [05495](05495.md) | Nechí                     |
+| [05501](05501.md) | Olaya                     |
+| [05541](05541.md) | Peñol                     |
+| [05543](05543.md) | Peque                     |
+| [05576](05576.md) | Pueblorrico               |
+| [05579](05579.md) | Puerto Berrío             |
+| [05585](05585.md) | Puerto Nare               |
+| [05591](05591.md) | Puerto Triunfo            |
+| [05604](05604.md) | Remedios                  |
+| [05607](05607.md) | El Retiro                 |
+| [05615](05615.md) | Rionegro                  |
+| [05628](05628.md) | Sabanalarga               |
+| [05631](05631.md) | Sabaneta                  |
+| [05642](05642.md) | Salgar                    |
+| [05647](05647.md) | San Andrés de Cuerquia    |
+| [05649](05649.md) | San Carlos                |
+| [05652](05652.md) | San Francisco             |
+| [05656](05656.md) | San Jerónimo              |
+| [05658](05658.md) | San José de La Montaña    |
+| [05659](05659.md) | San Juan de Urabá         |
+| [05660](05660.md) | San Luis                  |
+| [05664](05664.md) | San Pedro de Los Milagros |
+| [05665](05665.md) | San Pedro de Urabá        |
+| [05667](05667.md) | San Rafael                |
+| [05670](05670.md) | San Roque                 |
+| [05674](05674.md) | San Vicente               |
+| [05679](05679.md) | Santa Bárbara             |
+| [05686](05686.md) | Santa Rosa de Osos        |
+| [05690](05690.md) | Santo Domingo             |
+| [05697](05697.md) | Santuario                 |
+| [05736](05736.md) | Segovia                   |
+| [05756](05756.md) | Sonsón                    |
+| [05761](05761.md) | Sopetrán                  |
+| [05789](05789.md) | Támesis                   |
+| [05790](05790.md) | Tarazá                    |
+| [05792](05792.md) | Tarso                     |
+| [05809](05809.md) | Titiribí                  |
+| [05819](05819.md) | Toledo                    |
+| [05837](05837.md) | Turbo                     |
+| [05842](05842.md) | Uramita                   |
+| [05847](05847.md) | Urrao                     |
+| [05854](05854.md) | Valdivia                  |
+| [05856](05856.md) | Valparaiso                |
+| [05858](05858.md) | Vegachí                   |
+| [05861](05861.md) | Venecia                   |
+| [05873](05873.md) | Vigía del Fuerte          |
+| [05885](05885.md) | Yalí                      |
+| [05887](05887.md) | Yarumal                   |
+| [05890](05890.md) | Yolombó                   |
+| [05893](05893.md) | Yondó                     |
+| [05895](05895.md) | Zaragoza                  |
 
 ## ARAUCA
 
@@ -170,10 +170,10 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 
 ## ARCHIPIÉLAGO DE SAN ANDRÉS
 
-| CountyID          | CountyName   |
-|:------------------|:-------------|
-| [88001](88001.md) | San Andrés   |
-| [88564](88564.md) | Providencia  |
+| CountyID          | CountyName                   |
+|:------------------|:-----------------------------|
+| [88001](88001.md) | San Andrés                   |
+| [88564](88564.md) | Providencia y Santa Catalina |
 
 ## ATLÁNTICO
 
@@ -213,7 +213,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 
 | CountyID          | CountyName            |
 |:------------------|:----------------------|
-| [13001](13001.md) | Cartagena             |
+| [13001](13001.md) | Cartagena de Indias   |
 | [13006](13006.md) | Achí                  |
 | [13030](13030.md) | Altos del Rosario     |
 | [13042](13042.md) | Arenal                |
@@ -236,10 +236,10 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [13458](13458.md) | Montecristo           |
 | [13468](13468.md) | Mompós                |
 | [13473](13473.md) | Morales               |
-| [13490](13490.md) | Norosí (1)            |
+| [13490](13490.md) | Norosí                |
 | [13549](13549.md) | Pinillos              |
 | [13580](13580.md) | Regidor               |
-| [13600](13600.md) | Río Viejo (1)(3)      |
+| [13600](13600.md) | Rioviejo              |
 | [13620](13620.md) | San Cristóbal         |
 | [13647](13647.md) | San Estanislao        |
 | [13650](13650.md) | San Fernando          |
@@ -256,7 +256,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [13780](13780.md) | Talaigua Nuevo        |
 | [13810](13810.md) | Tiquisio              |
 | [13836](13836.md) | Turbaco               |
-| [13838](13838.md) | Turbaná               |
+| [13838](13838.md) | Turbana               |
 | [13873](13873.md) | Villanueva            |
 | [13894](13894.md) | Zambrano              |
 
@@ -301,12 +301,12 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [15272](15272.md) | Firavitoba            |
 | [15276](15276.md) | Floresta              |
 | [15293](15293.md) | Gachantivá            |
-| [15296](15296.md) | Gameza                |
+| [15296](15296.md) | Gámeza                |
 | [15299](15299.md) | Garagoa               |
 | [15317](15317.md) | Guacamayas            |
 | [15322](15322.md) | Guateque              |
 | [15325](15325.md) | Guayatá               |
-| [15332](15332.md) | Güicán                |
+| [15332](15332.md) | Güicán de La Sierra   |
 | [15362](15362.md) | Iza                   |
 | [15367](15367.md) | Jenesano              |
 | [15368](15368.md) | Jericó                |
@@ -383,10 +383,10 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [15835](15835.md) | Turmequé              |
 | [15837](15837.md) | Tuta                  |
 | [15839](15839.md) | Tutazá                |
-| [15842](15842.md) | Umbita                |
+| [15842](15842.md) | Úmbita                |
 | [15861](15861.md) | Ventaquemada          |
 | [15879](15879.md) | Viracachá             |
-| [15897](15897.md) | Zetaquira             |
+| [15897](15897.md) | Zetaquirá             |
 
 ## CALDAS
 
@@ -431,7 +431,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [18205](18205.md) | Curillo                |
 | [18247](18247.md) | El Doncello            |
 | [18256](18256.md) | El Paujil              |
-| [18410](18410.md) | La Montañita           |
+| [18410](18410.md) | Montañita              |
 | [18460](18460.md) | Milán                  |
 | [18479](18479.md) | Morelia                |
 | [18592](18592.md) | Puerto Rico            |
@@ -447,7 +447,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 |:------------------|:---------------------|
 | [85001](85001.md) | Yopal                |
 | [85010](85010.md) | Aguazul              |
-| [85015](85015.md) | Chameza              |
+| [85015](85015.md) | Chámeza              |
 | [85125](85125.md) | Hato Corozal         |
 | [85136](85136.md) | La Salina            |
 | [85139](85139.md) | Maní                 |
@@ -477,11 +477,11 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [19110](19110.md) | Buenos Aires           |
 | [19130](19130.md) | Cajibío                |
 | [19137](19137.md) | Caldono                |
-| [19142](19142.md) | Caloto(1)(3)           |
+| [19142](19142.md) | Caloto                 |
 | [19212](19212.md) | Corinto                |
 | [19256](19256.md) | El Tambo               |
 | [19290](19290.md) | Florencia              |
-| [19300](19300.md) | Guachené (1)           |
+| [19300](19300.md) | Guachené               |
 | [19318](19318.md) | Guapi                  |
 | [19355](19355.md) | Inzá                   |
 | [19364](19364.md) | Jambaló                |
@@ -492,7 +492,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [19455](19455.md) | Miranda                |
 | [19473](19473.md) | Morales                |
 | [19513](19513.md) | Padilla                |
-| [19517](19517.md) | Paez                   |
+| [19517](19517.md) | Páez                   |
 | [19532](19532.md) | Patía                  |
 | [19533](19533.md) | Piamonte               |
 | [19548](19548.md) | Piendamó               |
@@ -503,44 +503,44 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [19698](19698.md) | Santander de Quilichao |
 | [19701](19701.md) | Santa Rosa             |
 | [19743](19743.md) | Silvia                 |
-| [19760](19760.md) | Sotara                 |
+| [19760](19760.md) | Sotará                 |
 | [19780](19780.md) | Suárez                 |
 | [19785](19785.md) | Sucre                  |
 | [19807](19807.md) | Timbío                 |
 | [19809](19809.md) | Timbiquí               |
-| [19821](19821.md) | Toribio                |
+| [19821](19821.md) | Toribío                |
 | [19824](19824.md) | Totoró                 |
 | [19845](19845.md) | Villa Rica             |
 
 ## CESAR
 
-| CountyID          | CountyName          |
-|:------------------|:--------------------|
-| [20001](20001.md) | Valledupar          |
-| [20011](20011.md) | Aguachica           |
-| [20013](20013.md) | Agustín Codazzi     |
-| [20032](20032.md) | Astrea              |
-| [20045](20045.md) | Becerril            |
-| [20060](20060.md) | Bosconia            |
-| [20175](20175.md) | Chimichagua         |
-| [20178](20178.md) | Chiriguaná          |
-| [20228](20228.md) | Curumaní            |
-| [20238](20238.md) | El Copey            |
-| [20250](20250.md) | El Paso             |
-| [20295](20295.md) | Gamarra             |
-| [20310](20310.md) | González            |
-| [20383](20383.md) | La Gloria           |
-| [20400](20400.md) | La Jagua de Ibirico |
-| [20443](20443.md) | Manaure             |
-| [20517](20517.md) | Pailitas            |
-| [20550](20550.md) | Pelaya              |
-| [20570](20570.md) | Pueblo Bello        |
-| [20614](20614.md) | Río de Oro          |
-| [20621](20621.md) | La Paz              |
-| [20710](20710.md) | San Alberto         |
-| [20750](20750.md) | San Diego           |
-| [20770](20770.md) | San Martín          |
-| [20787](20787.md) | Tamalameque         |
+| CountyID          | CountyName               |
+|:------------------|:-------------------------|
+| [20001](20001.md) | Valledupar               |
+| [20011](20011.md) | Aguachica                |
+| [20013](20013.md) | Agustín Codazzi          |
+| [20032](20032.md) | Astrea                   |
+| [20045](20045.md) | Becerril                 |
+| [20060](20060.md) | Bosconia                 |
+| [20175](20175.md) | Chimichagua              |
+| [20178](20178.md) | Chiriguaná               |
+| [20228](20228.md) | Curumaní                 |
+| [20238](20238.md) | El Copey                 |
+| [20250](20250.md) | El Paso                  |
+| [20295](20295.md) | Gamarra                  |
+| [20310](20310.md) | González                 |
+| [20383](20383.md) | La Gloria                |
+| [20400](20400.md) | La Jagua de Ibirico      |
+| [20443](20443.md) | Manaure Balcón del Cesar |
+| [20517](20517.md) | Pailitas                 |
+| [20550](20550.md) | Pelaya                   |
+| [20570](20570.md) | Pueblo Bello             |
+| [20614](20614.md) | Río de Oro               |
+| [20621](20621.md) | La Paz                   |
+| [20710](20710.md) | San Alberto              |
+| [20750](20750.md) | San Diego                |
+| [20770](20770.md) | San Martín               |
+| [20787](20787.md) | Tamalameque              |
 
 ## CHOCÓ
 
@@ -548,12 +548,12 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 |:------------------|:------------------------|
 | [27001](27001.md) | Quibdó                  |
 | [27006](27006.md) | Acandí                  |
-| [27025](27025.md) | Alto Baudo              |
+| [27025](27025.md) | Alto Baudó              |
 | [27050](27050.md) | Atrato                  |
 | [27073](27073.md) | Bagadó                  |
 | [27075](27075.md) | Bahía Solano            |
 | [27077](27077.md) | Bajo Baudó              |
-| [27099](27099.md) | Bojaya                  |
+| [27099](27099.md) | Bojayá                  |
 | [27135](27135.md) | El Cantón del San Pablo |
 | [27150](27150.md) | Carmen del Darien       |
 | [27160](27160.md) | Cértegui                |
@@ -569,9 +569,9 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [27491](27491.md) | Nóvita                  |
 | [27493](27493.md) | Belén de Bajirá         |
 | [27495](27495.md) | Nuquí                   |
-| [27580](27580.md) | Río Iro                 |
+| [27580](27580.md) | Rio Iró                 |
 | [27600](27600.md) | Río Quito               |
-| [27615](27615.md) | Riosucio(2)             |
+| [27615](27615.md) | Riosucio                |
 | [27660](27660.md) | San José del Palmar     |
 | [27745](27745.md) | Sipí                    |
 | [27787](27787.md) | Tadó                    |
@@ -580,172 +580,172 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 
 ## CUNDINAMARCA
 
-| CountyID          | CountyName                  |
-|:------------------|:----------------------------|
-| [25001](25001.md) | Agua de Dios                |
-| [25019](25019.md) | Albán                       |
-| [25035](25035.md) | Anapoima                    |
-| [25040](25040.md) | Anolaima                    |
-| [25053](25053.md) | Arbeláez                    |
-| [25086](25086.md) | Beltrán                     |
-| [25095](25095.md) | Bituima                     |
-| [25099](25099.md) | Bojacá                      |
-| [25120](25120.md) | Cabrera                     |
-| [25123](25123.md) | Cachipay                    |
-| [25126](25126.md) | Cajicá                      |
-| [25148](25148.md) | Caparrapí                   |
-| [25151](25151.md) | Caqueza                     |
-| [25154](25154.md) | Carmen de Carupa            |
-| [25168](25168.md) | Chaguaní                    |
-| [25175](25175.md) | Chía                        |
-| [25178](25178.md) | Chipaque                    |
-| [25181](25181.md) | Choachí                     |
-| [25183](25183.md) | Chocontá                    |
-| [25200](25200.md) | Cogua                       |
-| [25214](25214.md) | Cota                        |
-| [25224](25224.md) | Cucunubá                    |
-| [25245](25245.md) | El Colegio                  |
-| [25258](25258.md) | El Peñón                    |
-| [25260](25260.md) | El Rosal                    |
-| [25269](25269.md) | Facatativá                  |
-| [25279](25279.md) | Fomeque                     |
-| [25281](25281.md) | Fosca                       |
-| [25286](25286.md) | Funza                       |
-| [25288](25288.md) | Fúquene                     |
-| [25290](25290.md) | Fusagasugá                  |
-| [25293](25293.md) | Gachala                     |
-| [25295](25295.md) | Gachancipá                  |
-| [25297](25297.md) | Gachetá                     |
-| [25299](25299.md) | Gama                        |
-| [25307](25307.md) | Girardot                    |
-| [25312](25312.md) | Granada                     |
-| [25317](25317.md) | Guachetá                    |
-| [25320](25320.md) | Guaduas                     |
-| [25322](25322.md) | Guasca                      |
-| [25324](25324.md) | Guataquí                    |
-| [25326](25326.md) | Guatavita                   |
-| [25328](25328.md) | Guayabal de Siquima         |
-| [25335](25335.md) | Guayabetal                  |
-| [25339](25339.md) | Gutiérrez                   |
-| [25368](25368.md) | Jerusalén                   |
-| [25372](25372.md) | Junín                       |
-| [25377](25377.md) | La Calera                   |
-| [25386](25386.md) | La Mesa                     |
-| [25394](25394.md) | La Palma                    |
-| [25398](25398.md) | La Peña                     |
-| [25402](25402.md) | La Vega                     |
-| [25407](25407.md) | Lenguazaque                 |
-| [25426](25426.md) | Macheta                     |
-| [25430](25430.md) | Madrid                      |
-| [25436](25436.md) | Manta                       |
-| [25438](25438.md) | Medina                      |
-| [25473](25473.md) | Mosquera                    |
-| [25483](25483.md) | Nariño                      |
-| [25486](25486.md) | Nemocón                     |
-| [25488](25488.md) | Nilo                        |
-| [25489](25489.md) | Nimaima                     |
-| [25491](25491.md) | Nocaima                     |
-| [25506](25506.md) | Venecia                     |
-| [25513](25513.md) | Pacho                       |
-| [25518](25518.md) | Paime                       |
-| [25524](25524.md) | Pandi                       |
-| [25530](25530.md) | Paratebueno                 |
-| [25535](25535.md) | Pasca                       |
-| [25572](25572.md) | Puerto Salgar               |
-| [25580](25580.md) | Pulí                        |
-| [25592](25592.md) | Quebradanegra               |
-| [25594](25594.md) | Quetame                     |
-| [25596](25596.md) | Quipile                     |
-| [25599](25599.md) | Apulo                       |
-| [25612](25612.md) | Ricaurte                    |
-| [25645](25645.md) | San Antonio del Tequendama  |
-| [25649](25649.md) | San Bernardo                |
-| [25653](25653.md) | San Cayetano                |
-| [25658](25658.md) | San Francisco               |
-| [25662](25662.md) | San Juan de Río Seco        |
-| [25718](25718.md) | Sasaima                     |
-| [25736](25736.md) | Sesquilé                    |
-| [25740](25740.md) | Sibaté                      |
-| [25743](25743.md) | Silvania                    |
-| [25745](25745.md) | Simijaca                    |
-| [25754](25754.md) | Soacha                      |
-| [25758](25758.md) | Sopó                        |
-| [25769](25769.md) | Subachoque                  |
-| [25772](25772.md) | Suesca                      |
-| [25777](25777.md) | Supatá                      |
-| [25779](25779.md) | Susa                        |
-| [25781](25781.md) | Sutatausa                   |
-| [25785](25785.md) | Tabio                       |
-| [25793](25793.md) | Tausa                       |
-| [25797](25797.md) | Tena                        |
-| [25799](25799.md) | Tenjo                       |
-| [25805](25805.md) | Tibacuy                     |
-| [25807](25807.md) | Tibirita                    |
-| [25815](25815.md) | Tocaima                     |
-| [25817](25817.md) | Tocancipá                   |
-| [25823](25823.md) | Topaipí                     |
-| [25839](25839.md) | Ubalá                       |
-| [25841](25841.md) | Ubaque                      |
-| [25843](25843.md) | Villa de San Diego de Ubate |
-| [25845](25845.md) | Une                         |
-| [25851](25851.md) | Útica                       |
-| [25862](25862.md) | Vergara                     |
-| [25867](25867.md) | Vianí                       |
-| [25871](25871.md) | Villagómez                  |
-| [25873](25873.md) | Villapinzón                 |
-| [25875](25875.md) | Villeta                     |
-| [25878](25878.md) | Viotá                       |
-| [25885](25885.md) | Yacopí                      |
-| [25898](25898.md) | Zipacón                     |
-| [25899](25899.md) | Zipaquirá                   |
+| CountyID          | CountyName                 |
+|:------------------|:---------------------------|
+| [25001](25001.md) | Agua de Dios               |
+| [25019](25019.md) | Albán                      |
+| [25035](25035.md) | Anapoima                   |
+| [25040](25040.md) | Anolaima                   |
+| [25053](25053.md) | Arbeláez                   |
+| [25086](25086.md) | Beltrán                    |
+| [25095](25095.md) | Bituima                    |
+| [25099](25099.md) | Bojacá                     |
+| [25120](25120.md) | Cabrera                    |
+| [25123](25123.md) | Cachipay                   |
+| [25126](25126.md) | Cajicá                     |
+| [25148](25148.md) | Caparrapí                  |
+| [25151](25151.md) | Cáqueza                    |
+| [25154](25154.md) | Carmen de Carupa           |
+| [25168](25168.md) | Chaguaní                   |
+| [25175](25175.md) | Chía                       |
+| [25178](25178.md) | Chipaque                   |
+| [25181](25181.md) | Choachí                    |
+| [25183](25183.md) | Chocontá                   |
+| [25200](25200.md) | Cogua                      |
+| [25214](25214.md) | Cota                       |
+| [25224](25224.md) | Cucunubá                   |
+| [25245](25245.md) | El Colegio                 |
+| [25258](25258.md) | El Peñón                   |
+| [25260](25260.md) | El Rosal                   |
+| [25269](25269.md) | Facatativá                 |
+| [25279](25279.md) | Fómeque                    |
+| [25281](25281.md) | Fosca                      |
+| [25286](25286.md) | Funza                      |
+| [25288](25288.md) | Fúquene                    |
+| [25290](25290.md) | Fusagasugá                 |
+| [25293](25293.md) | Gachalá                    |
+| [25295](25295.md) | Gachancipá                 |
+| [25297](25297.md) | Gachetá                    |
+| [25299](25299.md) | Gama                       |
+| [25307](25307.md) | Girardot                   |
+| [25312](25312.md) | Granada                    |
+| [25317](25317.md) | Guachetá                   |
+| [25320](25320.md) | Guaduas                    |
+| [25322](25322.md) | Guasca                     |
+| [25324](25324.md) | Guataquí                   |
+| [25326](25326.md) | Guatavita                  |
+| [25328](25328.md) | Guayabal de Siquima        |
+| [25335](25335.md) | Guayabetal                 |
+| [25339](25339.md) | Gutiérrez                  |
+| [25368](25368.md) | Jerusalén                  |
+| [25372](25372.md) | Junín                      |
+| [25377](25377.md) | La Calera                  |
+| [25386](25386.md) | La Mesa                    |
+| [25394](25394.md) | La Palma                   |
+| [25398](25398.md) | La Peña                    |
+| [25402](25402.md) | La Vega                    |
+| [25407](25407.md) | Lenguazaque                |
+| [25426](25426.md) | Machetá                    |
+| [25430](25430.md) | Madrid                     |
+| [25436](25436.md) | Manta                      |
+| [25438](25438.md) | Medina                     |
+| [25473](25473.md) | Mosquera                   |
+| [25483](25483.md) | Nariño                     |
+| [25486](25486.md) | Nemocón                    |
+| [25488](25488.md) | Nilo                       |
+| [25489](25489.md) | Nimaima                    |
+| [25491](25491.md) | Nocaima                    |
+| [25506](25506.md) | Venecia                    |
+| [25513](25513.md) | Pacho                      |
+| [25518](25518.md) | Paime                      |
+| [25524](25524.md) | Pandi                      |
+| [25530](25530.md) | Paratebueno                |
+| [25535](25535.md) | Pasca                      |
+| [25572](25572.md) | Puerto Salgar              |
+| [25580](25580.md) | Pulí                       |
+| [25592](25592.md) | Quebradanegra              |
+| [25594](25594.md) | Quetame                    |
+| [25596](25596.md) | Quipile                    |
+| [25599](25599.md) | Apulo                      |
+| [25612](25612.md) | Ricaurte                   |
+| [25645](25645.md) | San Antonio del Tequendama |
+| [25649](25649.md) | San Bernardo               |
+| [25653](25653.md) | San Cayetano               |
+| [25658](25658.md) | San Francisco              |
+| [25662](25662.md) | San Juan de Ríoseco        |
+| [25718](25718.md) | Sasaima                    |
+| [25736](25736.md) | Sesquilé                   |
+| [25740](25740.md) | Sibaté                     |
+| [25743](25743.md) | Silvania                   |
+| [25745](25745.md) | Simijaca                   |
+| [25754](25754.md) | Soacha                     |
+| [25758](25758.md) | Sopó                       |
+| [25769](25769.md) | Subachoque                 |
+| [25772](25772.md) | Suesca                     |
+| [25777](25777.md) | Supatá                     |
+| [25779](25779.md) | Susa                       |
+| [25781](25781.md) | Sutatausa                  |
+| [25785](25785.md) | Tabio                      |
+| [25793](25793.md) | Tausa                      |
+| [25797](25797.md) | Tena                       |
+| [25799](25799.md) | Tenjo                      |
+| [25805](25805.md) | Tibacuy                    |
+| [25807](25807.md) | Tibirita                   |
+| [25815](25815.md) | Tocaima                    |
+| [25817](25817.md) | Tocancipá                  |
+| [25823](25823.md) | Topaipí                    |
+| [25839](25839.md) | Ubalá                      |
+| [25841](25841.md) | Ubaque                     |
+| [25843](25843.md) | Ubaté                      |
+| [25845](25845.md) | Une                        |
+| [25851](25851.md) | Útica                      |
+| [25862](25862.md) | Vergara                    |
+| [25867](25867.md) | Vianí                      |
+| [25871](25871.md) | Villagómez                 |
+| [25873](25873.md) | Villapinzón                |
+| [25875](25875.md) | Villeta                    |
+| [25878](25878.md) | Viotá                      |
+| [25885](25885.md) | Yacopí                     |
+| [25898](25898.md) | Zipacón                    |
+| [25899](25899.md) | Zipaquirá                  |
 
 ## CÓRDOBA
 
-| CountyID          | CountyName                   |
-|:------------------|:-----------------------------|
-| [23001](23001.md) | Montería                     |
-| [23068](23068.md) | Ayapel                       |
-| [23079](23079.md) | Buenavista                   |
-| [23090](23090.md) | Canalete                     |
-| [23162](23162.md) | Cereté                       |
-| [23168](23168.md) | Chimá                        |
-| [23182](23182.md) | Chinú                        |
-| [23189](23189.md) | Ciénaga de Oro               |
-| [23300](23300.md) | Cotorra                      |
-| [23350](23350.md) | La Apartada                  |
-| [23417](23417.md) | Lorica                       |
-| [23419](23419.md) | Los Córdobas                 |
-| [23464](23464.md) | Momil                        |
-| [23466](23466.md) | Montelíbano(1)(3)            |
-| [23500](23500.md) | Moñitos                      |
-| [23555](23555.md) | Planeta Rica                 |
-| [23570](23570.md) | Pueblo Nuevo                 |
-| [23574](23574.md) | Puerto Escondido             |
-| [23580](23580.md) | Puerto Libertador            |
-| [23586](23586.md) | Purísima                     |
-| [23660](23660.md) | Sahagún                      |
-| [23670](23670.md) | San Andrés Sotavento (1) (3) |
-| [23672](23672.md) | San Antero                   |
-| [23675](23675.md) | San Bernardo del Viento      |
-| [23678](23678.md) | San Carlos                   |
-| [23682](23682.md) | San José de Uré(1)           |
-| [23686](23686.md) | San Pelayo                   |
-| [23807](23807.md) | Tierralta                    |
-| [23815](23815.md) | Tuchín (1)                   |
-| [23855](23855.md) | Valencia                     |
+| CountyID          | CountyName              |
+|:------------------|:------------------------|
+| [23001](23001.md) | Montería                |
+| [23068](23068.md) | Ayapel                  |
+| [23079](23079.md) | Buenavista              |
+| [23090](23090.md) | Canalete                |
+| [23162](23162.md) | Cereté                  |
+| [23168](23168.md) | Chimá                   |
+| [23182](23182.md) | Chinú                   |
+| [23189](23189.md) | Ciénaga de Oro          |
+| [23300](23300.md) | Cotorra                 |
+| [23350](23350.md) | La Apartada             |
+| [23417](23417.md) | Lorica                  |
+| [23419](23419.md) | Los Córdobas            |
+| [23464](23464.md) | Momil                   |
+| [23466](23466.md) | Montelíbano             |
+| [23500](23500.md) | Moñitos                 |
+| [23555](23555.md) | Planeta Rica            |
+| [23570](23570.md) | Pueblo Nuevo            |
+| [23574](23574.md) | Puerto Escondido        |
+| [23580](23580.md) | Puerto Libertador       |
+| [23586](23586.md) | Purísima                |
+| [23660](23660.md) | Sahagún                 |
+| [23670](23670.md) | San Andrés de Sotavento |
+| [23672](23672.md) | San Antero              |
+| [23675](23675.md) | San Bernardo del Viento |
+| [23678](23678.md) | San Carlos              |
+| [23682](23682.md) | San José de Uré         |
+| [23686](23686.md) | San Pelayo              |
+| [23807](23807.md) | Tierralta               |
+| [23815](23815.md) | Tuchín                  |
+| [23855](23855.md) | Valencia                |
 
 ## GUAINÍA
 
-| CountyID          | CountyName            |
-|:------------------|:----------------------|
-| [94001](94001.md) | Inírida               |
-| [94343](94343.md) | Barranco Minas (ANM)  |
-| [94883](94883.md) | San Felipe (ANM)      |
-| [94884](94884.md) | Puerto Colombia (ANM) |
-| [94885](94885.md) | La Guadalupe (ANM)    |
-| [94886](94886.md) | Cacahual (ANM)        |
-| [94887](94887.md) | Pana Pana (ANM)       |
-| [94888](94888.md) | Morichal (ANM)        |
+| CountyID          | CountyName      |
+|:------------------|:----------------|
+| [94001](94001.md) | Inírida         |
+| [94343](94343.md) | Barrancominas   |
+| [94883](94883.md) | San Felipe      |
+| [94884](94884.md) | Puerto Colombia |
+| [94885](94885.md) | La Guadalupe    |
+| [94886](94886.md) | Cacahual        |
+| [94887](94887.md) | Paná - Paná     |
+| [94888](94888.md) | Morichal        |
 
 ## GUAVIARE
 
@@ -774,7 +774,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [41306](41306.md) | Gigante      |
 | [41319](41319.md) | Guadalupe    |
 | [41349](41349.md) | Hobo         |
-| [41357](41357.md) | Iquira       |
+| [41357](41357.md) | Íquira       |
 | [41359](41359.md) | Isnos        |
 | [41378](41378.md) | La Argentina |
 | [41396](41396.md) | La Plata     |
@@ -826,12 +826,12 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [47030](47030.md) | Algarrobo                   |
 | [47053](47053.md) | Aracataca                   |
 | [47058](47058.md) | Ariguaní                    |
-| [47161](47161.md) | Cerro San Antonio           |
-| [47170](47170.md) | Chivolo                     |
+| [47161](47161.md) | Cerro de San Antonio        |
+| [47170](47170.md) | Chibolo                     |
 | [47189](47189.md) | Ciénaga                     |
 | [47205](47205.md) | Concordia                   |
 | [47245](47245.md) | El Banco                    |
-| [47258](47258.md) | El Piñon                    |
+| [47258](47258.md) | El Piñón                    |
 | [47268](47268.md) | El Retén                    |
 | [47288](47288.md) | Fundación                   |
 | [47318](47318.md) | Guamal                      |
@@ -861,13 +861,13 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [50006](50006.md) | Acacías              |
 | [50110](50110.md) | Barranca de Upía     |
 | [50124](50124.md) | Cabuyaro             |
-| [50150](50150.md) | Castilla la Nueva    |
+| [50150](50150.md) | Castilla La Nueva    |
 | [50223](50223.md) | Cubarral             |
 | [50226](50226.md) | Cumaral              |
 | [50245](50245.md) | El Calvario          |
 | [50251](50251.md) | El Castillo          |
 | [50270](50270.md) | El Dorado            |
-| [50287](50287.md) | Fuente de Oro        |
+| [50287](50287.md) | Fuentedeoro          |
 | [50313](50313.md) | Granada              |
 | [50318](50318.md) | Guamal               |
 | [50325](50325.md) | Mapiripán            |
@@ -894,13 +894,13 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [52001](52001.md) | Pasto                |
 | [52019](52019.md) | Albán                |
 | [52022](52022.md) | Aldana               |
-| [52036](52036.md) | Ancuyá               |
+| [52036](52036.md) | Ancuya               |
 | [52051](52051.md) | Arboleda             |
 | [52079](52079.md) | Barbacoas            |
 | [52083](52083.md) | Belén                |
 | [52110](52110.md) | Buesaco              |
 | [52203](52203.md) | Colón                |
-| [52207](52207.md) | Consaca              |
+| [52207](52207.md) | Consacá              |
 | [52210](52210.md) | Contadero            |
 | [52215](52215.md) | Córdoba              |
 | [52224](52224.md) | Cuaspud              |
@@ -910,7 +910,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [52250](52250.md) | El Charco            |
 | [52254](52254.md) | El Peñol             |
 | [52256](52256.md) | El Rosario           |
-| [52258](52258.md) | El Tablón de Gómez   |
+| [52258](52258.md) | El Tablón            |
 | [52260](52260.md) | El Tambo             |
 | [52287](52287.md) | Funes                |
 | [52317](52317.md) | Guachucal            |
@@ -952,54 +952,54 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [52720](52720.md) | Sapuyes              |
 | [52786](52786.md) | Taminango            |
 | [52788](52788.md) | Tangua               |
-| [52835](52835.md) | San Andres de Tumaco |
+| [52835](52835.md) | Tumaco               |
 | [52838](52838.md) | Túquerres            |
 | [52885](52885.md) | Yacuanquer           |
 
 ## NORTE DE SANTANDER
 
-| CountyID          | CountyName        |
-|:------------------|:------------------|
-| [54001](54001.md) | Cúcuta            |
-| [54003](54003.md) | Abrego            |
-| [54051](54051.md) | Arboledas         |
-| [54099](54099.md) | Bochalema         |
-| [54109](54109.md) | Bucarasica        |
-| [54125](54125.md) | Cácota            |
-| [54128](54128.md) | Cachirá           |
-| [54172](54172.md) | Chinácota         |
-| [54174](54174.md) | Chitagá           |
-| [54206](54206.md) | Convención        |
-| [54223](54223.md) | Cucutilla         |
-| [54239](54239.md) | Durania           |
-| [54245](54245.md) | El Carmen         |
-| [54250](54250.md) | El Tarra          |
-| [54261](54261.md) | El Zulia          |
-| [54313](54313.md) | Gramalote         |
-| [54344](54344.md) | Hacarí            |
-| [54347](54347.md) | Herrán            |
-| [54377](54377.md) | Labateca          |
-| [54385](54385.md) | La Esperanza      |
-| [54398](54398.md) | La Playa          |
-| [54405](54405.md) | Los Patios        |
-| [54418](54418.md) | Lourdes           |
-| [54480](54480.md) | Mutiscua          |
-| [54498](54498.md) | Ocaña             |
-| [54518](54518.md) | Pamplona          |
-| [54520](54520.md) | Pamplonita        |
-| [54553](54553.md) | Puerto Santander  |
-| [54599](54599.md) | Ragonvalia        |
-| [54660](54660.md) | Salazar           |
-| [54670](54670.md) | San Calixto       |
-| [54673](54673.md) | San Cayetano      |
-| [54680](54680.md) | Santiago          |
-| [54720](54720.md) | Sardinata         |
-| [54743](54743.md) | Silos             |
-| [54800](54800.md) | Teorama           |
-| [54810](54810.md) | Tibú              |
-| [54820](54820.md) | Toledo            |
-| [54871](54871.md) | Villa Caro        |
-| [54874](54874.md) | Villa del Rosario |
+| CountyID          | CountyName         |
+|:------------------|:-------------------|
+| [54001](54001.md) | San José de Cúcuta |
+| [54003](54003.md) | Ábrego             |
+| [54051](54051.md) | Arboledas          |
+| [54099](54099.md) | Bochalema          |
+| [54109](54109.md) | Bucarasica         |
+| [54125](54125.md) | Cácota             |
+| [54128](54128.md) | Cáchira            |
+| [54172](54172.md) | Chinácota          |
+| [54174](54174.md) | Chitagá            |
+| [54206](54206.md) | Convención         |
+| [54223](54223.md) | Cucutilla          |
+| [54239](54239.md) | Durania            |
+| [54245](54245.md) | El Carmen          |
+| [54250](54250.md) | El Tarra           |
+| [54261](54261.md) | El Zulia           |
+| [54313](54313.md) | Gramalote          |
+| [54344](54344.md) | Hacarí             |
+| [54347](54347.md) | Herrán             |
+| [54377](54377.md) | Labateca           |
+| [54385](54385.md) | La Esperanza       |
+| [54398](54398.md) | La Playa           |
+| [54405](54405.md) | Los Patios         |
+| [54418](54418.md) | Lourdes            |
+| [54480](54480.md) | Mutiscua           |
+| [54498](54498.md) | Ocaña              |
+| [54518](54518.md) | Pamplona           |
+| [54520](54520.md) | Pamplonita         |
+| [54553](54553.md) | Puerto Santander   |
+| [54599](54599.md) | Ragonvalia         |
+| [54660](54660.md) | Salazar            |
+| [54670](54670.md) | San Calixto        |
+| [54673](54673.md) | San Cayetano       |
+| [54680](54680.md) | Santiago           |
+| [54720](54720.md) | Sardinata          |
+| [54743](54743.md) | Silos              |
+| [54800](54800.md) | Teorama            |
+| [54810](54810.md) | Tibú               |
+| [54820](54820.md) | Toledo             |
+| [54871](54871.md) | Villa Caro         |
+| [54874](54874.md) | Villa del Rosario  |
 
 ## PUTUMAYO
 
@@ -1025,7 +1025,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 |:------------------|:-------------|
 | [63001](63001.md) | Armenia      |
 | [63111](63111.md) | Buenavista   |
-| [63130](63130.md) | Calarca      |
+| [63130](63130.md) | Calarcá      |
 | [63190](63190.md) | Circasia     |
 | [63212](63212.md) | Córdoba      |
 | [63272](63272.md) | Filandia     |
@@ -1084,7 +1084,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [68211](68211.md) | Contratación           |
 | [68217](68217.md) | Coromoro               |
 | [68229](68229.md) | Curití                 |
-| [68235](68235.md) | El Carmen de Chucurí   |
+| [68235](68235.md) | El Carmen              |
 | [68245](68245.md) | El Guacamayo           |
 | [68250](68250.md) | El Peñón               |
 | [68255](68255.md) | El Playón              |
@@ -1093,7 +1093,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [68271](68271.md) | Florián                |
 | [68276](68276.md) | Floridablanca          |
 | [68296](68296.md) | Galán                  |
-| [68298](68298.md) | Gambita                |
+| [68298](68298.md) | Gámbita                |
 | [68307](68307.md) | Girón                  |
 | [68318](68318.md) | Guaca                  |
 | [68320](68320.md) | Guadalupe              |
@@ -1106,7 +1106,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [68377](68377.md) | La Belleza             |
 | [68385](68385.md) | Landázuri              |
 | [68397](68397.md) | La Paz                 |
-| [68406](68406.md) | Lebríja                |
+| [68406](68406.md) | Lebrija                |
 | [68418](68418.md) | Los Santos             |
 | [68425](68425.md) | Macaravita             |
 | [68432](68432.md) | Málaga                 |
@@ -1154,7 +1154,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [70001](70001.md) | Sincelejo           |
 | [70110](70110.md) | Buenavista          |
 | [70124](70124.md) | Caimito             |
-| [70204](70204.md) | Coloso              |
+| [70204](70204.md) | Colosó              |
 | [70215](70215.md) | Corozal             |
 | [70221](70221.md) | Coveñas             |
 | [70230](70230.md) | Chalán              |
@@ -1173,10 +1173,10 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [70708](70708.md) | San Marcos          |
 | [70713](70713.md) | San Onofre          |
 | [70717](70717.md) | San Pedro           |
-| [70742](70742.md) | San Luis de Sincé   |
+| [70742](70742.md) | Sincé               |
 | [70771](70771.md) | Sucre               |
-| [70820](70820.md) | Santiago de Tolú    |
-| [70823](70823.md) | Tolú Viejo          |
+| [70820](70820.md) | Tolú                |
+| [70823](70823.md) | Toluviejo           |
 
 ## TOLIMA
 
@@ -1232,61 +1232,61 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 
 ## VALLE DEL CAUCA
 
-| CountyID          | CountyName          |
-|:------------------|:--------------------|
-| [76001](76001.md) | Cali                |
-| [76020](76020.md) | Alcalá              |
-| [76036](76036.md) | Andalucía           |
-| [76041](76041.md) | Ansermanuevo        |
-| [76054](76054.md) | Argelia             |
-| [76100](76100.md) | Bolívar             |
-| [76109](76109.md) | Buenaventura        |
-| [76111](76111.md) | Guadalajara de Buga |
-| [76113](76113.md) | Bugalagrande        |
-| [76122](76122.md) | Caicedonia          |
-| [76126](76126.md) | Calima              |
-| [76130](76130.md) | Candelaria          |
-| [76147](76147.md) | Cartago             |
-| [76233](76233.md) | Dagua               |
-| [76243](76243.md) | El Águila           |
-| [76246](76246.md) | El Cairo            |
-| [76248](76248.md) | El Cerrito          |
-| [76250](76250.md) | El Dovio            |
-| [76275](76275.md) | Florida             |
-| [76306](76306.md) | Ginebra             |
-| [76318](76318.md) | Guacarí             |
-| [76364](76364.md) | Jamundí             |
-| [76377](76377.md) | La Cumbre           |
-| [76400](76400.md) | La Unión            |
-| [76403](76403.md) | La Victoria         |
-| [76497](76497.md) | Obando              |
-| [76520](76520.md) | Palmira             |
-| [76563](76563.md) | Pradera             |
-| [76606](76606.md) | Restrepo            |
-| [76616](76616.md) | Riofrío             |
-| [76622](76622.md) | Roldanillo          |
-| [76670](76670.md) | San Pedro           |
-| [76736](76736.md) | Sevilla             |
-| [76823](76823.md) | Toro                |
-| [76828](76828.md) | Trujillo            |
-| [76834](76834.md) | Tuluá               |
-| [76845](76845.md) | Ulloa               |
-| [76863](76863.md) | Versalles           |
-| [76869](76869.md) | Vijes               |
-| [76890](76890.md) | Yotoco              |
-| [76892](76892.md) | Yumbo               |
-| [76895](76895.md) | Zarzal              |
+| CountyID          | CountyName       |
+|:------------------|:-----------------|
+| [76001](76001.md) | Santiago de Cali |
+| [76020](76020.md) | Alcalá           |
+| [76036](76036.md) | Andalucía        |
+| [76041](76041.md) | Ansermanuevo     |
+| [76054](76054.md) | Argelia          |
+| [76100](76100.md) | Bolívar          |
+| [76109](76109.md) | Buenaventura     |
+| [76111](76111.md) | Buga             |
+| [76113](76113.md) | Bugalagrande     |
+| [76122](76122.md) | Caicedonia       |
+| [76126](76126.md) | Calima           |
+| [76130](76130.md) | Candelaria       |
+| [76147](76147.md) | Cartago          |
+| [76233](76233.md) | Dagua            |
+| [76243](76243.md) | El Águila        |
+| [76246](76246.md) | El Cairo         |
+| [76248](76248.md) | El Cerrito       |
+| [76250](76250.md) | El Dovio         |
+| [76275](76275.md) | Florida          |
+| [76306](76306.md) | Ginebra          |
+| [76318](76318.md) | Guacarí          |
+| [76364](76364.md) | Jamundí          |
+| [76377](76377.md) | La Cumbre        |
+| [76400](76400.md) | La Unión         |
+| [76403](76403.md) | La Victoria      |
+| [76497](76497.md) | Obando           |
+| [76520](76520.md) | Palmira          |
+| [76563](76563.md) | Pradera          |
+| [76606](76606.md) | Restrepo         |
+| [76616](76616.md) | Riofrío          |
+| [76622](76622.md) | Roldanillo       |
+| [76670](76670.md) | San Pedro        |
+| [76736](76736.md) | Sevilla          |
+| [76823](76823.md) | Toro             |
+| [76828](76828.md) | Trujillo         |
+| [76834](76834.md) | Tuluá            |
+| [76845](76845.md) | Ulloa            |
+| [76863](76863.md) | Versalles        |
+| [76869](76869.md) | Vijes            |
+| [76890](76890.md) | Yotoco           |
+| [76892](76892.md) | Yumbo            |
+| [76895](76895.md) | Zarzal           |
 
 ## VAUPÉS
 
-| CountyID          | CountyName     |
-|:------------------|:---------------|
-| [97001](97001.md) | Mitú           |
-| [97161](97161.md) | Caruru         |
-| [97511](97511.md) | Pacoa (ANM)    |
-| [97666](97666.md) | Taraira        |
-| [97777](97777.md) | Papunaua (ANM) |
-| [97889](97889.md) | Yavaraté (ANM) |
+| CountyID          | CountyName   |
+|:------------------|:-------------|
+| [97001](97001.md) | Mitú         |
+| [97161](97161.md) | Carurú       |
+| [97511](97511.md) | Pacoa        |
+| [97666](97666.md) | Taraira      |
+| [97777](97777.md) | Papunaua     |
+| [97889](97889.md) | Yavaraté     |
 
 ## VICHADA
 
