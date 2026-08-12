@@ -20,7 +20,7 @@ pd.set_option('display.width', None)
 # General Setup
 app_version = 'v20260806'
 file_path = '../data/Population.xlsx'
-county_list = ['All'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
+county_list = ['25899'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
 projection_year_max = 2050 # ● Projection year
 process_polynomial_d2_up = False # ● Polynomial projection over grade 2 is not recommend because over fit the obtained values
 process_wappaus = True # Projection only recommend for short term periods and condition_value < 200
@@ -85,7 +85,7 @@ for county_id in county_list:
     funcs.print_log(file_log, f'\n\n> 🔥Some records could had specific notes about the registered values or the corresponding urban or rural distribution.')
 
     # Processing by zone
-    num = 1
+    num = 1 # Counter required for contents table index
     for zone in zone_vars:
         fig_file = '../graph/' + county_id + zone + '.png'  #######################
         fig_file1 = '../graph/' + county_id + zone + 'Bestfit.png'  #######################
@@ -308,7 +308,8 @@ for county_id in county_list:
         df_projected[f'WS{zone}All'] = (df_projected[best_method] * df_projected[f'WS{zone}'])/86400 # In liters per second (l/s)
         funcs.print_log(file_log, f'\n\nProjected values for best method: {best_method}\n\n{df_projected[['CountyID', 'Year', best_method, f'WS{zone}', f'WS{zone}All']].to_markdown(index=False)}')
         num += 1
-
     funcs.print_log(file_log, f'\n\n<div align="center"><img alt="R.HydroTools" src="../graph/qr-code.png" width="250px"><br><sub>Share this research</sub></div><br>', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n\n| [:house: Home](Readme.md)  | [:beginner: Help / Collaborate](https://github.com/rcfdtools/R.HydroTools/discussions/31) |', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n|----------------------------|-------------------------------------------------------------------------------------------|', on_screen = print_on_screen)
     run_percentage += 1
