@@ -21,7 +21,7 @@ pd.set_option('display.width', None)
 app_version = 'v20260806'
 file_path = '../data/Population.xlsx' # Census database
 file_path_rups = '../data/RUPS.csv' # Public service companies database
-county_list = ['25899'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
+county_list = ['All'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
 projection_year_max = 2050 # ● Projection year
 process_polynomial_d2_up = False # ● Polynomial projection over grade 2 is not recommend because over fit the obtained values
 process_wappaus = True # Projection only recommend for short term periods and condition_value < 200, evaluated automatically
@@ -44,8 +44,8 @@ rups_county_name_var = 'MUNICIPIO_PRESTACION' # Column county name in RUPS.csv
 rups_county_phone_var = 'TELEFONO' # Column phone in RUPS.csv
 
 # Read general census, RUPS and shapefile database
-dtype={'Year': int, 'CountyID': str, 'StateID': str, 'PTotal': int, 'PUrban': int, 'PRural': int}
-dtype_rups={'rups_county_phone_var': str}
+dtype = {'Year': int, 'CountyID': str, 'StateID': str, 'PTotal': int, 'PUrban': int, 'PRural': int}
+dtype_rups = {rups_county_phone_var: str}
 df = pd.read_excel(file_path, sheet_name='Population', dtype=dtype)
 df = df.sort_values(by=['CountyID', 'Year'])
 if drop_dataset_notes: df = df.drop(columns=['Notes'])
@@ -97,8 +97,8 @@ for county_id in county_list:
     funcs.print_log(file_log, f'\n\n> 🔥Some records could had specific notes about the registered values or the corresponding urban or rural distribution.')
     if len(df_shapefile) > 0:
         df_rups_county = df_rups_county.drop(columns=[rups_state_name_var, rups_county_name_var])
-        funcs.print_log(file_log, f'\n\nLocal public utility companies (RUPS) in {state_name_unicode.upper()} - {county_name_unicode.upper()} \n\n {df_rups_county.to_markdown(index=False)}')
-        funcs.print_log(file_log, f'\n\n> [📅RUPS Database: Registro Único de Prestadores de Servicios Públicos de Colombia Suramérica - RUPS](https://www.datos.gov.co/Hacienda-y-Cr-dito-P-blico/Registro-nico-de-Prestadores-de-Servicios-P-blicos/4qkq-csdn/about_data)')
+        funcs.print_log(file_log, f'\n\n**RUPS - Local public utility companies**\n\n {df_rups_county.to_markdown(index=False)}') # {state_name_unicode.upper()} - {county_name_unicode.upper()}
+        funcs.print_log(file_log, f'\n\n> [📅RUPS Database: Registro Único de Prestadores de Servicios Públicos de Colombia - Suramérica](https://www.datos.gov.co/Hacienda-y-Cr-dito-P-blico/Registro-nico-de-Prestadores-de-Servicios-P-blicos/4qkq-csdn/about_data)')
 
     # Processing by zone
     num = 1 # Counter required for contents table index
