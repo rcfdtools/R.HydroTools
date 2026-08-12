@@ -27,7 +27,7 @@ process_wappaus = True # Projection only recommend for short term periods and co
 set_negative_to_zero = True
 set_infinite_to_zero = True
 drop_dataset_notes = True
-create_plot = True # ● Creates, save and include plots into reports
+create_plot = False # ● Creates, save and include plots into reports
 show_plot = False # Show plot on Python screen console
 dpi = 96 # Graph plot resolution
 print_on_screen = False # Global print control in screen
@@ -50,8 +50,10 @@ df_shapefile = df_shapefile[['CountyID', 'Latitude', 'Longitude']]
 # Pre-processing
 if county_list[0] == 'All':
     county_list = df['CountyID'].unique()
+run_percentage = 1
+print(f'Counties to process: {len(county_list)}\n')
 for county_id in county_list:
-    print(f'Processing: {county_id}')
+    print(f'Processing {run_percentage:04d} ({round((run_percentage/len(county_list))*100, 2):.2f}%): {county_id}')
     file_log_name = f'../report/{county_id}.md'  # Markdown file log
     file_log = open(file_log_name, 'w+', encoding='utf-8')  # w+ create the file if it doesn't exist
     filtered_df = df[df['CountyID'] == county_id]
@@ -257,7 +259,7 @@ for county_id in county_list:
         # Relative error as percentage
         for i in methods:
             filtered_df[f'{i}RelError'] = 100 * filtered_df[f'{i}AbsError'] / filtered_df[f'P{zone}']
-        funcs.print_log(file_log, f'\n\n### {num}.3. Best fit with absolute error and relative error (%)\n\n{dictionary.dicts['abosulute_relative_error']}\n\nAbsolute and relative error\n\n{filtered_df.to_markdown(index=False)}')
+        funcs.print_log(file_log, f'\n\n### {num}.3. Best fit with absolute and relative error (%)\n\n{dictionary.dicts['abosulute_relative_error']}\n\nAbsolute and relative error\n\n{filtered_df.to_markdown(index=False)}')
         # Mean relative error
         funcs.print_log(file_log, '\n\nRelative error mean\n')
         relative_error = []
@@ -309,3 +311,4 @@ for county_id in county_list:
 
     funcs.print_log(file_log, f'\n\n<div align="center"><img alt="R.HydroTools" src="../graph/qr-code.png" width="250px"><br><sub>Share this research</sub></div><br>', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
+    run_percentage += 1
