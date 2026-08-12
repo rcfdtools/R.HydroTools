@@ -97,7 +97,7 @@ for county_id in county_list:
     funcs.print_log(file_log, f'\n\n> 🔥Some records could had specific notes about the registered values or the corresponding urban or rural distribution.')
     if len(df_shapefile) > 0:
         df_rups_county = df_rups_county.drop(columns=[rups_state_name_var, rups_county_name_var])
-        funcs.print_log(file_log, f'\n\n## Local public utility companies (RUPS) in {state_name_unicode.upper()} - {county_name_unicode.upper()} \n\n {df_rups_county.to_markdown(index=False)}')
+        funcs.print_log(file_log, f'\n\nLocal public utility companies (RUPS) in {state_name_unicode.upper()} - {county_name_unicode.upper()} \n\n {df_rups_county.to_markdown(index=False)}')
         funcs.print_log(file_log, f'\n\n> [📅RUPS Database: Registro Único de Prestadores de Servicios Públicos de Colombia Suramérica - RUPS](https://www.datos.gov.co/Hacienda-y-Cr-dito-P-blico/Registro-nico-de-Prestadores-de-Servicios-P-blicos/4qkq-csdn/about_data)')
 
     # Processing by zone
