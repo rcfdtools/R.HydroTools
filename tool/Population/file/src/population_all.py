@@ -19,8 +19,9 @@ pd.set_option('display.width', None)
 
 # General Setup
 app_version = 'v20260806'
-file_path = '../data/Population.xlsx'
-county_list = ['All'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
+file_path = '../data/Population.xlsx' # Census database
+file_path_rups = '../data/RUPS.csv' # Public service companies database
+county_list = ['25899'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
 projection_year_max = 2050 # ● Projection year
 process_polynomial_d2_up = False # ● Polynomial projection over grade 2 is not recommend because over fit the obtained values
 process_wappaus = True # Projection only recommend for short term periods and condition_value < 200, evaluated automatically
@@ -37,12 +38,20 @@ runtime = datetime.now()
 python_version = platform.python_version()
 pandas_version = pd.__version__
 numpy_version = np.__version__
+unicode_translation_table = str.maketrans("áéíóúüñÇÁÉÍÓÚÜÑ", "aeiouunCAEIOUUN")
+rups_state_name_var = 'DEPARTAMENTO_PRESTACION' # Column state name in RUPS.csv
+rups_county_name_var = 'MUNICIPIO_PRESTACION' # Column county name in RUPS.csv
+rups_county_phone_var = 'TELEFONO' # Column phone in RUPS.csv
 
-# Read general census file and shapefile database
+# Read general census, RUPS and shapefile database
 dtype={'Year': int, 'CountyID': str, 'StateID': str, 'PTotal': int, 'PUrban': int, 'PRural': int}
+dtype_rups={'rups_county_phone_var': str}
 df = pd.read_excel(file_path, sheet_name='Population', dtype=dtype)
 df = df.sort_values(by=['CountyID', 'Year'])
 if drop_dataset_notes: df = df.drop(columns=['Notes'])
+df_rups = pd.read_csv(file_path_rups, encoding='utf-8', dtype=dtype_rups)
+df_rups = df_rups.sort_values(by=[rups_state_name_var, rups_county_name_var])
+#print(df_rups.to_markdown())
 dbf = Dbf5('../shp/ColombiaCounty.dbf')
 df_shapefile = pd.DataFrame(dbf.to_dataframe())
 df_shapefile = df_shapefile[['CountyID', 'Latitude', 'Longitude']]
@@ -60,7 +69,10 @@ for county_id in county_list:
     #funcs.print_log(file_log, f'\n>>>> Head ({len(df)} records) <<<<\n{df.head().to_markdown(index=False)}')
     country_name = df[df['CountyID'] == county_id]['CountryName'].values[0]
     state_name = df[df['CountyID'] == county_id]['StateName'].values[0]
+    state_name_unicode = state_name.translate(unicode_translation_table)
     county_name = df[df['CountyID'] == county_id]['CountyName'].values[0]
+    county_name_unicode = county_name.translate(unicode_translation_table)
+    df_rups_county = df_rups[(df_rups[rups_state_name_var] == state_name_unicode.upper()) & (df_rups[rups_county_name_var] == county_name_unicode.upper())] ##########
     subtitle = f'{country_name} - {state_name} - {county_name} (ID: {county_id})'
     df_shapefile_info = df_shapefile[df_shapefile['CountyID'] == county_id]
     county_latitude = df_shapefile_info['Latitude'].values[0]
@@ -83,6 +95,9 @@ for county_id in county_list:
     funcs.print_log(file_log, f'\n\n{dictionary.dicts['census_data']}\n\n📅Global census file: [Population.xlsx](../data/Population.xlsx)', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n\n{filtered_df.sort_values(by='Year').to_markdown(index=False)}')
     funcs.print_log(file_log, f'\n\n> 🔥Some records could had specific notes about the registered values or the corresponding urban or rural distribution.')
+    if len(df_shapefile) > 0:
+        print()
+        funcs.print_log(file_log, f'\n\n## Local public utility companies in {state_name_unicode.upper()} - {county_name_unicode.upper()} \n\n {df_rups_county.to_markdown(index=False)}')
 
     # Processing by zone
     num = 1 # Counter required for contents table index
@@ -292,7 +307,7 @@ for county_id in county_list:
             plt.close()
 
         # Water supply in liters per capita per day (lpcd)
-        funcs.print_log(file_log, f'\n\n### {num}.4. Fresh water supply demand in liters per capita per day (lpcd)\n\n{dictionary.dicts['fresh_water_supply']}\n\n> `CZ`: Level in meters above the sea level (masl)<br> `WS`: Fresh water supply demand in liters per capita per day (lpcd or l/h/d)<br> `WSAll`: Zonal fresh water supply demand in liters per second (l/s)<br> `A`: Zonal area in square meters<br> `DP`: Population density (people/hectare)\n\nReference values (RAS Colombia)\n\n{water_supply.to_markdown(index=False)}')
+        funcs.print_log(file_log, f'\n\n### {num}.4. Fresh water supply demand in liters per capita per day (lpcd)\n\n{dictionary.dicts['fresh_water_supply']}\n\n> `CZ`: Level in meters above the sea level (masl)<br> `WS`: Fresh water supply demand in liters per capita per day (lpcd or l/h/d)<br> `WSAll`: Zonal fresh water supply demand in liters per second (l/s)<br> `A`: Zonal area in square meters<br> `DP`: Population density (people/hectare or p/ha)\n\nReference values (RAS Colombia)\n\n{water_supply.to_markdown(index=False)}')
         dbf = Dbf5('../shp/ColombiaCounty.dbf')
         df_county = pd.DataFrame(dbf.to_dataframe())
         df_county = df_county[df_county['CountyID'] == county_id]
