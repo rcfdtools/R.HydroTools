@@ -61,6 +61,8 @@ The follow list contains the fields and variables used across the tables, shapef
 | RelError    | n/a          | Relative error                                            | n/a                              |
 | WS          | Real (10)    | Fresh water supply                                        | Liters per capita per day, lpcd  |
 | WSAll       | Real (10)    | Zonal fresh water supply demand = WS * population / 86400 | Liters per second, l/s           |
+| Best        | Boolean      | Best fit                                                  | n/a                              |
+| DP          | Real (10)    | Population density                                        | people/hectare, p/ha             |
 
 > n/a: doesn't apply. 
 > 
