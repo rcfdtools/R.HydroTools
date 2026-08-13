@@ -21,16 +21,16 @@ pd.set_option('display.width', None)
 app_version = 'v20260806'
 file_path = '../data/Population.xlsx' # Census database
 file_path_rups = '../data/RUPS.csv' # Public service companies database
-county_list = ['25899'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
+county_list = ['All'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
 projection_year_max = 2050 # ● Projection year
 process_polynomial_d2_up = False # ● Polynomial projection over grade 2 is not recommend because over fit the obtained values
 process_wappaus = True # Projection only recommend for short term periods and condition_value < 200, evaluated automatically
 set_negative_to_zero = True
 set_infinite_to_zero = True
 drop_dataset_notes = True
-create_plot = False # ● Creates, save and include plots in reports
-show_plot = False # Show plot on Python screen console
-create_location_map = True # ● Creates, save and include location map in reports
+create_plot = False # ● Create and save plots
+show_plot = False # Show plot on Python console
+create_location_map = False # ● Create and save location map
 dpi = 96 # Graph plot resolution
 print_on_screen = False # Global print control in screen
 zone_vars = ['Total', 'Urban', 'Rural']
@@ -79,6 +79,7 @@ for county_id in county_list:
     county_name_unicode = county_name.translate(unicode_translation_table)
     df_rups_county = df_rups[(df_rups[rups_state_name_var] == state_name_unicode.upper()) & (df_rups[rups_county_name_var] == county_name_unicode.upper())] ##########
     subtitle = f'{country_name} - {state_name} - {county_name} (ID: {county_id})'
+    subtitle_location_map = f'{county_name} (ID: {county_id})'
     df_shapefile_info = df_shapefile[df_shapefile['CountyID'] == county_id]
     county_latitude = df_shapefile_info['Latitude'].values[0]
     county_longitude = df_shapefile_info['Longitude'].values[0]
@@ -99,7 +100,7 @@ for county_id in county_list:
     # Plot location map & Plot x values
     fig_file0a = '../graph/' + county_id + 'LocationMap.png'  #######################
     if create_location_map:
-        location_map_plot = funcs.location_map(county_latitude, county_longitude, county_name)
+        location_map_plot = funcs.location_map(county_latitude, county_longitude, subtitle_location_map)
         location_map_plot.savefig(fig_file0a, dpi=120)
         plt.close()
     funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="500"></img>', center_div=True, on_screen=print_on_screen)
@@ -107,9 +108,9 @@ for county_id in county_list:
     funcs.print_log(file_log, f'\n\n{dictionary.dicts['census_data']}\n\n📅Global census file: [Population.xlsx](../data/Population.xlsx)', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n\n{filtered_df.sort_values(by='Year').to_markdown(index=False)}')
     funcs.print_log(file_log, f'\n\n> 🔥Some records could had specific notes about the registered values or the corresponding urban or rural distribution.')
-    if len(df_shapefile) > 0:
-        df_rups_county = df_rups_county.drop(columns=[rups_state_name_var, rups_county_name_var, rups_record_type_var, rups_ceo_var])
-        df_rups_county = df_rups_county[df_rups_county[rups_service_var] != rups_service_var_drop]
+    df_rups_county = df_rups_county.drop(columns=[rups_state_name_var, rups_county_name_var, rups_record_type_var, rups_ceo_var])
+    df_rups_county = df_rups_county[df_rups_county[rups_service_var] != rups_service_var_drop]
+    if len(df_rups_county) > 0:
         funcs.print_log(file_log, f'\n\n📅   [RUPS](https://www.datos.gov.co/Hacienda-y-Cr-dito-P-blico/Registro-nico-de-Prestadores-de-Servicios-P-blicos/4qkq-csdn/about_data) - Local public utility companies: [RUPS.csv](../data/RUPS.xlsx)\n\n {df_rups_county.to_markdown(index=False)}') # {state_name_unicode.upper()} - {county_name_unicode.upper()}
 
     # Processing by zone

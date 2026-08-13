@@ -16,8 +16,6 @@ def print_log(file_log, txt_print, on_screen=False, center_div=False):
     if center_div:
         file_log.write('\n\n</div>\n' + '\n')
 
-
-
 # Location map with GeoPandas (single)
 def location_map(point_latitude, point_longitude, point_name):
     state_shapefile = gpd.read_file('../shp/ColombiaState4326.shp')
@@ -30,7 +28,7 @@ def location_map(point_latitude, point_longitude, point_name):
     county_shapefile.boundary.plot(ax=ax, edgecolor='black', linewidth=0.25) # , label='AH'
     point_gdf.plot(ax=ax, marker='o', color='brown', markersize=40, legend=False)  # color='black', 'marker' and 'markersize' customize the point
     #ax.legend(loc='lower left')
-    ax.set_title("County location")
+    ax.set_title("County Location")
     plt.xlabel("Longitude°")
     plt.ylabel("Latitude°")
     ax.tick_params(axis='both', labelsize=9)

@@ -127,6 +127,7 @@ C:\Python314\Python.exe population.py
 * https://population.un.org/wpp/
 * https://www.superservicios.gov.co/
 * https://sui.superservicios.gov.co/Herramientas-de-reporte-y-analisis
+* https://matplotlib.org/stable/gallery/color/named_colors.html
 
 
 ### Reglamento Técnico para el Sector de Agua Potable y Saneamiento Básico (RAS) 
