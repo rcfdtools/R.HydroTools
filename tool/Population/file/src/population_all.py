@@ -21,15 +21,16 @@ pd.set_option('display.width', None)
 app_version = 'v20260806'
 file_path = '../data/Population.xlsx' # Census database
 file_path_rups = '../data/RUPS.csv' # Public service companies database
-county_list = ['All'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
+county_list = ['25899'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
 projection_year_max = 2050 # ● Projection year
 process_polynomial_d2_up = False # ● Polynomial projection over grade 2 is not recommend because over fit the obtained values
 process_wappaus = True # Projection only recommend for short term periods and condition_value < 200, evaluated automatically
 set_negative_to_zero = True
 set_infinite_to_zero = True
 drop_dataset_notes = True
-create_plot = False # ● Creates, save and include plots into reports
+create_plot = False # ● Creates, save and include plots in reports
 show_plot = False # Show plot on Python screen console
+create_location_map = True # ● Creates, save and include location map in reports
 dpi = 96 # Graph plot resolution
 print_on_screen = False # Global print control in screen
 zone_vars = ['Total', 'Urban', 'Rural']
@@ -56,7 +57,7 @@ if drop_dataset_notes: df = df.drop(columns=['Notes'])
 df_rups = pd.read_csv(file_path_rups, encoding='utf-8', dtype=dtype_rups)
 df_rups = df_rups.sort_values(by=[rups_state_name_var, rups_county_name_var])
 #print(df_rups.to_markdown())
-dbf = Dbf5('../shp/ColombiaCounty.dbf')
+dbf = Dbf5('../shp/ColombiaCounty4326.dbf', codec='cp1252')
 df_shapefile = pd.DataFrame(dbf.to_dataframe())
 df_shapefile = df_shapefile[['CountyID', 'Latitude', 'Longitude']]
 
@@ -95,6 +96,13 @@ for county_id in county_list:
         funcs.print_log(file_log, f'• {dict_var[1]}: _{eval(dict_var[0])}_. ', on_screen=print_on_screen)
     funcs.print_log(file_log, f'Dynamic map: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url})', center_div=True, on_screen=print_on_screen)
     funcs.print_log(file_log, f'{geojson}', center_div=True, on_screen=print_on_screen)
+    # Plot location map & Plot x values
+    fig_file0a = '../graph/' + county_id + 'LocationMap.png'  #######################
+    if create_location_map:
+        location_map_plot = funcs.location_map(county_latitude, county_longitude, county_name)
+        location_map_plot.savefig(fig_file0a, dpi=120)
+        plt.close()
+    funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="500"></img>', center_div=True, on_screen=print_on_screen)
     funcs.print_log(file_log, f'\n\n## 0. Census Data ({len(filtered_df)} records)')
     funcs.print_log(file_log, f'\n\n{dictionary.dicts['census_data']}\n\n📅Global census file: [Population.xlsx](../data/Population.xlsx)', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n\n{filtered_df.sort_values(by='Year').to_markdown(index=False)}')
@@ -313,7 +321,7 @@ for county_id in county_list:
 
         # Water supply in liters per capita per day (lpcd)
         funcs.print_log(file_log, f'\n\n### {num}.4. Fresh water supply demand in liters per capita per day (lpcd)\n\n{dictionary.dicts['fresh_water_supply']}\n\n> `CZ`: Level in meters above the sea level (masl)<br> `WS`: Fresh water supply demand in liters per capita per day (lpcd or l/h/d)<br> `WSAll`: Zonal fresh water supply demand in liters per second (l/s)<br> `A`: Zonal area in square meters<br> `DP`: Population density (people/hectare or p/ha)\n\nReference values (RAS Colombia)\n\n{water_supply.to_markdown(index=False)}')
-        dbf = Dbf5('../shp/ColombiaCounty.dbf')
+        dbf = Dbf5('../shp/ColombiaCounty4326.dbf', codec='cp1252')
         df_county = pd.DataFrame(dbf.to_dataframe())
         df_county = df_county[df_county['CountyID'] == county_id]
         df_county = df_county[['CountyID', f'A{zone}', f'CZ{zone}']]

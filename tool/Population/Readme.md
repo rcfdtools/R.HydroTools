@@ -100,6 +100,7 @@ Before run the script yoy must install or update from Bash the libraries
 * _python -m pip install matplotlib_
 * _python -m pip install pandas openpyxl xlrd_
 * _python -m pip install simpledbf_
+* _python -m pip install geopandas_
 
 > Simpledbf also can be installed with _python -m pip install git+https://github.com/rnelsonchem/simpledbf.git_
 
