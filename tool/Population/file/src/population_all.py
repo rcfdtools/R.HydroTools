@@ -43,6 +43,8 @@ rups_state_name_var = 'DEPARTAMENTO_PRESTACION' # Column state name in RUPS.csv
 rups_county_name_var = 'MUNICIPIO_PRESTACION' # Column county name in RUPS.csv
 rups_phone_var = 'TELEFONO' # Column phone in RUPS.csv
 rups_service_var = 'SERVICIO' # Column phone in RUPS.csv
+rups_record_type_var = 'TIPO_INSCRIPCION' # Column record type in RUPS.csv
+rups_ceo_var = 'REPRESENTANTE_LEGAL' # Column CEO in RUPS.csv
 rups_service_var_drop = 'ASEO' # Values to exclude
 
 # Read general census, RUPS and shapefile database
@@ -98,7 +100,7 @@ for county_id in county_list:
     funcs.print_log(file_log, f'\n\n{filtered_df.sort_values(by='Year').to_markdown(index=False)}')
     funcs.print_log(file_log, f'\n\n> 🔥Some records could had specific notes about the registered values or the corresponding urban or rural distribution.')
     if len(df_shapefile) > 0:
-        df_rups_county = df_rups_county.drop(columns=[rups_state_name_var, rups_county_name_var])
+        df_rups_county = df_rups_county.drop(columns=[rups_state_name_var, rups_county_name_var, rups_record_type_var, rups_ceo_var])
         df_rups_county = df_rups_county[df_rups_county[rups_service_var] != rups_service_var_drop]
         funcs.print_log(file_log, f'\n\n📅   [RUPS](https://www.datos.gov.co/Hacienda-y-Cr-dito-P-blico/Registro-nico-de-Prestadores-de-Servicios-P-blicos/4qkq-csdn/about_data) - Local public utility companies: [RUPS.csv](../data/RUPS.xlsx)\n\n {df_rups_county.to_markdown(index=False)}') # {state_name_unicode.upper()} - {county_name_unicode.upper()}
 
@@ -329,6 +331,6 @@ for county_id in county_list:
         num += 1
     funcs.print_log(file_log, f'\n\n<div align="center"><img alt="R.HydroTools" src="../graph/qr-code.png" width="250px"><br><sub>Share this research</sub></div><br>', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
-    funcs.print_log(file_log, f'\n\n| [:house: Home](Readme.md)  | [:beginner: Help / Collaborate](https://github.com/rcfdtools/R.HydroTools/discussions/31) |', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n\n| [:house: Home](Readme.md)  | [:beginner: Help / Collab](https://github.com/rcfdtools/R.HydroTools/discussions/31) |', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n|----------------------------|-------------------------------------------------------------------------------------------|', on_screen = print_on_screen)
     run_percentage += 1
