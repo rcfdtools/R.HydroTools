@@ -17,9 +17,16 @@ def print_log(file_log, txt_print, on_screen=False, center_div=False):
         file_log.write('\n\n</div>\n' + '\n')
 
 # Location map with GeoPandas (single)
-def location_map(point_latitude, point_longitude, point_name):
-    state_shapefile = gpd.read_file('../shp/ColombiaState4326.shp')
-    county_shapefile = gpd.read_file('../shp/ColombiaCounty4326.shp')
+def location_map(point_latitude, point_longitude, point_name, state_filter):
+    if state_filter == 'All':
+        state_shapefile = gpd.read_file('../shp/ColombiaState4326.shp')
+        county_shapefile = gpd.read_file('../shp/ColombiaCounty4326.shp')
+    else:
+        # Under construction
+        state_shapefile = gpd.read_file('../shp/ColombiaState4326.shp', where=f"DeCodigo == '{state_filter}'")
+        county_shapefile = gpd.read_file('../shp/ColombiaCounty4326.shp', where=f"DeCodigo == '{state_filter}'")
+        #state_shapefile = gpd.read_file('../shp/ColombiaState4326.shp')
+        #county_shapefile = gpd.read_file('../shp/ColombiaCounty4326.shp')
     point_location = Point(point_longitude, point_latitude)
     point_gdf = gpd.GeoDataFrame(geometry=[point_location], crs=state_shapefile.crs)
     fig, ax = plt.subplots(figsize=(6, 7))  # Adjust figure size as needed

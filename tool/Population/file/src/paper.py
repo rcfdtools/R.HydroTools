@@ -25,6 +25,7 @@ drop_dataset_notes = True
 create_plot = False # ● Creates, save and include plots into reports
 show_plot = False # Show plot on Python screen console
 print_on_screen = False # Global print control in screen
+create_location_map = False # ● Create and save location map
 zone_vars = ['Total', 'Urban', 'Rural']
 water_supply = pd.DataFrame({'CZ': [1000, 2000, 99999], 'WS': [120, 130, 140]}) # Water supply in liters per capita per day - lpcd: Level or elevation, Water Supply
 runtime = datetime.now()
@@ -53,6 +54,11 @@ grouped = df.groupby('StateName')
 funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen=print_on_screen)
 funcs.print_log(file_log, f'# {dictionary.dicts['study_name']} \n{dictionary.dicts['keywords']}\n\n{dictionary.dicts['study_desc']}', on_screen=print_on_screen)
 for group_name, group_df in grouped:
+    fig_file0a = '../graph/' + group_name + 'LocationMap.png'  #######################
+    if create_location_map:
+        location_map_plot = funcs.location_map('4.00', '-72.00', group_name.upper(), 'All')
+        location_map_plot.savefig(fig_file0a, dpi=120)
+        plt.close()
     detailed_df = group_df.drop(columns=['CountyID', 'StateName', 'Source', 'Year', 'CountryID', 'CountryName', 'StateID', 'PTotal', 'PUrban', 'PRural'])
     detailed_df = detailed_df.rename(columns={'CountyIDmd': 'CountyID'})
     funcs.print_log(file_log, f'\n\n## {group_name.upper()} ({len(detailed_df)} Counties)\n\n')
