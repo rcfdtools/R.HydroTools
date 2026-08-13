@@ -28,7 +28,7 @@ def location_map(point_latitude, point_longitude, point_name):
     county_shapefile.boundary.plot(ax=ax, edgecolor='black', linewidth=0.25) # , label='AH'
     point_gdf.plot(ax=ax, marker='o', color='brown', markersize=40, legend=False)  # color='black', 'marker' and 'markersize' customize the point
     #ax.legend(loc='lower left')
-    ax.set_title("County Location")
+    ax.set_title("Map Location")
     plt.xlabel("Longitude°")
     plt.ylabel("Latitude°")
     ax.tick_params(axis='both', labelsize=9)
