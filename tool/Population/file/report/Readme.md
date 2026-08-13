@@ -10,7 +10,7 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 
 PPSD are analytical estimates used by governments and planners to anticipate future changes in population size, age distribution, and the resulting community needs for utilities, healthcare, education, and infrastructure as sizing future water treatment facilities, electrical grids, and road networks based on spatial growth.
 
-## AMAZONAS
+## AMAZONAS (11 Counties)
 
 | CountyID          | CountyName       |
 |:------------------|:-----------------|
@@ -26,7 +26,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [91669](91669.md) | Puerto Santander |
 | [91798](91798.md) | Tarapacá         |
 
-## ANTIOQUIA
+## ANTIOQUIA (125 Counties)
 
 | CountyID          | CountyName                |
 |:------------------|:--------------------------|
@@ -156,7 +156,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [05893](05893.md) | Yondó                     |
 | [05895](05895.md) | Zaragoza                  |
 
-## ARAUCA
+## ARAUCA (7 Counties)
 
 | CountyID          | CountyName    |
 |:------------------|:--------------|
@@ -168,14 +168,14 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [81736](81736.md) | Saravena      |
 | [81794](81794.md) | Tame          |
 
-## ARCHIPIÉLAGO DE SAN ANDRÉS
+## ARCHIPIÉLAGO DE SAN ANDRÉS (2 Counties)
 
 | CountyID          | CountyName                   |
 |:------------------|:-----------------------------|
 | [88001](88001.md) | San Andrés                   |
 | [88564](88564.md) | Providencia y Santa Catalina |
 
-## ATLÁNTICO
+## ATLÁNTICO (23 Counties)
 
 | CountyID          | CountyName       |
 |:------------------|:-----------------|
@@ -203,13 +203,13 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [08832](08832.md) | Tubará           |
 | [08849](08849.md) | Usiacurí         |
 
-## BOGOTÁ, D.C.
+## BOGOTÁ, D.C. (1 Counties)
 
 | CountyID          | CountyName   |
 |:------------------|:-------------|
 | [11001](11001.md) | Bogotá, D.C. |
 
-## BOLÍVAR
+## BOLÍVAR (46 Counties)
 
 | CountyID          | CountyName            |
 |:------------------|:----------------------|
@@ -260,7 +260,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [13873](13873.md) | Villanueva            |
 | [13894](13894.md) | Zambrano              |
 
-## BOYACÁ
+## BOYACÁ (123 Counties)
 
 | CountyID          | CountyName            |
 |:------------------|:----------------------|
@@ -388,7 +388,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [15879](15879.md) | Viracachá             |
 | [15897](15897.md) | Zetaquirá             |
 
-## CALDAS
+## CALDAS (27 Counties)
 
 | CountyID          | CountyName   |
 |:------------------|:-------------|
@@ -420,7 +420,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [17873](17873.md) | Villamaría   |
 | [17877](17877.md) | Viterbo      |
 
-## CAQUETÁ
+## CAQUETÁ (16 Counties)
 
 | CountyID          | CountyName             |
 |:------------------|:-----------------------|
@@ -441,7 +441,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [18785](18785.md) | Solita                 |
 | [18860](18860.md) | Valparaíso             |
 
-## CASANARE
+## CASANARE (19 Counties)
 
 | CountyID          | CountyName           |
 |:------------------|:---------------------|
@@ -465,7 +465,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [85430](85430.md) | Trinidad             |
 | [85440](85440.md) | Villanueva           |
 
-## CAUCA
+## CAUCA (42 Counties)
 
 | CountyID          | CountyName             |
 |:------------------|:-----------------------|
@@ -512,7 +512,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [19824](19824.md) | Totoró                 |
 | [19845](19845.md) | Villa Rica             |
 
-## CESAR
+## CESAR (25 Counties)
 
 | CountyID          | CountyName               |
 |:------------------|:-------------------------|
@@ -542,7 +542,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [20770](20770.md) | San Martín               |
 | [20787](20787.md) | Tamalameque              |
 
-## CHOCÓ
+## CHOCÓ (31 Counties)
 
 | CountyID          | CountyName              |
 |:------------------|:------------------------|
@@ -578,7 +578,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [27800](27800.md) | Unguía                  |
 | [27810](27810.md) | Unión Panamericana      |
 
-## CUNDINAMARCA
+## CUNDINAMARCA (116 Counties)
 
 | CountyID          | CountyName                 |
 |:------------------|:---------------------------|
@@ -699,7 +699,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [25898](25898.md) | Zipacón                    |
 | [25899](25899.md) | Zipaquirá                  |
 
-## CÓRDOBA
+## CÓRDOBA (30 Counties)
 
 | CountyID          | CountyName              |
 |:------------------|:------------------------|
@@ -734,7 +734,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [23815](23815.md) | Tuchín                  |
 | [23855](23855.md) | Valencia                |
 
-## GUAINÍA
+## GUAINÍA (8 Counties)
 
 | CountyID          | CountyName      |
 |:------------------|:----------------|
@@ -747,7 +747,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [94887](94887.md) | Paná - Paná     |
 | [94888](94888.md) | Morichal        |
 
-## GUAVIARE
+## GUAVIARE (4 Counties)
 
 | CountyID          | CountyName            |
 |:------------------|:----------------------|
@@ -756,7 +756,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [95025](95025.md) | El Retorno            |
 | [95200](95200.md) | Miraflores            |
 
-## HUILA
+## HUILA (37 Counties)
 
 | CountyID          | CountyName   |
 |:------------------|:-------------|
@@ -798,7 +798,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [41872](41872.md) | Villavieja   |
 | [41885](41885.md) | Yaguará      |
 
-## LA GUAJIRA
+## LA GUAJIRA (15 Counties)
 
 | CountyID          | CountyName         |
 |:------------------|:-------------------|
@@ -818,7 +818,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [44855](44855.md) | Urumita            |
 | [44874](44874.md) | Villanueva         |
 
-## MAGDALENA
+## MAGDALENA (30 Counties)
 
 | CountyID          | CountyName                  |
 |:------------------|:----------------------------|
@@ -853,7 +853,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [47960](47960.md) | Zapayán                     |
 | [47980](47980.md) | Zona Bananera               |
 
-## META
+## META (29 Counties)
 
 | CountyID          | CountyName           |
 |:------------------|:---------------------|
@@ -887,7 +887,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [50689](50689.md) | San Martín           |
 | [50711](50711.md) | Vistahermosa         |
 
-## NARIÑO
+## NARIÑO (64 Counties)
 
 | CountyID          | CountyName           |
 |:------------------|:---------------------|
@@ -956,7 +956,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [52838](52838.md) | Túquerres            |
 | [52885](52885.md) | Yacuanquer           |
 
-## NORTE DE SANTANDER
+## NORTE DE SANTANDER (40 Counties)
 
 | CountyID          | CountyName         |
 |:------------------|:-------------------|
@@ -1001,7 +1001,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [54871](54871.md) | Villa Caro         |
 | [54874](54874.md) | Villa del Rosario  |
 
-## PUTUMAYO
+## PUTUMAYO (13 Counties)
 
 | CountyID          | CountyName        |
 |:------------------|:------------------|
@@ -1019,7 +1019,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [86865](86865.md) | Valle del Guamuez |
 | [86885](86885.md) | Villagarzón       |
 
-## QUINDIO
+## QUINDIO (12 Counties)
 
 | CountyID          | CountyName   |
 |:------------------|:-------------|
@@ -1036,7 +1036,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [63594](63594.md) | Quimbaya     |
 | [63690](63690.md) | Salento      |
 
-## RISARALDA
+## RISARALDA (14 Counties)
 
 | CountyID          | CountyName          |
 |:------------------|:--------------------|
@@ -1055,7 +1055,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [66682](66682.md) | Santa Rosa de Cabal |
 | [66687](66687.md) | Santuario           |
 
-## SANTANDER
+## SANTANDER (87 Counties)
 
 | CountyID          | CountyName             |
 |:------------------|:-----------------------|
@@ -1147,7 +1147,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [68872](68872.md) | Villanueva             |
 | [68895](68895.md) | Zapatoca               |
 
-## SUCRE
+## SUCRE (26 Counties)
 
 | CountyID          | CountyName          |
 |:------------------|:--------------------|
@@ -1178,7 +1178,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [70820](70820.md) | Tolú                |
 | [70823](70823.md) | Toluviejo           |
 
-## TOLIMA
+## TOLIMA (47 Counties)
 
 | CountyID          | CountyName        |
 |:------------------|:------------------|
@@ -1230,7 +1230,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [73870](73870.md) | Villahermosa      |
 | [73873](73873.md) | Villarrica        |
 
-## VALLE DEL CAUCA
+## VALLE DEL CAUCA (42 Counties)
 
 | CountyID          | CountyName       |
 |:------------------|:-----------------|
@@ -1277,7 +1277,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [76892](76892.md) | Yumbo            |
 | [76895](76895.md) | Zarzal           |
 
-## VAUPÉS
+## VAUPÉS (6 Counties)
 
 | CountyID          | CountyName   |
 |:------------------|:-------------|
@@ -1288,7 +1288,7 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [97777](97777.md) | Papunaua     |
 | [97889](97889.md) | Yavaraté     |
 
-## VICHADA
+## VICHADA (4 Counties)
 
 | CountyID          | CountyName     |
 |:------------------|:---------------|
