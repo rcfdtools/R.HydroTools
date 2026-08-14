@@ -23,8 +23,8 @@ def location_map(point_latitude, point_longitude, point_name, state_filter):
         county_shapefile = gpd.read_file('../shp/ColombiaCounty4326.shp')
     else:
         # Under construction
-        state_shapefile = gpd.read_file('../shp/ColombiaState4326.shp', where=f"DeCodigo == '{state_filter}'")
-        county_shapefile = gpd.read_file('../shp/ColombiaCounty4326.shp', where=f"DeCodigo == '{state_filter}'")
+        state_shapefile = gpd.read_file('../shp/ColombiaState4326.shp', where=f"DeCodigo = '{state_filter}'")
+        county_shapefile = gpd.read_file('../shp/ColombiaCounty4326.shp', where=f"DeCodigo = '{state_filter}'")
         #state_shapefile = gpd.read_file('../shp/ColombiaState4326.shp')
         #county_shapefile = gpd.read_file('../shp/ColombiaCounty4326.shp')
     point_location = Point(point_longitude, point_latitude)

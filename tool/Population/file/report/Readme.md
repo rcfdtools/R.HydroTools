@@ -10,23 +10,13 @@ Keywords: `population` `public-service` `projection` `lineal` `polynomial` `loga
 
 PPSD are analytical estimates used by governments and planners to anticipate future changes in population size, age distribution, and the resulting community needs for utilities, healthcare, education, and infrastructure as sizing future water treatment facilities, electrical grids, and road networks based on spatial growth.
 
-## AMAZONAS (11 Counties)
+## 05 (125 Counties)
 
-| CountyID          | CountyName       |
-|:------------------|:-----------------|
-| [91001](91001.md) | Leticia          |
-| [91263](91263.md) | El Encanto       |
-| [91405](91405.md) | La Chorrera      |
-| [91407](91407.md) | La Pedrera       |
-| [91430](91430.md) | La Victoria      |
-| [91460](91460.md) | Mirití - Paraná  |
-| [91530](91530.md) | Puerto Alegría   |
-| [91536](91536.md) | Puerto Arica     |
-| [91540](91540.md) | Puerto Nariño    |
-| [91669](91669.md) | Puerto Santander |
-| [91798](91798.md) | Tarapacá         |
+<div align="center">
 
-## ANTIOQUIA (125 Counties)
+<img alt="R.HydroTools" src="../graph/05LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName                |
 |:------------------|:--------------------------|
@@ -156,26 +146,13 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [05893](05893.md) | Yondó                     |
 | [05895](05895.md) | Zaragoza                  |
 
-## ARAUCA (7 Counties)
+## 08 (23 Counties)
 
-| CountyID          | CountyName    |
-|:------------------|:--------------|
-| [81001](81001.md) | Arauca        |
-| [81065](81065.md) | Arauquita     |
-| [81220](81220.md) | Cravo Norte   |
-| [81300](81300.md) | Fortul        |
-| [81591](81591.md) | Puerto Rondón |
-| [81736](81736.md) | Saravena      |
-| [81794](81794.md) | Tame          |
+<div align="center">
 
-## ARCHIPIÉLAGO DE SAN ANDRÉS (2 Counties)
+<img alt="R.HydroTools" src="../graph/08LocationMap.png" width="500"></img>
 
-| CountyID          | CountyName                   |
-|:------------------|:-----------------------------|
-| [88001](88001.md) | San Andrés                   |
-| [88564](88564.md) | Providencia y Santa Catalina |
-
-## ATLÁNTICO (23 Counties)
+</div>
 
 | CountyID          | CountyName       |
 |:------------------|:-----------------|
@@ -203,13 +180,25 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [08832](08832.md) | Tubará           |
 | [08849](08849.md) | Usiacurí         |
 
-## BOGOTÁ, D.C. (1 Counties)
+## 11 (1 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/11LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName   |
 |:------------------|:-------------|
 | [11001](11001.md) | Bogotá, D.C. |
 
-## BOLÍVAR (46 Counties)
+## 13 (46 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/13LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName            |
 |:------------------|:----------------------|
@@ -260,7 +249,13 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [13873](13873.md) | Villanueva            |
 | [13894](13894.md) | Zambrano              |
 
-## BOYACÁ (123 Counties)
+## 15 (123 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/15LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName            |
 |:------------------|:----------------------|
@@ -388,7 +383,13 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [15879](15879.md) | Viracachá             |
 | [15897](15897.md) | Zetaquirá             |
 
-## CALDAS (27 Counties)
+## 17 (27 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/17LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName   |
 |:------------------|:-------------|
@@ -420,7 +421,13 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [17873](17873.md) | Villamaría   |
 | [17877](17877.md) | Viterbo      |
 
-## CAQUETÁ (16 Counties)
+## 18 (16 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/18LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName             |
 |:------------------|:-----------------------|
@@ -441,31 +448,13 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [18785](18785.md) | Solita                 |
 | [18860](18860.md) | Valparaíso             |
 
-## CASANARE (19 Counties)
+## 19 (42 Counties)
 
-| CountyID          | CountyName           |
-|:------------------|:---------------------|
-| [85001](85001.md) | Yopal                |
-| [85010](85010.md) | Aguazul              |
-| [85015](85015.md) | Chámeza              |
-| [85125](85125.md) | Hato Corozal         |
-| [85136](85136.md) | La Salina            |
-| [85139](85139.md) | Maní                 |
-| [85162](85162.md) | Monterrey            |
-| [85225](85225.md) | Nunchía              |
-| [85230](85230.md) | Orocué               |
-| [85250](85250.md) | Paz de Ariporo       |
-| [85263](85263.md) | Pore                 |
-| [85279](85279.md) | Recetor              |
-| [85300](85300.md) | Sabanalarga          |
-| [85315](85315.md) | Sácama               |
-| [85325](85325.md) | San Luis de Palenque |
-| [85400](85400.md) | Támara               |
-| [85410](85410.md) | Tauramena            |
-| [85430](85430.md) | Trinidad             |
-| [85440](85440.md) | Villanueva           |
+<div align="center">
 
-## CAUCA (42 Counties)
+<img alt="R.HydroTools" src="../graph/19LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName             |
 |:------------------|:-----------------------|
@@ -512,7 +501,13 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [19824](19824.md) | Totoró                 |
 | [19845](19845.md) | Villa Rica             |
 
-## CESAR (25 Counties)
+## 20 (25 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/20LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName               |
 |:------------------|:-------------------------|
@@ -542,43 +537,54 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [20770](20770.md) | San Martín               |
 | [20787](20787.md) | Tamalameque              |
 
-## CHOCÓ (31 Counties)
+## 23 (30 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/23LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName              |
 |:------------------|:------------------------|
-| [27001](27001.md) | Quibdó                  |
-| [27006](27006.md) | Acandí                  |
-| [27025](27025.md) | Alto Baudó              |
-| [27050](27050.md) | Atrato                  |
-| [27073](27073.md) | Bagadó                  |
-| [27075](27075.md) | Bahía Solano            |
-| [27077](27077.md) | Bajo Baudó              |
-| [27099](27099.md) | Bojayá                  |
-| [27135](27135.md) | El Cantón del San Pablo |
-| [27150](27150.md) | Carmen del Darien       |
-| [27160](27160.md) | Cértegui                |
-| [27205](27205.md) | Condoto                 |
-| [27245](27245.md) | El Carmen de Atrato     |
-| [27250](27250.md) | El Litoral del San Juan |
-| [27361](27361.md) | Istmina                 |
-| [27372](27372.md) | Juradó                  |
-| [27413](27413.md) | Lloró                   |
-| [27425](27425.md) | Medio Atrato            |
-| [27430](27430.md) | Medio Baudó             |
-| [27450](27450.md) | Medio San Juan          |
-| [27491](27491.md) | Nóvita                  |
-| [27493](27493.md) | Belén de Bajirá         |
-| [27495](27495.md) | Nuquí                   |
-| [27580](27580.md) | Rio Iró                 |
-| [27600](27600.md) | Río Quito               |
-| [27615](27615.md) | Riosucio                |
-| [27660](27660.md) | San José del Palmar     |
-| [27745](27745.md) | Sipí                    |
-| [27787](27787.md) | Tadó                    |
-| [27800](27800.md) | Unguía                  |
-| [27810](27810.md) | Unión Panamericana      |
+| [23001](23001.md) | Montería                |
+| [23068](23068.md) | Ayapel                  |
+| [23079](23079.md) | Buenavista              |
+| [23090](23090.md) | Canalete                |
+| [23162](23162.md) | Cereté                  |
+| [23168](23168.md) | Chimá                   |
+| [23182](23182.md) | Chinú                   |
+| [23189](23189.md) | Ciénaga de Oro          |
+| [23300](23300.md) | Cotorra                 |
+| [23350](23350.md) | La Apartada             |
+| [23417](23417.md) | Lorica                  |
+| [23419](23419.md) | Los Córdobas            |
+| [23464](23464.md) | Momil                   |
+| [23466](23466.md) | Montelíbano             |
+| [23500](23500.md) | Moñitos                 |
+| [23555](23555.md) | Planeta Rica            |
+| [23570](23570.md) | Pueblo Nuevo            |
+| [23574](23574.md) | Puerto Escondido        |
+| [23580](23580.md) | Puerto Libertador       |
+| [23586](23586.md) | Purísima                |
+| [23660](23660.md) | Sahagún                 |
+| [23670](23670.md) | San Andrés de Sotavento |
+| [23672](23672.md) | San Antero              |
+| [23675](23675.md) | San Bernardo del Viento |
+| [23678](23678.md) | San Carlos              |
+| [23682](23682.md) | San José de Uré         |
+| [23686](23686.md) | San Pelayo              |
+| [23807](23807.md) | Tierralta               |
+| [23815](23815.md) | Tuchín                  |
+| [23855](23855.md) | Valencia                |
 
-## CUNDINAMARCA (116 Counties)
+## 25 (116 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/25LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName                 |
 |:------------------|:---------------------------|
@@ -699,64 +705,55 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [25898](25898.md) | Zipacón                    |
 | [25899](25899.md) | Zipaquirá                  |
 
-## CÓRDOBA (30 Counties)
+## 27 (31 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/27LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName              |
 |:------------------|:------------------------|
-| [23001](23001.md) | Montería                |
-| [23068](23068.md) | Ayapel                  |
-| [23079](23079.md) | Buenavista              |
-| [23090](23090.md) | Canalete                |
-| [23162](23162.md) | Cereté                  |
-| [23168](23168.md) | Chimá                   |
-| [23182](23182.md) | Chinú                   |
-| [23189](23189.md) | Ciénaga de Oro          |
-| [23300](23300.md) | Cotorra                 |
-| [23350](23350.md) | La Apartada             |
-| [23417](23417.md) | Lorica                  |
-| [23419](23419.md) | Los Córdobas            |
-| [23464](23464.md) | Momil                   |
-| [23466](23466.md) | Montelíbano             |
-| [23500](23500.md) | Moñitos                 |
-| [23555](23555.md) | Planeta Rica            |
-| [23570](23570.md) | Pueblo Nuevo            |
-| [23574](23574.md) | Puerto Escondido        |
-| [23580](23580.md) | Puerto Libertador       |
-| [23586](23586.md) | Purísima                |
-| [23660](23660.md) | Sahagún                 |
-| [23670](23670.md) | San Andrés de Sotavento |
-| [23672](23672.md) | San Antero              |
-| [23675](23675.md) | San Bernardo del Viento |
-| [23678](23678.md) | San Carlos              |
-| [23682](23682.md) | San José de Uré         |
-| [23686](23686.md) | San Pelayo              |
-| [23807](23807.md) | Tierralta               |
-| [23815](23815.md) | Tuchín                  |
-| [23855](23855.md) | Valencia                |
+| [27001](27001.md) | Quibdó                  |
+| [27006](27006.md) | Acandí                  |
+| [27025](27025.md) | Alto Baudó              |
+| [27050](27050.md) | Atrato                  |
+| [27073](27073.md) | Bagadó                  |
+| [27075](27075.md) | Bahía Solano            |
+| [27077](27077.md) | Bajo Baudó              |
+| [27099](27099.md) | Bojayá                  |
+| [27135](27135.md) | El Cantón del San Pablo |
+| [27150](27150.md) | Carmen del Darien       |
+| [27160](27160.md) | Cértegui                |
+| [27205](27205.md) | Condoto                 |
+| [27245](27245.md) | El Carmen de Atrato     |
+| [27250](27250.md) | El Litoral del San Juan |
+| [27361](27361.md) | Istmina                 |
+| [27372](27372.md) | Juradó                  |
+| [27413](27413.md) | Lloró                   |
+| [27425](27425.md) | Medio Atrato            |
+| [27430](27430.md) | Medio Baudó             |
+| [27450](27450.md) | Medio San Juan          |
+| [27491](27491.md) | Nóvita                  |
+| [27493](27493.md) | Belén de Bajirá         |
+| [27495](27495.md) | Nuquí                   |
+| [27580](27580.md) | Rio Iró                 |
+| [27600](27600.md) | Río Quito               |
+| [27615](27615.md) | Riosucio                |
+| [27660](27660.md) | San José del Palmar     |
+| [27745](27745.md) | Sipí                    |
+| [27787](27787.md) | Tadó                    |
+| [27800](27800.md) | Unguía                  |
+| [27810](27810.md) | Unión Panamericana      |
 
-## GUAINÍA (8 Counties)
+## 41 (37 Counties)
 
-| CountyID          | CountyName      |
-|:------------------|:----------------|
-| [94001](94001.md) | Inírida         |
-| [94343](94343.md) | Barrancominas   |
-| [94883](94883.md) | San Felipe      |
-| [94884](94884.md) | Puerto Colombia |
-| [94885](94885.md) | La Guadalupe    |
-| [94886](94886.md) | Cacahual        |
-| [94887](94887.md) | Paná - Paná     |
-| [94888](94888.md) | Morichal        |
+<div align="center">
 
-## GUAVIARE (4 Counties)
+<img alt="R.HydroTools" src="../graph/41LocationMap.png" width="500"></img>
 
-| CountyID          | CountyName            |
-|:------------------|:----------------------|
-| [95001](95001.md) | San José del Guaviare |
-| [95015](95015.md) | Calamar               |
-| [95025](95025.md) | El Retorno            |
-| [95200](95200.md) | Miraflores            |
-
-## HUILA (37 Counties)
+</div>
 
 | CountyID          | CountyName   |
 |:------------------|:-------------|
@@ -798,7 +795,13 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [41872](41872.md) | Villavieja   |
 | [41885](41885.md) | Yaguará      |
 
-## LA GUAJIRA (15 Counties)
+## 44 (15 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/44LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName         |
 |:------------------|:-------------------|
@@ -818,7 +821,13 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [44855](44855.md) | Urumita            |
 | [44874](44874.md) | Villanueva         |
 
-## MAGDALENA (30 Counties)
+## 47 (30 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/47LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName                  |
 |:------------------|:----------------------------|
@@ -853,7 +862,13 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [47960](47960.md) | Zapayán                     |
 | [47980](47980.md) | Zona Bananera               |
 
-## META (29 Counties)
+## 50 (29 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/50LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName           |
 |:------------------|:---------------------|
@@ -887,7 +902,13 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [50689](50689.md) | San Martín           |
 | [50711](50711.md) | Vistahermosa         |
 
-## NARIÑO (64 Counties)
+## 52 (64 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/52LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName           |
 |:------------------|:---------------------|
@@ -956,7 +977,13 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [52838](52838.md) | Túquerres            |
 | [52885](52885.md) | Yacuanquer           |
 
-## NORTE DE SANTANDER (40 Counties)
+## 54 (40 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/54LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName         |
 |:------------------|:-------------------|
@@ -1001,25 +1028,13 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [54871](54871.md) | Villa Caro         |
 | [54874](54874.md) | Villa del Rosario  |
 
-## PUTUMAYO (13 Counties)
+## 63 (12 Counties)
 
-| CountyID          | CountyName        |
-|:------------------|:------------------|
-| [86001](86001.md) | Mocoa             |
-| [86219](86219.md) | Colón             |
-| [86320](86320.md) | Orito             |
-| [86568](86568.md) | Puerto Asís       |
-| [86569](86569.md) | Puerto Caicedo    |
-| [86571](86571.md) | Puerto Guzmán     |
-| [86573](86573.md) | Leguízamo         |
-| [86749](86749.md) | Sibundoy          |
-| [86755](86755.md) | San Francisco     |
-| [86757](86757.md) | San Miguel        |
-| [86760](86760.md) | Santiago          |
-| [86865](86865.md) | Valle del Guamuez |
-| [86885](86885.md) | Villagarzón       |
+<div align="center">
 
-## QUINDIO (12 Counties)
+<img alt="R.HydroTools" src="../graph/63LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName   |
 |:------------------|:-------------|
@@ -1036,7 +1051,13 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [63594](63594.md) | Quimbaya     |
 | [63690](63690.md) | Salento      |
 
-## RISARALDA (14 Counties)
+## 66 (14 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/66LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName          |
 |:------------------|:--------------------|
@@ -1055,7 +1076,13 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [66682](66682.md) | Santa Rosa de Cabal |
 | [66687](66687.md) | Santuario           |
 
-## SANTANDER (87 Counties)
+## 68 (87 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/68LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName             |
 |:------------------|:-----------------------|
@@ -1147,7 +1174,13 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [68872](68872.md) | Villanueva             |
 | [68895](68895.md) | Zapatoca               |
 
-## SUCRE (26 Counties)
+## 70 (26 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/70LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName          |
 |:------------------|:--------------------|
@@ -1178,7 +1211,13 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [70820](70820.md) | Tolú                |
 | [70823](70823.md) | Toluviejo           |
 
-## TOLIMA (47 Counties)
+## 73 (47 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/73LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName        |
 |:------------------|:------------------|
@@ -1230,7 +1269,13 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [73870](73870.md) | Villahermosa      |
 | [73873](73873.md) | Villarrica        |
 
-## VALLE DEL CAUCA (42 Counties)
+## 76 (42 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/76LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName       |
 |:------------------|:-----------------|
@@ -1277,7 +1322,154 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [76892](76892.md) | Yumbo            |
 | [76895](76895.md) | Zarzal           |
 
-## VAUPÉS (6 Counties)
+## 81 (7 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/81LocationMap.png" width="500"></img>
+
+</div>
+
+| CountyID          | CountyName    |
+|:------------------|:--------------|
+| [81001](81001.md) | Arauca        |
+| [81065](81065.md) | Arauquita     |
+| [81220](81220.md) | Cravo Norte   |
+| [81300](81300.md) | Fortul        |
+| [81591](81591.md) | Puerto Rondón |
+| [81736](81736.md) | Saravena      |
+| [81794](81794.md) | Tame          |
+
+## 85 (19 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/85LocationMap.png" width="500"></img>
+
+</div>
+
+| CountyID          | CountyName           |
+|:------------------|:---------------------|
+| [85001](85001.md) | Yopal                |
+| [85010](85010.md) | Aguazul              |
+| [85015](85015.md) | Chámeza              |
+| [85125](85125.md) | Hato Corozal         |
+| [85136](85136.md) | La Salina            |
+| [85139](85139.md) | Maní                 |
+| [85162](85162.md) | Monterrey            |
+| [85225](85225.md) | Nunchía              |
+| [85230](85230.md) | Orocué               |
+| [85250](85250.md) | Paz de Ariporo       |
+| [85263](85263.md) | Pore                 |
+| [85279](85279.md) | Recetor              |
+| [85300](85300.md) | Sabanalarga          |
+| [85315](85315.md) | Sácama               |
+| [85325](85325.md) | San Luis de Palenque |
+| [85400](85400.md) | Támara               |
+| [85410](85410.md) | Tauramena            |
+| [85430](85430.md) | Trinidad             |
+| [85440](85440.md) | Villanueva           |
+
+## 86 (13 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/86LocationMap.png" width="500"></img>
+
+</div>
+
+| CountyID          | CountyName        |
+|:------------------|:------------------|
+| [86001](86001.md) | Mocoa             |
+| [86219](86219.md) | Colón             |
+| [86320](86320.md) | Orito             |
+| [86568](86568.md) | Puerto Asís       |
+| [86569](86569.md) | Puerto Caicedo    |
+| [86571](86571.md) | Puerto Guzmán     |
+| [86573](86573.md) | Leguízamo         |
+| [86749](86749.md) | Sibundoy          |
+| [86755](86755.md) | San Francisco     |
+| [86757](86757.md) | San Miguel        |
+| [86760](86760.md) | Santiago          |
+| [86865](86865.md) | Valle del Guamuez |
+| [86885](86885.md) | Villagarzón       |
+
+## 88 (2 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/88LocationMap.png" width="500"></img>
+
+</div>
+
+| CountyID          | CountyName                   |
+|:------------------|:-----------------------------|
+| [88001](88001.md) | San Andrés                   |
+| [88564](88564.md) | Providencia y Santa Catalina |
+
+## 91 (11 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/91LocationMap.png" width="500"></img>
+
+</div>
+
+| CountyID          | CountyName       |
+|:------------------|:-----------------|
+| [91001](91001.md) | Leticia          |
+| [91263](91263.md) | El Encanto       |
+| [91405](91405.md) | La Chorrera      |
+| [91407](91407.md) | La Pedrera       |
+| [91430](91430.md) | La Victoria      |
+| [91460](91460.md) | Mirití - Paraná  |
+| [91530](91530.md) | Puerto Alegría   |
+| [91536](91536.md) | Puerto Arica     |
+| [91540](91540.md) | Puerto Nariño    |
+| [91669](91669.md) | Puerto Santander |
+| [91798](91798.md) | Tarapacá         |
+
+## 94 (8 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/94LocationMap.png" width="500"></img>
+
+</div>
+
+| CountyID          | CountyName      |
+|:------------------|:----------------|
+| [94001](94001.md) | Inírida         |
+| [94343](94343.md) | Barrancominas   |
+| [94883](94883.md) | San Felipe      |
+| [94884](94884.md) | Puerto Colombia |
+| [94885](94885.md) | La Guadalupe    |
+| [94886](94886.md) | Cacahual        |
+| [94887](94887.md) | Paná - Paná     |
+| [94888](94888.md) | Morichal        |
+
+## 95 (4 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/95LocationMap.png" width="500"></img>
+
+</div>
+
+| CountyID          | CountyName            |
+|:------------------|:----------------------|
+| [95001](95001.md) | San José del Guaviare |
+| [95015](95015.md) | Calamar               |
+| [95025](95025.md) | El Retorno            |
+| [95200](95200.md) | Miraflores            |
+
+## 97 (6 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/97LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName   |
 |:------------------|:-------------|
@@ -1288,7 +1480,13 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [97777](97777.md) | Papunaua     |
 | [97889](97889.md) | Yavaraté     |
 
-## VICHADA (4 Counties)
+## 99 (4 Counties)
+
+<div align="center">
+
+<img alt="R.HydroTools" src="../graph/99LocationMap.png" width="500"></img>
+
+</div>
 
 | CountyID          | CountyName     |
 |:------------------|:---------------|
