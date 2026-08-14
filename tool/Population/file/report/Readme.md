@@ -9,14 +9,18 @@
 Keywords: `population` `public-service` `projection` `lineal` `polynomial` `logarithmic` `potential` `exponential` `arithmetic` `geometric` `wappaus` `dane` `colombia` `south-america`
 
 PPSD are analytical estimates used by governments and planners to anticipate future changes in population size, age distribution, and the resulting community needs for utilities, healthcare, education, and infrastructure as sizing future water treatment facilities, electrical grids, and road networks based on spatial growth.
+## ANTIOQUIA (125 Counties)
 
-## 05 (125 Counties)
+> Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/05LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName                |
 |:------------------|:--------------------------|
@@ -146,13 +150,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [05893](05893.md) | Yondó                     |
 | [05895](05895.md) | Zaragoza                  |
 
-## 08 (23 Counties)
+</div>
+
+
+## ATLÁNTICO (23 Counties)
+
+> Regulation: Ley No. 21 de 1910
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/08LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName       |
 |:------------------|:-----------------|
@@ -180,7 +192,12 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [08832](08832.md) | Tubará           |
 | [08849](08849.md) | Usiacurí         |
 
-## 11 (1 Counties)
+</div>
+
+
+## BOGOTÁ, D.C. (1 Counties)
+
+> Regulation: Ley 17 de 1905, Art. 11 - Constitución Politica 1991, art. 322
 
 <div align="center">
 
@@ -188,17 +205,28 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 
 </div>
 
+
+<div align="center">
+
 | CountyID          | CountyName   |
 |:------------------|:-------------|
 | [11001](11001.md) | Bogotá, D.C. |
 
-## 13 (46 Counties)
+</div>
+
+
+## BOLÍVAR (46 Counties)
+
+> Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/13LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName            |
 |:------------------|:----------------------|
@@ -249,13 +277,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [13873](13873.md) | Villanueva            |
 | [13894](13894.md) | Zambrano              |
 
-## 15 (123 Counties)
+</div>
+
+
+## BOYACÁ (123 Counties)
+
+> Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/15LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName            |
 |:------------------|:----------------------|
@@ -383,13 +419,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [15879](15879.md) | Viracachá             |
 | [15897](15897.md) | Zetaquirá             |
 
-## 17 (27 Counties)
+</div>
+
+
+## CALDAS (27 Counties)
+
+> Regulation: Ley No.17 de 1905
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/17LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName   |
 |:------------------|:-------------|
@@ -421,13 +465,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [17873](17873.md) | Villamaría   |
 | [17877](17877.md) | Viterbo      |
 
-## 18 (16 Counties)
+</div>
+
+
+## CAQUETÁ (16 Counties)
+
+> Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/18LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName             |
 |:------------------|:-----------------------|
@@ -448,13 +500,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [18785](18785.md) | Solita                 |
 | [18860](18860.md) | Valparaíso             |
 
-## 19 (42 Counties)
+</div>
+
+
+## CAUCA (42 Counties)
+
+> Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/19LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName             |
 |:------------------|:-----------------------|
@@ -501,13 +561,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [19824](19824.md) | Totoró                 |
 | [19845](19845.md) | Villa Rica             |
 
-## 20 (25 Counties)
+</div>
+
+
+## CESAR (25 Counties)
+
+> Regulation: Ley No. 25 de 1967
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/20LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName               |
 |:------------------|:-------------------------|
@@ -537,13 +605,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [20770](20770.md) | San Martín               |
 | [20787](20787.md) | Tamalameque              |
 
-## 23 (30 Counties)
+</div>
+
+
+## CÓRDOBA (30 Counties)
+
+> Regulation: Ley No. 9 de 1951
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/23LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName              |
 |:------------------|:------------------------|
@@ -578,13 +654,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [23815](23815.md) | Tuchín                  |
 | [23855](23855.md) | Valencia                |
 
-## 25 (116 Counties)
+</div>
+
+
+## CUNDINAMARCA (116 Counties)
+
+> Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/25LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName                 |
 |:------------------|:---------------------------|
@@ -705,13 +789,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [25898](25898.md) | Zipacón                    |
 | [25899](25899.md) | Zipaquirá                  |
 
-## 27 (31 Counties)
+</div>
+
+
+## CHOCÓ (31 Counties)
+
+> Regulation: Ley No. 13 de 1947
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/27LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName              |
 |:------------------|:------------------------|
@@ -747,13 +839,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [27800](27800.md) | Unguía                  |
 | [27810](27810.md) | Unión Panamericana      |
 
-## 41 (37 Counties)
+</div>
+
+
+## HUILA (37 Counties)
+
+> Regulation: Ley No. 46 de 1905
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/41LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName   |
 |:------------------|:-------------|
@@ -795,13 +895,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [41872](41872.md) | Villavieja   |
 | [41885](41885.md) | Yaguará      |
 
-## 44 (15 Counties)
+</div>
+
+
+## LA GUAJIRA (15 Counties)
+
+> Regulation: Ley No. 19 de 1964
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/44LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName         |
 |:------------------|:-------------------|
@@ -821,13 +929,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [44855](44855.md) | Urumita            |
 | [44874](44874.md) | Villanueva         |
 
-## 47 (30 Counties)
+</div>
+
+
+## MAGDALENA (30 Counties)
+
+> Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/47LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName                  |
 |:------------------|:----------------------------|
@@ -862,13 +978,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [47960](47960.md) | Zapayán                     |
 | [47980](47980.md) | Zona Bananera               |
 
-## 50 (29 Counties)
+</div>
+
+
+## META (29 Counties)
+
+> Regulation: Ley No. 118 de 1959
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/50LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName           |
 |:------------------|:---------------------|
@@ -902,13 +1026,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [50689](50689.md) | San Martín           |
 | [50711](50711.md) | Vistahermosa         |
 
-## 52 (64 Counties)
+</div>
+
+
+## NARIÑO (64 Counties)
+
+> Regulation: Ley No. 1 de 1904
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/52LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName           |
 |:------------------|:---------------------|
@@ -977,13 +1109,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [52838](52838.md) | Túquerres            |
 | [52885](52885.md) | Yacuanquer           |
 
-## 54 (40 Counties)
+</div>
+
+
+## NORTE DE SANTANDER (40 Counties)
+
+> Regulation: Ley No. 25 de 1910
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/54LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName         |
 |:------------------|:-------------------|
@@ -1028,13 +1168,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [54871](54871.md) | Villa Caro         |
 | [54874](54874.md) | Villa del Rosario  |
 
-## 63 (12 Counties)
+</div>
+
+
+## QUINDÍO (12 Counties)
+
+> Regulation: Ley No. 2 de 1966
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/63LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName   |
 |:------------------|:-------------|
@@ -1051,13 +1199,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [63594](63594.md) | Quimbaya     |
 | [63690](63690.md) | Salento      |
 
-## 66 (14 Counties)
+</div>
+
+
+## RISARALDA (14 Counties)
+
+> Regulation: Ley No. 70 de 1966
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/66LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName          |
 |:------------------|:--------------------|
@@ -1076,13 +1232,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [66682](66682.md) | Santa Rosa de Cabal |
 | [66687](66687.md) | Santuario           |
 
-## 68 (87 Counties)
+</div>
+
+
+## SANTANDER (87 Counties)
+
+> Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/68LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName             |
 |:------------------|:-----------------------|
@@ -1174,13 +1338,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [68872](68872.md) | Villanueva             |
 | [68895](68895.md) | Zapatoca               |
 
-## 70 (26 Counties)
+</div>
+
+
+## SUCRE (26 Counties)
+
+> Regulation: Ley No. 47 de 1966
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/70LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName          |
 |:------------------|:--------------------|
@@ -1211,13 +1383,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [70820](70820.md) | Tolú                |
 | [70823](70823.md) | Toluviejo           |
 
-## 73 (47 Counties)
+</div>
+
+
+## TOLIMA (47 Counties)
+
+> Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/73LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName        |
 |:------------------|:------------------|
@@ -1269,13 +1449,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [73870](73870.md) | Villahermosa      |
 | [73873](73873.md) | Villarrica        |
 
-## 76 (42 Counties)
+</div>
+
+
+## VALLE DEL CAUCA (42 Counties)
+
+> Regulation: Decreto No. 340 de 1910
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/76LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName       |
 |:------------------|:-----------------|
@@ -1322,13 +1510,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [76892](76892.md) | Yumbo            |
 | [76895](76895.md) | Zarzal           |
 
-## 81 (7 Counties)
+</div>
+
+
+## ARAUCA (7 Counties)
+
+> Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/81LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName    |
 |:------------------|:--------------|
@@ -1340,13 +1536,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [81736](81736.md) | Saravena      |
 | [81794](81794.md) | Tame          |
 
-## 85 (19 Counties)
+</div>
+
+
+## CASANARE (19 Counties)
+
+> Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/85LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName           |
 |:------------------|:---------------------|
@@ -1370,13 +1574,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [85430](85430.md) | Trinidad             |
 | [85440](85440.md) | Villanueva           |
 
-## 86 (13 Counties)
+</div>
+
+
+## PUTUMAYO (13 Counties)
+
+> Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/86LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName        |
 |:------------------|:------------------|
@@ -1394,7 +1606,12 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [86865](86865.md) | Valle del Guamuez |
 | [86885](86885.md) | Villagarzón       |
 
-## 88 (2 Counties)
+</div>
+
+
+## ARCHIPIELAGO DE SAN ANDRÉS PROVIDENCIA Y SANTA CATALINA (2 Counties)
+
+> Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
@@ -1402,18 +1619,29 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 
 </div>
 
+
+<div align="center">
+
 | CountyID          | CountyName                   |
 |:------------------|:-----------------------------|
 | [88001](88001.md) | San Andrés                   |
 | [88564](88564.md) | Providencia y Santa Catalina |
 
-## 91 (11 Counties)
+</div>
+
+
+## AMAZONAS (11 Counties)
+
+> Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/91LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName       |
 |:------------------|:-----------------|
@@ -1429,13 +1657,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [91669](91669.md) | Puerto Santander |
 | [91798](91798.md) | Tarapacá         |
 
-## 94 (8 Counties)
+</div>
+
+
+## GUAINÍA (8 Counties)
+
+> Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/94LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName      |
 |:------------------|:----------------|
@@ -1448,13 +1684,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [94887](94887.md) | Paná - Paná     |
 | [94888](94888.md) | Morichal        |
 
-## 95 (4 Counties)
+</div>
+
+
+## GUAVIARE (4 Counties)
+
+> Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/95LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName            |
 |:------------------|:----------------------|
@@ -1463,13 +1707,21 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [95025](95025.md) | El Retorno            |
 | [95200](95200.md) | Miraflores            |
 
-## 97 (6 Counties)
+</div>
+
+
+## VAUPÉS (6 Counties)
+
+> Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
 <img alt="R.HydroTools" src="../graph/97LocationMap.png" width="500"></img>
 
 </div>
+
+
+<div align="center">
 
 | CountyID          | CountyName   |
 |:------------------|:-------------|
@@ -1480,7 +1732,12 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 | [97777](97777.md) | Papunaua     |
 | [97889](97889.md) | Yavaraté     |
 
-## 99 (4 Counties)
+</div>
+
+
+## VICHADA (4 Counties)
+
+> Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
@@ -1488,12 +1745,19 @@ PPSD are analytical estimates used by governments and planners to anticipate fut
 
 </div>
 
+
+<div align="center">
+
 | CountyID          | CountyName     |
 |:------------------|:---------------|
 | [99001](99001.md) | Puerto Carreño |
 | [99524](99524.md) | La Primavera   |
 | [99624](99624.md) | Santa Rosalía  |
 | [99773](99773.md) | Cumaribo       |
+
+</div>
+
+
 
 <div align="center"><img alt="R.HydroTools" src="../graph/qr-code.png" width="250px"><br><sub>Share this research</sub></div><br>
 

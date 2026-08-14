@@ -25,7 +25,7 @@ drop_dataset_notes = True
 create_plot = False # ● Creates, save and include plots into reports
 show_plot = False # Show plot on Python screen console
 print_on_screen = False # Global print control in screen
-create_location_map = True # ● Create and save location map
+create_location_map = False # ● Create and save location map
 zone_vars = ['Total', 'Urban', 'Rural']
 water_supply = pd.DataFrame({'CZ': [1000, 2000, 99999], 'WS': [120, 130, 140]}) # Water supply in liters per capita per day - lpcd: Level or elevation, Water Supply
 runtime = datetime.now()
@@ -62,7 +62,7 @@ for group_id, group_df in grouped:
     df_shapefile_info = df_shapefile[df_shapefile['DeCodigo'] == group_id]
     state_name = df_shapefile_info['DeNombre'].values[0]
     print(f'Processing: {state_name} (ID: {group_id})')
-    print(f'\n{df_shapefile_info.to_markdown(index=False)}\n')
+    #print(f'\n{df_shapefile_info.to_markdown(index=False)}\n')
     state_latitude = df_shapefile_info['Latitude'].values[0]
     state_longitude = df_shapefile_info['Longitude'].values[0]
     fig_file0a = '../graph/' + group_id + 'LocationMap.png'  #######################
@@ -72,9 +72,9 @@ for group_id, group_df in grouped:
         plt.close()
     detailed_df = group_df.drop(columns=['CountyID', 'StateName', 'Source', 'Year', 'CountryID', 'CountryName', 'StateID', 'PTotal', 'PUrban', 'PRural'])
     detailed_df = detailed_df.rename(columns={'CountyIDmd': 'CountyID'})
-    funcs.print_log(file_log, f'\n\n## {group_id.upper()} ({len(detailed_df)} Counties)\n')
+    funcs.print_log(file_log, f'\n## {state_name.upper()} ({len(detailed_df)} Counties)\n\n> Regulation: {df_shapefile_info['DeNorma'].values[0]}\n')
     funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="500"></img>', center_div=True, on_screen=print_on_screen)
-    funcs.print_log(file_log, detailed_df[['CountyID', 'CountyName']].to_markdown(index=False))
+    funcs.print_log(file_log, detailed_df[['CountyID', 'CountyName']].to_markdown(index=False), center_div=True)
 funcs.print_log(file_log, f'\n\n<div align="center"><img alt="R.HydroTools" src="../graph/qr-code.png" width="250px"><br><sub>Share this research</sub></div><br>', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\n| [:house: Home](../../Readme.md)  | [:beginner: Help / Collab](https://github.com/rcfdtools/R.HydroTools/discussions/31) |', on_screen=print_on_screen)
