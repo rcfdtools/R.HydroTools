@@ -25,7 +25,7 @@ drop_dataset_notes = True
 create_plot = False # ● Creates, save and include plots into reports
 show_plot = False # Show plot on Python screen console
 print_on_screen = False # Global print control in screen
-create_location_map = False # ● Create and save location map
+create_location_map = True # ● Create and save location map
 zone_vars = ['Total', 'Urban', 'Rural']
 water_supply = pd.DataFrame({'CZ': [1000, 2000, 99999], 'WS': [120, 130, 140]}) # Water supply in liters per capita per day - lpcd: Level or elevation, Water Supply
 runtime = datetime.now()
@@ -39,7 +39,7 @@ df = pd.read_excel(file_path, sheet_name='Population', dtype=dtype)
 dbf = Dbf5('../shp/ColombiaState4326.dbf', codec='cp1252')
 df_shapefile = pd.DataFrame(dbf.to_dataframe())
 df_shapefile = df_shapefile[['DeCodigo', 'DeNombre', 'DeNorma', 'Latitude', 'Longitude']]
-print(df_shapefile.to_markdown(index=False))
+#print(df_shapefile.to_markdown(index=False))
 
 # Checking wrong Counties names (show only in console)
 print('\nChecking wrong Counties names (empty list means all is right)')
@@ -67,7 +67,7 @@ for group_id, group_df in grouped:
     state_longitude = df_shapefile_info['Longitude'].values[0]
     fig_file0a = '../graph/' + group_id + 'LocationMap.png'  #######################
     if create_location_map:
-        location_map_plot = funcs.location_map(state_latitude, state_longitude, df_shapefile_info['DeNombre'].values[0].upper(), group_id)
+        location_map_plot = funcs.location_map(point_latitude = state_latitude, point_longitude = state_longitude, point_name = df_shapefile_info['DeNombre'].values[0].upper(), state_filter = group_id, county_label_on = True)
         location_map_plot.savefig(fig_file0a, dpi=120)
         plt.close()
     detailed_df = group_df.drop(columns=['CountyID', 'StateName', 'Source', 'Year', 'CountryID', 'CountryName', 'StateID', 'PTotal', 'PUrban', 'PRural'])

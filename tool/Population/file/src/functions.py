@@ -17,7 +17,7 @@ def print_log(file_log, txt_print, on_screen=False, center_div=False):
         file_log.write('\n\n</div>\n' + '\n')
 
 # Location map with GeoPandas (single)
-def location_map(point_latitude, point_longitude, point_name, state_filter):
+def location_map(point_latitude, point_longitude, point_name, state_filter, county_label_on = False):
     if state_filter == 'All':
         state_shapefile = gpd.read_file('../shp/ColombiaState4326.shp')
         county_shapefile = gpd.read_file('../shp/ColombiaCounty4326.shp')
@@ -28,7 +28,10 @@ def location_map(point_latitude, point_longitude, point_name, state_filter):
     point_location = Point(point_longitude, point_latitude)
     point_gdf = gpd.GeoDataFrame(geometry=[point_location], crs=state_shapefile.crs)
     fig, ax = plt.subplots(figsize=(6, 6))  # Adjust figure size as needed
-    state_shapefile.plot(ax=ax, color='lightgray', edgecolor='black', linewidth=1, legend=True, legend_kwds={'fontsize': 'small'}) # , label='AH'
+    if county_label_on:
+        state_shapefile.plot(ax=ax, color='lightgray', edgecolor='black', linewidth=1, legend=True, legend_kwds={'fontsize': 'small'}, label='DeCodigo') # , label='AH'
+    else:
+        state_shapefile.plot(ax=ax, color='lightgray', edgecolor='black', linewidth=1, legend=True, legend_kwds={'fontsize': 'small'})  # , label='AH'
     #state_shapefile.plot(ax=ax, column='DeCodigo', cmap='Greens', edgecolor='black', linewidth=0.75, legend=True, legend_kwds={'fontsize': 'small'}) # , label='AH'
     county_shapefile.boundary.plot(ax=ax, edgecolor='black', linewidth=0.25) # , label='AH'
     point_gdf.plot(ax=ax, marker='o', color='brown', markersize=40, legend=False)  # color='black', 'marker' and 'markersize' customize the point

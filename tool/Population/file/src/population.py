@@ -21,7 +21,7 @@ pd.set_option('display.width', None)
 app_version = 'v20260806'
 file_path = '../data/Population.xlsx' # Census database
 file_path_rups = '../data/RUPS.csv' # Public service companies database
-county_list = ['25899'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
+county_list = ['All'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
 projection_year_max = 2050 # ● Projection year
 process_polynomial_d2_up = False # ● Polynomial projection over grade 2 is not recommend because over fit the obtained values
 process_wappaus = True # Projection only recommend for short term periods and condition_value < 200, evaluated automatically
@@ -101,7 +101,7 @@ for county_id in county_list:
     funcs.print_log(file_log, f'{geojson}', center_div=True, on_screen=print_on_screen)
     # Plot location map & Plot x values
     if create_location_map:
-        location_map_plot = funcs.location_map(county_latitude, county_longitude, subtitle_location_map, 'All')
+        location_map_plot = funcs.location_map(point_latitude = county_latitude, point_longitude = county_longitude, point_name = subtitle_location_map, state_filter = 'All', county_label_on = False)
         location_map_plot.savefig(fig_file0a, dpi=120)
         plt.close()
     funcs.print_log(file_log, f'\n\n## 0. Census Data ({len(filtered_df)} records)')
