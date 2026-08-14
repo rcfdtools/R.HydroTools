@@ -25,7 +25,7 @@ drop_dataset_notes = True
 create_plot = False # ● Creates, save and include plots into reports
 show_plot = False # Show plot on Python screen console
 print_on_screen = False # Global print control in screen
-create_location_map = True # ● Create and save location map
+create_location_map = False # ● Create and save location map
 zone_vars = ['Total', 'Urban', 'Rural']
 water_supply = pd.DataFrame({'CZ': [1000, 2000, 99999], 'WS': [120, 130, 140]}) # Water supply in liters per capita per day - lpcd: Level or elevation, Water Supply
 runtime = datetime.now()
@@ -56,7 +56,7 @@ df['CountyIDmd'] = '[' + df['CountyID'].astype(str) + '](' + df['CountyID'].asty
 df = df.drop_duplicates(subset=['CountyID'])
 grouped = df.groupby('StateID')
 funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen=print_on_screen)
-funcs.print_log(file_log, f'# {dictionary.dicts['study_name']} \n{dictionary.dicts['keywords']}\n\n{dictionary.dicts['study_desc']}', on_screen=print_on_screen)
+funcs.print_log(file_log, f'# {dictionary.dicts['study_name']} \n{dictionary.dicts['keywords']}\n\n{dictionary.dicts['study_desc']}\n', on_screen=print_on_screen)
 for group_id, group_df in grouped:
     # print(f'Processing: ID {group_id}')
     df_shapefile_info = df_shapefile[df_shapefile['DeCodigo'] == group_id]
@@ -72,7 +72,7 @@ for group_id, group_df in grouped:
         plt.close()
     detailed_df = group_df.drop(columns=['CountyID', 'StateName', 'Source', 'Year', 'CountryID', 'CountryName', 'StateID', 'PTotal', 'PUrban', 'PRural'])
     detailed_df = detailed_df.rename(columns={'CountyIDmd': 'CountyID'})
-    funcs.print_log(file_log, f'\n## {state_name.upper()} ({len(detailed_df)} Counties)\n\n> Regulation: {df_shapefile_info['DeNorma'].values[0]}\n')
+    funcs.print_log(file_log, f'\n## {df_shapefile_info['DeCodigo'].values[0]} - {state_name.upper()} ({len(detailed_df)} Counties)\n\nRegulation: {df_shapefile_info['DeNorma'].values[0]}\n')
     funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="500"></img>', center_div=True, on_screen=print_on_screen)
     funcs.print_log(file_log, detailed_df[['CountyID', 'CountyName']].to_markdown(index=False), center_div=True)
 funcs.print_log(file_log, f'\n\n<div align="center"><img alt="R.HydroTools" src="../graph/qr-code.png" width="250px"><br><sub>Share this research</sub></div><br>', on_screen = print_on_screen)
