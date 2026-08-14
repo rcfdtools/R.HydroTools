@@ -25,11 +25,9 @@ def location_map(point_latitude, point_longitude, point_name, state_filter):
         # Under construction
         state_shapefile = gpd.read_file('../shp/ColombiaState4326.shp', where=f"DeCodigo = '{state_filter}'")
         county_shapefile = gpd.read_file('../shp/ColombiaCounty4326.shp', where=f"DeCodigo = '{state_filter}'")
-        #state_shapefile = gpd.read_file('../shp/ColombiaState4326.shp')
-        #county_shapefile = gpd.read_file('../shp/ColombiaCounty4326.shp')
     point_location = Point(point_longitude, point_latitude)
     point_gdf = gpd.GeoDataFrame(geometry=[point_location], crs=state_shapefile.crs)
-    fig, ax = plt.subplots(figsize=(6, 7))  # Adjust figure size as needed
+    fig, ax = plt.subplots(figsize=(6, 6))  # Adjust figure size as needed
     state_shapefile.plot(ax=ax, color='lightgray', edgecolor='black', linewidth=1, legend=True, legend_kwds={'fontsize': 'small'}) # , label='AH'
     #state_shapefile.plot(ax=ax, column='DeCodigo', cmap='Greens', edgecolor='black', linewidth=0.75, legend=True, legend_kwds={'fontsize': 'small'}) # , label='AH'
     county_shapefile.boundary.plot(ax=ax, edgecolor='black', linewidth=0.25) # , label='AH'
