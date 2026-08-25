@@ -1,4 +1,4 @@
-<div align="center"><img alt="rcfdtools" src="../../file/graph/R.HydroTools.svg" width="250px"></div>
+<div align="center"><img alt="rcfdtools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
 
 ## Join multiple separate tables into a unique unpivot table dataset  
 Keywords: `etl` `dataset` `camels-br` `ana-br` `car-co` `python`

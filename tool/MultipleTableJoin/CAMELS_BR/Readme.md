@@ -1,3 +1,5 @@
+<div align="center"><img alt="rcfdtools" src="../../../file/graph/R.HydroTools.svg" width="300px"></div>
+
 # CAMELS-BR
 
 Readme file created by Vinícius B. P. Chagas, 2020 (vbchagas@gmail.com).
