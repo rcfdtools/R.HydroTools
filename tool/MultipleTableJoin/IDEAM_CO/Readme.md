@@ -73,7 +73,7 @@ Atención: los datos obtenidos desde el portal www.datos.gov.co no utilizan la m
 
 Atributos tomados directamente de los archivos de texto separados por comas obtenidos y tipos descritos en el portal.
 
-| Atributo         | API nombre        | Tipo          | Descripción                                                                                                                          |
+| Atributo          | API nombre        | Tipo          | Descripción                                                                                                                          |
 |:------------------|:------------------|:--------------|:-------------------------------------------------------------------------------------------------------------------------------------|
 | CodigoEstacion    | codigoestacion    | Texto simple  | Al código del catálogo nacional de estaciones se le ha realizado un relleno de ceros a la izquierda para completar 10 dígitos        |
 | CodigoSensor      | codigosensor      | Texto simple  | Código con relleno de ceros a izquierda para completar 4 dígitos                                                                     |
