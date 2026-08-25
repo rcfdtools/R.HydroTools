@@ -13,7 +13,7 @@ El IDEAM es una institución pública de apoyo técnico y científico al Sistema
 | Sector             | Ambiente y Desarrollo Sostenible                             |
 
 
-### Información de los datos y licencia de uso
+### 1. Información de los datos y licencia de uso
 
 | Elemento                       | Descripción             |
 |:-------------------------------|:------------------------|
@@ -36,7 +36,7 @@ De acuerdo a la información disponible en el portal www.datos.gov.co, los datos
 8. Por las razones expuestas anteriormente los datos dispuestos no podrán ser utilizados como evidencia jurídica ante entes de control acerca de la ocurrencia o no de fenómenos hidro-climatológicos o de soporte a cualquier tipo de situación o evento ocurrido como consecuencia de estos.
 
 
-### Fuentes de datos (actualizados mensualmente)
+### 2. Fuentes de datos (actualizados mensualmente)
 
 A través del portal de datos abiertos de Colombia - Suramérica www.datos.gov.co, se pueden obtener las colecciones de datos crudos o Datasets publicados por el IDEAM Colombia. En la siguiente tabla encontrará un listado de las principales variables disponibles:  
 
@@ -67,7 +67,7 @@ Ejemplo de descarga usando https://www.freedownloadmanager.org/ para el enlace h
 <div align="center"><img alt="rcfdtools" src="../file/graph/freedownloadmanager.jpg" width="100%"></div>
 
 
-### Catálogo de objetos
+### 3. Catálogo de objetos
 
 Atención: los datos obtenidos desde el portal www.datos.gov.co no utilizan la misma estructura de los datos obtenidos desde el portal http://dhime.ideam.gov.co/atencionciudadano/
 
@@ -96,7 +96,6 @@ CodigoEstacion,CodigoSensor,FechaObservacion,ValorObservado,NombreEstacion,Depar
 0036015020,0255,10/03/2017 06:00:00 AM,992.5,EL DIAMANTE - AUT,CASANARE,PAZ DE ARIPORO,META,5.816194444,-71.41983333,Presión Atmosferica (1h),HPa
 0021195190,0255,02/14/2014 05:00:00 AM,785.2,PASCA - AUT,CUNDINAMARCA,PASCA,ALTO MAGDALENA,4.310111111,-74.31175,Presión Atmosferica (1h),HPa
 ```
-
 
 ### Referencias
 
