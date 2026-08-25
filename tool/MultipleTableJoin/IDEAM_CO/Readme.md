@@ -36,7 +36,7 @@ De acuerdo a la información disponible en el portal www.datos.gov.co, los datos
 8. Por las razones expuestas anteriormente los datos dispuestos no podrán ser utilizados como evidencia jurídica ante entes de control acerca de la ocurrencia o no de fenómenos hidro-climatológicos o de soporte a cualquier tipo de situación o evento ocurrido como consecuencia de estos.
 
 
-### 2. Fuentes de datos (actualizados mensualmente)
+### 2. Fuentes de datos
 
 A través del portal de datos abiertos de Colombia - Suramérica www.datos.gov.co, se pueden obtener las colecciones de datos crudos o Datasets publicados por el IDEAM Colombia. En la siguiente tabla encontrará un listado de las principales variables disponibles:  
 
