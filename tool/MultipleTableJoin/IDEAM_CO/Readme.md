@@ -59,7 +59,7 @@ A través del portal de datos abiertos de Colombia - Suramérica www.datos.gov.c
 
 </div>
 
-Descarga usando https://www.freedownloadmanager.org/
+Ejemplo de descarga usando https://www.freedownloadmanager.org/ para el enlace https://www.datos.gov.co/api/v3/views/s54a-sgyg/query.csv correspondiente a registros de precipitación.
 
 <div align="center"><img alt="rcfdtools" src="../file/graph/freedownloadmanager.jpg" width="100%"></div>
 
