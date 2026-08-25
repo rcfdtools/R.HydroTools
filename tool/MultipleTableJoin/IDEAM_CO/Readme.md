@@ -1,4 +1,4 @@
-<div align="center"><img alt="R.HydroTools" src="../../../file/graph/R.HydroTools.svg" width="300px"></div>
+<div align="center"><img alt="rcfdtools" src="../../../file/graph/R.HydroTools.svg" width="250px"></div>
 
 ## Instituto de Hidrología, Meteorología y Estudios Ambientales - Colombia, IDEAM-CO  
 
