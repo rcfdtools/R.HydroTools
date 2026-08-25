@@ -73,20 +73,20 @@ Atención: los datos obtenidos desde el portal www.datos.gov.co no utilizan la m
 
 Atributos tomados directamente de los archivos de texto separados por comas obtenidos y tipos descritos en el portal.
 
-| Atributo         | API nombre        | Tipo         | Descripción                                                                                                                          |
-|:------------------|:------------------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------------|
-| CodigoEstacion    | codigoestacion    | Texto simple | Al código del catálogo nacional de estaciones se le ha realizado un relleno de ceros a la izquierda para completar 10 dígitos        |
-| CodigoSensor      | codigosensor      | Texto simple | Código con relleno de ceros a izquierda para completar 4 dígitos                                                                     |
-| FechaObservacion  | fechaobservacion  | Fecha y hora | Fecha y hora de la observación. Hora en formato de 12 horas, requiere AM/PM                                                          |
-| ValorObservado    | valorobservado    | Número       | Valor observado o registrado                                                                                                         |
-| NombreEstacion    | nombreestacion    | Texto simple | Nombre de la estación, no incluye el código de la estación al final entre corchetes como en el catálogo nacional de estaciones - CNE |
-| Departamento      | departamento      | Texto simple | Departamento de Colombia. Correspondiente al nivel de estado en otros países                                                         |
-| Municipio         | municipio         | Texto simple | Municipio de Colombia. Correspondiente al nivel de condado en otros países                                                           |
-| ZonaHidrografica  | zonahidrografica  | Texto simple | Zona hidrográfica nacional establecida por el IDEAM - Colombia                                                                       |
-| Latitud           | latitud           | Número       | Latitud en grados decimales                                                                                                          |
-| Longitud          | longitud          | Número       | Longitud en grados decimales                                                                                                         |
-| DescripcionSensor | descripcionsensor | Texto simple | Descripción del sensor. Corresponde al parámetro específico registrado                                                               |
-| UnidadMedida      | unidadmedida      | Texto simple       | Unidad de medida                                                                                                                     |
+| Atributo         | API nombre        | Tipo          | Descripción                                                                                                                          |
+|:------------------|:------------------|:--------------|:-------------------------------------------------------------------------------------------------------------------------------------|
+| CodigoEstacion    | codigoestacion    | Texto simple  | Al código del catálogo nacional de estaciones se le ha realizado un relleno de ceros a la izquierda para completar 10 dígitos        |
+| CodigoSensor      | codigosensor      | Texto simple  | Código con relleno de ceros a izquierda para completar 4 dígitos                                                                     |
+| FechaObservacion  | fechaobservacion  | Fecha y hora  | Fecha y hora de la observación. Hora en formato de 12 horas, requiere AM/PM                                                          |
+| ValorObservado    | valorobservado    | Número        | Valor observado o registrado                                                                                                         |
+| NombreEstacion    | nombreestacion    | Texto simple  | Nombre de la estación, no incluye el código de la estación al final entre corchetes como en el catálogo nacional de estaciones - CNE |
+| Departamento      | departamento      | Texto simple  | Departamento de Colombia. Correspondiente al nivel de estado en otros países                                                         |
+| Municipio         | municipio         | Texto simple  | Municipio de Colombia. Correspondiente al nivel de condado en otros países                                                           |
+| ZonaHidrografica  | zonahidrografica  | Texto simple  | Zona hidrográfica nacional establecida por el IDEAM - Colombia                                                                       |
+| Latitud           | latitud           | Número        | Latitud en grados decimales                                                                                                          |
+| Longitud          | longitud          | Número        | Longitud en grados decimales                                                                                                         |
+| DescripcionSensor | descripcionsensor | Texto simple  | Descripción del sensor. Corresponde al parámetro específico registrado                                                               |
+| UnidadMedida      | unidadmedida      | Texto simple  | Unidad de medida                                                                                                                     |
 
 > Los nombres de atributo son desplegados en los archivos de texto separados por comas .CSV 
 
