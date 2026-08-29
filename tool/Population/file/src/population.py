@@ -28,7 +28,7 @@ process_wappaus = True # Projection only recommend for short term periods and co
 set_negative_to_zero = True
 set_infinite_to_zero = True
 drop_dataset_notes = True
-create_plot = False # ● Create and save plots
+create_plot = False # ● Create or update plots
 show_plot = False # Show plot on Python console
 create_location_map = False # ● Create and save location map
 dpi = 96 # Graph plot resolution
@@ -338,7 +338,7 @@ for county_id in county_list:
         df_projected[f'WS{zone}All'] = (df_projected[best_method] * df_projected[f'WS{zone}'])/86400 # In liters per second (l/s)
         funcs.print_log(file_log, f'\n\nProjected values for best method: {best_method}\n\n{df_projected[['CountyID', 'Year', best_method, f'DP{zone}', f'WS{zone}', f'WS{zone}All']].to_markdown(index=False)}')
         num += 1
-    funcs.print_log(file_log, f'\n\n<div align="center"><img alt="R.HydroTools" src="../graph/qr-code.png" width="250px"><br><sub>Share this research</sub></div><br>', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'\n\n#\n\n<div align="center"><img alt="rcfdtools" src="../graph/qr-code.png" width="250px"><br><sub>Share this research</sub></div><br>', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n\n| [:house: Home](Readme.md)  | [:beginner: Help / Collab](https://github.com/rcfdtools/R.HydroTools/discussions/31) |', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n|----------------------------|-------------------------------------------------------------------------------------------|', on_screen = print_on_screen)
