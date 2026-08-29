@@ -1610,7 +1610,7 @@ Regulation: Constitución Política de Colombia 1991
 </div>
 
 
-## 88 - ARCHIPIELAGO DE SAN ANDRÉS PROVIDENCIA Y SANTA CATALINA (2 Counties)
+## 88 - ARCHIPIÉLAGO DE SAN ANDRÉS PROVIDENCIA Y SANTA CATALINA (2 Counties)
 
 Regulation: Constitución Política de Colombia 1991
 

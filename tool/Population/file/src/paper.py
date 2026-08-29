@@ -19,19 +19,10 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)
 
 # General Setup
-app_version = 'v20260806'
 file_path = '../data/Population.xlsx'
 drop_dataset_notes = True
-create_plot = False # ● Creates, save and include plots into reports
-show_plot = False # Show plot on Python screen console
 print_on_screen = False # Global print control in screen
 create_location_map = True # ● Create and save location map
-zone_vars = ['Total', 'Urban', 'Rural']
-water_supply = pd.DataFrame({'CZ': [1000, 2000, 99999], 'WS': [120, 130, 140]}) # Water supply in liters per capita per day - lpcd: Level or elevation, Water Supply
-runtime = datetime.now()
-python_version = platform.python_version()
-pandas_version = pd.__version__
-numpy_version = np.__version__
 file_log_name = f'../report/Readme.md'  # Markdown file log
 file_log = open(file_log_name, 'w+', encoding='utf-8')  # w+ create the file if it doesn't exist
 dtype={'Year': int, 'CountyID': str, 'StateID': str, 'PTotal': int, 'PUrban': int, 'PRural': int}
