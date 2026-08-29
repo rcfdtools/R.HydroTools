@@ -21,7 +21,7 @@ general_vars = ([
 
 # General definitions
 dicts = {
-    'study_name': '📜RESEARCH: _“Population and Public Services Demand Projections (PPSD)”_',
+    'study_name': '📜RESEARCH: _“Population and Public Services Demand Projections (PPSD) - Colombia South America”_',
 
     'study_desc': 'PPSD are analytical estimates used by governments and planners to anticipate future changes in population size, age distribution, and the resulting community needs for utilities, healthcare, education, and infrastructure as sizing future water treatment facilities, electrical grids, and road networks based on spatial growth.',
 

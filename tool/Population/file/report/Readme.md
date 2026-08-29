@@ -5,7 +5,7 @@
 
 </div>
 
-# 📜RESEARCH: _“Population and Public Services Demand Projections (PPSD)”_ 
+# 📜RESEARCH: _“Population and Public Services Demand Projections (PPSD) - Colombia South America”_ 
 Keywords: `population` `public-service` `projection` `lineal` `polynomial` `logarithmic` `potential` `exponential` `arithmetic` `geometric` `wappaus` `dane` `colombia` `south-america`
 
 PPSD are analytical estimates used by governments and planners to anticipate future changes in population size, age distribution, and the resulting community needs for utilities, healthcare, education, and infrastructure as sizing future water treatment facilities, electrical grids, and road networks based on spatial growth.
