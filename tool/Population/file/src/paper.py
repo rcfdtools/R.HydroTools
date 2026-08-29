@@ -66,7 +66,7 @@ for group_id, group_df in grouped:
     funcs.print_log(file_log, f'\n## {df_shapefile_info['DeCodigo'].values[0]} - {state_name.upper()} ({len(detailed_df)} Counties)\n\nRegulation: {df_shapefile_info['DeNorma'].values[0]}\n')
     funcs.print_log(file_log, f'<img alt="rcfdtools" src="{fig_file0a}" width="500"></img>', center_div=True, on_screen=print_on_screen)
     funcs.print_log(file_log, detailed_df[['CountyID', 'CountyName']].to_markdown(index=False), center_div=True)
-funcs.print_log(file_log, f'\n\n<div align="center"><img alt="R.HydroTools" src="../graph/qr-code.png" width="250px"><br><sub>Share this research</sub></div><br>', on_screen = print_on_screen)
+funcs.print_log(file_log, f'\n#\n\n<div align="center"><img alt="rcfdtools" src="../graph/qr-code.png" width="250px"><br><sub>Share this research</sub></div><br>', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\n<sub>{dictionary.dicts['disclaimer']}</sub>', on_screen = print_on_screen)
 funcs.print_log(file_log, f'\n\n| [:house: Home](../../Readme.md)  | [:beginner: Help / Collab](https://github.com/rcfdtools/R.HydroTools/discussions/31) |', on_screen=print_on_screen)
 funcs.print_log(file_log, f'\n|----------------------------|-------------------------------------------------------------------------------------------|', on_screen=print_on_screen)
