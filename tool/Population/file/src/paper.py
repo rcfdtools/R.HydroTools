@@ -22,7 +22,7 @@ pd.set_option('display.width', None)
 file_path = '../data/Population.xlsx'
 drop_dataset_notes = True
 print_on_screen = False # Global print graph in screen
-create_location_map = True # ● Create and save location map
+create_location_map = False # ● Create and save location map
 file_log_name = f'../report/Readme.md'  # Markdown file log
 file_log = open(file_log_name, 'w+', encoding='utf-8')  # w+ create the file if it doesn't exist
 dtype={'Year': int, 'CountyID': str, 'StateID': str, 'PTotal': int, 'PUrban': int, 'PRural': int}

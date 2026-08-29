@@ -5,7 +5,7 @@
 
 </div>
 
-# RESEARCH: _“Population and Public Services Demand Projections (PPSD)”_ 
+# 📜RESEARCH: _“Population and Public Services Demand Projections (PPSD)”_ 
 Keywords: `population` `public-service` `projection` `lineal` `polynomial` `logarithmic` `potential` `exponential` `arithmetic` `geometric` `wappaus` `dane` `colombia` `south-america`
 
 PPSD are analytical estimates used by governments and planners to anticipate future changes in population size, age distribution, and the resulting community needs for utilities, healthcare, education, and infrastructure as sizing future water treatment facilities, electrical grids, and road networks based on spatial growth.
@@ -16,7 +16,7 @@ Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/05LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/05LocationMap.png" width="500"></img>
 
 </div>
 
@@ -160,7 +160,7 @@ Regulation: Ley No. 21 de 1910
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/08LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/08LocationMap.png" width="500"></img>
 
 </div>
 
@@ -202,7 +202,7 @@ Regulation: Ley 17 de 1905, Art. 11 - Constitución Politica 1991, art. 322
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/11LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/11LocationMap.png" width="500"></img>
 
 </div>
 
@@ -222,7 +222,7 @@ Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/13LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/13LocationMap.png" width="500"></img>
 
 </div>
 
@@ -287,7 +287,7 @@ Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/15LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/15LocationMap.png" width="500"></img>
 
 </div>
 
@@ -429,7 +429,7 @@ Regulation: Ley No.17 de 1905
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/17LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/17LocationMap.png" width="500"></img>
 
 </div>
 
@@ -475,7 +475,7 @@ Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/18LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/18LocationMap.png" width="500"></img>
 
 </div>
 
@@ -510,7 +510,7 @@ Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/19LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/19LocationMap.png" width="500"></img>
 
 </div>
 
@@ -571,7 +571,7 @@ Regulation: Ley No. 25 de 1967
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/20LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/20LocationMap.png" width="500"></img>
 
 </div>
 
@@ -615,7 +615,7 @@ Regulation: Ley No. 9 de 1951
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/23LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/23LocationMap.png" width="500"></img>
 
 </div>
 
@@ -664,7 +664,7 @@ Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/25LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/25LocationMap.png" width="500"></img>
 
 </div>
 
@@ -799,7 +799,7 @@ Regulation: Ley No. 13 de 1947
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/27LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/27LocationMap.png" width="500"></img>
 
 </div>
 
@@ -849,7 +849,7 @@ Regulation: Ley No. 46 de 1905
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/41LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/41LocationMap.png" width="500"></img>
 
 </div>
 
@@ -905,7 +905,7 @@ Regulation: Ley No. 19 de 1964
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/44LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/44LocationMap.png" width="500"></img>
 
 </div>
 
@@ -939,7 +939,7 @@ Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/47LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/47LocationMap.png" width="500"></img>
 
 </div>
 
@@ -988,7 +988,7 @@ Regulation: Ley No. 118 de 1959
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/50LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/50LocationMap.png" width="500"></img>
 
 </div>
 
@@ -1036,7 +1036,7 @@ Regulation: Ley No. 1 de 1904
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/52LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/52LocationMap.png" width="500"></img>
 
 </div>
 
@@ -1119,7 +1119,7 @@ Regulation: Ley No. 25 de 1910
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/54LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/54LocationMap.png" width="500"></img>
 
 </div>
 
@@ -1178,7 +1178,7 @@ Regulation: Ley No. 2 de 1966
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/63LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/63LocationMap.png" width="500"></img>
 
 </div>
 
@@ -1209,7 +1209,7 @@ Regulation: Ley No. 70 de 1966
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/66LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/66LocationMap.png" width="500"></img>
 
 </div>
 
@@ -1242,7 +1242,7 @@ Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/68LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/68LocationMap.png" width="500"></img>
 
 </div>
 
@@ -1348,7 +1348,7 @@ Regulation: Ley No. 47 de 1966
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/70LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/70LocationMap.png" width="500"></img>
 
 </div>
 
@@ -1393,7 +1393,7 @@ Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/73LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/73LocationMap.png" width="500"></img>
 
 </div>
 
@@ -1459,7 +1459,7 @@ Regulation: Decreto No. 340 de 1910
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/76LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/76LocationMap.png" width="500"></img>
 
 </div>
 
@@ -1520,7 +1520,7 @@ Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/81LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/81LocationMap.png" width="500"></img>
 
 </div>
 
@@ -1546,7 +1546,7 @@ Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/85LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/85LocationMap.png" width="500"></img>
 
 </div>
 
@@ -1584,7 +1584,7 @@ Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/86LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/86LocationMap.png" width="500"></img>
 
 </div>
 
@@ -1616,7 +1616,7 @@ Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/88LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/88LocationMap.png" width="500"></img>
 
 </div>
 
@@ -1637,7 +1637,7 @@ Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/91LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/91LocationMap.png" width="500"></img>
 
 </div>
 
@@ -1667,7 +1667,7 @@ Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/94LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/94LocationMap.png" width="500"></img>
 
 </div>
 
@@ -1694,7 +1694,7 @@ Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/95LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/95LocationMap.png" width="500"></img>
 
 </div>
 
@@ -1717,7 +1717,7 @@ Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/97LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/97LocationMap.png" width="500"></img>
 
 </div>
 
@@ -1742,7 +1742,7 @@ Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
-<img alt="R.HydroTools" src="../graph/99LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="../graph/99LocationMap.png" width="500"></img>
 
 </div>
 
