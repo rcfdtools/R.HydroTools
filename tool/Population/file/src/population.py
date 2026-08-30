@@ -21,7 +21,7 @@ pd.set_option('display.width', None)
 app_version = 'v20260806'
 file_path = '../data/Population.xlsx' # Census database
 file_path_rups = '../data/RUPS.csv' # Public service companies database
-county_list = ['All'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
+county_list = ['25899'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
 projection_year_max = 2050 # ● Projection year
 process_polynomial_d2_up = False # ● Polynomial projection over grade 2 is not recommend because over fit the obtained values
 process_wappaus = True # Projection only recommend for short term periods and condition_value < 200, evaluated automatically
@@ -31,6 +31,8 @@ drop_dataset_notes = True
 create_plot = False # ● Create or update plots
 show_plot = False # Show plot on Python console
 create_location_map = False # ● Create and save location map
+country_code = '57'
+minimap_link = 'https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/'
 dpi = 96 # Graph plot resolution
 print_on_screen = False # Global print control in screen
 zone_vars = ['Total', 'Urban', 'Rural']
@@ -91,7 +93,7 @@ for county_id in county_list:
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen = print_on_screen)
     funcs.print_log(file_log, f'# _“Population and Public Services Demand Projections (PPSD) until Year {projection_year_max} for {subtitle}”_', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n{dictionary.dicts['keywords']}\n\n{dictionary.dicts['study_desc']}\n', on_screen = print_on_screen)
-    fig_file0a = '../graph/' + county_id + 'LocationMap.png'  #######################
+    fig_file0a = f'{country_code}_{minimap_link}{county_id}_LocationMapCountry.png'
     #funcs.print_log(file_log, f'\n\nDataset Types\n\n{df.dtypes.to_markdown()}')
     funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="500"></img>', center_div=True, on_screen=print_on_screen)
     funcs.print_log(file_log, f'\n> **General running parameters**: ', on_screen = print_on_screen)
