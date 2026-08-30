@@ -91,11 +91,11 @@ for county_id in county_list:
     apple_map_url = f'https://maps.apple.com/frame?center={county_latitude}%2C{county_longitude}&span=0.003%2C0.006'
     geojson = '```geojson\n{\n  "type": "Feature",\n  "geometry": {\n    "type": "Point", \n    "coordinates": [' + str(county_longitude) + ', ' + str(county_latitude) + ']\n  }, \n  "properties": {\n    "Name": "' + subtitle + '"\n  }\n}\n```'
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen = print_on_screen)
-    funcs.print_log(file_log, f'# _“Population and Public Services Demand Projections (PPSD) until Year {projection_year_max} for {subtitle}”_', on_screen = print_on_screen)
+    funcs.print_log(file_log, f'# 📜_“Population and Public Services Demand Projections (PPSD) until Year {projection_year_max} for {subtitle}”_', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n{dictionary.dicts['keywords']}\n\n{dictionary.dicts['study_desc']}\n', on_screen = print_on_screen)
     fig_file0a = f'{minimap_link}{country_code}_{county_id}_LocationMapCountry.png'
     #funcs.print_log(file_log, f'\n\nDataset Types\n\n{df.dtypes.to_markdown()}')
-    funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="500"></img>', center_div=True, on_screen=print_on_screen)
+    funcs.print_log(file_log, f'<img alt="rcfdtools" src="{fig_file0a}" width="600"></img>', center_div=True, on_screen=print_on_screen)
     funcs.print_log(file_log, f'\n> **General running parameters**: ', on_screen = print_on_screen)
     for dict_var in dictionary.general_vars:
         funcs.print_log(file_log, f'• {dict_var[1]}: _{eval(dict_var[0])}_. ', on_screen=print_on_screen)
