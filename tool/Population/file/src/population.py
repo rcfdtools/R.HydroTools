@@ -93,7 +93,7 @@ for county_id in county_list:
     funcs.print_log(file_log, '<img alt="R.HydroTools" src="../../../../file/graph/R.HydroTools.svg" width="250px">', center_div=True, on_screen = print_on_screen)
     funcs.print_log(file_log, f'# _“Population and Public Services Demand Projections (PPSD) until Year {projection_year_max} for {subtitle}”_', on_screen = print_on_screen)
     funcs.print_log(file_log, f'\n{dictionary.dicts['keywords']}\n\n{dictionary.dicts['study_desc']}\n', on_screen = print_on_screen)
-    fig_file0a = f'{country_code}_{minimap_link}{county_id}_LocationMapCountry.png'
+    fig_file0a = f'{minimap_link}{country_code}_{county_id}_LocationMapCountry.png'
     #funcs.print_log(file_log, f'\n\nDataset Types\n\n{df.dtypes.to_markdown()}')
     funcs.print_log(file_log, f'<img alt="R.HydroTools" src="{fig_file0a}" width="500"></img>', center_div=True, on_screen=print_on_screen)
     funcs.print_log(file_log, f'\n> **General running parameters**: ', on_screen = print_on_screen)
