@@ -109,7 +109,7 @@ for county_id in county_list:
     df_rups_county = df_rups_county.drop(columns=[rups_state_name_var, rups_county_name_var, rups_record_type_var, rups_ceo_var])
     df_rups_county = df_rups_county[df_rups_county[rups_service_var] != rups_service_var_drop]
     if len(df_rups_county) > 0:
-        funcs.print_log(file_log, f'\n\n📅[SUI-RUPS](https://www.datos.gov.co/Hacienda-y-Cr-dito-P-blico/Registro-nico-de-Prestadores-de-Servicios-P-blicos/4qkq-csdn/about_data) - Local public utility companies: [RUPS.csv](../data/RUPS.xlsx)\n\n {df_rups_county.to_markdown(index=False)}') # {state_name_unicode.upper()} - {county_name_unicode.upper()}
+        funcs.print_log(file_log, f'\n\n📅[SUI-RUPS](https://www.datos.gov.co/Hacienda-y-Cr-dito-P-blico/Registro-nico-de-Prestadores-de-Servicios-P-blicos/4qkq-csdn/about_data) - Local public utility companies: [RUPS.csv](../data/RUPS.csv)\n\n {df_rups_county.to_markdown(index=False)}') # {state_name_unicode.upper()} - {county_name_unicode.upper()}
 
     # Processing by zone
     num = 1 # Counter required for contents table index
