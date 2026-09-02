@@ -22,7 +22,7 @@ pd.set_option('display.width', None)
 app_version = 'v20260806'
 file_path = '../data/Population.xlsx' # Census database
 file_path_rups = '../data/RUPS.csv' # Public service companies database
-county_list = ['All'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
+county_list = ['25899'] # ● Enter 'All' or specific County codes to be processed, e.g. ['25817', '25899'] for 25817 - Tocancipá, 25899 - Zipaquirá, 15667 - San Luis de Gaceno, 11001 - Bogotá, D.C., 50689 - San Martín - Meta
 projection_year_max = 2050 # ● Projection year
 process_polynomial_d2_up = False # ● Polynomial projection over grade 2 is not recommend because over fit the obtained values
 process_wappaus = True # Projection only recommend for short term periods and condition_value < 200, evaluated automatically
@@ -99,7 +99,7 @@ for county_id in county_list:
     funcs.print_log(file_log, f'\n> **General running parameters**: ', on_screen = print_on_screen)
     for dict_var in dictionary.general_vars:
         funcs.print_log(file_log, f'• {dict_var[1]}: _{eval(dict_var[0])}_. ', on_screen=print_on_screen)
-    funcs.print_log(file_log, f'Dynamic map: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url})', center_div=True, on_screen=print_on_screen)
+    funcs.print_log(file_log, f'Maps & GIS Layers: [:earth_americas:Google]({google_maps_url}) [:earth_americas:OSM]({openstreetmap_url}) [:earth_americas:Bing]({bing_map_url}) [:earth_americas:Apple]({apple_map_url}) [:earth_americas:GISMobile](https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/CountyLayer_CO/Readme.md)', center_div=True, on_screen=print_on_screen)
     funcs.print_log(file_log, f'{geojson}', center_div=True, on_screen=print_on_screen)
     # Plot location map & Plot x values
     funcs.print_log(file_log, f'\n\n## 0. Census Data ({len(filtered_df)} records)')
