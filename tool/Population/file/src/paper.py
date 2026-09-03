@@ -21,7 +21,7 @@ pd.set_option('display.width', None)
 # General Setup
 file_path = '../data/Population.xlsx'
 country_code = '57'
-minimap_link = 'https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/'
+minimap_link = 'https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/'
 drop_dataset_notes = True
 print_on_screen = False # Global print graph in screen
 create_location_map = False # ● Create and save location map
