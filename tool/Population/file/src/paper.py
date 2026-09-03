@@ -58,7 +58,7 @@ for group_id, group_df in grouped:
     #print(f'\n{df_shapefile_info.to_markdown(index=False)}\n')
     state_latitude = df_shapefile_info['Latitude'].values[0]
     state_longitude = df_shapefile_info['Longitude'].values[0]
-    fig_file0a = f'{minimap_link}{country_code}_{group_id}_LocationMap.png'
+    fig_file0a = f'{minimap_link}{country_code}_{group_id}_MiniMap.png'
     if create_location_map:
         location_map_plot = funcs.location_map(point_latitude = state_latitude, point_longitude = state_longitude, point_name = df_shapefile_info['DeNombre'].values[0].upper(), state_filter = group_id, county_label_on = True)
         location_map_plot.savefig(fig_file0a, dpi=120)
