@@ -16,7 +16,7 @@ Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_05_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_05_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -160,7 +160,7 @@ Regulation: Ley No. 21 de 1910
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_08_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_08_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -202,7 +202,7 @@ Regulation: Ley 17 de 1905, Art. 11 - Constitución Politica 1991, art. 322
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_11_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_11_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -222,7 +222,7 @@ Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_13_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_13_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -287,7 +287,7 @@ Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_15_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_15_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -429,7 +429,7 @@ Regulation: Ley No.17 de 1905
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_17_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_17_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -475,7 +475,7 @@ Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_18_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_18_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -510,7 +510,7 @@ Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_19_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_19_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -571,7 +571,7 @@ Regulation: Ley No. 25 de 1967
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_20_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_20_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -615,7 +615,7 @@ Regulation: Ley No. 9 de 1951
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_23_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_23_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -664,7 +664,7 @@ Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_25_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_25_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -799,7 +799,7 @@ Regulation: Ley No. 13 de 1947
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_27_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_27_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -849,7 +849,7 @@ Regulation: Ley No. 46 de 1905
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_41_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_41_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -905,7 +905,7 @@ Regulation: Ley No. 19 de 1964
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_44_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_44_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -939,7 +939,7 @@ Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_47_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_47_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -988,7 +988,7 @@ Regulation: Ley No. 118 de 1959
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_50_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_50_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -1036,7 +1036,7 @@ Regulation: Ley No. 1 de 1904
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_52_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_52_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -1119,7 +1119,7 @@ Regulation: Ley No. 25 de 1910
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_54_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_54_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -1178,7 +1178,7 @@ Regulation: Ley No. 2 de 1966
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_63_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_63_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -1209,7 +1209,7 @@ Regulation: Ley No. 70 de 1966
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_66_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_66_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -1242,7 +1242,7 @@ Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_68_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_68_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -1348,7 +1348,7 @@ Regulation: Ley No. 47 de 1966
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_70_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_70_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -1393,7 +1393,7 @@ Regulation: Constitución Política de Colombia 1886
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_73_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_73_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -1459,7 +1459,7 @@ Regulation: Decreto No. 340 de 1910
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_76_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_76_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -1520,7 +1520,7 @@ Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_81_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_81_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -1546,7 +1546,7 @@ Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_85_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_85_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -1584,7 +1584,7 @@ Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_86_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_86_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -1616,7 +1616,7 @@ Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_88_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_88_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -1637,7 +1637,7 @@ Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_91_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_91_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -1667,7 +1667,7 @@ Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_94_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_94_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -1694,7 +1694,7 @@ Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_95_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_95_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -1717,7 +1717,7 @@ Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_97_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_97_MiniMap.png" width="500"></img>
 
 </div>
 
@@ -1742,7 +1742,7 @@ Regulation: Constitución Política de Colombia 1991
 
 <div align="center">
 
-<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMAP/57_99_LocationMap.png" width="500"></img>
+<img alt="rcfdtools" src="https://github.com/rcfdtools/R.GISMobile/blob/main/file/gis/MiniMap/57_99_MiniMap.png" width="500"></img>
 
 </div>
 
