@@ -18,7 +18,7 @@ bestfit_file = 'bestfit.csv'
 extreme_file = 'extreme.csv'
 stations_file = 'stations.csv'
 files = [bestfit_file,extreme_file,stations_file]
-regular_hydrology_pdf = ['norm', 'lognorm', 'gumbel_l', 'gumbel_r', 'gamma', 'pearson3', 'logpearson3', 'dweibull', 'kappa4'] # Most used PDFs in hydrology (bestfit difference analysis) ●
+regular_hydrology_pdf = ['norm', 'lognorm', 'gumbel_l', 'gumbel_r', 'gamma', 'pearson3', 'logpearson3', 'dweibull', 'kappa4'] # ● Most used PDFs in hydrology (bestfit difference analysis)
 print_explicit = False # Print detailed stations records
 
 
