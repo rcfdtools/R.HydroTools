@@ -61,10 +61,14 @@ A través del portal de datos abiertos de Colombia - Suramérica www.datos.gov.c
 </div>
 
 > Estos conjuntos de datos lo podemos utilizar para establecer el comportamiento diario, mensual y anual de la temperatura máxima del aire, en análisis climatológico y modelos climáticos, así como, en alertas tempranas.
+> 
+> El Catálogo Nacional de Estaciones del IDEAM se encuentra disponible en https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Cat-logo-Nacional-de-Estaciones-del-IDEAM/hp9r-jxuu
 
 Ejemplo de descarga usando https://www.freedownloadmanager.org/ para el enlace https://www.datos.gov.co/api/v3/views/s54a-sgyg/query.csv correspondiente a registros de precipitación.
 
 <div align="center"><img alt="rcfdtools" src="../file/graph/freedownloadmanager.jpg" width="100%"></div>
+
+> Datos de estaciones convencionales y agregaciones, pueden ser descargadas desde el servicio https://atencionciudadano.ideam.gov.co/
 
 
 ### 3. Catálogo de objetos
