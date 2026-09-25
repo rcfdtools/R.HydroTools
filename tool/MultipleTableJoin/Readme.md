@@ -1,6 +1,6 @@
 <div align="center"><img alt="rcfdtools" src="../../file/graph/R.HydroTools.svg" width="300px"></div>
 
-## Join multiple separate tables into a unique unpivot table dataset  
+# 🛠️ Join multiple separate tables into a unique unpivot table dataset  
 Keywords: `etl` `dataset` `camels-br` `ana-br` `car-co` `python`
 
 Isolated time-series file parameters, has to be joined in a unique table if you want to use dynamic ArcGIS map views related with gauge stations or basin polygons through an ETL process.  
@@ -16,7 +16,13 @@ ETL provides the foundation for data analytics and machine learning workstreams.
 * Load data into a target database
 
 
-### CAMELS-BR [:hook:](CAMELS_BR)[^2]
+## IDEAM-CO [:hook:](IDEAM_CO)
+
+IDEAM stands for the [Instituto de Hidrología, Meteorología y Estudios Ambientales](https://www.ideam.gov.co/) (Institute of Hydrology, Meteorology and Environmental Studies), a government agency in Colombia. It belongs to the Ministry of Environment and Sustainable Development. It provides scientific and technical information on the country's environment, weather, and ecosystems.
+
+
+
+## CAMELS-BR [:hook:](CAMELS_BR)[^2]
 
 Catchment Attributes and Meteorology for Large-sample Studies - Brazil
 
@@ -100,7 +106,7 @@ print('Process accomplished...')
 ```
 
 
-#### Parameters & specifications
+### Parameters & specifications
 
 * `input_path` & `temp_path`: user can define the input and the temporal processing folder.
 * `stations_file`: [Stations.csv](CAMELS_BR/Stations.csv) contains a list of the stations to be joined. The parameter `process_all = False` has to be established in False, otherwise, all the files founded in the Input folder will be joined. 
@@ -110,7 +116,7 @@ print('Process accomplished...')
 > For this example, Stations.csv contains all the Amazon basin stations.
 
 
-### ANA Brasil [:hook:](ANA_BR)[^3]
+## ANA Brasil [:hook:](ANA_BR)[^3]
 
 A ferramenta ANA Data Acquisition realiza o download automático de várias estações pluviométricas e fluviométricas disponibilizados pela Agência Nacional de Águas (ANA). https://www.ufrgs.br/hge/ana-data-acquisition/
 
@@ -199,7 +205,7 @@ print('Process accomplished...')
 ```
 
 
-#### Parameters & specifications
+### Parameters & specifications
 
 * `input_path` & `temp_path`: user can define the input and the temporal processing folder.
 * `stations_file`: [Stations.csv](ANA_BR/Stations.csv) contains a list of the stations to be joined. The parameter `process_all = False` has to be established in False, otherwise, all the files founded in the Input folder will be joined. 
@@ -210,7 +216,7 @@ print('Process accomplished...')
 > For this example, Stations.csv only contains a sample, the first station has to be between quotes for set the codes as string.
 
 
-### CAR-CO [:hook:](CAR_CO)[^4]
+## CAR-CO [:hook:](CAR_CO)[^4]
 
 
 Corporación Autónoma Regional de Cundinamarca Colombia - https://www.car.gov.co/vercontenido/2524
@@ -348,7 +354,7 @@ print('\nClean file: %s' % output_path + clean_file,
 ```
 
 
-#### Parameters & specifications
+### Parameters & specifications
 
 * `input_path` & `output_path`: user can define the input and the output processing folder.
 * `parameter_value`: specific IDEAM - Colombia [label parameter to process](CAR_CO). 
@@ -363,7 +369,7 @@ print('\nClean file: %s' % output_path + clean_file,
 > As you notice, you can run the cleaning, pivot, unpivot and joining process separately. This could you help to identify different kind of user errors in the source Excel dataset, e.g, text values over the data values cells, incorrect numeric decimal separators, more than 15 header lines. 
 
 
-### EAAB-CO [:hook:](EAAB_CO)[^4]
+## EAAB-CO [:hook:](EAAB_CO)[^4]
 
 Disclaimer: current script version is only used to join monthly values.
 
@@ -532,7 +538,7 @@ if extract_monthly_values:
 * https://practicaldatascience.co.uk/data-science/how-to-reorder-pandas-dataframe-columns
 
 
-### Licencia, cláusulas y condiciones de uso
+## Licencia, cláusulas y condiciones de uso
 
 _R.HydroTools es de uso libre para fines académicos, conoce nuestra [licencia, cláusulas, condiciones de uso](../../LICENSE.md) y como referenciar los contenidos publicados en este repositorio._
 
