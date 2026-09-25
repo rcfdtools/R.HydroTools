@@ -9,7 +9,7 @@ Vinícius B. P. Chagas, Pedro L. B. Chaffe, Nans Addor, Fernando M. Fan, Ayan S.
 https://zenodo.org/record/3964745
 
 
-## (1) Description
+## 1. Description
 
 This is the CAMELS-BR dataset (Catchment Attributes and MEteorology for Large-sample Studies - Brazil) accompanying the paper: 
 Chagas et al., Hydrometeorological time series and landscape attributes for 897 catchments in Brazil, Earth System Science Data, 2020.
@@ -35,16 +35,16 @@ The data follow the same standards from the other CAMELS datasets for the United
 * Fixed incorrect gauge_id values in the catchment boundaries shapefile.
 
 
-## (2) Contents
+## 2. Contents
 
 
-### (2.1) "01_CAMELS_BR_attributes"
+### 2.1. 01_CAMELS_BR_attributes
 
 This directory contains 9 txt files with the catchment attributes according to their categories and 1 Excel file with the description of the attributes and their associated units.
 Missing values are represented by "nan".
 
 
-### (2.2) "02_CAMELS_BR_streamflow_m3s"
+### 2.2. 02_CAMELS_BR_streamflow_m3s
 
 This directory contains 3679 files with daily streamflow time series obtained from ANA's website (Brazilian National Water Agency - http://www.snirh.gov.br/hidroweb/).
 Each file refers to the time series of a stream gauge. The gauge ID is the first eight digits of the file name.
@@ -55,7 +55,7 @@ The column "qual_control_by_ana" is set to 1 if the data was quality checked by 
 The column "qual_flag" indicates the reliability of streamflow estimates. It is provided by ANA (Brazilian National Water Agency) and consists of the following quality flags: 0, when there is no description; 1, streamflow resulted from stream stage measurements and the rating-curve; 2, streamflow qualitatively estimated by ANA, i.e., without stream stage measurements; 3, streamflow values marked as doubtful; and 4, when the stream water level falls outside the range of the stream stage.
 
 
-### (2.3) "03_CAMELS_BR_streamflow_mm_selected_catchments"
+### 2.3. 03_CAMELS_BR_streamflow_mm_selected_catchments
 
 This directory contains 897 files with daily streamflow time series.
 Each file refers to the time series of a stream gauge. The gauge ID is the first eight digits of the file name.
@@ -66,7 +66,7 @@ The column "qual_control_by_ana" is set to 1 if the data was quality checked by 
 The column "qual_flag" indicates the reliability of streamflow estimates. It is provided by ANA (Brazilian National Water Agency) and consists of the following quality flags: 0, when there is no description; 1, streamflow resulted from stream stage measurements and the rating-curve; 2, streamflow qualitatively estimated by ANA, i.e., without stream stage measurements; 3, streamflow values marked as doubtful; and 4, when the stream water level falls outside the range of the stream stage.
 
 
-### (2.4) "04_CAMELS_BR_streamflow_simulated"
+### 2.4. 04_CAMELS_BR_streamflow_simulated
 
 This directory contains 593 files with simulated daily streamflow time series using the large-scale MGB-SA model (Modelo de Grandes Bacias; Siqueira et al., 2018).
 Each file refers to the time series of a stream gauge. The gauge ID is the first eight digits of the file name.
@@ -75,7 +75,7 @@ Missing values are represented by "nan".
 The column "simulated_streamflow_m3s" indicates simulated streamflow in cubic meters per second.
 
 
-### (2.5) "05_CAMELS_BR_precipitation_chirps"
+### 2.5. 05_CAMELS_BR_precipitation_chirps
 
 This directory contains 897 files with daily precipitation time series extracted from CHIRPS v2.0 (Funk et al., 2015).
 Each file refers to the time series of a catchment. The gauge ID of the catchment is the first eight digits of the file name.
@@ -84,7 +84,7 @@ Missing values are represented by "nan".
 The column "precipitation_chirps" indicates catchment averages of precipitation in millimeters per day.
 
 
-### (2.6) "06_CAMELS_BR_precipitation_mswep"
+### 2.6. 06_CAMELS_BR_precipitation_mswep
 
 This directory contains 897 files with daily precipitation time series extracted from MSWEP v2.2 (Beck et al., 2019).
 Each file refers to the time series of a catchment. The gauge ID of the catchment is the first eight digits of the file name.
@@ -93,7 +93,7 @@ Missing values are represented by "nan".
 The column "precipitation_mswep" indicates catchment averages of precipitation in millimeters per day.
 
 
-### (2.7) "07_CAMELS_BR_precipitation_cpc"
+### 2.7. 07_CAMELS_BR_precipitation_cpc
 
 This directory contains 897 files with daily precipitation time series extracted from CPC (NOAA, 2019a).
 Each file refers to the time series of a catchment. The gauge ID of the catchment is the first eight digits of the file name.
@@ -102,7 +102,7 @@ Missing values are represented by "nan".
 The column "precipitation_cpc" indicates catchment averages of precipitation in millimeters per day.
 
 
-### (2.8) "08_CAMELS_BR_evapotransp_gleam"
+### 2.8. 08_CAMELS_BR_evapotransp_gleam
 
 This directory contains 897 files with daily actual evapotranspiration time series extracted from GLEAM v3.3a (Miralles et al., 2011; Martens et al., 2017).
 Each file refers to the time series of a catchment. The gauge ID of the catchment is the first eight digits of the file name.
@@ -111,7 +111,7 @@ Missing values are represented by "nan".
 The column "evapotransp_gleam" indicates catchment averages of evapotranspiration in millimeters per day.
 
 
-### (2.9) "09_CAMELS_BR_evapotransp_mgb"
+### 2.9. 09_CAMELS_BR_evapotransp_mgb
 
 This directory contains 897 files with daily actual evapotranspiration time series extracted from MGB-SA (Siqueira et al., 2018).
 Each file refers to the time series of a catchment. The gauge ID of the catchment is the first eight digits of the file name.
@@ -120,7 +120,7 @@ Missing values are represented by "nan".
 The column "evapotransp_mgb" indicates catchment averages of evapotranspiration in millimeters per day.
 
 
-### (2.10) "10_CAMELS_BR_potential_evapotransp_gleam"
+### 2.10. 10_CAMELS_BR_potential_evapotransp_gleam
 
 This directory contains 897 files with daily potential evapotranspiration time series extracted from GLEAM v3.3a (Miralles et al., 2011; Martens et al., 2017).
 Each file refers to the time series of a catchment. The gauge ID of the catchment is the first eight digits of the file name.
@@ -129,7 +129,7 @@ Missing values are represented by "nan".
 The column "potential_evapotransp_gleam" indicates catchment averages of potential evapotranspiration in millimeters per day.
 
 
-### (2.11) "11_CAMELS_BR_temperature_min_cpc"
+### 2.11. 11_CAMELS_BR_temperature_min_cpc
 
 This directory contains 897 files with daily minimum temperature time series extracted from CPC (NOAA, 2019b).
 Each file refers to the time series of a catchment. The gauge ID of the catchment is the first eight digits of the file name.
@@ -138,7 +138,7 @@ Missing values are represented by "nan".
 The column "temperature_min" indicates catchment averages of minimum daily temperature in degree Celsius.
 
 
-### (2.12) "12_CAMELS_BR_temperature_mean_cpc"
+### 2.12 12_CAMELS_BR_temperature_mean_cpc
 
 This directory contains 897 files with daily average temperature time series, computed by averaging the daily minimum and maximum temperature extracted from CPC (NOAA, 2019b).
 Each file refers to the time series of a catchment. The gauge ID of the catchment is the first eight digits of the file name.
@@ -147,7 +147,7 @@ Missing values are represented by "nan".
 The column "temperature_mean" indicates catchment averages of average daily temperature in degree Celsius.
 
 
-### (2.13) "13_CAMELS_BR_temperature_max_cpc"
+### 2.13 13_CAMELS_BR_temperature_max_cpc
 
 This directory contains 897 files with daily maximum temperature time series extracted from CPC (NOAA, 2019b).
 Each file refers to the time series of a catchment. The gauge ID of the catchment is the first eight digits of the file name.
@@ -156,19 +156,19 @@ Missing values are represented by "nan".
 The column "temperature_max" indicates catchment averages of maximum daily temperature in degree Celsius.
 
 
-### (2.14) "14_CAMELS_BR_catchment_boundaries"
+### 2.14 14_CAMELS_BR_catchment_boundaries
 
 This directory contains 5 files with the ESRI shapefile of the 897 catchment boundaries used in CAMELS-BR to extract the meteorological time series and catchment attributes.
 The catchment boundaries were computed by Do et al. (2018) and Gudmundsson et al. (2018).
 
 
-### (2.15) "15_CAMELS_BR_gauges_location_shapefile"
+### 2.15. 15_CAMELS_BR_gauges_location_shapefile
 
 This directory contains 5 files with the ESRI shapefile of the location of the 3679 gauges with available streamflow time series.
 The table of contents includes the location attributes, the catchment areas according to ANA (the Brazilian National Water Agency) and GSIM (Global Streamflow Indices and Metadata Archive; Do et al., 2018), and the data quality associated with GSIM estimates.
 
 
-## (3) References
+## 3. References
 
 * Beck, H. E., Wood, E. F., Pan, M., Fisher, C. K., Miralles, D. G., van Dijk, A. I. J. M., McVicar, T. R. and Adler, R. F.: MSWEP V2 Global 3-Hourly 0.1° Precipitation: Methodology and Quantitative Assessment, Bull. Amer. Meteor. Soc., 100(3), 473–500, doi:10.1175/BAMS-D-17-0138.1, 2019.
 * Do, H. X., Gudmundsson, L., Leonard, M. and Westra, S.: The Global Streamflow Indices and Metadata Archive (GSIM) – Part 1: The production of a daily streamflow archive and metadata, Earth Syst. Sci. Data, 10(2), 765–785, doi:10.5194/essd-10-765-2018, 2018.
