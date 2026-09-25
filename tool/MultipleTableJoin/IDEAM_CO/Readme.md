@@ -1,6 +1,6 @@
 <div align="center"><img alt="rcfdtools" src="../../../file/graph/R.HydroTools.svg" width="300px"></div>
 
-## Instituto de Hidrología, Meteorología y Estudios Ambientales - Colombia, IDEAM-CO  
+# Instituto de Hidrología, Meteorología y Estudios Ambientales - Colombia, IDEAM-CO  
 
 El [IDEAM](https://www.ideam.gov.co/) es una institución pública de apoyo técnico y científico al Sistema Nacional Ambiental, que genera conocimiento, produce información confiable, consistente y oportuna, sobre el estado y las dinámicas de los recursos naturales y del medio ambiente, que facilite la definición y ajustes de las políticas ambientales y la toma de decisiones por parte de los sectores público, privado y la ciudadanía en general.[^1]
 
@@ -13,7 +13,7 @@ El [IDEAM](https://www.ideam.gov.co/) es una institución pública de apoyo téc
 | Sector             | Ambiente y Desarrollo Sostenible                             |
 
 
-### 1. Información de los datos y licencia de uso
+## 1. Información de los datos y licencia de uso
 
 | Elemento                       | Descripción             |
 |:-------------------------------|:------------------------|
@@ -36,7 +36,14 @@ De acuerdo a la información disponible en el portal www.datos.gov.co, los datos
 8. Por las razones expuestas anteriormente los datos dispuestos no podrán ser utilizados como evidencia jurídica ante entes de control acerca de la ocurrencia o no de fenómenos hidro-climatológicos o de soporte a cualquier tipo de situación o evento ocurrido como consecuencia de estos.
 
 
-### 2. Fuentes de datos
+## 2. Fuentes de datos
+
+### 2.1. Estaciones convencionales desde DHIME
+
+Datos de estaciones convencionales y agregaciones, pueden ser descargadas desde el servicio https://atencionciudadano.ideam.gov.co/
+
+
+### 2.2. Estaciones automáticas desde datos.gov.co
 
 A través del portal de datos abiertos de Colombia - Suramérica www.datos.gov.co, se pueden obtener las colecciones de datos crudos o Datasets publicados por el IDEAM Colombia. En la siguiente tabla encontrará un listado de las principales variables disponibles:  
 
@@ -72,7 +79,10 @@ Ejemplo de descarga usando https://www.freedownloadmanager.org/ para el enlace h
 
 <div align="center"><img alt="rcfdtools" src="../file/graph/freedownloadmanager.jpg" width="100%"></div>
 
-[**Servicio IDEAM Datos S3 (Simple Storage Service**)](https://datos.ideam.gov.co/objectsbrowser/index.html?public=#/app/ostore-buckets/s3-estacionesideam/objects)
+
+### 2.3. Estaciones automáticas desde Datos S3 (Simple Storage Service)
+
+[Servicio IDEAM Datos S3 (Simple Storage Service)](https://datos.ideam.gov.co/objectsbrowser/index.html?public=#/app/ostore-buckets/s3-estacionesideam/objects)
 
 En este servicio se encuentran actualmente datos de caudal, concentración, nivel y transporte.  
 
@@ -81,10 +91,8 @@ En este servicio se encuentran actualmente datos de caudal, concentración, nive
 * [Instantáneo día actual](https://datos.ideam.gov.co/s3-estacionesideam/observaciones/instantaneos/csv/observaciones.csv)
 * [Observaciones históricas](https://datos.ideam.gov.co/objectsbrowser/index.html?public=#/app/ostore-buckets/s3-estacionesideam/objects/observaciones/historicos/csv)
 
-> Datos de estaciones convencionales y agregaciones, pueden ser descargadas desde el servicio https://atencionciudadano.ideam.gov.co/
 
-
-### 3. Catálogo de objetos
+## 3. Catálogo de objetos
 
 Atención: los datos obtenidos desde el portal www.datos.gov.co no utilizan la misma estructura de los datos obtenidos desde el portal http://dhime.ideam.gov.co/atencionciudadano/
 
@@ -114,7 +122,7 @@ CodigoEstacion,CodigoSensor,FechaObservacion,ValorObservado,NombreEstacion,Depar
 0021195190,0255,02/14/2014 05:00:00 AM,785.2,PASCA - AUT,CUNDINAMARCA,PASCA,ALTO MAGDALENA,4.310111111,-74.31175,Presión Atmosferica (1h),HPa
 ```
 
-### Referencias
+## Referencias
 
 * http://ideam.gov.co/
 * http://www.ideam.gov.co/solicitud-de-informacion
