@@ -82,9 +82,7 @@ Ejemplo de descarga usando https://www.freedownloadmanager.org/ para el enlace h
 
 ### 2.3. Estaciones automáticas desde Datos S3 (Simple Storage Service)
 
-[Servicio IDEAM Datos S3 (Simple Storage Service)](https://datos.ideam.gov.co/objectsbrowser/index.html?public=#/app/ostore-buckets/s3-estacionesideam/objects)
-
-En este servicio se encuentran actualmente datos de caudal, concentración, nivel y transporte.  
+[Servicio IDEAM Datos S3 (Simple Storage Service)](https://datos.ideam.gov.co/objectsbrowser/index.html?public=#/app/ostore-buckets/s3-estacionesideam/objects), en este servicio se encuentran actualmente datos de caudal, concentración, nivel y transporte.  
 
 * [Catálogo de estaciones](https://datos.ideam.gov.co/s3-estacionesideam/catalogo/estaciones/csv/catalogo.csv)
 * [Catálogo de variables](https://datos.ideam.gov.co/s3-estacionesideam/catalogo/variables/csv/variables.csv)
