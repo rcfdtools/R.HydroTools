@@ -16,13 +16,12 @@ ETL provides the foundation for data analytics and machine learning workstreams.
 * Load data into a target database
 
 
-## IDEAM-CO [:hook:](IDEAM_CO)
+## [:hook:IDEAM-CO](IDEAM_CO/Readme.md)
 
 IDEAM stands for the [Instituto de Hidrología, Meteorología y Estudios Ambientales](https://www.ideam.gov.co/) (Institute of Hydrology, Meteorology and Environmental Studies), a government agency in Colombia. It belongs to the Ministry of Environment and Sustainable Development. It provides scientific and technical information on the country's environment, weather, and ecosystems.
 
 
-
-## CAMELS-BR [:hook:](CAMELS_BR)[^2]
+## CAMELS-BR [:hook:](CAMELS_BR/Readme.md)[^2]
 
 Catchment Attributes and Meteorology for Large-sample Studies - Brazil
 
@@ -116,7 +115,7 @@ print('Process accomplished...')
 > For this example, Stations.csv contains all the Amazon basin stations.
 
 
-## ANA Brasil [:hook:](ANA_BR)[^3]
+## ANA Brasil [:hook:](ANA_BR/Readme.md)[^3]
 
 A ferramenta ANA Data Acquisition realiza o download automático de várias estações pluviométricas e fluviométricas disponibilizados pela Agência Nacional de Águas (ANA). https://www.ufrgs.br/hge/ana-data-acquisition/
 
@@ -216,7 +215,7 @@ print('Process accomplished...')
 > For this example, Stations.csv only contains a sample, the first station has to be between quotes for set the codes as string.
 
 
-## CAR-CO [:hook:](CAR_CO)[^4]
+## CAR-CO [:hook:](CAR_CO/Readme.md)[^4]
 
 
 Corporación Autónoma Regional de Cundinamarca Colombia - https://www.car.gov.co/vercontenido/2524
@@ -369,7 +368,7 @@ print('\nClean file: %s' % output_path + clean_file,
 > As you notice, you can run the cleaning, pivot, unpivot and joining process separately. This could you help to identify different kind of user errors in the source Excel dataset, e.g, text values over the data values cells, incorrect numeric decimal separators, more than 15 header lines. 
 
 
-## EAAB-CO [:hook:](EAAB_CO)[^4]
+## EAAB-CO [:hook:](EAAB_CO/Readme.md)[^4]
 
 Disclaimer: current script version is only used to join monthly values.
 
