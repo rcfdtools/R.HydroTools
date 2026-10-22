@@ -1,0 +1,48 @@
+# Listado de estaciones IDEAM para descarga masiva
+# Una por línea. Formato: CODIGO  (opcional: ETIQUETA_FORZADA  # comentario)
+# Las líneas que inician con # se ignoran.
+# El script descubre automáticamente las etiquetas disponibles (caudal/precipitación)
+# desde el catálogo interno del IDEAM (MapServer/8).
+
+# Guaduero - estación de caudal que veníamos trabajando (tiene caudal medio diario)
+#23067050
+
+# Otra estación de caudal verificada (río Magdalena)
+#23067020
+
+# Estación con registros de PRECIPITACION (PTPG_*) en el catálogo IDEAM
+#35235010
+
+# Pluviométrica conocida del catálogo datos.gov.co
+#35057040
+
+# Cesar State
+21206930
+11027030
+25020230
+25020240
+#25020250
+#25020260
+#25020280
+#25020690
+#25020920
+#25021240
+#25021650
+#25025250
+#28010070
+#28020080
+#28020150
+#28020230
+#28020310
+#28020420
+#28020440
+#28020460
+#28020600
+#28025070
+#28025080
+#28025090
+#28035010
+#28035040
+#28040310
+#28040350
+
