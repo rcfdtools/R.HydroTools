@@ -1,3 +1,6 @@
+# 3Adding 200+ WMS basemaps to QGIS with a few clicks
+# https://www.youtube.com/watch?v=HpKvAxCKoDg
+# https://github.com/opengeos/qgis-basemaps
 # This script is inspired by Klas Karlsson at https://bit.ly/4eDbx1O. Credit to Klas Karlsson.
 # I expaned the script to include more XYZ basemaps from xyzservices and a lot of WMS basemaps.
 # https://github.com/opengeos/qgis-basemaps/blob/main/qgis_basemaps.py

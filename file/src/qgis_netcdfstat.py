@@ -1,7 +1,9 @@
 # https://github.com/rcfdtools
-# ERA5 / Surface net solar radiation (ssr) / Zonal statistics
+# QGIS script: tested in version 3 and 4 with Qt5 and Qt6
+# ERA5 / Reanalysis variables and Surface net solar radiation (ssr) / Zonal statistics
 # Dataset: ERA5-Land monthly averaged data from 1950 to present
-# Polygon layer requieres the area value over a real variable (20, 20) called AGm2
+# Note: The polygon layer requieres the geodethic area value over a real variable (20, 20) called AGm2 calculate as $area
+# User must create the folder /temp/stat/
 
 import processing
 from qgis.core import QgsRasterLayer, QgsVectorLayer
@@ -13,11 +15,11 @@ from dateutil.relativedelta import relativedelta
 import calendar
 
 variable = 'ssr' # ● ERA5 variable name to process, e.g.,: ssr, d2m, t2m, e, ro, u10, v10, tp, sp
-bands = 900 # 900 for 1950 to 2024
+bands = 900 # Bands to process, 900 for 1950 to 2024 = (2024 - 1950 + 1) * 12
 original_date = date(1950, 1, 1) # Define a starting date yyyy-m-d
-main_path = 'C:/DAPC/'
-raster_path = main_path+'grid/ERA5_land_monthly_climatological_var_010dd_ssr_Colombia.tif'
-polygon_path = main_path+'shp/ColombiaDptoContinental.shp'
+main_path = 'C:/TSIG/' # ● Processing local path
+raster_path = main_path+'grid/ERA5_land_monthly_climatological_var_010dd_ssr_Colombia.tif' # ● Multiband map grid series. Each band correspond to a time step
+polygon_path = main_path+'shp/ColombiaDptoContinental.shp' # ● Polygons shapefile for stats 
 output_path = main_path+'temp/stat/'
 output_stat_file = main_path+'table/'+variable+'_stat.csv'
 print(f'Temporal output path: {output_path}')
