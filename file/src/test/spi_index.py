@@ -19,7 +19,7 @@ spi_category = [[-2.00, 'Extreme Drought'],
                 [-1.99, 'Severe Drought'],
                 [-1.49, 'Moderate Drought'],
                 [0.99, 'Near Normal'],
-                [999999, 'Nival, mayores a 4000 m.s.n.m']
+                [1.49, 'Moderately Wet']
                 [999999, 'Nival, mayores a 4000 m.s.n.m']
                ]
 
