@@ -6,6 +6,7 @@
 # ERA5 Collection: Monthly drought indices from 1940 to present derived from ERA5 reanalysis
 # https://cds.climate.copernicus.eu/
 # https://drought.emergency.copernicus.eu/data/factsheets/factsheet_spi.pdf
+# https://raw.githubusercontent.com/Eurac-Research/ado-data/main/factsheets/SPI_4.pdf
 
 from qgis.core import *
 from qgis.gui import *
