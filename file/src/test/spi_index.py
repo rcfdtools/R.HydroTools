@@ -5,24 +5,27 @@ import pandas as pd
 import spei as si  # SPI / SPEI library
 
 '''
+***********************************
 SPI Value	Drought / Wet Category
-≥ 2.0	Extremely Wet
-1.5 to 1.99	Very Wet
-1.0 to 1.49	Moderately Wet
--0.99 to 0.99	Near Normal
--1.0 to -1.49	Moderate Drought
--1.5 to -1.99	Severe Drought
-≤ -2.0	Extreme Drought
+***********************************
+2.0 < SPI	      Extremely Wet
+1.5 < SPI ≤ 2.0	  Very Wet
+1.0 < SPI ≤ 1.5	  Moderately Wet
+-1.0 < SPI ≤ 1.0  Near Normal
+-1.5 < SPI ≤ -1.0 Moderate Dry
+-2.0 < SPI ≤ -1.5 Severe Dry
+SPI ≤ -2.0        Extreme Dry
 '''
 
-spi_category = [[-2.00, 'Extreme Drought'],
-                [-1.99, 'Severe Drought'],
-                [-1.49, 'Moderate Drought'],
-                [0.99, 'Near Normal'],
-                [1.49, 'Moderately Wet']
-                [1.99, 'Very Wet']
-                [2.00, 'Extremely Wet']
-               ]
+# Cols: SPI range, Precipitation regime, Colour
+spi_category = [[-999999, 'Extremely dry', '#FF0000'],
+                [-2.00, 'Very dry', '#FFC000'],
+                [-1.50, 'Moderately dry', '#FFFF00'],
+                [1.00, 'Normal precipitation', '#FFFFFF'],
+                [1.50, 'Moderately wet', '#E9CCF9'],
+                [2.00, 'Very wet', '#C980C6'],
+                [999999, 'Extremely wet', '#9900CC'],
+                ]
 
 # 1. Generate fake monthly precipitation data (in mm) for 10 years
 np.random.seed(42)
